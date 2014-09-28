@@ -1,7 +1,9 @@
 var properties = {
-  logEnabled: true,
-  log: function(){
-    
+  logEnabled: false,
+  log: function(what){
+    if (properties.logEnabled) {
+      console.log(what);
+    }
   },
   change: function(query,classOut,classIn){
     // TODO: Add support for querySelectorAll
@@ -9,13 +11,13 @@ var properties = {
     if (element) {
       if (classOut) {
         element.classList.remove(classOut);
-        console.log("classOut");
       }
       if (classIn) {
         element.classList.add(classIn);
       }
-      console.log("properties.change | " + query);
+      properties.log("properties.change | " + query);
+    } else {
+      properties.log("!! properties.change | query not specified or not valid");
     }
-    console.log("!! properties.change | query not specified or not valid");
   }
 }
