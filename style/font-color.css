@@ -1,187 +1,187 @@
 .font-red,.font-red-500 {
-  background-color: #e51c23;
+  color: #e51c23;
 }
 .font-red-50 {
-  background-color: #fde0dc;
+  color: #fde0dc;
 }
 .font-red-100 {
-  background-color: #f9bdbb;
+  color: #f9bdbb;
 }
 .font-red-200 {
-  background-color: #f69988;
+  color: #f69988;
 }
 .font-red-300 {
-  background-color: #f36c60;
+  color: #f36c60;
 }
 .font-red-400 {
-  background-color: #e84e40;
+  color: #e84e40;
 }
 .font-red-600 {
-  background-color: #dd191d;
+  color: #dd191d;
 }
 .font-red-700 {
-  background-color: #d01716;
+  color: #d01716;
 }
 .font-red-800 {
-  background-color: #c41411;
+  color: #c41411;
 }
 .font-red-900 {
-  background-color: #b0120a;
+  color: #b0120a;
 }
 .font-red-a100 {
-  background-color: #ff7997;
+  color: #ff7997;
 }
 .font-red-a200 {
-  background-color: #ff5177;
+  color: #ff5177;
 }
 .font-red-a400 {
-  background-color: #ff2d6f;
+  color: #ff2d6f;
 }
 .font-red-a700 {
-  background-color: #e00032;
+  color: #e00032;
 }
 
 
 
 
 .font-pink,.font-pink-500 {
-  background-color: #e91e63;
+  color: #e91e63;
 }
 .font-pink-50 {
-  background-color: #fce4ec;
+  color: #fce4ec;
 }
 .font-pink-100 {
-  background-color: #f8bbd0;
+  color: #f8bbd0;
 }
 .font-pink-200 {
-  background-color: #f48fb1;
+  color: #f48fb1;
 }
 .font-pink-300 {
-  background-color: #f06292;
+  color: #f06292;
 }
 .font-pink-400 {
-  background-color: #ec407a;
+  color: #ec407a;
 }
 .font-pink-600 {
-  background-color: #d81b60;
+  color: #d81b60;
 }
 .font-pink-700 {
-  background-color: #c2185b;
+  color: #c2185b;
 }
 .font-pink-800 {
-  background-color: #ad1457;
+  color: #ad1457;
 }
 .font-pink-900 {
-  background-color: #880e4f;
+  color: #880e4f;
 }
 .font-pink-a100 {
-  background-color: #ff80ab;
+  color: #ff80ab;
 }
 .font-pink-a200 {
-  background-color: #ff4081;
+  color: #ff4081;
 }
 .font-pink-a400 {
-  background-color: #f50057;
+  color: #f50057;
 }
 .font-pink-a700 {
-  background-color: #c51162;
+  color: #c51162;
 }
 
 
 
 
 .font-blue,.font-blue-500 {
-  background-color: #5677fc;
+  color: #5677fc;
 }
 .font-blue-50 {
-  background-color: #e7e9fd;
+  color: #e7e9fd;
 }
 .font-blue-100 {
-  background-color: #d0d9ff;
+  color: #d0d9ff;
 }
 .font-blue-200 {
-  background-color: #afbfff;
+  color: #afbfff;
 }
 .font-blue-300 {
-  background-color: #91a7ff;
+  color: #91a7ff;
 }
 .font-blue-400 {
-  background-color: #738ffe;
+  color: #738ffe;
 }
 .font-blue-600 {
-  background-color: #4e6cef;
+  color: #4e6cef;
 }
 .font-blue-700 {
-  background-color: #455ede;
+  color: #455ede;
 }
 .font-blue-800 {
-  background-color: #3b50ce;
+  color: #3b50ce;
 }
 .font-blue-900 {
-  background-color: #2a36b1;
+  color: #2a36b1;
 }
 .font-blue-a100 {
-  background-color: #a6baff;
+  color: #a6baff;
 }
 .font-blue-a200 {
-  background-color: #6889ff;
+  color: #6889ff;
 }
 .font-blue-a400 {
-  background-color: #4d73ff;
+  color: #4d73ff;
 }
 .font-blue-a700 {
-  background-color: #4d69ff;
+  color: #4d69ff;
 }
 
 
 
 
 .font-cyan,.font-cyan-500 {
-  background-color: #00bcd4;
+  color: #00bcd4;
 }
 .font-cyan-50 {
-  background-color: #e0f7fa;
+  color: #e0f7fa;
 }
 .font-cyan-100 {
-  background-color: #b2ebf2;
+  color: #b2ebf2;
 }
 .font-cyan-200 {
-  background-color: #80deea;
+  color: #80deea;
 }
 .font-cyan-300 {
-  background-color: #4dd0e1;
+  color: #4dd0e1;
 }
 .font-cyan-400 {
-  background-color: #26c6da;
+  color: #26c6da;
 }
 .font-cyan-600 {
-  background-color: #00acc1;
+  color: #00acc1;
 }
 .font-cyan-700 {
-  background-color: #0097a7;
+  color: #0097a7;
 }
 .font-cyan-800 {
-  background-color: #00838f;
+  color: #00838f;
 }
 .font-cyan-900 {
-  background-color: #006064;
+  color: #006064;
 }
 .font-cyan-a100 {
-  background-color: #84ffff;
+  color: #84ffff;
 }
 .font-cyan-a200 {
-  background-color: #18ffff;
+  color: #18ffff;
 }
 .font-cyan-a400 {
-  background-color: #4d69ff;
+  color: #4d69ff;
 }
 .font-cyan-a700 {
-  background-color: #00b8d4;
+  color: #00b8d4;
 }
 
 
 
 
 .font-white {
-  background-color: #ffffff;
+  color: #ffffff;
 }
