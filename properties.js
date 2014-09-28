@@ -9,12 +9,12 @@ var properties = {
     if (element) {
       if (classOut) {
         element.classList.remove(classOut);
+        console.log("classOut");
       }
       if (classIn) {
-        element.classList.remove(classIn);
+        element.classList.add(classIn);
       }
-      console.log("!! properties.change | query not specified or not valid");
-      return true;
+      console.log("properties.change | " + query);
     }
     console.log("!! properties.change | query not specified or not valid");
   }
