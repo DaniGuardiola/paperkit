@@ -80,7 +80,7 @@
   color: rgba(33, 33, 33, 0.87);
   line-height: 24px;
 }
-.t-body-1 {
+.t-body,.t-body-1 {
   font-size: 13px;
   font-weight: 400;
   color: rgba(33, 33, 33, 0.87);
