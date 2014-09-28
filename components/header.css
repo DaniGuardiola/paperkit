@@ -8,6 +8,7 @@
   height: 192px;
   cursor: default;
   transition: box-shadow 0.25s, height 0.5s, background-color 0.5s;
+  color: #ffffff;
 }
 #header .title {
   position: relative;
@@ -15,5 +16,4 @@
   transition: font-size 0.5s, font-weight 0.5s, top 0.5s;
   font-size: 20px;
   font-weight: 500;
-  color: rgba(33, 33, 33, 0.87);
 }
