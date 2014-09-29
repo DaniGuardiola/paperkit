@@ -15,7 +15,7 @@ var properties = {
         }
       }
       if (classIn) {
-        if (element.classList.contains(classOut) != true) {
+        if (element.classList.contains(classIn) != true) {
           element.classList.add(classIn);
         }
       }
