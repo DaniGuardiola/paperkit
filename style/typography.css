@@ -101,3 +101,16 @@
   font-weight: 500;
   color: rgba(33, 33, 33, 0.87);
 }
+
+
+
+
+.t-wrap {
+  white-space: normal;
+}
+.t-nowrap {
+  white-space: nowrap;
+}
+.t-ellipsis {
+  text-overflow: ellipsis;
+}
