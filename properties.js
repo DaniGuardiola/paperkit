@@ -10,10 +10,14 @@ var properties = {
     var element = document.querySelector(query);
     if (element) {
       if (classOut) {
-        element.classList.remove(classOut);
+        if (element.classList.contains(classOut)) {
+          element.classList.remove(classOut);
+        }
       }
       if (classIn) {
-        element.classList.add(classIn);
+        if (!element.classList.contains(classOut)) {
+          element.classList.add(classIn);
+        }
       }
       properties.log("properties.change | " + query);
     } else {
