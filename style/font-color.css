@@ -185,3 +185,6 @@
 .font-white {
   color: #ffffff;
 }
+.font-transparent {
+  color: transparent;
+}
