@@ -1,18 +1,30 @@
-.tr-all {
+.tr-all,.tr-all-r,.tr-all-r * {
   transition-property: all;
 }
-.tr-05 {
+.tr-05,.tr-05-r,.tr-05-r * {
   transition-duration: .5s;
 }
-.tr-025 {
+.tr-025,.tr-025-r,.tr-025-r * {
   transition-duration: .25s;
 }
-.tr-ease-in {
+.tr-ease-in,.tr-ease-in-r,.tr-ease-in-r * {
   transition-timing-function: ease-in;
 }
-.tr-ease-out {
+.tr-ease-out,.tr-ease-out-r,.tr-ease-out-r * {
   transition-timing-function: ease-out;
 }
-.tr-ease-in-out {
+.tr-ease-in-out,.tr-ease-in-out-r,.tr-ease-in-out-r * {
   transition-timing-function: ease-in-out;
+}
+
+
+
+
+
+.tr-all-05,.tr-all-05-r,.tr-all-05-r * {
+  transition-property: all 0.5s;
+}
+
+.tr-all-025,.tr-all-025-r,.tr-all-025-r * {
+  transition-property: all 0.5s;
 }
