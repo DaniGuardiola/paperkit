@@ -1,0 +1,18 @@
+.tr-all {
+  transition-property: all;
+}
+.tr-05 {
+  transition-duration: .5s;
+}
+.tr-025 {
+  transition-duration: .25s;
+}
+.tr-ease-in {
+  transition-timing-function: ease-in;
+}
+.tr-ease-out {
+  transition-timing-function: ease-out;
+}
+.tr-ease-in-out {
+  transition-timing-function: ease-in-out;
+}
