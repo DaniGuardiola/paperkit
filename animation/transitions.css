@@ -22,9 +22,9 @@
 
 
 .tr-all-05,.tr-all-05-r,.tr-all-05-r * {
-  transition-property: all 0.5s;
+  transition: all 0.5s;
 }
 
 .tr-all-025,.tr-all-025-r,.tr-all-025-r * {
-  transition-property: all 0.5s;
+  transition: all 0.5s;
 }
