@@ -71,25 +71,19 @@ html * {
   color: rgba(33, 33, 33, 0.87);
 }
 .t-subhead,.t-subhead-leading-1 {
-  font-size: 15px;
   font-weight: 400;
   color: rgba(33, 33, 33, 0.87);
   line-height: 24px;
 }
 .t-subhead-leading-2 {
-  font-size: 15px;
-  font-weight: 400;
-  color: rgba(33, 33, 33, 0.87);
   line-height: 28px;
 }
 .t-body-2 {
-  font-size: 13px;
   font-weight: 500;
   color: rgba(33, 33, 33, 0.87);
   line-height: 24px;
 }
 .t-body,.t-body-1 {
-  font-size: 13px;
   font-weight: 400;
   color: rgba(33, 33, 33, 0.87);
   line-height: 20px;
@@ -100,7 +94,6 @@ html * {
   color: rgba(33, 33, 33, 0.54);
 }
 .t-menu {
-  font-size: 13px;
   font-weight: 500;
   color: rgba(33, 33, 33, 0.87);
 }
@@ -108,6 +101,29 @@ html * {
   font-size: 14px;
   font-weight: 500;
   color: rgba(33, 33, 33, 0.87);
+}
+
+
+
+/* DEVICE */
+@media only screen
+and (max-width: 1224px) {
+  .t-subhead {
+    font-size: 16px;
+  }
+  .t-body-1,.t-body-2,.t-menu {
+    font-size: 14px;
+  }
+}
+/* DESKTOP */
+@media only screen
+and (min-width: 1224px) {
+  .t-subhead {
+    font-size: 15px;
+  }
+  .t-body-1,.t-body-2,.t-menu {
+    font-size: 13px;
+  }
 }
 
 
