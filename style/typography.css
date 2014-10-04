@@ -31,97 +31,135 @@
 
 
 html * {
-  font-family: 'Roboto' !important;
+  font-family: 'Roboto';
+  -webkit-font-smoothing: antialiased;
+}
+p,span {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
 }
 
 
 
 
-.t-display-4 {
+*[md-typo=display-4] {
   font-size: 112px;
   font-weight: 300;
-  color: rgba(33, 33, 33, 0.54);
+  white-space: nowrap;
+  color: #757575;
+  margin: 0 -0.089em;
+  line-height: 120px; /* Not official */
+  letter-spacing: -.044em;
 }
-.t-display-3 {
+*[md-typo=display-3] {
   font-size: 56px;
   font-weight: 400;
-  color: rgba(33, 33, 33, 0.54);
+  white-space: nowrap;
+  color: #757575;
+  margin: 0 -0.082em;
+  line-height: 60px; /* Not official */
+  letter-spacing: -.026em;
 }
-.t-display-2 {
+*[md-typo=display-2] {
   font-size: 45px;
   font-weight: 400;
-  color: rgba(33, 33, 33, 0.54);
+  color: #757575;
+  margin: 0 -0.08em;
   line-height: 48px;
+  letter-spacing: -.018em;
 }
-.t-display-1 {
+*[md-typo=display-1] {
   font-size: 34px;
   font-weight: 400;
-  color: rgba(33, 33, 33, 0.54);
+  color: #757575;
+  margin: 0 -0.08em;
   line-height: 40px;
+  letter-spacing: -.01em;
 }
-.t-headline {
+*[md-typo=headline] {
   font-size: 24px;
   font-weight: 400;
-  color: rgba(33, 33, 33, 0.87);
+  color: #212121;
+  margin: 0 -0.078em;
   line-height: 32px;
+  letter-spacing: -.012em;
 }
-.t-title {
+*[md-typo=title] {
   font-size: 20px;
   font-weight: 500;
-  color: rgba(33, 33, 33, 0.87);
+  white-space: nowrap;
+  color: #212121;
+  line-height: 28px;  /* Not official */
+  margin: 0 -0.07em;
 }
-.t-subhead,.t-subhead-leading-1 {
+*[md-typo=subhead],*[md-typo=subhead-leading-1] {
   font-weight: 400;
-  color: rgba(33, 33, 33, 0.87);
+  color: #212121;
+  margin: 0 -0.068em;
   line-height: 24px;
 }
-.t-subhead-leading-2 {
+*[md-typo=subhead-leading-2] {
   line-height: 28px;
 }
-.t-body-2 {
+*[md-typo=body-2] {
   font-weight: 500;
-  color: rgba(33, 33, 33, 0.87);
+  color: #212121;
+  margin: 0 -0.068em;
   line-height: 24px;
 }
-.t-body,.t-body-1 {
+*[md-typo=body],*[md-typo=body-1] {
   font-weight: 400;
-  color: rgba(33, 33, 33, 0.87);
+  color: #212121;
+  margin: 0 -0.074em;
   line-height: 20px;
 }
-.t-caption {
+*[md-typo=caption] {
   font-size: 12px;
   font-weight: 400;
-  color: rgba(33, 33, 33, 0.54);
+  white-space: nowrap;
+  color: #757575;
+  line-height: 20px;  /* Not official */
+  margin: 0 -0.04em;
+  letter-spacing: 0.011em;
 }
-.t-menu {
+*[md-typo=menu] {
   font-weight: 500;
-  color: rgba(33, 33, 33, 0.87);
+  white-space: nowrap;
+  color: #212121;
+  line-height: 24px;  /* Not official */
+  margin: 0 -0.068em;
 }
-.t-button {
+*[md-typo=button] {
   font-size: 14px;
   font-weight: 500;
-  color: rgba(33, 33, 33, 0.87);
+  white-space: nowrap;
+  color: #212121;
+  line-height: 24px;  /* Not official */
+  margin: 0 -0.068em;
+  text-transform: uppercase;
+  letter-spacing: 0.018em;
 }
 
 
 
 /* DEVICE */
 @media only screen
-and (max-width: 1224px) {
-  .t-subhead {
+and (max-width: 789px) {
+  *[md-typo=subhead] {
     font-size: 16px;
   }
-  .t-body-1,.t-body-2,.t-menu {
+  *[md-typo=body-1],*[md-typo=body-2],*[md-typo=menu] {
     font-size: 14px;
   }
 }
 /* DESKTOP */
 @media only screen
-and (min-width: 1224px) {
-  .t-subhead {
+and (min-width: 789px) {
+  *[md-typo=subhead] {
     font-size: 15px;
   }
-  .t-body-1,.t-body-2,.t-menu {
+  *[md-typo=body-1],*[md-typo=body-2],*[md-typo=menu] {
     font-size: 13px;
   }
 }
@@ -153,4 +191,11 @@ and (min-width: 1224px) {
   /* No support for these yet, maybe someday */
   -o-user-select: none;
   user-select: none;
+}
+
+
+
+
+.t-text {
+  font-color: rgb()
 }

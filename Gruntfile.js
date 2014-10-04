@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-  // 1. All configuration goes here 
+  // 1. All configuration goes here
   grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
 
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             'style/*.css',
             'libs/*.css'
           ],
-          dest: 'materializer.css'
+          dest: '/home/daniguardiola/proyectos/daniguardiola.me/materializer/materializer.css'
         },
         js: {
           src: [
@@ -25,19 +25,33 @@ module.exports = function(grunt) {
             'style/*.js',
             'libs/*.js'
           ],
-          dest: 'materializer.js'
+          dest: '/home/daniguardiola/proyectos/daniguardiola.me/materializer/materializer.js'
+        }
+      },
+      autoprefixer: {
+        options: {
+          browsers: ["last 2 versions", "ie 9", "iOS 6", "Safari 6.2", "ChromeAndroid 25", "FirefoxAndroid 20", 'opera 12', 'ff 15', 'chrome 25']
+        },
+        single_file: {
+          src: '/home/daniguardiola/proyectos/daniguardiola.me/materializer/materializer.css',
+          dest: '/home/daniguardiola/proyectos/daniguardiola.me/materializer/materializer.css'
         }
       },
       cssmin: {
         minify: {
-          src: 'materializer.css',
-          dest: 'materializer.min.css'
+          src: '/home/daniguardiola/proyectos/daniguardiola.me/materializer/materializer.css',
+          dest: '/home/daniguardiola/proyectos/daniguardiola.me/materializer/materializer.min.css'
         }
       },
       uglify: {
         build: {
-          src: 'materializer.js',
-          dest: 'materializer.min.js'
+          src: '/home/daniguardiola/proyectos/daniguardiola.me/materializer/materializer.js',
+          dest: '/home/daniguardiola/proyectos/daniguardiola.me/materializer/materializer.min.js'
+        }
+      },
+      exec: {
+        upload: {
+          cmd: "lftp -f upload.x"
         }
       }
 
@@ -47,8 +61,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-exec');
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['concat', 'cssmin','uglify']);
+  grunt.registerTask('default', ['concat',"autoprefixer",'cssmin','uglify',"exec"]);
 
 };
