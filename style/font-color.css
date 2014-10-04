@@ -1,190 +1,190 @@
-.font-red,.font-red-500 {
+[md-font-color=red],[md-font-color=red-500] {
   color: #e51c23;
 }
-.font-red-50 {
+[md-font-color=red-50] {
   color: #fde0dc;
 }
-.font-red-100 {
+[md-font-color=red-100] {
   color: #f9bdbb;
 }
-.font-red-200 {
+[md-font-color=red-200] {
   color: #f69988;
 }
-.font-red-300 {
+[md-font-color=red-300] {
   color: #f36c60;
 }
-.font-red-400 {
+[md-font-color=red-400] {
   color: #e84e40;
 }
-.font-red-600 {
+[md-font-color=red-600] {
   color: #dd191d;
 }
-.font-red-700 {
+[md-font-color=red-700] {
   color: #d01716;
 }
-.font-red-800 {
+[md-font-color=red-800] {
   color: #c41411;
 }
-.font-red-900 {
+[md-font-color=red-900] {
   color: #b0120a;
 }
-.font-red-a100 {
+[md-font-color=red-a100] {
   color: #ff7997;
 }
-.font-red-a200 {
+[md-font-color=red-a200] {
   color: #ff5177;
 }
-.font-red-a400 {
+[md-font-color=red-a400] {
   color: #ff2d6f;
 }
-.font-red-a700 {
+[md-font-color=red-a700] {
   color: #e00032;
 }
 
 
 
 
-.font-pink,.font-pink-500 {
+[md-font-color=pink],[md-font-color=pink-500] {
   color: #e91e63;
 }
-.font-pink-50 {
+[md-font-color=pink-50] {
   color: #fce4ec;
 }
-.font-pink-100 {
+[md-font-color=pink-100] {
   color: #f8bbd0;
 }
-.font-pink-200 {
+[md-font-color=pink-200] {
   color: #f48fb1;
 }
-.font-pink-300 {
+[md-font-color=pink-300] {
   color: #f06292;
 }
-.font-pink-400 {
+[md-font-color=pink-400] {
   color: #ec407a;
 }
-.font-pink-600 {
+[md-font-color=pink-600] {
   color: #d81b60;
 }
-.font-pink-700 {
+[md-font-color=pink-700] {
   color: #c2185b;
 }
-.font-pink-800 {
+[md-font-color=pink-800] {
   color: #ad1457;
 }
-.font-pink-900 {
+[md-font-color=pink-900] {
   color: #880e4f;
 }
-.font-pink-a100 {
+[md-font-color=pink-a100] {
   color: #ff80ab;
 }
-.font-pink-a200 {
+[md-font-color=pink-a200] {
   color: #ff4081;
 }
-.font-pink-a400 {
+[md-font-color=pink-a400] {
   color: #f50057;
 }
-.font-pink-a700 {
+[md-font-color=pink-a700] {
   color: #c51162;
 }
 
 
 
 
-.font-blue,.font-blue-500 {
+[md-font-color=blue],[md-font-color=blue-500] {
   color: #5677fc;
 }
-.font-blue-50 {
+[md-font-color=blue-50] {
   color: #e7e9fd;
 }
-.font-blue-100 {
+[md-font-color=blue-100] {
   color: #d0d9ff;
 }
-.font-blue-200 {
+[md-font-color=blue-200] {
   color: #afbfff;
 }
-.font-blue-300 {
+[md-font-color=blue-300] {
   color: #91a7ff;
 }
-.font-blue-400 {
+[md-font-color=blue-400] {
   color: #738ffe;
 }
-.font-blue-600 {
+[md-font-color=blue-600] {
   color: #4e6cef;
 }
-.font-blue-700 {
+[md-font-color=blue-700] {
   color: #455ede;
 }
-.font-blue-800 {
+[md-font-color=blue-800] {
   color: #3b50ce;
 }
-.font-blue-900 {
+[md-font-color=blue-900] {
   color: #2a36b1;
 }
-.font-blue-a100 {
+[md-font-color=blue-a100] {
   color: #a6baff;
 }
-.font-blue-a200 {
+[md-font-color=blue-a200] {
   color: #6889ff;
 }
-.font-blue-a400 {
+[md-font-color=blue-a400] {
   color: #4d73ff;
 }
-.font-blue-a700 {
+[md-font-color=blue-a700] {
   color: #4d69ff;
 }
 
 
 
 
-.font-cyan,.font-cyan-500 {
+[md-font-color=cyan],[md-font-color=cyan-500] {
   color: #00bcd4;
 }
-.font-cyan-50 {
+[md-font-color=cyan-50] {
   color: #e0f7fa;
 }
-.font-cyan-100 {
+[md-font-color=cyan-100] {
   color: #b2ebf2;
 }
-.font-cyan-200 {
+[md-font-color=cyan-200] {
   color: #80deea;
 }
-.font-cyan-300 {
+[md-font-color=cyan-300] {
   color: #4dd0e1;
 }
-.font-cyan-400 {
+[md-font-color=cyan-400] {
   color: #26c6da;
 }
-.font-cyan-600 {
+[md-font-color=cyan-600] {
   color: #00acc1;
 }
-.font-cyan-700 {
+[md-font-color=cyan-700] {
   color: #0097a7;
 }
-.font-cyan-800 {
+[md-font-color=cyan-800] {
   color: #00838f;
 }
-.font-cyan-900 {
+[md-font-color=cyan-900] {
   color: #006064;
 }
-.font-cyan-a100 {
+[md-font-color=cyan-a100] {
   color: #84ffff;
 }
-.font-cyan-a200 {
+[md-font-color=cyan-a200] {
   color: #18ffff;
 }
-.font-cyan-a400 {
+[md-font-color=cyan-a400] {
   color: #4d69ff;
 }
-.font-cyan-a700 {
+[md-font-color=cyan-a700] {
   color: #00b8d4;
 }
 
 
 
 
-.font-white {
+[md-font-color=white] {
   color: #ffffff;
 }
-.font-transparent {
+[md-font-color=transparent] {
   color: transparent;
 }
