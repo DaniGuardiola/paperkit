@@ -53,8 +53,13 @@ module.exports = function(grunt) {
         upload: {
           cmd: "lftp -f upload.x"
         }
+      },
+      materializer: {
+        css: {
+          src: '**.mcss',
+          dest: '**.css'
+        }
       }
-
   });
 
   // 3. Where we tell Grunt we plan to use this plug-in.
