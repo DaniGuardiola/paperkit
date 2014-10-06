@@ -1,3 +1,53 @@
+<div md-color='red-100' md-color-mobile='red-200'></div>
+<div md-color='blue-100' md-color-mobile='blue-200'></div>
+
+//
+
+<div class='md-color-red-100-mobile'></div>
+<div class='header-height-1-mobile header-height-2-tablet '></div>
+
+// DANI
+<div md-color='red-200' class='red'></div>
+<div md-color='blue-200' class='blue'></div>
+
+@media () {
+  .red {
+    md-color: 'red-100'; [md-color:red-100] {bg-color:asdasd}
+  }
+  .tweetList {
+    header-style: float
+    shadow: shadow-0;
+    margin-bottom: 3923;
+  }
+
+  .blue {
+    md-color: 'blue-100';
+  }
+}
+
+// DAVID
+<div class='red'></div>
+<div class='blue'></div>
+
+.red {
+  md-color: 'red-200';
+}
+
+.blue {
+  md-color: 'blue-200';
+}
+
+@media () {
+  .red {
+    md-color: 'red-100';
+  }
+
+  .blue {
+    md-color: 'blue-100';
+  }
+}
+
+
 [md-color=red],[md-color=red-500] {
   background-color: #e51c23;
 }
