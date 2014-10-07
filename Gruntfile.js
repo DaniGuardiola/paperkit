@@ -48,12 +48,6 @@ module.exports = function(grunt) {
           src: 'materializer.min.js',
           dest: 'materializer.min.js'
         }
-      },
-      materializer: {
-        css: {
-          src: '**.mcss',
-          dest: '**.css'
-        }
       }
   });
 
