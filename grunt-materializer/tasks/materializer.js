@@ -103,14 +103,27 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('materializer', 'The easy Material Design framework, easier', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      punctuation: '.',
-      separator: ', '
+      mdPath: './'
     });
 
 
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
       // Concat specified files.
+
+      if (grunt.file.exists(this.options.mdPath + "materializer.css" || this.options.mdPath + "materializer.min.css")) {
+        if (grunt.file.exists(this.options.mdPath + "materializer.css") {
+          var mdFile = grunt.file.read(this.options.mdPath + "materializer.css");
+        } else if (grunt.file.exists(this.options.mdPath + "materializer.min.css") {
+          var mdFile = grunt.file.read(this.options.mdPath + "materializer.min.css");
+        }
+      } else {
+        grunt.log.warn('Materializer was not found at ' + this.options.mdPath);
+        return false;
+      }
+
+
+
       var src = f.src.filter(function(filepath) {
         // Warn on and remove invalid source files (if nonull was set).
         if (!grunt.file.exists(filepath)) {
@@ -125,7 +138,7 @@ module.exports = function(grunt) {
       });
 
       // Handle options.
-      src = //MaterializerParser(src) el return debería llevar el string modificado
+      src = MaterializerParser(src,mdFile);
 
       // Write the destination file.
       grunt.file.write(f.dest, src);
