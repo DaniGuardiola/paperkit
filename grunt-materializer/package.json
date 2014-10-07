@@ -38,8 +38,5 @@
   },
   "keywords": [
     "gruntplugin"
-  ],
-  "dependencies": {
-    "simple-text-parser": "~0.1.2"
-  }
+  ]
 }
