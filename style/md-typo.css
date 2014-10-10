@@ -2,28 +2,28 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'), url(typography/roboto-light.ttf) format('woff2');
+  src: local('Roboto Light'), local('Roboto-Light'), url(font/roboto-light.ttf) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto Regular'), local('Roboto-Regular'), url(typography/roboto-regular.ttf) format('woff2');
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(font/roboto-regular.ttf) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'), url(typography/roboto-medium.ttf) format('woff2');
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(font/roboto-medium.ttf) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(typography/roboto-bold.ttf) format('woff2');
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(font/roboto-bold.ttf) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
@@ -93,22 +93,24 @@ p,span {
   line-height: 28px;  /* Not official */
   margin: 0 -0.07em;
 }
-*[md-typo=subhead],*[md-typo=subhead-leading-1] {
+*[md-typo^=subhead] {
   font-weight: 400;
   color: #212121;
   margin: 0 -0.068em;
+}
+*[md-typo=subhead],*[md-typo=subhead-device],*[md-typo=subhead-desktop],*[md-typo^=subhead-leading-1] {
   line-height: 24px;
 }
-*[md-typo=subhead-leading-2] {
+*[md-typo^=subhead-leading-2] {
   line-height: 28px;
 }
-*[md-typo=body-2] {
+*[md-typo^=body-2] {
   font-weight: 500;
   color: #212121;
   margin: 0 -0.068em;
   line-height: 24px;
 }
-*[md-typo=body],*[md-typo=body-1] {
+*[md-typo=body],*[md-typo^=body-1] {
   font-weight: 400;
   color: #212121;
   margin: 0 -0.074em;
@@ -144,6 +146,12 @@ p,span {
 
 
 /* DEVICE */
+*[md-typo=subhead-device],*[md-typo=subhead-leading-1-device],*[md-typo=subhead-leading-2-device] {
+  font-size: 16px;
+}
+*[md-typo=body-device],*[md-typo=body-1-device],*[md-typo=body-2-device],*[md-typo=menu-device] {
+  font-size: 14px;
+}
 @media only screen
 and (max-width: 789px) {
   *[md-typo=subhead] {
@@ -154,6 +162,12 @@ and (max-width: 789px) {
   }
 }
 /* DESKTOP */
+*[md-typo=subhead-desktop],*[md-typo=subhead-leading-1-desktop],*[md-typo=subhead-leading-2-desktop] {
+  font-size: 15px;
+}
+*[md-typo=body-desktop],*[md-typo=body-1-desktop],*[md-typo=body-2-desktop],*[md-typo=menu-desktop] {
+  font-size: 13px;
+}
 @media only screen
 and (min-width: 789px) {
   *[md-typo=subhead] {

@@ -8,14 +8,14 @@ module.exports = function(grunt) {
         // 2. Configuration for concatinating files goes here.
         css: {
           src: [
-            'style/typography.css',
+            'style/md-typo.css',
             'animation/*.css',
             'components/*.css',
             'layout/*.css',
             'style/*.css',
             'libs/*.css'
           ],
-          dest: 'materializer.min.css'
+          dest: 'materializer.css'
         },
         js: {
           src: [
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             'style/*.js',
             'libs/*.js'
           ],
-          dest: 'materializer.min.js'
+          dest: 'materializer.js'
         }
       },
       autoprefixer: {
@@ -33,19 +33,19 @@ module.exports = function(grunt) {
           browsers: ["last 2 versions", "ie 9", "iOS 6", "Safari 6.2", "ChromeAndroid 25", "FirefoxAndroid 20", 'opera 12', 'ff 15', 'chrome 25']
         },
         single_file: {
-          src: 'materializer.min.css',
-          dest: 'materializer.min.css'
+          src: 'materializer.css',
+          dest: 'materializer.css'
         }
       },
       cssmin: {
         minify: {
-          src: 'materializer.min.css',
+          src: 'materializer.css',
           dest: 'materializer.min.css'
         }
       },
       uglify: {
         build: {
-          src: 'materializer.min.js',
+          src: 'materializer.js',
           dest: 'materializer.min.js'
         }
       }
