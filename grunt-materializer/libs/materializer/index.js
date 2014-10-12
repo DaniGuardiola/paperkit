@@ -64,22 +64,24 @@ function Materializer(mdcssData) {
       if(rule.rules) {
         mediaRules.push(rule);
       } else {
-        var editedDeclarations = [];
+        if(rule.declarations) {
+          var editedDeclarations = [];
 
-        rule.declarations.forEach(function(declaration) {
-          var fullProperty = declaration.property+"="+declaration.value;
-          var mdcssProperty = mdcssObjectsMap[fullProperty];
+          rule.declarations.forEach(function(declaration) {
+            var fullProperty = declaration.property+"="+declaration.value;
+            var mdcssProperty = mdcssObjectsMap[fullProperty];
 
-          if(mdcssProperty) {
-            editedDeclarations.push({ type: "comment", comment: " BEGIN: " + fullProperty + " "});
-            editedDeclarations = editedDeclarations.concat(mdcssProperty);
-            editedDeclarations.push({ type: "comment", comment: " END: " + fullProperty + " "});
-          } else {
-            editedDeclarations.push(declaration);
-          }
-        });
+            if(mdcssProperty) {
+              editedDeclarations.push({ type: "comment", comment: " BEGIN: " + fullProperty + " "});
+              editedDeclarations = editedDeclarations.concat(mdcssProperty);
+              editedDeclarations.push({ type: "comment", comment: " END: " + fullProperty + " "});
+            } else {
+              editedDeclarations.push(declaration);
+            }
+          });
 
-        rule.declarations = editedDeclarations;
+          rule.declarations = editedDeclarations;
+        }
       }
     });
 
