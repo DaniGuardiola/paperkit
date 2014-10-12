@@ -114,10 +114,14 @@ function Materializer(mdcssData) {
 
               rule.declarations.forEach(function(declaration){
                 if(declaration.value && declaration.value.indexOf("dip") > -1) {
+                  /*
                   var genDeclaration = JSON.parse(JSON.stringify(declaration));
                   var value = parseInt(genDeclaration.value);
                   value = value * mdipConvertionMap[key][1];
                   genDeclaration.value = value + "px";
+                  */
+                  var genDeclaration = JSON.parse(JSON.stringify(declaration));
+                  genDeclaration.value = replaceDIPS(genDeclaration.value, mdipConvertionMap[key][1]);
                   genRule.declarations.push(genDeclaration);
                 }
               });
@@ -139,7 +143,7 @@ function Materializer(mdcssData) {
       if(rule.declarations) {
         rule.declarations.forEach(function(declaration) {
           if(declaration.value && declaration.value.indexOf("dip") > -1) {
-            declaration.value = declaration.value.replace("dip", "px");
+            declaration.value = replaceDIPS(declaration.value, 1);
           }
         });
       }
@@ -153,11 +157,24 @@ function Materializer(mdcssData) {
 
     return generatedRules;
   }
+
+  var replaceDIPS= function(value, factor) {
+    var ocurrences = value.match(/\d+\s*dip/g);
+    [].forEach.call(ocurrences, function(ocurrence) {
+      var v = parseInt(ocurrence.replace("dip",""));
+      v = v * factor;
+      value = value.replace(ocurrence, v + "px");
+    });
+    return value;
+  }
 }
 
 Materializer.prototype.process = function(cssData) {
+  console.log("Parsing MDCSS file...");
   this.rework=rework(cssData);
+  console.log("Processing MDCSS properties...");
   this.rework.use(this.mdcssProcessor);
+  console.log("Processing DIP units...");
   this.rework.use(this.dipProcessor);
   return this.rework.toString();
 }
