@@ -122,7 +122,7 @@ function Materializer(mdcssData) {
                 }
               });
 
-              if(genRule.declarations) {
+              if(genRule.declarations && genRule.declarations.length > 0) {
                 genMedia.rules.push(genRule);
               }
             }
