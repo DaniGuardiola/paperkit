@@ -14,12 +14,37 @@ function Materializer(mdcssData) {
 
   // Density equals
   var mdipConvertionMap = {
-    'ldpi'    : [ "(max-resolution: 140dpi)", 0.75 ],
+    'ldpi'    : [ [ "(min-resolution: 120dpi) and (max-resolution: 160dpi)",
+                    "(-webkit-min-device-pixel-ratio: 0.75) and (-webkit-max-device-pixel-ratio: 1)",
+                    "(min--moz-device-pixel-ratio: 0.75) and (max--moz-device-pixel-ratio: 1)",
+                    "(-o-min-device-pixel-ratio: 0.75 / 1) and (-o-max-device-pixel-ratio: 1 / 1)",
+                    "(min-device-pixel-ratio: 0.75) and (max-device-pixel-ratio: 1)",                    
+                    "(min-resolution: 0.75dppx) and (max-resolution: 1.0dppx)" ] , 0.75 ],
     'mdpi'    : [ "(min-resolution: 140dpi) and (max-resolution: 180dpi)", 1.0 ],
-    'hdpi'    : [ "(min-resolution: 180dpi) and (max-resolution: 280dpi)", 1.5 ],
-    'xhdpi'   : [ "(min-resolution: 280dpi) and (max-resolution: 400dpi)", 2.0 ],
-    'xxhdpi'  : [ "(min-resolution: 400dpi) and (max-resolution: 560dpi)", 3.0 ],
-    'xxxhdpi' : [ "(min-resolution: 560dpi)", 4.0 ],
+    'hdpi'    : [ [ "(min-resolution: 240dpi)",
+                    "(-webkit-min-device-pixel-ratio: 1.5)",
+                    "(min--moz-device-pixel-ratio: 1.5)",
+                    "(-o-min-device-pixel-ratio: 1.5 / 1)",
+                    "(min-device-pixel-ratio: 1.5)",
+                    "(min-resolution: 1.5dppx)" ], 1.5 ],
+    'xhdpi'   : [ [ "(min-resolution: 320dpi)",
+                    "(-webkit-min-device-pixel-ratio: 2.0)",
+                    "(min--moz-device-pixel-ratio: 2.0)",
+                    "(-o-min-device-pixel-ratio: 2.0 / 1)",
+                    "(min-device-pixel-ratio: 2.0)",
+                    "(min-resolution: 2.0dppx)" ], 2.0 ],
+    'xxhdpi'  : [ [ "(min-resolution: 480dpi)",
+                    "(-webkit-min-device-pixel-ratio: 3.0)",
+                    "(min--moz-device-pixel-ratio: 3.0)",
+                    "(-o-min-device-pixel-ratio: 3.0 / 1)",
+                    "(min-device-pixel-ratio: 3.0)",                  
+                    "(min-resolution: 3.0dppx)" ], 3.0 ],
+    'xxxhdpi' : [ [ "(min-resolution: 640dpi)",
+                    "(-webkit-min-device-pixel-ratio: 4.0)",
+                    "(min--moz-device-pixel-ratio: 4.0)",
+                    "(-o-min-device-pixel-ratio: 4.0 / 1)",
+                    "(min-device-pixel-ratio: 4.0)",                    
+                    "(min-resolution: 4.0dppx)" ], 4.0 ],
   };
 
   rework(mdcssData)
@@ -99,7 +124,7 @@ function Materializer(mdcssData) {
       if(key != "mdpi") {
         var genMedia = {
           type: "media",
-          "media": (media ? media.media : "all") + " and " + mdipConvertionMap[key][0],
+          "media": generateMedia((media ? media.media : "all"), mdipConvertionMap[key][0]),
           rules: []
         }
 
@@ -114,12 +139,6 @@ function Materializer(mdcssData) {
 
               rule.declarations.forEach(function(declaration){
                 if(declaration.value && declaration.value.indexOf("dip") > -1) {
-                  /*
-                  var genDeclaration = JSON.parse(JSON.stringify(declaration));
-                  var value = parseInt(genDeclaration.value);
-                  value = value * mdipConvertionMap[key][1];
-                  genDeclaration.value = value + "px";
-                  */
                   var genDeclaration = JSON.parse(JSON.stringify(declaration));
                   genDeclaration.value = replaceDIPS(genDeclaration.value, mdipConvertionMap[key][1]);
                   genRule.declarations.push(genDeclaration);
@@ -156,6 +175,20 @@ function Materializer(mdcssData) {
     });
 
     return generatedRules;
+  }
+
+  var generateMedia= function(original, mediaArray) {
+    var generatedMedia = "";
+
+    [].forEach.call(mediaArray, function(mediaValue) {
+      if(!generatedMedia=="") {
+        generatedMedia += ",\n"
+      }
+
+      generatedMedia += original + " and " + mediaValue;
+    });
+
+    return generatedMedia;
   }
 
   var replaceDIPS= function(value, factor) {

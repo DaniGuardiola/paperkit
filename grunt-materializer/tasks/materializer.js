@@ -8,7 +8,7 @@
 
 'use strict';
 
-var Materializer = require("../lib/index.js");
+var Materializer = require("../lib/materializer/index.js");
 
 module.exports = function(grunt) {
 
