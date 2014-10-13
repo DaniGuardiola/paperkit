@@ -32,7 +32,9 @@
     "grunt-contrib-clean": "^0.5.0",
     "grunt-contrib-nodeunit": "^0.3.3",
     "grunt": "~0.4.5",
-    "materializer": "~0.0.1"
+    "rework": "~1.0.0",
+    "rework-visit": "1.0.0",
+    "rework-walk": "1.0.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.5"
