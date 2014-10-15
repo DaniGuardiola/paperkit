@@ -1,10 +1,12 @@
-winston = require('winston')
-sprintf = require('sprintf')
-css = require('css')
+var winston = require('winston')
+var sprintf = require('sprintf')
+var css = require('css')
 
 module.exports = Generator;
 
-function Generator() {
+function Generator(jsonData) {
+  var jsonData=JSON.parse(jsonData);
+
   function Rule() {
     this.type="rule";
     this.selectors=[];
@@ -25,9 +27,7 @@ function Generator() {
 
   var generatedMedias = [];
 
-  this.generate = function(sourceData) {
-    var jsonData=JSON.parse(sourceData);
-
+  this.generate = function() {
     var generatedData = [];  
 
     jsonData.values.forEach(function(value) {
@@ -38,7 +38,7 @@ function Generator() {
       if('variants' in value) {
         value.variants.forEach(function(variant) {
           if('css' in variant) {
-            generatedData.push(generateRule(variant.css, jsonData.name, value.name, variant.name, variant.defaultVariant));
+            generatedData.push(generateRule(variant.css, jsonData.name, value.name, variant.name, value.defaultVariant));
           }          
         });
       }
@@ -77,8 +77,9 @@ function Generator() {
     var ruleSelector = sprintf("[%s^=%s]", tagname, valuename);
 
     // Generate rule selectors
-    if(variantname) {
+    if(variantname) {      
       if(defaultVariant && defaultVariant==variantname) {
+        winston.debug("VARIANT => " + variantname + " DEFAULT => " + defaultVariant);
         rule.selectors.push(ruleSelector);
       }
       ruleSelector += sprintf("[%s~=%s]", tagname, variantname);
