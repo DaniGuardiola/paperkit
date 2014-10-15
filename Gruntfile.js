@@ -14,19 +14,24 @@ module.exports = function(grunt) {
             'source/style/*.json',
             'source/libs/*.json'
           ],
-          dest: 'bin/materializer/',
-          ext: '.css'
+          dest: 'bin/',
+          ext: '.css',
+          rename: function(dest, src) {            
+            var newDest = dest + src.replace("source", "materializer");
+            // console.log("DEST => " + dest + " SRC => " + src + " NEW => " + newDest);
+            return newDest;
+          }
         }
       },
       concat: {
         // 2. Configuration for concatinating files goes here.
         css: {
           src: [
-            'bin/materializer/animation/*.json',
-            'bin/materializer/components/*.json',
-            'bin/materializer/layout/*.json',
-            'bin/materializer/style/*.json',
-            'bin/materializer/libs/*.json'
+            'bin/materializer/animation/*.css',
+            'bin/materializer/components/*.css',
+            'bin/materializer/layout/*.css',
+            'bin/materializer/style/*.css',
+            'bin/materializer/libs/*.css'
           ],
           dest: 'bin/materializer.css'
         },

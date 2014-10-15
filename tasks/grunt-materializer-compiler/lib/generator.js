@@ -38,7 +38,7 @@ function Generator(jsonData) {
       if('variants' in value) {
         value.variants.forEach(function(variant) {
           if('css' in variant) {
-            generatedData.push(generateRule(variant.css, jsonData.name, value.name, variant.name, variant.defaultVariant));
+            generatedData.push(generateRule(variant.css, jsonData.name, value.name, variant.name, value.defaultVariant));
           }          
         });
       }
