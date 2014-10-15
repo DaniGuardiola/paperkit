@@ -3,29 +3,39 @@ module.exports = function(grunt) {
   // 1. All configuration goes here
   grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
-
+      materializerCompiler: {
+        css: {
+          src: [
+            'source/animation/*.json',
+            'source/components/*.json',
+            'source/layout/*.json',
+            'source/style/*.json',
+            'source/libs/*.json'
+          ],
+          dest: 'bin/materializer/'
+        }
+      },
       concat: {
         // 2. Configuration for concatinating files goes here.
         css: {
           src: [
-            'style/md-typo.css',
-            'animation/*.css',
-            'components/*.css',
-            'layout/*.css',
-            'style/*.css',
-            'libs/*.css'
+            'bin/materializer/animation/*.json',
+            'bin/materializer/components/*.json',
+            'bin/materializer/layout/*.json',
+            'bin/materializer/style/*.json',
+            'bin/materializer/libs/*.json'
           ],
-          dest: 'materializer.css'
+          dest: 'bin/materializer.css'
         },
         js: {
           src: [
-            'animation/*.js',
-            'components/*.js',
-            'layout/*.js',
-            'style/*.js',
-            'libs/*.js'
+            'bin/animation/*.js',
+            'bin/components/*.js',
+            'bin/layout/*.js',
+            'bin/style/*.js',
+            'bin/libs/*.js'
           ],
-          dest: 'materializer.js'
+          dest: 'bin/materializer.js'
         }
       },
       autoprefixer: {
@@ -33,20 +43,20 @@ module.exports = function(grunt) {
           browsers: ["last 2 versions", "ie 9", "iOS 6", "Safari 6.2", "ChromeAndroid 25", "FirefoxAndroid 20", 'opera 12', 'ff 15', 'chrome 25']
         },
         single_file: {
-          src: 'materializer.css',
-          dest: 'materializer.css'
+          src: 'bin/materializer.css',
+          dest: 'bin/materializer.css'
         }
       },
       cssmin: {
         minify: {
-          src: 'materializer.css',
-          dest: 'materializer.min.css'
+          src: 'bin/materializer.css',
+          dest: 'bin/materializer.min.css'
         }
       },
       uglify: {
         build: {
-          src: 'materializer.js',
-          dest: 'materializer.min.js'
+          src: 'bin/materializer.js',
+          dest: 'bin/materializer.min.js'
         }
       }
   });

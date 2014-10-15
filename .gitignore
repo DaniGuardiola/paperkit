@@ -1,6 +1,3 @@
 upload.x
-/node-modules
-materializer.css
-materializer.js
-materializer.min.css
-materializer.min.js
+node_modules
+bin/
