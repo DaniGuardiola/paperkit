@@ -3,8 +3,10 @@ module.exports = function(grunt) {
   // 1. All configuration goes here
   grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
-      materializerCompiler: {
+      
+      compiler: {
         css: {
+          expand: true,
           src: [
             'source/animation/*.json',
             'source/components/*.json',
@@ -12,7 +14,8 @@ module.exports = function(grunt) {
             'source/style/*.json',
             'source/libs/*.json'
           ],
-          dest: 'bin/materializer/'
+          dest: 'bin/materializer/',
+          ext: '.css'
         }
       },
       concat: {
@@ -58,8 +61,11 @@ module.exports = function(grunt) {
           src: 'bin/materializer.js',
           dest: 'bin/materializer.min.js'
         }
-      }
+      }      
   });
+
+  grunt.loadTasks('tasks');
+  grunt.loadTasks('tasks/grunt-materializer-compiler');
 
   // 3. Where we tell Grunt we plan to use this plug-in.
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -68,6 +74,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['concat',"autoprefixer",'cssmin','uglify']);
+  grunt.registerTask('default', ['compiler','concat',"autoprefixer",'cssmin','uglify']);
 
 };
