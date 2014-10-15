@@ -77,28 +77,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#ff7997"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#ff5177"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#ff2d6f"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#e00032"
@@ -181,28 +181,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#ff80ab"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#ff4081"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#f50057"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#c51162"
@@ -285,28 +285,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#ea80fc"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#e040fb"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#d500f9"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#aa00ff"
@@ -389,28 +389,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#b388ff"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#7c4dff"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#651fff"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#6200ea"
@@ -493,28 +493,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#8c9eff"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#536dfe"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#3d5afe"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#304ffe"
@@ -597,28 +597,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#a6baff"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#6889ff"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#4d73ff"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#4d69ff"
@@ -701,28 +701,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#80d8ff"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#40c4ff"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#00b0ff"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#0091ea"
@@ -805,28 +805,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#84ffff"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#18ffff"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#00e5ff"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#00b8d4"
@@ -909,28 +909,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#a7ffeb"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#64ffda"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#1de9b6"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#00bfa5"
@@ -1013,28 +1013,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#a2f78d"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#5af158"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#14e715"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#12c700"
@@ -1117,28 +1117,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#ccff90"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#b2ff59"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#76ff03"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#64dd17"
@@ -1221,28 +1221,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#f4ff81"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#eeff41"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#c6ff00"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#aeea00"
@@ -1325,28 +1325,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#ffff8d"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#ffff00"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#ffea00"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#ffd600"
@@ -1429,28 +1429,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#ffe57f"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#ffd740"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#ffc400"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#ffab00"
@@ -1533,28 +1533,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#ffd180"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#ffab40"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#ff9100"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#ff6d00"
@@ -1637,28 +1637,28 @@
           }
         },
         {
-          "name": "A100",
+          "name": "a100",
           "css": {
             "property": "color",
             "value": "#ff9e80"
           }
         },
         {
-          "name": "A200",
+          "name": "a200",
           "css": {
             "property": "color",
             "value": "#ff6e40"
           }
         },
         {
-          "name": "A400",
+          "name": "a400",
           "css": {
             "property": "color",
             "value": "#ff3d00"
           }
         },
         {
-          "name": "A700",
+          "name": "a700",
           "css": {
             "property": "color",
             "value": "#dd2c00"
@@ -1856,6 +1856,6 @@
           }
         }
       ]
-    }  
+    }
   ]
 }
