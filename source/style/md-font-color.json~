@@ -1,6 +1,6 @@
 {
   "type": "tag",
-  "name": "md-color",
+  "name": "md-font-color",
   "values": [
     {
       "name": "red",
@@ -10,7 +10,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fde0dc"
             }
           ]
@@ -19,7 +19,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f9bdbb"
             }
           ]
@@ -28,7 +28,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f69988"
             }
           ]
@@ -37,7 +37,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f36c60"
             }
           ]
@@ -46,7 +46,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e84e40"
             }
           ]
@@ -55,7 +55,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e51c23"
             }
           ]
@@ -64,7 +64,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#dd191d"
             }
           ]
@@ -73,7 +73,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#d01716"
             }
           ]
@@ -82,7 +82,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#c41411"
             }
           ]
@@ -91,43 +91,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#b0120a"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff7997"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff5177"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff2d6f"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e00032"
             }
           ]
@@ -142,7 +142,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fce4ec"
             }
           ]
@@ -151,7 +151,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f8bbd0"
             }
           ]
@@ -160,7 +160,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f48fb1"
             }
           ]
@@ -169,7 +169,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f06292"
             }
           ]
@@ -178,7 +178,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ec407a"
             }
           ]
@@ -187,7 +187,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e91e63"
             }
           ]
@@ -196,7 +196,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#d81b60"
             }
           ]
@@ -205,7 +205,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#c2185b"
             }
           ]
@@ -214,7 +214,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ad1457"
             }
           ]
@@ -223,43 +223,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#880e4f"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff80ab"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff4081"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f50057"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#c51162"
             }
           ]
@@ -274,7 +274,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f3e5f5"
             }
           ]
@@ -283,7 +283,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e1bee7"
             }
           ]
@@ -292,7 +292,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ce93d8"
             }
           ]
@@ -301,7 +301,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ba68c8"
             }
           ]
@@ -310,7 +310,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ab47bc"
             }
           ]
@@ -319,7 +319,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#9c27b0"
             }
           ]
@@ -328,7 +328,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#8e24aa"
             }
           ]
@@ -337,7 +337,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#7b1fa2"
             }
           ]
@@ -346,7 +346,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#6a1b9a"
             }
           ]
@@ -355,43 +355,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#4a148c"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ea80fc"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e040fb"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#d500f9"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#aa00ff"
             }
           ]
@@ -406,7 +406,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ede7f6"
             }
           ]
@@ -415,7 +415,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#d1c4e9"
             }
           ]
@@ -424,7 +424,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#b39ddb"
             }
           ]
@@ -433,7 +433,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#9575cd"
             }
           ]
@@ -442,7 +442,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#7e57c2"
             }
           ]
@@ -451,7 +451,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#673ab7"
             }
           ]
@@ -460,7 +460,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#5e35b1"
             }
           ]
@@ -469,7 +469,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#512da8"
             }
           ]
@@ -478,7 +478,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#4527a0"
             }
           ]
@@ -487,43 +487,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#311b92"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#b388ff"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#7c4dff"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#651fff"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#6200ea"
             }
           ]
@@ -538,7 +538,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e8eaf6"
             }
           ]
@@ -547,7 +547,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#c5cae9"
             }
           ]
@@ -556,7 +556,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#9fa8da"
             }
           ]
@@ -565,7 +565,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#7986cb"
             }
           ]
@@ -574,7 +574,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#5c6bc0"
             }
           ]
@@ -583,7 +583,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#3f51b5"
             }
           ]
@@ -592,7 +592,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#3949ab"
             }
           ]
@@ -601,7 +601,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#303f9f"
             }
           ]
@@ -610,7 +610,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#283593"
             }
           ]
@@ -619,43 +619,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#1a237e"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#8c9eff"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#536dfe"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#3d5afe"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#304ffe"
             }
           ]
@@ -670,7 +670,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e7e9fd"
             }
           ]
@@ -679,7 +679,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#d0d9ff"
             }
           ]
@@ -688,7 +688,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#afbfff"
             }
           ]
@@ -697,7 +697,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#91a7ff"
             }
           ]
@@ -706,7 +706,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#738ffe"
             }
           ]
@@ -715,7 +715,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#5677fc"
             }
           ]
@@ -724,7 +724,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#4e6cef"
             }
           ]
@@ -733,7 +733,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#455ede"
             }
           ]
@@ -742,7 +742,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#3b50ce"
             }
           ]
@@ -751,43 +751,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#2a36b1"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#a6baff"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#6889ff"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#4d73ff"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#4d69ff"
             }
           ]
@@ -802,7 +802,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e1f5fe"
             }
           ]
@@ -811,7 +811,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#b3e5fc"
             }
           ]
@@ -820,7 +820,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#81d4fa"
             }
           ]
@@ -829,7 +829,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#4fc3f7"
             }
           ]
@@ -838,7 +838,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#29b6f6"
             }
           ]
@@ -847,7 +847,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#03a9f4"
             }
           ]
@@ -856,7 +856,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#039be5"
             }
           ]
@@ -865,7 +865,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#0288d1"
             }
           ]
@@ -874,7 +874,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#0277bd"
             }
           ]
@@ -883,43 +883,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#01579b"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#80d8ff"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#40c4ff"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#00b0ff"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#0091ea"
             }
           ]
@@ -934,7 +934,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e0f7fa"
             }
           ]
@@ -943,7 +943,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#b2ebf2"
             }
           ]
@@ -952,7 +952,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#80deea"
             }
           ]
@@ -961,7 +961,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#4dd0e1"
             }
           ]
@@ -970,7 +970,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#26c6da"
             }
           ]
@@ -979,7 +979,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#00bcd4"
             }
           ]
@@ -988,7 +988,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#00acc1"
             }
           ]
@@ -997,7 +997,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#0097a7"
             }
           ]
@@ -1006,7 +1006,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#00838f"
             }
           ]
@@ -1015,43 +1015,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#6064"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#84ffff"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#18ffff"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#00e5ff"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#00b8d4"
             }
           ]
@@ -1066,7 +1066,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e0f2f1"
             }
           ]
@@ -1075,7 +1075,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#b2dfdb"
             }
           ]
@@ -1084,7 +1084,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#80cbc4"
             }
           ]
@@ -1093,7 +1093,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#4db6ac"
             }
           ]
@@ -1102,7 +1102,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#26a69a"
             }
           ]
@@ -1111,7 +1111,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#9688"
             }
           ]
@@ -1120,7 +1120,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#00897b"
             }
           ]
@@ -1129,7 +1129,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#00796b"
             }
           ]
@@ -1138,7 +1138,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#00695c"
             }
           ]
@@ -1147,43 +1147,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#004d40"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#a7ffeb"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#64ffda"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#1de9b6"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#00bfa5"
             }
           ]
@@ -1198,7 +1198,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#d0f8ce"
             }
           ]
@@ -1207,7 +1207,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#a3e9a4"
             }
           ]
@@ -1216,7 +1216,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#72d572"
             }
           ]
@@ -1225,7 +1225,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#42bd41"
             }
           ]
@@ -1234,7 +1234,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#2baf2b"
             }
           ]
@@ -1243,7 +1243,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#259b24"
             }
           ]
@@ -1252,7 +1252,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#0a8f08"
             }
           ]
@@ -1261,7 +1261,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#0a7e07"
             }
           ]
@@ -1270,7 +1270,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#056f00"
             }
           ]
@@ -1279,43 +1279,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#0d5302"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#a2f78d"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#5af158"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#14e715"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#12c700"
             }
           ]
@@ -1330,7 +1330,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f1f8e9"
             }
           ]
@@ -1339,7 +1339,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#dcedc8"
             }
           ]
@@ -1348,7 +1348,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#c5e1a5"
             }
           ]
@@ -1357,7 +1357,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#aed581"
             }
           ]
@@ -1366,7 +1366,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#9ccc65"
             }
           ]
@@ -1375,7 +1375,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#8bc34a"
             }
           ]
@@ -1384,7 +1384,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#7cb342"
             }
           ]
@@ -1393,7 +1393,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#689f38"
             }
           ]
@@ -1402,7 +1402,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#558b2f"
             }
           ]
@@ -1411,43 +1411,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#33691e"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ccff90"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#b2ff59"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#76ff03"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#64dd17"
             }
           ]
@@ -1462,7 +1462,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f9fbe7"
             }
           ]
@@ -1471,7 +1471,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f0f4c3"
             }
           ]
@@ -1480,7 +1480,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e6ee9c"
             }
           ]
@@ -1489,7 +1489,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#dce775"
             }
           ]
@@ -1498,7 +1498,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#d4e157"
             }
           ]
@@ -1507,7 +1507,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#cddc39"
             }
           ]
@@ -1516,7 +1516,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#c0ca33"
             }
           ]
@@ -1525,7 +1525,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#afb42b"
             }
           ]
@@ -1534,7 +1534,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#9e9d24"
             }
           ]
@@ -1543,43 +1543,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#827717"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f4ff81"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#eeff41"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#c6ff00"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#aeea00"
             }
           ]
@@ -1594,7 +1594,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fffde7"
             }
           ]
@@ -1603,7 +1603,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fff9c4"
             }
           ]
@@ -1612,7 +1612,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fff59d"
             }
           ]
@@ -1621,7 +1621,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fff176"
             }
           ]
@@ -1630,7 +1630,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffee58"
             }
           ]
@@ -1639,7 +1639,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffeb3b"
             }
           ]
@@ -1648,7 +1648,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fdd835"
             }
           ]
@@ -1657,7 +1657,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fbc02d"
             }
           ]
@@ -1666,7 +1666,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f9a825"
             }
           ]
@@ -1675,43 +1675,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f57f17"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffff8d"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffff00"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffea00"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffd600"
             }
           ]
@@ -1726,7 +1726,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fff8e1"
             }
           ]
@@ -1735,7 +1735,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffecb3"
             }
           ]
@@ -1744,7 +1744,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffe082"
             }
           ]
@@ -1753,7 +1753,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffd54f"
             }
           ]
@@ -1762,7 +1762,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffca28"
             }
           ]
@@ -1771,7 +1771,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffc107"
             }
           ]
@@ -1780,7 +1780,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffb300"
             }
           ]
@@ -1789,7 +1789,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffa000"
             }
           ]
@@ -1798,7 +1798,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff8f00"
             }
           ]
@@ -1807,43 +1807,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff6f00"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffe57f"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffd740"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffc400"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffab00"
             }
           ]
@@ -1858,7 +1858,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fff3e0"
             }
           ]
@@ -1867,7 +1867,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffe0b2"
             }
           ]
@@ -1876,7 +1876,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffcc80"
             }
           ]
@@ -1885,7 +1885,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffb74d"
             }
           ]
@@ -1894,7 +1894,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffa726"
             }
           ]
@@ -1903,7 +1903,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff9800"
             }
           ]
@@ -1912,7 +1912,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fb8c00"
             }
           ]
@@ -1921,7 +1921,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f57c00"
             }
           ]
@@ -1930,7 +1930,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ef6c00"
             }
           ]
@@ -1939,43 +1939,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e65100"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffd180"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffab40"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff9100"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff6d00"
             }
           ]
@@ -1990,7 +1990,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fbe9e7"
             }
           ]
@@ -1999,7 +1999,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffccbc"
             }
           ]
@@ -2008,7 +2008,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffab91"
             }
           ]
@@ -2017,7 +2017,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff8a65"
             }
           ]
@@ -2026,7 +2026,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff7043"
             }
           ]
@@ -2035,7 +2035,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff5722"
             }
           ]
@@ -2044,7 +2044,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f4511e"
             }
           ]
@@ -2053,7 +2053,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e64a19"
             }
           ]
@@ -2062,7 +2062,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#d84315"
             }
           ]
@@ -2071,43 +2071,43 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#bf360c"
             }
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff9e80"
             }
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff6e40"
             }
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ff3d00"
             }
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#dd2c00"
             }
           ]
@@ -2122,7 +2122,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#efebe9"
             }
           ]
@@ -2131,7 +2131,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#d7ccc8"
             }
           ]
@@ -2140,7 +2140,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#bcaaa4"
             }
           ]
@@ -2149,7 +2149,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#a1887f"
             }
           ]
@@ -2158,7 +2158,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#8d6e63"
             }
           ]
@@ -2167,7 +2167,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#795548"
             }
           ]
@@ -2176,7 +2176,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#6d4c41"
             }
           ]
@@ -2185,7 +2185,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#5d4037"
             }
           ]
@@ -2194,7 +2194,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#4e342e"
             }
           ]
@@ -2203,7 +2203,7 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#3e2723"
             }
           ]
@@ -2218,7 +2218,7 @@
           "name": "50",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#fafafa"
             }
           ]
@@ -2227,7 +2227,7 @@
           "name": "100",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#f5f5f5"
             }
           ]
@@ -2236,7 +2236,7 @@
           "name": "200",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#eeeeee"
             }
           ]
@@ -2245,7 +2245,7 @@
           "name": "300",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#e0e0e0"
             }
           ]
@@ -2254,7 +2254,7 @@
           "name": "400",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#bdbdbd"
             }
           ]
@@ -2263,7 +2263,7 @@
           "name": "500",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#9e9e9e"
             }
           ]
@@ -2272,7 +2272,7 @@
           "name": "600",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#757575"
             }
           ]
@@ -2281,7 +2281,7 @@
           "name": "700",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#616161"
             }
           ]
@@ -2290,7 +2290,7 @@
           "name": "800",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#424242"
             }
           ]
@@ -2299,7 +2299,7 @@
           "name": "900",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#212121"
             }
           ]
@@ -2314,7 +2314,7 @@
           "name": "1000",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#0"
             }
           ]
@@ -2329,7 +2329,7 @@
           "name": "1000",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "#ffffff"
             }
           ]
@@ -2344,7 +2344,7 @@
           "name": "1",
           "css": [
             {
-              "property": "background-color",
+              "property": "color",
               "value": "transparent"
             }
           ]

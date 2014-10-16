@@ -97,7 +97,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -106,7 +106,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -115,7 +115,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -124,7 +124,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -229,7 +229,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -238,7 +238,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -247,7 +247,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -256,7 +256,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -361,7 +361,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -370,7 +370,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -379,7 +379,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -388,7 +388,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -493,7 +493,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -502,7 +502,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -511,7 +511,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -520,7 +520,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -625,7 +625,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -634,7 +634,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -643,7 +643,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -652,7 +652,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -757,7 +757,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -766,7 +766,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -775,7 +775,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -784,7 +784,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -889,7 +889,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -898,7 +898,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -907,7 +907,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -916,7 +916,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -1021,7 +1021,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -1030,7 +1030,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -1039,7 +1039,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -1048,7 +1048,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -1153,7 +1153,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -1162,7 +1162,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -1171,7 +1171,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -1180,7 +1180,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -1285,7 +1285,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -1294,7 +1294,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -1303,7 +1303,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -1312,7 +1312,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -1417,7 +1417,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -1426,7 +1426,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -1435,7 +1435,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -1444,7 +1444,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -1549,7 +1549,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -1558,7 +1558,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -1567,7 +1567,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -1576,7 +1576,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -1681,7 +1681,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -1690,7 +1690,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -1699,7 +1699,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -1708,7 +1708,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -1813,7 +1813,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -1822,7 +1822,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -1831,7 +1831,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -1840,7 +1840,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -1945,7 +1945,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -1954,7 +1954,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -1963,7 +1963,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -1972,7 +1972,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",
@@ -2077,7 +2077,7 @@
           ]
         },
         {
-          "name": "a100",
+          "name": "A100",
           "css": [
             {
               "property": "background-color",
@@ -2086,7 +2086,7 @@
           ]
         },
         {
-          "name": "a200",
+          "name": "A200",
           "css": [
             {
               "property": "background-color",
@@ -2095,7 +2095,7 @@
           ]
         },
         {
-          "name": "a400",
+          "name": "A400",
           "css": [
             {
               "property": "background-color",
@@ -2104,7 +2104,7 @@
           ]
         },
         {
-          "name": "a700",
+          "name": "A700",
           "css": [
             {
               "property": "background-color",

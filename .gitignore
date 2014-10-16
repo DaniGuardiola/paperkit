@@ -1,3 +1,5 @@
 upload.x
 node_modules
 bin/
+demo/
+grunt-materializer/sources/
