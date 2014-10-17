@@ -53,7 +53,7 @@ module.exports = function(grunt) {
             return newDest;
           }
         },
-        jsonToMdcss: {
+        dev: {
           expand: true,
           src: 'source/**/*.json',
           dest: 'grunt-materializer/sources/',
@@ -138,5 +138,6 @@ module.exports = function(grunt) {
 
   // This will run when executing grunt
   grunt.registerTask('default', ['clean','compiler','copy',"autoprefixer",'cssbeautifier','concat','cssmin','uglify']);
+  grunt.registerTask('dev', ['copy:dev']);
 
 };
