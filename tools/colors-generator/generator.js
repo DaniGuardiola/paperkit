@@ -54,9 +54,9 @@ var processColorPalette = function() {
   var colorPaletteDiv = document.querySelector('.color-palette');
   var colorGroups = colorPaletteDiv.querySelectorAll('.color-group');
   var mdObject = { type: "tag", name: "md-color", values: [] };
-  var mdBlackColor = { name: "black", defaultVariant: 1, variants: [ { name: "1", css: [ { property: "background-color", value: "#000000" } ] } ] };
-  var mdWhiteColor = { name: "white", defaultVariant: 1, variants: [ { name: "1", css: [ { property: "background-color", value: "#ffffff" } ] } ] };
-  var mdTransparentColor = { name: "transparent", defaultVariant: 1, variants: [ { name: "1", css: [ { property: "background-color", value: "transparent" } ] } ] };
+  var mdBlackColor = { name: "black", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "background-color", value: "#000000" } ] } ] };
+  var mdWhiteColor = { name: "white", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "background-color", value: "#ffffff" } ] } ] };
+  var mdTransparentColor = { name: "transparent", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "background-color", value: "transparent" } ] } ] };
 
   [].forEach.call(colorGroups, function(colorGroup) {
     var ul=colorGroup.querySelector('ul');
@@ -65,11 +65,15 @@ var processColorPalette = function() {
     [].forEach.call(ul.querySelectorAll('li'), function(li) {      
       if(li.classList.contains('main-color')) {
         var name = li.querySelector('span.name').innerText;
+        var defaultVariant = li.querySelector('span.shade').innerText;
         colorGroupObject.name = name.toLowerCase().replace(" ","-");
-        colorGroupObject.defaultVariant = li.querySelector('span.shade').innerText;
+        defaultVariant = defaultVariant.indexOf("A")==0 ? defaultVariant : "c" + defaultVariant;
+        colorGroupObject.defaultVariant = defaultVariant.toLowerCase();
       } else {
         var name = li.querySelector('span.shade').innerText;
         var color = li.querySelector('span.hex').innerText;
+
+        name = name.indexOf("A")==0 ? name : "c" + name;
 
         var variantObject = { css: [], name: name.toLowerCase() };
         variantObject.css.push({ property: "background-color", value: color } );
