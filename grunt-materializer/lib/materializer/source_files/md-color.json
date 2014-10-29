@@ -1,0 +1,2355 @@
+{
+  "type": "tag",
+  "name": "md-color",
+  "values": [
+    {
+      "name": "red",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fde0dc"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f9bdbb"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f69988"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f36c60"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e84e40"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e51c23"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#dd191d"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#d01716"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#c41411"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#b0120a"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff7997"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff5177"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff2d6f"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e00032"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pink",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fce4ec"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f8bbd0"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f48fb1"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f06292"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ec407a"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e91e63"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#d81b60"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#c2185b"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ad1457"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#880e4f"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff80ab"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff4081"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f50057"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#c51162"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "purple",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f3e5f5"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e1bee7"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ce93d8"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ba68c8"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ab47bc"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#9c27b0"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#8e24aa"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#7b1fa2"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#6a1b9a"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#4a148c"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ea80fc"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e040fb"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#d500f9"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#aa00ff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "deep-purple",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ede7f6"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#d1c4e9"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#b39ddb"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#9575cd"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#7e57c2"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#673ab7"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#5e35b1"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#512da8"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#4527a0"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#311b92"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#b388ff"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#7c4dff"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#651fff"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#6200ea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "indigo",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e8eaf6"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#c5cae9"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#9fa8da"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#7986cb"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#5c6bc0"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#3f51b5"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#3949ab"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#303f9f"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#283593"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#1a237e"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#8c9eff"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#536dfe"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#3d5afe"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#304ffe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "blue",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e7e9fd"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#d0d9ff"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#afbfff"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#91a7ff"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#738ffe"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#5677fc"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#4e6cef"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#455ede"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#3b50ce"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#2a36b1"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#a6baff"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#6889ff"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#4d73ff"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#4d69ff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "light-blue",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e1f5fe"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#b3e5fc"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#81d4fa"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#4fc3f7"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#29b6f6"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#03a9f4"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#039be5"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#0288d1"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#0277bd"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#01579b"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#80d8ff"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#40c4ff"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#00b0ff"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#0091ea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cyan",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e0f7fa"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#b2ebf2"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#80deea"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#4dd0e1"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#26c6da"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#00bcd4"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#00acc1"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#0097a7"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#00838f"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#6064"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#84ffff"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#18ffff"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#00e5ff"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#00b8d4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "teal",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e0f2f1"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#b2dfdb"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#80cbc4"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#4db6ac"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#26a69a"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#9688"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#00897b"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#00796b"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#00695c"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#004d40"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#a7ffeb"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#64ffda"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#1de9b6"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#00bfa5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "green",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#d0f8ce"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#a3e9a4"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#72d572"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#42bd41"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#2baf2b"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#259b24"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#0a8f08"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#0a7e07"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#056f00"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#0d5302"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#a2f78d"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#5af158"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#14e715"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#12c700"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "light-green",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f1f8e9"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#dcedc8"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#c5e1a5"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#aed581"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#9ccc65"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#8bc34a"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#7cb342"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#689f38"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#558b2f"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#33691e"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ccff90"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#b2ff59"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#76ff03"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#64dd17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "lime",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f9fbe7"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f0f4c3"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e6ee9c"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#dce775"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#d4e157"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#cddc39"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#c0ca33"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#afb42b"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#9e9d24"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#827717"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f4ff81"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#eeff41"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#c6ff00"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#aeea00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "yellow",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fffde7"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fff9c4"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fff59d"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fff176"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffee58"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffeb3b"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fdd835"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fbc02d"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f9a825"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f57f17"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffff8d"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffff00"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffea00"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffd600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "amber",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fff8e1"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffecb3"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffe082"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffd54f"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffca28"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffc107"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffb300"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffa000"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff8f00"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff6f00"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffe57f"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffd740"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffc400"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffab00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "orange",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fff3e0"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffe0b2"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffcc80"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffb74d"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffa726"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff9800"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fb8c00"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f57c00"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ef6c00"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e65100"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffd180"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffab40"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff9100"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff6d00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "deep-orange",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fbe9e7"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffccbc"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffab91"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff8a65"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff7043"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff5722"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f4511e"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e64a19"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#d84315"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#bf360c"
+            }
+          ]
+        },
+        {
+          "name": "A100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff9e80"
+            }
+          ]
+        },
+        {
+          "name": "A200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff6e40"
+            }
+          ]
+        },
+        {
+          "name": "A400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ff3d00"
+            }
+          ]
+        },
+        {
+          "name": "A700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#dd2c00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "brown",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#efebe9"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#d7ccc8"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#bcaaa4"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#a1887f"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#8d6e63"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#795548"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#6d4c41"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#5d4037"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#4e342e"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#3e2723"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "grey",
+      "defaultVariant": "500",
+      "variants": [
+        {
+          "name": "50",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#fafafa"
+            }
+          ]
+        },
+        {
+          "name": "100",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "name": "200",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "name": "300",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#e0e0e0"
+            }
+          ]
+        },
+        {
+          "name": "400",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#bdbdbd"
+            }
+          ]
+        },
+        {
+          "name": "500",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "name": "600",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#757575"
+            }
+          ]
+        },
+        {
+          "name": "700",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#616161"
+            }
+          ]
+        },
+        {
+          "name": "800",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#424242"
+            }
+          ]
+        },
+        {
+          "name": "900",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#212121"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "black",
+      "defaultVariant": "1000",
+      "variants": [
+        {
+          "name": "1000",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "white",
+      "defaultVariant": "1000",
+      "variants": [
+        {
+          "name": "1000",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "#ffffff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "transparent",
+      "defaultVariant": "1",
+      "variants": [
+        {
+          "name": "1",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "transparent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
