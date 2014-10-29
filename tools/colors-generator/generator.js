@@ -71,7 +71,7 @@ var processColorPalette = function() {
         var name = li.querySelector('span.shade').innerText;
         var color = li.querySelector('span.hex').innerText;
 
-        var variantObject = { css: [], name: name };
+        var variantObject = { css: [], name: name.toLowerCase() };
         variantObject.css.push({ property: "background-color", value: color } );
         var style = window.getComputedStyle(li);
         variantObject.css.push({ property: "color", value: style.color } );
