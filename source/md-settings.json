@@ -1,0 +1,19 @@
+{
+  "responsive": {
+    "watch": {
+      "media": "only screen and (max-width: px)",
+      "also": "device"
+    },
+    "mobile": {
+      "media": "only screen and (min-width: px) and (max-width: px)",
+      "also": "device"
+    },
+    "tablet": {
+      "media": "only screen and (min-width: px) and (max-width: px)",
+      "also": "device"
+    },
+    "desktop": {
+      "media": "only screen and (min-width: px)"
+    }
+  }
+}
