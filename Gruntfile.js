@@ -33,7 +33,7 @@ module.exports = function(grunt) {
           expand: true,
           src: [
             'source/class/*',
-            'source/css-first/*',
+            'source/css/*',
             '!source/**.json'
           ],
           dest: 'bin/',
@@ -82,9 +82,9 @@ module.exports = function(grunt) {
         },
         prefix: {
           src: [
-            'bin/materializer/style/*.css',
+            'bin/materializer/md-attr/*.css',
             'bin/materializer/class/*.css',
-            'bin/materializer/css-first/*.css'
+            'bin/materializer/css/*.css'
           ]
         }
       },
@@ -96,9 +96,9 @@ module.exports = function(grunt) {
       concat: {
         css: {
           src: [
-            'bin/materializer/css-first/*.css',
-            'bin/materializer/style/*.css',
-            'bin/materializer/class/*.css'
+            'bin/materializer/md-attr/*.css',
+            'bin/materializer/class/*.css',
+            'bin/materializer/css/*.css'
           ],
           dest: 'bin/materializer.css'
         },
