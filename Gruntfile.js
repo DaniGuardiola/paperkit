@@ -11,14 +11,12 @@ module.exports = function(grunt) {
         'grunt-materializer/sources/'
         ],
 
-      //cssbeautifier:{files:[    "source/**/*.css"    ]},
-
       // 2 - Compiling json to css on bin/materializer/
       compiler: {
         css: {
           expand: true,
           src: [
-            'source/style/*.json'
+            'source/md-attr/*.json'
           ],
           dest: 'bin/',
           ext: '.css',
@@ -44,9 +42,20 @@ module.exports = function(grunt) {
             return newDest;
           }
         },
+        icon: {
+          expand: true,
+          src: 'source/md-resources/icon/*/svg/*_24px.svg',
+          dest: 'bin/md-resources/icon/',
+          flatten: true,
+          rename: function(dest,src) {
+            var newDest = dest + src.replace("ic_", "");
+            newDest = newDest.replace("_24px", "");
+            return newDest;
+          }
+        },
         resources: {
           expand: true,
-          src: 'source/md-resources/**',
+          src: 'source/md-resources/font/',
           dest: 'bin/',
           rename: function(dest, src) {
             var newDest = dest + src.replace("source/", "");
