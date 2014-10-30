@@ -42,6 +42,12 @@ module.exports = function(grunt) {
             return newDest;
           }
         },
+        font: {
+          expand: true,
+          src: 'source/md-resources/font/*',
+          dest: 'bin/md-resources/font/',
+          flatten: true
+        },
         icon: {
           expand: true,
           src: 'source/md-resources/icon/*/svg/*_24px.svg',
