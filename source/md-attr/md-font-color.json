@@ -1,6 +1,6 @@
 {
   "name": "md-font-color",
-  "type": "tag",
+  "type": "attr",
   "values": [
     {
       "defaultVariant": "c500",
