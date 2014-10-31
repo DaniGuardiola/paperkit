@@ -61,6 +61,12 @@
         },
         {
         "name": "x2",
+        "css": [
+          {
+            "property": "height",
+            "value": "112px"
+          }
+        ],
         "responsive": [
             {
               "target": ["device"],
@@ -84,6 +90,12 @@
         },
         {
         "name": "x3",
+        "css": [
+          {
+            "property": "height",
+            "value": "168px"
+          }
+        ],
         "responsive": [
             {
               "target": ["device"],
@@ -107,6 +119,12 @@
         },
         {
         "name": "x4",
+        "css": [
+          {
+            "property": "height",
+            "value": "224px"
+          }
+        ],
         "responsive": [
             {
               "target": ["device"],
@@ -130,6 +148,12 @@
         },
         {
         "name": "x5",
+        "css": [
+          {
+            "property": "height",
+            "value": "280px"
+          }
+        ],
         "responsive": [
             {
               "target": ["device"],
@@ -153,6 +177,12 @@
         },
         {
         "name": "x6",
+        "css": [
+          {
+            "property": "height",
+            "value": "336px"
+          }
+        ],
         "responsive": [
             {
               "target": ["device"],
