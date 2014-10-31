@@ -103,22 +103,19 @@ module.exports = function(grunt) {
       concat: {
         css: {
           src: [
-            'bin/materializer/md-attr/*.css',
-            'bin/materializer/class/*.css',
-            'bin/materializer/css/*.css'
+            'bin/materializer/css/*.css',
+            'bin/materializer/md-tag/*.css',
+            'bin/materializer/md-attr/*.css'
           ],
           dest: 'bin/materializer.css'
         },
+        /*
         js: {
           src: [
-            'bin/animation/*.js',
-            'bin/components/*.js',
-            'bin/layout/*.js',
-            'bin/style/*.js',
-            'bin/libs/*.js'
           ],
           dest: 'bin/materializer.js'
         }
+        */
       },
 
       // 6 - Minify css
@@ -130,12 +127,14 @@ module.exports = function(grunt) {
       },
 
       // 7 - Uglify css
+      /*
       uglify: {
         build: {
           src: 'bin/materializer.js',
           dest: 'bin/materializer.min.js'
         }
       }
+      */
   });
 
 
@@ -149,11 +148,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  //grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-cssbeautifier');
 
   // This will run when executing grunt
-  grunt.registerTask('default', ['clean','compiler','copy',"autoprefixer",'cssbeautifier','concat','cssmin','uglify']);
+  grunt.registerTask('default', ['clean','compiler','copy',"autoprefixer",'cssbeautifier','concat','cssmin'/*,'uglify'*/]);
   grunt.registerTask('dev', ['copy:dev']);
 };
