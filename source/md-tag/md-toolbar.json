@@ -31,6 +31,10 @@
     {
       "property": "transition-duration",
       "value": "0.25s"
+    },
+    {
+      "property": "transition-timing-function",
+      "value": "cubic-bezier(.55,0,.1,1)"
     }
   ],
   "attributes": [
