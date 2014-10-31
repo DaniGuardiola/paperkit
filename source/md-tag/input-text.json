@@ -3,8 +3,9 @@
   "name": "input[type=text]",
   "defaults": [
     {
-      "tag": "md-divider-color",
-      "value": "x1"
+      "name": "md-divider-color",
+      "value": "grey",
+      "variant": "c500"
     }
     ],
   "css": [
@@ -37,7 +38,7 @@
       "value": "32px"
     }
   ],
-  "attr": [
+  "attributes": [
     {
     "name": "md-divider-color",
     "type": "attribute",
