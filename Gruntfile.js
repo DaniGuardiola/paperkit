@@ -16,7 +16,8 @@ module.exports = function(grunt) {
         css: {
           expand: true,
           src: [
-            'source/md-attr/*.json'
+            'source/md-attr/*.json',
+            'source/md-tag/*.json'
           ],
           dest: 'bin/',
           ext: '.css',
