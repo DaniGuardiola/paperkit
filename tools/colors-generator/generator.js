@@ -1,20 +1,20 @@
 /*
  * synonyms.js - PhantomJS script to get term definitions from Synonyms service
- * 
+ *
  * Receives term to search as parameter.
  * Returns JSON string containing the result:
  *   {
  *     terms: [ <term>, <term>, ... ],            // list of terms returned, should be only one?
  *     origins: [ <origin>, <origin>, ...]          // list of origins of term, should be only one?
  *     definitions: [ <definition>, <definition>, ... ],  // list of definitions of term
- *     expressions: [                   // list of term associated expressions 
- *       {     
+ *     expressions: [                   // list of term associated expressions
+ *       {
  *         expression: <expression>,            // expression
  *         definitions: [ <definition>, <definition>, ... ] // list of definitions of expression
- *       }, ... 
+ *       }, ...
  *     ]
  *   }
- *      
+ *
  * Result code:
  *   0 - Term found and processed correctly
  *   1 - Term parameter not found
@@ -22,7 +22,7 @@
  *   3 - Ambiguous term found.
  *   4 - Unknown term found.
  *   5 - Unknown response from web site.
- *   
+ *
  */
 var system = require('system');
 var page = require('webpage').create();
@@ -62,7 +62,7 @@ var generateMDColor = function() {
     var ul=colorGroup.querySelector('ul');
     var colorGroupObject = { name: "", defaultVariant: "", variants: [] };
 
-    [].forEach.call(ul.querySelectorAll('li'), function(li) {      
+    [].forEach.call(ul.querySelectorAll('li'), function(li) {
       if(li.classList.contains('main-color')) {
         var name = li.querySelector('span.name').innerText;
         var defaultVariant = li.querySelector('span.shade').innerText;
@@ -81,8 +81,8 @@ var generateMDColor = function() {
         variantObject.css.push({ property: "color", value: style.color } );
 
         if(name != 1000) {
-          colorGroupObject.variants.push(variantObject);  
-        }        
+          colorGroupObject.variants.push(variantObject);
+        }
       }
     });
 
@@ -92,7 +92,7 @@ var generateMDColor = function() {
   mdObject.values.push(mdBlackColor);
   mdObject.values.push(mdWhiteColor);
   mdObject.values.push(mdTransparentColor);
-  
+
   return mdObject;
 }
 
@@ -108,7 +108,7 @@ var generateMDFontColor = function() {
     var ul=colorGroup.querySelector('ul');
     var colorGroupObject = { name: "", defaultVariant: "", variants: [] };
 
-    [].forEach.call(ul.querySelectorAll('li'), function(li) {      
+    [].forEach.call(ul.querySelectorAll('li'), function(li) {
       if(li.classList.contains('main-color')) {
         var name = li.querySelector('span.name').innerText;
         var defaultVariant = li.querySelector('span.shade').innerText;
@@ -125,8 +125,8 @@ var generateMDFontColor = function() {
         variantObject.css.push({ property: "color", value: color } );
 
         if(name != 1000) {
-          colorGroupObject.variants.push(variantObject);  
-        }        
+          colorGroupObject.variants.push(variantObject);
+        }
       }
     });
 
@@ -136,7 +136,51 @@ var generateMDFontColor = function() {
   mdObject.values.push(mdBlackColor);
   mdObject.values.push(mdWhiteColor);
   mdObject.values.push(mdTransparentColor);
-  
+
+  return mdObject;
+}
+
+var generateMDDividerColor = function() {
+  var colorPaletteDiv = document.querySelector('.color-palette');
+  var colorGroups = colorPaletteDiv.querySelectorAll('.color-group');
+  var mdObject = { type: "attribute", name: "md-divider-color", values: [] };
+  var mdBlackColor = { name: "black", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "border-color", value: "#000000" } ] } ] };
+  var mdWhiteColor = { name: "white", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "border-color", value: "#ffffff" } ] } ] };
+  var mdTransparentColor = { name: "transparent", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "border-color", value: "transparent" } ] } ] };
+
+  [].forEach.call(colorGroups, function(colorGroup) {
+    var ul=colorGroup.querySelector('ul');
+    var colorGroupObject = { name: "", defaultVariant: "", variants: [] };
+
+    [].forEach.call(ul.querySelectorAll('li'), function(li) {
+      if(li.classList.contains('main-color')) {
+        var name = li.querySelector('span.name').innerText;
+        var defaultVariant = li.querySelector('span.shade').innerText;
+        colorGroupObject.name = name.toLowerCase().replace(" ","-");
+        defaultVariant = defaultVariant.indexOf("A")==0 ? defaultVariant : "c" + defaultVariant;
+        colorGroupObject.defaultVariant = defaultVariant.toLowerCase();
+      } else {
+        var name = li.querySelector('span.shade').innerText;
+        var color = li.querySelector('span.hex').innerText;
+
+        name = name.indexOf("A")==0 ? name : "c" + name;
+
+        var variantObject = { css: [], name: name.toLowerCase() };
+        variantObject.css.push({ property: "border-color", value: color } );
+
+        if(name != 1000) {
+          colorGroupObject.variants.push(variantObject);
+        }
+      }
+    });
+
+    mdObject.values.push(colorGroupObject);
+  });
+
+  mdObject.values.push(mdBlackColor);
+  mdObject.values.push(mdWhiteColor);
+  mdObject.values.push(mdTransparentColor);
+
   return mdObject;
 }
 
@@ -150,8 +194,8 @@ page.open(url, function (status) {
   if(status !== "success" ) {
     console.log("ERROR!");
   } else {
-  var jsonData = page.evaluate(term=='color' ? generateMDColor : generateMDFontColor);
+  var jsonData = page.evaluate(term=='color' ? generateMDColor : term=='fontcolor' ? generateMDFontColor : generateMDDividerColor);
   console.log(JSON.stringify(jsonData,null,2));
   phantom.exit(0);
-  }  
+  }
 });
