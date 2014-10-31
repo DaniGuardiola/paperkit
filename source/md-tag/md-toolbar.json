@@ -32,6 +32,12 @@
       "values": [
         {
         "name": "x1",
+        "css": [
+          {
+            "property": "height",
+            "value": "56px"
+          }
+        ],
         "responsive": [
             {
               "target": ["device"],
