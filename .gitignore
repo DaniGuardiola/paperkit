@@ -3,4 +3,4 @@ node_modules
 bin/
 demo/
 grunt-materializer/sources/
-copytodatafeelings.sh
+script.sh
