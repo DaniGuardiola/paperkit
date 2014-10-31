@@ -5,7 +5,9 @@ var css = require('css');
 module.exports = Generator;
 
 function Generator(jsonData) {
-  var jsonData=JSON.parse(jsonData);
+  if(jsonData) {
+    var jsonData=JSON.parse(jsonData);
+  }
 
   function Rule() {
     this.type="rule";
@@ -30,35 +32,14 @@ function Generator(jsonData) {
   this.generate = function() {
     var generatedData = [];  
 
-    jsonData.values.forEach(function(value) {
-      if('css' in value) {
-        generatedData.push(generateRule(value.css, jsonData.name, value.name));      
+    if('type' in jsonData) {
+      winston.debug(sprintf("JSON TYPE => %s", jsonData.type));
+      if(jsonData.type=='tag') {
+        generatedData = generatedData.concat(generateTag(jsonData));
+      } else if(jsonData.type=='attribute') {
+        generatedData = generatedData.concat(generateAttribute(jsonData));
       }
-
-      if('variants' in value) {
-        value.variants.forEach(function(variant) {
-          if('css' in variant) {
-            generatedData.push(generateRule(variant.css, jsonData.name, value.name, variant.name, value.defaultVariant));
-          }          
-        });
-      }
-
-      if('responsive' in value) {
-        value.responsive.forEach(function(responsive) {
-          generateMedia(responsive, jsonData.name, value.name);
-        });
-      }
-
-      if('variants' in value) {
-        value.variants.forEach(function(variant) {
-          if('responsive' in variant) {
-            variant.responsive.forEach(function(responsive) {
-              generateMedia(responsive, jsonData.name, value.name, variant.name, false);
-            });            
-          }          
-        });
-      }
-    });
+    }
 
     winston.debug(sprintf("GENERATED DATA => %s", JSON.stringify(generatedData, null, 2)));
 
@@ -72,29 +53,91 @@ function Generator(jsonData) {
     return css.stringify(cssObject);
   };
 
-  var generateRule = function(css, tagname, valuename, variantname, defaultVariant) {
-    var rule = new Rule();        
-    var ruleSelector = sprintf("[%s^=%s]", tagname, valuename);
+  var generateTag= function(tag) {
+    var generatedData = [];
+
+    if('css' in tag) {
+      generatedData.push(generateRule(tag.css, tag.name));
+    }
+
+    if('attributes' in tag) {
+      tag.attributes.forEach(function(attribute){
+        generatedData = generatedData.concat(generateAttribute(attribute, tag.name, (('defaults' in tag) ? tag.defaults: null)));
+      });    
+    }
+
+    return generatedData;
+  }
+
+  var generateAttribute= function(attribute, tagname, defaultAttributes) {
+    var generatedData = [];
+
+    if('values' in attribute) {
+      attribute.values.forEach(function(value) {
+        if('css' in value) {
+          generatedData.push(generateRule(value.css, tagname, attribute.name, value.name, null, null, defaultAttributes));  
+        }        
+
+        if('variants' in value) {
+          value.variants.forEach(function(variant) {
+            if('css' in variant) {
+              generatedData.push(generateRule(variant.css, tagname, attribute.name, value.name, variant.name, value.defaultVariant, defaultAttributes));
+            }          
+          });
+        }
+
+        if('responsive' in value) {
+          value.responsive.forEach(function(responsive) {
+            generateMedia(responsive, tagname, attribute.name, value.name, null, defaultAttributes);
+          });
+        }
+
+        if('variants' in value) {
+          value.variants.forEach(function(variant) {
+            if('responsive' in variant) {
+              variant.responsive.forEach(function(responsive) {
+                generateMedia(responsive, tagname, attribute.name, value.name, variant.name, defaultAttributes);
+              });            
+            }          
+          });
+        }
+      });
+    }
+
+    return generatedData;
+  }
+
+  var generateRule = function(css, tagname, attributename, valuename, variantname, defaultVariant, defaultAttributes, responsive) {
+    var rule = new Rule(); 
 
     // Generate rule selectors
-    if(variantname) {
-      if(defaultVariant && defaultVariant==variantname) {
-        rule.selectors.push(ruleSelector);
-      }
-      ruleSelector += sprintf("[%s~=%s]", tagname, variantname);
+    if(tagname && defaultAttributes) {
+      defaultAttributes.forEach(function(defaultAttribute) {
+        if(attributename && defaultAttribute.name==attributename) {
+          if(!valuename || defaultAttribute.value==valuename) {
+            if(!variantname || !('variant' in defaultAttribute) || defaultAttribute.variant==variantname) {
+              rule.selectors.push(getSelector(tagname, null, null, null, responsive));    
+            }
+          }
+        }
+      })
     }
-    rule.selectors.push(ruleSelector);
+
+    if(variantname && defaultVariant && defaultVariant==variantname) {
+      rule.selectors.push(getSelector(tagname, attributename, valuename, null, responsive));
+    }
+    rule.selectors.push(getSelector(tagname, attributename, valuename, variantname, responsive));
 
     // Generate rule declarations
     css.forEach(function(cssValue) {
       cssValue['type'] = "declaration";
-      rule.declarations.push(cssValue);      
+      rule.declarations.push(cssValue);
     });
 
     return rule;
   };
 
-  var generateMedia=function(responsive, tagname, valuename, variantname) {
+  var generateMedia=function(responsive, tagname, attributename, valuename, variantname, defaultAttributes) {
     responsive.target.forEach(function(target) {
       var media = getMedia(target);
       winston.debug(sprintf("FOUND MEDIA => %s", target));
@@ -105,11 +148,13 @@ function Generator(jsonData) {
         generatedMedias.push(media);
       }
 
-      var rule = generateRule(responsive.css, tagname, valuename, variantname, false);
+      var rule = generateRule(responsive.css, tagname, attributename, valuename, variantname, false, defaultAttributes, true);
+      /*
       rule.selectors.forEach(function(selector, index, array) {
-        array[index] = selector + ":not([md-typo$=noresponsive])";
+        array[index] = selector + ":not([noresponsive][md-typo$=noresponsive])";
         winston.debug("CHANGED SELECTOR TO ==> " + selector);
       });
+      */
       media.rules.push(rule);
     });
   };
@@ -127,4 +172,33 @@ function Generator(jsonData) {
 
     return null;
   };
+
+  var getSelector= function(tagname, attrname, valuename, variantname, responsive) {
+    var selector = [];
+
+    if(tagname) {
+      selector.push(tagname);
+    }
+
+    if(attrname && valuename) {
+      selector.push(sprintf("[%s^=%s]", attrname, valuename));
+    }
+
+    if(attrname && variantname) {
+      selector.push(sprintf("[%s~=%s]", attrname, variantname));
+    }
+
+    if(responsive) {
+      if(attrname) {
+        selector.push(sprintf(":not([%s$=noresponsive]):not([noresponsive])", attrname));
+      } else {
+        selector.push(":not([noresponsive])");
+      }
+      
+    }
+
+    var stringSelector = selector.join("");
+
+    return stringSelector;
+  }
 }
