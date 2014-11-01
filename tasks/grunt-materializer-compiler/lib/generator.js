@@ -4,9 +4,13 @@ var css = require('css');
 
 module.exports = Generator;
 
-function Generator(jsonData) {
+function Generator(jsonData, jsonConfig) {
   if(jsonData) {
     var jsonData=JSON.parse(jsonData);
+  }
+
+  if(jsonConfig) {
+    var jsonConfig = JSON.parse(jsonConfig);
   }
 
   function Rule() {
@@ -58,6 +62,12 @@ function Generator(jsonData) {
 
     if('css' in tag) {
       generatedData.push(generateRule(tag.css, tag.name));
+    }
+
+    if('responsive' in tag) {
+      tag.responsive.forEach(function(responsive) {
+        generateMedia(responsive, tag.name);
+      });
     }
 
     if('attributes' in tag) {
@@ -139,25 +149,47 @@ function Generator(jsonData) {
 
   var generateMedia=function(responsive, tagname, attributename, valuename, variantname, defaultAttributes) {
     responsive.target.forEach(function(target) {
-      var media = getMedia(target);
+      var mediaquery = getMediaQuery(target).join(",\n");  
+      var media = getMedia(mediaquery);
       winston.debug(sprintf("FOUND MEDIA => %s", target));
+      
       if(!media) {
         media = new Media();
-        media.media = target;
+        media.media = mediaquery;
         media.rules = [];
         generatedMedias.push(media);
       }
 
       var rule = generateRule(responsive.css, tagname, attributename, valuename, variantname, false, defaultAttributes, true);
-      /*
-      rule.selectors.forEach(function(selector, index, array) {
-        array[index] = selector + ":not([noresponsive][md-typo$=noresponsive])";
-        winston.debug("CHANGED SELECTOR TO ==> " + selector);
-      });
-      */
       media.rules.push(rule);
     });
   };
+
+  var getMediaQuery= function(target) {
+    var mediaquery = [];
+
+    if(jsonConfig && ('responsive' in jsonConfig)) {
+      jsonConfig.responsive.forEach(function(responsive) {
+        if(target==responsive.name) {
+          if('media' in responsive) {
+            mediaquery.push(responsive.media);
+          }
+
+          if ('include' in responsive) {
+            responsive.include.forEach(function(include) {
+              mediaquery = mediaquery.concat(getMediaQuery(include));
+            });            
+          }
+        }
+      })
+    } 
+
+    if(mediaquery == "") {
+      mediaquery = [ target ];
+    }
+
+    return mediaquery;
+  }
 
   var getMedia=function(mediaName) {
     winston.debug(sprintf("SEARCHING FOR MEDIA => %s", mediaName));
@@ -181,12 +213,14 @@ function Generator(jsonData) {
     }
 
     if(attrname && valuename) {
-      selector.push(sprintf("[%s^=%s]", attrname, valuename));
+      selector.push(sprintf("[%s*=%s%s]", attrname, valuename, (variantname ? "-"+variantname: "")));
     }
 
+/*
     if(attrname && variantname) {
       selector.push(sprintf("[%s~=%s]", attrname, variantname));
     }
+*/
 
     if(responsive) {
       if(attrname) {

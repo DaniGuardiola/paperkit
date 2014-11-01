@@ -1,0 +1,154 @@
+{
+  "type": "tag",
+  "name": "md-snackbar",
+  "defaults": [
+    {
+      "name": "md-height",
+      "value": "x1"
+    },
+    {
+      "name": "md-position",
+      "value": "top"
+    }
+  ],
+  "css": [
+    {
+      "property": "display",
+      "value": "inline-block"
+    },
+    {
+      "property": "border-radius",
+      "value": "2px"
+    },
+    {
+      "property": "background-color",
+      "value": "#323232"
+    },
+    {
+      "property": "position",
+      "value": "fixed"
+    }
+  ],
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-height",
+      "values": [
+        {
+          "name": "x1",
+          "css": [
+            {
+              "property": "height",
+              "value": "48px"
+            }
+          ]
+        },
+        {
+          "name": "x2",
+          "responsive": [
+            {
+              "target": ["device"],
+              "css": [
+                {
+                  "property": "height",
+                  "value": "80px"
+                }                
+              ]
+            },
+            {
+              "target": ["desktop"],
+              "css": [
+                {
+                  "property": "height",
+                  "value": "48px"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "attribute",
+      "name": "md-position",
+      "values": [
+        {
+          "name": "top",
+          "css": [
+            {
+              "property": "top",
+              "value": "24px"
+            }
+          ]
+        },
+        {
+          "name": "bottom",
+          "css": [
+            {
+              "property": "bottom",
+              "value": "24px"
+            }
+          ]          
+        },
+        {
+          "name": "left",
+          "css": [
+            {
+              "property": "left",
+              "value": "24px"
+            },
+            {
+              "property": "right",
+              "value": "auto"
+            }
+          ]          
+        },
+        {
+          "name": "right",
+          "css": [
+            {
+              "property": "right",
+              "value": "24px"              
+            },
+            {
+              "property": "left",
+              "value": "auto"
+            }
+          ]                    
+        }
+      ]
+    }
+  ],
+  "responsive": [
+    {
+      "target": ["device"],
+      "css": [
+        {
+          "property": "width",
+          "value": "100%"
+        },
+        {
+          "property": "padding",
+          "value": "18px 24px 18px 24px"
+        }
+      ]
+    },
+    {
+      "target": ["desktop"],
+      "css": [
+        {
+          "property": "min-width",
+          "value": "288px"
+        },
+        {
+          "property": "max-width",
+          "value": "568px"
+        },
+        {
+          "property": "padding",
+          "value": "16px 24px 12px 24px"
+        }
+      ]
+    }
+  ]
+}
