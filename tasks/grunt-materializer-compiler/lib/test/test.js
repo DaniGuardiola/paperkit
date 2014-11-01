@@ -10,5 +10,6 @@ if(argv.v) {
 }
 
 var data =argv.file ? fs.readFileSync(argv.file) : fs.readFileSync('md-color.json');
-var generator =new Generator(data);
+var config = fs.readFileSync('md-settings.json');
+var generator =new Generator(data, config);
 console.log(generator.generate());

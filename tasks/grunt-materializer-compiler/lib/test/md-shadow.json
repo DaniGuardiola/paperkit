@@ -3,7 +3,7 @@
   "name": "md-shadow",
   "values": [
     {
-      "name": "s0",
+      "name": "shadow-0",
       "css": [
         {
           "property": "box-shadow",
@@ -12,7 +12,7 @@
         ]
     },
     {
-      "name": "s1",
+      "name": "shadow-1",
       "css": [
         {
           "property": "box-shadow",
@@ -21,7 +21,7 @@
         ]
     },
     {
-      "name": "s2",
+      "name": "shadow-2",
       "css": [
         {
           "property": "box-shadow",
@@ -30,7 +30,7 @@
         ]
     },
     {
-      "name": "s3",
+      "name": "shadow-3",
       "css": [
         {
           "property": "box-shadow",
@@ -39,7 +39,7 @@
         ]
     },
     {
-      "name": "s4",
+      "name": "shadow-4",
       "css": [
         {
           "property": "box-shadow",
@@ -48,7 +48,7 @@
         ]
     },
     {
-      "name": "s5",
+      "name": "shadow-5",
       "css": [
         {
           "property": "box-shadow",

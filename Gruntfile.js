@@ -14,18 +14,21 @@ module.exports = function(grunt) {
       // 2 - Compiling json to css on bin/materializer/
       compiler: {
         css: {
-          expand: true,
-          src: [
-            'source/md-attr/*.json',
-            'source/md-tag/*.json'
-          ],
-          dest: 'bin/',
-          ext: '.css',
-          rename: function(dest, src) {
-            var newDest = dest + src.replace("source", "materializer");
-            return newDest;
+            expand: true,
+            src: [
+              'source/md-attr/*.json',
+              'source/md-tag/*.json'
+            ],
+            dest: 'bin/',
+            ext: '.css',
+            rename: function(dest, src) {
+              var newDest = dest + src.replace("source", "materializer");
+              return newDest;
+          },
+          options: {
+            configfile: 'source/md-settings.json'
           }
-        }
+        },
       },
 
       // 3 - Coping everything
