@@ -23,6 +23,18 @@
     {
       "property": "border-bottom",
       "value": "1px solid rgba(0, 0, 0, 0.12)"
+    },
+    {
+      "property": "transition-property",
+      "value": "height, box-shadow, background-color, color, top, left"
+    },
+    {
+      "property": "transition-duration",
+      "value": "0.25s"
+    },
+    {
+      "property": "transition-timing-function",
+      "value": "cubic-bezier(.55,0,.1,1)"
     }
   ],
   "attributes": [
@@ -32,6 +44,12 @@
       "values": [
         {
         "name": "x1",
+        "css": [
+          {
+            "property": "height",
+            "value": "56px"
+          }
+        ],
         "responsive": [
             {
               "target": ["device"],
@@ -55,6 +73,12 @@
         },
         {
         "name": "x2",
+        "css": [
+          {
+            "property": "height",
+            "value": "112px"
+          }
+        ],
         "responsive": [
             {
               "target": ["device"],
@@ -78,6 +102,12 @@
         },
         {
         "name": "x3",
+        "css": [
+          {
+            "property": "height",
+            "value": "168px"
+          }
+        ],
         "responsive": [
             {
               "target": ["device"],
@@ -101,6 +131,12 @@
         },
         {
         "name": "x4",
+        "css": [
+          {
+            "property": "height",
+            "value": "224px"
+          }
+        ],
         "responsive": [
             {
               "target": ["device"],
@@ -124,6 +160,12 @@
         },
         {
         "name": "x5",
+        "css": [
+          {
+            "property": "height",
+            "value": "280px"
+          }
+        ],
         "responsive": [
             {
               "target": ["device"],
@@ -147,6 +189,12 @@
         },
         {
         "name": "x6",
+        "css": [
+          {
+            "property": "height",
+            "value": "336px"
+          }
+        ],
         "responsive": [
             {
               "target": ["device"],
