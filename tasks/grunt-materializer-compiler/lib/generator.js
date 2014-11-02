@@ -64,6 +64,7 @@ function Generator(jsonData, jsonConfig) {
       generatedData.push(generateRule(tag.css, tag.name));
     }
 
+    /* Render first tag responsive, then attributes responsive */
     if('responsive' in tag) {
       tag.responsive.forEach(function(responsive) {
         generateMedia(responsive, tag.name);
@@ -120,22 +121,28 @@ function Generator(jsonData, jsonConfig) {
   var generateRule = function(css, tagname, attributename, valuename, variantname, defaultVariant, defaultAttributes, responsive) {
     var rule = new Rule(); 
 
-    // Generate rule selectors
+    // Generate tag defaults rule selectors
     if(tagname && defaultAttributes) {
       defaultAttributes.forEach(function(defaultAttribute) {
         if(attributename && defaultAttribute.name==attributename) {
-          if(!valuename || defaultAttribute.value==valuename) {
-            if(!variantname || !('variant' in defaultAttribute) || defaultAttribute.variant==variantname) {
-              rule.selectors.push(getSelector(tagname, null, null, null, responsive));    
+          defaultAttribute.values.forEach(function(value) {
+            if(!valuename || (!variantname && valuename==value) 
+                || (variantname && valuename+"-"+variantname==value)) {
+                winston.debug(sprintf("ATTRIBUTE: %s VALUE: %s VARIANT: %s DEFAULT: %s",attributename, valuename, variantname, value));
+                rule.selectors.push(getSelector(tagname, null, null, null, responsive));    
             }
-          }
+          });
         }
       })
     }
 
+    // generate default variant selector    
     if(variantname && defaultVariant && defaultVariant==variantname) {
       rule.selectors.push(getSelector(tagname, attributename, valuename, null, responsive));
     }
+    
+
+    // generate rule selectors
     rule.selectors.push(getSelector(tagname, attributename, valuename, variantname, responsive));
 
     // Generate rule declarations
@@ -148,44 +155,44 @@ function Generator(jsonData, jsonConfig) {
   };
 
   var generateMedia=function(responsive, tagname, attributename, valuename, variantname, defaultAttributes) {
-    responsive.target.forEach(function(target) {
-      var mediaquery = getMediaQuery(target).join(",\n");  
-      var media = getMedia(mediaquery);
-      winston.debug(sprintf("FOUND MEDIA => %s", target));
-      
-      if(!media) {
-        media = new Media();
-        media.media = mediaquery;
-        media.rules = [];
-        generatedMedias.push(media);
-      }
+    var mediaquery = getMediaQuery(responsive.target).join(",\n");  
+    var media = getMedia(mediaquery);
+    winston.debug(sprintf("FOUND MEDIA => %s", media));
+    
+    if(!media) {
+      media = new Media();
+      media.media = mediaquery;
+      media.rules = [];
+      generatedMedias.push(media);
+    }
 
-      var rule = generateRule(responsive.css, tagname, attributename, valuename, variantname, false, defaultAttributes, true);
-      media.rules.push(rule);
-    });
+    var rule = generateRule(responsive.css, tagname, attributename, valuename, variantname, false, defaultAttributes, true);
+    media.rules.push(rule);
   };
 
   var getMediaQuery= function(target) {
     var mediaquery = [];
+    
+    target.forEach(function(target) {
+      if(jsonConfig && ('responsive' in jsonConfig)) {
+        jsonConfig.responsive.forEach(function(responsive) {
+          if(target==responsive.name) {
+            if('media' in responsive) {
+              mediaquery.push(responsive.media);
+            }
 
-    if(jsonConfig && ('responsive' in jsonConfig)) {
-      jsonConfig.responsive.forEach(function(responsive) {
-        if(target==responsive.name) {
-          if('media' in responsive) {
-            mediaquery.push(responsive.media);
+            if ('include' in responsive) {
+//              responsive.include.forEach(function(include) {
+                mediaquery = mediaquery.concat(getMediaQuery(responsive.include));
+//              });            
+            }
           }
-
-          if ('include' in responsive) {
-            responsive.include.forEach(function(include) {
-              mediaquery = mediaquery.concat(getMediaQuery(include));
-            });            
-          }
-        }
-      })
-    } 
+        })
+      } 
+    });
 
     if(mediaquery == "") {
-      mediaquery = [ target ];
+        mediaquery = [ target.join(",") ];
     }
 
     return mediaquery;

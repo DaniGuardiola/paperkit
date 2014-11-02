@@ -4,11 +4,11 @@
   "defaults": [
     {
       "name": "md-height",
-      "value": "x1"
+      "values": [ "x1" ]
     },
     {
       "name": "md-position",
-      "value": "top"
+      "values": [ "top", "left" ]
     }
   ],
   "css": [
@@ -47,7 +47,7 @@
           "name": "x2",
           "responsive": [
             {
-              "target": ["device"],
+              "target": ["mobile"],
               "css": [
                 {
                   "property": "height",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "target": ["desktop"],
+              "target": [ "tablet", "desktop" ],
               "css": [
                 {
                   "property": "height",
@@ -78,6 +78,25 @@
             {
               "property": "top",
               "value": "24px"
+            },
+            {
+              "property": "bottom",
+              "value": "auto"
+            }
+          ],
+          "responsive": [
+            {
+              "target": [ "mobile" ],
+              "css": [
+                {
+                  "property": "top",
+                  "value": "0px"
+                },
+                {
+                  "property": "bottom",
+                  "value": "auto"
+                }
+              ]
             }
           ]
         },
@@ -87,8 +106,27 @@
             {
               "property": "bottom",
               "value": "24px"
+            },
+            {
+              "property": "top",
+              "value": "auto"
             }
-          ]          
+          ],
+          "responsive": [
+            {
+              "target": [ "mobile" ],
+              "css": [
+                {
+                  "property": "bottom",
+                  "value": "0px"
+                },
+                {
+                  "property": "top",
+                  "value": "auto"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "left",
@@ -121,7 +159,7 @@
   ],
   "responsive": [
     {
-      "target": ["device"],
+      "target": ["mobile"],
       "css": [
         {
           "property": "width",
@@ -130,11 +168,19 @@
         {
           "property": "padding",
           "value": "18px 24px 18px 24px"
+        },
+        {
+          "property": "left",
+          "value": "auto"
+        },
+        {
+          "property": "right",
+          "value": "auto"
         }
       ]
     },
     {
-      "target": ["desktop"],
+      "target": ["tablet", "desktop"],
       "css": [
         {
           "property": "min-width",
