@@ -4,7 +4,7 @@
   "defaults": [
     {
       "name": "md-height",
-      "value": "x1"
+      "values": [ "x1" ]
     }
   ],
   "css": [
