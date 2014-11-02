@@ -3,7 +3,7 @@
   "type": "attribute",
   "values": [
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "red",
       "variants": [
         {
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "pink",
       "variants": [
         {
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "purple",
       "variants": [
         {
@@ -399,7 +399,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "deep-purple",
       "variants": [
         {
@@ -531,7 +531,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "indigo",
       "variants": [
         {
@@ -663,7 +663,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "blue",
       "variants": [
         {
@@ -795,7 +795,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "light-blue",
       "variants": [
         {
@@ -927,7 +927,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "cyan",
       "variants": [
         {
@@ -1059,7 +1059,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "teal",
       "variants": [
         {
@@ -1191,7 +1191,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "green",
       "variants": [
         {
@@ -1323,7 +1323,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "light-green",
       "variants": [
         {
@@ -1455,7 +1455,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "lime",
       "variants": [
         {
@@ -1587,7 +1587,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "yellow",
       "variants": [
         {
@@ -1719,7 +1719,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "amber",
       "variants": [
         {
@@ -1851,7 +1851,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "orange",
       "variants": [
         {
@@ -1983,7 +1983,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "deep-orange",
       "variants": [
         {
@@ -2115,7 +2115,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "brown",
       "variants": [
         {
@@ -2211,7 +2211,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "grey",
       "variants": [
         {
@@ -2325,7 +2325,7 @@
       ]
     },
     {
-      "defaultVariant": "c500",
+      "defaultVariant": "500",
       "name": "blue-grey",
       "variants": [
         {
@@ -2421,7 +2421,7 @@
       ]
     },
     {
-      "defaultVariant": "c1",
+      "defaultVariant": "1",
       "name": "black",
       "variants": [
         {
@@ -2436,7 +2436,7 @@
       ]
     },
     {
-      "defaultVariant": "c1",
+      "defaultVariant": "1",
       "name": "white",
       "variants": [
         {
@@ -2451,7 +2451,7 @@
       ]
     },
     {
-      "defaultVariant": "c1",
+      "defaultVariant": "1",
       "name": "transparent",
       "variants": [
         {
