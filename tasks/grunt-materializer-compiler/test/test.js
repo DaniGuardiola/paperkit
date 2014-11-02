@@ -2,6 +2,21 @@ var winston = require('winston');
 var fs = require('fs');
 var Generator = require('../lib/generator.js');
 
+exports.testVariants = function(test) {
+    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var attribute = fs.readFileSync('fixtures/md-variant.json');
+    var expected = fs.readFileSync('expected/variant.css');
+
+    var generator = new Generator(attribute, settings);
+    var generatedCSS = generator.generate();
+
+    fs.writeFile('tmpvariant.css', generatedCSS);
+    // console.log(generatedCSS);
+
+    test.equal(generatedCSS, expected);
+    test.done();    
+}
+
 exports.testAttribute = function(test) {
     var settings = fs.readFileSync('fixtures/md-settings.json');
     var attribute = fs.readFileSync('fixtures/md-attribute.json');

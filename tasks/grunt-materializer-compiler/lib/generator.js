@@ -220,7 +220,7 @@ function Generator(jsonData, jsonConfig) {
     }
 
     if(attrname && valuename) {
-      selector.push(sprintf("[%s*=%s%s]", attrname, valuename, (variantname ? "-"+variantname: "")));
+      selector.push(sprintf("[%s~=%s%s]", attrname, valuename, (variantname ? "-"+variantname: "")));
     }
 
 /*
