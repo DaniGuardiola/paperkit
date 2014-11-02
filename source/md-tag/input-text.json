@@ -4,8 +4,7 @@
   "defaults": [
     {
       "name": "md-divider-color",
-      "value": "grey",
-      "variant": "c500"
+      "values": [ "grey-500" ]
     }
     ],
   "css": [
