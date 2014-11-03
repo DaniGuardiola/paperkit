@@ -1,0 +1,43 @@
+{
+  "type": "tag",
+  "name": "md-tag",
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-attribute1",
+      "values": [
+        {
+          "name": "value1",
+          "css": [
+            {
+              "property": "property1",
+              "value": "csslabel1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parents": [
+    {
+      "name": "md-parenttag",
+      "attributes": [
+        {
+          "type": "attribute",
+          "name": "md-attribute1",
+          "values": [
+            {
+              "name": "value1",
+              "css": [
+                {
+                  "property": "property1",
+                  "value": "csslabel2"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
