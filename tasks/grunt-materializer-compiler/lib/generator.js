@@ -114,8 +114,7 @@ function Generator(jsonData, jsonConfig) {
         if('fixes' in value) {
           value.fixes.forEach(function(fix) {
             if('css' in fix) {
-              var name = (fix.before ? fix.before : "") + tagname + (fix.after ? fix.after : "");
-              generatedData.push(generateRule(fix.css, name, attribute.name, value.name, null, null, defaultAttributes));
+              generatedData.push(generateRule(fix.css, tagname, attribute.name, value.name, null, null, defaultAttributes, null, fix.before, fix.after));
             }
           });
         }
@@ -141,8 +140,16 @@ function Generator(jsonData, jsonConfig) {
     return generatedData;
   }
 
-  var generateRule = function(css, tagname, attributename, valuename, variantname, defaultVariant, defaultAttributes, responsive) {
+  var  generateFix= function(fix) {
+
+  }
+
+  var generateRule = function(css, tagname, attributename, valuename, variantname, defaultVariant, defaultAttributes, responsive, before, after) {
     var rule = new Rule(); 
+
+    if(before) {
+      rule.selectors.push()
+    }
 
     // Generate tag defaults rule selectors
     if(tagname && defaultAttributes) {
@@ -152,7 +159,7 @@ function Generator(jsonData, jsonConfig) {
             if(!valuename || (!variantname && valuename==value) 
                 || (variantname && valuename+"-"+variantname==value)) {
                 winston.debug(sprintf("ATTRIBUTE: %s VALUE: %s VARIANT: %s DEFAULT: %s",attributename, valuename, variantname, value));
-                rule.selectors.push(getSelector(tagname, null, null, null, responsive));    
+                rule.selectors.push(getSelector(tagname, null, null, null, responsive,  before, after));    
             }
           });
         }
@@ -161,12 +168,12 @@ function Generator(jsonData, jsonConfig) {
 
     // generate default variant selector    
     if(variantname && defaultVariant && defaultVariant==variantname) {
-      rule.selectors.push(getSelector(tagname, attributename, valuename, null, responsive));
+      rule.selectors.push(getSelector(tagname, attributename, valuename, null, responsive, before, after));
     }
     
 
     // generate rule selectors
-    rule.selectors.push(getSelector(tagname, attributename, valuename, variantname, responsive));
+    rule.selectors.push(getSelector(tagname, attributename, valuename, variantname, responsive, before, after));
 
     // Generate rule declarations
     css.forEach(function(cssValue) {
@@ -233,8 +240,12 @@ function Generator(jsonData, jsonConfig) {
     return null;
   };
 
-  var getSelector= function(tagname, attrname, valuename, variantname, responsive) {
+  var getSelector= function(tagname, attrname, valuename, variantname, responsive, before, after) {
     var selector = [];
+
+    if(before) {
+      selector.push(before);
+    }
 
     if(tagname) {
       selector.push(tagname);
@@ -249,9 +260,12 @@ function Generator(jsonData, jsonConfig) {
         selector.push(sprintf(":not([%s$=noresponsive]):not([noresponsive])", attrname));
       } else {
         selector.push(":not([noresponsive])");
-      }
-      
+      }      
     }
+
+    if(after) {
+      selector.push(after);
+    }     
 
     var stringSelector = selector.join("");
 
