@@ -55,7 +55,7 @@ exports.testAttribute = function(test) {
   exports.testFixes = function(test) {
     var settings = fs.readFileSync('fixtures/md-settings.json');
     var tag = fs.readFileSync('fixtures/md-fixes.json');
-    var expected = fs.readFileSync('expected/tag-parent.css');
+    var expected = fs.readFileSync('expected/md-fixes.css');
 
     var generator = new Generator(tag, settings);
     var generatedCSS = generator.generate();
