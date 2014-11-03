@@ -19,6 +19,7 @@
             {
               "description": "this fixes md-tag when md-parenttag blablabla and the more you know",
               "before": "md-parenttag > ",
+              "after": ":not([hidden]) md-child:hover",
               "css": [
                 {
                   "property": "property1",
