@@ -39,7 +39,7 @@ function Generator(jsonData, jsonConfig) {
     if('type' in jsonData) {
       winston.debug(sprintf("JSON TYPE => %s", jsonData.type));
       if(jsonData.type=='tag') {
-        generatedData = generatedData.concat(generateTag(jsonData));
+        generatedData = generatedData.concat(generateTag(jsonData, null));
       } else if(jsonData.type=='attribute') {
         generatedData = generatedData.concat(generateAttribute(jsonData));
       }
@@ -57,24 +57,35 @@ function Generator(jsonData, jsonConfig) {
     return css.stringify(cssObject);
   };
 
-  var generateTag= function(tag) {
+  var generateTag= function(tag, parentTag) {
     var generatedData = [];
 
+    var name = parentTag ? tag.name + " > " + parentTag.name : tag.name;
+
     if('css' in tag) {
-      generatedData.push(generateRule(tag.css, tag.name));
+      generatedData.push(generateRule(tag.css, name));
     }
 
     /* Render first tag responsive, then attributes responsive */
     if('responsive' in tag) {
       tag.responsive.forEach(function(responsive) {
-        generateMedia(responsive, tag.name);
+        generateMedia(responsive, name);
       });
     }
 
     if('attributes' in tag) {
       tag.attributes.forEach(function(attribute){
-        generatedData = generatedData.concat(generateAttribute(attribute, tag.name, (('defaults' in tag) ? tag.defaults: null)));
+        generatedData = generatedData.concat(generateAttribute(attribute, name, (('defaults' in tag) ? tag.defaults: null)));
       });    
+    }
+
+    /*
+    * Still supported but deprecated
+    */
+    if('parents' in tag && !parentTag) {
+      tag.parents.forEach(function(parent) {
+        generatedData = generatedData.concat(generateTag(parent, tag));
+      });
     }
 
     return generatedData;
@@ -94,6 +105,18 @@ function Generator(jsonData, jsonConfig) {
             if('css' in variant) {
               generatedData.push(generateRule(variant.css, tagname, attribute.name, value.name, variant.name, value.defaultVariant, defaultAttributes));
             }          
+          });
+        }
+
+        /*
+        * REVISAR...
+        */
+        if('fixes' in value) {
+          value.fixes.forEach(function(fix) {
+            if('css' in fix) {
+              var name = fix.before + tagname;
+              generatedData.push(generateRule(fix.css, name, attribute.name, value.name, null, null, defaultAttributes));
+            }
           });
         }
 
@@ -182,9 +205,7 @@ function Generator(jsonData, jsonConfig) {
             }
 
             if ('include' in responsive) {
-//              responsive.include.forEach(function(include) {
-                mediaquery = mediaquery.concat(getMediaQuery(responsive.include));
-//              });            
+              mediaquery = mediaquery.concat(getMediaQuery(responsive.include));
             }
           }
         })
@@ -222,12 +243,6 @@ function Generator(jsonData, jsonConfig) {
     if(attrname && valuename) {
       selector.push(sprintf("[%s~=%s%s]", attrname, valuename, (variantname ? "-"+variantname: "")));
     }
-
-/*
-    if(attrname && variantname) {
-      selector.push(sprintf("[%s~=%s]", attrname, variantname));
-    }
-*/
 
     if(responsive) {
       if(attrname) {
