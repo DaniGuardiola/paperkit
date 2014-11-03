@@ -6,7 +6,13 @@ module.exports = function(grunt) {
 
       // 1 - Cleaning bin and demo
       clean: [
-        'bin/',
+        'bin/grunt-materializer',
+        'bin/materializer',
+        'bin/md-resources',
+        'bin/materializer.css',
+        'bin/materializer.min.css',
+        'bin/materializer.js',
+        'bin/materializer.min.js',
         'demo/',
         'grunt-materializer/sources/'
         ],
@@ -112,13 +118,12 @@ module.exports = function(grunt) {
           ],
           dest: 'bin/materializer.css'
         },
-        /*
         js: {
           src: [
+            'source/javascript/*.js'
           ],
           dest: 'bin/materializer.js'
         }
-        */
       },
 
       // 6 - Minify css

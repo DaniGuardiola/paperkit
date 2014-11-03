@@ -114,7 +114,7 @@ function Generator(jsonData, jsonConfig) {
         if('fixes' in value) {
           value.fixes.forEach(function(fix) {
             if('css' in fix) {
-              var name = fix.before + tagname;
+              var name = (fix.before ? fix.before : "") + tagname + (fix.after ? fix.after : "");
               generatedData.push(generateRule(fix.css, name, attribute.name, value.name, null, null, defaultAttributes));
             }
           });
