@@ -105,11 +105,15 @@
           "css": [
             {
               "property": "bottom",
-              "value": "24px"
+              "value": "-48px"
             },
             {
               "property": "top",
               "value": "auto"
+            },
+            {
+              "property": "opacity",
+              "value": "0"
             }
           ],
           "responsive": [
@@ -126,6 +130,21 @@
                 }
               ]
             }
+          ],
+          "fixes": [
+            {
+              "after": "[md-notanimated]",
+              "css": [
+                {
+                  "property": "bottom",
+                  "value": "24px"
+                },
+                {
+                  "property": "opacity",
+                  "value": "1"
+                }
+              ]
+            }            
           ]
         },
         {
