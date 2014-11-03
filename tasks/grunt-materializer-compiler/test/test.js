@@ -11,8 +11,6 @@ exports.testVariants = function(test) {
     var generatedCSS = generator.generate();
 
     fs.writeFile('tmpvariant.css', generatedCSS);
-    // console.log(generatedCSS);
-
     test.equal(generatedCSS, expected);
     test.done();    
 }
@@ -26,8 +24,6 @@ exports.testAttribute = function(test) {
     var generatedCSS = generator.generate();
 
     fs.writeFile('tmp1.css', generatedCSS);
-    // console.log(generatedCSS);
-
     test.equal(generatedCSS, expected);
     test.done();
   }
@@ -40,8 +36,30 @@ exports.testAttribute = function(test) {
     var generator = new Generator(tag, settings);
     var generatedCSS = generator.generate();
     fs.writeFile('tmp2.css', generatedCSS);
-    // console.log(generatedCSS);
-
     test.equal(generatedCSS, expected);
     test.done();
+  }
+
+  exports.testTagParent = function(test) {
+    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var tag = fs.readFileSync('fixtures/md-tag-parent.json');
+    var expected = fs.readFileSync('expected/tag-parent.css');
+
+    var generator = new Generator(tag, settings);
+    var generatedCSS = generator.generate();
+    fs.writeFile('tmpTagParent.css', generatedCSS);
+    test.equal(generatedCSS, expected);
+    test.done();    
+  }
+
+  exports.testFixes = function(test) {
+    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var tag = fs.readFileSync('fixtures/md-fixes.json');
+    var expected = fs.readFileSync('expected/tag-parent.css');
+
+    var generator = new Generator(tag, settings);
+    var generatedCSS = generator.generate();
+    fs.writeFile('tmpFixes.css', generatedCSS);
+    test.equal(generatedCSS, expected);
+    test.done();    
   }
