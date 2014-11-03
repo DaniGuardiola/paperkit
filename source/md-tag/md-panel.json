@@ -34,6 +34,10 @@
           "name": "center",
           "css": [
             {
+              "property": "position",
+              "value": "fixed"
+            },
+            {
               "property": "top",
               "value": "50%"
             },
@@ -43,7 +47,7 @@
             },
             {
               "property": "transform",
-              "value": "translate(-50% -50%)"
+              "value": "translate(-50%,-50%)"
             }
           ]
         }
