@@ -18,10 +18,6 @@
           "value": "nowrap"
         },
         {
-          "property": "color",
-          "value": "#757575"
-        },
-        {
           "property": "margin",
           "value": "0 -0.089em"
         },
@@ -51,10 +47,6 @@
           "value": "nowrap"
         },
         {
-          "property": "color",
-          "value": "#757575"
-        },
-        {
           "property": "margin",
           "value": "0 -0.082em"
         },
@@ -78,10 +70,6 @@
         {
           "property": "font-weight",
           "value": "400"
-        },
-        {
-          "property": "color",
-          "value": "#757575"
         },
         {
           "property": "margin",
@@ -109,10 +97,6 @@
           "value": "400"
         },
         {
-          "property": "color",
-          "value": "#757575"
-        },
-        {
           "property": "margin",
           "value": "0 -0.08em"
         },
@@ -136,10 +120,6 @@
         {
           "property": "font-weight",
           "value": "400"
-        },
-        {
-          "property": "color",
-          "value": "#212121"
         },
         {
           "property": "margin",
@@ -171,10 +151,6 @@
           "value": "nowrap"
         },
         {
-          "property": "color",
-          "value": "#212121"
-        },
-        {
           "property": "margin",
           "value": "0 -0.07em"
         },
@@ -194,10 +170,6 @@
       {
         "property": "font-weight",
         "value": "400"
-      },
-      {
-        "property": "color",
-        "value": "#212121"
       },
       {
         "property": "margin",
@@ -254,10 +226,6 @@
         "value": "500"
       },
       {
-        "property": "color",
-        "value": "#212121"
-      },
-      {
         "property": "margin",
         "value": "0 -0.068em"
       },
@@ -293,10 +261,6 @@
       {
         "property": "font-weight",
         "value": "400"
-      },
-      {
-        "property": "color",
-        "value": "#212121"
       },
       {
         "property": "margin",
@@ -344,10 +308,6 @@
           "value": "nowrap"
         },
         {
-          "property": "color",
-          "value": "#757575"
-        },
-        {
           "property": "margin",
           "value": "0 -0.04em"
         },
@@ -371,10 +331,6 @@
       {
         "property": "white-space",
         "value": "nowrap"
-      },
-      {
-        "property": "color",
-        "value": "#212121"
       },
       {
         "property": "margin",
@@ -420,10 +376,6 @@
         {
           "property": "white-space",
           "value": "nowrap"
-        },
-        {
-          "property": "color",
-          "value": "#212121"
         },
         {
           "property": "margin",
