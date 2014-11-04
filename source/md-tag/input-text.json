@@ -16,19 +16,15 @@
       "value": "block"
     },
     {
-      "property": "border",
+      "property": "border-width",
       "value": "0"
-    },
-    {
-      "property": "border-color",
-      "value": "rgba(0, 0, 0, 0.12)"
     },
     {
       "property": "border-style",
       "value": "solid"
     },
     {
-      "property": "border-bottom-height",
+      "property": "border-bottom-width",
       "value": "1px"
     },
     {
@@ -38,22 +34,30 @@
     {
       "property": "height",
       "value": "32px"
+    },
+    {
+      "property": "background-color",
+      "value": "transparent"
     }
   ],
   "fixes": [
     {
       "after": ":not(:focus)",
-      "css": {
-        "property": "border-color",
-        "value": "rgba(0, 0, 0, 0.12)"
-      }
+      "css": [
+        {
+          "property": "border-color",
+          "value": "rgba(0, 0, 0, 0.12)"
+        }
+      ]
     },
     {
       "after": ":focus",
-      "css": {
-        "property": "border-bottom-height",
-        "value": "2px"
-      }
+      "css": [
+        {
+          "property": "border-bottom-width",
+          "value": "2px"
+        }
+      ]
     }
   ]
 }
