@@ -18,9 +18,9 @@
       ]
     }
   ],
-  "parents": [
+  "fixes": [
     {
-      "name": "md-parenttag",
+      "before": "md-parenttag > ",
       "attributes": [
         {
           "type": "attribute",
