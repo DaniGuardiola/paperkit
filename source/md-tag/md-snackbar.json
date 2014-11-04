@@ -14,7 +14,7 @@
   "css": [
     {
       "property": "display",
-      "value": "inline-block"
+      "value": "inline-flex"
     },
     {
       "property": "border-radius",
@@ -77,11 +77,15 @@
           "css": [
             {
               "property": "top",
-              "value": "24px"
+              "value": "-24px"
             },
             {
               "property": "bottom",
               "value": "auto"
+            },
+            {
+              "property": "opacity",
+              "value": "0"
             }
           ],
           "responsive": [
@@ -98,6 +102,21 @@
                 }
               ]
             }
+          ],
+          "fixes": [
+            {
+              "after": "[md-notanimated]",
+              "css": [
+                { 
+                  "property": "top",
+                  "value": "24px"
+                },
+                {
+                  "property": "opacity",
+                  "value": "1"
+                }
+              ]
+            }
           ]
         },
         {
@@ -105,7 +124,7 @@
           "css": [
             {
               "property": "bottom",
-              "value": "-48px"
+              "value": "-24px"
             },
             {
               "property": "top",
@@ -212,6 +231,21 @@
         {
           "property": "padding",
           "value": "16px 24px 12px 24px"
+        }
+      ]
+    }
+  ],
+  "fixes": [
+    {
+      "after": "> #action",  
+      "css": [
+        {
+          "property": "text-transform",
+          "value": "uppercase"
+        },
+        {
+          "property": "margin-left",
+          "value": "auto"
         }
       ]
     }
