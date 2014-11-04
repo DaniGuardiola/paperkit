@@ -2,6 +2,8 @@ var winston = require('winston');
 var sprintf = require('sprintf');
 var css = require('css');
 
+// winston.level = 'debug';
+
 module.exports = Generator;
 
 function Generator(jsonData, jsonConfig) {
@@ -44,7 +46,7 @@ function Generator(jsonData, jsonConfig) {
         generatedData = generatedData.concat(generateAttribute(jsonData));
       }
     }
-
+    winston.debug(sprintf("SOURCE DATA => %s", JSON.stringify(jsonData, null, 2)));
     winston.debug(sprintf("GENERATED DATA => %s", JSON.stringify(generatedData, null, 2)));
 
     var cssObject = {
@@ -60,7 +62,8 @@ function Generator(jsonData, jsonConfig) {
   var generateTag= function(tag, parentTag) {
     var generatedData = [];
 
-    var name = parentTag ? tag.name + " > " + parentTag.name : tag.name;
+    var name = parentTag ? (tag.before ? tag.before : "") + parentTag.name + (tag.after ? tag.after : "") : tag.name;
+    winston.debug("TAG NAME " + name);
 
     if('css' in tag) {
       generatedData.push(generateRule(tag.css, name));
@@ -79,12 +82,15 @@ function Generator(jsonData, jsonConfig) {
       });    
     }
 
-    /*
+    /* 
     * Still supported but deprecated
     */
-    if('parents' in tag && !parentTag) {
-      tag.parents.forEach(function(parent) {
-        generatedData = generatedData.concat(generateTag(parent, tag));
+    if(('fixes' in tag) && !parentTag) {
+      winston.debug('FIXES FOUND!');
+
+      tag.fixes.forEach(function(fix) {
+        winston.debug(sprintf("PROCESSING FIX %s", JSON.stringify(fix, null, 2)));
+        generatedData = generatedData.concat(generateTag(fix, tag));
       });
     }
 
