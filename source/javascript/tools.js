@@ -33,9 +33,9 @@ var addMDMethods= function(element) {
     initGlobalMDFunctions(element);
 
     if(tag=="md-snackbar") {
-      initSnackBar(element);
-    } else if(tag=="md-input-checkbox") {
-      initInputBox(element);
+      initMDSnackBar(element);
+    } else if(tag=="md-button") {
+      initMDButton(element);
     } else if(tag=="md-input-submit") {
       initMDInputSubmit(element);
     }
