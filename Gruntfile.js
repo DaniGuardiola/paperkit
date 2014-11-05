@@ -99,6 +99,7 @@ module.exports = function(grunt) {
         prefix: {
           src: [
             'bin/materializer/md-attr/*.css',
+            'bin/materializer/md-tag/*.css',
             'bin/materializer/class/*.css',
             'bin/materializer/css/*.css'
           ]

@@ -1,24 +1,4 @@
-Element.prototype.addMDMethods= function() {
-  var tag = this.tagName.toLowerCase();
-
-  if(tag.indexOf("md-") >= 0) {
-    // INCICIALIZACION DE FUNCIONES GENERALES
-
-    if(tag=="md-snackbar") {
-      initSnackBar(this);
-    } else if(tag=="md-input-checkbox") {
-      initInputBox(this);
-    } else if(tag=="md-input-submit") {
-      initMDInputSubmit(this);
-    }
-  }
-}
-
 var initSnackBar = function(MDSnackBar) {
-  var observer = new MutationObserver(MDSnackBar.callback);
-  var config = { attributes: true, childList: false, characterData: false };
-  observer.observe(MDSnackBar, config);
-
   MDSnackBar.animationIn=function() {
     var position = this.getAttribute('md-position');
 
@@ -35,7 +15,7 @@ var initSnackBar = function(MDSnackBar) {
           this.style.opacity="1";      
       }
     }  
-  }
+  };  
 
   MDSnackBar.animationOut=function() {
     var position = this.getAttribute('md-position');
@@ -51,21 +31,34 @@ var initSnackBar = function(MDSnackBar) {
           this.style.opacity="0";      
       }
     }
-  }
+  };
+
+  MDSnackBar.animationEnd = function() {
+    var position = this.getAttribute('md-position');
+
+    if(!this.hasAttribute('md-notanimated')) {
+      if(position.split(' ').indexOf('bottom') != -1) {    
+          this.style.transitionProperty='';
+          this.style.transitionDuration="";      
+          this.style.bottom="-24px";
+      } else {
+          this.style.transitionProperty='';
+          this.style.transitionDuration="";      
+          this.style.top="-24px";      
+      }
+    }
+
+    this.removeEventListener(transitionend, this.animationEnd);
+  };
 
   MDSnackBar.animate=function() {
     this.animationIn();
     var _this = this;
-    setTimeout(function() {
-      _this.animationOut();
+    setTimeout(function() { 
+      _this.animationOut(); 
+      _this.addEventListener(transitionend, _this.animationEnd);
     }, 2000);
-  }
-
-  MDSnackBar.callback = function(mutations) {
-    mutations.forEach(function(mutation) {
-      console.log(mutation);
-    });
-  }
+  };
 
   MDSnackBar.createdCallback = function() {
     var action = this.getAttribute('md-action');
@@ -73,26 +66,41 @@ var initSnackBar = function(MDSnackBar) {
     if(action) {
       this.attributeChangedCallback('md-action', '', action);
     }
-  }
+  };
 
   MDSnackBar.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     if(attrname=="md-action") {
+      /*
       var actionbutton = this.querySelector('#action');
+      console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
 
       if(!actionbutton) {
-        actionbutton = document.createElement('span');
+        actionbutton = document.createElement('button');
         actionbutton.id = "action";
-        actionbutton.innerText = newvalue;
+        actionbutton.value = newvalue;
+        // actionbutton.textContent = newvalue;
         this.appendChild(actionbutton);
       } else {
         actionbutton.id = "action";
-        actionbutton.innerText = newvalue;      
+        actionbutton.value = newvalue;      
       }
+      */
     }
+  };
+
+  // SET INITIAL PROPERTIES
+  if(MDSnackBar.getAttribute('md-action')) {
+    MDSnackBar.attributeChangedCallback('md-action', '', MDSnackBar.getAttribute('md-action'));
   }
+
+  // INIT OBSERVER
+  var observer = new MutationObserver(function(mutations) { 
+      mutations.forEach(function(mutation) {
+        var element = mutation.target;
+        element.attributeChangedCallback(mutation.attributeName, mutation.oldvalue, element.getAttribute(mutation.attributeName));
+      });
+  });
+
+  var config = { attributes: true, childList: false, characterData: false };
+  observer.observe(MDSnackBar, config);
 }
-/*
-document.registerElement('md-snackbar', {
-  prototype: MDSnackBar
-});
-*/
