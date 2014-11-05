@@ -2,10 +2,6 @@
   "type": "tag",
   "name": "md-panel",
   "defaults": [
-    {
-      "name": "md-position",
-      "values": [ "center" ]
-    }
   ],
   "css": [
     {
