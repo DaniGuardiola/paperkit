@@ -237,7 +237,7 @@
   ],
   "fixes": [
     {
-      "after": "> #message",
+      "after": "> md-message",
       "css": [
         {
           "property": "display",
