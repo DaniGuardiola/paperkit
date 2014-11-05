@@ -13,7 +13,7 @@
     },
     {
       "property": "display",
-      "value": "block"
+      "value": "inline-block"
     },
     {
       "property": "border-width",
@@ -38,6 +38,14 @@
     {
       "property": "background-color",
       "value": "transparent"
+    },
+    {
+      "property": "padding",
+      "value": "0"
+    },
+    {
+      "property": "overflow",
+      "value": "auto"
     }
   ],
   "fixes": [
@@ -47,6 +55,10 @@
         {
           "property": "border-color",
           "value": "rgba(0, 0, 0, 0.12)"
+        },
+        {
+          "property": "padding-top",
+          "value": "1px"
         }
       ]
     },
@@ -55,6 +67,10 @@
       "css": [
         {
           "property": "border-bottom-width",
+          "value": "2px"
+        },
+        {
+          "property": "padding-top",
           "value": "2px"
         }
       ]

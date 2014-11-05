@@ -19,10 +19,6 @@
       "value": "none"
     },
     {
-      "property": "text-transform",
-      "value": "uppercase"
-    },
-    {
       "property": "padding",
       "value": "0 24px 0 24px"
     },
@@ -37,6 +33,14 @@
     {
       "property": "vertical-align",
       "value": "middle"
+    },
+    {
+      "property": "cursor",
+      "value": "pointer"
+    },
+    {
+      "property": "user-select",
+      "value": "none"
     }
   ],
   "attributes": [
@@ -176,10 +180,6 @@
         {
           "property": "min-width",
           "value": "0"
-        },
-        {
-          "property": "margin-left",
-          "value": "auto"
         }
       ]
     }
