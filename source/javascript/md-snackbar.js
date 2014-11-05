@@ -1,4 +1,4 @@
-var initSnackBar = function(MDSnackBar) {
+var initMDSnackBar = function(MDSnackBar) {
   MDSnackBar.animationIn=function() {
     var position = this.getAttribute('md-position');
 
@@ -68,39 +68,4 @@ var initSnackBar = function(MDSnackBar) {
     }
   };
 
-  MDSnackBar.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
-    if(attrname=="md-action") {
-      /*
-      var actionbutton = this.querySelector('#action');
-      console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
-
-      if(!actionbutton) {
-        actionbutton = document.createElement('button');
-        actionbutton.id = "action";
-        actionbutton.value = newvalue;
-        // actionbutton.textContent = newvalue;
-        this.appendChild(actionbutton);
-      } else {
-        actionbutton.id = "action";
-        actionbutton.value = newvalue;      
-      }
-      */
-    }
-  };
-
-  // SET INITIAL PROPERTIES
-  if(MDSnackBar.getAttribute('md-action')) {
-    MDSnackBar.attributeChangedCallback('md-action', '', MDSnackBar.getAttribute('md-action'));
-  }
-
-  // INIT OBSERVER
-  var observer = new MutationObserver(function(mutations) { 
-      mutations.forEach(function(mutation) {
-        var element = mutation.target;
-        element.attributeChangedCallback(mutation.attributeName, mutation.oldvalue, element.getAttribute(mutation.attributeName));
-      });
-  });
-
-  var config = { attributes: true, childList: false, characterData: false };
-  observer.observe(MDSnackBar, config);
 }
