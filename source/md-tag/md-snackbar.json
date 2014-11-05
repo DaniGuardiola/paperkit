@@ -14,7 +14,7 @@
   "css": [
     {
       "property": "display",
-      "value": "inline-flex"
+      "value": "table"
     },
     {
       "property": "border-radius",
@@ -237,15 +237,11 @@
   ],
   "fixes": [
     {
-      "after": "> #action",  
+      "after": "> #message",
       "css": [
         {
-          "property": "text-transform",
-          "value": "uppercase"
-        },
-        {
-          "property": "margin-left",
-          "value": "auto"
+          "property": "display",
+          "value": "table-cell"
         }
       ]
     }
