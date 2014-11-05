@@ -1,7 +1,25 @@
 var initMDButton = function(MDButton) {
   MDButton.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
+    if(attrname==='md-action' && newvalue==='submit') {
+      var parentForm = findParentForm(this);
+      if(parentForm) {
+        parentForm.addEventListener('keypress', this.enterKeyListener);
+      }
+    } else if(attrname==='md-action' && (oldvalue!=='submit' || oldvalue==='')) {
+      var parentForm = findParentForm(this);
+      if(parentForm) {
+        parentForm.removeEventListener('keypress', this.enterKeyListener);
+      }
+    } 
   };
+
+  MDButton.enterKeyListener = function(e) {
+    var el = e.currentTarget;
+    if(e.keyCode===13) {
+      el.submit();
+    }
+  }
 
   MDButton.clickListener = function(e) {
     var el = e.currentTarget;
@@ -64,7 +82,16 @@ var initMDButton = function(MDButton) {
     return null;
   }
 
+  // Initialize listener and parent form keypress listener
   MDButton.addEventListener('click', MDButton.clickListener);
+
+  // If not md-action then submit is the default, set form key listener
+  if(!MDButton.getAttribute('md-action')) {
+      var parentForm = findParentForm(MDButton);
+      if(parentForm) {
+        parentForm.addEventListener('keypress', MDButton.enterKeyListener);
+      }    
+  }
 
   // SET INITIAL PROPERTIES
   if(MDButton.getAttribute('md-action')) {
