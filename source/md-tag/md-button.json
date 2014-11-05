@@ -1,10 +1,10 @@
 {
   "type": "tag",
-  "name": "input[type=submit]",
+  "name": "md-button",
   "css": [
     {
       "property": "display",
-      "value": "inline-block"
+      "value": "table-cell"
     },
     {
       "property": "min-width",
@@ -29,6 +29,14 @@
     {
       "property": "outline",
       "value": "0"
+    },
+    {
+      "property": "text-align",
+      "value": "center"
+    },
+    {
+      "property": "vertical-align",
+      "value": "middle"
     }
   ],
   "attributes": [
@@ -149,6 +157,29 @@
         {
           "name": "fab",
           "css": []
+        }
+      ]
+    }
+  ],
+  "fixes" : [
+    {
+      "before": "md-snackbar > ",
+      "css": [
+        {
+          "property": "height",
+          "value": "auto"
+        },
+        {
+          "property": "padding",
+          "value": "0"
+        },
+        {
+          "property": "min-width",
+          "value": "0"
+        },
+        {
+          "property": "margin-left",
+          "value": "auto"
         }
       ]
     }
