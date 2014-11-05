@@ -18,10 +18,6 @@
           "value": "nowrap"
         },
         {
-          "property": "margin",
-          "value": "0 -0.089em"
-        },
-        {
           "property": "line-height",
           "value": "120px"
         },
@@ -47,10 +43,6 @@
           "value": "nowrap"
         },
         {
-          "property": "margin",
-          "value": "0 -0.082em"
-        },
-        {
           "property": "line-height",
           "value": "60px"
         },
@@ -70,10 +62,6 @@
         {
           "property": "font-weight",
           "value": "400"
-        },
-        {
-          "property": "margin",
-          "value": "0 -0.08em"
         },
         {
           "property": "line-height",
@@ -97,10 +85,6 @@
           "value": "400"
         },
         {
-          "property": "margin",
-          "value": "0 -0.08em"
-        },
-        {
           "property": "line-height",
           "value": "40px"
         },
@@ -120,10 +104,6 @@
         {
           "property": "font-weight",
           "value": "400"
-        },
-        {
-          "property": "margin",
-          "value": "0 -0.078em"
         },
         {
           "property": "line-height",
@@ -151,14 +131,6 @@
           "value": "nowrap"
         },
         {
-          "property": "margin",
-          "value": "0 -0.07em"
-        },
-        {
-          "property": "line-height",
-          "value": "28px"
-        },
-        {
           "property": "letter-spacing",
           "value": "-.012em"
         }
@@ -170,10 +142,6 @@
       {
         "property": "font-weight",
         "value": "400"
-      },
-      {
-        "property": "margin",
-        "value": "0 -0.068em"
       }
     ],
     "defaultVariant": "leading-1",
@@ -226,10 +194,6 @@
         "value": "500"
       },
       {
-        "property": "margin",
-        "value": "0 -0.068em"
-      },
-      {
         "property": "line-height",
         "value": "24px"
       }
@@ -261,10 +225,6 @@
       {
         "property": "font-weight",
         "value": "400"
-      },
-      {
-        "property": "margin",
-        "value": "0 -0.074em"
       },
       {
         "property": "line-height",
@@ -308,10 +268,6 @@
           "value": "nowrap"
         },
         {
-          "property": "margin",
-          "value": "0 -0.04em"
-        },
-        {
           "property": "line-height",
           "value": "20px"
         },
@@ -331,10 +287,6 @@
       {
         "property": "white-space",
         "value": "nowrap"
-      },
-      {
-        "property": "margin",
-        "value": "0 -0.068em"
       },
       {
         "property": "line-height",
@@ -378,7 +330,10 @@
           "value": "nowrap"
         },
         {
-          "property": "letter-spacing",
+          "property": "line-height",
+          "value": "24px"
+        },
+        {
           "value": "0.018em"
         },
         {
