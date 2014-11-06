@@ -9,19 +9,27 @@ var initMDList = function(MDList) {
 
     switch(action) {
       case 'none':
-        break; 
+        break;
       default:
         if(action.indexOf('custom:') != -1) {
           var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
           callFunction(f, el);
+        } else if(action.indexOf('link:') != -1) {
+          var f = action.substring(action.indexOf('link:') + 'link:'.length).trim();
+          linkRedirect(f, el);
         }
         break;
     }   
   };
 
+  var linkRedirect= function(linkattr, target) {
+    var link = target.getAttribute(linkattr);
+    document.location.href = link;
+  }
+
   var callFunction= function(f, target) {
     console.log("calling function " + f);
-    // eval(f(event));
+    executeFunctionByName(f, window, [ target ]);
   };
 
   // Initialize listerner

@@ -63,3 +63,17 @@ var transitionEndEventName= function() {
 }
 
 var transitionend = transitionEndEventName();
+
+var executeFunctionByName= function(functionName, context, args) {
+       console.log(args);
+       var namespaces = functionName.split(".");
+       var func = namespaces.pop();
+       for (var i = 0; i < namespaces.length; i++) {
+           context = context[namespaces[i]];
+       }
+       if (args) {
+           return context[func].apply(this, args);
+       } else {
+           return context[func];
+       }
+   }
