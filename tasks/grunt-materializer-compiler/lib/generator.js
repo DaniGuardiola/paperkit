@@ -100,6 +100,10 @@ function Generator(jsonData, jsonConfig) {
   var generateAttribute= function(attribute, tagname, defaultAttributes) {
     var generatedData = [];
 
+    if('css' in attribute) {
+      generatedData.push(generateRule(attribute.css, tagname, attribute.name, null, null, null, defaultAttributes));  
+    }
+
     if('values' in attribute) {
       attribute.values.forEach(function(value) {
         if('css' in value) {
@@ -259,6 +263,8 @@ function Generator(jsonData, jsonConfig) {
 
     if(attrname && valuename) {
       selector.push(sprintf("[%s~=%s%s]", attrname, valuename, (variantname ? "-"+variantname: "")));
+    } else if(attrname) {
+      selector.push(sprintf("[%s]", attrname));
     }
 
     if(responsive) {

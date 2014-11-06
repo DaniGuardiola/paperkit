@@ -28,6 +28,19 @@ exports.testAttribute = function(test) {
     test.done();
   }
 
+exports.testAttributeWithoutValues = function(test) {
+    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var attribute = fs.readFileSync('fixtures/md-attribute-without-values.json');
+    var expected = fs.readFileSync('expected/attribute-without-values.css');
+
+    var generator = new Generator(attribute, settings);
+    var generatedCSS = generator.generate();
+
+    fs.writeFile('tmpAttributeWithoutValues.css', generatedCSS);
+    test.equal(generatedCSS, expected);
+    test.done();
+  }
+
   exports.testTag = function(test) {
     var settings = fs.readFileSync('fixtures/md-settings.json');
     var tag = fs.readFileSync('fixtures/md-tag.json');

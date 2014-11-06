@@ -1,0 +1,14 @@
+{
+  "type": "attribute",
+  "name": "md-attribute",
+  "css": [
+    {
+      "property": "property1",
+      "value": "csslabel1"
+    },
+    {
+      "property": "property2",
+      "value": "csslabel2"
+    }
+  ]
+}
