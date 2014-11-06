@@ -1,0 +1,196 @@
+{
+  "type": "tag",
+  "name": "md-list",
+  "css": [
+    {
+      "property": "display",
+      "value": "inline-block"
+    }
+  ],
+  "defaults": [
+    {
+      "name": "md-type",
+      "values": [ "one-line" ]
+    }
+  ],
+  "fixes": [
+    {
+      "after": "> md-tile",
+      "css": [
+        {
+          "property": "display",
+          "value": "table"
+        },
+        {
+          "property": "width",
+          "value": "100%"
+        },
+        {
+          "property": "padding-left",
+          "value": "16px"
+        },
+        {
+          "property": "padding-right",
+          "value": "16px"
+        }
+      ]
+    },
+    {
+      "after": "> md-tile > *",
+      "css": [
+        {
+          "property": "display",
+          "value": "table-cell"
+        }
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-type",
+      "values": [
+        {
+          "name": "one-line",
+          "fixes": [
+            {
+              "after": "> md-tile",
+              "css": [
+                {
+                  "property": "min-height",
+                  "value": "48px"
+                },
+                {
+                  "property": "max-height",
+                  "value": "56px"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-text",
+              "css": [
+                {
+                  "property": "padding-top",
+                  "value": "16px"
+                },
+                {
+                  "property": "padding-bottom",
+                  "value": "16px"
+                },
+                {
+                  "property": "font-size",
+                  "value": "16px"
+                },
+                {
+                  "property": "line-height",
+                  "value": "16px"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-icon:first-of-type",
+              "css": [
+                {
+                  "property": "height",
+                  "value": "48px"
+                },
+                {
+                  "property": "width",
+                  "value": "48px"
+                },
+                {
+                  "property": "position",
+                  "value": "relative"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-icon>svg",
+              "css": [
+                {
+                  "property": "position",
+                  "value": "absolute"
+                },
+                {
+                  "property": "top",
+                  "value": "10px"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-avatar + md-text",
+              "css": [
+                {
+                  "property": "padding-top",
+                  "value": "20px"
+                },
+                {
+                  "property": "padding-bottom",
+                  "value": "20px"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-avatar:first-of-type",
+              "css": [
+                {
+                  "property": "height",
+                  "value": "56px"
+                },
+                {
+                  "property": "width",
+                  "value": "48px"
+                },
+                {
+                  "property": "position",
+                  "value": "relative"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-avatar>svg",
+              "css": [
+                {
+                  "property": "position",
+                  "value": "absolute"
+                },
+                {
+                  "property": "top",
+                  "value": "12px"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "two-lines",
+          "fixes": [
+            {
+              "after": "> md-tile",
+              "css": [
+                {
+                  "property": "height",
+                  "value": "72px"
+                }
+              ]
+            }            
+          ]
+        },
+        {
+          "name": "three-lines",
+          "fixes": [
+            {
+              "after": "> md-tile",
+              "css": [
+                {
+                  "property": "height",
+                  "value": "88px"
+                }
+              ]              
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
