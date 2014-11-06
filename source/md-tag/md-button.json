@@ -12,7 +12,7 @@
     },
     {
       "property": "height",
-      "value": "36px"
+      "value": "48px"
     },
     {
       "property": "border",
@@ -41,6 +41,14 @@
     {
       "property": "user-select",
       "value": "none"
+    },
+    {
+      "property": "z-index",
+      "value": "1"
+    },
+    {
+      "property": "position",
+      "value": "relative"
     }
   ],
   "attributes": [
@@ -180,6 +188,43 @@
         {
           "property": "min-width",
           "value": "0"
+        }
+      ]
+    },
+    {
+      "after": ":hover:before",
+      "css": [
+        {
+          "property": "content",
+          "value": "\"\""
+        },
+        {
+          "property": "position",
+          "value": "absolute"
+        },
+        {
+          "property": "top",
+          "value": "8px"
+        },
+        {
+          "property": "left",
+          "value": "0"
+        },
+        {
+          "property": "background-color",
+          "value": "red"
+        },
+        {
+          "property": "height",
+          "value": "32px"
+        },
+        {
+          "property": "width",
+          "value": "100%"
+        },
+        {
+          "property": "z-index",
+          "value": "-1"
         }
       ]
     }
