@@ -1,6 +1,6 @@
 {
   "type": "tag",
-  "name": "md-panel",
+  "name": "md-sidemenu",
   "defaults": [
   ],
   "css": [
@@ -9,12 +9,16 @@
       "value": "block"
     },
     {
-      "property": "border-radius",
-      "value": "2px"
+      "property": "height",
+      "value": "100%"
+    },
+    {
+      "property": "width",
+      "value": "70%"
     },
     {
       "property": "padding",
-      "value": "24px 24px 8px 24px"
+      "value": "24px"
     }
   ],
   "attributes": [
