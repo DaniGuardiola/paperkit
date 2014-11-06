@@ -2,6 +2,10 @@
   "type": "tag",
   "name": "md-sidemenu",
   "defaults": [
+    {
+      "name": "md-state",
+      "values": ["closed"]
+    }
   ],
   "css": [
     {
@@ -17,35 +21,51 @@
       "value": "70%"
     },
     {
-      "property": "padding",
-      "value": "24px"
+      "property": "position",
+      "value": "fixed"
+    },
+    {
+      "property": "top",
+      "value": "0"
+    },
+    {
+      "property": "transition",
+      "value": "left 0.25s"
     }
   ],
   "attributes": [
     {
       "type": "attribute",
-      "name": "md-position",
+      "name": "md-state",
       "values": [
         {
-          "name": "center",
+          "name": "closed",
           "css": [
             {
-              "property": "position",
-              "value": "fixed"
-            },
-            {
-              "property": "top",
-              "value": "50%"
-            },
-            {
               "property": "left",
-              "value": "50%"
-            },
-            {
-              "property": "transform",
-              "value": "translate(-50%,-50%)"
+              "value": "-80%"
             }
           ]
+        },
+        {
+          "name": "open",
+          "css": [
+            {
+              "property": "left",
+              "value": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fixes": [
+    {
+      "after": ">md-list",
+      "css": [
+        {
+          "property": "width",
+          "value": "100%"
         }
       ]
     }
