@@ -105,7 +105,7 @@
               ]
             },
             {
-              "after": "> md-tile> md-icon>svg",
+              "after": "> md-tile> md-icon>*",
               "css": [
                 {
                   "property": "position",
