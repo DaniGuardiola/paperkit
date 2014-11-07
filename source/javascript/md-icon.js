@@ -3,33 +3,43 @@ var initMDIcon = function(MDIcon, materializer) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
     if(attrname==='md-image' && newvalue!="") {
       var image=this.getAttribute('md-image');
-
-      var oldsvg = this.children[0];
-      if(oldsvg) {
-        oldsvg.style.opacity="1";
-        oldsvg.style.transition='opacity 0.25s';
-        oldsvg.style.opacity="0";      
-
-        var _this=this;
-        setTimeout(function(e) {
-          _this.removeChild(oldsvg);
-        },250); 
-
-        var svg = document.createElement('object');
-        svg.setAttribute("type", "image/svg+xml");
-        svg.setAttribute("data", materializer.path + "md-resources/icon/" + newvalue + ".svg");
-        svg.style.opacity="0";
-        svg.style.transition='opacity 0.25s';
-        this.appendChild(svg);
-        svg.style.opacity="1";
-      } else {
-        var svg = document.createElement('object');
-        svg.setAttribute("type", "image/svg+xml");
-        svg.setAttribute("data", materializer.path + "md-resources/icon/" + newvalue + ".svg");
-        this.appendChild(svg.contentDocument);        
-      }
+      var svgFileURI = materializer.path + "md-resources/icon/" + newvalue + ".svg";
+      replaceSVG(svgFileURI, this);
     }
   };
+
+  var createSVG= function(svgData) {
+      var div = document.createElement('div');
+      div.innerHTML = svgData;
+      var svg = div.children[0];
+      return svg;
+  }
+
+  var replaceSVG= function(svgName, element) {
+    var svg;
+    var xhr= new XMLHttpRequest;
+    xhr.open("GET", svgName, false);
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.addEventListener("load",function(){
+        var newSVG = createSVG(xhr.responseText);
+        var oldSVG = element.children[0];
+
+        if(oldSVG) {
+          oldSVG.style.opacity="1";
+          oldSVG.style.transition='opacity 0.25s';
+          oldSVG.style.opacity="0";
+          oldSVG.addEventListener(transitionend, function(e) {
+            element.removeChild(oldSVG);
+          });
+          newSVG.style.transition="opacity 0.25s";
+        } else {
+          newSVG.style.transition="";
+        }
+        element.appendChild(newSVG);
+        element.style.opacity="1";
+    });
+    xhr.send();
+  }
 
   // Init image
   if(MDIcon.getAttribute('md-image')) {
