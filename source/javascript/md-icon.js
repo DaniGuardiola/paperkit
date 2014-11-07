@@ -26,7 +26,7 @@ var initMDIcon = function(MDIcon, materializer) {
         var svg = document.createElement('object');
         svg.setAttribute("type", "image/svg+xml");
         svg.setAttribute("data", materializer.path + "md-resources/icon/" + newvalue + ".svg");
-        this.appendChild(svg.contentDocument);        
+        this.appendChild(svg);        
       }
     }
   };
