@@ -19,6 +19,10 @@
     {
       "name": "device",
       "include": [ "watch", "mobile", "tablet" ]
+    },
+    {
+      "name": "all",
+      "include": [ "watch", "mobile", "tablet", "desktop" ]
     }
   ]
 }
