@@ -1,3 +1,42 @@
+var Materializer= function() {
+  var path = '';
+}
+
+Materializer.prototype.init= function() {
+  // Init materializer path
+  var url = document.querySelector("link[href*='materializer.css']").href;
+  this.path = url ? url.substring(0, url.indexOf('materializer.css')) : '';
+
+  // Init materializer objects
+  var _this = this;
+  [].forEach.call(document.getElementsByTagName('*'), function(el) {
+    if(el.tagName.indexOf('MD') === 0) {
+      _this.addMDMethods(el);
+    }
+  });
+};
+
+Materializer.prototype.addMDMethods= function(element) {
+  var tag = element.tagName.toLowerCase();
+
+  if(tag.indexOf("md-") >= 0) {
+    // INCICIALIZACION DE FUNCIONES GENERALES
+    initGlobalMDFunctions(element);
+
+    if(tag=="md-snackbar") {
+      initMDSnackBar(element, this);
+    } else if(tag=="md-button") {
+      initMDButton(element, this);
+    } else if(tag=="md-input-submit") {
+      initMDInputSubmit(element, this);
+    } else if(tag=="md-list") {
+      initMDList(element, this);
+    } else if(tag=="md-icon") {
+      initMDIcon(element, this);
+    }
+  }
+};
+
 
 var properties = {
   logEnabled: false,
@@ -21,27 +60,6 @@ var properties = {
       // properties.log("properties.change | " + query);
     } else {
       // properties.log("!! properties.change | query not specified or not valid");
-    }
-  }
-}
-
-var addMDMethods= function(element) {
-  var tag = element.tagName.toLowerCase();
-
-  if(tag.indexOf("md-") >= 0) {
-    // INCICIALIZACION DE FUNCIONES GENERALES
-    initGlobalMDFunctions(element);
-
-    if(tag=="md-snackbar") {
-      initMDSnackBar(element);
-    } else if(tag=="md-button") {
-      initMDButton(element);
-    } else if(tag=="md-input-submit") {
-      initMDInputSubmit(element);
-    } else if(tag=="md-list") {
-      initMDList(element);
-    } else if(tag=="md-sidemenu") {
-      initMDSideMenu(element);
     }
   }
 }
