@@ -184,6 +184,50 @@ var generateMDDividerColor = function() {
   return mdObject;
 }
 
+var generateMDIconColor = function() {
+  var colorPaletteDiv = document.querySelector('.color-palette');
+  var colorGroups = colorPaletteDiv.querySelectorAll('.color-group');
+  var mdObject = { type: "tag", name: "md-font-color", values: [] };
+  var mdBlackColor = { name: "black", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "fill", value: "#000000" } ] } ] };
+  var mdWhiteColor = { name: "white", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "fill", value: "#ffffff" } ] } ] };
+  var mdTransparentColor = { name: "transparent", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "fill", value: "transparent" } ] } ] };
+
+  [].forEach.call(colorGroups, function(colorGroup) {
+    var ul=colorGroup.querySelector('ul');
+    var colorGroupObject = { name: "", defaultVariant: "", variants: [] };
+
+    [].forEach.call(ul.querySelectorAll('li'), function(li) {
+      if(li.classList.contains('main-color')) {
+        var name = li.querySelector('span.name').innerText;
+        var defaultVariant = li.querySelector('span.shade').innerText;
+        colorGroupObject.name = name.toLowerCase().replace(" ","-");
+        defaultVariant = defaultVariant.indexOf("A")==0 ? defaultVariant : "c" + defaultVariant;
+        colorGroupObject.defaultVariant = defaultVariant.toLowerCase();
+      } else {
+        var name = li.querySelector('span.shade').innerText;
+        var color = li.querySelector('span.hex').innerText;
+
+        name = name.indexOf("A")==0 ? name : "c" + name;
+
+        var variantObject = { css: [], name: name.toLowerCase() };
+        variantObject.css.push({ property: "fill", value: color } );
+
+        if(name != 1000) {
+          colorGroupObject.variants.push(variantObject);
+        }
+      }
+    });
+
+    mdObject.values.push(colorGroupObject);
+  });
+
+  mdObject.values.push(mdBlackColor);
+  mdObject.values.push(mdWhiteColor);
+  mdObject.values.push(mdTransparentColor);
+
+  return mdObject;
+}
+
 var args = system.args;
 var term = args[1] ? args[1] : 'color';
 
@@ -194,7 +238,15 @@ page.open(url, function (status) {
   if(status !== "success" ) {
     console.log("ERROR!");
   } else {
-  var jsonData = page.evaluate(term=='color' ? generateMDColor : term=='fontcolor' ? generateMDFontColor : generateMDDividerColor);
+    if(term==='color') {
+      var jsonData=page.evaluate(generateMDColor);
+    } else if(term==='fontcolor') {
+      var jsonData=page.evaluate(generateMDFontColor);
+    } else if(term==='dividercolor') {
+      var jsonData=page.evaluate(generateMDDividerColor);
+    } else if(term==='iconcolor') {
+      var jsonData = page.evaluate(generateMDIconColor);
+    }
   console.log(JSON.stringify(jsonData,null,2));
   phantom.exit(0);
   }
