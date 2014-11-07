@@ -37,11 +37,6 @@ var initMDSideMenu = function(MDSidemenu) {
 
   MDSidemenu.autoResize();
 
-
-  window.addEventListener("resize", function(){
-  //  MDSidemenu.autoResize();
-  });
-
   // INIT OBSERVER
   var observer = new MutationObserver(function(mutations) { 
       mutations.forEach(function(mutation) {
