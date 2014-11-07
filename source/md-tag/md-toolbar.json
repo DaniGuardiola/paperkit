@@ -10,7 +10,7 @@
   "css": [
     {
       "property": "display",
-      "value": "block"
+      "value": "table"
     },
     {
       "property": "width",
@@ -215,6 +215,26 @@
               ]
             }
           ]
+        }
+      ]
+    }
+  ],
+  "responsive": [
+    {
+      "target": ["watch","mobile"],
+      "css": [
+        {
+          "property": "padding",
+          "value": "4px"
+        }
+      ]
+    },
+    {
+      "target": ["tablet","desktop"],
+      "css": [
+        {
+          "property": "padding",
+          "value": "8px"
         }
       ]
     }

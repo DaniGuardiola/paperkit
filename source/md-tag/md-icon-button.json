@@ -1,0 +1,22 @@
+{
+	"type": "tag",
+	"name": "md-icon-button",
+	"css": [
+		{
+			"property": "display",
+			"value": "table-cell"
+		},
+		{
+			"property": "width",
+			"value": "48px"
+		},
+		{
+			"property": "height",
+			"value": "48px"
+		},
+		{
+			"property": "padding",
+			"value": "12px"
+		}
+	]
+}
