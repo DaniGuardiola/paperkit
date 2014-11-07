@@ -1,9 +1,21 @@
 var initMDSideMenu = function(MDSidemenu) {
-  MDSidemenu.animate= function() {
-    
+  MDSidemenu.open = function() {
+    MDSidemenu.setAttribute("md-state", "open");
+  }
+  
+  MDSidemenu.close = function() {
+    MDSidemenu.setAttribute("md-state", "closed");
+  }
+
+  MDSidemenu.switch= function() {
+    if (MDSidemenu.getAttribute('md-state') === "open") {
+      MDSidemenu.close();
+    } else {
+      MDSidemenu.open();
+    }
   }
  
-  MDList.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
+  MDSidemenu.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
   };
 
