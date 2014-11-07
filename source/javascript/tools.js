@@ -40,6 +40,8 @@ var addMDMethods= function(element) {
       initMDInputSubmit(element);
     } else if(tag=="md-list") {
       initMDList(element);
+    } else if(tag=="md-sidemenu") {
+      initMDSideMenu(element);
     }
   }
 }

@@ -18,7 +18,7 @@
     },
     {
       "property": "width",
-      "value": "70%"
+      "value": "80%"
     },
     {
       "property": "position",
@@ -40,19 +40,38 @@
       "values": [
         {
           "name": "closed",
-          "css": [
+          "responsive": [
             {
-              "property": "left",
-              "value": "-80%"
+              "target": ["mobile"],
+              "css": [
+                {
+                  "property": "left",
+                  "value": "-80%"
+                }
+              ]
+            },
+            {
+              "target": ["tablet", "desktop"],
+              "css": [
+                {
+                  "property": "left",
+                  "value": "-256px"
+                }
+              ]
             }
           ]
         },
         {
           "name": "open",
-          "css": [
+          "responsive": [
             {
-              "property": "left",
-              "value": "0"
+              "target": ["all"],
+              "css": [
+                {
+                  "property": "left",
+                  "value": "0"
+                }
+              ]
             }
           ]
         }
@@ -66,6 +85,17 @@
         {
           "property": "width",
           "value": "100%"
+        }
+      ]
+    }
+  ],
+  "responsive": [
+    {
+      "target": ["tablet", "desktop"],
+      "css": [
+        {
+          "property": "width",
+          "value": "256px"
         }
       ]
     }
