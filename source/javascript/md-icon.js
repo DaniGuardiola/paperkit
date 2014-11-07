@@ -5,24 +5,36 @@ var initMDIcon = function(MDIcon, materializer) {
       var image=this.getAttribute('md-image');
 
       var oldsvg = this.children[0];
-      oldsvg.style.opacity="1";
-      oldsvg.style.transition='opacity 0.25s';
-      oldsvg.style.opacity="0";      
+      if(oldsvg) {
+        oldsvg.style.opacity="1";
+        oldsvg.style.transition='opacity 0.25s';
+        oldsvg.style.opacity="0";      
 
-      var _this=this;
-      setTimeout(function(e) {
-        _this.removeChild(oldsvg);
-      },250); 
+        var _this=this;
+        setTimeout(function(e) {
+          _this.removeChild(oldsvg);
+        },250); 
 
-      var svg = document.createElement('object');
-      svg.setAttribute("type", "image/svg+xml");
-      svg.setAttribute("data", materializer.path + "md-resources/icon/" + newvalue + ".svg");
-      svg.style.opacity="0";
-      svg.style.transition='opacity 0.25s';
-      this.appendChild(svg);
-      svg.style.opacity="1";
+        var svg = document.createElement('object');
+        svg.setAttribute("type", "image/svg+xml");
+        svg.setAttribute("data", materializer.path + "md-resources/icon/" + newvalue + ".svg");
+        svg.style.opacity="0";
+        svg.style.transition='opacity 0.25s';
+        this.appendChild(svg);
+        svg.style.opacity="1";
+      } else {
+        var svg = document.createElement('object');
+        svg.setAttribute("type", "image/svg+xml");
+        svg.setAttribute("data", materializer.path + "md-resources/icon/" + newvalue + ".svg");
+        this.appendChild(svg.contentDocument);        
+      }
     }
   };
+
+  // Init image
+  if(MDIcon.getAttribute('md-image')) {
+    MDIcon.attributeChangedCallback('md-image','', MDIcon.getAttribute('md-image'));
+  }
 
   // INIT OBSERVER
   var observer = new MutationObserver(function(mutations) { 
