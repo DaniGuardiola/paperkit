@@ -42,7 +42,7 @@
           "name": "closed",
           "responsive": [
             {
-              "target": ["mobile"],
+              "target": ["watch","mobile"],
               "css": [
                 {
                   "property": "left",
