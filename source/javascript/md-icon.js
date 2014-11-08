@@ -25,18 +25,19 @@ var initMDIcon = function(MDIcon, materializer) {
         var oldSVG = element.children[0];
 
         if(oldSVG) {
-          oldSVG.style.opacity="1";
-          oldSVG.style.transition='opacity 0.25s';
+          // Si hay svg antiguo, se le pone opacidad 0
           oldSVG.style.opacity="0";
+          // Se elimina cuando la transición acaba
           oldSVG.addEventListener(transitionend, function(e) {
             element.removeChild(oldSVG);
           });
-          newSVG.style.transition="opacity 0.25s";
-        } else {
-          newSVG.style.transition="";
+          // Se inicializa el nuevo svg desde opacity 0
+          newSVG.style.opacity="0";
         }
-        element.appendChild(newSVG);
-        element.style.opacity="1";
+        // Se añade, independientemente de si había svg antiguo o no
+        element.appendChild(newSVG);        
+        // Se elimina la opacity 0 inline, por lo que transiciona al opacity 1 del propio elemento
+        newSVG.style.opacity="";
     });
     xhr.send();
   }
