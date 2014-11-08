@@ -1,6 +1,21 @@
 {
   "type": "tag",
   "name": "md-icon",
+  "fixes": [
+    {
+      "after": "> svg",
+      "css": [
+        {
+          "property": "position",
+          "value": "absolute"
+        },
+        {
+          "property": "top",
+          "value": "10px"
+        }
+      ]
+    }
+  ],
   "attributes": [
       {
       "name": "md-fill",
