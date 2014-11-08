@@ -12,6 +12,7 @@ var initMDIcon = function(MDIcon, materializer) {
       var div = document.createElement('div');
       div.innerHTML = svgData;
       var svg = div.children[0];
+      div.removeChild(svg);
       return svg;
   }
 
@@ -36,6 +37,7 @@ var initMDIcon = function(MDIcon, materializer) {
         }
         // Se añade, independientemente de si había svg antiguo o no
         element.appendChild(newSVG);        
+        // element.innerHTML = xhr.responseText;
         // Se elimina la opacity 0 inline, por lo que transiciona al opacity 1 del propio elemento
         newSVG.style.opacity="";
     });
