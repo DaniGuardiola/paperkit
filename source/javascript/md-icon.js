@@ -39,7 +39,10 @@ var initMDIcon = function(MDIcon, materializer) {
         element.appendChild(newSVG);        
         // element.innerHTML = xhr.responseText;
         // Se elimina la opacity 0 inline, por lo que transiciona al opacity 1 del propio elemento
-        newSVG.style.opacity="";
+        setTimeout(function(){
+          newSVG.style.opacity="";
+          console.log("hola?");
+        },50);
     });
     xhr.send();
   }
