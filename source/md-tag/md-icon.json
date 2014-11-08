@@ -12,7 +12,15 @@
         {
           "property": "top",
           "value": "10px"
-        }
+        },
+        {
+          "property": "opacity",
+          "value": "1"
+        },
+        {
+          "property": "transition",
+          "value": "opacity 0.25s, fill 0.25s"
+        }        
       ]
     }
   ],
@@ -2465,21 +2473,6 @@
               "name": "c1"
             }
           ]
-        }
-      ]
-    }
-  ],
-  "fixes": [
-    {
-      "after": " svg",
-      "css": [
-        {
-          "property": "opacity",
-          "value": "1"
-        },
-        {
-          "property": "transition",
-          "value": "opacity 0.25s, fill 0.25s"
         }
       ]
     }
