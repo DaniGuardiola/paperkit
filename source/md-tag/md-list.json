@@ -43,6 +43,15 @@
           "value": "table-cell"
         }
       ]
+    },
+    {
+      "after": "> md-tile > md-icon > svg",
+      "css": [
+        {
+          "property": "top",
+          "value": "10px"
+        }
+      ]
     }
   ],
   "attributes": [
