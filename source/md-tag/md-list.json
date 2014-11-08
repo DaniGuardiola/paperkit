@@ -105,19 +105,6 @@
               ]
             },
             {
-              "after": "> md-tile> md-icon>*",
-              "css": [
-                {
-                  "property": "position",
-                  "value": "absolute"
-                },
-                {
-                  "property": "top",
-                  "value": "10px"
-                }
-              ]
-            },
-            {
               "after": "> md-tile> md-avatar + md-text",
               "css": [
                 {
