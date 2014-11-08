@@ -33,6 +33,8 @@ Materializer.prototype.addMDMethods= function(element) {
       initMDList(element, this);
     } else if(tag=="md-icon") {
       initMDIcon(element, this);
+    } else if(tag=="md-sidemenu") {
+      initMDSideMenu(element, this);
     }
   }
 };
