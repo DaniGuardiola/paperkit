@@ -19,7 +19,7 @@ var initMDIcon = function(MDIcon, materializer) {
   var replaceSVG= function(svgName, element) {
     var svg;
     var xhr= new XMLHttpRequest;
-    xhr.open("GET", svgName, false);
+    xhr.open("GET", svgName, true);
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     xhr.addEventListener("load",function(){
         var newSVG = createSVG(xhr.responseText);
