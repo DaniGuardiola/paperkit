@@ -19,8 +19,8 @@
 			"value": "12px"
 		},
 		{
-			"property": "display",
-			"value": "cursor"
+			"property": "cursor",
+			"value": "pointer"
 		}
 	]
 }
