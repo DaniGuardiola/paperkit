@@ -238,5 +238,20 @@
         }
       ]
     }
+  ],
+  "fixes": [
+    {
+      "after": " div[todo-find-a-name]",
+      "css": [
+        {
+          "property": "height",
+          "value": "48px"
+        },
+        {
+          "property": "width",
+          "value": "100%"
+        }
+      ]
+    }
   ]
 }
