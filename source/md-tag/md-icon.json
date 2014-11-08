@@ -1,6 +1,12 @@
 {
   "type": "tag",
   "name": "md-icon",
+  "css": [
+    {
+      "property": "position",
+      "value": "relative"
+    }
+  ],
   "fixes": [
     {
       "after": "> svg",
@@ -11,7 +17,11 @@
         },
         {
           "property": "top",
-          "value": "10px"
+          "value": "0"
+        },
+        {
+          "property": "left",
+          "value": "0"
         },
         {
           "property": "opacity",
