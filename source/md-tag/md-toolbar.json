@@ -10,7 +10,15 @@
   "css": [
     {
       "property": "display",
-      "value": "table"
+      "value": "flex"
+    },
+    {
+      "property": "flex-wrap",
+      "value": "wrap"
+    },
+    {
+      "property": "align-content",
+      "value": "flex-start"
     },
     {
       "property": "width",
@@ -245,7 +253,7 @@
   ],
   "responsive": [
     {
-      "target": ["watch","mobile"],
+      "target": ["device"],
       "css": [
         {
           "property": "padding",
@@ -254,7 +262,7 @@
       ]
     },
     {
-      "target": ["tablet","desktop"],
+      "target": ["desktop"],
       "css": [
         {
           "property": "padding",
@@ -265,8 +273,29 @@
   ],
   "fixes": [
     {
-      "after": " div[todo-find-a-name]",
+      "after": " md-space",
       "css": [
+        {
+          "property": "display",
+          "value": "block"
+        },
+        {
+          "property": "height",
+          "value": "48px"
+        },
+        {
+          "property": "flex",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "after": " md-break",
+      "css": [
+        {
+          "property": "display",
+          "value": "flex"
+        },
         {
           "property": "height",
           "value": "48px"
@@ -274,6 +303,26 @@
         {
           "property": "width",
           "value": "100%"
+        }
+      ],
+      "responsive": [
+        {
+          "target": ["device"],
+          "css": [
+            {
+              "property": "margin-top",
+              "value": "8px"
+            }
+          ]
+        },
+        {
+          "target": ["desktop"],
+          "css": [
+            {
+              "property": "margin-top",
+              "value": "16px"
+            }
+          ]
         }
       ]
     }
