@@ -1,5 +1,5 @@
-var initMDButton = function(MDButton) {
-  MDButton.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
+var initMDIconButton = function(MDIconButton) {
+  MDIconButton.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
 
     // SUBMIT
@@ -26,14 +26,14 @@ var initMDButton = function(MDButton) {
     }
   };
 
-  MDButton.enterKeyListener = function(e) {
+  MDIconButton.enterKeyListener = function(e) {
     var el = e.currentTarget;
     if(e.keyCode===13) {
       el.submit();
     }
   }
 
-  MDButton.clickListener = function(e) {
+  MDIconButton.clickListener = function(e) {
     var el = e.currentTarget;
     var action = el.getAttribute("md-action") ? el.getAttribute('md-action') : 'submit';
 
@@ -127,20 +127,9 @@ var initMDButton = function(MDButton) {
     return null;
   }
 
-  // Initialize listener and parent form keypress listener
-  MDButton.addEventListener('click', MDButton.clickListener);
-
-  // If not md-action then submit is the default, set form key listener
-  if(!MDButton.getAttribute('md-action')) {
-      var parentForm = findParentForm(MDButton);
-      if(parentForm) {
-        parentForm.addEventListener('keypress', MDButton.enterKeyListener);
-      }    
-  }
-
   // SET INITIAL PROPERTIES
-  if(MDButton.getAttribute('md-action')) {
-    MDButton.attributeChangedCallback('md-action', '', MDButton.getAttribute('md-action'));
+  if(MDIconButton.getAttribute('md-action')) {
+    MDIconButton.attributeChangedCallback('md-action', '', MDIconButton.getAttribute('md-action'));
   }
 
   // INIT OBSERVER
@@ -152,6 +141,6 @@ var initMDButton = function(MDButton) {
   });
 
   var config = { attributes: true, childList: false, characterData: false };
-  observer.observe(MDButton, config);
+  observer.observe(MDIconButton, config);
 
 }
