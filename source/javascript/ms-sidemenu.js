@@ -27,7 +27,8 @@ var initMDSideMenu = function(MDSidemenu) {
     var viewport = getViewport();
     if (viewport.width <= 768) { // We should generate display vars from md-settings.json
       MDSidemenu.style.width = (viewport.width - 56) + "px";
-      if (MDSidemenu.getAttribute('state') !== "open") {
+      if (MDSidemenu.getAttribute('md-state') !== "open") {
+        console.log("shouldn't be open");
         MDSidemenu.style.left = "-" + MDSidemenu.style.width;
       };
     } else {
