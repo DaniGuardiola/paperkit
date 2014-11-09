@@ -217,6 +217,30 @@
           ]
         }
       ]
+    },
+    {
+      "type": "attribute",
+      "name": "md-position",
+      "values": [
+        {
+          "name": "absolute",
+          "css": [
+            {
+              "property": "position",
+              "value": "absolute"
+            }
+          ]
+        },
+        {
+          "name": "fixed",
+          "css": [
+            {
+              "property": "position",
+              "value": "absolute"
+            }
+          ]
+        }
+      ]
     }
   ],
   "responsive": [
