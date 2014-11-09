@@ -4,7 +4,7 @@
 	"css": [
 		{
 			"property": "display",
-			"value": "table-cell"
+			"value": "block"
 		},
 		{
 			"property": "width",
