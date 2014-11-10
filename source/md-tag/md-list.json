@@ -19,7 +19,7 @@
       "css": [
         {
           "property": "display",
-          "value": "table"
+          "value": "flex"
         },
         {
           "property": "width",
@@ -32,15 +32,6 @@
         {
           "property": "padding-right",
           "value": "16px"
-        }
-      ]
-    },
-    {
-      "after": "> md-tile > *",
-      "css": [
-        {
-          "property": "display",
-          "value": "table-cell"
         }
       ]
     },
