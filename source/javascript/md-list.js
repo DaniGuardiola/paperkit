@@ -5,21 +5,35 @@ var initMDList = function(MDList) {
 
   MDList.clickListener = function(e) {
     var el = e.currentTarget;
-    var action = el.parentElement && el.parentElement.getAttribute("md-action") ? el.parentElement.getAttribute('md-action') : 'none';
+    console.log("Fired click on " + el.tagName);
+    if(el.tagName==='MD-TILE') {
+      if(el.getAttribute('md-action')) {
+        var action = el.getAttribute('md-action');
+      } else {
+        var action = el.parentElement && el.parentElement.getAttribute("md-action") ? el.parentElement.getAttribute('md-action') : 'none';
+      }
 
-    switch(action) {
-      case 'none':
-        break;
-      default:
-        if(action.indexOf('custom:') != -1) {
-          var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
-          callFunction(f, el);
-        } else if(action.indexOf('link:') != -1) {
-          var f = action.substring(action.indexOf('link:') + 'link:'.length).trim();
-          linkRedirect(f, el);
-        }
-        break;
-    }   
+      switch(action) {
+        case 'none':
+          break;
+        default:
+          if(action.indexOf('custom:') != -1) {
+            var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
+            callFunction(f, el);
+          } else if(action.indexOf('link:') != -1) {
+            var f = action.substring(action.indexOf('link:') + 'link:'.length).trim();
+            linkRedirect(f, el);
+          }
+          break;
+      }   
+
+      if(e.stopPropagation) {
+        e.stopPropagation();
+      } else {
+        e.cancelBubble=true;
+      }
+      
+    }
   };
 
   var linkRedirect= function(linkattr, target) {
@@ -32,10 +46,18 @@ var initMDList = function(MDList) {
     executeFunctionByName(f, window, [ target ]);
   };
 
+  var initChildrenActions= function() {
+    var children = MDList.children;    
+    for(var i=0; i<children.length;i++) {
+      if(children[i].tagName==='MD-TILE') {        
+        var tile = children[i];
+        tile.addEventListener('click', MDList.clickListener, false);
+      }
+    }
+  }
+
   // Initialize listerner
-  [].forEach.call(MDList.querySelectorAll('md-tile'), function(tile) {
-    tile.addEventListener('click', MDList.clickListener);
-  });
+  initChildrenActions();
 
   // SET INITIAL PROPERTIES  
   if(MDList.getAttribute('md-action')) {
