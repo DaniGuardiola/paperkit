@@ -12,10 +12,6 @@
       "after": "> svg",
       "css": [
         {
-          "property": "fill",
-          "value": "#040404"
-        },
-        {
           "property": "position",
           "value": "absolute"
         },
