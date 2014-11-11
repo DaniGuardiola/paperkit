@@ -43,6 +43,10 @@
     {
       "property": "transition-timing-function",
       "value": "cubic-bezier(.55,0,.1,1)"
+    },
+    {
+      "property": "z-index",
+      "value": "400"
     }
   ],
   "attributes": [
