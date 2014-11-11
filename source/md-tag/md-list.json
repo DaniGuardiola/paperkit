@@ -50,15 +50,6 @@
           "value": "hidden"
         }
       ]
-    },
-    {
-      "after": "> md-tile > md-icon > svg",
-      "css": [
-        {
-          "property": "top",
-          "value": "12px"
-        }
-      ]
     }
   ],
   "attributes": [
@@ -104,31 +95,10 @@
               ]
             },
             {
-              "after": "> md-tile> md-icon:first-of-type",
-              "css": [
-                {
-                  "property": "height",
-                  "value": "48px"
-                },
-                {
-                  "property": "width",
-                  "value": "48px"
-                },
-                {
-                  "property": "position",
-                  "value": "relative"
-                }
-              ]
-            },
-            {
-              "after": "> md-tile> md-avatar + md-text",
+              "after": ">md-tile> md-avatar + md-text",
               "css": [
                 {
                   "property": "padding-top",
-                  "value": "20px"
-                },
-                {
-                  "property": "padding-bottom",
                   "value": "20px"
                 }
               ]
@@ -137,37 +107,8 @@
               "after": "> md-tile> md-avatar:first-of-type",
               "css": [
                 {
-                  "property": "height",
-                  "value": "56px"
-                },
-                {
-                  "property": "width",
-                  "value": "56px"
-                },
-                {
-                  "property": "position",
-                  "value": "relative"
-                }
-              ]
-            },
-            {
-              "after": "> md-tile> md-avatar> svg",
-              "css": [
-                {
-                  "property": "position",
-                  "value": "absolute"
-                },
-                {
-                  "property": "top",
-                  "value": "8px"
-                },
-                {
-                  "property": "width",
-                  "value": "40px"
-                },
-                {
-                  "property": "height",
-                  "value": "40px"
+                  "property": "margin",
+                  "value": "8px 16px 8px 0px"
                 }
               ]
             }
@@ -253,7 +194,7 @@
           "name": "partial",
           "fixes": [
             {
-              "after": "> md-tile:after, md-list> md-tile[md-separator=full]:after",
+              "after": "> md-tile:after, md-list> md-tile[md-separator=partial]:after",
               "css": [
                 {
                   "property": "display",
