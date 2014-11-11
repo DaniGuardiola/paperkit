@@ -12,6 +12,7 @@
     "sprintf": "~0.1.4",
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-copy": "~0.7.0",
-    "grunt-cssbeautifier": "~0.1.2"
+    "grunt-cssbeautifier": "~0.1.2",
+    "material-design-icons": "~1.0.0"
   }
 }
