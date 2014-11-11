@@ -5,6 +5,11 @@ var initMDIcon = function(MDIcon, materializer) {
       var image=this.getAttribute('md-image');
       var svgFileURI = materializer.path + "md-resources/icon/" + newvalue + ".svg";
       replaceSVG(svgFileURI, this);
+    } else if(attrname==='md-image') {
+      if(this.tagName==='MD-AVATAR') {
+        var svgFileURI = materializer.path + "md-resources/icon/account_circle.svg";
+        replaceSVG(svgFileURI, this);
+      }
     }
   };
 
@@ -48,9 +53,7 @@ var initMDIcon = function(MDIcon, materializer) {
   }
 
   // Init image
-  if(MDIcon.getAttribute('md-image')) {
-    MDIcon.attributeChangedCallback('md-image','', MDIcon.getAttribute('md-image'));
-  }
+  MDIcon.attributeChangedCallback('md-image','', MDIcon.getAttribute('md-image') ? MDIcon.getAttribute('md-image'): '');
 
   // INIT OBSERVER
   var observer = new MutationObserver(function(mutations) { 
