@@ -5,6 +5,10 @@
     {
       "property": "position",
       "value": "relative"
+    },
+    {
+      "property": "display",
+      "value": "block"
     }
   ],
   "fixes": [
@@ -37,7 +41,7 @@
   "attributes": [
       {
       "name": "md-fill",
-      "type": "tag",
+      "type": "attribute",
       "values": [
         {
           "defaultVariant": "c500",
