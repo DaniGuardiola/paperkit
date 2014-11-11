@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         css: {
             expand: true,
             src: [
-              'source/md-attr/*.json',
+              'source/md-attribute/*.json',
               'source/md-tag/*.json'
             ],
             dest: 'bin/',
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
         },
         prefix: {
           src: [
-            'bin/materializer/md-attr/*.css',
+            'bin/materializer/md-attribute/*.css',
             'bin/materializer/md-tag/*.css',
             'bin/materializer/class/*.css',
             'bin/materializer/css/*.css'
@@ -115,7 +115,7 @@ module.exports = function(grunt) {
           src: [
             'bin/materializer/css/*.css',
             'bin/materializer/md-tag/*.css',
-            'bin/materializer/md-attr/*.css'
+            'bin/materializer/md-attribute/*.css'
           ],
           dest: 'bin/materializer.css'
         },
