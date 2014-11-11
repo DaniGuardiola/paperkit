@@ -31,6 +31,10 @@
     {
       "property": "transition",
       "value": "left 0.25s"
+    },
+    {
+      "property": "z-index",
+      "value": "500"
     }
   ],
   "attributes": [

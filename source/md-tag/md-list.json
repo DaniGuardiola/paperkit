@@ -4,7 +4,15 @@
   "css": [
     {
       "property": "display",
-      "value": "inline-block"
+      "value": "block"
+    },
+    {
+      "property": "margin-top",
+      "value": "8px"
+    },
+    {
+      "property": "margin-bottom",
+      "value": "8px"
     }
   ],
   "defaults": [
@@ -32,6 +40,14 @@
         {
           "property": "padding-right",
           "value": "16px"
+        },
+        {
+          "property": "position",
+          "value": "relative"
+        },
+        {
+          "property": "overflow",
+          "value": "hidden"
         }
       ]
     },
@@ -126,7 +142,7 @@
                 },
                 {
                   "property": "width",
-                  "value": "48px"
+                  "value": "56px"
                 },
                 {
                   "property": "position",
@@ -135,7 +151,7 @@
               ]
             },
             {
-              "after": "> md-tile> md-avatar>svg",
+              "after": "> md-tile> md-avatar> svg",
               "css": [
                 {
                   "property": "position",
@@ -143,7 +159,15 @@
                 },
                 {
                   "property": "top",
-                  "value": "12px"
+                  "value": "8px"
+                },
+                {
+                  "property": "width",
+                  "value": "40px"
+                },
+                {
+                  "property": "height",
+                  "value": "40px"
                 }
               ]
             }
@@ -174,6 +198,114 @@
                   "value": "88px"
                 }
               ]              
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "attribute",
+      "name": "md-separator",
+      "values": [
+        {
+          "name": "full",
+          "fixes": [
+            {
+              "after": "> md-tile:after, md-list> md-tile[md-separator=full]:after",
+              "css": [
+                {
+                  "property": "display",
+                  "value": "block"
+                },
+                {
+                  "property": "position",
+                  "value": "absolute"
+                },
+                {
+                  "property": "bottom",
+                  "value": "0px"
+                },
+                {
+                  "property": "left",
+                  "value": "0px"
+                },
+                {
+                  "property": "height",
+                  "value": "1px"
+                },
+                {
+                  "property": "width",
+                  "value": "100%"
+                },
+                {
+                  "property": "background-color",
+                  "value": "rgba(0, 0, 0, 0.12)"
+                },
+                {
+                  "property": "content",
+                  "value": "\"\""
+                }
+              ]
+            }            
+          ]
+        },
+        {
+          "name": "partial",
+          "fixes": [
+            {
+              "after": "> md-tile:after, md-list> md-tile[md-separator=full]:after",
+              "css": [
+                {
+                  "property": "display",
+                  "value": "block"
+                },
+                {
+                  "property": "position",
+                  "value": "absolute"
+                },
+                {
+                  "property": "bottom",
+                  "value": "0px"
+                },
+                {
+                  "property": "left",
+                  "value": "0px"
+                },
+                {
+                  "property": "height",
+                  "value": "1px"
+                },
+                {
+                  "property": "width",
+                  "value": "100%"
+                },
+                {
+                  "property": "background-color",
+                  "value": "rgba(0, 0, 0, 0.12)"
+                },
+                {
+                  "property": "content",
+                  "value": "\"\""
+                },
+                {
+                  "property": "margin-left",
+                  "value": "72px"
+                }
+              ]
+            }            
+          ]
+        },
+        {
+          "name": "none",
+          "fixes": [
+            {
+              "after": "> md-tile:after, md-list> md-tile[md-separator=none]:after", 
+              "css": [
+                {
+                  "property": "display",
+                  "value": "none"
+                }
+              ]
             }
           ]
         }
