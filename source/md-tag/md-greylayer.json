@@ -27,10 +27,10 @@
 			"value": "background-color 0.25s"
 		}
 	],
-	"attributtes": [
+	"attributes": [
 		{
 			"name": "md-state",
-			"type": "attributte",
+			"type": "attribute",
 			"values": [
 				{
 					"name": "on",
