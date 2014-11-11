@@ -1,5 +1,10 @@
 var Materializer= function() {
-  var path = '';
+  this.path = '';
+  this.initFuncs = new Array();
+}
+
+Materializer.prototype.initListener= function(func) {
+  this.initFuncs.push(func);
 }
 
 Materializer.prototype.init= function() {
@@ -20,6 +25,10 @@ Materializer.prototype.init= function() {
       console.log("PROCESADO " + el.tagName);
     }    
   }
+
+  this.initFuncs.forEach(function(initFunc){
+    initFunc();
+  });
 };
 
 Materializer.prototype.addMDMethods= function(element) {
