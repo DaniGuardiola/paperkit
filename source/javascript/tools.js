@@ -20,15 +20,6 @@ Materializer.prototype.init= function() {
       console.log("PROCESADO " + el.tagName);
     }    
   }
-/*  
-  elements.forEach(function(el) {
-    console.log("ENCONTRADO " + el.tagName);
-    if(el.tagName.indexOf('MD') === 0) {
-      console.log("PROCESADO " + el.tagName);
-      _this.addMDMethods(el);      
-    }
-  });
-*/
 };
 
 Materializer.prototype.addMDMethods= function(element) {
