@@ -1,0 +1,18 @@
+{
+  "type": "tag",
+  "name": "md-paper",
+  "css": [
+    {
+      "property": "display",
+      "value": "block"
+    },
+    {
+      "property": "margin-left",
+      "value": "auto"
+    },
+    {
+      "property": "margin-right",
+      "value": "auto"
+    }
+  ]
+}
