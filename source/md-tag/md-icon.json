@@ -5,16 +5,16 @@
     {
       "property": "position",
       "value": "relative"
+    },
+    {
+      "property": "display",
+      "value": "block"
     }
   ],
   "fixes": [
     {
       "after": "> svg",
       "css": [
-        {
-          "property": "fill",
-          "value": "#040404"
-        },
         {
           "property": "position",
           "value": "absolute"
@@ -41,7 +41,7 @@
   "attributes": [
       {
       "name": "md-fill",
-      "type": "tag",
+      "type": "attribute",
       "values": [
         {
           "defaultVariant": "c500",
