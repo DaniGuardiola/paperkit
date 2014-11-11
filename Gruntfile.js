@@ -60,7 +60,7 @@ module.exports = function(grunt) {
         },
         icon: {
           expand: true,
-          src: 'source/md-resources/icon/*/svg/*_24px.svg',
+          src: 'node_modules/material-design-icons/*/svg/*_24px.svg',
           dest: 'bin/md-resources/icon/',
           flatten: true,
           rename: function(dest,src) {
