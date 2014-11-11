@@ -15,10 +15,6 @@
 			"value": "48px"
 		},
 		{
-			"property": "padding",
-			"value": "12px"
-		},
-		{
 			"property": "cursor",
 			"value": "pointer"
 		}

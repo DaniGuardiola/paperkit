@@ -1,6 +1,6 @@
 {
   "type": "tag",
-  "name": "md-icon",
+  "name": "md-avatar",
   "css": [
     {
       "property": "position",
@@ -12,15 +12,15 @@
     },
     {
       "property": "width",
-      "value": "24px"
+      "value": "40px"
     },
     {
       "property": "height",
-      "value": "24px"
+      "value": "40px"
     },
     {
       "property": "margin",
-      "value": "12px"
+      "value": "4px"
     }
   ],
   "fixes": [
@@ -46,7 +46,7 @@
         {
           "property": "transition",
           "value": "opacity 0.25s, fill 0.25s"
-        },
+        },        
         {
           "property": "height",
           "value": "100%"
@@ -54,7 +54,7 @@
         {
           "property": "width",
           "value": "100%"
-        }
+        }        
       ]
     }
   ],
