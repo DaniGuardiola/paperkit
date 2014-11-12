@@ -23,6 +23,10 @@
 			"value": "0"
 		},
 		{
+			"property": "z-index",
+			"value": "-1"
+		},
+		{
 			"property": "background-color",
 			"value": "rgba(0, 0, 0, 0)"
 		},
@@ -42,6 +46,10 @@
 						{
 							"property": "background-color",
 							"value": "rgba(0, 0, 0, 0.5)"
+						},
+						{
+							"property": "cursor",
+							"value": "url(md-resources/cursor/close.png), pointer"
 						}
 					]
 				},
