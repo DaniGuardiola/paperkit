@@ -23,6 +23,10 @@
 			"value": "0"
 		},
 		{
+			"property": "background-color",
+			"value": "rgba(0, 0, 0, 0)"
+		},
+		{
 			"property": "transition",
 			"value": "background-color 0.25s"
 		}
