@@ -11,10 +11,10 @@ var initMDGreylayer = function(MDGreylayer) {
   }
 
   MDGreylayer.switch = function() {
-    if (MDGreylayer.getAttribute('md-state') === "open") {
-      MDGreylayer.close();
+    if (MDGreylayer.getAttribute('md-state') !== "on") {
+      MDGreylayer.show();
     } else {
-      MDGreylayer.open();
+      MDGreylayer.hide();
     }
   }
 

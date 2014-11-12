@@ -5,6 +5,10 @@
     {
       "property": "display",
       "value": "block"
+    },
+    {
+      "property": "max-width",
+      "value": "100%"
     }
   ],
   "attributes": [
