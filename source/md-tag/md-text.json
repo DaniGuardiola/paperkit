@@ -1,0 +1,10 @@
+{
+  "type": "tag",
+  "name": "md-text",
+  "css": [
+    {
+      "property": "flex",
+      "value": "1"
+    }
+  ]
+}
