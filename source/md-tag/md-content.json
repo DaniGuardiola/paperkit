@@ -32,7 +32,7 @@
 		},
 		{
 			"property": "transition",
-			"value": "padding-top 0.25s"
+			"value": "margin-top 0.25s"
 		}
 	],
 	"fixes": [
@@ -46,7 +46,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "56px"
 	            }
 	          ]
@@ -58,7 +58,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "64px"
 	            }
 	          ]
@@ -75,7 +75,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "56px"
 	            }
 	          ]
@@ -87,7 +87,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "64px"
 	            }
 	          ]
@@ -104,7 +104,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "112px"
 	            }
 	          ]
@@ -116,7 +116,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "128px"
 	            }
 	          ]
@@ -133,7 +133,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "168px"
 	            }
 	          ]
@@ -145,7 +145,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "192px"
 	            }
 	          ]
@@ -162,7 +162,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "224px"
 	            }
 	          ]
@@ -174,7 +174,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "256px"
 	            }
 	          ]
@@ -191,7 +191,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "280px"
 	            }
 	          ]
@@ -203,7 +203,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "320px"
 	            }
 	          ]
@@ -220,7 +220,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "336px"
 	            }
 	          ]
@@ -232,7 +232,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "384px"
 	            }
 	          ]
@@ -249,7 +249,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "392px"
 	            }
 	          ]
@@ -261,7 +261,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "448px"
 	            }
 	          ]
@@ -278,7 +278,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "448px"
 	            }
 	          ]
@@ -290,7 +290,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "512px"
 	            }
 	          ]
@@ -307,7 +307,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "504px"
 	            }
 	          ]
@@ -319,7 +319,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "576px"
 	            }
 	          ]
@@ -336,7 +336,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "560px"
 	            }
 	          ]
@@ -348,7 +348,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "640px"
 	            }
 	          ]
@@ -365,7 +365,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "616px"
 	            }
 	          ]
@@ -377,7 +377,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "704px"
 	            }
 	          ]
@@ -394,7 +394,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "672px"
 	            }
 	          ]
@@ -406,7 +406,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "768px"
 	            }
 	          ]
@@ -423,7 +423,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "728px"
 	            }
 	          ]
@@ -435,7 +435,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "832px"
 	            }
 	          ]
@@ -452,7 +452,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "784px"
 	            }
 	          ]
@@ -464,7 +464,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "896px"
 	            }
 	          ]
@@ -481,7 +481,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "840px"
 	            }
 	          ]
@@ -493,7 +493,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "padding-top",
+	              "property": "margin-top",
 	              "value": "960px"
 	            }
 	          ]
