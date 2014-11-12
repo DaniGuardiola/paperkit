@@ -1,29 +1,17 @@
 var initMDButton = function(MDButton) {
   MDButton.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
-
-    // SUBMIT
-    // Adding
     if(attrname==='md-action' && newvalue==='submit') {
       var parentForm = findParentForm(this);
       if(parentForm) {
-        setListener(parentForm, this.enterKeyListener, 'keypress');
+        parentForm.addEventListener('keypress', this.enterKeyListener);
       }
-    // Removing
-    } else if(attrname==='md-action' && oldvalue==='submit' && newvalue.indexOf('custom:') == -1) {
+    } else if(attrname==='md-action' && (oldvalue!=='submit' || oldvalue==='')) {
       var parentForm = findParentForm(this);
       if(parentForm) {
-        setListener(parentForm);
+        parentForm.removeEventListener('keypress', this.enterKeyListener);
       }
-    }
-
-    // CUSTOM
-    if(attrname==='md-action' &&  newvalue.indexOf('custom:') != -1) {
-      var f = newvalue.substring(newvalue.indexOf('custom:') + 'custom:'.length).trim();
-      setListener(MDIconButton, function() {
-        callFunction(f);
-      });
-    }
+    } 
   };
 
   MDButton.enterKeyListener = function(e) {
@@ -76,42 +64,9 @@ var initMDButton = function(MDButton) {
     console.log("snackbar dismiss clicked!")
   }
 
-  var callFunction= function(functionName, args, context) {
-    console.log('[MD] callFunction - Calling ' + functionName + '(' + args + ')');
-    var namespaces = functionName.split(".");
-    var func = namespaces.pop();
-    if (!context) {
-      context = window;
-    }
-    for (var i = 0; i < namespaces.length; i++) {
-        context = context[namespaces[i]];
-    }
-    if (args) {
-    console.log("dew1");
-        return context[func].apply(this, args);
-    } else {      
-      console.log(context + func);
-        return context[func]();
-    }
-  }
-
-  var setListener= function(who, what, when) {
-    if (who.nodeType === 1) {      
-      // Removing all listeners by replacing the element with a clone
-      whoClone = who.cloneNode(true);
-      who.parentNode.replaceChild(whoClone, who);
-      who = whoClone;
-      if (typeof what === "function") {
-        if (when == '' || typeof when != "string") {
-          // Defautl event
-          when = 'click';
-        }
-        // Ading new event Listener
-        who.addEventListener(when, function() {
-          what();
-        });
-      }
-    } 
+  var callFunction= function(f, target) {
+    console.log("calling function " + f);
+    executeFunctionByName(f, window, [ target ]);
   }
 
   var findParentForm= function(element) {

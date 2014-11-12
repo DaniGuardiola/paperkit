@@ -104,6 +104,15 @@
               ]
             },
             {
+              "after": ">md-tile> md-avatar ~ md-icon-button",
+              "css":  [
+                {
+                  "property": "margin-top",
+                  "value": "4px"              
+                }                
+              ]
+            },
+            {
               "after": "> md-tile> md-avatar:first-of-type",
               "css": [
                 {
