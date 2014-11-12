@@ -5,14 +5,27 @@
     {
       "property": "display",
       "value": "block"
-    },
+    }
+  ],
+  "attributes": [
     {
-      "property": "margin-left",
-      "value": "auto"
-    },
-    {
-      "property": "margin-right",
-      "value": "auto"
+      "type": "attribute",
+      "name": "md-position",
+      "values": [
+        {
+          "name": "center-y",
+          "css": [
+            {
+              "property": "margin-left",
+              "value": "auto"
+            },
+            {
+              "property": "margin-right",
+              "value": "auto"
+            } 
+          ]
+        }
+      ]
     }
   ]
 }
