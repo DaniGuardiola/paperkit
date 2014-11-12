@@ -38,7 +38,7 @@ var initMDButton = function(MDButton) {
       default:
         if(action.indexOf('custom:') != -1) {
           var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
-          callFunction(f, el);
+          this.callFunction(f, el);
         }
         break;
     }   
@@ -64,7 +64,7 @@ var initMDButton = function(MDButton) {
     console.log("snackbar dismiss clicked!")
   }
 
-  var callFunction= function(f, target) {
+  MDButton.callFunction= function(f, target) {
     console.log("calling function " + f);
     executeFunctionByName(f, window, [ target ]);
   }

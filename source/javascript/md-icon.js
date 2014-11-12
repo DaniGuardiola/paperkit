@@ -55,7 +55,6 @@ var avatarSVG= "<svg width=\"40\" height=\"40\">"+
     // Se elimina la opacity 0 inline, por lo que transiciona al opacity 1 del propio elemento
     setTimeout(function(){
       newSVG.style.opacity="";
-      console.log("hola?");
     },50);
   }
 
