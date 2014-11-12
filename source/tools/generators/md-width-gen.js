@@ -15,7 +15,7 @@ while (i < 41) {
     			target: ["watch","mobile"],
     			css: [
     				{
-    					property: "height",
+    					property: "width",
     					value: mval
     				}
     			]
@@ -24,7 +24,7 @@ while (i < 41) {
     			target: ["tablet","desktop"],
     			css: [
     				{
-    					property: "height",
+    					property: "width",
     					value: dval
     				}
     			]
