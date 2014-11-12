@@ -2,6 +2,11 @@ var initMDSidemenu = function(MDSidemenu) {
   MDSidemenu.open = function() {
     MDSidemenu.style.left = "";
     MDSidemenu.setAttribute("md-state", "open");
+    MDSidemenu.materializer.greylayer.show();
+    MDSidemenu.materializer.greylayer.addEventListener('click', function(){
+      MDSidemenu.close();
+      MDSidemenu.materializer.greylayer.hide();
+    });
   }
 
   MDSidemenu.close = function() {
@@ -12,7 +17,7 @@ var initMDSidemenu = function(MDSidemenu) {
   }
 
   MDSidemenu.switch = function() {
-    if (MDSidemenu.getAttribute('md-state') === "open") {
+    if (MDSidemenu.getAttribute('md-state') !== "open") {
       MDSidemenu.close();
     } else {
       MDSidemenu.open();
@@ -25,7 +30,7 @@ var initMDSidemenu = function(MDSidemenu) {
 
   MDSidemenu.autoResize = function() {
     var viewport = getViewport();
-    if (viewport.width <= 768) { // We should generate display vars from md-settings.json
+    if (viewport.width <= 456) { // We should generate display vars from md-settings.json
       MDSidemenu.style.width = (viewport.width - 56) + "px";
       if (MDSidemenu.getAttribute('md-state') !== "open") {
         MDSidemenu.style.left = "-" + MDSidemenu.style.width;
