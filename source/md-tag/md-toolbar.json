@@ -52,186 +52,6 @@
   "attributes": [
     {
       "type": "attribute",
-      "name": "md-height",
-      "values": [
-        {
-        "name": "x1",
-        "css": [
-          {
-            "property": "height",
-            "value": "56px"
-          }
-        ],
-        "responsive": [
-            {
-              "target": ["device"],
-              "css": [
-                {
-                  "property": "height",
-                  "value": "56px"
-                }
-              ]
-            },
-            {
-              "target": ["desktop"],
-              "css": [
-                {
-                  "property": "height",
-                  "value": "64px"
-                }
-              ]
-            }
-          ]
-        },
-        {
-        "name": "x2",
-        "css": [
-          {
-            "property": "height",
-            "value": "112px"
-          }
-        ],
-        "responsive": [
-            {
-              "target": ["device"],
-              "css": [
-                {
-                  "property": "height",
-                  "value": "112px"
-                }
-              ]
-            },
-            {
-              "target": ["desktop"],
-              "css": [
-                {
-                  "property": "height",
-                  "value": "128px"
-                }
-              ]
-            }
-          ]
-        },
-        {
-        "name": "x3",
-        "css": [
-          {
-            "property": "height",
-            "value": "168px"
-          }
-        ],
-        "responsive": [
-            {
-              "target": ["device"],
-              "css": [
-                {
-                  "property": "height",
-                  "value": "168px"
-                }
-              ]
-            },
-            {
-              "target": ["desktop"],
-              "css": [
-                {
-                  "property": "height",
-                  "value": "192px"
-                }
-              ]
-            }
-          ]
-        },
-        {
-        "name": "x4",
-        "css": [
-          {
-            "property": "height",
-            "value": "224px"
-          }
-        ],
-        "responsive": [
-            {
-              "target": ["device"],
-              "css": [
-                {
-                  "property": "height",
-                  "value": "224px"
-                }
-              ]
-            },
-            {
-              "target": ["desktop"],
-              "css": [
-                {
-                  "property": "height",
-                  "value": "256px"
-                }
-              ]
-            }
-          ]
-        },
-        {
-        "name": "x5",
-        "css": [
-          {
-            "property": "height",
-            "value": "280px"
-          }
-        ],
-        "responsive": [
-            {
-              "target": ["device"],
-              "css": [
-                {
-                  "property": "height",
-                  "value": "280px"
-                }
-              ]
-            },
-            {
-              "target": ["desktop"],
-              "css": [
-                {
-                  "property": "height",
-                  "value": "320px"
-                }
-              ]
-            }
-          ]
-        },
-        {
-        "name": "x6",
-        "css": [
-          {
-            "property": "height",
-            "value": "336px"
-          }
-        ],
-        "responsive": [
-            {
-              "target": ["device"],
-              "css": [
-                {
-                  "property": "height",
-                  "value": "336px"
-                }
-              ]
-            },
-            {
-              "target": ["desktop"],
-              "css": [
-                {
-                  "property": "height",
-                  "value": "384px"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "attribute",
       "name": "md-position",
       "values": [
         {
@@ -248,7 +68,7 @@
           "css": [
             {
               "property": "position",
-              "value": "absolute"
+              "value": "fixed"
             }
           ]
         }
@@ -257,7 +77,7 @@
   ],
   "responsive": [
     {
-      "target": ["device"],
+      "target": ["watch","mobile"],
       "css": [
         {
           "property": "padding",
@@ -266,7 +86,7 @@
       ]
     },
     {
-      "target": ["desktop"],
+      "target": ["tablet","desktop"],
       "css": [
         {
           "property": "padding",
@@ -276,6 +96,35 @@
     }
   ],
   "fixes": [
+    {
+      "after": " md-text",
+      "css": [
+        {
+          "property": "padding-top",
+          "value": "12px"
+        }
+      ],
+      "responsive": [
+        {
+          "target": ["watch","mobile"],
+          "css": [
+            {
+              "property": "padding-left",
+              "value": "20px"
+            }
+          ]
+        },
+        {
+          "target": ["tablet","desktop"],
+          "css": [
+            {
+              "property": "padding-left",
+              "value": "24px"
+            }
+          ]
+        }
+      ]
+    },
     {
       "after": " md-space",
       "css": [
@@ -294,7 +143,7 @@
       ]
     },
     {
-      "after": " md-break",
+      "after": " md-row",
       "css": [
         {
           "property": "display",
@@ -311,10 +160,10 @@
       ]
     },    
     {
-      "after": " * + md-break",
+      "after": " * + md-row",
       "responsive": [
         {
-          "target": ["device"],
+          "target": ["watch","mobile"],
           "css": [
             {
               "property": "margin-top",
@@ -323,7 +172,7 @@
           ]
         },
         {
-          "target": ["desktop"],
+          "target": ["tablet","desktop"],
           "css": [
             {
               "property": "margin-top",
