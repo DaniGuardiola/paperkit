@@ -1,0 +1,22 @@
+{
+  "type": "tag",
+  "name": "md-menu",
+  "css": [
+    {
+      "property": "display",
+      "value": "block"
+    },
+    {
+      "property": "max-width",
+      "value": "100%"
+    },
+    {
+      "property": "transition",
+      "value": "height 0.25s"
+    },
+    {
+      "property": "overflow",
+      "value": "hidden"
+    }
+  ]
+ }
