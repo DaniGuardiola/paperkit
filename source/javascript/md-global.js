@@ -1,4 +1,5 @@
-var initGlobalMDFunctions = function(MDElement) {
+var initGlobalMDFunctions = function(MDElement, materializer) {
+  MDElement.materializer = materializer;
   MDElement.changeProperty= function(property, oldvalue, newvalue) {
     var attribute = this.getAttribute(property); 
 
