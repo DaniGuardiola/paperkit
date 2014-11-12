@@ -58,6 +58,12 @@ module.exports = function(grunt) {
           dest: 'bin/md-resources/font/',
           flatten: true
         },
+        cursor: {
+          expand: true,
+          src: 'source/md-resources/cursor/*',
+          dest: 'bin/md-resources/cursor/',
+          flatten: true
+        },
         icon: {
           expand: true,
           src: 'node_modules/material-design-icons/*/svg/*_24px.svg',

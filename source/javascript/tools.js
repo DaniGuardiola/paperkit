@@ -1,6 +1,10 @@
 var Materializer= function() {
   this.path = '';
   this.initFuncs = new Array();
+
+  /* Elements */
+  this.greylayer = null;
+  this.sidemenu = null;
 }
 
 Materializer.prototype.initListener= function(func) {
@@ -11,6 +15,11 @@ Materializer.prototype.init= function() {
   // Init materializer path
   var url = document.querySelector("link[href*='materializer.css']").href;
   this.path = url ? url.substring(0, url.indexOf('materializer.css')) : '';
+
+  // Init elements
+  if (!document.querySelector('md-greylayer')) {
+    document.body.appendChild(document.createElement('md-greylayer'));
+  }
 
   // Init materializer objects
   var elements = document.getElementsByTagName('*');
@@ -36,7 +45,7 @@ Materializer.prototype.addMDMethods= function(element) {
 
   if(tag.indexOf("md-") >= 0) {
     // INCICIALIZACION DE FUNCIONES GENERALES
-    initGlobalMDFunctions(element);
+    initGlobalMDFunctions(element, this);
 
     if(tag=="md-snackbar") {
       initMDSnackBar(element, this);
@@ -50,10 +59,12 @@ Materializer.prototype.addMDMethods= function(element) {
       initMDIcon(element, this);
     } else if(tag=="md-sidemenu") {
       initMDSidemenu(element, this);
+      this.sidemenu = element;
     } else if(tag=="md-icon-button") {
       initMDIconButton(element, this);
     } else if(tag=="md-greylayer") {
       initMDGreylayer(element, this);
+      this.greylayer = element;
     }
   }
 };
