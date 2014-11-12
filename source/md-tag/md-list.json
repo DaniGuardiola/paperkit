@@ -120,7 +120,16 @@
                   "value": "8px 16px 8px 0px"
                 }
               ]
-            }
+             },
+            {
+              "after": "> md-tile> md-icon:first-of-type",
+              "css": [
+                {
+                  "property": "margin",
+                  "value": "12px 12px 12px 0px"
+                }
+              ]
+            }             
           ]
         },
         {
