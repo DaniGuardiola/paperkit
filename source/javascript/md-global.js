@@ -15,4 +15,6 @@ var initGlobalMDFunctions = function(MDElement) {
       this.setAttribute(property, values.join(' '));    
     }    
   }
+
+  MDElement.alreadyInitialized = true;
 }
