@@ -13,7 +13,7 @@
       "name": "md-position",
       "values": [
         {
-          "name": "center-y",
+          "name": "center-x",
           "css": [
             {
               "property": "margin-left",
