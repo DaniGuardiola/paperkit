@@ -49,9 +49,11 @@ Materializer.prototype.addMDMethods= function(element) {
     } else if(tag=="md-icon" || tag=="md-avatar") {
       initMDIcon(element, this);
     } else if(tag=="md-sidemenu") {
-      initMDSideMenu(element, this);
+      initMDSidemenu(element, this);
     } else if(tag=="md-icon-button") {
       initMDIconButton(element, this);
+    } else if(tag=="md-greylayer") {
+      initMDGreylayer(element, this);
     }
   }
 };
