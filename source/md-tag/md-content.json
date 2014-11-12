@@ -29,11 +29,15 @@
 		{
 			"property": "left",
 			"value": "0"
+		},
+		{
+			"property": "transition",
+			"value": "padding-top 0.25s"
 		}
 	],
 	"fixes": [
 	    {
-	      "before": "md-toolbar[md-height=x1] ~ ",
+	      "before": "md-toolbar:not([md-height]) ~ ",
 	      "responsive": [
 	        {
 	          "target": [
@@ -42,7 +46,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "56px"
 	            }
 	          ]
@@ -54,7 +58,36 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
+	              "value": "64px"
+	            }
+	          ]
+	        }
+	      ]
+	    },
+	    {
+	      "before": "md-toolbar[md-height=x1] ~ ",
+	      "responsive": [
+	        {
+	          "target": [
+	            "watch",
+	            "mobile"
+	          ],
+	          "css": [
+	            {
+	              "property": "padding-top",
+	              "value": "56px"
+	            }
+	          ]
+	        },
+	        {
+	          "target": [
+	            "tablet",
+	            "desktop"
+	          ],
+	          "css": [
+	            {
+	              "property": "padding-top",
 	              "value": "64px"
 	            }
 	          ]
@@ -71,7 +104,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "112px"
 	            }
 	          ]
@@ -83,7 +116,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "128px"
 	            }
 	          ]
@@ -100,7 +133,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "168px"
 	            }
 	          ]
@@ -112,7 +145,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "192px"
 	            }
 	          ]
@@ -129,7 +162,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "224px"
 	            }
 	          ]
@@ -141,7 +174,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "256px"
 	            }
 	          ]
@@ -158,7 +191,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "280px"
 	            }
 	          ]
@@ -170,7 +203,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "320px"
 	            }
 	          ]
@@ -187,7 +220,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "336px"
 	            }
 	          ]
@@ -199,7 +232,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "384px"
 	            }
 	          ]
@@ -216,7 +249,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "392px"
 	            }
 	          ]
@@ -228,7 +261,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "448px"
 	            }
 	          ]
@@ -245,7 +278,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "448px"
 	            }
 	          ]
@@ -257,7 +290,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "512px"
 	            }
 	          ]
@@ -274,7 +307,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "504px"
 	            }
 	          ]
@@ -286,7 +319,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "576px"
 	            }
 	          ]
@@ -303,7 +336,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "560px"
 	            }
 	          ]
@@ -315,7 +348,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "640px"
 	            }
 	          ]
@@ -332,7 +365,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "616px"
 	            }
 	          ]
@@ -344,7 +377,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "704px"
 	            }
 	          ]
@@ -361,7 +394,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "672px"
 	            }
 	          ]
@@ -373,7 +406,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "768px"
 	            }
 	          ]
@@ -390,7 +423,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "728px"
 	            }
 	          ]
@@ -402,7 +435,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "832px"
 	            }
 	          ]
@@ -419,7 +452,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "784px"
 	            }
 	          ]
@@ -431,7 +464,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "896px"
 	            }
 	          ]
@@ -448,7 +481,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "840px"
 	            }
 	          ]
@@ -460,7 +493,7 @@
 	          ],
 	          "css": [
 	            {
-	              "property": "height",
+	              "property": "padding-top",
 	              "value": "960px"
 	            }
 	          ]
