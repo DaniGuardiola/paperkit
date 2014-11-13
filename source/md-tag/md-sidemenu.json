@@ -21,6 +21,10 @@
       "value": "80%"
     },
     {
+      "property": "max-width",
+      "value": "400px"
+    },
+    {
       "property": "position",
       "value": "fixed"
     },
