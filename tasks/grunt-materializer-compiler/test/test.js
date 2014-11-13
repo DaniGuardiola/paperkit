@@ -53,6 +53,19 @@ exports.testAttributeWithoutValues = function(test) {
     test.done();
   }
 
+  exports.testAttributeWithImports= function(test) {
+    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var tag = fs.readFileSync('fixtures/md-attribute-with-imports.json');
+    var expected = fs.readFileSync('expected/attribute-with-imports.css');
+    var imports = JSON.parse(fs.readFileSync('imports/md-colors.json'));
+
+    var generator = new Generator(tag, settings, [ imports ]);
+    var generatedCSS = generator.generate();
+    fs.writeFile('tmpAttributeWithImports.css', generatedCSS);
+    test.equal(generatedCSS, expected);
+    test.done();
+  }
+
   exports.testTagParent = function(test) {
     var settings = fs.readFileSync('fixtures/md-settings.json');
     var tag = fs.readFileSync('fixtures/md-tag-parent.json');
