@@ -32,7 +32,8 @@ module.exports = function(grunt) {
               return newDest;
           },
           options: {
-            configfile: 'source/md-settings.json'
+            configfile: 'source/md-settings.json',
+            imports: 'source/md-imports'
           }
         },
       },
