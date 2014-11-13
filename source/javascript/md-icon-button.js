@@ -22,10 +22,19 @@ var initMDIconButton = function(MDIconButton) {
 
   MDIconButton.openMenu= function(menuName, el) {
     var menu=document.getElementById(menuName);
-    if(menu && menu.open) {
-      menu.open(el);
-
-      document.addEventListener('click', closeListener);
+    if(menu) {
+      if(menu.status=="closed") {
+        menu.open(el);
+        document.addEventListener('click', closeListener);
+        if (event.stopPropagation) {
+          event.stopPropagation()
+        } else {
+          event.cancelBubble = true
+        }
+      } else {
+        menu.close();
+        document.removeEventListener('click', closeListener);
+      }
     }
   }
 
@@ -34,6 +43,16 @@ var initMDIconButton = function(MDIconButton) {
     var menuName = action.substring(action.indexOf('menu:') + 'menu:'.length).trim();
     var menu=document.getElementById(menuName);
     menu.close();
+
+    /*
+    * This event goes down-up, once it reaches the target tile there is no need to
+    * go down, let's cancel event bubbling. It acts "almost" like a background modal layer
+    */
+    if(e.stopPropagation) {
+      e.stopPropagation();
+    } else {
+      e.cancelBubble=true;
+    }    
 
     document.removeEventListener('click', closeListener);
   }
