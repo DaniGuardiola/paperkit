@@ -1,0 +1,97 @@
+{
+  "type": "tag",
+  "name": "md-tab-bar",
+  "css": [
+    {
+      "property": "display",
+      "value": "flex"
+    },
+    {
+      "property": "flex-wrap",
+      "value": "nowrap"
+    },
+    {
+      "property": "justify-content",
+      "value": "center"
+    },
+    {
+      "property": "height",
+      "value": "48px"
+    }    
+  ],
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-type",
+      "values": [
+        {
+          "name": "fixed",
+          "css": [
+            {
+              "property": "min-width",
+              "value": "355px"
+            }
+          ],
+          "fixes": [
+            {
+              "after": " md-tab",
+              "css": [
+                {
+                  "property": "flex",
+                  "value": "1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fixes": [
+    {
+      "after": " > md-tab",
+      "css": [
+        {
+          "property": "font-size",
+          "value": "14px"
+        },
+        {
+          "property": "text-align",
+          "value": "center"
+        },
+        {
+          "property": "text-transform",
+          "value": "uppercase"
+        },
+        {
+          "property": "color",
+          "value": "rgba(255, 255, 255, 0.6)"
+        },
+        {
+          "property": "font-weight",
+          "value": "500"
+        }
+      ],
+      "responsive": [
+        {
+          "target": ["watch","mobile"],
+          "css": [
+            {
+              "property": "padding",
+              "value": "17px 12px"
+            }
+          ]
+        },
+        {
+          "target": ["tablet","desktop"],
+          "css": [
+            {
+              "property": "padding",
+              "value": "17px 24px"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
