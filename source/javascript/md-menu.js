@@ -1,4 +1,6 @@
 var initMDMenu = function(MDMenu) {
+  MDMenu.status = "closed";
+
   MDMenu.open = function(parent) {    
     MDMenu.style.display="";
     
@@ -13,12 +15,14 @@ var initMDMenu = function(MDMenu) {
     MDMenu.style.right=(viewPort.width - parentRect.right) + "px";
 
     // Animation
-    MDMenu.style.height="";    
+    MDMenu.style.height="";
+    MDMenu.status = "opened";    
   }
 
   MDMenu.close = function() {
     MDMenu.style.height = "0px";
     MDMenu.addEventListener(transitionend, MDMenu.endOfTransition);
+    MDMenu.status= "closed";
   }
 
   MDMenu.endOfTransition = function(e) {

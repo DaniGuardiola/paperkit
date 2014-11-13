@@ -5,8 +5,9 @@ var initMDList = function(MDList) {
 
   MDList.clickListener = function(e) {
     var el = e.currentTarget;
+
     console.log("Fired click on " + el.tagName);
-    if(el.tagName==='MD-TILE') {
+    if(el.tagName==='MD-TILE' && el.parentElement===MDList) {
       if(el.getAttribute('md-action')) {
         var action = el.getAttribute('md-action');
       } else {
@@ -26,13 +27,6 @@ var initMDList = function(MDList) {
           }
           break;
       }   
-
-      if(e.stopPropagation) {
-        e.stopPropagation();
-      } else {
-        e.cancelBubble=true;
-      }
-      
     }
   };
 
@@ -51,7 +45,7 @@ var initMDList = function(MDList) {
     for(var i=0; i<children.length;i++) {
       if(children[i].tagName==='MD-TILE') {        
         var tile = children[i];
-        tile.addEventListener('click', MDList.clickListener, false);
+        tile.addEventListener('click', MDList.clickListener);
       }
     }
   }
