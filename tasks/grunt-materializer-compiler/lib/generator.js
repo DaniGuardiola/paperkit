@@ -6,7 +6,7 @@ var css = require('css');
 
 module.exports = Generator;
 
-function Generator(jsonData, jsonConfig) {
+function Generator(jsonData, jsonConfig, imports) {
   if(jsonData) {
     var jsonData=JSON.parse(jsonData);
   }
@@ -104,6 +104,49 @@ function Generator(jsonData, jsonConfig) {
       generatedData.push(generateRule(attribute.css, tagname, attribute.name, null, null, null, defaultAttributes));  
     }
 
+    if('imports' in attribute) {
+      attribute.imports.forEach(function(valueImport) {
+        var _import= findImport(valueImport.name);
+
+          if('values' in _import) {
+            _import.values.forEach(function(value) {              
+              if('variants' in value) {
+                winston.debug(sprintf("PROCESSING IMPORT => %s", JSON.stringify(value, null, 2)));
+                value.variants.forEach(function(variant) {
+                  var css = [];
+                  if(variant.value1 && valueImport.property1) {
+                    css.push(generateCSS(valueImport.property1, variant.value1));
+                  }
+
+                  if(variant.value2 && valueImport.property2) {
+                    css.push(generateCSS(valueImport.property2, variant.value2));
+                  }
+                  winston.debug(sprintf("GENERATED CSS FROM IMPORT => %s", JSON.stringify(css, null, 2)));
+                  if(css.length > 0) {
+                    generatedData.push(generateRule(css, tagname, attribute.name, value.name, variant.name, value.defaultVariant, defaultAttributes));
+                  }
+                });
+              } else {
+                winston.debug(sprintf("PROCESSING IMPORT VALUE => %s", JSON.stringify(value, null, 2)));
+                var css = [];
+                if(value.value1 && valueImport.property1) {
+                  css.push(generateCSS(valueImport.property1, value.value1));
+                }
+
+                if(value.value2 && valueImport.property2) {
+                  css.push(generateCSS(valueImport.property2, value.value2));
+                }
+                winston.debug(sprintf("GENERATED CSS FROM IMPORT => %s", JSON.stringify(css, null, 2)));
+                if(css.length > 0) {
+                  generatedData.push(generateRule(css, tagname, attribute.name, value.name, null, null, defaultAttributes));
+                }
+              }
+            });
+          }
+        });
+      }
+
+
     if('values' in attribute) {
       attribute.values.forEach(function(value) {
         if('css' in value) {
@@ -150,8 +193,30 @@ function Generator(jsonData, jsonConfig) {
     return generatedData;
   }
 
+  var findImport= function(importName) {
+    winston.debug(sprintf("SEARCHING FOR IMPORT => %s in %s", importName, JSON.stringify(imports, null, 2)));
+    if(!imports) {
+      return null;
+    }
+    var returnImport = null;
+    imports.some(function(_import) {
+      winston.debug(sprintf("LOCATED IMPORT %s", _import.name));
+      if(_import.name===importName) {
+        winston.debug("FOUND!!!");
+        returnImport= _import;
+        return true;
+      }
+    });
+
+    return returnImport;
+  }
+
   var  generateFix= function(fix) {
 
+  }
+
+  var generateCSS= function(attribute, value) {
+    return { 'property': attribute, 'value': value };
   }
 
   var generateRule = function(css, tagname, attributename, valuename, variantname, defaultVariant, defaultAttributes, responsive, before, after) {
