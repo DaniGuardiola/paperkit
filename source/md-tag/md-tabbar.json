@@ -5,21 +5,12 @@
     {
       "property": "display",
       "value": "flex"
-    }  
+    },
+    {
+      "property": "height",
+      "value": "48px"
+    }    
   ],
   "fixes": [
-    {
-      "after": "> md-tab",
-      "css": [
-        {
-          "property": "height",
-          "value": "48px"
-        },
-        {
-          "property": "text-transform",
-          "value": "uppercase"
-        }
-      ]
-    }
   ]
 }
