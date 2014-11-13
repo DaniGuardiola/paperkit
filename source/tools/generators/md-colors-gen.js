@@ -53,10 +53,7 @@ function waitFor(testFx, onReady, timeOutMillis) {
 var generateMDColor = function() {
   var colorPaletteDiv = document.querySelector('.color-palette');
   var colorGroups = colorPaletteDiv.querySelectorAll('.color-group');
-  var mdObject = { type: "tag", name: "md-color", values: [] };
-  var mdBlackColor = { name: "black", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "background-color", value: "#000000" } ] } ] };
-  var mdWhiteColor = { name: "white", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "background-color", value: "#ffffff" } ] } ] };
-  var mdTransparentColor = { name: "transparent", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "background-color", value: "transparent" } ] } ] };
+  var mdObject = { type: "import", name: "md-colors", values: [] };
 
   [].forEach.call(colorGroups, function(colorGroup) {
     var ul=colorGroup.querySelector('ul');
@@ -66,171 +63,49 @@ var generateMDColor = function() {
       if(li.classList.contains('main-color')) {
         var name = li.querySelector('span.name').innerText;
         var defaultVariant = li.querySelector('span.shade').innerText;
+
         colorGroupObject.name = name.toLowerCase().replace(" ","-");
-        defaultVariant = defaultVariant.indexOf("A")==0 ? defaultVariant : "c" + defaultVariant;
         colorGroupObject.defaultVariant = defaultVariant.toLowerCase();
       } else {
         var name = li.querySelector('span.shade').innerText;
         var color = li.querySelector('span.hex').innerText;
 
-        name = name.indexOf("A")==0 ? name : "c" + name;
+        var variantObject = { name: name.toLowerCase() };
+        variantObject.value1= color;
 
-        var variantObject = { css: [], name: name.toLowerCase() };
-        variantObject.css.push({ property: "background-color", value: color } );
         var style = window.getComputedStyle(li);
-        variantObject.css.push({ property: "color", value: style.color } );
+        variantObject.value2= style.color;
 
-        if(name != 1000) {
+        if(name != 'Black' && name != 'White') {
           colorGroupObject.variants.push(variantObject);
         }
       }
     });
 
-    mdObject.values.push(colorGroupObject);
+    if(colorGroupObject.name != "") {
+      mdObject.values.push(colorGroupObject);
+    }
   });
 
-  mdObject.values.push(mdBlackColor);
-  mdObject.values.push(mdWhiteColor);
-  mdObject.values.push(mdTransparentColor);
+  mdObject.values.push(
+    {
+      name: "black",
+      value1: "#000000",
+      value2: "#ffffff"
+    }
+  );
 
-  return mdObject;
-}
-
-var generateMDFontColor = function() {
-  var colorPaletteDiv = document.querySelector('.color-palette');
-  var colorGroups = colorPaletteDiv.querySelectorAll('.color-group');
-  var mdObject = { type: "tag", name: "md-font-color", values: [] };
-  var mdBlackColor = { name: "black", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "color", value: "#000000" } ] } ] };
-  var mdWhiteColor = { name: "white", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "color", value: "#ffffff" } ] } ] };
-  var mdTransparentColor = { name: "transparent", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "color", value: "transparent" } ] } ] };
-
-  [].forEach.call(colorGroups, function(colorGroup) {
-    var ul=colorGroup.querySelector('ul');
-    var colorGroupObject = { name: "", defaultVariant: "", variants: [] };
-
-    [].forEach.call(ul.querySelectorAll('li'), function(li) {
-      if(li.classList.contains('main-color')) {
-        var name = li.querySelector('span.name').innerText;
-        var defaultVariant = li.querySelector('span.shade').innerText;
-        colorGroupObject.name = name.toLowerCase().replace(" ","-");
-        defaultVariant = defaultVariant.indexOf("A")==0 ? defaultVariant : "c" + defaultVariant;
-        colorGroupObject.defaultVariant = defaultVariant.toLowerCase();
-      } else {
-        var name = li.querySelector('span.shade').innerText;
-        var color = li.querySelector('span.hex').innerText;
-
-        name = name.indexOf("A")==0 ? name : "c" + name;
-
-        var variantObject = { css: [], name: name.toLowerCase() };
-        variantObject.css.push({ property: "color", value: color } );
-
-        if(name != 1000) {
-          colorGroupObject.variants.push(variantObject);
-        }
-      }
-    });
-
-    mdObject.values.push(colorGroupObject);
-  });
-
-  mdObject.values.push(mdBlackColor);
-  mdObject.values.push(mdWhiteColor);
-  mdObject.values.push(mdTransparentColor);
-
-  return mdObject;
-}
-
-var generateMDDividerColor = function() {
-  var colorPaletteDiv = document.querySelector('.color-palette');
-  var colorGroups = colorPaletteDiv.querySelectorAll('.color-group');
-  var mdObject = { type: "attribute", name: "md-divider-color", values: [] };
-  var mdBlackColor = { name: "black", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "border-color", value: "#000000" } ] } ] };
-  var mdWhiteColor = { name: "white", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "border-color", value: "#ffffff" } ] } ] };
-  var mdTransparentColor = { name: "transparent", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "border-color", value: "transparent" } ] } ] };
-
-  [].forEach.call(colorGroups, function(colorGroup) {
-    var ul=colorGroup.querySelector('ul');
-    var colorGroupObject = { name: "", defaultVariant: "", variants: [] };
-
-    [].forEach.call(ul.querySelectorAll('li'), function(li) {
-      if(li.classList.contains('main-color')) {
-        var name = li.querySelector('span.name').innerText;
-        var defaultVariant = li.querySelector('span.shade').innerText;
-        colorGroupObject.name = name.toLowerCase().replace(" ","-");
-        defaultVariant = defaultVariant.indexOf("A")==0 ? defaultVariant : "c" + defaultVariant;
-        colorGroupObject.defaultVariant = defaultVariant.toLowerCase();
-      } else {
-        var name = li.querySelector('span.shade').innerText;
-        var color = li.querySelector('span.hex').innerText;
-
-        name = name.indexOf("A")==0 ? name : "c" + name;
-
-        var variantObject = { css: [], name: name.toLowerCase() };
-        variantObject.css.push({ property: "border-color", value: color } );
-
-        if(name != 1000) {
-          colorGroupObject.variants.push(variantObject);
-        }
-      }
-    });
-
-    mdObject.values.push(colorGroupObject);
-  });
-
-  mdObject.values.push(mdBlackColor);
-  mdObject.values.push(mdWhiteColor);
-  mdObject.values.push(mdTransparentColor);
-
-  return mdObject;
-}
-
-var generateMDIconColor = function() {
-  var colorPaletteDiv = document.querySelector('.color-palette');
-  var colorGroups = colorPaletteDiv.querySelectorAll('.color-group');
-  var mdObject = { type: "tag", name: "md-font-color", values: [] };
-  var mdBlackColor = { name: "black", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "fill", value: "#000000" } ] } ] };
-  var mdWhiteColor = { name: "white", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "fill", value: "#ffffff" } ] } ] };
-  var mdTransparentColor = { name: "transparent", defaultVariant: "c1", variants: [ { name: "c1", css: [ { property: "fill", value: "transparent" } ] } ] };
-
-  [].forEach.call(colorGroups, function(colorGroup) {
-    var ul=colorGroup.querySelector('ul');
-    var colorGroupObject = { name: "", defaultVariant: "", variants: [] };
-
-    [].forEach.call(ul.querySelectorAll('li'), function(li) {
-      if(li.classList.contains('main-color')) {
-        var name = li.querySelector('span.name').innerText;
-        var defaultVariant = li.querySelector('span.shade').innerText;
-        colorGroupObject.name = name.toLowerCase().replace(" ","-");
-        defaultVariant = defaultVariant.indexOf("A")==0 ? defaultVariant : "c" + defaultVariant;
-        colorGroupObject.defaultVariant = defaultVariant.toLowerCase();
-      } else {
-        var name = li.querySelector('span.shade').innerText;
-        var color = li.querySelector('span.hex').innerText;
-
-        name = name.indexOf("A")==0 ? name : "c" + name;
-
-        var variantObject = { css: [], name: name.toLowerCase() };
-        variantObject.css.push({ property: "fill", value: color } );
-
-        if(name != 1000) {
-          colorGroupObject.variants.push(variantObject);
-        }
-      }
-    });
-
-    mdObject.values.push(colorGroupObject);
-  });
-
-  mdObject.values.push(mdBlackColor);
-  mdObject.values.push(mdWhiteColor);
-  mdObject.values.push(mdTransparentColor);
-
+  mdObject.values.push(
+    {
+      name: "white",
+      value1: "#000000",
+      value2: "#ffffff"
+    }
+  );
   return mdObject;
 }
 
 var args = system.args;
-var term = args[1] ? args[1] : 'color';
-
 var url = "http://www.google.com/design/spec/style/color.html";
 var child = "";
 
@@ -238,16 +113,8 @@ page.open(url, function (status) {
   if(status !== "success" ) {
     console.log("ERROR!");
   } else {
-    if(term==='color') {
-      var jsonData=page.evaluate(generateMDColor);
-    } else if(term==='fontcolor') {
-      var jsonData=page.evaluate(generateMDFontColor);
-    } else if(term==='dividercolor') {
-      var jsonData=page.evaluate(generateMDDividerColor);
-    } else if(term==='iconcolor') {
-      var jsonData = page.evaluate(generateMDIconColor);
-    }
-  console.log(JSON.stringify(jsonData,null,2));
-  phantom.exit(0);
+    var jsonData=page.evaluate(generateMDColor);
+    console.log(JSON.stringify(jsonData,null,2));
+    phantom.exit(0);
   }
 });
