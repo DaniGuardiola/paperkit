@@ -21,7 +21,15 @@ module.exports = function(grunt) {
       }).join('\n');
 
       var config  = grunt.file.read(options.configfile);
-      var generator = new Generator(src, config);
+      var importsPath = options.imports;
+      var imports = [];
+
+      grunt.file.recurse(importsPath, function(abspath, rootdir, subdir, filename) {
+        var object = grunt.file.readJSON(abspath);
+        imports.push(object);
+      });
+
+      var generator = new Generator(src, config, imports);
       var generatedData = generator.generate();
       grunt.file.write(f.dest, generatedData);
       grunt.log.writeln('File "' + f.dest + '" created.');

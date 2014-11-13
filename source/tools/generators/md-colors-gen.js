@@ -98,8 +98,8 @@ var generateMDColor = function() {
   mdObject.values.push(
     {
       name: "white",
-      value1: "#000000",
-      value2: "#ffffff"
+      value1: "#ffffff",
+      value2: "#000000"
     }
   );
   return mdObject;
