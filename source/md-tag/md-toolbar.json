@@ -75,26 +75,6 @@
       ]
     }
   ],
-  "responsive": [
-    {
-      "target": ["watch","mobile"],
-      "css": [
-        {
-          "property": "padding",
-          "value": "4px"
-        }
-      ]
-    },
-    {
-      "target": ["tablet","desktop"],
-      "css": [
-        {
-          "property": "padding",
-          "value": "8px"
-        }
-      ]
-    }
-  ],
   "fixes": [
     {
       "after": " md-text",
@@ -143,40 +123,102 @@
       ]
     },
     {
-      "after": " md-row",
+      "after": " > md-row",
       "css": [
         {
           "property": "display",
           "value": "flex"
         },
         {
-          "property": "height",
-          "value": "48px"
-        },
-        {
           "property": "width",
           "value": "100%"
         }
-      ]
-    },    
-    {
-      "after": " * + md-row",
+      ],
       "responsive": [
         {
-          "target": ["watch","mobile"],
+          "target": ["watch", "mobile"],
+          "css": [
+            {
+              "property": "height",
+              "value": "56px"
+            }
+          ]
+        },
+        {
+          "target": ["tablet", "desktop"],
+          "css": [
+            {
+              "property": "height",
+              "value": "64px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "after": " > md-row > *:not(md-tabbar)",
+      "responsive": [
+        {
+          "target": ["watch", "mobile"],
+          "css": [
+            {
+              "property": "margin-top",
+              "value": "4px"
+            }
+          ]
+        },
+        {
+          "target": ["tablet", "desktop"],
           "css": [
             {
               "property": "margin-top",
               "value": "8px"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "after": " > md-row > *:not(md-tabbar):first-child",
+      "responsive": [
         {
-          "target": ["tablet","desktop"],
+          "target": ["watch", "mobile"],
           "css": [
             {
-              "property": "margin-top",
-              "value": "16px"
+              "property": "margin-left",
+              "value": "4px"
+            }
+          ]
+        },
+        {
+          "target": ["tablet", "desktop"],
+          "css": [
+            {
+              "property": "margin-left",
+              "value": "8px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "after": " > md-row > *:not(md-tabbar):last-child",
+      "responsive": [
+        {
+          "target": ["watch", "mobile"],
+          "css": [
+            {
+              "property": "margin-right",
+              "value": "4px"
+            }
+          ]
+        },
+        {
+          "target": ["tablet", "desktop"],
+          "css": [
+            {
+              "property": "margin-right",
+              "value": "8px"
             }
           ]
         }
