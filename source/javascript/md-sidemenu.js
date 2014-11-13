@@ -5,7 +5,6 @@ var initMDSidemenu = function(MDSidemenu) {
     MDSidemenu.materializer.greylayer.show();
     MDSidemenu.materializer.greylayer.addEventListener('click', function(){
       MDSidemenu.close();
-      MDSidemenu.materializer.greylayer.hide();
     });
   }
 
@@ -14,6 +13,7 @@ var initMDSidemenu = function(MDSidemenu) {
       MDSidemenu.style.left = "-" + MDSidemenu.style.width;
     };
     MDSidemenu.setAttribute("md-state", "closed");
+    MDSidemenu.materializer.greylayer.hide();
   }
 
   MDSidemenu.switch = function() {
