@@ -91,6 +91,10 @@
                 {
                   "property": "line-height",
                   "value": "16px"
+                },
+                {
+                  "property": "flex",
+                  "value": "1"
                 }
               ]
             },

@@ -9,7 +9,7 @@ var initMDMenu = function(MDMenu) {
     var parentRect= parent.getBoundingClientRect();
     var viewPort= getViewport();
     MDMenu.style.position="fixed";
-    MDMenu.style.top= parentRect.top + "px";
+    MDMenu.style.top= parentRect.bottom + "px";
     MDMenu.style.right=(viewPort.width - parentRect.right) + "px";
 
     // Animation
