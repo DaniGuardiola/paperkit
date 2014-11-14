@@ -1,6 +1,6 @@
 {
   "type": "tag",
-  "name": "md-tab-bar",
+  "name": "md-tabbar",
   "css": [
     {
       "property": "display",
@@ -17,6 +17,10 @@
     {
       "property": "height",
       "value": "48px"
+    },
+    {
+      "property": "position",
+      "value": "relative"
     }    
   ],
   "attributes": [
@@ -48,6 +52,31 @@
     }
   ],
   "fixes": [
+    {
+      "after": ">#selector",
+      "css": [
+        {
+          "property": "display",
+          "value": "block"
+        },
+        {
+          "property": "position",
+          "value": "absolute"
+        },
+        {
+          "property": "bottom",
+          "value": "0px"
+        },
+        {
+          "property": "background-color",
+          "value": "yellow"
+        },
+        {
+          "property": "height",
+          "value": "2px"
+        }
+      ]
+    },
     {
       "after": " > md-tab",
       "css": [
