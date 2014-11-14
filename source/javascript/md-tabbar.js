@@ -13,9 +13,9 @@ var initMDTabBar = function(MDTabBar) {
     var newLeft = tabNumber * MDTabBar.width;
     var newRight = (((tabs.length - tabNumber - 1) * MDTabBar.width));
     if(parseInt(MDTabBar.selector.style.left) < newLeft) {
-      MDTabBar.selector.style.transition = "right 0.5s ease-out, left 0.5s ease-out 0.2s";
+      MDTabBar.selector.style.transition = "right 0.25s ease-out, left 0.25s ease-out 0.12s";
     } else {
-      MDTabBar.selector.style.transition = "left 0.5s ease-out, right 0.5s ease-out 0.2s";
+      MDTabBar.selector.style.transition = "left 0.25s ease-out, right 0.25s ease-out 0.12s";
     }
     
     MDTabBar.selector.style.left =  newLeft + "px";
@@ -28,9 +28,13 @@ var initMDTabBar = function(MDTabBar) {
       MDTabBar.width = tab.getBoundingClientRect().width > MDTabBar.width ? tab.getBoundingClientRect().width : MDTabBar.width; 
     });
 
+    
     [].forEach.call(tabs, function(tab) {
-      tab.style.width = MDTabBar.width + "px";
+      tab.style.flex = "1";
     });
+    
+    MDTabBar.style.minWidth = (MDTabBar.width * tabs.length) + "px";
+
   }
 
   MDTabBar.injectSelector= function() {
