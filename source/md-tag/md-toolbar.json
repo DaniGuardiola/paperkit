@@ -77,6 +77,15 @@
   ],
   "fixes": [
     {
+      "after": ":not([md-position])",
+      "css": [
+        {
+          "property": "position",
+          "value": "relative"
+        }
+      ]
+    },
+    {
       "after": " md-text",
       "css": [
         {

@@ -93,9 +93,22 @@
                   "value": "16px"
                 },
                 {
+                  "property": "white-space",
+                  "value": "nowrap"
+                },
+                {
                   "property": "flex",
                   "value": "1"
                 }
+              ]
+            },
+            {
+              "after": "> md-tile> * + md-text",
+              "css": [
+                {
+                  "property": "margin-left",
+                  "value": "20px"
+                }                
               ]
             },
             {
@@ -133,7 +146,16 @@
                   "value": "12px 12px 12px 0px"
                 }
               ]
-            }             
+            },
+            {
+              "after": "> md-tile> * + md-icon:last-of-type",
+              "css": [
+                {
+                  "property": "margin",
+                  "value": "12px 0px 12px 12px"
+                }
+              ]
+            }
           ]
         },
         {
