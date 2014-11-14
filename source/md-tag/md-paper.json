@@ -9,6 +9,14 @@
     {
       "property": "max-width",
       "value": "100%"
+    },
+    {
+      "property": "background",
+      "value": "white"
+    },
+    {
+      "property": "overflow",
+      "value": "hidden"
     }
   ],
   "attributes": [
