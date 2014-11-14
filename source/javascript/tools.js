@@ -67,6 +67,8 @@ Materializer.prototype.addMDMethods= function(element) {
       this.greylayer = element;
     } else if(tag=="md-menu") {
       initMDMenu(element, this);
+    } else if(tag=="md-tabbar") {
+      initMDTabBar(element, this);
     }
   }
 };
