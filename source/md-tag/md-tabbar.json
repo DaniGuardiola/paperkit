@@ -40,10 +40,6 @@
             {
               "after": " md-tab",
               "css": [
-                {
-                  "property": "flex",
-                  "value": "1"
-                }
               ]
             }
           ]

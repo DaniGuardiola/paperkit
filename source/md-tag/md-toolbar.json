@@ -156,7 +156,7 @@
       ]
     },
     {
-      "after": " > md-row > *:not(md-tab-bar)",
+      "after": " > md-row > *:not(md-tabbar)",
       "responsive": [
         {
           "target": ["watch", "mobile"],
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "after": " > md-row > *:not(md-tab-bar):first-child",
+      "after": " > md-row > *:not(md-tabbar):first-child",
       "responsive": [
         {
           "target": ["watch", "mobile"],
@@ -202,7 +202,7 @@
       ]
     },
     {
-      "after": " > md-row > *:not(md-tab-bar):last-child",
+      "after": " > md-row > *:not(md-tabbar):last-child",
       "responsive": [
         {
           "target": ["watch", "mobile"],
@@ -225,7 +225,7 @@
       ]
     },
     {
-      "after": " > md-row > md-tab-bar",
+      "after": " > md-row > md-tabbar",
       "responsive": [
         {
           "target": ["watch", "mobile"],
