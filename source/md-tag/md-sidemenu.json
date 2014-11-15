@@ -95,6 +95,23 @@
           "value": "100%"
         }
       ]
+    },
+    {
+      "after": " md-list md-tile md-text",
+      "css": [
+        {
+          "property": "font-size",
+          "value": "14px"
+        },
+        {
+          "property": "line-height",
+          "value": "14px"
+        },
+        {
+          "property": "font-weight",
+          "value": "500"
+        }
+      ]
     }
   ],
   "responsive": [
