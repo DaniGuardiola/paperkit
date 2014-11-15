@@ -1,0 +1,30 @@
+{
+  "type": "tag",
+  "name": "md-page",
+  "css": [
+    {
+      "property": "display",
+      "value": "block"
+    },
+    {
+      "property": "width",
+      "value": "100%"
+    },
+    {
+      "property": "position",
+      "value": "absolute"
+    },
+    {
+      "property": "top",
+      "value": "0"
+    },
+    {
+      "property": "left",
+      "value": "0"
+    },
+    {
+      "property": "transition",
+      "value": "left 0.5s ease-out, right 0.5s ease-out"
+    }
+  ]
+}
