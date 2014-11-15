@@ -12,7 +12,7 @@
 		},
 		{
 			"property": "height",
-			"value": "auto"
+			"value": "100%"
 		},
 		{
 			"property": "width",
@@ -33,11 +33,16 @@
 		{
 			"property": "transition",
 			"value": "margin-top 0.25s"
+		},
+		{
+			"property": "overflow-x",
+			"value": "hidden"
 		}
 	],
 	"fixes": [
 	    {
 	      "before": "md-toolbar:not([md-height]) ~ ",
+	      "after": "> md-page",
 	      "responsive": [
 	        {
 	          "target": [
@@ -67,6 +72,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x1] ~ ",
+	      "after": "> md-page",
 	      "responsive": [
 	        {
 	          "target": [
@@ -96,6 +102,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x2] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -125,6 +132,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x3] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -154,6 +162,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x4] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -183,6 +192,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x5] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -212,6 +222,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x6] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -241,6 +252,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x7] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -270,6 +282,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x8] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -299,6 +312,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x9] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -328,6 +342,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x10] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -357,6 +372,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x11] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -386,6 +402,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x12] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -415,6 +432,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x13] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -444,6 +462,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x14] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [
@@ -473,6 +492,7 @@
 	    },
 	    {
 	      "before": "md-toolbar[md-height=x15] ~ ",
+	      "after": "> md-page",	      
 	      "responsive": [
 	        {
 	          "target": [

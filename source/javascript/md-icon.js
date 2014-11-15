@@ -9,7 +9,8 @@ var initMDIcon = function(MDIcon, materializer) {
     } else {
       if(attrname==='md-image' && newvalue!="") {
         var imgFileURI = newvalue;
-        var svgData = avatarSVG.replace('$$IMAGE$$', imgFileURI);
+        var imgName = this.makeId();
+        var svgData = avatarSVG.replace('$$IMAGE$$', imgFileURI).replace(/\$\$IMAGENAME\$\$/g, imgName);
         replaceSVG(svgData, this);
       } else if(attrname==='md-image') {
         var svgFileURI = materializer.path + "md-resources/icon/account_circle.svg";
@@ -20,11 +21,11 @@ var initMDIcon = function(MDIcon, materializer) {
 
 var avatarSVG= "<svg width=\"40\" height=\"40\">"+
           "<defs>" +
-            "<pattern id=\"image\" x=\"0\" y=\"0\" patternUnits=\"userSpaceOnUse\" height=\"40\" width=\"40\">"+
+            "<pattern id=\"$$IMAGENAME$$\" x=\"0\" y=\"0\" patternUnits=\"userSpaceOnUse\" height=\"40\" width=\"40\">"+
               "<image x=\"0\" y=\"0\" height=\"40\" width=\"40\" xlink:href=\"$$IMAGE$$\"></image>"+
             "</pattern>"+
           "</defs>"+
-          "<circle id=\"top\" cx=\"20\" cy=\"20\" r=\"20\" fill=\"url(#image)\"/>"+
+          "<circle id=\"top\" cx=\"20\" cy=\"20\" r=\"20\" fill=\"url(#$$IMAGENAME$$)\"/>"+
         "</svg>";
 
   var createSVG= function(svgData) {

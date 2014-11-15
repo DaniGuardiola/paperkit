@@ -1,17 +1,28 @@
 var initMDTabBar = function(MDTabBar) {
   MDTabBar.width = 0;
   MDTabBar.selector = null;
+  MDTabBar.tabs = MDTabBar.getElementsByTagName("md-tab");
+  MDTabBar.selected = 0;
 
   MDTabBar.clickHandler= function(e) {
     var el = e.currentTarget;
-    console.log(sprintf("CALLED CLICK HANDLER ON %s", (el.id ? el.id : el.tagName)));
+    if(el.tagName==="MD-TAB") {
+      var action = el.getAttribute("md-action") ? el.getAttribute('md-action') : 'none';
+
+      if(action==='none') {
+        /* Nothing to do */
+      } else if(action==='showpage') {
+        MDTabBar.showPage(el.index);
+      }
+
+      MDTabBar.moveIndicatorToTab(el.index);
+    }
   };
 
   MDTabBar.moveIndicatorToTab= function(tabNumber) {
     var tabBarRect = MDTabBar.getBoundingClientRect();
-    var tabs = MDTabBar.getElementsByTagName("md-tab");
     var newLeft = tabNumber * MDTabBar.width;
-    var newRight = (((tabs.length - tabNumber - 1) * MDTabBar.width));
+    var newRight = (((MDTabBar.tabs.length - tabNumber - 1) * MDTabBar.width));
     if(parseInt(MDTabBar.selector.style.left) < newLeft) {
       MDTabBar.selector.style.transition = "right 0.25s ease-out, left 0.25s ease-out 0.12s";
     } else {
@@ -22,19 +33,23 @@ var initMDTabBar = function(MDTabBar) {
     MDTabBar.selector.style.right =  newRight + "px";
   }
 
-  MDTabBar.setTabsEqualWidth= function() {
-    var tabs = MDTabBar.getElementsByTagName("md-tab");
-    [].forEach.call(tabs, function(tab) { 
-      MDTabBar.width = tab.getBoundingClientRect().width > MDTabBar.width ? tab.getBoundingClientRect().width : MDTabBar.width; 
+  MDTabBar.showPage=function(tabNumber) {
+    [].forEach.call(MDTabBar.tabs, function(tab, index) {
+      var page = document.querySelector('md-page#'+tab.getAttribute('md-page'));
+      var position = index - tabNumber;
+      page.style.left=(position * 100) + "%";
     });
+  }
 
-    
-    [].forEach.call(tabs, function(tab) {
+  MDTabBar.initTabs= function() {
+    [].forEach.call(MDTabBar.tabs, function(tab, index) { 
+      MDTabBar.width = tab.getBoundingClientRect().width > MDTabBar.width ? tab.getBoundingClientRect().width : MDTabBar.width;
       tab.style.flex = "1";
+      tab.index=index;
+      tab.addEventListener('click', MDTabBar.clickHandler);
     });
-    
-    MDTabBar.style.minWidth = (MDTabBar.width * tabs.length) + "px";
 
+    MDTabBar.style.minWidth = (MDTabBar.width * MDTabBar.tabs.length) + "px";
   }
 
   MDTabBar.injectSelector= function() {
@@ -51,7 +66,9 @@ var initMDTabBar = function(MDTabBar) {
 
   // Init tabs
   MDTabBar.injectSelector();
-  MDTabBar.setTabsEqualWidth();
+  MDTabBar.initTabs();
+  MDTabBar.showPage(0);
+  MDTabBar.moveIndicatorToTab(0);
 
   // INIT OBSERVER
   var observer = new MutationObserver(function(mutations) { 

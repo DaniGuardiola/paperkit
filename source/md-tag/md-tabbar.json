@@ -95,6 +95,14 @@
         {
           "property": "font-weight",
           "value": "500"
+        },
+        {
+          "property": "cursor",
+          "value": "pointer"
+        },
+        {
+          "property": "user-select",
+          "value": "none"
         }
       ],
       "responsive": [
