@@ -35,11 +35,11 @@
         },
         {
           "property": "padding-left",
-          "value": "16px"
+          "value": "4px"
         },
         {
           "property": "padding-right",
-          "value": "16px"
+          "value": "4px"
         },
         {
           "property": "position",
@@ -137,25 +137,7 @@
                   "value": "8px 16px 8px 0px"
                 }
               ]
-             },
-            {
-              "after": "> md-tile> md-icon:first-of-type",
-              "css": [
-                {
-                  "property": "margin",
-                  "value": "12px 12px 12px 0px"
-                }
-              ]
-            },
-            {
-              "after": "> md-tile> * + md-icon:last-of-type",
-              "css": [
-                {
-                  "property": "margin",
-                  "value": "12px 0px 12px 12px"
-                }
-              ]
-            }
+             }
           ]
         },
         {

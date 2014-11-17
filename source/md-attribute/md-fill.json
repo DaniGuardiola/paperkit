@@ -1,0 +1,21 @@
+{
+  "name": "md-fill",
+  "type": "attribute",
+  "imports": [
+    {
+      "name": "md-colors",
+      "property1": "fill"
+    }
+  ],
+  "values": [
+    {
+      "name": "transparent",
+      "css": [
+        {
+          "property": "fill",
+          "value": "transparent"
+        }
+      ]
+    }
+  ]
+}

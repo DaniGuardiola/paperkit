@@ -86,11 +86,27 @@
       ]
     },
     {
-      "after": " md-text",
+      "after": " * + md-text",
       "css": [
         {
           "property": "padding-top",
           "value": "12px"
+        },
+        {
+          "property": "font-size",
+          "value": "20px"
+        },
+        {
+          "property": "font-weight",
+          "value": "500"
+        },
+        {
+          "property": "white-space",
+          "value": "nowrap"
+        },
+        {
+          "property": "letter-spacing",
+          "value": "-.012em"
         }
       ],
       "responsive": [

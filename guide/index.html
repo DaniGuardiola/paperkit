@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Materializer</title>
+
+	<link rel="stylesheet" href="materializer/materializer.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<md-toolbar md-color="green" md-height="x3" md-position="absolute" md-font-color="white">
+		<md-row>
+			<md-icon-button md-action="custom: md.sidemenu.open">
+				<md-icon md-image="menu" md-fill="white"></md-icon>
+			</md-icon-button>
+			<md-text>Reference</md-text>
+		</md-row>
+	</md-toolbar>
+
+	<md-sidemenu md-shadow="shadow-1">
+	
+		<div id="logo">
+			<img src="logo.png">
+		</div>
+
+		<md-list md-action="link: md-link">
+			<md-tile md-link="page/start.html">
+				<md-icon md-separator="full" md-image="school"></md-icon>
+				<md-text>Getting started</md-text>
+			</md-tile>
+			<md-tile md-link="page/ref/reference.html">
+				<md-icon md-separator="full" md-image="list"></md-icon>
+				<md-text>Reference</md-text>
+			</md-tile>
+			<md-tile md-link="page/ref/tags.html">
+				<md-icon md-fill="grey" md-image="chevron_right"></md-icon>
+				<md-text md-font-color="grey">Tags</md-text>
+			</md-tile>
+			<md-tile md-link="page/ref/attr.html">
+				<md-icon md-fill="grey" md-image="chevron_right"></md-icon>
+				<md-text md-font-color="grey">Attributes</md-text>
+			</md-tile>
+			<md-tile md-link="page/ref/js.html">
+				<md-icon md-fill="grey" md-image="chevron_right"></md-icon>
+				<md-text md-font-color="grey">Methods</md-text>
+			</md-tile>
+			<md-tile md-link="page/mdcss/mdcss.html">
+				<md-icon md-separator="full" md-image="laptop"></md-icon>
+				<md-text>MDCSS</md-text>
+			</md-tile>
+			<md-tile md-link="page/mdcss/mdcss.html">
+				<md-icon md-separator="full" md-image="settings_applications"></md-icon>
+				<md-text>Tools</md-text>
+			</md-tile>
+		</md-list>
+		<md-list md-action="link: md-link" class="bottom">
+			<md-tile md-link="page/contrib.html">
+				<md-icon md-image="help"></md-icon>
+				<md-text>Help</md-text>
+			</md-tile>
+			<md-tile md-link="page/contrib.html">
+				<md-icon md-image="create"></md-icon>
+				<md-text>Contribute</md-text>
+			</md-tile>
+			<md-tile md-link="page/demos.html">
+				<md-icon md-image="pageview"></md-icon>
+				<md-text>Demos</md-text>
+			</md-tile>
+			<md-tile md-link="page/made.html">
+				<md-icon md-image="whatshot"></md-icon>
+				<md-text>Made with Materializer</md-text>
+			</md-tile>
+		</md-list>
+	</md-sidemenu>
+
+
+
+
+
+
+
+
+	<script src="materializer/materializer.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

@@ -39,5 +39,16 @@
         }
       ]
     }
+  ],
+  "fixes": [
+    {
+      "after": "[md-width]",
+      "css": [
+        {
+          "property": "max-width",
+          "value": "100%"
+        }
+      ]
+    }
   ]
 }
