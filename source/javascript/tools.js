@@ -69,7 +69,28 @@ Materializer.prototype.addMDMethods= function(element) {
       initMDMenu(element, this);
     } else if(tag=="md-tabbar") {
       initMDTabBar(element, this);
+    } else if(tag=="md-toolbar") {
+      initMDTabBar(element, this);
+      this.toolbar = element;
     }
+  }
+};
+
+Materializer.prototype.create= function(what,opt){
+  if (what === "snackbar") {
+    var newSnackbar = document.createElement('md-snackbar');
+    if (opt.text) {
+      var text = document.createElement('md-text');
+      text.innerText = opt.text;
+      newSnackbar.appendChild(text);
+    }
+    if (opt.position) {
+      newSnackbar.setAttribute('md-position',opt.position);
+    } else {
+      newSnackbar.setAttribute('md-position','bottom right');
+    }
+    document.body.appendChild(newSnackbar);
+    initMDSnackBar(newSnackbar);
   }
 };
 

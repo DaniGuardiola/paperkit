@@ -25,6 +25,10 @@
       "value": "#323232"
     },
     {
+      "property": "color",
+      "value": "#fff"
+    },
+    {
       "property": "position",
       "value": "fixed"
     }

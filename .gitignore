@@ -1,7 +1,7 @@
 upload.x
 node_modules
 bin/
-demo/
+guide/materializer/
 grunt-materializer/sources/
 script.sh
 tmp*.css
