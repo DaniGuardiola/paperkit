@@ -44,6 +44,9 @@ var initMDTabBar = function(MDTabBar) {
   MDTabBar.initTabs= function() {
     [].forEach.call(MDTabBar.tabs, function(tab, index) { 
       MDTabBar.width = tab.getBoundingClientRect().width > MDTabBar.width ? tab.getBoundingClientRect().width : MDTabBar.width;
+    });
+
+    [].forEach.call(MDTabBar.tabs, function(tab, index) { 
       tab.style.flex = "1";
       tab.index=index;
       tab.addEventListener('click', MDTabBar.clickHandler);
