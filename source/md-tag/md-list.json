@@ -34,14 +34,6 @@
           "value": "100%"
         },
         {
-          "property": "padding-left",
-          "value": "4px"
-        },
-        {
-          "property": "padding-right",
-          "value": "4px"
-        },
-        {
           "property": "position",
           "value": "relative"
         },
@@ -134,10 +126,19 @@
               "css": [
                 {
                   "property": "margin",
-                  "value": "8px 16px 8px 0px"
+                  "value": "8px 0px 8px 16px"
                 }
               ]
-             }
+            },
+            {
+              "after": "> md-tile> md-icon-button:last-of-type",
+              "css": [
+                {
+                  "property": "margin-right",
+                  "value": "4px"
+                }
+              ]
+            }
           ]
         },
         {
