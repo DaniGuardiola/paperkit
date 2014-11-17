@@ -1,0 +1,14 @@
+{
+  "type": "tag",
+  "name": "md-cardgrid",
+  "css": [
+    {
+      "property": "display",
+      "value": "flex"
+    },
+    {
+      "property": "flex-wrap",
+      "value": "wrap"
+    }
+  ]
+}
