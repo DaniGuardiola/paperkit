@@ -17,6 +17,14 @@
 		{
 			"property": "cursor",
 			"value": "pointer"
+		},
+		{
+			"property": "border-radius",
+			"value": "50%"
+		},
+		{
+			"property": "transition",
+			"value": "background-color 0.05s"
 		}
 	]
 }

@@ -24,7 +24,7 @@
     },
     {
       "property": "transition",
-      "value": "left 0.5s ease-out, right 0.5s ease-out"
+      "value": "left 0.5s ease-in-out, right 0.5s ease-in-out"
     }
   ]
 }

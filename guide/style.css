@@ -1,0 +1,14 @@
+#logo {
+	width: 100%;
+	height: auto
+}
+
+#logo img {
+	width: 100%;
+}
+
+md-list.bottom {
+	position: absolute;
+	bottom: 0;
+	border-top: 1px rgba(0,0,0,0.12) solid;
+}
