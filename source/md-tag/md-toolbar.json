@@ -1,12 +1,6 @@
 {
   "type": "tag",
   "name": "md-toolbar",
-  "defaults": [
-    {
-      "name": "md-height",
-      "values": [ "x1" ]
-    }
-  ],
   "css": [
     {
       "property": "display",
@@ -23,6 +17,14 @@
     {
       "property": "width",
       "value": "100%"
+    },
+    {
+      "property": "height",
+      "value": "auto"
+    },
+    {
+      "property": "min-height",
+      "value": "64px"
     },
     {
       "property": "top",
@@ -76,15 +78,6 @@
     }
   ],
   "fixes": [
-    {
-      "after": ":not([md-position])",
-      "css": [
-        {
-          "property": "position",
-          "value": "relative"
-        }
-      ]
-    },
     {
       "after": " * + md-text",
       "css": [
