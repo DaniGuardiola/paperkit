@@ -70,7 +70,7 @@ Materializer.prototype.addMDMethods= function(element) {
     } else if(tag=="md-tabbar") {
       initMDTabBar(element, this);
     } else if(tag=="md-toolbar") {
-      initMDTabBar(element, this);
+      initMDToolBar(element, this);
       this.toolbar = element;
     }
   }
