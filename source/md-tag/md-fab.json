@@ -1,0 +1,46 @@
+{
+	"type": "tag",
+	"name": "md-fab",
+	"css": [
+		{
+			"property": "border-radius",
+			"value": "50%"
+		},
+		{
+			"property": "height",
+			"value": "56px"
+		},
+		{
+			"property": "width",
+			"value": "56px"
+		},
+		{
+			"property": "padding",
+			"value": "4px"
+		},
+		{
+			"property": "position",
+			"value": "fixed"
+		},
+		{
+			"property": "display",
+			"value": "block"
+		},
+		{
+			"property": "bottom",
+			"value": "16px"
+		},
+		{
+			"property": "right",
+			"value": "16px"
+		},
+		{
+			"property": "z-index",
+			"value": "300"
+		},
+		{
+			"property": "cursor",
+			"value": "pointer"
+		}
+	]
+}

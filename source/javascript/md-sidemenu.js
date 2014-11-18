@@ -1,5 +1,8 @@
 var initMDSidemenu = function(MDSidemenu) {
   MDSidemenu.open = function() {
+    if (MDSidemenu.materializer.toolbar.getAttribute('md-drag') === "drag") {
+      MDSidemenu.materializer.toolbar.setAttribute('md-drag','no-drag');
+    }
     MDSidemenu.style.left = "";
     MDSidemenu.setAttribute("md-state", "open");
     MDSidemenu.materializer.greylayer.show();
@@ -14,6 +17,9 @@ var initMDSidemenu = function(MDSidemenu) {
     };
     MDSidemenu.setAttribute("md-state", "closed");
     MDSidemenu.materializer.greylayer.hide();
+    if (MDSidemenu.materializer.toolbar.getAttribute('md-drag') === "no-drag") {
+      MDSidemenu.materializer.toolbar.setAttribute('md-drag','drag');
+    }
   }
 
   MDSidemenu.switch = function() {

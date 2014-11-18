@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Materializer</title>
+ 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width" />
 
 	<link rel="stylesheet" href="materializer/materializer.css">
 	<link rel="stylesheet" href="style.css">
@@ -19,9 +20,7 @@
 
 	<md-sidemenu md-shadow="shadow-1">
 	
-		<div id="logo">
-			<img src="logo.png">
-		</div>
+		<img id="logo" src="logo.png">
 
 		<md-list md-action="link: md-link">
 			<md-tile md-link="page/start.html">
@@ -53,7 +52,7 @@
 				<md-text>Tools</md-text>
 			</md-tile>
 		</md-list>
-		<md-list md-action="link: md-link" class="bottom">
+		<md-list md-bottom md-color="white" md-action="link: md-link" class="bottom">
 			<md-tile md-link="page/contrib.html">
 				<md-icon md-image="help"></md-icon>
 				<md-text>Help</md-text>
