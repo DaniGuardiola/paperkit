@@ -35,10 +35,15 @@ var initMDButton = function(MDButton) {
       case 'snackbar-dismiss':
         snackbarDismiss(el);
         break;
+      case 'chrome-app-close':
+        chrome.app.window.current().close();
+        break;
       default:
         if(action.indexOf('custom:') != -1) {
           var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
           this.callFunction(f, el);
+        } else if (action = "chrome-app-close") {
+          chrome.app.window.current().close();
         }
         break;
     }   
