@@ -10,7 +10,7 @@
   "css": [
     {
       "property": "display",
-      "value": "block"
+      "value": "flex"
     },
     {
       "property": "height",
@@ -42,7 +42,15 @@
     },
     {
       "property": "background",
-      "value": "white"
+      "value": "#fff"
+    },
+    {
+      "property": "flex-direction",
+      "value": "column"
+    },
+    {
+      "property": "will-change",
+      "value": "left"
     }
   ],
   "attributes": [
@@ -125,6 +133,21 @@
         {
           "property": "width",
           "value": "256px"
+        }
+      ]
+    }
+  ],
+  "fixes": [
+    {
+      "after": "> md-list:not([md-bottom])",
+      "css": [
+        {
+          "property": "flex",
+          "value": "1"
+        },
+        {
+          "property": "overflow-y",
+          "value": "auto"
         }
       ]
     }
