@@ -122,7 +122,7 @@
               ]
             },
             {
-              "after": "> md-tile> md-avatar:first-of-type",
+              "after": "> md-tile> md-avatar:first-of-type, md-list> md-tile> md-icon:first-of-type",
               "css": [
                 {
                   "property": "margin",
