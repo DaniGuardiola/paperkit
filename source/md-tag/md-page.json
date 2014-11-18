@@ -3,11 +3,19 @@
   "name": "md-page",
   "css": [
     {
+      "property": "overflow-y",
+      "value": "auto"
+    },
+    {
       "property": "display",
       "value": "block"
     },
     {
       "property": "width",
+      "value": "100%"
+    },
+    {
+      "property": "height",
       "value": "100%"
     },
     {

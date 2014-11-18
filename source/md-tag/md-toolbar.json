@@ -23,10 +23,6 @@
       "value": "auto"
     },
     {
-      "property": "min-height",
-      "value": "64px"
-    },
-    {
       "property": "top",
       "value": "0"
     },
@@ -78,6 +74,24 @@
     }
   ],
   "fixes": [
+    {
+      "after": "[md-drag=drag]",
+      "css": [
+        {
+          "property": "-webkit-app-region",
+          "value": "drag"
+        }
+      ]
+    },
+    {
+      "after": "[md-drag=drag] *:not(md-space):not(md-row)",
+      "css": [
+        {
+          "property": "-webkit-app-region",
+          "value": "no-drag"
+        }
+      ]
+    },
     {
       "after": " * + md-text",
       "css": [
@@ -132,7 +146,7 @@
         },
         {
           "property": "height",
-          "value": "48px"
+          "value": "auto"
         },
         {
           "property": "flex",
@@ -150,37 +164,25 @@
         {
           "property": "width",
           "value": "100%"
-        }
-      ],
-      "responsive": [
-        {
-          "target": ["watch", "mobile"],
-          "css": [
-            {
-              "property": "height",
-              "value": "56px"
-            }
-          ]
         },
         {
-          "target": ["tablet", "desktop"],
-          "css": [
-            {
-              "property": "height",
-              "value": "64px"
-            }
-          ]
+          "property": "height",
+          "value": "auto"
         }
       ]
     },
     {
-      "after": " > md-row > *:not(md-tabbar)",
+      "after": " > md-row > *:not(md-tabbar):not(md-space)",
       "responsive": [
         {
           "target": ["watch", "mobile"],
           "css": [
             {
               "property": "margin-top",
+              "value": "4px"
+            },
+            {
+              "property": "margin-bottom",
               "value": "4px"
             }
           ]
@@ -190,6 +192,10 @@
           "css": [
             {
               "property": "margin-top",
+              "value": "8px"
+            },
+            {
+              "property": "margin-bottom",
               "value": "8px"
             }
           ]
@@ -237,29 +243,6 @@
             {
               "property": "margin-right",
               "value": "8px"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "after": " > md-row > md-tabbar",
-      "responsive": [
-        {
-          "target": ["watch", "mobile"],
-          "css": [
-            {
-              "property": "margin-top",
-              "value": "8px"
-            }
-          ]
-        },
-        {
-          "target": ["tablet", "desktop"],
-          "css": [
-            {
-              "property": "margin-top",
-              "value": "16px"
             }
           ]
         }

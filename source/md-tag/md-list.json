@@ -7,12 +7,8 @@
       "value": "block"
     },
     {
-      "property": "margin-top",
-      "value": "8px"
-    },
-    {
-      "property": "margin-bottom",
-      "value": "8px"
+      "property": "padding",
+      "value": "8px 0"
     }
   ],
   "defaults": [
