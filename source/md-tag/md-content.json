@@ -35,7 +35,7 @@
 			"value": "margin-top 0.25s"
 		},
 		{
-			"property": "overflow-x",
+			"property": "overflow",
 			"value": "hidden"
 		}
 	]
