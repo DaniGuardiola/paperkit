@@ -10,5 +10,24 @@
       "property": "flex-wrap",
       "value": "wrap"
     }
+  ],
+  "fixes": [
+    {
+      "after": "> md-card",
+      "css": [
+        {
+          "property": "margin",
+          "value": "4px"
+        },
+        {
+          "property":"border-radius",
+          "value": "2px"
+        },
+        {
+          "property": "flex",
+          "value": "1 0"
+        }
+      ]
+    }
   ]
 }
