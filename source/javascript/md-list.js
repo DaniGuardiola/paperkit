@@ -24,6 +24,15 @@ var initMDList = function(MDList) {
           } else if(action.indexOf('link:') != -1) {
             var f = action.substring(action.indexOf('link:') + 'link:'.length).trim();
             linkRedirect(f, el);
+          } else if(action.indexOf('ajax:') != -1) {
+            var f = action.substring(action.indexOf('ajax:') + 'link:'.length).trim();
+            var xhr = new XMLHttpRequest;
+            xhr.open("GET", el.getAttribute('md-ajax'));
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            xhr.addEventListener("load",function(){
+              document.querySelector(f).innerHTML = xhr.responseText;
+            });
+            xhr.send();
           }
           break;
       }   

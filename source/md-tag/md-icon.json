@@ -12,14 +12,14 @@
     },
     {
       "property": "width",
-      "value": "24px"
+      "value": "48px"
     },
     {
       "property": "height",
-      "value": "24px"
+      "value": "48px"
     },
     {
-      "property": "margin",
+      "property": "padding",
       "value": "12px"
     }
   ],
@@ -33,11 +33,11 @@
         },
         {
           "property": "top",
-          "value": "0"
+          "value": "12px"
         },
         {
           "property": "left",
-          "value": "0"
+          "value": "12px"
         },
         {
           "property": "opacity",
@@ -49,11 +49,11 @@
         },
         {
           "property": "height",
-          "value": "100%"
+          "value": "24px"
         },
         {
           "property": "width",
-          "value": "100%"
+          "value": "24px"
         }
       ]
     }
