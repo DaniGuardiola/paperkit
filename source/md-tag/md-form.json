@@ -1,0 +1,88 @@
+{
+	"type": "tag",
+	"name": "md-form",
+	"css": [
+		{
+			"property": "width",
+			"value": "100%"
+		},
+		{
+			"property": "height",
+			"value": "auto"
+		},
+		{
+			"property": "display",
+			"value": "flex"
+		},
+		{
+			"property": "flex-wrap",
+			"value": "wrap"
+		},
+		{
+			"property": "display",
+			"value": "flex"
+		},
+		{
+			"property": "align-content",
+			"value": "flex-start"
+		}
+	],
+	"fixes": [
+		{
+			"after": "> *",
+			"css": [
+				{
+					"property": "flex",
+					"value": "1 0"
+				},
+				{
+					"property": "max-width",
+					"value": "100%"
+				},
+				{
+					"property": "display",
+					"value": "flex"
+				},
+				{
+					"property": "height",
+					"value": "auto"
+				},
+				{
+					"property": "width",
+					"value": "auto"
+				}
+			]
+		},
+		{
+			"after": "> md-formtile:not([md-full]) > md-icon:first-of-type",
+			"css": [
+				{
+					"property": "margin-left",
+					"value": "4px"
+				},
+				{
+					"property": "margin-right",
+					"value": "4px"
+				}
+			]
+		},
+		{
+			"after": "> md-formtile > input:first-of-type",
+			"css": [
+				{
+					"property": "margin-left",
+					"value": "16px"
+				}
+			]
+		},
+		{
+			"after": "> md-formtile > input:last-child",
+			"css": [
+				{
+					"property": "margin-right",
+					"value": "16px"
+				}
+			]
+		}
+	]
+}

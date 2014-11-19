@@ -49,7 +49,7 @@ Materializer.prototype.addMDMethods= function(element) {
 
     if(tag=="md-snackbar") {
       initMDSnackBar(element, this);
-    } else if(tag=="md-button") {
+    } else if(tag=="md-button" || tag=="md-fab") {
       initMDButton(element, this);
     } else if(tag=="md-input-submit") {
       initMDInputSubmit(element, this);
