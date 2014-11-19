@@ -5,6 +5,8 @@ var Materializer= function() {
   /* Elements */
   this.greylayer = null;
   this.sidemenu = null;
+
+  this.observer = null;
 }
 
 Materializer.prototype.initListener= function(func) {
@@ -35,6 +37,11 @@ Materializer.prototype.init= function() {
     }    
   }
 
+  // Mutation observer initializing...
+  this.observer = new MutationObserver(this.observeMDElements);
+  var config = { attributes: false, childList: true, characterData: false, subtree: true };
+  this.observer.observe(document.body, config);
+
   this.initFuncs.forEach(function(initFunc){
     initFunc();
   });
@@ -44,6 +51,10 @@ Materializer.prototype.addMDMethods= function(element) {
   var tag = element.tagName.toLowerCase();
 
   if(tag.indexOf("md-") >= 0) {
+    if(element.alreadyInitialized) {
+      console.log("ELEMENT " + element.tagName + " ALREADY INITIALIZED");
+      return;
+    }
     // INCICIALIZACION DE FUNCIONES GENERALES
     initGlobalMDFunctions(element, this);
 
@@ -93,6 +104,21 @@ Materializer.prototype.create= function(what,opt){
     initMDSnackBar(newSnackbar);
   }
 };
+
+Materializer.prototype.observeMDElements = function(mutations) {
+  var mat = this;
+
+  mutations.forEach(function(mutation) {
+    if(mutation.type === 'childList') {
+      [].forEach.call(mutation.addedNodes, function(node) {
+        if(node.tagName.indexOf("MD-") === 0) {
+          console.log("ADDED NODE (%s), INITIALIZING.", node.tagName);
+          Materializer.prototype.addMDMethods(node);
+        }
+      });
+    }
+  });
+}
 
 
 var properties = {
