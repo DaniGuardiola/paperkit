@@ -31,6 +31,10 @@
     {
       "property": "position",
       "value": "fixed"
+    },
+    {
+      "property": "transition",
+      "value": "bottom 0.25s, opacity 0.25s"
     }
   ],
   "attributes": [
@@ -92,32 +96,40 @@
               "value": "0"
             }
           ],
-          "responsive": [
-            {
-              "target": [ "mobile" ],
-              "css": [
-                {
-                  "property": "top",
-                  "value": "0px"
-                },
-                {
-                  "property": "bottom",
-                  "value": "auto"
-                }
-              ]
-            }
-          ],
           "fixes": [
             {
               "after": "[md-notanimated]",
               "css": [
                 { 
                   "property": "top",
-                  "value": "24px"
+                  "value": "0px"
+                },
+                {
+                  "property": "bottom",
+                  "value": "auto"
                 },
                 {
                   "property": "opacity",
                   "value": "1"
+                }
+              ],
+              "responsive": [
+                {
+                  "target": [ "desktop", "tablet" ],
+                  "css": [
+                    {
+                      "property": "top",
+                      "value": "24px"
+                    },
+                    {
+                      "property": "bottom",
+                      "value": "auto"
+                    },
+                    {
+                      "property":"opacity",
+                      "value": "1"
+                    }
+                  ]
                 }
               ]
             }
@@ -139,9 +151,9 @@
               "value": "0"
             }
           ],
-          "responsive": [
+          "fixes": [
             {
-              "target": [ "mobile" ],
+              "after": "[md-notanimated]",
               "css": [
                 {
                   "property": "bottom",
@@ -150,21 +162,29 @@
                 {
                   "property": "top",
                   "value": "auto"
-                }
-              ]
-            }
-          ],
-          "fixes": [
-            {
-              "after": "[md-notanimated]",
-              "css": [
-                {
-                  "property": "bottom",
-                  "value": "24px"
                 },
                 {
                   "property": "opacity",
                   "value": "1"
+                }
+              ],
+              "responsive": [
+                {
+                  "target": [ "desktop", "tablet" ],
+                  "css": [
+                    {
+                      "property": "bottom",
+                      "value": "24px"
+                    },
+                    {
+                      "property": "top",
+                      "value": "auto"
+                    },
+                    {
+                      "property": "opacity",
+                      "value": "1"
+                    }
+                  ]
                 }
               ]
             }            

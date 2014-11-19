@@ -25,6 +25,17 @@
                   "property": "property1",
                   "value": "csslabel2"
                 }
+              ],
+              "responsive": [
+                {
+                  "target": ["desktop"],
+                  "css": [
+                    {
+                      "property": "property1",
+                      "value": "csslabel3"
+                    }
+                  ]
+                }
               ]
             }
           ]
