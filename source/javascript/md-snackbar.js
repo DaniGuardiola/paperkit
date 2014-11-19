@@ -6,47 +6,35 @@ var initMDSnackBar = function(MDSnackBar) {
       if(position.split(' ').indexOf('bottom') != -1) {    
           this.style.transitionProperty='bottom, opacity';
           this.style.transitionDuration="0.25s, 0.5s";      
-          this.style.bottom="24px";
-          this.style.opacity="1";
       } else {
           this.style.transitionProperty='top, opacity';
           this.style.transitionDuration="0.25s, 0.5s";      
-          this.style.top="24px";
-          this.style.opacity="1";      
       }
+      this.setAttribute("md-notanimated","");
     }  
   };  
 
   MDSnackBar.animationOut=function() {
     var position = this.getAttribute('md-position');
 
-    if(!this.hasAttribute('md-notanimated')) {
-      if(position.split(' ').indexOf('bottom') != -1) {    
-          this.style.transitionProperty='opacity';
-          this.style.transitionDuration="0.5s";      
-          this.style.opacity="0";
-      } else {
-          this.style.transitionProperty='opacity';
-          this.style.transitionDuration="0.5s";      
-          this.style.opacity="0";      
-      }
+    if(position.split(' ').indexOf('bottom') != -1) {    
+        this.style.transitionProperty='opacity';
+        this.style.transitionDuration="0.5s";
+        this.style.opacity="0";     
+    } else {
+        this.style.transitionProperty='opacity';
+        this.style.transitionDuration="0.5s";
+        this.style.opacity="0";
     }
   };
 
   MDSnackBar.animationEnd = function() {
     var position = this.getAttribute('md-position');
 
-    if(!this.hasAttribute('md-notanimated')) {
-      if(position.split(' ').indexOf('bottom') != -1) {    
-          this.style.transitionProperty='';
-          this.style.transitionDuration="";      
-          this.style.bottom="-24px";
-      } else {
-          this.style.transitionProperty='';
-          this.style.transitionDuration="";      
-          this.style.top="-24px";      
-      }
-    }
+    this.style.transitionProperty='';
+    this.style.transitionDuration="";      
+    this.style.opacity="";
+    this.removeAttribute("md-notanimated");
 
     this.removeEventListener(transitionend, this.animationEnd);
   };
@@ -67,5 +55,4 @@ var initMDSnackBar = function(MDSnackBar) {
       this.attributeChangedCallback('md-action', '', action);
     }
   };
-
 }

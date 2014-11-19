@@ -169,6 +169,12 @@ function Generator(jsonData, jsonConfig, imports) {
             if('css' in fix) {
               generatedData.push(generateRule(fix.css, tagname, attribute.name, value.name, null, null, defaultAttributes, null, fix.before, fix.after));
             }
+
+            if('responsive' in fix) {
+              fix.responsive.forEach(function(responsive) {
+                generateMedia(responsive, tagname, attribute.name, value.name, null, defaultAttributes, fix.before, fix.after);
+              });
+            }            
           });
         }
 
@@ -259,7 +265,7 @@ function Generator(jsonData, jsonConfig, imports) {
     return rule;
   };
 
-  var generateMedia=function(responsive, tagname, attributename, valuename, variantname, defaultAttributes) {
+  var generateMedia=function(responsive, tagname, attributename, valuename, variantname, defaultAttributes, before, after) {
     var mediaquery = getMediaQuery(responsive.target).join(",\n");  
     var media = getMedia(mediaquery);
     winston.debug(sprintf("FOUND MEDIA => %s", media));
@@ -271,7 +277,7 @@ function Generator(jsonData, jsonConfig, imports) {
       generatedMedias.push(media);
     }
 
-    var rule = generateRule(responsive.css, tagname, attributename, valuename, variantname, false, defaultAttributes, true);
+    var rule = generateRule(responsive.css, tagname, attributename, valuename, variantname, false, defaultAttributes, true, before, after);
     media.rules.push(rule);
   };
 
