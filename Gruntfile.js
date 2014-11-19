@@ -76,6 +76,12 @@ module.exports = function(grunt) {
             return newDest;
           }
         },
+        moreicon: {
+          expand: true,
+          src: 'source/md-resources/more-icons/**/*.svg',
+          dest: 'bin/md-resources/icon/',
+          flatten: true
+        },
         resources: {
           expand: true,
           src: 'source/md-resources/font/',

@@ -118,6 +118,15 @@
               ]
             },
             {
+              "after": "> md-tile> md-icon:first-of-type",
+              "css": [
+                {
+                  "property": "margin-left",
+                  "value": "4px"
+                }
+              ]
+            },
+            {
               "after": "> md-tile> md-avatar:first-of-type",
               "css": [
                 {

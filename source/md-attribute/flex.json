@@ -1,0 +1,70 @@
+{
+	"type": "attribute",
+	"name": "flex",
+	"css": [
+		{
+			"property": "flex-grow",
+			"value": "1"
+		},
+		{
+			"property": "flex-shrink",
+			"value": "0"
+		}
+	],
+	"values": [
+		{
+			"name": "grow-1",
+			"css": [
+				{
+					"property": "flex-grow",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"name": "grow-0",
+			"css": [
+				{
+					"property": "flex-grow",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"name": "shrink-1",
+			"css": [
+				{
+					"property": "flex-shrink",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"name": "shrink-0",
+			"css": [
+				{
+					"property": "flex-shrink",
+					"value": "0"
+				}
+			]
+		},
+		{
+			"name": "grow-shrink",
+			"css": [
+				{
+					"property": "flex-shrink",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"name": "none",
+			"css": [
+				{
+					"property": "flex",
+					"value": "0 0"
+				}
+			]
+		}
+	]
+}
