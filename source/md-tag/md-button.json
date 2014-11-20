@@ -4,7 +4,7 @@
   "css": [
     {
       "property": "display",
-      "value": "table-cell"
+      "value": "block"
     },
     {
       "property": "min-width",
@@ -20,7 +20,7 @@
     },
     {
       "property": "padding",
-      "value": "0 24px 0 24px"
+      "value": "17px 24px"
     },
     {
       "property": "outline",
@@ -29,10 +29,6 @@
     {
       "property": "text-align",
       "value": "center"
-    },
-    {
-      "property": "vertical-align",
-      "value": "middle"
     },
     {
       "property": "cursor",

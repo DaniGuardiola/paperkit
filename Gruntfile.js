@@ -82,6 +82,12 @@ module.exports = function(grunt) {
           dest: 'bin/md-resources/icon/',
           flatten: true
         },
+        other: {
+          expand: true,
+          src: 'source/md-resources/other/**/*',
+          dest: 'bin/md-resources/other/',
+          flatten: true
+        },
         resources: {
           expand: true,
           src: 'source/md-resources/font/',

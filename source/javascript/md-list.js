@@ -31,6 +31,7 @@ var initMDList = function(MDList) {
             xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
             xhr.addEventListener("load",function(){
               document.querySelector(f).innerHTML = xhr.responseText;
+              MDList.materializer.justInCase('reload');
             });
             xhr.send();
           }
