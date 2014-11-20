@@ -1,73 +1,55 @@
 {
 	"type": "tag",
-	"name": "md-form",
-	"css": [
+	"name": "form",
+	"attributes": [
 		{
-			"property": "width",
-			"value": "100%"
-		},
-		{
-			"property": "height",
-			"value": "auto"
-		},
-		{
-			"property": "display",
-			"value": "flex"
-		},
-		{
-			"property": "flex-wrap",
-			"value": "wrap"
-		},
-		{
-			"property": "display",
-			"value": "flex"
-		},
-		{
-			"property": "align-content",
-			"value": "flex-start"
-		}
-	],
-	"fixes": [
-		{
-			"after": "> *",
+			"type": "attribute",
+			"name": "md-layout",
 			"css": [
 				{
-					"property": "flex",
-					"value": "1 0"
-				},
-				{
-					"property": "max-width",
+					"property": "width",
 					"value": "100%"
-				},
-				{
-					"property": "display",
-					"value": "flex"
 				},
 				{
 					"property": "height",
 					"value": "auto"
 				},
+			    {
+			      "property": "padding",
+			      "value": "8px 0"
+			    }
+			]
+		}
+	],
+	"fixes": [
+		{
+			"after": "[md-layout]> div",
+			"css": [
 				{
-					"property": "width",
+					"property": "max-width",
+					"value": "100%"
+				},
+				{
+					"property": "height",
 					"value": "auto"
 				}
 			]
 		},
 		{
-			"after": "> md-formtile:not([md-full]) > md-icon:first-of-type",
+			"after": "[md-layout]> div > *",
 			"css": [
 				{
-					"property": "margin-left",
-					"value": "4px"
+					"property": "margin-right",
+					"value": "16px"
 				},
 				{
-					"property": "margin-right",
-					"value": "4px"
+					"property": "margin-left",
+					"value": "16px"
 				}
 			]
 		},
 		{
-			"after": "> md-formtile > input:first-of-type",
+			"after": "[md-layout]> div > input:first-child",
 			"css": [
 				{
 					"property": "margin-left",
@@ -76,10 +58,103 @@
 			]
 		},
 		{
-			"after": "> md-formtile > input:last-child",
+			"after": "[md-layout]> div > input:last-child",
 			"css": [
 				{
 					"property": "margin-right",
+					"value": "16px"
+				}
+			]
+		},
+		{
+			"after": "[md-layout]> div > *:first-child",
+			"css": [
+				{
+					"property": "margin-left",
+					"value": "4px"
+				}
+			]
+		},
+		{
+			"after": "[md-layout]> div > md-icon:first-child",
+			"css": [
+				{
+					"property": "margin-right",
+					"value": "0"
+				}
+			]
+		},
+		{
+			"after": "[md-layout]> div > *:last-child",
+			"css": [
+				{
+					"property": "margin-right",
+					"value": "4px"
+				}
+			]
+		},
+		{
+			"after": "[md-layout]> div> span",
+			"css": [
+				{
+					"property": "margin-right",
+					"value": "4px"
+				}
+			]
+		},
+		{
+			"after": "[md-layout]> div> span + *",
+			"css": [
+				{
+					"property": "margin-left",
+					"value": "4px"
+				}
+			]
+		},
+		{
+			"after": "[md-layout]> div",
+			"css": [
+				{
+					"property": "display",
+					"value": "flex"
+				}
+			]
+		},
+		{
+			"after": "[md-layout]> div > md-icon + input",
+			"css": [
+				{
+					"property": "margin-left",
+					"value": "20px"
+				}
+			]
+		},
+		{
+			"after": "[md-layout]> div[full]",
+			"css": [
+				{
+					"property": "width",
+					"value": "100%"
+				}
+			]
+		},
+		{
+			"after": "[md-layout]> div[full]> span",
+			"css": [
+				{
+					"property": "font-size",
+					"value": "16px"
+				},
+				{
+					"property": "font-weight",
+					"value": "500"
+				},
+				{
+					"property": "padding",
+					"value": "16px 0"
+				},
+				{
+					"property": "line-height",
 					"value": "16px"
 				}
 			]

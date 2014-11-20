@@ -34,8 +34,9 @@ var initMDTabBar = function(MDTabBar) {
   }
 
   MDTabBar.showPage=function(tabNumber) {
+    var rel = MDTabBar.getAttribute('md-rel');
     [].forEach.call(MDTabBar.tabs, function(tab, index) {
-      var page = document.querySelector('md-page#'+tab.getAttribute('md-page'));
+      var page = document.querySelector('*:not(md-tabbar)[md-rel=' + rel + '] md-page[md-tab=' + tab.getAttribute('md-page') + ']');
       var position = index - tabNumber;
       page.style.left=(position * 100) + "%";
     });
@@ -59,6 +60,9 @@ var initMDTabBar = function(MDTabBar) {
     if(!MDTabBar.selector) {
       MDTabBar.selector = document.createElement('div');
       MDTabBar.selector.id="selector";
+      if (MDTabBar.getAttribute('md-selector-color')) {
+        MDTabBar.selector.style.backgroundColor = MDTabBar.getAttribute('md-selector-color');
+      }
       MDTabBar.appendChild(MDTabBar.selector);
     }
   }

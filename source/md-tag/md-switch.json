@@ -1,0 +1,191 @@
+{
+	"type": "tag",
+	"name": "md-switch",
+	"css": [
+		{
+			"property": "height",
+			"value": "48px"
+		},
+		{
+			"property": "width",
+			"value": "48px"
+		},
+		{
+			"property": "display",
+			"value": "block"
+		},
+		{
+			"property": "background-position",
+			"value": "center"
+		},
+		{
+			"property": "background-size",
+			"value": "100% auto"
+		},
+		{
+			"property": "background-repeat",
+			"value": "no-repeat"
+		},
+		{
+			"property": "cursor",
+			"value": "pointer"
+		},
+		{
+			"property": "position",
+			"value": "relative"
+		}
+	],
+	"attributes": [
+		{
+			"type": "attribute",
+			"name": "value",
+			"values": [
+				{
+					"name": "on",
+					"fixes": [
+						{
+							"after": ":after",
+							"css": [
+								{
+									"property": "left",
+									"value": "22px"
+								},
+								{
+									"property": "background-color",
+									"value": "#009688"
+								},
+								{
+									"property": "width",
+									"value": "19px"
+								},
+								{
+									"property": "height",
+									"value": "19px"
+								},
+								{
+									"property": "top",
+									"value": "14px"
+								}
+							]
+						},
+						{
+							"after": ":before",
+							"css": [
+								{
+									"property": "background-color",
+									"value": "#6DBDB6"
+								}
+							]
+						}
+					]
+				}
+			]			
+		}
+	],
+	"fixes": [
+		{
+			"after": ":before",
+			"css": [
+				{
+					"property": "content",
+					"value": "\"\""
+				},
+				{
+					"property": "width",
+					"value": "32px"
+				},
+				{
+					"property": "border-radius",
+					"value": "50px"
+				},
+				{
+					"property": "height",
+					"value": "13px"
+				},
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "top",
+					"value": "17px"
+				},
+				{
+					"property": "left",
+					"value": "8px"
+				},
+				{
+					"property": "transition",
+					"value": "background-color 0.25s"
+				},
+				{
+					"property": "will-change",
+					"value": "background-color"
+				}
+			]
+		},
+		{
+			"after": ":after",
+			"css": [
+				{
+					"property": "content",
+					"value": "\"\""
+				},
+				{
+					"property": "border-radius",
+					"value": "50%"
+				},
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "transition",
+					"value": "left 0.25s, top 0.25s, height 0.25s, width 0.25s,  background-color 0.25s"
+				},
+				{
+					"property": "will-change",
+					"value": "left, top, height, width,  background-color"
+				},
+				{
+					"property": "box-shadow",
+					"value": "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)"
+				}
+			]
+		},
+		{
+			"after": ":not([value=on]):after",
+			"css": [
+				{
+					"property": "left",
+					"value": "6px"
+				},
+				{
+					"property": "background-color",
+					"value": "#fff"
+				},
+				{
+					"property": "width",
+					"value": "21px"
+				},
+				{
+					"property": "height",
+					"value": "21px"
+				},
+				{
+					"property": "top",
+					"value": "13px"
+				}
+			]
+		},
+		{
+			"after": ":not([value=on]):before",
+			"css": [
+				{
+					"property": "background-color",
+					"value": "#929292"
+				}
+			]
+		}
+	]
+}

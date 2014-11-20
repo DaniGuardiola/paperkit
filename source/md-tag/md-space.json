@@ -1,0 +1,18 @@
+{
+	"type": "tag",
+	"name": "md-space",
+	"css": [
+		{
+          "property": "display",
+          "value": "block"
+        },
+        {
+          "property": "height",
+          "value": "auto"
+        },
+        {
+          "property": "flex",
+          "value": "1"
+        }
+	]
+}
