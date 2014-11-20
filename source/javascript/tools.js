@@ -5,6 +5,7 @@ var Materializer= function() {
   /* Elements */
   this.greylayer = null;
   this.sidemenu = null;
+  this.fab = null;
 
   this.observer = null;
 }
@@ -44,6 +45,8 @@ Materializer.prototype.init= function() {
 
   this.initFuncs.forEach(function(initFunc){
     initFunc();
+    var loadEvent = new Event('md-load');
+    window.dispatchEvent(loadEvent);
   });
 };
 
@@ -60,7 +63,7 @@ Materializer.prototype.addMDMethods= function(element) {
 
     if(tag=="md-snackbar") {
       initMDSnackBar(element, this);
-    } else if(tag=="md-button" || tag=="md-fab") {
+    } else if(tag=="md-button") {
       initMDButton(element, this);
     } else if(tag=="md-input-submit") {
       initMDInputSubmit(element, this);
@@ -83,6 +86,11 @@ Materializer.prototype.addMDMethods= function(element) {
     } else if(tag=="md-toolbar") {
       initMDToolBar(element, this);
       this.toolbar = element;
+    } else if(tag=="md-switch") {
+      initMDSwitch(element, this);
+    } else if(tag=="md-fab") {
+      initMDButton(element, this);
+      this.fab = element;
     }
   }
 };
@@ -111,6 +119,10 @@ Materializer.prototype.observeMDElements = function(mutations) {
   mutations.forEach(function(mutation) {
     if(mutation.type === 'childList') {
       [].forEach.call(mutation.addedNodes, function(node) {
+        if(!node.tagName) {
+          console.log("ADDED NODE " + node);
+          return;
+        }
         if(node.tagName.indexOf("MD-") === 0) {
           console.log("ADDED NODE (%s), INITIALIZING.", node.tagName);
           Materializer.prototype.addMDMethods(node);
@@ -190,4 +202,22 @@ var getViewport = function() {
       e = document.documentElement || document.body;
     }
   return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
+}
+
+
+Materializer.prototype.justInCase= function(dowhat){
+  if (dowhat=="reload") {
+    var elements = document.getElementsByTagName('*');
+    var length = elements.length;
+    for(var i=0; i<elements.length; i++) {
+      console.log("ELEMENTOS ESTATICO " + length + " ELEMENTOS DINAMICO " + elements.length);
+      var el = elements[i];
+      console.log("ENCONTRADO " + el.tagName);
+      if(el.tagName.indexOf('MD') === 0) {
+        console.log("VOY A PROCESAR " + el.tagName);
+        this.addMDMethods(el);
+        console.log("PROCESADO " + el.tagName);
+      }    
+    }
+  }
 }

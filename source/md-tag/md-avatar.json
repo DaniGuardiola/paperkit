@@ -12,14 +12,14 @@
     },
     {
       "property": "width",
-      "value": "40px"
+      "value": "48px"
     },
     {
       "property": "height",
-      "value": "40px"
+      "value": "48px"
     },
     {
-      "property": "margin",
+      "property": "padding",
       "value": "4px"
     }
   ],
@@ -33,11 +33,11 @@
         },
         {
           "property": "top",
-          "value": "0"
+          "value": "4px"
         },
         {
           "property": "left",
-          "value": "0"
+          "value": "4px"
         },
         {
           "property": "opacity",

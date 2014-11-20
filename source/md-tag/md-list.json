@@ -26,6 +26,10 @@
           "value": "flex"
         },
         {
+          "property": "flex-wrap",
+          "value": "wrap"
+        },
+        {
           "property": "width",
           "value": "100%"
         },
@@ -91,7 +95,7 @@
               ]
             },
             {
-              "after": "> md-tile> * + md-text",
+              "after": "> md-tile> md-icon + md-text",
               "css": [
                 {
                   "property": "margin-left",
@@ -100,10 +104,23 @@
               ]
             },
             {
+              "after": "> md-tile> md-avatar + md-text",
+              "css": [
+                {
+                  "property": "margin-left",
+                  "value": "12px"
+                }                
+              ]
+            },
+            {
               "after": ">md-tile> md-avatar + md-text",
               "css": [
                 {
                   "property": "padding-top",
+                  "value": "20px"
+                },
+                {
+                  "property": "padding-bottom",
                   "value": "20px"
                 }
               ]
@@ -118,7 +135,29 @@
               ]
             },
             {
-              "after": "> md-tile> md-avatar:first-of-type, md-list> md-tile> md-icon:first-of-type",
+              "after": "> md-tile> md-avatar:first-of-type",
+              "css": [
+                {
+                  "property": "margin-left",
+                  "value": "12px"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-avatar",
+              "css": [
+                {
+                  "property": "margin-top",
+                  "value": "4px"
+                },
+                {
+                  "property": "margin-bottom",
+                  "value": "4px"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-icon:first-of-type",
               "css": [
                 {
                   "property": "margin-left",
@@ -127,7 +166,7 @@
               ]
             },
             {
-              "after": "> md-tile> md-icon-button:last-of-type",
+              "after": "> md-tile> *:not(div):last-of-type",
               "css": [
                 {
                   "property": "margin-right",
