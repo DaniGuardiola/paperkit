@@ -45,8 +45,8 @@ Materializer.prototype.init= function() {
 
   this.initFuncs.forEach(function(initFunc){
     initFunc();
-    var loadEvent = new Event('md-load');
-    window.dispatchEvent(loadEvent);
+    //var loadEvent = new Event('md-load');
+    //window.dispatchEvent(loadEvent);
   });
 };
 
@@ -89,7 +89,7 @@ Materializer.prototype.addMDMethods= function(element) {
     } else if(tag=="md-switch") {
       initMDSwitch(element, this);
     } else if(tag=="md-fab") {
-      initMDButton(element, this);
+      initMDFab(element, this);
       this.fab = element;
     }
   }
@@ -183,6 +183,9 @@ var executeFunctionByName= function(functionName, context, args) {
        console.log(args);
        var namespaces = functionName.split(".");
        var func = namespaces.pop();
+       if (!context) {
+           var context = window;
+       }
        for (var i = 0; i < namespaces.length; i++) {
            context = context[namespaces[i]];
        }
@@ -221,3 +224,20 @@ Materializer.prototype.justInCase= function(dowhat){
     }
   }
 }
+
+Materializer.prototype.ajaxInsert= function(what, where, onload, param) {
+  var xhr = new XMLHttpRequest;
+  xhr.open("GET", what);
+  xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+  xhr.addEventListener("load",function(){
+    if (where.nodeType) {
+      where.innerHTML = xhr.responseText;
+    } else if (document.querySelector(where)) {
+      document.querySelector(where).innerHTML = xhr.responseText;
+    }
+    onload(xhr.responseText);
+  });
+  xhr.send();
+}
+
+Materializer.prototype.consoleBanner= "M! ";

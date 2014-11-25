@@ -94,11 +94,33 @@
 			]
 		},
 		{
+			"after": "[md-layout]> div > md-switch:last-child",
+			"css": [
+				{
+					"property": "margin-right",
+					"value": "9px"
+				}
+			]
+		},
+		{
 			"after": "[md-layout]> div> span",
 			"css": [
 				{
 					"property": "margin-right",
 					"value": "4px"
+				},
+				{
+					"property": "padding",
+					"value": "16px 0"
+				}
+			]
+		},
+		{
+			"after": "[md-layout]> div> span:first-child",
+			"css": [
+				{
+					"property": "margin-left",
+					"value": "16px"
 				}
 			]
 		},
@@ -139,7 +161,7 @@
 			]
 		},
 		{
-			"after": "[md-layout]> div[full]> span",
+			"after": "[md-layout]> div> span:not([md-typo])",
 			"css": [
 				{
 					"property": "font-size",

@@ -41,6 +41,10 @@
 		{
 			"property": "cursor",
 			"value": "pointer"
+		},
+		{
+			"property": "transition",
+			"value": "background-color 0.25s, bottom 0.25s"
 		}
 	]
 }
