@@ -95,6 +95,15 @@
               ]
             },
             {
+              "after": "> md-tile> md-text:first-child",
+              "css": [
+                {
+                  "property": "margin-left",
+                  "value": "16px"
+                }
+              ]
+            },
+            {
               "after": "> md-tile> md-icon + md-text",
               "css": [
                 {
@@ -157,7 +166,7 @@
               ]
             },
             {
-              "after": "> md-tile> md-icon:first-of-type",
+              "after": "> md-tile> md-icon:first-child",
               "css": [
                 {
                   "property": "margin-left",
@@ -166,7 +175,7 @@
               ]
             },
             {
-              "after": "> md-tile> *:not(div):last-of-type",
+              "after": "> md-tile> *:not(div):last-child",
               "css": [
                 {
                   "property": "margin-right",

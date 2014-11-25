@@ -30,6 +30,9 @@ var initMDList = function(MDList) {
             xhr.open("GET", el.getAttribute('md-ajax'));
             xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
             xhr.addEventListener("load",function(){
+              if (el.getAttribute('md-ajax-callback')) {
+                executeFunctionByName(el.getAttribute('md-ajax-callback'));
+              };
               document.querySelector(f).innerHTML = xhr.responseText;
               MDList.materializer.justInCase('reload');
             });
