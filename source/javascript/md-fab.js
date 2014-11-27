@@ -21,6 +21,22 @@ var initMDFab = function(MDFab) {
     }
   }
 
+  MDFab.set = function(key,value){
+    if (key=='image' || key=='md-image') {
+      MDFab.querySelector('md-icon').setAttribute('md-image',value);
+    } else if (key.indexOf('md-') === -1) {
+      MDFab.setAttribute('md-'+key,value);
+    }
+  }
+
+  MDFab.hide = function(){
+    MDFab.style.bottom = "-56px";
+  }
+
+  MDFab.show = function(){
+    MDFab.style.bottom = "";
+  }
+
   MDFab.clickListener = function(e) {
     var el = e.currentTarget;
     var action = el.getAttribute("md-action") ? el.getAttribute('md-action') : 'submit';

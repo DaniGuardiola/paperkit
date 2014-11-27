@@ -4,6 +4,13 @@ var initMDTabBar = function(MDTabBar) {
   MDTabBar.tabs = MDTabBar.getElementsByTagName("md-tab");
   MDTabBar.selected = 0;
 
+
+
+  MDTabBar.callFunction= function(f, target) {
+    console.log("calling function " + f);
+    executeFunctionByName(f, window, [ target ]);
+  }
+
   MDTabBar.clickHandler= function(e) {
     var el = e.currentTarget;
     if(el.tagName==="MD-TAB") {
@@ -12,6 +19,12 @@ var initMDTabBar = function(MDTabBar) {
       if(action==='none') {
         /* Nothing to do */
       } else if(action==='showpage') {
+        MDTabBar.showPage(el.index);
+      } else {
+        if(action.indexOf('custom:') != -1) {
+          var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
+          MDTabBar.callFunction(f, el);
+        }
         MDTabBar.showPage(el.index);
       }
 
