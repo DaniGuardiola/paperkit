@@ -207,6 +207,14 @@ var getViewport = function() {
   return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
 }
 
+var isMobile = function() {
+  if (getViewport().width < 768) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
 Materializer.prototype.justInCase= function(dowhat){
   if (dowhat=="reload") {
@@ -229,12 +237,16 @@ Materializer.prototype.ajaxInsert= function(what, where, onload, param) {
   var xhr = new XMLHttpRequest;
   xhr.open("GET", what);
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-  xhr.addEventListener("load",function(){
-    if (where.nodeType) {
-      where.innerHTML = xhr.responseText;
-    } else if (document.querySelector(where)) {
-      document.querySelector(where).innerHTML = xhr.responseText;
-    }
+  where.classList.add('op-0-child');
+  xhr.addEventListener('load',function(){
+    getEl(where).innerHTML = xhr.responseText;
+    setTimeout(function(){
+      where.classList.add('op-1-child');
+      where.classList.remove('op-0-child');
+      setTimeout(function(){
+        where.classList.remove('op-1-child');
+      },250);      
+    },250);
     onload(xhr.responseText);
   });
   xhr.send();
