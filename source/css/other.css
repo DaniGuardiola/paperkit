@@ -1,0 +1,8 @@
+.op-0-child * {
+	opacity: 0;
+	transition: opacity 0.25s;
+}
+.op-1-child * {
+	opacity: 1;
+	transition: opacity 0.25s;
+}
