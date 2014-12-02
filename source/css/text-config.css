@@ -59,4 +59,7 @@ html * {
   padding-right: 0;
 */
   text-rendering: optimizeLegibility;
+  transition-property: color, font-size;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(.55,0,.1,1);
 }

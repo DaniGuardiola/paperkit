@@ -8,6 +8,9 @@ var initMDIconButton = function(MDIconButton) {
     var action = el.getAttribute("md-action") ? el.getAttribute('md-action') : 'submit';
 
     switch(action) {
+      case 'chrome-app-close':
+        chrome.app.window.current().close();
+        break;
       default:
         if(action.indexOf('custom:') != -1) {
           var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();

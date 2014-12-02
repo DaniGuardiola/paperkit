@@ -35,6 +35,9 @@ var initMDButton = function(MDButton) {
       case 'snackbar-dismiss':
         snackbarDismiss(el);
         break;
+      case 'morph':
+        transition.morph(el);
+        break;
       case 'chrome-app-close':
         chrome.app.window.current().close();
         break;
