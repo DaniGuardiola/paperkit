@@ -1,7 +1,11 @@
 var initMDToolBar = function(MDToolBar) {
-  MDToolBar.clickHandler= function(e) {
-    var el = e.currentTarget;
-  };
+  MDToolBar.set = function(key,value){
+    if (key=='image' || key=='md-image') {
+      MDToolBar.querySelector('md-icon').setAttribute('md-image',value);
+    } else if (key.indexOf('md-') === -1) {
+      MDToolBar.setAttribute('md-'+key,value);
+    }
+  }
 
   MDToolBar.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);

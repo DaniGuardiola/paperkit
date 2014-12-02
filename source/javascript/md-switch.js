@@ -1,9 +1,14 @@
 var initMDSwitch = function(MDSwitch) {
-  MDSwitch.toggle = function() {
+  MDSwitch.toggle = function(e) {
     if (MDSwitch.getAttribute('value') !== "on") {
       MDSwitch.on();
     } else {
       MDSwitch.off();
+    }
+    if (e.stopPropagation) {
+        e.stopPropagation();
+    } else { // Older IE.
+        e.cancelBubble = true;
     }
   }
 
