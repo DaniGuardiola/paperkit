@@ -1,4 +1,4 @@
-var initMDList = function(MDList) {
+var initMDList = function(MDList,materializer) {
   MDList.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
   };
@@ -26,17 +26,12 @@ var initMDList = function(MDList) {
             linkRedirect(f, el);
           } else if(action.indexOf('ajax:') != -1) {
             var f = action.substring(action.indexOf('ajax:') + 'link:'.length).trim();
-            var xhr = new XMLHttpRequest;
-            xhr.open("GET", el.getAttribute('md-ajax'));
-            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-            xhr.addEventListener("load",function(){
+            materializer.ajaxInsert(el.getAttribute('md-ajax'), getEl(f), function(){
+              materializer.justInCase('reload');
               if (el.getAttribute('md-ajax-callback')) {
                 executeFunctionByName(el.getAttribute('md-ajax-callback'));
               };
-              document.querySelector(f).innerHTML = xhr.responseText;
-              MDList.materializer.justInCase('reload');
             });
-            xhr.send();
           }
           break;
       }   

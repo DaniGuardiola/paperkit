@@ -6,6 +6,7 @@ var Materializer= function() {
   this.greylayer = null;
   this.sidemenu = null;
   this.fab = null;
+  this.content = null;
 
   this.observer = null;
 }
@@ -28,13 +29,13 @@ Materializer.prototype.init= function() {
   var elements = document.getElementsByTagName('*');
   var length = elements.length;
   for(var i=0; i<elements.length; i++) {
-    console.log("ELEMENTOS ESTATICO " + length + " ELEMENTOS DINAMICO " + elements.length);
+    //console.log("ELEMENTOS ESTATICO " + length + " ELEMENTOS DINAMICO " + elements.length);
     var el = elements[i];
-    console.log("ENCONTRADO " + el.tagName);
+    //console.log("ENCONTRADO " + el.tagName);
     if(el.tagName.indexOf('MD') === 0) {
-      console.log("VOY A PROCESAR " + el.tagName);
+      //console.log("VOY A PROCESAR " + el.tagName);
       this.addMDMethods(el);
-      console.log("PROCESADO " + el.tagName);
+      //console.log("PROCESADO " + el.tagName);
     }    
   }
 
@@ -55,7 +56,7 @@ Materializer.prototype.addMDMethods= function(element) {
 
   if(tag.indexOf("md-") >= 0) {
     if(element.alreadyInitialized) {
-      console.log("ELEMENT " + element.tagName + " ALREADY INITIALIZED");
+      //console.log("ELEMENT " + element.tagName + " ALREADY INITIALIZED");
       return;
     }
     // INCICIALIZACION DE FUNCIONES GENERALES
@@ -91,6 +92,8 @@ Materializer.prototype.addMDMethods= function(element) {
     } else if(tag=="md-fab") {
       initMDFab(element, this);
       this.fab = element;
+    } else if(tag=="md-content") {
+      this.content = element;
     }
   }
 };
@@ -120,11 +123,11 @@ Materializer.prototype.observeMDElements = function(mutations) {
     if(mutation.type === 'childList') {
       [].forEach.call(mutation.addedNodes, function(node) {
         if(!node.tagName) {
-          console.log("ADDED NODE " + node);
+          //console.log("ADDED NODE " + node);
           return;
         }
         if(node.tagName.indexOf("MD-") === 0) {
-          console.log("ADDED NODE (%s), INITIALIZING.", node.tagName);
+          //console.log("ADDED NODE (%s), INITIALIZING.", node.tagName);
           Materializer.prototype.addMDMethods(node);
         }
       });
@@ -137,7 +140,7 @@ var properties = {
   logEnabled: false,
   log: function(what){
     if (properties.logEnabled) {
-      console.log(what);
+      //console.log(what);
     }
   },
   change: function(element,classOut,classIn){
@@ -180,7 +183,7 @@ var transitionEndEventName= function() {
 var transitionend = transitionEndEventName();
 
 var executeFunctionByName= function(functionName, context, args) {
-       console.log(args);
+       //console.log(args);
        var namespaces = functionName.split(".");
        var func = namespaces.pop();
        if (!context) {
@@ -192,7 +195,7 @@ var executeFunctionByName= function(functionName, context, args) {
        if (args) {
            return context[func].apply(this, args);
        } else {
-           return context[func];
+           return context[func].apply(this, ['false']);
        }
    }
 
@@ -221,13 +224,13 @@ Materializer.prototype.justInCase= function(dowhat){
     var elements = document.getElementsByTagName('*');
     var length = elements.length;
     for(var i=0; i<elements.length; i++) {
-      console.log("ELEMENTOS ESTATICO " + length + " ELEMENTOS DINAMICO " + elements.length);
+      //console.log("ELEMENTOS ESTATICO " + length + " ELEMENTOS DINAMICO " + elements.length);
       var el = elements[i];
-      console.log("ENCONTRADO " + el.tagName);
+      //console.log("ENCONTRADO " + el.tagName);
       if(el.tagName.indexOf('MD') === 0) {
-        console.log("VOY A PROCESAR " + el.tagName);
+        //console.log("VOY A PROCESAR " + el.tagName);
         this.addMDMethods(el);
-        console.log("PROCESADO " + el.tagName);
+        //console.log("PROCESADO " + el.tagName);
       }    
     }
   }
@@ -245,7 +248,7 @@ Materializer.prototype.ajaxInsert= function(what, where, onload, param) {
       where.classList.remove('op-0-child');
       setTimeout(function(){
         where.classList.remove('op-1-child');
-      },250);      
+      },750);      
     },250);
     onload(xhr.responseText);
   });

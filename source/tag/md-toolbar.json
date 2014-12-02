@@ -27,10 +27,6 @@
       "value": "0"
     },
     {
-      "property": "border-bottom",
-      "value": "1px solid rgba(0, 0, 0, 0.12)"
-    },
-    {
       "property": "transition-property",
       "value": "height, box-shadow, background-color, color, top, left"
     },

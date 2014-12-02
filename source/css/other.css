@@ -4,5 +4,5 @@
 }
 .op-1-child * {
 	opacity: 1;
-	transition: opacity 0.25s;
+	transition: opacity 0.25s 0.5s;
 }

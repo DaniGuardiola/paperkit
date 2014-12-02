@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       clean: [
         'bin/grunt-materializer',
         'bin/materializer',
-        'bin/md-resources',
+        'bin/resources',
         'bin/materializer.css',
         'bin/materializer.min.css',
         'bin/materializer.js',
@@ -22,8 +22,8 @@ module.exports = function(grunt) {
         css: {
             expand: true,
             src: [
-              'source/md-attribute/*.json',
-              'source/md-tag/*.json'
+              'source/attribute/*.json',
+              'source/tag/*.json'
             ],
             dest: 'bin/',
             ext: '.css',
@@ -55,20 +55,20 @@ module.exports = function(grunt) {
         },
         font: {
           expand: true,
-          src: 'source/md-resources/font/*',
-          dest: 'bin/md-resources/font/',
+          src: 'source/resources/font/*',
+          dest: 'bin/resources/font/',
           flatten: true
         },
         cursor: {
           expand: true,
-          src: 'source/md-resources/cursor/*',
-          dest: 'bin/md-resources/cursor/',
+          src: 'source/resources/cursor/*',
+          dest: 'bin/resources/cursor/',
           flatten: true
         },
         icon: {
           expand: true,
           src: 'node_modules/material-design-icons/*/svg/*_24px.svg',
-          dest: 'bin/md-resources/icon/',
+          dest: 'bin/resources/icon/',
           flatten: true,
           rename: function(dest,src) {
             var newDest = dest + src.replace("ic_", "");
@@ -78,19 +78,19 @@ module.exports = function(grunt) {
         },
         moreicon: {
           expand: true,
-          src: 'source/md-resources/more-icons/**/*.svg',
-          dest: 'bin/md-resources/icon/',
+          src: 'source/resources/more-icons/**/*.svg',
+          dest: 'bin/resources/icon/',
           flatten: true
         },
         other: {
           expand: true,
-          src: 'source/md-resources/other/**/*',
-          dest: 'bin/md-resources/other/',
+          src: 'source/resources/other/**/*',
+          dest: 'bin/resources/other/',
           flatten: true
         },
         resources: {
           expand: true,
-          src: 'source/md-resources/font/',
+          src: 'source/resources/font/',
           dest: 'bin/',
           rename: function(dest, src) {
             var newDest = dest + src.replace("source/", "");
@@ -117,8 +117,8 @@ module.exports = function(grunt) {
         },
         prefix: {
           src: [
-            'bin/materializer/md-attribute/*.css',
-            'bin/materializer/md-tag/*.css',
+            'bin/materializer/attribute/*.css',
+            'bin/materializer/tag/*.css',
             'bin/materializer/class/*.css',
             'bin/materializer/css/*.css'
           ]
@@ -133,8 +133,8 @@ module.exports = function(grunt) {
         css: {
           src: [
             'bin/materializer/css/*.css',
-            'bin/materializer/md-tag/*.css',
-            'bin/materializer/md-attribute/*.css'
+            'bin/materializer/tag/*.css',
+            'bin/materializer/attribute/*.css'
           ],
           dest: 'bin/materializer.css'
         },

@@ -40,11 +40,11 @@
 			"css": [
 				{
 					"property": "margin-right",
-					"value": "16px"
+					"value": "8px"
 				},
 				{
 					"property": "margin-left",
-					"value": "16px"
+					"value": "8px"
 				}
 			]
 		},
