@@ -6,14 +6,7 @@ module.exports = function(grunt) {
 
       // 1 - Cleaning bin and demo
       clean: [
-        'bin/grunt-materializer',
-        'bin/materializer',
-        'bin/resources',
-        'bin/materializer.css',
-        'bin/materializer.min.css',
-        'bin/materializer.js',
-        'bin/materializer.min.js',
-        'demo/',
+        'bin/*',
         'grunt-materializer/sources/'
         ],
 
@@ -28,7 +21,7 @@ module.exports = function(grunt) {
             dest: 'bin/',
             ext: '.css',
             rename: function(dest, src) {
-              var newDest = dest + src.replace("source", "materializer");
+              var newDest = dest + src.replace("source", "md");
               return newDest;
           },
           options: {
@@ -49,26 +42,26 @@ module.exports = function(grunt) {
           ],
           dest: 'bin/',
           rename: function(dest, src) {
-            var newDest = dest + src.replace("source", "materializer");
+            var newDest = dest + src.replace("source", "md");
             return newDest;
           }
         },
         font: {
           expand: true,
           src: 'source/resources/font/*',
-          dest: 'bin/resources/font/',
+          dest: 'bin/materializer/resources/font/',
           flatten: true
         },
         cursor: {
           expand: true,
           src: 'source/resources/cursor/*',
-          dest: 'bin/resources/cursor/',
+          dest: 'bin/materializer/resources/cursor/',
           flatten: true
         },
         icon: {
           expand: true,
           src: 'node_modules/material-design-icons/*/svg/*_24px.svg',
-          dest: 'bin/resources/icon/',
+          dest: 'bin/materializer/resources/icon/',
           flatten: true,
           rename: function(dest,src) {
             var newDest = dest + src.replace("ic_", "");
@@ -79,13 +72,13 @@ module.exports = function(grunt) {
         moreicon: {
           expand: true,
           src: 'source/resources/more-icons/**/*.svg',
-          dest: 'bin/resources/icon/',
+          dest: 'bin/materializer/resources/icon/',
           flatten: true
         },
         other: {
           expand: true,
           src: 'source/resources/other/**/*',
-          dest: 'bin/resources/other/',
+          dest: 'bin/materializer/resources/other/',
           flatten: true
         },
         resources: {
@@ -117,40 +110,40 @@ module.exports = function(grunt) {
         },
         prefix: {
           src: [
-            'bin/materializer/attribute/*.css',
-            'bin/materializer/tag/*.css',
-            'bin/materializer/class/*.css',
-            'bin/materializer/css/*.css'
+            'bin/md/attribute/*.css',
+            'bin/md/tag/*.css',
+            'bin/md/class/*.css',
+            'bin/md/css/*.css'
           ]
         }
       },
 
       // 4 - Beautify everything
-      cssbeautifier:{files:[    "bin/materializer/**/*.css"    ]},
+      cssbeautifier:{files:[    "bin/md/**/*.css"    ]},
 
       // 5 - Concatenating css and js from bin/materializer/ to bin/
       concat: {
         css: {
           src: [
-            'bin/materializer/css/*.css',
-            'bin/materializer/tag/*.css',
-            'bin/materializer/attribute/*.css'
+            'bin/md/css/*.css',
+            'bin/md/tag/*.css',
+            'bin/md/attribute/*.css'
           ],
-          dest: 'bin/materializer.css'
+          dest: 'bin/materializer/materializer.css'
         },
         js: {
           src: [
             'source/javascript/*.js'
           ],
-          dest: 'bin/materializer.js'
+          dest: 'bin/materializer/materializer.js'
         }
       },
 
       // 6 - Minify css
       cssmin: {
         minify: {
-          src: 'bin/materializer.css',
-          dest: 'bin/materializer.min.css'
+          src: 'bin/materializer/materializer.css',
+          dest: 'bin/materializer/materializer.min.css'
         }
       },
 
