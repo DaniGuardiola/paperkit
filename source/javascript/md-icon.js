@@ -3,7 +3,7 @@ var initMDIcon = function(MDIcon, materializer) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
     if(this.tagName==='MD-ICON') {
       if(attrname==='md-image' && newvalue!="") {
-        var svgFileURI = materializer.path + "md-resources/icon/" + newvalue + ".svg";
+        var svgFileURI = materializer.path + "resources/icon/" + newvalue + ".svg";
         loadSVG(svgFileURI, this);
       }
     } else {
@@ -13,7 +13,7 @@ var initMDIcon = function(MDIcon, materializer) {
         var svgData = avatarSVG.replace('$$IMAGE$$', imgFileURI).replace(/\$\$IMAGENAME\$\$/g, imgName);
         replaceSVG(svgData, this);
       } else if(attrname==='md-image') {
-        var svgFileURI = materializer.path + "md-resources/icon/account_circle.svg";
+        var svgFileURI = materializer.path + "resources/icon/account_circle.svg";
         loadSVG(svgFileURI, this);
       }
     }
