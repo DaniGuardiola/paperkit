@@ -49,7 +49,7 @@
 						},
 						{
 							"property": "cursor",
-							"value": "url(md-resources/cursor/close.png), pointer"
+							"value": "url(resources/cursor/close.png), pointer"
 						}
 					]
 				},
