@@ -87,7 +87,7 @@ var transition = {
 		if (!morphEl) {
 			return false;
 		}
-		if (target.nodeType && target.getAttribute('md-morph-back')) {
+		if (target && target.nodeType && target.getAttribute('md-morph-back')) {
 			var to = getEl(target.getAttribute('md-morph-back'));
 		} else if (getEl(target)) {
 			var to = getEl(target);

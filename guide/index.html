@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<md-toolbar md-color="green" md-height="x3" md-position="absolute" md-font-color="white" md-fill="white">
+	<md-toolbar md-color="green" md-height="x3" md-font-color="white" md-fill="white">
 		<md-row>
 			<md-icon-button md-action="custom: md.sidemenu.open">
 				<md-icon md-image="menu"></md-icon>
@@ -24,15 +24,15 @@
 		<img id="logo" src="logo.png">
 
 		<md-list md-action="ajax: md-content">
-			<md-tile md-ajax="page/start.html" md-ajax-callback="">
+			<md-tile md-ajax="page/start.html" md-ajax-callback="state.start.index">
 				<md-icon md-separator="full" md-image="school"></md-icon>
 				<md-text>Getting started</md-text>
 			</md-tile>
-			<md-tile md-ajax="page/ref/reference.html">
+			<md-tile md-ajax="page/ref/ref.html" md-ajax-callback="state.ref.index">
 				<md-icon md-separator="full" md-image="list"></md-icon>
 				<md-text>Reference</md-text>
 			</md-tile>
-			<md-tile md-ajax="page/ref/tags.html">
+			<md-tile md-ajax="page/ref/tags.html" md-ajax-callback="state.ref.tag.index">
 				<md-icon md-fill="grey" md-image="chevron_right"></md-icon>
 				<md-text md-font-color="grey">Tags</md-text>
 			</md-tile>
@@ -72,14 +72,7 @@
 			</md-tile>
 		</md-list>
 	</md-sidemenu>
-
-
-
-
-
-
-
-
+	<md-content></md-content>
 	<script src="js/main.js"></script>
 	<script src="js/state.js"></script>
 </body>
