@@ -248,9 +248,9 @@ Materializer.prototype.ajaxInsert= function(what, where, onload, param) {
       where.classList.remove('op-0-child');
       setTimeout(function(){
         where.classList.remove('op-1-child');
-      },750);      
+      },750);
     },250);
-    onload(xhr.responseText);
+    onload(xhr.responseText,where);
   });
   xhr.send();
 }
