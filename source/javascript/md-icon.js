@@ -19,7 +19,7 @@ var initMDIcon = function(MDIcon, materializer) {
     }
   };
 
-var avatarSVG= "<svg width=\"40\" height=\"40\">"+
+  var avatarSVG= "<svg width=\"40\" height=\"40\">"+
           "<defs>" +
             "<pattern id=\"$$IMAGENAME$$\" x=\"0\" y=\"0\" patternUnits=\"userSpaceOnUse\" height=\"40\" width=\"40\">"+
               "<image x=\"0\" y=\"0\" height=\"40\" width=\"40\" xlink:href=\"$$IMAGE$$\"></image>"+
@@ -41,18 +41,24 @@ var avatarSVG= "<svg width=\"40\" height=\"40\">"+
     var oldSVG = element.children[0];
 
     if(oldSVG) {
+      oldSVG.removing = new Date().getTime();
+      oldSVG.newimagename = element.getAttribute("md-image");
       // Si hay svg antiguo, se le pone opacidad 0
       oldSVG.style.opacity="0";
       // Se elimina cuando la transición acaba
       oldSVG.addEventListener(transitionend, function(e) {
+        console.log("NEW:" + oldSVG.newimagename);
+        console.log("TIME:" + oldSVG.removing);
         element.removeChild(oldSVG);
       });
       // Se inicializa el nuevo svg desde opacity 0
       newSVG.style.opacity="0";
+      element.insertBefore(newSVG, oldSVG);
+    } else {
+      // Se añade, independientemente de si había svg antiguo o no
+      element.appendChild(newSVG);              
     }
-    // Se añade, independientemente de si había svg antiguo o no
-    element.appendChild(newSVG);        
-    // element.innerHTML = xhr.responseText;
+
     // Se elimina la opacity 0 inline, por lo que transiciona al opacity 1 del propio elemento
     setTimeout(function(){
       newSVG.style.opacity="";
