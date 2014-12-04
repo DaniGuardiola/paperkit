@@ -1,11 +1,13 @@
 var initMDMenu = function(MDMenu) {
-  MDMenu.status = "closed";
+  MDMenu.setAttribute('md-status','closed');
 
   MDMenu.open = function(parent) {    
     MDMenu.style.display="";
+
+
     
     // Positioning
-    // Better suppor for Dani's ideas
+    // Better support for Dani's ideas
     // it can be personalized with a md-menu attribute
     // or even with a parent attribute, have to see the best way
     var parentRect= parent.getBoundingClientRect();
@@ -16,7 +18,7 @@ var initMDMenu = function(MDMenu) {
 
     // Animation
     MDMenu.style.height="";
-    MDMenu.status = "opened";    
+    MDMenu.setAttribute('md-status','open');
   }
 
   MDMenu.close = function() {
