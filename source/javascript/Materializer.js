@@ -68,6 +68,8 @@ Materializer.prototype.addMDMethods= function(element) {
       initMDButton(element, this);
     } else if(tag=="md-input-submit") {
       initMDInputSubmit(element, this);
+    } else if(tag=="md-input") {
+      initMDInput(element, this);
     } else if(tag=="md-list") {
       initMDList(element, this);
     } else if(tag=="md-icon" || tag=="md-avatar") {
