@@ -49,7 +49,7 @@
 			]
 		},
 		{
-			"after": "[md-layout]> div > input:first-child",
+			"after": "[md-layout]> div > md-input:first-child",
 			"css": [
 				{
 					"property": "margin-left",

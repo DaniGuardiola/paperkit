@@ -1,0 +1,175 @@
+{
+	"type": "tag",
+	"name": "md-input[type=text]",
+	"aliases": [
+		"md-input[type=password]",
+		"md-input[type=email]",
+		"md-input[type=tel]",
+		"md-input[type=number]",
+		"md-input[type=url]"
+	],
+	"css": [		
+		{
+			"property": "position",
+			"value": "relative"
+		},
+		{
+			"property": "height",
+			"value": "72px"
+		}
+	],
+	"fixes": [
+		{
+			"after": "> input",
+			"css": [
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "top",
+					"value": "36px"
+				},
+				{
+					"property": "height",
+					"value": "22px"
+				},
+				{
+		      "property": "outline",
+		      "value": "none"
+		    },
+		    {
+		      "property": "font-size",
+		      "value": "16px"
+		    },
+		    {
+		      "property": "border-width",
+		      "value": "0"
+		    },
+		    {
+		      "property": "overflow",
+		      "value": "auto"
+		    }
+			]
+		},
+		{
+			"after": "> span.error",
+			"css": [
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "bottom",
+					"value": "-8px"					
+				},
+				{
+					"property": "font-size",
+					"value": "12px"
+				},
+				{
+					"property": "line-height",
+					"value": "12px"
+				},
+				{
+					"property": "color",
+					"value": "red"
+				}
+			]
+		},
+		{
+			"after": "> span.hint",
+			"css": [
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "content",
+					"value": "\"\""
+				},
+				{
+					"property": "top",
+					"value": "16px"
+				},
+				{
+					"property": "font-size",
+					"value": "12px"
+				},
+				{
+					"property": "transition",
+					"value": "height 0.25s ease, font-size: 0.25s ease"
+				}
+			]
+		},
+		{
+			"after": "> span.hint.placeholder",
+			"css": [
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "top",
+					"value": "36px"
+				},
+				{
+					"property": "height",
+					"value": "22px"
+				},
+				{
+		      "property": "outline",
+		      "value": "none"
+		    },
+		    {
+		      "property": "font-size",
+		      "value": "16px"
+		    },
+		    {
+		      "property": "border-width",
+		      "value": "0"
+		    },
+		    {
+		      "property": "overflow",
+		      "value": "auto"
+		    }
+			]
+		},		
+		{
+			"after": "> div.line",
+			"css": [
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "content",
+					"value": "\"\""
+				},
+				{
+					"property": "bottom",
+					"value": "8px"
+				},
+				{
+					"property": "width",
+					"value": "100%"
+				},
+				{
+					"property": "height",
+					"value": "1px"
+				},
+			  {
+		      "property": "background-color",
+		      "value": "rgba(0, 0, 0, 0.12)"
+		    }
+			]
+		},
+		{
+			"after": "",
+			"css": [
+
+			]
+		}
+	]
+
+}
