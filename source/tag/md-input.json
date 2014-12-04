@@ -49,6 +49,10 @@
 		    {
 		      "property": "overflow",
 		      "value": "auto"
+		    },
+		    {
+		    	"property": "background-color",
+		    	"value": "transparent"
 		    }
 			]
 		},
@@ -98,7 +102,11 @@
 				},
 				{
 					"property": "transition",
-					"value": "height 0.25s ease, font-size: 0.25s ease"
+					"value": "top 0.25s ease, font-size 0.25s ease"
+				},
+				{
+					"property": "color",
+					"value": "rgba(0,0,0,0.26)"
 				}
 			]
 		},
