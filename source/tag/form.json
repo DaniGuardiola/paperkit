@@ -58,7 +58,7 @@
 			]
 		},
 		{
-			"after": "[md-layout]> div > input:last-child",
+			"after": "[md-layout]> div > md-input:last-child",
 			"css": [
 				{
 					"property": "margin-right",
