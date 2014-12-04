@@ -36,7 +36,7 @@ var transition = {
 			what.style.height = where.height + "px";
 		}
 	},
-	morph: function(what,where,callback){
+	morph: function(what,where,callback,id){
 		if (what) {
 			transition.status.lastMorphFrom = getEl(what);
 		} else {
@@ -47,7 +47,11 @@ var transition = {
 			var where = "full";
 		}
 		var whatClon = document.createElement('div');
-		whatClon.id = "md-morph";
+		if (id) {
+			whatClon.id = id;
+		} else {
+			whatClon.id = "md-morph";
+		}
 		whatClon.setAttribute("md-shadow","shadow-0");
 		whatStyle = window.getComputedStyle(getEl(what));
 		if (whatStyle.zIndex >= 400) {
@@ -67,6 +71,7 @@ var transition = {
 			}
 		},10);
 		setTimeout(function(){
+			whatClon.style.transitionTimingFunction = 'ease-in';
 			transition.copyRect(whatClon,where);
 			setTimeout(function(){
 				if (callback) {
@@ -74,7 +79,7 @@ var transition = {
 				}				
 			},500);
 			getEl(what).style.opacity = 0;
-		},510);
+		},210);
 		return whatClon;
 	},
 	morphBack: function(target,callback){
@@ -82,11 +87,17 @@ var transition = {
 		if (!morphEl) {
 			return false;
 		}
-		if (transition.status.lastMorphFrom) {
-			transition.copyRect(morphEl,transition.status.lastMorphFrom);
-			morphEl.classList.add('op-0-child');
-			console.log('I DID IT');
+		if (target && target.nodeType && target.getAttribute('md-morph-back')) {
+			var to = getEl(target.getAttribute('md-morph-back'));
+		} else if (getEl(target)) {
+			var to = getEl(target);
+		} else if (transition.status.lastMorphFrom) {
+			var to = transition.status.lastMorphFrom;
+		} else {
+			return false;
 		}
+		transition.copyRect(morphEl,to);
+		morphEl.classList.add('op-0-child');
 		setTimeout(function(){
 			morphEl.setAttribute('md-shadow','shadow-0');
 			morphEl.style.backgroundColor = 'transparent';
@@ -96,7 +107,7 @@ var transition = {
 					callback(morphEl);
 				}
 			},500);
-			getEl(transition.status.lastMorphFrom).style.opacity = '';
+			to.style.opacity = '';
 		},510);
 	}
 };
