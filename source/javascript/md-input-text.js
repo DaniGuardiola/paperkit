@@ -93,5 +93,31 @@ var initMDInputText = function(MDInput) {
 		}
 	}
 
+	/**
+	 * Attribute change listener.
+	 * Actually only checks for changes in the placeholder.
+	 * 
+	 * @param  {string} attrname Name of the changed attribute.
+	 * @param  {string} oldvalue Old value of the attribute, or null if no old value.
+	 * @param  {string} newvalue New value of the attribute.
+	 */
+  MDInput.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
+    console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
+    if(attrname="placeholder") {
+    	this.spanHint.innerHTML= newvalue;
+    }
+  };
+
+  /* ---- OBJECT INITIALIZATION ---- */
+  var observer = new MutationObserver(function(mutations) { 
+      mutations.forEach(function(mutation) {
+        var element = mutation.target;
+        element.attributeChangedCallback(mutation.attributeName, mutation.oldvalue, element.getAttribute(mutation.attributeName));
+      });
+  });
+
+  var config = { attributes: true, childList: false, characterData: false };
+  observer.observe(MDInput, config);
+
 	MDInput.initElements();
 }
