@@ -25,6 +25,32 @@ var initMDInputSelect = function(el, materializer) {
 		var divLine = document.createElement("div");
 		divLine.classList.add("line");
 		this.appendChild(divLine);
+
+		this.addEventListener('click',function(){
+			if (document.getElementById(this.id + '-menu')) {
+				var menu = document.getElementById(this.id + '-menu');
+			} else {
+				var menu = document.createElement('md-menu');
+				menu.id = this.id + '-menu';
+				menu.innerHTML = '<md-list><md-tile md-action="custom: handleTestClick"><md-text>Edit</md-text></md-tile></md-list>';
+				document.body.appendChild(menu);
+				initMDMenu(menu);
+			}
+		    if(menu) {
+		      if(menu.status!="open") {
+		        menu.open(el,{"select": true});
+		        document.addEventListener('click', menu.close);
+		        if (event.stopPropagation) {
+		          event.stopPropagation();
+		        } else {
+		          event.cancelBubble = true;
+		        }
+		      } else {
+		        menu.close();
+		        document.removeEventListener('click', menu.close);
+		      }
+		    }
+		});
 	}
 	el.initElements();
 }

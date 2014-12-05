@@ -94,6 +94,19 @@
 			      "value": "0"
 			    }
 			]
+		},
+		{
+			"after": "> md-icon",
+			"css": [
+				{
+					"property": "padding-rigth",
+					"value": "0"
+				},
+				{
+					"property": "width",
+					"value": "36px"
+				}
+			]
 		}
 	]
 
