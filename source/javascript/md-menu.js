@@ -1,24 +1,48 @@
 var initMDMenu = function(MDMenu) {
   MDMenu.setAttribute('md-status','closed');
 
-  MDMenu.open = function(parent) {    
+  MDMenu.open = function(parent, opt) {
     MDMenu.style.display="";
 
-
-    
-    // Positioning
-    // Better support for Dani's ideas
-    // it can be personalized with a md-menu attribute
-    // or even with a parent attribute, have to see the best way
     var parentRect= parent.getBoundingClientRect();
     var viewPort= getViewport();
-    MDMenu.style.position="fixed";
-    MDMenu.style.top= parentRect.bottom + "px";
-    MDMenu.style.right=(viewPort.width - parentRect.right) + "px";
 
-    // Animation
-    MDMenu.style.height="";
-    MDMenu.setAttribute('md-status','open');
+    if (!opt) {
+      // Positioning
+      // Better support for Dani's ideas
+      // it can be personalized with a md-menu attribute
+      // or even with a parent attribute, have to see the best way
+      MDMenu.style.right=(viewPort.width - parentRect.right) + "px";
+      MDMenu.style.top= parentRect.top + "px";
+
+      // Animation
+      MDMenu.style.height="";
+      MDMenu.setAttribute('md-status','open');
+    } else {
+      if (opt.select) {
+        MDMenu.style.left= (parentRect.left - 16) + "px";
+        MDMenu.style.top= (parentRect.top - 8) + "px";
+      } else if (opt.outset) {
+        if (opt.xPosition === "right") {
+          MDMenu.style.right=(viewPort.width - parentRect.right) + "px";
+        } else {
+
+        }
+
+      } else {
+        if (opt.xPosition === "right") {
+          MDMenu.style.right=(viewPort.width - parentRect.right) + "px";
+        } else {
+
+        }
+        if (opt.yPosition === "top") {
+          MDMenu.style.top= parentRect.top + "px";
+
+        } else {
+
+        }
+      }
+    }
   }
 
   MDMenu.close = function() {
