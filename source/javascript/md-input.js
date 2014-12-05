@@ -1,9 +1,9 @@
-var initMDInput = function(MDInput) {
+var initMDInput = function(MDInput, materializer) {
 	var inputtype=MDInput.getAttribute("type");
 
 	if(inputtype==="text" || inputtype==="password" || inputtype==="email" || inputtype==="tel" || inputtype==="number" || inputtype==="url") {
-		initMDInputText(MDInput);
+		initMDInputText(MDInput, materializer);
 	} else if(inputtype==="select") {
-
+		initMDInputSelect(MDInput, materializer);
 	} 
 }
