@@ -1,6 +1,9 @@
 {
   "type": "tag",
   "name": "md-tag",
+  "alias": [
+    "md-tag2"
+  ],
   "attributes": [
     {
       "type": "attribute",

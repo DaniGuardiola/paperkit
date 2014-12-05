@@ -1,7 +1,7 @@
 {
 	"type": "tag",
 	"name": "md-input[type=text]",
-	"aliases": [
+	"alias": [
 		"md-input[type=password]",
 		"md-input[type=email]",
 		"md-input[type=tel]",
