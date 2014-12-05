@@ -2,7 +2,7 @@ var winston = require('winston');
 var sprintf = require('sprintf');
 var css = require('css');
 
-winston.level = 'debug';
+// winston.level = 'debug';
 
 module.exports = Generator;
 
