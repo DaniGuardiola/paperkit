@@ -82,36 +82,7 @@
 			]
 		},
 		{
-			"after": "> span.hint",
-			"css": [
-				{
-					"property": "position",
-					"value": "absolute"
-				},
-				{
-					"property": "content",
-					"value": "\"\""
-				},
-				{
-					"property": "top",
-					"value": "16px"
-				},
-				{
-					"property": "font-size",
-					"value": "12px"
-				},
-				{
-					"property": "transition",
-					"value": "top 0.25s ease, font-size 0.25s ease"
-				},
-				{
-					"property": "color",
-					"value": "rgba(0,0,0,0.26)"
-				}
-			]
-		},
-		{
-			"after": "> span.hint.placeholder",
+			"after": "> span",
 			"css": [
 				{
 					"property": "position",
@@ -140,9 +111,38 @@
 		    {
 		      "property": "overflow",
 		      "value": "auto"
-		    }
+		    },				
+		    {
+					"property": "transition",
+					"value": "top 0.25s ease, font-size 0.25s ease"
+				},
+				{
+					"property": "color",
+					"value": "rgba(0,0,0,0.26)"
+				}
 			]
-		},		
+		},				
+		{
+			"after": "> span.hint",
+			"css": [
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "content",
+					"value": "\"\""
+				},
+				{
+					"property": "top",
+					"value": "16px"
+				},
+				{
+					"property": "font-size",
+					"value": "12px"
+				}
+			]
+		},
 		{
 			"after": "> div.line",
 			"css": [
