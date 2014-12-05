@@ -53,6 +53,10 @@
 		    {
 		    	"property": "background-color",
 		    	"value": "transparent"
+		    },
+		    {
+		    	"property": "width",
+		    	"value": "100%"
 		    }
 			]
 		},
