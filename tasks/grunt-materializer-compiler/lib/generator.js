@@ -2,7 +2,7 @@ var winston = require('winston');
 var sprintf = require('sprintf');
 var css = require('css');
 
-// winston.level = 'debug';
+winston.level = 'debug';
 
 module.exports = Generator;
 
@@ -46,8 +46,8 @@ function Generator(jsonData, jsonConfig, imports) {
         generatedData = generatedData.concat(generateAttribute(jsonData));
       }
     }
-    winston.debug(sprintf("SOURCE DATA => %s", JSON.stringify(jsonData, null, 2)));
-    winston.debug(sprintf("GENERATED DATA => %s", JSON.stringify(generatedData, null, 2)));
+    // winston.debug(sprintf("SOURCE DATA => %s", JSON.stringify(jsonData, null, 2)));
+    // winston.debug(sprintf("GENERATED DATA => %s", JSON.stringify(generatedData, null, 2)));
 
     var cssObject = {
       "type": "stylesheet",
@@ -59,49 +59,68 @@ function Generator(jsonData, jsonConfig, imports) {
     return css.stringify(cssObject);
   };
 
-  var generateTag= function(tag, parentTag) {
+  var generateTag= function(tag, parentTag) {    
     var generatedData = [];
 
-    var name = parentTag ? (tag.before ? tag.before : "") + parentTag.name + (tag.after ? tag.after : "") : tag.name;
-    winston.debug("TAG NAME " + name);
+    if(parentTag) {
+      if(parentTag.alias) {
+        var allNames = parentTag.alias.slice(0);  
+        allNames.unshift(parentTag.name);
+      } else {
+        var allNames = [ parentTag.name ];
+      }      
+    } else {
+      var allNames = [ tag.name ];
+    }    
 
-    if('css' in tag) {
-      generatedData.push(generateRule(tag.css, name));
-    }
+    winston.debug("GENERATING TAG FOR " + JSON.stringify(allNames));
 
-    /* Render first tag responsive, then attributes responsive */
-    if('responsive' in tag) {
-      tag.responsive.forEach(function(responsive) {
-        generateMedia(responsive, name);
-      });
-    }
+    for(var i=0; i < allNames.length; i++) {
+      var name = (tag.before ? tag.before : "") + allNames[i] + (tag.after ? tag.after : "");
+      winston.debug("TAG NAME " + name);    
 
-    if('attributes' in tag) {
-      tag.attributes.forEach(function(attribute){
-        generatedData = generatedData.concat(generateAttribute(attribute, name, (('defaults' in tag) ? tag.defaults: null)));
-      });    
-    }
+      if('css' in tag) {
+        generatedData.push(generateRule(tag.css, name, null, null, null, null, null, null, null, null, tag.alias));
+      }
 
-    /* 
-    * Still supported but deprecated
-    */
-    if(('fixes' in tag) && !parentTag) {
-      winston.debug('FIXES FOUND!');
+      /* Render first tag responsive, then attributes responsive */
+      if('responsive' in tag) {
+        tag.responsive.forEach(function(responsive) {
+          generateMedia(responsive, name, null, null, null, null, null, null, tag.alias);
+        });
+      }
 
-      tag.fixes.forEach(function(fix) {
-        winston.debug(sprintf("PROCESSING FIX %s", JSON.stringify(fix, null, 2)));
-        generatedData = generatedData.concat(generateTag(fix, tag));
-      });
+      if('attributes' in tag) {
+        tag.attributes.forEach(function(attribute){
+          var defaults = ('defaults' in tag) ? tag.defaults: null;
+          winston.debug("GOING TO CALL GENERATE ATTRIBUTE WITH DEFAULTS => " + JSON.stringify(defaults));
+          generatedData = generatedData.concat(generateAttribute(attribute, name, defaults, tag.alias));
+        });    
+      }
+
+      /* 
+      * Still supported but deprecated
+      */
+      if(('fixes' in tag) && !parentTag) {
+        winston.debug('FIXES FOUND!');
+
+        tag.fixes.forEach(function(fix) {
+          winston.debug(sprintf("PROCESSING FIX %s", JSON.stringify(fix, null, 2)));
+          generatedData = generatedData.concat(generateTag(fix, tag));
+
+        });
+      }
     }
 
     return generatedData;
   }
 
-  var generateAttribute= function(attribute, tagname, defaultAttributes) {
+  var generateAttribute= function(attribute, tagname, defaultAttributes, alias) {
+    winston.debug("GENERATING ATTRIBUTE FOR TAGNAME " + tagname + " WITH ALIAS " + JSON.stringify(alias) + " AND DEFAULTS " + JSON.stringify(defaultAttributes));
     var generatedData = [];
 
     if('css' in attribute) {
-      generatedData.push(generateRule(attribute.css, tagname, attribute.name, null, null, null, defaultAttributes));  
+      generatedData.push(generateRule(attribute.css, tagname, attribute.name, null, null, null, defaultAttributes, null, null, null, alias));  
     }
 
     if('imports' in attribute) {
@@ -123,7 +142,7 @@ function Generator(jsonData, jsonConfig, imports) {
                   }
                   winston.debug(sprintf("GENERATED CSS FROM IMPORT => %s", JSON.stringify(css, null, 2)));
                   if(css.length > 0) {
-                    generatedData.push(generateRule(css, tagname, attribute.name, value.name, variant.name, value.defaultVariant, defaultAttributes));
+                    generatedData.push(generateRule(css, tagname, attribute.name, value.name, variant.name, value.defaultVariant, defaultAttributes, null, null, null, alias));
                   }
                 });
               } else {
@@ -138,7 +157,7 @@ function Generator(jsonData, jsonConfig, imports) {
                 }
                 winston.debug(sprintf("GENERATED CSS FROM IMPORT => %s", JSON.stringify(css, null, 2)));
                 if(css.length > 0) {
-                  generatedData.push(generateRule(css, tagname, attribute.name, value.name, null, null, defaultAttributes));
+                  generatedData.push(generateRule(css, tagname, attribute.name, value.name, null, null, defaultAttributes, null, null, null, alias));
                 }
               }
             });
@@ -150,13 +169,13 @@ function Generator(jsonData, jsonConfig, imports) {
     if('values' in attribute) {
       attribute.values.forEach(function(value) {
         if('css' in value) {
-          generatedData.push(generateRule(value.css, tagname, attribute.name, value.name, null, null, defaultAttributes));  
+          generatedData.push(generateRule(value.css, tagname, attribute.name, value.name, null, null, defaultAttributes, null, null, null, alias));  
         }        
 
         if('variants' in value) {
           value.variants.forEach(function(variant) {
             if('css' in variant) {
-              generatedData.push(generateRule(variant.css, tagname, attribute.name, value.name, variant.name, value.defaultVariant, defaultAttributes));
+              generatedData.push(generateRule(variant.css, tagname, attribute.name, value.name, variant.name, value.defaultVariant, defaultAttributes, null, null, null, alias));
             }          
           });
         }
@@ -167,12 +186,12 @@ function Generator(jsonData, jsonConfig, imports) {
         if('fixes' in value) {
           value.fixes.forEach(function(fix) {
             if('css' in fix) {
-              generatedData.push(generateRule(fix.css, tagname, attribute.name, value.name, null, null, defaultAttributes, null, fix.before, fix.after));
+              generatedData.push(generateRule(fix.css, tagname, attribute.name, value.name, null, null, defaultAttributes, null, fix.before, fix.after, alias));
             }
 
             if('responsive' in fix) {
               fix.responsive.forEach(function(responsive) {
-                generateMedia(responsive, tagname, attribute.name, value.name, null, defaultAttributes, fix.before, fix.after);
+                generateMedia(responsive, tagname, attribute.name, value.name, null, defaultAttributes, fix.before, fix.after, alias);
               });
             }            
           });
@@ -180,7 +199,7 @@ function Generator(jsonData, jsonConfig, imports) {
 
         if('responsive' in value) {
           value.responsive.forEach(function(responsive) {
-            generateMedia(responsive, tagname, attribute.name, value.name, null, defaultAttributes);
+            generateMedia(responsive, tagname, attribute.name, value.name, null, defaultAttributes, null, null, alias);
           });
         }
 
@@ -188,7 +207,7 @@ function Generator(jsonData, jsonConfig, imports) {
           value.variants.forEach(function(variant) {
             if('responsive' in variant) {
               variant.responsive.forEach(function(responsive) {
-                generateMedia(responsive, tagname, attribute.name, value.name, variant.name, defaultAttributes);
+                generateMedia(responsive, tagname, attribute.name, value.name, variant.name, defaultAttributes, null, null, alias);
               });            
             }          
           });
@@ -225,36 +244,48 @@ function Generator(jsonData, jsonConfig, imports) {
     return { 'property': attribute, 'value': value };
   }
 
-  var generateRule = function(css, tagname, attributename, valuename, variantname, defaultVariant, defaultAttributes, responsive, before, after) {
+  var generateRule = function(css, tagname, attributename, valuename, variantname, defaultVariant, defaultAttributes, responsive, before, after, alias) {
     var rule = new Rule(); 
-
-    if(before) {
-      rule.selectors.push()
-    }
-
-    // Generate tag defaults rule selectors
-    if(tagname && defaultAttributes) {
-      defaultAttributes.forEach(function(defaultAttribute) {
-        if(attributename && defaultAttribute.name==attributename) {
-          defaultAttribute.values.forEach(function(value) {
-            if(!valuename || (!variantname && valuename==value) 
-                || (variantname && valuename+"-"+variantname==value)) {
-                winston.debug(sprintf("ATTRIBUTE: %s VALUE: %s VARIANT: %s DEFAULT: %s",attributename, valuename, variantname, value));
-                rule.selectors.push(getSelector(tagname, null, null, null, responsive,  before, after));    
-            }
-          });
-        }
-      })
-    }
-
-    // generate default variant selector    
-    if(variantname && defaultVariant && defaultVariant==variantname) {
-      rule.selectors.push(getSelector(tagname, attributename, valuename, null, responsive, before, after));
+    
+    if(alias) {
+      var allAlias = alias.slice(0);
+      allAlias.unshift(tagname);
+    } else {
+      var allAlias = [ tagname ];
     }
     
+    for(var i=0; i < allAlias.length; i++) {      
+      tagname = allAlias[i];
+      winston.debug("GENERATING RULE FOR ALIAS => " + tagname + " WITH DEFAULTS => " + JSON.stringify(defaultAttributes));
 
-    // generate rule selectors
-    rule.selectors.push(getSelector(tagname, attributename, valuename, variantname, responsive, before, after));
+      if(before) {
+        rule.selectors.push();
+      }
+
+      // Generate tag defaults rule selectors
+      if(tagname && defaultAttributes) {
+        defaultAttributes.forEach(function(defaultAttribute) {
+          if(attributename && defaultAttribute.name==attributename) {
+            defaultAttribute.values.forEach(function(value) {
+              if(!valuename || (!variantname && valuename==value) 
+                  || (variantname && valuename+"-"+variantname==value)) {
+                  winston.debug(sprintf("ATTRIBUTE: %s VALUE: %s VARIANT: %s DEFAULT: %s",attributename, valuename, variantname, value));
+                  rule.selectors.push(getSelector(tagname, null, null, null, responsive,  before, after));    
+              }
+            });
+          }
+        })
+      }
+
+      // generate default variant selector    
+      if(variantname && defaultVariant && defaultVariant==variantname) {
+        rule.selectors.push(getSelector(tagname, attributename, valuename, null, responsive, before, after));
+      }
+      
+
+      // generate rule selectors
+      rule.selectors.push(getSelector(tagname, attributename, valuename, variantname, responsive, before, after));
+    }
 
     // Generate rule declarations
     css.forEach(function(cssValue) {
@@ -265,7 +296,7 @@ function Generator(jsonData, jsonConfig, imports) {
     return rule;
   };
 
-  var generateMedia=function(responsive, tagname, attributename, valuename, variantname, defaultAttributes, before, after) {
+  var generateMedia=function(responsive, tagname, attributename, valuename, variantname, defaultAttributes, before, after, alias) {
     var mediaquery = getMediaQuery(responsive.target).join(",\n");  
     var media = getMedia(mediaquery);
     winston.debug(sprintf("FOUND MEDIA => %s", media));
@@ -277,7 +308,7 @@ function Generator(jsonData, jsonConfig, imports) {
       generatedMedias.push(media);
     }
 
-    var rule = generateRule(responsive.css, tagname, attributename, valuename, variantname, false, defaultAttributes, true, before, after);
+    var rule = generateRule(responsive.css, tagname, attributename, valuename, variantname, false, defaultAttributes, true, before, after, alias);
     media.rules.push(rule);
   };
 
