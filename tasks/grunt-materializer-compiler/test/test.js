@@ -23,7 +23,7 @@ exports.testAttribute = function(test) {
     var generator = new Generator(attribute, settings);
     var generatedCSS = generator.generate();
 
-    fs.writeFile('tmp1.css', generatedCSS);
+    fs.writeFile('tmpAttribute.css', generatedCSS);
     test.equal(generatedCSS, expected);
     test.done();
   }
@@ -48,7 +48,7 @@ exports.testAttributeWithoutValues = function(test) {
 
     var generator = new Generator(tag, settings);
     var generatedCSS = generator.generate();
-    fs.writeFile('tmp2.css', generatedCSS);
+    fs.writeFile('tmpTag.css', generatedCSS);
     test.equal(generatedCSS, expected);
     test.done();
   }
@@ -74,6 +74,18 @@ exports.testAttributeWithoutValues = function(test) {
     var generator = new Generator(tag, settings);
     var generatedCSS = generator.generate();
     fs.writeFile('tmpTagParent.css', generatedCSS);
+    test.equal(generatedCSS, expected);
+    test.done();    
+  }
+
+  exports.testTagAlias = function(test) {
+    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var tag = fs.readFileSync('fixtures/md-tag-alias.json');
+    var expected = fs.readFileSync('expected/tag-alias.css');
+
+    var generator = new Generator(tag, settings);
+    var generatedCSS = generator.generate();
+    fs.writeFile('tmpTagAlias.css', generatedCSS);
     test.equal(generatedCSS, expected);
     test.done();    
   }
