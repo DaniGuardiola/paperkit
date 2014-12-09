@@ -54,7 +54,7 @@ var initMDMenu = function(MDMenu) {
             opt.selectEl.querySelector('[selected]').removeAttribute('selected');
             opt.selectEl.querySelector('[value="' + elTile.getAttribute('value') + '"]').setAttribute('selected','');
             opt.selectEl.setAttribute('value',elTile.getAttribute('value'));
-            MDMenu.parentNode.removeChild(MDMenu);
+            MDMenu.close(true);
           });
         });
       } else if (opt.outset) {
@@ -80,10 +80,13 @@ var initMDMenu = function(MDMenu) {
     }
   }
 
-  MDMenu.close = function() {
+  MDMenu.close = function(destroy) {
     MDMenu.style.height = "0px";
     MDMenu.addEventListener(transitionend, MDMenu.endOfTransition);
     MDMenu.status= "closed";
+    if (destroy && (destroy == true || (destroy.nodeType && destroy.getAttribute('menu-destroy') == "true"))) {
+      MDMenu.parentNode.removeChild(MDMenu);
+    }
   }
 
   MDMenu.endOfTransition = function(e) {

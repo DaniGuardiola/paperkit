@@ -59,7 +59,7 @@ var initMDInputSelect = function(el, materializer) {
 		          event.cancelBubble = true;
 		        }
 		      } else {
-		        menu.close();
+		        menu.close(true);
 		        document.removeEventListener('click', menu.close);
 		      }
 		    }
