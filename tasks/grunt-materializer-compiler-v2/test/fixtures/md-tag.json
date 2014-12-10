@@ -1,0 +1,104 @@
+{
+  "type": "tag",
+  "name": "md-tag",
+  "defaults": [
+    {
+      "name": "md-attribute",
+      "values": [ "value1", "value2-variant2" ]
+    }
+  ],
+  "css": [
+    {
+      "property": "tagproperty1",
+      "value": "taglabel1"
+    },
+    {
+      "property": "tagproperty2",
+      "value": "taglabel2"
+    }
+  ],
+  "responsive": [
+    {
+      "target": [ "device" ],
+      "css": [
+        {
+          "property": "tagresponsiveproperty1",
+          "value": "tagresponsivecsslabel1"
+        }
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-attribute",
+      "values": [
+        {
+          "name": "value1",
+          "css": [
+            {
+              "property": "property1",
+              "value": "csslabel1"
+            },
+            {
+              "property": "property2",
+              "value": "csslabel2"
+            }
+          ],
+          "responsive": [
+            {
+              "target": [ "watch", "mobile" ],
+              "css": [
+                {
+                  "property": "respproperty1",
+                  "value": "respcsslabel1"
+                }
+              ]
+            },
+            {
+              "target": [ "desktop" ],
+              "css": [
+                {
+                  "property": "respproperty2",
+                  "value": "respcsslabel2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "value2",
+          "defaultVariant": "variant2",
+          "variants": [
+            {
+              "name": "variant1",
+              "css": [
+                {
+                  "property": "variant1property1",
+                  "value": "variant1csslabel1"
+                },
+                {
+                  "property": "variant1property2",
+                  "value": "variant1csslabel2"
+                }
+              ]
+            },
+            {
+              "name": "variant2",
+              "css": [
+                {
+                  "property": "variant2property1",
+                  "value": "variant2csslabel1"
+                },
+                {
+                  "property": "variant2property2",
+                  "value": "variant2csslabel2"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }  
+  ]
+}

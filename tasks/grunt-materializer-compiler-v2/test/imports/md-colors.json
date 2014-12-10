@@ -1,0 +1,27 @@
+{
+  "name": "md-colors",
+  "type": "import",
+  "values": [
+    {
+      "defaultVariant": "100",
+      "name": "red",
+      "variants": [
+        {
+          "name": "50",
+          "value1": "#ffebee",
+          "value2": "rgba(0, 0, 0, 0.867188)"
+        },
+        {
+          "name": "100",
+          "value1": "#ffcdd2",
+          "value2": "rgba(0, 0, 0, 0.867188)"
+        }
+      ]
+    },
+    {
+      "name": "black",
+      "value1": "#000000",
+      "value2": "#ffffff"
+    }
+  ]
+}
