@@ -6,7 +6,10 @@ module.exports = function(grunt) {
 
       // 1 - Cleaning bin and demo
       clean: [
-        'bin/*',
+        'bin/grunt-materializer',
+        'bin/materializer',
+        'bin/md',
+        'bin/resources',
         'grunt-materializer/sources/'
         ],
 
@@ -162,7 +165,7 @@ module.exports = function(grunt) {
 
   // Loading our custom tasks
   grunt.loadTasks('tasks');
-  grunt.loadTasks('tasks/grunt-materializer-compiler');
+  grunt.loadTasks('tasks/grunt-materializer-compiler-v2');
 
   // Loading NPM tasks
   grunt.loadNpmTasks('grunt-contrib-clean');
