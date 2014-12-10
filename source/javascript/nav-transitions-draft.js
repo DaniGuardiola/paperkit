@@ -28,7 +28,6 @@ var transition = {
 			} else if (!nobg) {
 				what.style.backgroundColor = "#fff";
 			}			
-			console.log("HEYHEYHEY: " + whereStyle.backgroundColor);
 			what.style.position = "fixed";
 			what.style.top = where.top + "px";
 			what.style.left = where.left + "px";
@@ -121,6 +120,60 @@ function getEl(el){
 		}
 	} else {
 		return false;
+	}	
+}
+
+
+var Transition = function(ownerElement) {
+	this.ownerElement = ownerElement;	
+	this.tmpDiv = document.createElement('div');
+	this.tmpDiv.id="tmpDiv";
+	this.tmpDiv.style.position= "absolute";
+	this.tmpDiv.style.visibility= "hidden";
+	document.body.appendChild(tmpDiv);
+
+	this.morph= function(originElement, destinationElement) {
+		if(originElement) {
+			this.originElement = originElement;
+		}
+
+		if(destinationElement) {
+			this.destinationRect = destinationElement.getBoundingClientRect();
+		}
+
+		// Initial state...
+		this.whatElement.style.borderRadius = "0";
+		this.whatElement.style.zIndex = "400";
+		this.parentElement.style.position="absolute";
+		this.parentElement.style.top = "0px";
+		this.parentElement.style.left = "0px";
+		this.parentElement.style.width = originElement.getBoundingClientRect().width;
+		this.parentElement.style.height = originElement.getBoundingClientRect().height;
+		
+		this.whatElement.style.transition = "all 0.5s";
+
+		this.whatElement.style.top = destinationRect.top + "px";
+		this.whatElement.style.left = destinationRect.left + "px";
+		this.whatElement.style.width = destinationRect.width + "px";
+		this.whatElement.style.height = destinationRect.height + "px";
 	}
-	
+
+	this.expand=function() {
+		
+		var initialHeight = parentElement ? parentElement.getBoundingClientRect().height : 0;
+		var finalHeight = ownerElement.getBoundingClientRect().height;
+/*
+		collectorTile.style.transition = "max-height 0.5s";
+			collectorTile.style.marginTop="20px";
+			collectorTile.style.marginBottom="20px";
+			collectorTile.style.width="114%";
+			collectorTile.style.left="-7%";
+		collectorTile.style.maxHeight = height + "px";
+		collectorTile.parentNode.parentNode.style.overflow="visible";
+*/
+		ownerElement.style.height = initialHeight + "px";
+		ownerElement.style.visibility = "visible";
+		ownerElement.style.transition = "height 0.5s ease-in-out";
+		ownerElement.style.height = finalHeight + "px";
+	}
 }

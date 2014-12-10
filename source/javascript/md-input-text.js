@@ -41,7 +41,6 @@ var initMDInputText = function(MDInput) {
 			this.input.addEventListener('focus', MDInput.setFocus.bind(this));
 			this.input.addEventListener('blur', MDInput.removeFocus.bind(this));			
 		}
- 
 	} 
 
 	/**

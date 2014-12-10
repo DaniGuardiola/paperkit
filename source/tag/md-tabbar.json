@@ -23,30 +23,6 @@
       "value": "relative"
     }    
   ],
-  "attributes": [
-    {
-      "type": "attribute",
-      "name": "md-type",
-      "values": [
-        {
-          "name": "fixed",
-          "css": [
-            {
-              "property": "min-width",
-              "value": "355px"
-            }
-          ],
-          "fixes": [
-            {
-              "after": " md-tab",
-              "css": [
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ],
   "fixes": [
     {
       "after": ">#selector",

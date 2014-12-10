@@ -5,9 +5,10 @@ var initMDList = function(MDList,materializer) {
 
   MDList.clickListener = function(e) {
     var el = e.currentTarget;
-
-    console.log("Fired click on " + el.tagName);
-    if(el.tagName==='MD-TILE' && el.parentElement===MDList) {
+    var parentList = el.parentNode;
+    
+    if(el.tagName==='MD-TILE' && parentList===this) {
+      console.log("Fired click on " + el.tagName);      
       if(el.getAttribute('md-action')) {
         var action = el.getAttribute('md-action');
       } else {
@@ -48,18 +49,18 @@ var initMDList = function(MDList,materializer) {
     executeFunctionByName(f, window, [ target ]);
   };
 
-  var initChildrenActions= function() {
+  MDList.initList= function() {
     var children = MDList.children;    
     for(var i=0; i<children.length;i++) {
       if(children[i].tagName==='MD-TILE') {        
         var tile = children[i];
-        tile.addEventListener('click', MDList.clickListener);
+        tile.addEventListener('click', MDList.clickListener.bind(this));
       }
     }
   }
 
   // Initialize listerner
-  initChildrenActions();
+  MDList.initList();
 
   // SET INITIAL PROPERTIES  
   if(MDList.getAttribute('md-action')) {

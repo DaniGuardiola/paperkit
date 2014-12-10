@@ -123,6 +123,10 @@
 				{
 					"property": "color",
 					"value": "rgba(0,0,0,0.26)"
+				},
+				{
+					"property": "white-space",
+					"value": "nowrap"
 				}
 			]
 		},				

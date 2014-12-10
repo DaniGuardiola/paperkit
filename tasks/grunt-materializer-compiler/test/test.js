@@ -10,7 +10,7 @@ exports.testVariants = function(test) {
     var generator = new Generator(attribute, settings);
     var generatedCSS = generator.generate();
 
-    fs.writeFile('tmpvariant.css', generatedCSS);
+    fs.writeFileSync('tmpvariant.css', generatedCSS);
     test.equal(generatedCSS, expected);
     test.done();    
 }
@@ -23,7 +23,7 @@ exports.testAttribute = function(test) {
     var generator = new Generator(attribute, settings);
     var generatedCSS = generator.generate();
 
-    fs.writeFile('tmpAttribute.css', generatedCSS);
+    fs.writeFileSync('tmpAttribute.css', generatedCSS);
     test.equal(generatedCSS, expected);
     test.done();
   }
@@ -36,7 +36,7 @@ exports.testAttributeWithoutValues = function(test) {
     var generator = new Generator(attribute, settings);
     var generatedCSS = generator.generate();
 
-    fs.writeFile('tmpAttributeWithoutValues.css', generatedCSS);
+    fs.writeFileSync('tmpAttributeWithoutValues.css', generatedCSS);
     test.equal(generatedCSS, expected);
     test.done();
   }
@@ -48,7 +48,7 @@ exports.testAttributeWithoutValues = function(test) {
 
     var generator = new Generator(tag, settings);
     var generatedCSS = generator.generate();
-    fs.writeFile('tmpTag.css', generatedCSS);
+    fs.writeFileSync('tmpTag.css', generatedCSS);
     test.equal(generatedCSS, expected);
     test.done();
   }
@@ -61,7 +61,7 @@ exports.testAttributeWithoutValues = function(test) {
 
     var generator = new Generator(tag, settings, [ imports ]);
     var generatedCSS = generator.generate();
-    fs.writeFile('tmpAttributeWithImports.css', generatedCSS);
+    fs.writeFileSync('tmpAttributeWithImports.css', generatedCSS);
     test.equal(generatedCSS, expected);
     test.done();
   }
@@ -73,7 +73,7 @@ exports.testAttributeWithoutValues = function(test) {
 
     var generator = new Generator(tag, settings);
     var generatedCSS = generator.generate();
-    fs.writeFile('tmpTagParent.css', generatedCSS);
+    fs.writeFileSync('tmpTagParent.css', generatedCSS);
     test.equal(generatedCSS, expected);
     test.done();    
   }
@@ -85,7 +85,7 @@ exports.testAttributeWithoutValues = function(test) {
 
     var generator = new Generator(tag, settings);
     var generatedCSS = generator.generate();
-    fs.writeFile('tmpTagAlias.css', generatedCSS);
+    fs.writeFileSync('tmpTagAlias.css', generatedCSS);
     test.equal(generatedCSS, expected);
     test.done();    
   }
@@ -97,7 +97,7 @@ exports.testAttributeWithoutValues = function(test) {
 
     var generator = new Generator(tag, settings);
     var generatedCSS = generator.generate();
-    fs.writeFile('tmpFixes.css', generatedCSS);
+    fs.writeFileSync('tmpFixes.css', generatedCSS);
     test.equal(generatedCSS, expected);
     test.done();    
   }

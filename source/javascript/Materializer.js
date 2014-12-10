@@ -96,6 +96,8 @@ Materializer.prototype.addMDMethods= function(element) {
       this.fab = element;
     } else if(tag=="md-content") {
       this.content = element;
+    } else if(tag==="md-pager") {
+      initMDPager(element, this);
     }
   }
 };
@@ -220,6 +222,16 @@ var isMobile = function() {
   }
 }
 
+Materializer.prototype.initElement= function(element) {
+  // first init this element
+  this.addMDMethods(element);
+
+  // then init child elements
+  for(var i=0; i<element.children.length; i++) {
+    this.initElement(element.children[i]);
+  }
+}
+
 
 Materializer.prototype.justInCase= function(dowhat){
   if (dowhat=="reload") {
@@ -242,16 +254,16 @@ Materializer.prototype.ajaxInsert= function(what, where, onload, param) {
   var xhr = new XMLHttpRequest;
   xhr.open("GET", what);
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-  where.classList.add('op-0-child');
+//  where.classList.add('op-0-child');
   xhr.addEventListener('load',function(){
     getEl(where).innerHTML = xhr.responseText;
-    setTimeout(function(){
-      where.classList.add('op-1-child');
-      where.classList.remove('op-0-child');
-      setTimeout(function(){
-        where.classList.remove('op-1-child');
-      },750);
-    },250);
+//    setTimeout(function(){
+//      where.classList.add('op-1-child');
+//      where.classList.remove('op-0-child');
+//      setTimeout(function(){
+//        where.classList.remove('op-1-child');
+//      },750);
+//    },250);
     onload(xhr.responseText,where);
   });
   xhr.send();
