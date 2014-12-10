@@ -1,0 +1,30 @@
+{
+  "type": "attribute",
+  "name": "md-attribute",
+  "values": [
+    {
+      "name": "value1",
+      "defaultVariant": "variant2",
+      "variants": [
+        {
+          "name": "variant1",
+          "css": [
+            {
+              "property": "property1",
+              "value": "csslabel1"                                
+            }
+          ]
+        },
+        {
+          "name": "variant2",
+          "css": [
+            {
+              "property": "property2",
+              "value": "csslabel2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "type": "tag",
+  "name": "md-tag",
+  "alias": [
+    "md-tag2"
+  ],
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-attribute1",
+      "values": [
+        {
+          "type": "value",
+          "name": "value1",
+          "css": [
+            {
+              "property": "property1",
+              "value": "csslabel1"
+            }
+          ],
+          "fixes": [
+            {
+              "description": "this fixes md-tag when md-parenttag blablabla and the more you know",
+              "before": "md-parenttag > ",
+              "after": ":not([hidden]) md-child:hover",
+              "css": [
+                {
+                  "property": "property1",
+                  "value": "csslabel2"
+                }
+              ],
+              "responsive": [
+                {
+                  "target": ["desktop"],
+                  "css": [
+                    {
+                      "property": "property1",
+                      "value": "csslabel3"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

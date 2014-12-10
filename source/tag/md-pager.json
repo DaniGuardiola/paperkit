@@ -1,0 +1,33 @@
+{
+	"type": "tag",
+	"name": "md-pager",
+	"css": [
+		{
+			"property": "display",
+			"value": "flex"
+		},
+		{
+			"property": "overflow-x",
+			"value": "hidden"
+		}
+	],
+	"fixes": [
+		{
+			"after": "> md-page",
+			"css": [
+				{
+					"property": "flex-shrink",
+					"value": "0"
+				},
+				{
+					"property": "width",
+					"value": "100%"
+				},
+				{
+					"property": "transition",
+					"value": "transform 0.45s ease-in-out"
+				}
+			]
+		}
+	]
+}
