@@ -1,4 +1,6 @@
 upload.x
+uploadguide.x
+uploadbin.x
 node_modules
 bin/
 guide/materializer/
