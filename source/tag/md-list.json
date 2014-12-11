@@ -104,6 +104,15 @@
               ]
             },
             {
+              "after": " md-tile> md-text:last-child",
+              "css": [
+                {
+                  "property": "margin-right",
+                  "value": "16px"
+                }
+              ]
+            },
+            {
               "after": " md-tile> md-icon + md-text",
               "css": [
                 {
@@ -175,7 +184,8 @@
               ]
             },
             {
-              "after": " md-tile> *:not(div):last-child",
+              "comment": "TODO: REVISAR ESTE SELECTOR, antes estaba md-tile> *:not(div):last-child",
+              "after": " md-tile> md-icon:last-child",
               "css": [
                 {
                   "property": "margin-right",

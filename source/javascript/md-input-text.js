@@ -11,9 +11,9 @@ var initMDInputText = function(MDInput) {
 
 		this.input = document.createElement("input");
 		this.input.id=this.id + "-input";
-		this.input.type = this.getAttribute("type");
-		this.input.value = this.getAttribute("value");
-		this.input.name = this.getAttribute("name");
+		this.input.type= this.getAttribute("type");
+		this.input.value= this.getAttribute("value");
+		this.input.name= this.getAttribute("name");
 		this.appendChild(this.input);
 
 		var spanError = document.createElement("span");
