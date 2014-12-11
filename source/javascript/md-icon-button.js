@@ -28,6 +28,7 @@ var initMDIconButton = function(MDIconButton) {
     if(menu) {
       if(menu.status=="closed") {
         menu.open(el);
+        
         document.addEventListener('click', closeListener);
         if (event.stopPropagation) {
           event.stopPropagation()

@@ -222,6 +222,37 @@ var isMobile = function() {
   }
 }
 
+/**
+ * Calculates text width when it's rendered with the given style.
+ * It has the cost of rendering and removing a hidden div element.
+ * 
+ * @param {string}  string              The string to calculate width
+ * @param {style}   CSSStyleDeclaration The style to apply to string
+ * @return {object} Metrics object containing width and height properties.
+ */
+Materializer.prototype.calcTextMetrics= function(string, style) {
+    var div = document.createElement('div');
+    div.style.position="absolute";
+    div.style.visibility="hidden";
+    div.style.height="auto";
+    div.style.width="auto";
+    div.style.whiteSpace="nowrap";
+    div.style.fontSize=style.fontSize;
+    div.innerText=string;
+    document.body.appendChild(div);
+    var metricsWidth = div.clientWidth;
+    var metricsHeight = div.clientHeight;
+    document.body.removeChild(div);
+    return { "width": metricsWidth, "height": metricsHeight };
+}
+
+/**
+ * Initializes an element and all it's subelements by
+ * applying material initialization to this element, and all it's 
+ * subelements.
+ * 
+ * @param {object} element The element to initialize.
+ */
 Materializer.prototype.initElement= function(element) {
   // first init this element
   this.addMDMethods(element);
