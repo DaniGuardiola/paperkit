@@ -1,7 +1,10 @@
 upload.x
+uploadguide.x
+uploadbin.x
 node_modules
 bin/
 guide/materializer/
 grunt-materializer/sources/
 script.sh
 tmp*.css
+.settings

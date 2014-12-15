@@ -1,3 +1,4 @@
+// TODO: Review, it doesn't work with new menu...
 var initMDIconButton = function(MDIconButton) {
   initMDButton(MDIconButton);
 
@@ -17,7 +18,7 @@ var initMDIconButton = function(MDIconButton) {
           el.callFunction(f, el);
         } else if(action.indexOf('menu:') != -1) {
           var f = action.substring(action.indexOf('menu:') + 'menu:'.length).trim();
-          el.openMenu(f, el);
+          el.openMenu(f);
         }
         break;
     }   
@@ -25,40 +26,31 @@ var initMDIconButton = function(MDIconButton) {
 
   MDIconButton.openMenu= function(menuName, el) {
     var menu=document.getElementById(menuName);
+    
     if(menu) {
       if(menu.status=="closed") {
-        menu.open(el);
+        menu.setAttribute("md-position", "parentIcon");
+        menu.setCallback(this.menuListener);
+        menu.open(this);
         
-        document.addEventListener('click', closeListener);
-        if (event.stopPropagation) {
-          event.stopPropagation()
-        } else {
-          event.cancelBubble = true
-        }
-      } else {
-        menu.close();
-        document.removeEventListener('click', closeListener);
       }
+    }
+    
+    if (event.stopPropagation) {
+      event.stopPropagation()
+    } else {
+      event.cancelBubble = true
     }
   }
 
-  function closeListener(e) {
-    var action=MDIconButton.getAttribute("md-action");
-    var menuName = action.substring(action.indexOf('menu:') + 'menu:'.length).trim();
-    var menu=document.getElementById(menuName);
-    menu.close();
-
-    /*
-    * This event goes down-up, once it reaches the target tile there is no need to
-    * go down, let's cancel event bubbling. It acts "almost" like a background modal layer
-    */
-    if(e.stopPropagation) {
-      e.stopPropagation();
-    } else {
-      e.cancelBubble=true;
-    }    
-
-    document.removeEventListener('click', closeListener);
+  /**
+   * Listener for menu selection. Callback for the menu object.
+   * 
+   * @param {element} tile The selected tile element.
+   */
+  MDIconButton.menuListener = function(tile, menu) {
+    // Close the menu.
+    menu.close(true);
   }
 
   MDIconButton.addEventListener('click', MDIconButton.clickListener);
