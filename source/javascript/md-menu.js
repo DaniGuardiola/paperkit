@@ -16,7 +16,6 @@ var initMDMenu = function(MDMenu) {
   MDMenu.init= function() {
     console.log("INITIALIZING MD-MENU");
     this.status="closed";
-    this.generateWidth();
   }
   
   /**
@@ -24,7 +23,10 @@ var initMDMenu = function(MDMenu) {
    * @param {Element} parent Parent element this menu depends on.
    */
   MDMenu.open = function(parent) {
-    var openMode= this.getAttribute("md-position"); 
+    var openMode= this.getAttribute("md-position");
+    
+    // Recalculates width
+    this.generateWidth();
 
     if(openMode==="parentInputSelect") {
       this.parentInputSelectOpen(parent);
@@ -113,8 +115,8 @@ var initMDMenu = function(MDMenu) {
     this.style.top= (parentRect.top - 6) + "px";
 
     if(this.children.length<5 || true) {
-      if(this.querySelector('md-list> md-tile[selected]')) {
-        var selected = this.querySelector('md-list> md-tile[selected]');
+      if(this.querySelector('md-tile[selected]')) {
+        var selected = this.querySelector('md-tile[selected]');
         this.scrollTop = selected.offsetTop - 8;
         
         if (this.scrollTop != selected.offsetTop) {
@@ -224,7 +226,7 @@ var initMDMenu = function(MDMenu) {
   
   /**
    * Sets selected value
-   * @param {string} value - The value to select.
+   * @param {string} value - The value to set.
    */
   MDMenu.setSelectedValue = function(value) {
     if(!value) {
@@ -241,6 +243,18 @@ var initMDMenu = function(MDMenu) {
     if(element) {
       element.setAttribute('selected','');
     }
+  }
+  
+  /**
+   * Adds an option to the menu.
+   * @param {string} value The value for the option
+   * @param {string} label The label for the option
+   */
+  MDMenu.addOption= function(value, label) {
+    var tile= document.createElement('md-tile');
+    tile.innerHTML = '<md-text>' + label + '</md-text>';
+    tile.setAttribute('value', value);
+    this.appendChild(tile);
   }
  
   MDMenu.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
