@@ -15,34 +15,26 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     var el = e.currentTarget;
     console.log("CLICK EN INPUT SELECT");
     if (el.tagName === "MD-INPUT" && el === this) {
+      // var menu = document.getElementById(this.getMenuId()) ? document.getElementById(this.getMenuId()) :  
+        
       if (document.getElementById(this.id + '-menu')) {
         var menu = document.getElementById(this.id + '-menu');
       } else {
         // Create md-menu element
-        // Should it be done this way? Does an md-input-select have to know how
-        // an md-menu is internally built?
         var menu = document.createElement('md-menu');
+        materializer.initElement(menu);
+        
         menu.id = this.getMenuId();
         menu.setAttribute("md-position", "parentInputSelect");
         
-        // Create md-list element inside menu element
-        var list = document.createElement('md-list');
-        list.setAttribute('md-action', '');
-
         // Add options as md-tiles
         [].forEach.call(this.querySelectorAll('option'), function(option) {
-          var tile = document.createElement('md-tile');
-          tile.innerHTML = '<md-text>' + option.innerText + '</md-text>';
-          tile.setAttribute('value', option.getAttribute('value'));
-          list.appendChild(tile);
+          menu.addOption(option.getAttribute('value'), option.innerText);
         }, this);
-
-        menu.appendChild(list);
+        
         document.body.appendChild(menu);
       }
-
-      // TODO: See if this is needed, because of mutation observer.
-      materializer.initElement(menu);
+      
       menu.setSelectedValue(this.getAttribute('value'));
       menu.setCallback(this.menuListener.bind(this));
       menu.open(this);

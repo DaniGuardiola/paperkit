@@ -1,6 +1,6 @@
 {
   "type": "tag",
-  "name": "md-list",
+  "names": [ "md-list", "md-menu" ],
   "css": [
     {
       "property": "display",
