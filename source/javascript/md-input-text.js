@@ -1,6 +1,7 @@
 var initMDInputText = function(MDInput) {
 	var spanHint;
 	var input;
+	var value;
 
 	MDInput.initElements = function() {
 		var value = this.getAttribute('value');
@@ -12,7 +13,7 @@ var initMDInputText = function(MDInput) {
 		this.input = document.createElement("input");
 		this.input.id=this.id + "-input";
 		this.input.type= this.getAttribute("type");
-		this.input.value= this.getAttribute("value");
+		this.value = this.input.value= this.getAttribute("value");
 		this.input.name= this.getAttribute("name");
 		this.appendChild(this.input);
 
@@ -41,6 +42,8 @@ var initMDInputText = function(MDInput) {
 			this.input.addEventListener('focus', MDInput.setFocus.bind(this));
 			this.input.addEventListener('blur', MDInput.removeFocus.bind(this));			
 		}
+		
+		this.input.addEventListener('change', MDInput.changeValue.bind(this));
 	} 
 
 	/**
@@ -56,6 +59,19 @@ var initMDInputText = function(MDInput) {
 	}
 
 	/* ---- EVENT LISTENERS ---- */
+	
+	/**
+	 * Listener for value change in input element.
+	 * Sets md-input value to element value.
+	 * @param {event} e Event object @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Event}
+	 */
+	MDInput.changeValue = function(e) {
+	  if(this===MDInput) { // Sanity check.
+  	  var el = e.currentTarget;
+  	  this.value = el.value;
+	  }
+	}
+	
 	/**
 	 * Listener for focus entry and content change, handles focus and input event for input object
 	 * moves placeholder to hint.
