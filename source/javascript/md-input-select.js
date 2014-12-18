@@ -5,6 +5,7 @@
  */
 var initMDInputSelect = function(MDInputSelect, materializer) {
   var spanText;
+  var value;
 
   /**
    * Click listener
@@ -17,6 +18,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     if (el.tagName === "MD-INPUT" && el === this) {
       // var menu = document.getElementById(this.getMenuId()) ? document.getElementById(this.getMenuId()) :  
         
+      // TODO: Esto sigue pendiente de revisar.
       if (document.getElementById(this.id + '-menu')) {
         var menu = document.getElementById(this.id + '-menu');
       } else {
@@ -35,6 +37,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
         document.body.appendChild(menu);
       }
       
+      this.value = this.getAttribute('value');
       menu.setSelectedValue(this.getAttribute('value'));
       menu.setCallback(this.menuListener.bind(this));
       menu.open(this);
@@ -55,7 +58,8 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
   MDInputSelect.menuListener = function(tile, menu) {
     if (tile) {
       var text = tile.querySelector('md-text').innerText;
-      var value = tile.getAttribute('value');
+      var value = this.value = tile.getAttribute('value');
+      
 
       // Change selected option, text and value.
       this.spanText.innerText = text;
