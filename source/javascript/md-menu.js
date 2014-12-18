@@ -202,7 +202,7 @@ var initMDMenu = function(MDMenu) {
       this.open();
     }
   }
-  
+    
   /**
    * Gets the currently selected element
    * @return {Element} md-tile currently selected
@@ -244,7 +244,16 @@ var initMDMenu = function(MDMenu) {
       element.setAttribute('selected','');
     }
   }
-  
+
+  /**
+   * Clears the options list
+   */
+  MDMenu.clearOptions= function() {
+    while (this.firstChild) {
+      this.removeChild(this.firstChild);
+    }
+  }
+
   /**
    * Adds an option to the menu.
    * @param {string} value The value for the option
