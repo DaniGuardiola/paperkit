@@ -6,6 +6,7 @@
 var initMDInputSelect = function(MDInputSelect, materializer) {
   var spanText;
   var value;
+  var menu;
 
   /**
    * Click listener
@@ -16,31 +17,27 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     var el = e.currentTarget;
     console.log("CLICK EN INPUT SELECT");
     if (el.tagName === "MD-INPUT" && el === this) {
-      // var menu = document.getElementById(this.getMenuId()) ? document.getElementById(this.getMenuId()) :  
-        
-      // TODO: Esto sigue pendiente de revisar.
-      if (document.getElementById(this.id + '-menu')) {
-        var menu = document.getElementById(this.id + '-menu');
-      } else {
-        // Create md-menu element
-        var menu = document.createElement('md-menu');
-        materializer.initElement(menu);
-        
-        menu.id = this.getMenuId();
-        menu.setAttribute("md-position", "parentInputSelect");
-        
-        // Add options as md-tiles
-        [].forEach.call(this.querySelectorAll('option'), function(option) {
-          menu.addOption(option.getAttribute('value'), option.innerText);
-        }, this);
-        
-        document.body.appendChild(menu);
+      if(!this.menu) {
+        this.menu = document.createElement('md-menu');
+        this.menu.id = this.getMenuId();
+        materializer.initElement(this.menu);        
+        document.body.appendChild(this.menu);
       }
+
+      this.menu.setAttribute("md-position", "parentInputSelect");
+      this.menu.clearOptions();
+      
+      // TODO: Should this be done allways???? 
+      // It's slow as hell if there are lots of options...
+      // Add options as md-tiles
+      [].forEach.call(this.querySelectorAll('option'), function(option) {
+        this.menu.addOption(option.getAttribute('value'), option.innerText);
+      }, this);      
       
       this.value = this.getAttribute('value');
-      menu.setSelectedValue(this.getAttribute('value'));
-      menu.setCallback(this.menuListener.bind(this));
-      menu.open(this);
+      this.menu.setSelectedValue(this.getAttribute('value'));
+      this.menu.setCallback(this.menuListener.bind(this));
+      this.menu.open(this);
     }
 
     if (event.stopPropagation) {
