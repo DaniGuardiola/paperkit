@@ -1,6 +1,6 @@
 {
 	"type": "tag",
-	"name": "md-switch",
+	"names": [ "md-switch", "md-checkbox" ],
 	"css": [
 		{
 			"property": "height",
