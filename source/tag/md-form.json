@@ -1,0 +1,130 @@
+{
+  "type": "tag",
+  "names": [ "md-form", "form[md-layout]" ],
+  "css": [
+    {
+      "property": "display",
+      "value": "flex"
+    },
+    {
+      "property": "flex-wrap",
+      "value": "wrap"
+    },
+    {
+      "property": "flex-direction",
+      "value": "column"
+    }
+  ],
+  "fixes": [
+    {
+      "after": "> md-row",
+      "css": [
+        {
+          "property": "flex",
+          "value": "1"
+        },
+        {
+          "property": "display",
+          "value": "flex"
+        },
+        {
+          "property": "flex-wrap",
+          "value": "nowrap"
+        },
+       	{
+       		"property": "min-height",
+       		"value": "48px"
+       	}
+      ],
+      "responsive": [
+        {
+          "target": [ "mobile", "watch" ],
+          "css": [
+            {
+              "property": "flex-wrap",
+              "value": "wrap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "after": "> md-row> md-tile",
+      "css": [
+      	{
+      		"property": "display",
+      		"value": "flex"
+      	},
+      	{
+      		"property": "width",
+      		"value": "0px"
+      	},
+      	{
+      		"property": "padding-left",
+      		"value": "24px"
+      	},
+      	{
+      		"property": "align-items",
+      		"value": "center"
+      	}
+      ],
+      "responsive": [
+        {
+          "target": [ "mobile", "watch" ],
+          "css": [
+            {
+              "property": "width",
+              "value": "100%"
+            },
+            {
+              "property": "flex-shrink",
+              "value": "0"
+            },
+            {
+            	"property": "padding-left",
+            	"value": "16px"
+            },
+            {
+            	"property": "padding-right",
+            	"value": "16px"
+            }
+          ]
+        }
+      ]
+    },
+  	{
+  		"after": "> md-row> md-tile:last-child",
+  		"css": [
+  			{
+  				"property": "padding-right",
+  				"value": "24px"
+  			}
+  		],
+  		"responsive": [
+  			{  				
+  				"target": [ "mobile", "watch" ],
+  				"css": [
+  					{
+  						"property": "padding-right",
+  						"value": "16px"
+  					}
+  				] 
+  			}
+  		]
+  	},    
+    {
+      "after": "> md-row> md-tile[md-space]",      
+      "responsive": [
+        {
+          "target": [ "mobile", "watch" ],
+          "css": [
+            {
+              "property": "display",
+              "value": "none"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

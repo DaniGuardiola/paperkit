@@ -13,10 +13,6 @@
     {
       "property": "background",
       "value": "white"
-    },
-    {
-      "property": "overflow",
-      "value": "hidden"
     }
   ],
   "attributes": [
