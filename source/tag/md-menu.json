@@ -33,6 +33,10 @@
     {
       "property": "overflow",
       "value": "hidden"
+    },
+    {
+      "property": "cursor",
+      "value": "pointer"
     }
   ]
  }
