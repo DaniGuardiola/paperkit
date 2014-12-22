@@ -34,4 +34,20 @@ while (i < 41) {
     output.values.push(value);
     i++;
 }
+for(var i=1; i <= 20; i++) {
+    var value = {
+        name: "c" + i,
+        css: [
+            {
+                property: "flex-grow",
+                value: "" + i
+            }, 
+            {
+                property: "flex-shrink",
+                value: "0"
+            }
+        ]
+    }
+    output.values.push(value);
+}
 console.log(JSON.stringify(output, undefined, 2));
