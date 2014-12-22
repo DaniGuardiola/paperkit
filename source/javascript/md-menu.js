@@ -1,3 +1,6 @@
+/**
+ * @class MDMenu
+ */
 var initMDMenu = function(MDMenu) {
   // Status of menu (opened | closed).
   MDMenu.status = "closed";
@@ -22,7 +25,7 @@ var initMDMenu = function(MDMenu) {
    * Opens the menu.
    * @param {Element} parent Parent element this menu depends on.
    */
-  MDMenu.open = function(parent) {
+  MDMenu.open= function(parent) {
     var openMode= this.getAttribute("md-position");
     
     // Recalculates width
@@ -55,7 +58,7 @@ var initMDMenu = function(MDMenu) {
    * Closes the menu.
    * @param {boolean} Optionally destroy menu element...
    */
-  MDMenu.close = function(destroy) {
+  MDMenu.close= function(destroy) {
     // Transition
     this.calculatedHeight = this.style.maxHeight;
     this.style.maxHeight = "0px";
@@ -65,14 +68,13 @@ var initMDMenu = function(MDMenu) {
     // Remove listener and set status
     document.removeEventListener('click', this.bindedListener);
     this.status= "closed";    
-    
   }
   
   /**
    * Listener for end of transition.
    * @param {Event} e Event object @see {url https://developer.mozilla.org/en-US/docs/Web/API/Event}
    */
-  MDMenu.endOfCloseTransition = function(e) {
+  MDMenu.endOfCloseTransition= function(e) {
     this.style.visibility="hidden";
     this.style.maxHeight = this.calculatedHeight;
     this.removeEventListener(transitionend, this.endOfCloseTransition);
@@ -91,6 +93,7 @@ var initMDMenu = function(MDMenu) {
   /**
    * Open this menu related to a parent icon
    * @param {Element} parent Parent icon.
+   * TODO: review
    */
   MDMenu.parentIconOpen = function(parent) {
     var parentRect= parent.getBoundingClientRect();
