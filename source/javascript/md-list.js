@@ -1,4 +1,9 @@
 var initMDList = function(MDList,materializer) {
+  /**
+   * Callback for attribute change
+   * @param {string} attrname Attribute name
+   * 
+   */
   MDList.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
   };
@@ -57,6 +62,27 @@ var initMDList = function(MDList,materializer) {
         tile.addEventListener('click', MDList.clickListener.bind(this));
       }
     }
+  }
+  
+  /**
+   * Clears the options list
+   */
+  MDList.clearTiles= function() {
+    while (this.firstChild) {
+      this.removeChild(this.firstChild);
+    }
+  }
+
+  /**
+   * Adds an option to the menu.
+   * @param {string} value The value for the option
+   * @param {string} label The label for the option
+   */
+  MDList.addTile= function(value, label) {
+    var tile= document.createElement('md-tile');
+    tile.innerHTML = '<md-text>' + label + '</md-text>';
+    tile.setAttribute('value', value);
+    this.appendChild(tile);
   }
 
   // Initialize listerner
