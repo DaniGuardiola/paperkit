@@ -1,9 +1,9 @@
 var initMDSwitch = function(MDSwitch) {
   MDSwitch.toggle = function(e) {
     if (MDSwitch.getAttribute('value') !== "on") {
-      MDSwitch.on();
+      this.on();
     } else {
-      MDSwitch.off();
+      this.off();
     }
     if (e.stopPropagation) {
         e.stopPropagation();
@@ -13,13 +13,13 @@ var initMDSwitch = function(MDSwitch) {
   }
 
   MDSwitch.on = function() {
-    MDSwitch.setAttribute("value", "on");
-    MDSwitch.value = "on";
+    this.setAttribute("value", "on");
+    this.value = "on";
   }
 
   MDSwitch.off = function() {
-    MDSwitch.setAttribute("value", "off");
-    MDSwitch.value = "off";
+    this.setAttribute("value", "off");
+    this.value = "off";
   }
 
   MDSwitch.addEventListener('click', MDSwitch.toggle);
