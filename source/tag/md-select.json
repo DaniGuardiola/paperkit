@@ -13,6 +13,10 @@
 		{
 			"property": "height",
 			"value": "48px"
+		},
+		{
+			"property": "cursor",
+			"value": "pointer"
 		}
 	],
 	"fixes": [

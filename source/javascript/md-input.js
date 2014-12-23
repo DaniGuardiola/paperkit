@@ -5,5 +5,7 @@ var initMDInput = function(MDInput, materializer) {
 		initMDInputText(MDInput, materializer);
 	} else if(inputtype==="select") {
 		initMDInputSelect(MDInput, materializer);
+	} else if(inputtype==="checkbox") {
+		initMDInputCheckbox(MDInput, materializer);
 	} 
 }
