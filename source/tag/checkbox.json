@@ -1,6 +1,6 @@
 {
 	"type": "tag",
-	"names": [ "md-switch", "md-checkbox" ],
+	"name": "md-input[type=checkbox]",
 	"css": [
 		{
 			"property": "height",
@@ -20,7 +20,7 @@
 		},
 		{
 			"property": "background-size",
-			"value": "100% auto"
+			"value": "24px"
 		},
 		{
 			"property": "background-repeat",
@@ -29,21 +29,29 @@
 		{
 			"property": "cursor",
 			"value": "pointer"
-		},
-		{
-			"property": "position",
-			"value": "relative"
 		}
 	],
 	"attributes": [
 		{
 			"type": "attribute",
-			"name": "value",
-			"values": [
+			"name": "checked",
+			"css": [
 				{
-					"name": "on"
+					"property": "background-image",
+					"value": "url(resources/icon/check_box.svg)"
 				}
 			]
 		}
-	]
+	],
+	"fixes": [
+		{
+			"after": ":not([checked])",
+			"css": [
+				{
+					"property": "background-image",
+					"value": "url(resources/icon/check_box_outline_blank.svg)"
+				}
+			]
+		}
+	]	
 }
