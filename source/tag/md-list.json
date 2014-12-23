@@ -53,7 +53,7 @@
           "name": "one-line",
           "fixes": [
             {
-              "after": " md-tile",
+              "after": "> md-tile",
               "css": [
                 {
                   "property": "min-height",
@@ -66,7 +66,7 @@
               ]
             },
             {
-              "after": " md-tile> md-text",
+              "after": "> md-tile> md-text",
               "css": [
                 {
                   "property": "padding-top",
@@ -95,7 +95,7 @@
               ]
             },
             {
-              "after": " md-tile> md-text:first-child",
+              "after": "> md-tile> md-text:first-child",
               "css": [
                 {
                   "property": "margin-left",
@@ -104,7 +104,7 @@
               ]
             },
             {
-              "after": " md-tile> md-text:last-child",
+              "after": "> md-tile> md-text:last-child",
               "css": [
                 {
                   "property": "margin-right",
@@ -122,7 +122,7 @@
               ]
             },
             {
-              "after": " md-tile> md-avatar + md-text",
+              "after": "> md-tile> md-avatar + md-text",
               "css": [
                 {
                   "property": "margin-left",
@@ -131,7 +131,7 @@
               ]
             },
             {
-              "after": " md-tile> md-avatar + md-text",
+              "after": "> md-tile> md-avatar + md-text",
               "css": [
                 {
                   "property": "padding-top",
@@ -144,7 +144,7 @@
               ]
             },
             {
-              "after": " md-tile> md-avatar ~ md-icon-button",
+              "after": "> md-tile> md-avatar ~ md-icon-button",
               "css":  [
                 {
                   "property": "margin-top",
@@ -153,7 +153,7 @@
               ]
             },
             {
-              "after": " md-tile> md-avatar:first-of-type",
+              "after": "> md-tile> md-avatar:first-of-type",
               "css": [
                 {
                   "property": "margin-left",
@@ -162,7 +162,7 @@
               ]
             },
             {
-              "after": " md-tile> md-avatar",
+              "after": "> md-tile> md-avatar",
               "css": [
                 {
                   "property": "margin-top",
@@ -175,7 +175,7 @@
               ]
             },
             {
-              "after": " md-tile> md-icon:first-child",
+              "after": "> md-tile> md-icon:first-child",
               "css": [
                 {
                   "property": "margin-left",
@@ -199,7 +199,7 @@
           "name": "two-lines",
           "fixes": [
             {
-              "after": " md-tile",
+              "after": "> md-tile",
               "css": [
                 {
                   "property": "height",
@@ -213,7 +213,7 @@
           "name": "three-lines",
           "fixes": [
             {
-              "after": " md-tile",
+              "after": "> md-tile",
               "css": [
                 {
                   "property": "height",
@@ -233,7 +233,7 @@
           "name": "full",
           "fixes": [
             {
-              "after": " md-tile:after, md-list md-tile[md-separator=full]:after",
+              "after": "> md-tile:after, md-list md-tile[md-separator=full]:after",
               "css": [
                 {
                   "property": "display",
@@ -275,7 +275,7 @@
           "name": "partial",
           "fixes": [
             {
-              "after": " md-tile:after, md-list md-tile[md-separator=partial]:after",
+              "after": "> md-tile:after, md-list md-tile[md-separator=partial]:after",
               "css": [
                 {
                   "property": "display",
@@ -321,7 +321,7 @@
           "name": "none",
           "fixes": [
             {
-              "after": " md-tile:after, md-list md-tile[md-separator=none]:after", 
+              "after": "> md-tile:after, md-list md-tile[md-separator=none]:after", 
               "css": [
                 {
                   "property": "display",
