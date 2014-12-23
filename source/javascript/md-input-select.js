@@ -84,17 +84,12 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
    * Initializes md-input elements
    */
   MDInputSelect.initElements = function() {
-    var value = this.getAttribute('value');
-
-    if (this.querySelector('option[value="' + value + '"')) {
-      var valueText = this.querySelector('option[value="' + value + '"').innerText;
-    }
-
+    // Add span for text
     this.spanText = document.createElement("span");
     this.spanText.classList.add('text');
-    this.spanText.innerText = valueText;
     this.appendChild(this.spanText);
-
+    
+    // Add icon
     var icon = document.createElement('md-icon');
     icon.setAttribute('md-image', 'arrow_drop_down');
     icon.setAttribute('md-fill', 'grey');
@@ -106,8 +101,72 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     this.appendChild(divLine);
     
     this.calcWidth();
-
+    
+    var value = this.getAttribute('value');
+    this.setValue(value);
     this.addEventListener('click', this.clickListener.bind(this));
+  }
+  
+  MDInputSelect.getOption= function(value) {
+    var option = this.querySelector('option[value="' + value + '"]');
+    return option;
+  }
+
+  /**
+   * Sets the value of this select
+   * @param {string} value The value to set.
+   */
+  MDInputSelect.setValue= function(value) {
+    var option = null;
+    
+    if((option=this.getOption(value))) {
+      this.value = value;
+      this.spanText.innerText = option.innerText;
+      
+      if(this.getAttribute('value') != value) {
+        this.setAttribute('value', value);
+      }
+    }
+  }
+  
+  /**
+   * Clears all options from this select.
+   */
+  MDInputSelect.clearOptions= function() {
+    for(var i=this.children.length-1; i >= 0; i--) {
+      var child = this.children[i];
+      if(child.tagName=="OPTION") {
+        this.removeChild(child);
+      } 
+    }
+  }
+  
+  /**
+   * Removes an option from this select.
+   * @param {string} option The option to remove. 
+   */
+  MDInputSelect.removeOption= function(value) {
+    var option = null;
+    if((option= this.getOption(value))) {
+      this.removeChild(option);
+    }
+  }
+  
+  /**
+   * Adds an option to this select.
+   * @param {string} value The value for the option.
+   * @param {string} label The label for the option.
+   */
+  MDInputSelect.addOption= function(value, label) {
+    var option = document.createElement("option");
+    option.value = value;
+    option.innerText = label;    
+    this.appendChild(option);
+    
+    if(this.getAttribute('value')===value) {
+      this.setValue(value);
+    }
+    this.calcWidth();
   }
 
   /**
