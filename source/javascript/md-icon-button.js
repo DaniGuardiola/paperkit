@@ -1,9 +1,59 @@
 // TODO: Review, it doesn't work with new menu...
-var initMDIconButton = function(MDIconButton) {
+var initMDIconButton = function(MDIconButton, materializer) {
   initMDButton(MDIconButton);
-
+  
+  MDIconButton.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
+    console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
+    if(this.tagName==='MD-ICON-BUTTON') {
+      if(attrname==='md-image') {
+        this.updateIcon(newvalue);
+      }
+      if(attrname==='md-avatar') {
+    	this.setInnerElement();
+      }
+    }
+  };
+  
   MDIconButton.removeEventListener('click', MDIconButton.clickListener);
-
+  
+  MDIconButton.addInnerElement = function(avatar) {
+	  this.icon = avatar ? document.createElement('md-avatar') : this.icon = document.createElement('md-icon');
+	  this.appendChild(this.icon);
+	  this.updateIcon(this.getAttribute('md-image'));
+	  materializer.initElement(this.icon);
+  }
+  
+  MDIconButton.updateIcon = function(image) {
+	  if (!image) {
+		  var image = '';
+	  }
+	  this.icon.setAttribute('md-image', image);
+  }
+  
+  MDIconButton.setInnerElement = function() {
+	  console.log('setInnerElement');
+	  var avatar = false; // If not avatar
+	  if (this.hasAttribute('md-avatar')) {
+		  // If avatar
+		  avatar = true;
+	  }
+	  if (this.innerHTML === '') {
+		  // If empty		  
+		  this.addInnerElement(avatar);
+	  } else {
+		  if (avatar && this.querySelector('md-avatar')) {
+			  this.icon = this.querySelector('md-avatar');
+		  } else if (!avatar && this.querySelector('md-icon')) {
+			  this.icon = this.querySelector('md-icon');
+		  } else {
+			  this.innerHTML = '';
+			  this.addInnerElement(avatar);
+		  }
+	  }
+  }
+  
+  MDIconButton.setInnerElement();
+  
   MDIconButton.clickListener = function(e) {
     var el = e.currentTarget;
     var action = el.getAttribute("md-action") ? el.getAttribute('md-action') : 'submit';
@@ -54,4 +104,15 @@ var initMDIconButton = function(MDIconButton) {
   }
 
   MDIconButton.addEventListener('click', MDIconButton.clickListener);
+    
+  //INIT OBSERVER
+  var observer = new MutationObserver(function(mutations) { 
+      mutations.forEach(function(mutation) {
+        var element = mutation.target;
+        element.attributeChangedCallback(mutation.attributeName, mutation.oldvalue, element.getAttribute(mutation.attributeName));
+      });
+  });
+
+  var config = { attributes: true, childList: false, characterData: false };
+  observer.observe(MDIconButton, config);
 }
