@@ -1,5 +1,6 @@
 var initMDInputText = function(MDInput) {
 	var spanHint;
+	var spanError;
 	var input;
 	var value;
 
@@ -12,10 +13,10 @@ var initMDInputText = function(MDInput) {
 		this.spanHint.innerHTML = this.getAttribute("placeholder") ? this.getAttribute("placeholder") : "";
 		this.appendChild(this.spanHint);
 		
-		var spanError = document.createElement("span");
-		spanError.classList.add("error");
-		spanError.innerHTML = this.getAttribute("md-error") ? this.getAttribute("md-error") : "";
-		this.appendChild(spanError);
+		this.spanError = document.createElement("span");
+		this.spanError.classList.add("error");
+		this.spanError.innerHTML = this.getAttribute("md-error") ? this.getAttribute("md-error") : "";
+		this.appendChild(this.spanError);
 
 		var divLine = document.createElement("div");
 		divLine.classList.add("line");
@@ -124,6 +125,11 @@ var initMDInputText = function(MDInput) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
     if(attrname==="placeholder") {
     	this.spanHint.innerHTML= newvalue;
+    } else if(attrname==="value") {
+      this.value = this.input.value = newvalue;
+      this.setFocus();
+    } else if(attrname==="md-error") {
+      this.spanError.innerHTML = newvalue;
     }
   };
 
