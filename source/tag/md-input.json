@@ -227,10 +227,6 @@
 		      "value": "0"
 		    },
 		    {
-		      "property": "overflow",
-		      "value": "auto"
-		    },				
-		    {
 					"property": "transition",
 					"value": "top 0.25s ease, font-size 0.25s ease"
 				},
