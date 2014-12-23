@@ -7,23 +7,27 @@ var initMDInputText = function(MDInput) {
 		var value = this.getAttribute('value');
 
 		this.spanHint = document.createElement("span");
-		this.spanHint.innerHTML = this.getAttribute("placeholder");
+		this.spanHint.id = "placeholder";
+		this.spanHint.classList.add("placeholder");
+		this.spanHint.innerHTML = this.getAttribute("placeholder") ? this.getAttribute("placeholder") : "";
 		this.appendChild(this.spanHint);
-
-		this.input = document.createElement("input");
-		this.input.id=this.id + "-input";
-		this.input.type= this.getAttribute("type");
-		this.value = this.input.value= this.getAttribute("value");
-		this.input.name= this.getAttribute("name");
-		this.appendChild(this.input);
-
+		
 		var spanError = document.createElement("span");
 		spanError.classList.add("error");
+		spanError.innerHTML = this.getAttribute("md-error") ? this.getAttribute("md-error") : "";
 		this.appendChild(spanError);
 
 		var divLine = document.createElement("div");
 		divLine.classList.add("line");
 		this.appendChild(divLine);
+		
+    this.input = document.createElement("input");
+    this.input.id=this.id + "-input";
+    this.input.type= this.getAttribute("type");
+    this.value = this.input.value= this.getAttribute("value") ? this.getAttribute("value") : "";
+    this.input.name= this.getAttribute("name");
+    this.appendChild(this.input);
+
 
 		// Sets initial status
 		var mode= this.getAttribute("md-mode") ? this.getAttribute("md-mode") : "animated";
@@ -118,7 +122,7 @@ var initMDInputText = function(MDInput) {
 	 */
   MDInput.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
-    if(attrname="placeholder") {
+    if(attrname==="placeholder") {
     	this.spanHint.innerHTML= newvalue;
     }
   };

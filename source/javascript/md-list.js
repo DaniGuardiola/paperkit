@@ -67,22 +67,25 @@ var initMDList = function(MDList,materializer) {
   /**
    * Clears the options list
    */
-  MDList.clearTiles= function() {
+  MDList.clearItems= function() {
     while (this.firstChild) {
       this.removeChild(this.firstChild);
     }
   }
 
   /**
-   * Adds an option to the menu.
-   * @param {string} value The value for the option
+   * Adds an option to the list.
+   * @param {string} id The id for the option
    * @param {string} label The label for the option
+   * @returns {Element} The created tile
    */
-  MDList.addTile= function(value, label) {
+  MDList.addItem= function(id, label) {
     var tile= document.createElement('md-tile');
-    tile.innerHTML = '<md-text>' + label + '</md-text>';
-    tile.setAttribute('value', value);
+    tile.id = id;
+    tile.innerHTML = '<md-text>' + label + '</md-text>';    
+    tile.addEventListener('click', MDList.clickListener.bind(this));
     this.appendChild(tile);
+    return tile;
   }
 
   // Initialize listerner
