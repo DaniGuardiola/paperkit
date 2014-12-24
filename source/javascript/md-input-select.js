@@ -91,7 +91,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     
     // Add icon
     var icon = document.createElement('md-icon');
-    icon.setAttribute('md-image', 'arrow_drop_down');
+    icon.setAttribute('md-image', 'icon:arrow_drop_down');
     icon.setAttribute('md-fill', 'grey');
     initMDIcon(icon, materializer);
     this.appendChild(icon);
@@ -121,11 +121,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     
     if((option=this.getOption(value))) {
       this.value = value;
-      this.spanText.innerText = option.innerText;
-      
-      if(this.getAttribute('value') != value) {
-        this.setAttribute('value', value);
-      }
+      this.spanText.innerText = option.innerText;      
     }
   }
   
@@ -171,7 +167,6 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
 
   /**
    * Calculates width of element based on font size.
-   * @param {
    */
   MDInputSelect.calcWidth = function() {
     var longestString = "";
@@ -184,6 +179,27 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
             elementStyle).width + 36)
             + "px";
   }
+  
+  MDInputSelect.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
+    console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
+    if(attrname==="value") {
+      this.setValue(newvalue);
+    }
+  }
 
+  /**
+   * Initialization.
+   */
   MDInputSelect.initElements();
+  
+  // INIT OBSERVER
+  var observer = new MutationObserver(function(mutations) { 
+      mutations.forEach(function(mutation) {
+        var element = mutation.target;
+        element.attributeChangedCallback(mutation.attributeName, mutation.oldvalue, element.getAttribute(mutation.attributeName));
+      });
+  });
+
+  var config = { attributes: true, childList: false, characterData: false };
+  observer.observe(MDInputSelect, config);
 }
