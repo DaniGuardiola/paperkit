@@ -189,7 +189,7 @@ var initMDMenu = function(MDMenu) {
    * 
    */
   MDMenu.findTile = function(el) {
-    while((el = el.parentElement) && !el.tagName==="MD-TILE"){
+    while((el = el.parentElement) && el.tagName!=="MD-TILE"){
       if(el.tagName==="MD-MENU") {
         return null;
       }

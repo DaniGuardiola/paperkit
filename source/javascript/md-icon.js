@@ -28,7 +28,7 @@ var initMDIcon = function(MDIcon, materializer) {
    */
   MDIcon.getImageURI = function(value) {
     if(value.indexOf("icon:") != -1) {
-      var iconName = materializer.path + "/resources/icon/" + value.substring(5) + ".svg";      
+      var iconName = materializer.path + "/resources/icon/" + value.substring(5).trim() + ".svg";      
     } else {
       var iconName = value;
     }       
