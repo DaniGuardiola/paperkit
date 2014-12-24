@@ -44,7 +44,7 @@ var initMDButton = function(MDButton) {
       default:
         if(action.indexOf('custom:') != -1) {
           var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
-          this.callFunction(f, el);
+          this.callUserFunction(f, [ el ]);
         } else if (action = "chrome-app-close") {
           chrome.app.window.current().close();
         }
@@ -70,11 +70,6 @@ var initMDButton = function(MDButton) {
 
   var snackbarDismiss= function(target) {
     console.log("snackbar dismiss clicked!")
-  }
-
-  MDButton.callFunction= function(f, target) {
-    console.log("calling function " + f);
-    executeFunctionByName(f, window, [ target ]);
   }
 
   var findParentForm= function(element) {

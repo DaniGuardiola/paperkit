@@ -1,77 +1,96 @@
 var initMDIcon = function(MDIcon, materializer) {
-  MDIcon.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
-    console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
-    if(this.tagName==='MD-ICON') {
-      if(attrname==='md-image' && newvalue!="") {
-        var svgFileURI = materializer.path + "resources/icon/" + newvalue + ".svg";
-        loadSVG(svgFileURI, this);
-      }
-    } else {
-      if(attrname==='md-image' && newvalue!="") {
-        var imgFileURI = newvalue;
-        var imgName = this.makeId();
-        var svgData = avatarSVG.replace('$$IMAGE$$', imgFileURI).replace(/\$\$IMAGENAME\$\$/g, imgName);
-        replaceSVG(svgData, this);
-      } else if(attrname==='md-image') {
-        var svgFileURI = materializer.path + "resources/icon/account_circle.svg";
-        loadSVG(svgFileURI, this);
-      }
-    }
-  };
-
   var avatarSVG= "<svg width=\"40\" height=\"40\">"+
-          "<defs>" +
-            "<pattern id=\"$$IMAGENAME$$\" x=\"0\" y=\"0\" patternUnits=\"userSpaceOnUse\" height=\"40\" width=\"40\">"+
-              "<image x=\"0\" y=\"0\" height=\"40\" width=\"40\" xlink:href=\"$$IMAGE$$\"></image>"+
-            "</pattern>"+
-          "</defs>"+
-          "<circle id=\"top\" cx=\"20\" cy=\"20\" r=\"20\" fill=\"url(#$$IMAGENAME$$)\"/>"+
-        "</svg>";
+    "<defs>" +
+      "<pattern id=\"$$IMAGENAME$$\" x=\"0\" y=\"0\" patternUnits=\"userSpaceOnUse\" height=\"40\" width=\"40\">"+
+        "<image x=\"0\" y=\"0\" height=\"40\" width=\"40\" xlink:href=\"$$IMAGE$$\"></image>"+
+      "</pattern>"+
+    "</defs>"+
+    "<circle id=\"top\" cx=\"20\" cy=\"20\" r=\"20\" fill=\"url(#$$IMAGENAME$$)\"/>"+
+  "</svg>";
 
-  var createSVG= function(svgData) {
-      var div = document.createElement('div');
-      div.innerHTML = svgData;
-      var svg = div.children[0];
-      div.removeChild(svg);
-      return svg;
-  }
-
-  var replaceSVG= function(svgData, element) {
-    var newSVG = createSVG(svgData);
-    var oldSVG = element.children[0];
-
-    if(oldSVG) {
-      oldSVG.removing = new Date().getTime();
-      oldSVG.newimagename = element.getAttribute("md-image");
-      // Si hay svg antiguo, se le pone opacidad 0
-      oldSVG.style.opacity="0";
-      // Se elimina cuando la transición acaba
-      oldSVG.addEventListener(transitionend, function(e) {
-        console.log("NEW:" + oldSVG.newimagename);
-        console.log("TIME:" + oldSVG.removing);
-        element.removeChild(oldSVG);
-      });
-      // Se inicializa el nuevo svg desde opacity 0
-      newSVG.style.opacity="0";
-      element.insertBefore(newSVG, oldSVG);
-    } else {
-      // Se añade, independientemente de si había svg antiguo o no
-      element.appendChild(newSVG);              
+  /**
+   * 
+   */
+  MDIcon.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
+    console.log("CHANGED ATTRIBUTE IN MD-ICON " + attrname + " VALUE " + newvalue);
+    if(attrname==="md-image") {
+      var svgFileURI = this.getImageURI(newvalue);      
+      if(svgFileURI) {
+        this.loadSVG(svgFileURI);
+      }      
     }
-
-    // Se elimina la opacity 0 inline, por lo que transiciona al opacity 1 del propio elemento
-    setTimeout(function(){
-      newSVG.style.opacity="";
-    },50);
   }
-
-  var loadSVG= function(svgName, element) {
-    var svg;
-    var xhr= new XMLHttpRequest;
-    xhr.open("GET", svgName, true);
-    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    xhr.addEventListener("load",function(){ replaceSVG(xhr.responseText, element); });
-    xhr.send();
+  
+  /**
+   * Returns an image URI for the given md-image attribute value.
+   * @param {string} value The md-image attribute value.
+   * @returns {string} The image URI.
+   */
+  MDIcon.getImageURI = function(value) {
+    if(value.indexOf("icon:") != -1) {
+      var iconName = materializer.path + "/resources/icon/" + value.substring(5) + ".svg";      
+    } else {
+      var iconName = value;
+    }       
+    return iconName;
+  }
+  
+  /**
+   * Generates a new SVG and then replaces de OLD one.
+   * @param {string} svgData Data of the new SVG to generate.
+   */
+  MDIcon.generateSVG= function(svgData) {
+    var tmpDiv = document.createElement("div");
+    tmpDiv.innerHTML= svgData;
+    var svgElement= tmpDiv.children[0];
+    tmpDiv.removeChild(svgElement);
+    
+    // Animated SVG Replacement
+    this.replaceSVG(svgElement);
+  }
+  
+  /**
+   * Replaces the old svg with the given one,
+   * and does a simple fade-in-out animation.
+   * @param {Element} newSVGElement The element with the loaded svg.
+   */
+  MDIcon.replaceSVG = function(newSVGElement) {
+    var oldSVGElement = this.children.length > 0 ? this.children[0] : null;
+    var _this = this;
+    
+    newSVGElement.style.opacity = "0";
+    this.appendChild(newSVGElement);
+    
+    if(oldSVGElement) {
+      oldSVGElement.addEventListener(transitionend, function(e) {
+          _this.removeChild(oldSVGElement);
+      });
+      
+      oldSVGElement.style.opacity = "0";
+    }    
+    newSVGElement.style.opacity = "";
+  }
+  
+  /**
+   * Loads a SVG File from the server and uses it in this md-button.
+   * It generates an avatar image or a icon image depending on the type of md-icon this is.
+   * @param {string} svgFileURI The file URI to load.
+   */
+  MDIcon.loadSVG= function(fileURI) {
+    if(this.getAttribute('md-type')==='icon' || !this.getAttribute('md-type')) {
+      var xhr= new XMLHttpRequest;
+      var _this = this;
+      xhr.open("GET", fileURI, true);
+      xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+      xhr.addEventListener("load", function(e) { 
+        _this.generateSVG(xhr.responseText); 
+      });
+      xhr.send();
+    } else {
+      var imgName = this.makeId();
+      var svgData = avatarSVG.replace('$$IMAGE$$', fileURI).replace(/\$\$IMAGENAME\$\$/g, imgName);
+      this.generateSVG(svgData);      
+    }
   }
 
   // Init image

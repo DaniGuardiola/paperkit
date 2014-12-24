@@ -4,7 +4,7 @@
   "defaults": [
     {
       "name": "md-attribute",
-      "values": [ "value1", "value2-variant2" ]
+      "values": [ "value1" ]
     }
   ],
   "css": [
@@ -64,6 +64,17 @@
                 }
               ]
             }
+          ],
+          "fixes": [
+          	{
+          		"after": "> fix1",
+          		"css": [
+          			{
+          				"property": "fix1property1",
+          				"value": "fix1value1"
+          			}
+          		]
+          	}
           ]
         },
         {
