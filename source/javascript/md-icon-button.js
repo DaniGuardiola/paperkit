@@ -1,58 +1,35 @@
 // TODO: Review, it doesn't work with new menu...
 var initMDIconButton = function(MDIconButton, materializer) {
-  initMDButton(MDIconButton);
+//  Herencia no funciona como planeado...
+//  TODO: Buscar otra forma de hacerlo, esto da muchos problemas de reescritura de objetos y funciones
+//  initMDButton(MDIconButton);
+//  MDIconButton.removeEventListener('click', MDIconButton.clickListener);
+//  this.observer.disconnect();
   
   MDIconButton.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
-    console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
-    if(this.tagName==='MD-ICON-BUTTON') {
-      if(attrname==='md-image') {
-        this.updateIcon(newvalue);
-      }
-      if(attrname==='md-avatar') {
-    	this.setInnerElement();
+    console.log("CHANGED ATTRIBUTE IN MD-ICON-BUTTON " + attrname + " VALUE " + newvalue);
+    if(this.tagName==='MD-ICON-BUTTON') {   // Sanity Check
+      if(attrname==='md-image' || attrname==='md-type') {
+        this.updateIcon();
       }
     }
   };
-  
-  MDIconButton.removeEventListener('click', MDIconButton.clickListener);
-  
-  MDIconButton.addInnerElement = function(avatar) {
-	  this.icon = avatar ? document.createElement('md-avatar') : this.icon = document.createElement('md-icon');
-	  this.appendChild(this.icon);
-	  this.updateIcon(this.getAttribute('md-image'));
-	  materializer.initElement(this.icon);
+      
+  MDIconButton.updateIcon = function() {
+	  var image = this.getAttribute('md-image') ? this.getAttribute('md-image') : '';
+	  var type = this.getAttribute('md-type') ? this.getAttribute('md-type') : 'icon';
+	  
+	  var iconElement = this.querySelector('md-icon');	  
+	  if(!iconElement) {
+	    iconElement = document.createElement('md-icon');
+	    materializer.initElement(iconElement);
+	    this.appendChild(iconElement);
+	  }
+	  
+	  iconElement.setAttribute('md-type', type);
+	  iconElement.setAttribute('md-image', image);
   }
   
-  MDIconButton.updateIcon = function(image) {
-	  if (!image) {
-		  var image = '';
-	  }
-	  this.icon.setAttribute('md-image', image);
-  }
-  
-  MDIconButton.setInnerElement = function() {
-	  console.log('setInnerElement');
-	  var avatar = false; // If not avatar
-	  if (this.hasAttribute('md-avatar')) {
-		  // If avatar
-		  avatar = true;
-	  }
-	  if (this.innerHTML === '') {
-		  // If empty		  
-		  this.addInnerElement(avatar);
-	  } else {
-		  if (avatar && this.querySelector('md-avatar')) {
-			  this.icon = this.querySelector('md-avatar');
-		  } else if (!avatar && this.querySelector('md-icon')) {
-			  this.icon = this.querySelector('md-icon');
-		  } else {
-			  this.innerHTML = '';
-			  this.addInnerElement(avatar);
-		  }
-	  }
-  }
-  
-  MDIconButton.setInnerElement();
   
   MDIconButton.clickListener = function(e) {
     var el = e.currentTarget;
@@ -65,7 +42,7 @@ var initMDIconButton = function(MDIconButton, materializer) {
       default:
         if(action.indexOf('custom:') != -1) {
           var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
-          el.callFunction(f, el);
+          el.callUserFunction(f, [ el ]);
         } else if(action.indexOf('menu:') != -1) {
           var f = action.substring(action.indexOf('menu:') + 'menu:'.length).trim();
           el.openMenu(f);
@@ -103,6 +80,8 @@ var initMDIconButton = function(MDIconButton, materializer) {
     menu.close(true);
   }
 
+  // Initialization
+  MDIconButton.updateIcon();
   MDIconButton.addEventListener('click', MDIconButton.clickListener);
     
   //INIT OBSERVER

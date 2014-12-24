@@ -9,12 +9,16 @@ md-tag[md-attribute~=value1] {
   property2: csslabel2;
 }
 
+md-tag> fix1,
+md-tag[md-attribute~=value1]> fix1 {
+  fix1property1: fix1value1;
+}
+
 md-tag[md-attribute~=value2-variant1] {
   variant1property1: variant1csslabel1;
   variant1property2: variant1csslabel2;
 }
 
-md-tag,
 md-tag[md-attribute~=value2],
 md-tag[md-attribute~=value2-variant2] {
   variant2property1: variant2csslabel1;
