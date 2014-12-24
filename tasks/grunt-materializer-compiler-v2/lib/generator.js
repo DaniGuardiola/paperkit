@@ -215,15 +215,15 @@ function Generator(jsonData, jsonConfig, imports) {
 					if(defaults) {
 						if((def = inDefaults(defaults, attribute.name))) {
 							if(def.values.indexOf(value.name) != -1) {
-							attributeSelectors.push(tagSelector);
+							  attributeSelectors.push(JSON.parse(JSON.stringify(tagSelector)));
 							}						
 						}
 					}
-					attributeSelectors.push(attributeSelector);
+					attributeSelectors.push(JSON.parse(JSON.stringify(attributeSelector)));
 				});
 			} else {
 				var attributeSelector = { "attribute": attribute.name, "value": value.name };
-				attributeSelectors.push(attributeSelector);
+				attributeSelectors.push(JSON.parse(JSON.stringify(attributeSelector)));
 			}
 
 			// Generate value CSS
@@ -233,7 +233,7 @@ function Generator(jsonData, jsonConfig, imports) {
 
 			// Process fixes in value
 			if('fixes' in value) {
-				processFixes(attributeSelectors, value.fixes);
+				processFixes(JSON.parse(JSON.stringify(attributeSelectors)), value.fixes);
 			}
 
 			// Process value variants
