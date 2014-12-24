@@ -60,6 +60,7 @@ var initMDMenu = function(MDMenu) {
    */
   MDMenu.close= function(destroy) {
     // Transition
+    this.style.overflow = 'hidden';
     this.calculatedHeight = this.style.maxHeight;
     this.style.maxHeight = "0px";
     this.addEventListener(transitionend, this.endOfCloseTransition);
@@ -75,6 +76,7 @@ var initMDMenu = function(MDMenu) {
    * @param {Event} e Event object @see {url https://developer.mozilla.org/en-US/docs/Web/API/Event}
    */
   MDMenu.endOfCloseTransition= function(e) {
+    this.style.overflow = '';
     this.style.visibility="hidden";
     this.style.maxHeight = this.calculatedHeight;
     this.removeEventListener(transitionend, this.endOfCloseTransition);
