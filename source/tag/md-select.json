@@ -58,6 +58,10 @@
 				{
 					"property": "flex",
 					"value": "1"
+				},
+				{
+					"property": "white-space",
+					"value": "nowrap"
 				}
 			]
 		},
