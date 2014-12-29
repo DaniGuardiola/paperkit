@@ -7,6 +7,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
   var spanText;
   var value;
   var menu;
+  var input;
 
   /**
    * Click listener
@@ -101,17 +102,18 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     this.appendChild(divLine);
     
     this.calcWidth();
-    
-    var value = this.getAttribute('value');
-    this.setValue(value);
-    this.addEventListener('click', this.clickListener.bind(this));
-    
+        
     this.input = document.createElement("input");
     this.input.id=this.id;
     this.input.type= "hidden";
     this.input.value= this.getAttribute('value') ? this.getAttribute('value') : '';
     this.input.name= this.getAttribute('name') ? this.getAttribute('name') : '';
     this.appendChild(this.input);
+    
+    var value = this.getAttribute('value');
+    this.setValue(value);
+    this.addEventListener('click', this.clickListener.bind(this));
+
   }
   
   MDInputSelect.getOption= function(value) {
