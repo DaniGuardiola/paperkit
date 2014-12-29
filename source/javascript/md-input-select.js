@@ -105,6 +105,13 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     var value = this.getAttribute('value');
     this.setValue(value);
     this.addEventListener('click', this.clickListener.bind(this));
+    
+    this.input = document.createElement("input");
+    this.input.id=this.id;
+    this.input.type= "hidden";
+    this.input.value= this.getAttribute('value') ? this.getAttribute('value') : '';
+    this.input.name= this.getAttribute('name') ? this.getAttribute('name') : '';
+    this.appendChild(this.input);
   }
   
   MDInputSelect.getOption= function(value) {
@@ -120,8 +127,8 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     var option = null;
     
     if((option=this.getOption(value))) {
-      this.value = value;
-      this.spanText.innerText = option.innerText;      
+      this.value =this.input.value=  value;
+      this.spanText.innerText = option.innerText;
     }
   }
   
