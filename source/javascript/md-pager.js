@@ -10,8 +10,14 @@ var initMDPager= function(MDPager) {
 	 */
 	MDPager.moveToPage= function(index) {
 		var pages= this.getElementsByTagName("md-page");
+		var numberOfPages = pages.length;
+		
+		/*
 		for(var i=0; i<pages.length; i++) {
 			pages[i].style.transform="translate(-"+ 100*index +"%)";
 		}
+		*/
+		
+		pages[0].style.marginLeft = "-" + (100 * index) + "%";
 	}
 }
