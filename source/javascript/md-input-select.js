@@ -104,7 +104,6 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     this.calcWidth();
         
     this.input = document.createElement("input");
-    this.input.id=this.id;
     this.input.type= "hidden";
     this.input.value= this.getAttribute('value') ? this.getAttribute('value') : '';
     this.input.name= this.getAttribute('name') ? this.getAttribute('name') : '';
