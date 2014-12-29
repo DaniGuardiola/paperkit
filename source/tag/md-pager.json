@@ -25,7 +25,7 @@
 				},
 				{
 					"property": "transition",
-					"value": "transform 0.45s ease-in-out"
+					"value": "margin-left 0.45s ease-in-out"
 				}
 			]
 		}
