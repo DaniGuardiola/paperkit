@@ -7,10 +7,6 @@
 			"value": "block"
 		},
 		{
-			"property": "z-index",
-			"value": "0"
-		},
-		{
 			"property": "height",
 			"value": "auto"
 		},
