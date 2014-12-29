@@ -23,7 +23,7 @@ var initMDFab = function(MDFab) {
 
   MDFab.set = function(key,value){
     if (key=='image' || key=='md-image') {
-      MDFab.querySelector('md-icon').setAttribute('md-image',value);
+      MDFab.querySelector('md-icon').setAttribute('md-image','icon:' + value);
     } else if (key.indexOf('md-') === -1) {
       MDFab.setAttribute('md-'+key,value);
     }
