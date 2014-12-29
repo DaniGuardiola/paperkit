@@ -171,6 +171,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     if(this.getAttribute('value')===value) {
       this.setValue(value);
     }
+    
     this.calcWidth();
   }
 
@@ -180,10 +181,12 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
   MDInputSelect.calcWidth = function() {
     var longestString = "";
     var elementStyle = window.getComputedStyle(this.querySelector('span.text'));
+    
     [].forEach.call(this.querySelectorAll("option"), function(option) {
       longestString = option.textContent.length > longestString.length
               ? option.textContent : longestString;
     });
+    
     this.style.width = (materializer.calcTextMetrics(longestString,
             elementStyle).width + 36)
             + "px";

@@ -9,6 +9,8 @@ var Materializer= function() {
   this.content = null;
 
   this.observer = null;
+  
+  this.tmpDiv = null;
 }
 
 Materializer.prototype.initListener= function(func) {
@@ -231,19 +233,23 @@ var isMobile = function() {
  * @return {object} Metrics object containing width and height properties.
  */
 Materializer.prototype.calcTextMetrics= function(string, style) {
-    var div = document.createElement('div');
-    div.style.position="absolute";
-    div.style.visibility="hidden";
-    div.style.height="auto";
-    div.style.width="auto";
-    div.style.whiteSpace="nowrap";
-    div.style.fontSize=style.fontSize;
-    div.innerText=string;
-    document.body.appendChild(div);
-    var metricsWidth = div.clientWidth;
-    var metricsHeight = div.clientHeight;
-    document.body.removeChild(div);
-    return { "width": metricsWidth, "height": metricsHeight };
+  if(!this.tmpDiv) {
+    this.tmpDiv = document.createElement('div');
+    document.body.appendChild(this.tmpDiv);    
+  }
+    
+  this.tmpDiv.style.position="absolute";
+  this.tmpDiv.style.visibility="hidden";
+  this.tmpDiv.style.height="auto";
+  this.tmpDiv.style.width="auto";
+  this.tmpDiv.style.whiteSpace="nowrap";
+  this.tmpDiv.style.fontSize=style.fontSize;
+  this.tmpDiv.textContent=string;
+    
+  var metricsWidth = this.tmpDiv.clientWidth;
+  var metricsHeight = this.tmpDiv.clientHeight;
+  // document.body.removeChild(tmpDiv);
+  return { "width": metricsWidth, "height": metricsHeight };
 }
 
 /**
