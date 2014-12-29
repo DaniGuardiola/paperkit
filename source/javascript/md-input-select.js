@@ -31,7 +31,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
       // It's slow as hell if there are lots of options...
       // Add options as md-tiles
       [].forEach.call(this.querySelectorAll('option'), function(option) {
-        this.menu.addOption(option.getAttribute('value'), option.innerText);
+        this.menu.addOption(option.getAttribute('value'), option.textContent);
       }, this);      
       
       this.value = this.getAttribute('value');
@@ -40,10 +40,10 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
       this.menu.open(this);
     }
 
-    if (event.stopPropagation) {
-      event.stopPropagation(this.menuListener)
+    if (e.stopPropagation) {
+      e.stopPropagation(this.menuListener)
     } else {
-      event.cancelBubble = true
+      e.cancelBubble = true
     }
   }
 
@@ -54,12 +54,12 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
    */
   MDInputSelect.menuListener = function(tile, menu) {
     if (tile) {
-      var text = tile.querySelector('md-text').innerText;
+      var text = tile.querySelector('md-text').textContent;
       var value = this.value = tile.getAttribute('value');
       
 
       // Change selected option, text and value.
-      this.spanText.innerText = text;
+      this.spanText.textContent = text;
       this.setAttribute('value', value);
 
       // Change list selected option
@@ -121,7 +121,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     
     if((option=this.getOption(value))) {
       this.value = value;
-      this.spanText.innerText = option.innerText;      
+      this.spanText.textContent = option.textContent;      
     }
   }
   
@@ -156,7 +156,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
   MDInputSelect.addOption= function(value, label) {
     var option = document.createElement("option");
     option.value = value;
-    option.innerText = label;    
+    option.textContent = label;    
     this.appendChild(option);
     
     if(this.getAttribute('value')===value) {
@@ -172,8 +172,8 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     var longestString = "";
     var elementStyle = window.getComputedStyle(this.querySelector('span.text'));
     [].forEach.call(this.querySelectorAll("option"), function(option) {
-      longestString = option.innerText.length > longestString.length
-              ? option.innerText : longestString;
+      longestString = option.textContent.length > longestString.length
+              ? option.textContent : longestString;
     });
     this.style.width = (materializer.calcTextMetrics(longestString,
             elementStyle).width + 36)
