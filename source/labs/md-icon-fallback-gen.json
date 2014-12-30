@@ -1,0 +1,6744 @@
+{
+  "type": "tag",
+  "name": "md-icon",
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-image",
+      "values": [
+        {
+          "name": "3d_rotation",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/3d_rotation.svg"
+            }
+          ]
+        },
+        {
+          "name": "access_alarm",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/access_alarm.svg"
+            }
+          ]
+        },
+        {
+          "name": "access_alarms",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/access_alarms.svg"
+            }
+          ]
+        },
+        {
+          "name": "access_time",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/access_time.svg"
+            }
+          ]
+        },
+        {
+          "name": "accessibility",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/accessibility.svg"
+            }
+          ]
+        },
+        {
+          "name": "account_balance",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/account_balance.svg"
+            }
+          ]
+        },
+        {
+          "name": "account_balance_wallet",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/account_balance_wallet.svg"
+            }
+          ]
+        },
+        {
+          "name": "account_box",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/account_box.svg"
+            }
+          ]
+        },
+        {
+          "name": "account_child",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/account_child.svg"
+            }
+          ]
+        },
+        {
+          "name": "account_circle",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/account_circle.svg"
+            }
+          ]
+        },
+        {
+          "name": "adb",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/adb.svg"
+            }
+          ]
+        },
+        {
+          "name": "add",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/add.svg"
+            }
+          ]
+        },
+        {
+          "name": "add_alarm",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/add_alarm.svg"
+            }
+          ]
+        },
+        {
+          "name": "add_box",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/add_box.svg"
+            }
+          ]
+        },
+        {
+          "name": "add_circle",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/add_circle.svg"
+            }
+          ]
+        },
+        {
+          "name": "add_circle_outline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/add_circle_outline.svg"
+            }
+          ]
+        },
+        {
+          "name": "add_shopping_cart",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/add_shopping_cart.svg"
+            }
+          ]
+        },
+        {
+          "name": "add_to_photos",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/add_to_photos.svg"
+            }
+          ]
+        },
+        {
+          "name": "adjust",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/adjust.svg"
+            }
+          ]
+        },
+        {
+          "name": "airplanemode_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/airplanemode_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "airplanemode_on",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/airplanemode_on.svg"
+            }
+          ]
+        },
+        {
+          "name": "alarm",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/alarm.svg"
+            }
+          ]
+        },
+        {
+          "name": "alarm_add",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/alarm_add.svg"
+            }
+          ]
+        },
+        {
+          "name": "alarm_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/alarm_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "alarm_on",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/alarm_on.svg"
+            }
+          ]
+        },
+        {
+          "name": "album",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/album.svg"
+            }
+          ]
+        },
+        {
+          "name": "android",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/android.svg"
+            }
+          ]
+        },
+        {
+          "name": "announcement",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/announcement.svg"
+            }
+          ]
+        },
+        {
+          "name": "apps",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/apps.svg"
+            }
+          ]
+        },
+        {
+          "name": "archive",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/archive.svg"
+            }
+          ]
+        },
+        {
+          "name": "arrow_back",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/arrow_back.svg"
+            }
+          ]
+        },
+        {
+          "name": "arrow_drop_down",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/arrow_drop_down.svg"
+            }
+          ]
+        },
+        {
+          "name": "arrow_drop_down_circle",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/arrow_drop_down_circle.svg"
+            }
+          ]
+        },
+        {
+          "name": "arrow_drop_up",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/arrow_drop_up.svg"
+            }
+          ]
+        },
+        {
+          "name": "arrow_forward",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/arrow_forward.svg"
+            }
+          ]
+        },
+        {
+          "name": "aspect_ratio",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/aspect_ratio.svg"
+            }
+          ]
+        },
+        {
+          "name": "assessment",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/assessment.svg"
+            }
+          ]
+        },
+        {
+          "name": "assignment",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/assignment.svg"
+            }
+          ]
+        },
+        {
+          "name": "assignment_ind",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/assignment_ind.svg"
+            }
+          ]
+        },
+        {
+          "name": "assignment_late",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/assignment_late.svg"
+            }
+          ]
+        },
+        {
+          "name": "assignment_return",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/assignment_return.svg"
+            }
+          ]
+        },
+        {
+          "name": "assignment_returned",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/assignment_returned.svg"
+            }
+          ]
+        },
+        {
+          "name": "assignment_turned_in",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/assignment_turned_in.svg"
+            }
+          ]
+        },
+        {
+          "name": "assistant_photo",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/assistant_photo.svg"
+            }
+          ]
+        },
+        {
+          "name": "attach_file",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/attach_file.svg"
+            }
+          ]
+        },
+        {
+          "name": "attach_money",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/attach_money.svg"
+            }
+          ]
+        },
+        {
+          "name": "attachment",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/attachment.svg"
+            }
+          ]
+        },
+        {
+          "name": "audiotrack",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/audiotrack.svg"
+            }
+          ]
+        },
+        {
+          "name": "autorenew",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/autorenew.svg"
+            }
+          ]
+        },
+        {
+          "name": "av_timer",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/av_timer.svg"
+            }
+          ]
+        },
+        {
+          "name": "backspace",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/backspace.svg"
+            }
+          ]
+        },
+        {
+          "name": "backup",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/backup.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_20",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_20.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_30",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_30.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_50",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_50.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_60",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_60.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_80",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_80.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_90",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_90.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_alert",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_alert.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_charging_20",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_charging_20.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_charging_30",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_charging_30.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_charging_50",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_charging_50.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_charging_60",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_charging_60.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_charging_80",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_charging_80.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_charging_90",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_charging_90.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_charging_full",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_charging_full.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_full",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_full.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_std",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_std.svg"
+            }
+          ]
+        },
+        {
+          "name": "battery_unknown",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/battery_unknown.svg"
+            }
+          ]
+        },
+        {
+          "name": "beenhere",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/beenhere.svg"
+            }
+          ]
+        },
+        {
+          "name": "block",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/block.svg"
+            }
+          ]
+        },
+        {
+          "name": "bluetooth",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/bluetooth.svg"
+            }
+          ]
+        },
+        {
+          "name": "bluetooth_audio",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/bluetooth_audio.svg"
+            }
+          ]
+        },
+        {
+          "name": "bluetooth_connected",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/bluetooth_connected.svg"
+            }
+          ]
+        },
+        {
+          "name": "bluetooth_disabled",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/bluetooth_disabled.svg"
+            }
+          ]
+        },
+        {
+          "name": "bluetooth_searching",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/bluetooth_searching.svg"
+            }
+          ]
+        },
+        {
+          "name": "blur_circular",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/blur_circular.svg"
+            }
+          ]
+        },
+        {
+          "name": "blur_linear",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/blur_linear.svg"
+            }
+          ]
+        },
+        {
+          "name": "blur_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/blur_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "blur_on",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/blur_on.svg"
+            }
+          ]
+        },
+        {
+          "name": "book",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/book.svg"
+            }
+          ]
+        },
+        {
+          "name": "bookmark",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/bookmark.svg"
+            }
+          ]
+        },
+        {
+          "name": "bookmark_outline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/bookmark_outline.svg"
+            }
+          ]
+        },
+        {
+          "name": "border_all",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/border_all.svg"
+            }
+          ]
+        },
+        {
+          "name": "border_bottom",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/border_bottom.svg"
+            }
+          ]
+        },
+        {
+          "name": "border_clear",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/border_clear.svg"
+            }
+          ]
+        },
+        {
+          "name": "border_color",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/border_color.svg"
+            }
+          ]
+        },
+        {
+          "name": "border_horizontal",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/border_horizontal.svg"
+            }
+          ]
+        },
+        {
+          "name": "border_inner",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/border_inner.svg"
+            }
+          ]
+        },
+        {
+          "name": "border_left",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/border_left.svg"
+            }
+          ]
+        },
+        {
+          "name": "border_outer",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/border_outer.svg"
+            }
+          ]
+        },
+        {
+          "name": "border_right",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/border_right.svg"
+            }
+          ]
+        },
+        {
+          "name": "border_style",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/border_style.svg"
+            }
+          ]
+        },
+        {
+          "name": "border_top",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/border_top.svg"
+            }
+          ]
+        },
+        {
+          "name": "border_vertical",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/border_vertical.svg"
+            }
+          ]
+        },
+        {
+          "name": "brightness_1",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/brightness_1.svg"
+            }
+          ]
+        },
+        {
+          "name": "brightness_2",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/brightness_2.svg"
+            }
+          ]
+        },
+        {
+          "name": "brightness_3",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/brightness_3.svg"
+            }
+          ]
+        },
+        {
+          "name": "brightness_4",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/brightness_4.svg"
+            }
+          ]
+        },
+        {
+          "name": "brightness_5",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/brightness_5.svg"
+            }
+          ]
+        },
+        {
+          "name": "brightness_6",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/brightness_6.svg"
+            }
+          ]
+        },
+        {
+          "name": "brightness_7",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/brightness_7.svg"
+            }
+          ]
+        },
+        {
+          "name": "brightness_auto",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/brightness_auto.svg"
+            }
+          ]
+        },
+        {
+          "name": "brightness_high",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/brightness_high.svg"
+            }
+          ]
+        },
+        {
+          "name": "brightness_low",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/brightness_low.svg"
+            }
+          ]
+        },
+        {
+          "name": "brightness_medium",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/brightness_medium.svg"
+            }
+          ]
+        },
+        {
+          "name": "brush",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/brush.svg"
+            }
+          ]
+        },
+        {
+          "name": "bug_report",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/bug_report.svg"
+            }
+          ]
+        },
+        {
+          "name": "business",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/business.svg"
+            }
+          ]
+        },
+        {
+          "name": "cached",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/cached.svg"
+            }
+          ]
+        },
+        {
+          "name": "cake",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/cake.svg"
+            }
+          ]
+        },
+        {
+          "name": "call",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/call.svg"
+            }
+          ]
+        },
+        {
+          "name": "call_end",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/call_end.svg"
+            }
+          ]
+        },
+        {
+          "name": "call_made",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/call_made.svg"
+            }
+          ]
+        },
+        {
+          "name": "call_merge",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/call_merge.svg"
+            }
+          ]
+        },
+        {
+          "name": "call_missed",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/call_missed.svg"
+            }
+          ]
+        },
+        {
+          "name": "call_received",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/call_received.svg"
+            }
+          ]
+        },
+        {
+          "name": "call_split",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/call_split.svg"
+            }
+          ]
+        },
+        {
+          "name": "camera",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/camera.svg"
+            }
+          ]
+        },
+        {
+          "name": "camera_alt",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/camera_alt.svg"
+            }
+          ]
+        },
+        {
+          "name": "camera_front",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/camera_front.svg"
+            }
+          ]
+        },
+        {
+          "name": "camera_rear",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/camera_rear.svg"
+            }
+          ]
+        },
+        {
+          "name": "camera_roll",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/camera_roll.svg"
+            }
+          ]
+        },
+        {
+          "name": "cancel",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/cancel.svg"
+            }
+          ]
+        },
+        {
+          "name": "cast",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/cast.svg"
+            }
+          ]
+        },
+        {
+          "name": "cast_connected",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/cast_connected.svg"
+            }
+          ]
+        },
+        {
+          "name": "center_focus_strong",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/center_focus_strong.svg"
+            }
+          ]
+        },
+        {
+          "name": "center_focus_weak",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/center_focus_weak.svg"
+            }
+          ]
+        },
+        {
+          "name": "chat",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/chat.svg"
+            }
+          ]
+        },
+        {
+          "name": "check",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/check.svg"
+            }
+          ]
+        },
+        {
+          "name": "check_box",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/check_box.svg"
+            }
+          ]
+        },
+        {
+          "name": "check_box_outline_blank",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/check_box_outline_blank.svg"
+            }
+          ]
+        },
+        {
+          "name": "check_circle",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/check_circle.svg"
+            }
+          ]
+        },
+        {
+          "name": "chevron_left",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/chevron_left.svg"
+            }
+          ]
+        },
+        {
+          "name": "chevron_right",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/chevron_right.svg"
+            }
+          ]
+        },
+        {
+          "name": "class",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/class.svg"
+            }
+          ]
+        },
+        {
+          "name": "clear",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/clear.svg"
+            }
+          ]
+        },
+        {
+          "name": "clear_all",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/clear_all.svg"
+            }
+          ]
+        },
+        {
+          "name": "close",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/close.svg"
+            }
+          ]
+        },
+        {
+          "name": "closed_caption",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/closed_caption.svg"
+            }
+          ]
+        },
+        {
+          "name": "cloud",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/cloud.svg"
+            }
+          ]
+        },
+        {
+          "name": "cloud_circle",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/cloud_circle.svg"
+            }
+          ]
+        },
+        {
+          "name": "cloud_done",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/cloud_done.svg"
+            }
+          ]
+        },
+        {
+          "name": "cloud_download",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/cloud_download.svg"
+            }
+          ]
+        },
+        {
+          "name": "cloud_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/cloud_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "cloud_queue",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/cloud_queue.svg"
+            }
+          ]
+        },
+        {
+          "name": "cloud_upload",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/cloud_upload.svg"
+            }
+          ]
+        },
+        {
+          "name": "collections",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/collections.svg"
+            }
+          ]
+        },
+        {
+          "name": "color_lens",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/color_lens.svg"
+            }
+          ]
+        },
+        {
+          "name": "colorize",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/colorize.svg"
+            }
+          ]
+        },
+        {
+          "name": "comment",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/comment.svg"
+            }
+          ]
+        },
+        {
+          "name": "compare",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/compare.svg"
+            }
+          ]
+        },
+        {
+          "name": "computer",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/computer.svg"
+            }
+          ]
+        },
+        {
+          "name": "contacts",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/contacts.svg"
+            }
+          ]
+        },
+        {
+          "name": "content_copy",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/content_copy.svg"
+            }
+          ]
+        },
+        {
+          "name": "content_cut",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/content_cut.svg"
+            }
+          ]
+        },
+        {
+          "name": "content_paste",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/content_paste.svg"
+            }
+          ]
+        },
+        {
+          "name": "control_point",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/control_point.svg"
+            }
+          ]
+        },
+        {
+          "name": "control_point_duplicate",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/control_point_duplicate.svg"
+            }
+          ]
+        },
+        {
+          "name": "create",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/create.svg"
+            }
+          ]
+        },
+        {
+          "name": "credit_card",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/credit_card.svg"
+            }
+          ]
+        },
+        {
+          "name": "crop",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/crop.svg"
+            }
+          ]
+        },
+        {
+          "name": "crop_16_9",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/crop_16_9.svg"
+            }
+          ]
+        },
+        {
+          "name": "crop_3_2",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/crop_3_2.svg"
+            }
+          ]
+        },
+        {
+          "name": "crop_5_4",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/crop_5_4.svg"
+            }
+          ]
+        },
+        {
+          "name": "crop_7_5",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/crop_7_5.svg"
+            }
+          ]
+        },
+        {
+          "name": "crop_din",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/crop_din.svg"
+            }
+          ]
+        },
+        {
+          "name": "crop_free",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/crop_free.svg"
+            }
+          ]
+        },
+        {
+          "name": "crop_landscape",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/crop_landscape.svg"
+            }
+          ]
+        },
+        {
+          "name": "crop_original",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/crop_original.svg"
+            }
+          ]
+        },
+        {
+          "name": "crop_portrait",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/crop_portrait.svg"
+            }
+          ]
+        },
+        {
+          "name": "crop_square",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/crop_square.svg"
+            }
+          ]
+        },
+        {
+          "name": "dashboard",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/dashboard.svg"
+            }
+          ]
+        },
+        {
+          "name": "data_usage",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/data_usage.svg"
+            }
+          ]
+        },
+        {
+          "name": "dehaze",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/dehaze.svg"
+            }
+          ]
+        },
+        {
+          "name": "delete",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/delete.svg"
+            }
+          ]
+        },
+        {
+          "name": "description",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/description.svg"
+            }
+          ]
+        },
+        {
+          "name": "desktop_mac",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/desktop_mac.svg"
+            }
+          ]
+        },
+        {
+          "name": "desktop_windows",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/desktop_windows.svg"
+            }
+          ]
+        },
+        {
+          "name": "details",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/details.svg"
+            }
+          ]
+        },
+        {
+          "name": "developer_mode",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/developer_mode.svg"
+            }
+          ]
+        },
+        {
+          "name": "devices",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/devices.svg"
+            }
+          ]
+        },
+        {
+          "name": "dialer_sip",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/dialer_sip.svg"
+            }
+          ]
+        },
+        {
+          "name": "dialpad",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/dialpad.svg"
+            }
+          ]
+        },
+        {
+          "name": "directions",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/directions.svg"
+            }
+          ]
+        },
+        {
+          "name": "directions_bike",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/directions_bike.svg"
+            }
+          ]
+        },
+        {
+          "name": "directions_bus",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/directions_bus.svg"
+            }
+          ]
+        },
+        {
+          "name": "directions_car",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/directions_car.svg"
+            }
+          ]
+        },
+        {
+          "name": "directions_ferry",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/directions_ferry.svg"
+            }
+          ]
+        },
+        {
+          "name": "directions_subway",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/directions_subway.svg"
+            }
+          ]
+        },
+        {
+          "name": "directions_train",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/directions_train.svg"
+            }
+          ]
+        },
+        {
+          "name": "directions_transit",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/directions_transit.svg"
+            }
+          ]
+        },
+        {
+          "name": "directions_walk",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/directions_walk.svg"
+            }
+          ]
+        },
+        {
+          "name": "disc_full",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/disc_full.svg"
+            }
+          ]
+        },
+        {
+          "name": "dnd_forwardslash",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/dnd_forwardslash.svg"
+            }
+          ]
+        },
+        {
+          "name": "dnd_on",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/dnd_on.svg"
+            }
+          ]
+        },
+        {
+          "name": "dns",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/dns.svg"
+            }
+          ]
+        },
+        {
+          "name": "do_not_disturb",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/do_not_disturb.svg"
+            }
+          ]
+        },
+        {
+          "name": "dock",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/dock.svg"
+            }
+          ]
+        },
+        {
+          "name": "domain",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/domain.svg"
+            }
+          ]
+        },
+        {
+          "name": "done",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/done.svg"
+            }
+          ]
+        },
+        {
+          "name": "done_all",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/done_all.svg"
+            }
+          ]
+        },
+        {
+          "name": "drafts",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/drafts.svg"
+            }
+          ]
+        },
+        {
+          "name": "drive_eta",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/drive_eta.svg"
+            }
+          ]
+        },
+        {
+          "name": "dvr",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/dvr.svg"
+            }
+          ]
+        },
+        {
+          "name": "edit",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/edit.svg"
+            }
+          ]
+        },
+        {
+          "name": "email",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/email.svg"
+            }
+          ]
+        },
+        {
+          "name": "equalizer",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/equalizer.svg"
+            }
+          ]
+        },
+        {
+          "name": "error",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/error.svg"
+            }
+          ]
+        },
+        {
+          "name": "event",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/event.svg"
+            }
+          ]
+        },
+        {
+          "name": "event_available",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/event_available.svg"
+            }
+          ]
+        },
+        {
+          "name": "event_busy",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/event_busy.svg"
+            }
+          ]
+        },
+        {
+          "name": "event_note",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/event_note.svg"
+            }
+          ]
+        },
+        {
+          "name": "exit_to_app",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/exit_to_app.svg"
+            }
+          ]
+        },
+        {
+          "name": "expand_less",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/expand_less.svg"
+            }
+          ]
+        },
+        {
+          "name": "expand_more",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/expand_more.svg"
+            }
+          ]
+        },
+        {
+          "name": "explicit",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/explicit.svg"
+            }
+          ]
+        },
+        {
+          "name": "explore",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/explore.svg"
+            }
+          ]
+        },
+        {
+          "name": "exposure",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/exposure.svg"
+            }
+          ]
+        },
+        {
+          "name": "exposure_minus_1",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/exposure_minus_1.svg"
+            }
+          ]
+        },
+        {
+          "name": "exposure_minus_2",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/exposure_minus_2.svg"
+            }
+          ]
+        },
+        {
+          "name": "exposure_plus_1",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/exposure_plus_1.svg"
+            }
+          ]
+        },
+        {
+          "name": "exposure_plus_2",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/exposure_plus_2.svg"
+            }
+          ]
+        },
+        {
+          "name": "exposure_zero",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/exposure_zero.svg"
+            }
+          ]
+        },
+        {
+          "name": "extension",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/extension.svg"
+            }
+          ]
+        },
+        {
+          "name": "face",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/face.svg"
+            }
+          ]
+        },
+        {
+          "name": "fast_forward",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/fast_forward.svg"
+            }
+          ]
+        },
+        {
+          "name": "fast_rewind",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/fast_rewind.svg"
+            }
+          ]
+        },
+        {
+          "name": "favorite",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/favorite.svg"
+            }
+          ]
+        },
+        {
+          "name": "favorite_outline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/favorite_outline.svg"
+            }
+          ]
+        },
+        {
+          "name": "file_download",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/file_download.svg"
+            }
+          ]
+        },
+        {
+          "name": "file_upload",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/file_upload.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_1",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_1.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_2",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_2.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_3",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_3.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_4",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_4.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_5",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_5.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_6",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_6.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_7",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_7.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_8",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_8.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_9",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_9.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_9_plus",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_9_plus.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_b_and_w",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_b_and_w.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_center_focus",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_center_focus.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_drama",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_drama.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_frames",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_frames.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_hdr",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_hdr.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_list",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_list.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_none",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_none.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_tilt_shift",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_tilt_shift.svg"
+            }
+          ]
+        },
+        {
+          "name": "filter_vintage",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/filter_vintage.svg"
+            }
+          ]
+        },
+        {
+          "name": "find_in_page",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/find_in_page.svg"
+            }
+          ]
+        },
+        {
+          "name": "find_replace",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/find_replace.svg"
+            }
+          ]
+        },
+        {
+          "name": "flag",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/flag.svg"
+            }
+          ]
+        },
+        {
+          "name": "flare",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/flare.svg"
+            }
+          ]
+        },
+        {
+          "name": "flash_auto",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/flash_auto.svg"
+            }
+          ]
+        },
+        {
+          "name": "flash_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/flash_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "flash_on",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/flash_on.svg"
+            }
+          ]
+        },
+        {
+          "name": "flight",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/flight.svg"
+            }
+          ]
+        },
+        {
+          "name": "flip",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/flip.svg"
+            }
+          ]
+        },
+        {
+          "name": "flip_to_back",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/flip_to_back.svg"
+            }
+          ]
+        },
+        {
+          "name": "flip_to_front",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/flip_to_front.svg"
+            }
+          ]
+        },
+        {
+          "name": "folder",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/folder.svg"
+            }
+          ]
+        },
+        {
+          "name": "folder_open",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/folder_open.svg"
+            }
+          ]
+        },
+        {
+          "name": "folder_shared",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/folder_shared.svg"
+            }
+          ]
+        },
+        {
+          "name": "folder_special",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/folder_special.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_align_center",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_align_center.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_align_justify",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_align_justify.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_align_left",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_align_left.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_align_right",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_align_right.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_bold",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_bold.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_clear",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_clear.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_color_fill",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_color_fill.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_color_reset",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_color_reset.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_color_text",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_color_text.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_indent_decrease",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_indent_decrease.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_indent_increase",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_indent_increase.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_italic",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_italic.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_line_spacing",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_line_spacing.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_list_bulleted",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_list_bulleted.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_list_numbered",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_list_numbered.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_paint",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_paint.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_quote",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_quote.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_size",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_size.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_strikethrough",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_strikethrough.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_textdirection_l_to_r",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_textdirection_l_to_r.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_textdirection_r_to_l",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_textdirection_r_to_l.svg"
+            }
+          ]
+        },
+        {
+          "name": "format_underline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/format_underline.svg"
+            }
+          ]
+        },
+        {
+          "name": "forum",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/forum.svg"
+            }
+          ]
+        },
+        {
+          "name": "forward",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/forward.svg"
+            }
+          ]
+        },
+        {
+          "name": "fullscreen",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/fullscreen.svg"
+            }
+          ]
+        },
+        {
+          "name": "fullscreen_exit",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/fullscreen_exit.svg"
+            }
+          ]
+        },
+        {
+          "name": "functions",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/functions.svg"
+            }
+          ]
+        },
+        {
+          "name": "gamepad",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/gamepad.svg"
+            }
+          ]
+        },
+        {
+          "name": "games",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/games.svg"
+            }
+          ]
+        },
+        {
+          "name": "gesture",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/gesture.svg"
+            }
+          ]
+        },
+        {
+          "name": "get_app",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/get_app.svg"
+            }
+          ]
+        },
+        {
+          "name": "gps_fixed",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/gps_fixed.svg"
+            }
+          ]
+        },
+        {
+          "name": "gps_not_fixed",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/gps_not_fixed.svg"
+            }
+          ]
+        },
+        {
+          "name": "gps_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/gps_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "grade",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/grade.svg"
+            }
+          ]
+        },
+        {
+          "name": "gradient",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/gradient.svg"
+            }
+          ]
+        },
+        {
+          "name": "grain",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/grain.svg"
+            }
+          ]
+        },
+        {
+          "name": "grid_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/grid_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "grid_on",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/grid_on.svg"
+            }
+          ]
+        },
+        {
+          "name": "group",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/group.svg"
+            }
+          ]
+        },
+        {
+          "name": "group_add",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/group_add.svg"
+            }
+          ]
+        },
+        {
+          "name": "group_work",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/group_work.svg"
+            }
+          ]
+        },
+        {
+          "name": "hdr_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/hdr_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "hdr_on",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/hdr_on.svg"
+            }
+          ]
+        },
+        {
+          "name": "hdr_strong",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/hdr_strong.svg"
+            }
+          ]
+        },
+        {
+          "name": "hdr_weak",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/hdr_weak.svg"
+            }
+          ]
+        },
+        {
+          "name": "headset",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/headset.svg"
+            }
+          ]
+        },
+        {
+          "name": "headset_mic",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/headset_mic.svg"
+            }
+          ]
+        },
+        {
+          "name": "healing",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/healing.svg"
+            }
+          ]
+        },
+        {
+          "name": "hearing",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/hearing.svg"
+            }
+          ]
+        },
+        {
+          "name": "help",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/help.svg"
+            }
+          ]
+        },
+        {
+          "name": "high_quality",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/high_quality.svg"
+            }
+          ]
+        },
+        {
+          "name": "highlight_remove",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/highlight_remove.svg"
+            }
+          ]
+        },
+        {
+          "name": "history",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/history.svg"
+            }
+          ]
+        },
+        {
+          "name": "home",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/home.svg"
+            }
+          ]
+        },
+        {
+          "name": "hotel",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/hotel.svg"
+            }
+          ]
+        },
+        {
+          "name": "https",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/https.svg"
+            }
+          ]
+        },
+        {
+          "name": "image",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/image.svg"
+            }
+          ]
+        },
+        {
+          "name": "image_aspect_ratio",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/image_aspect_ratio.svg"
+            }
+          ]
+        },
+        {
+          "name": "import_export",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/import_export.svg"
+            }
+          ]
+        },
+        {
+          "name": "inbox",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/inbox.svg"
+            }
+          ]
+        },
+        {
+          "name": "info",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/info.svg"
+            }
+          ]
+        },
+        {
+          "name": "info_outline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/info_outline.svg"
+            }
+          ]
+        },
+        {
+          "name": "input",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/input.svg"
+            }
+          ]
+        },
+        {
+          "name": "insert_chart",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/insert_chart.svg"
+            }
+          ]
+        },
+        {
+          "name": "insert_comment",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/insert_comment.svg"
+            }
+          ]
+        },
+        {
+          "name": "insert_drive_file",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/insert_drive_file.svg"
+            }
+          ]
+        },
+        {
+          "name": "insert_emoticon",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/insert_emoticon.svg"
+            }
+          ]
+        },
+        {
+          "name": "insert_invitation",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/insert_invitation.svg"
+            }
+          ]
+        },
+        {
+          "name": "insert_link",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/insert_link.svg"
+            }
+          ]
+        },
+        {
+          "name": "insert_photo",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/insert_photo.svg"
+            }
+          ]
+        },
+        {
+          "name": "invert_colors",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/invert_colors.svg"
+            }
+          ]
+        },
+        {
+          "name": "invert_colors_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/invert_colors_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "invert_colors_on",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/invert_colors_on.svg"
+            }
+          ]
+        },
+        {
+          "name": "iso",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/iso.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_alt",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard_alt.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_arrow_down",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard_arrow_down.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_arrow_left",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard_arrow_left.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_arrow_right",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard_arrow_right.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_arrow_up",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard_arrow_up.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_backspace",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard_backspace.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_capslock",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard_capslock.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_control",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard_control.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_hide",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard_hide.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_return",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard_return.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_tab",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard_tab.svg"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_voice",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/keyboard_voice.svg"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/label.svg"
+            }
+          ]
+        },
+        {
+          "name": "label_outline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/label_outline.svg"
+            }
+          ]
+        },
+        {
+          "name": "landscape",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/landscape.svg"
+            }
+          ]
+        },
+        {
+          "name": "language",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/language.svg"
+            }
+          ]
+        },
+        {
+          "name": "laptop",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/laptop.svg"
+            }
+          ]
+        },
+        {
+          "name": "laptop_chromebook",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/laptop_chromebook.svg"
+            }
+          ]
+        },
+        {
+          "name": "laptop_mac",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/laptop_mac.svg"
+            }
+          ]
+        },
+        {
+          "name": "laptop_windows",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/laptop_windows.svg"
+            }
+          ]
+        },
+        {
+          "name": "launch",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/launch.svg"
+            }
+          ]
+        },
+        {
+          "name": "layers",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/layers.svg"
+            }
+          ]
+        },
+        {
+          "name": "layers_clear",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/layers_clear.svg"
+            }
+          ]
+        },
+        {
+          "name": "leak_add",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/leak_add.svg"
+            }
+          ]
+        },
+        {
+          "name": "leak_remove",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/leak_remove.svg"
+            }
+          ]
+        },
+        {
+          "name": "lens",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/lens.svg"
+            }
+          ]
+        },
+        {
+          "name": "link",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/link.svg"
+            }
+          ]
+        },
+        {
+          "name": "list",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/list.svg"
+            }
+          ]
+        },
+        {
+          "name": "live_help",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/live_help.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_airport",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_airport.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_atm",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_atm.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_attraction",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_attraction.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_cafe",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_cafe.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_car_wash",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_car_wash.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_convenience_store",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_convenience_store.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_drink",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_drink.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_florist",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_florist.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_gas_station",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_gas_station.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_grocery_store",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_grocery_store.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_hospital",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_hospital.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_hotel",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_hotel.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_laundry_service",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_laundry_service.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_library",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_library.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_mall",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_mall.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_movies",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_movies.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_offer",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_offer.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_parking",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_parking.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_pharmacy",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_pharmacy.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_phone",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_phone.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_pizza",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_pizza.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_play",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_play.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_post_office",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_post_office.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_print_shop",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_print_shop.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_restaurant",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_restaurant.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_see",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_see.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_shipping",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_shipping.svg"
+            }
+          ]
+        },
+        {
+          "name": "local_taxi",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/local_taxi.svg"
+            }
+          ]
+        },
+        {
+          "name": "location_city",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/location_city.svg"
+            }
+          ]
+        },
+        {
+          "name": "location_disabled",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/location_disabled.svg"
+            }
+          ]
+        },
+        {
+          "name": "location_history",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/location_history.svg"
+            }
+          ]
+        },
+        {
+          "name": "location_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/location_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "location_on",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/location_on.svg"
+            }
+          ]
+        },
+        {
+          "name": "location_searching",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/location_searching.svg"
+            }
+          ]
+        },
+        {
+          "name": "lock",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/lock.svg"
+            }
+          ]
+        },
+        {
+          "name": "lock_open",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/lock_open.svg"
+            }
+          ]
+        },
+        {
+          "name": "lock_outline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/lock_outline.svg"
+            }
+          ]
+        },
+        {
+          "name": "looks",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/looks.svg"
+            }
+          ]
+        },
+        {
+          "name": "looks_3",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/looks_3.svg"
+            }
+          ]
+        },
+        {
+          "name": "looks_4",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/looks_4.svg"
+            }
+          ]
+        },
+        {
+          "name": "looks_5",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/looks_5.svg"
+            }
+          ]
+        },
+        {
+          "name": "looks_6",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/looks_6.svg"
+            }
+          ]
+        },
+        {
+          "name": "looks_one",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/looks_one.svg"
+            }
+          ]
+        },
+        {
+          "name": "looks_two",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/looks_two.svg"
+            }
+          ]
+        },
+        {
+          "name": "loop",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/loop.svg"
+            }
+          ]
+        },
+        {
+          "name": "loupe",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/loupe.svg"
+            }
+          ]
+        },
+        {
+          "name": "loyalty",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/loyalty.svg"
+            }
+          ]
+        },
+        {
+          "name": "mail",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/mail.svg"
+            }
+          ]
+        },
+        {
+          "name": "map",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/map.svg"
+            }
+          ]
+        },
+        {
+          "name": "markunread",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/markunread.svg"
+            }
+          ]
+        },
+        {
+          "name": "markunread_mailbox",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/markunread_mailbox.svg"
+            }
+          ]
+        },
+        {
+          "name": "memory",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/memory.svg"
+            }
+          ]
+        },
+        {
+          "name": "menu",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/menu.svg"
+            }
+          ]
+        },
+        {
+          "name": "merge_type",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/merge_type.svg"
+            }
+          ]
+        },
+        {
+          "name": "message",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/message.svg"
+            }
+          ]
+        },
+        {
+          "name": "messenger",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/messenger.svg"
+            }
+          ]
+        },
+        {
+          "name": "mic",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/mic.svg"
+            }
+          ]
+        },
+        {
+          "name": "mic_none",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/mic_none.svg"
+            }
+          ]
+        },
+        {
+          "name": "mic_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/mic_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "mms",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/mms.svg"
+            }
+          ]
+        },
+        {
+          "name": "mode_comment",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/mode_comment.svg"
+            }
+          ]
+        },
+        {
+          "name": "mode_edit",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/mode_edit.svg"
+            }
+          ]
+        },
+        {
+          "name": "mood",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/mood.svg"
+            }
+          ]
+        },
+        {
+          "name": "more",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/more.svg"
+            }
+          ]
+        },
+        {
+          "name": "more_horiz",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/more_horiz.svg"
+            }
+          ]
+        },
+        {
+          "name": "more_vert",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/more_vert.svg"
+            }
+          ]
+        },
+        {
+          "name": "mouse",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/mouse.svg"
+            }
+          ]
+        },
+        {
+          "name": "movie",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/movie.svg"
+            }
+          ]
+        },
+        {
+          "name": "movie_creation",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/movie_creation.svg"
+            }
+          ]
+        },
+        {
+          "name": "multitrack_audio",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/multitrack_audio.svg"
+            }
+          ]
+        },
+        {
+          "name": "my_library_add",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/my_library_add.svg"
+            }
+          ]
+        },
+        {
+          "name": "my_library_books",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/my_library_books.svg"
+            }
+          ]
+        },
+        {
+          "name": "my_library_music",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/my_library_music.svg"
+            }
+          ]
+        },
+        {
+          "name": "my_location",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/my_location.svg"
+            }
+          ]
+        },
+        {
+          "name": "nature",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/nature.svg"
+            }
+          ]
+        },
+        {
+          "name": "nature_people",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/nature_people.svg"
+            }
+          ]
+        },
+        {
+          "name": "navigate_before",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/navigate_before.svg"
+            }
+          ]
+        },
+        {
+          "name": "navigate_next",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/navigate_next.svg"
+            }
+          ]
+        },
+        {
+          "name": "navigation",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/navigation.svg"
+            }
+          ]
+        },
+        {
+          "name": "network_cell",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/network_cell.svg"
+            }
+          ]
+        },
+        {
+          "name": "network_locked",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/network_locked.svg"
+            }
+          ]
+        },
+        {
+          "name": "network_wifi",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/network_wifi.svg"
+            }
+          ]
+        },
+        {
+          "name": "new_releases",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/new_releases.svg"
+            }
+          ]
+        },
+        {
+          "name": "nfc",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/nfc.svg"
+            }
+          ]
+        },
+        {
+          "name": "no_sim",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/no_sim.svg"
+            }
+          ]
+        },
+        {
+          "name": "not_interested",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/not_interested.svg"
+            }
+          ]
+        },
+        {
+          "name": "note_add",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/note_add.svg"
+            }
+          ]
+        },
+        {
+          "name": "notifications",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/notifications.svg"
+            }
+          ]
+        },
+        {
+          "name": "notifications_none",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/notifications_none.svg"
+            }
+          ]
+        },
+        {
+          "name": "notifications_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/notifications_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "notifications_on",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/notifications_on.svg"
+            }
+          ]
+        },
+        {
+          "name": "notifications_paused",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/notifications_paused.svg"
+            }
+          ]
+        },
+        {
+          "name": "now_wallpaper",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/now_wallpaper.svg"
+            }
+          ]
+        },
+        {
+          "name": "now_widgets",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/now_widgets.svg"
+            }
+          ]
+        },
+        {
+          "name": "open_in_browser",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/open_in_browser.svg"
+            }
+          ]
+        },
+        {
+          "name": "open_in_new",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/open_in_new.svg"
+            }
+          ]
+        },
+        {
+          "name": "open_with",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/open_with.svg"
+            }
+          ]
+        },
+        {
+          "name": "pages",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/pages.svg"
+            }
+          ]
+        },
+        {
+          "name": "pageview",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/pageview.svg"
+            }
+          ]
+        },
+        {
+          "name": "palette",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/palette.svg"
+            }
+          ]
+        },
+        {
+          "name": "panorama",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/panorama.svg"
+            }
+          ]
+        },
+        {
+          "name": "panorama_fisheye",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/panorama_fisheye.svg"
+            }
+          ]
+        },
+        {
+          "name": "panorama_horizontal",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/panorama_horizontal.svg"
+            }
+          ]
+        },
+        {
+          "name": "panorama_vertical",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/panorama_vertical.svg"
+            }
+          ]
+        },
+        {
+          "name": "panorama_wide_angle",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/panorama_wide_angle.svg"
+            }
+          ]
+        },
+        {
+          "name": "party_mode",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/party_mode.svg"
+            }
+          ]
+        },
+        {
+          "name": "pause",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/pause.svg"
+            }
+          ]
+        },
+        {
+          "name": "pause_circle_fill",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/pause_circle_fill.svg"
+            }
+          ]
+        },
+        {
+          "name": "pause_circle_outline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/pause_circle_outline.svg"
+            }
+          ]
+        },
+        {
+          "name": "payment",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/payment.svg"
+            }
+          ]
+        },
+        {
+          "name": "people",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/people.svg"
+            }
+          ]
+        },
+        {
+          "name": "people_outline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/people_outline.svg"
+            }
+          ]
+        },
+        {
+          "name": "perm_camera_mic",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/perm_camera_mic.svg"
+            }
+          ]
+        },
+        {
+          "name": "perm_contact_cal",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/perm_contact_cal.svg"
+            }
+          ]
+        },
+        {
+          "name": "perm_data_setting",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/perm_data_setting.svg"
+            }
+          ]
+        },
+        {
+          "name": "perm_device_info",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/perm_device_info.svg"
+            }
+          ]
+        },
+        {
+          "name": "perm_identity",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/perm_identity.svg"
+            }
+          ]
+        },
+        {
+          "name": "perm_media",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/perm_media.svg"
+            }
+          ]
+        },
+        {
+          "name": "perm_phone_msg",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/perm_phone_msg.svg"
+            }
+          ]
+        },
+        {
+          "name": "perm_scan_wifi",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/perm_scan_wifi.svg"
+            }
+          ]
+        },
+        {
+          "name": "person",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/person.svg"
+            }
+          ]
+        },
+        {
+          "name": "person_add",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/person_add.svg"
+            }
+          ]
+        },
+        {
+          "name": "person_outline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/person_outline.svg"
+            }
+          ]
+        },
+        {
+          "name": "phone",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/phone.svg"
+            }
+          ]
+        },
+        {
+          "name": "phone_android",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/phone_android.svg"
+            }
+          ]
+        },
+        {
+          "name": "phone_bluetooth_speaker",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/phone_bluetooth_speaker.svg"
+            }
+          ]
+        },
+        {
+          "name": "phone_forwarded",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/phone_forwarded.svg"
+            }
+          ]
+        },
+        {
+          "name": "phone_in_talk",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/phone_in_talk.svg"
+            }
+          ]
+        },
+        {
+          "name": "phone_iphone",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/phone_iphone.svg"
+            }
+          ]
+        },
+        {
+          "name": "phone_locked",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/phone_locked.svg"
+            }
+          ]
+        },
+        {
+          "name": "phone_missed",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/phone_missed.svg"
+            }
+          ]
+        },
+        {
+          "name": "phone_paused",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/phone_paused.svg"
+            }
+          ]
+        },
+        {
+          "name": "phonelink",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/phonelink.svg"
+            }
+          ]
+        },
+        {
+          "name": "phonelink_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/phonelink_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "photo",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/photo.svg"
+            }
+          ]
+        },
+        {
+          "name": "photo_album",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/photo_album.svg"
+            }
+          ]
+        },
+        {
+          "name": "photo_camera",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/photo_camera.svg"
+            }
+          ]
+        },
+        {
+          "name": "photo_library",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/photo_library.svg"
+            }
+          ]
+        },
+        {
+          "name": "picture_in_picture",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/picture_in_picture.svg"
+            }
+          ]
+        },
+        {
+          "name": "pin_drop",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/pin_drop.svg"
+            }
+          ]
+        },
+        {
+          "name": "place",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/place.svg"
+            }
+          ]
+        },
+        {
+          "name": "play_arrow",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/play_arrow.svg"
+            }
+          ]
+        },
+        {
+          "name": "play_circle_fill",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/play_circle_fill.svg"
+            }
+          ]
+        },
+        {
+          "name": "play_circle_outline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/play_circle_outline.svg"
+            }
+          ]
+        },
+        {
+          "name": "play_download",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/play_download.svg"
+            }
+          ]
+        },
+        {
+          "name": "play_install",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/play_install.svg"
+            }
+          ]
+        },
+        {
+          "name": "play_shopping_bag",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/play_shopping_bag.svg"
+            }
+          ]
+        },
+        {
+          "name": "playlist_add",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/playlist_add.svg"
+            }
+          ]
+        },
+        {
+          "name": "plus_one",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/plus_one.svg"
+            }
+          ]
+        },
+        {
+          "name": "poll",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/poll.svg"
+            }
+          ]
+        },
+        {
+          "name": "polymer",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/polymer.svg"
+            }
+          ]
+        },
+        {
+          "name": "portable_wifi_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/portable_wifi_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "portrait",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/portrait.svg"
+            }
+          ]
+        },
+        {
+          "name": "print",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/print.svg"
+            }
+          ]
+        },
+        {
+          "name": "public",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/public.svg"
+            }
+          ]
+        },
+        {
+          "name": "publish",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/publish.svg"
+            }
+          ]
+        },
+        {
+          "name": "query_builder",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/query_builder.svg"
+            }
+          ]
+        },
+        {
+          "name": "question_answer",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/question_answer.svg"
+            }
+          ]
+        },
+        {
+          "name": "queue",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/queue.svg"
+            }
+          ]
+        },
+        {
+          "name": "queue_music",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/queue_music.svg"
+            }
+          ]
+        },
+        {
+          "name": "quick_contacts_dialer",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/quick_contacts_dialer.svg"
+            }
+          ]
+        },
+        {
+          "name": "quick_contacts_mail",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/quick_contacts_mail.svg"
+            }
+          ]
+        },
+        {
+          "name": "radio",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/radio.svg"
+            }
+          ]
+        },
+        {
+          "name": "radio_button_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/radio_button_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "radio_button_on",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/radio_button_on.svg"
+            }
+          ]
+        },
+        {
+          "name": "rate_review",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/rate_review.svg"
+            }
+          ]
+        },
+        {
+          "name": "receipt",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/receipt.svg"
+            }
+          ]
+        },
+        {
+          "name": "recent_actors",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/recent_actors.svg"
+            }
+          ]
+        },
+        {
+          "name": "redeem",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/redeem.svg"
+            }
+          ]
+        },
+        {
+          "name": "redo",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/redo.svg"
+            }
+          ]
+        },
+        {
+          "name": "refresh",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/refresh.svg"
+            }
+          ]
+        },
+        {
+          "name": "remove",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/remove.svg"
+            }
+          ]
+        },
+        {
+          "name": "remove_circle",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/remove_circle.svg"
+            }
+          ]
+        },
+        {
+          "name": "remove_circle_outline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/remove_circle_outline.svg"
+            }
+          ]
+        },
+        {
+          "name": "remove_red_eye",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/remove_red_eye.svg"
+            }
+          ]
+        },
+        {
+          "name": "reorder",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/reorder.svg"
+            }
+          ]
+        },
+        {
+          "name": "repeat",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/repeat.svg"
+            }
+          ]
+        },
+        {
+          "name": "repeat_one",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/repeat_one.svg"
+            }
+          ]
+        },
+        {
+          "name": "replay",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/replay.svg"
+            }
+          ]
+        },
+        {
+          "name": "reply",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/reply.svg"
+            }
+          ]
+        },
+        {
+          "name": "reply_all",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/reply_all.svg"
+            }
+          ]
+        },
+        {
+          "name": "report",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/report.svg"
+            }
+          ]
+        },
+        {
+          "name": "report_problem",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/report_problem.svg"
+            }
+          ]
+        },
+        {
+          "name": "restaurant_menu",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/restaurant_menu.svg"
+            }
+          ]
+        },
+        {
+          "name": "restore",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/restore.svg"
+            }
+          ]
+        },
+        {
+          "name": "ring_volume",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/ring_volume.svg"
+            }
+          ]
+        },
+        {
+          "name": "room",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/room.svg"
+            }
+          ]
+        },
+        {
+          "name": "rotate_left",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/rotate_left.svg"
+            }
+          ]
+        },
+        {
+          "name": "rotate_right",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/rotate_right.svg"
+            }
+          ]
+        },
+        {
+          "name": "satellite",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/satellite.svg"
+            }
+          ]
+        },
+        {
+          "name": "save",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/save.svg"
+            }
+          ]
+        },
+        {
+          "name": "schedule",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/schedule.svg"
+            }
+          ]
+        },
+        {
+          "name": "school",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/school.svg"
+            }
+          ]
+        },
+        {
+          "name": "screen_lock_landscape",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/screen_lock_landscape.svg"
+            }
+          ]
+        },
+        {
+          "name": "screen_lock_portrait",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/screen_lock_portrait.svg"
+            }
+          ]
+        },
+        {
+          "name": "screen_lock_rotation",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/screen_lock_rotation.svg"
+            }
+          ]
+        },
+        {
+          "name": "screen_rotation",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/screen_rotation.svg"
+            }
+          ]
+        },
+        {
+          "name": "sd_card",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/sd_card.svg"
+            }
+          ]
+        },
+        {
+          "name": "sd_storage",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/sd_storage.svg"
+            }
+          ]
+        },
+        {
+          "name": "search",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/search.svg"
+            }
+          ]
+        },
+        {
+          "name": "security",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/security.svg"
+            }
+          ]
+        },
+        {
+          "name": "select_all",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/select_all.svg"
+            }
+          ]
+        },
+        {
+          "name": "send",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/send.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_applications",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_applications.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_backup_restore",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_backup_restore.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_bluetooth",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_bluetooth.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_cell",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_cell.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_display",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_display.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_ethernet",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_ethernet.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_input_antenna",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_input_antenna.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_input_component",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_input_component.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_input_composite",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_input_composite.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_input_hdmi",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_input_hdmi.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_input_svideo",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_input_svideo.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_overscan",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_overscan.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_phone",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_phone.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_power",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_power.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_remote",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_remote.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_system_daydream",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_system_daydream.svg"
+            }
+          ]
+        },
+        {
+          "name": "settings_voice",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/settings_voice.svg"
+            }
+          ]
+        },
+        {
+          "name": "share",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/share.svg"
+            }
+          ]
+        },
+        {
+          "name": "shop",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/shop.svg"
+            }
+          ]
+        },
+        {
+          "name": "shop_two",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/shop_two.svg"
+            }
+          ]
+        },
+        {
+          "name": "shopping_basket",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/shopping_basket.svg"
+            }
+          ]
+        },
+        {
+          "name": "shopping_cart",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/shopping_cart.svg"
+            }
+          ]
+        },
+        {
+          "name": "shuffle",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/shuffle.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_0_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_0_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_1_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_1_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_2_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_2_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_3_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_3_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_4_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_4_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_connected_no_internet_0_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_connected_no_internet_0_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_connected_no_internet_1_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_connected_no_internet_1_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_connected_no_internet_2_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_connected_no_internet_2_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_connected_no_internet_3_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_connected_no_internet_3_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_connected_no_internet_4_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_connected_no_internet_4_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_no_sim",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_no_sim.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_null",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_null.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_cellular_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_cellular_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_wifi_0_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_wifi_0_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_wifi_1_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_wifi_1_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_wifi_2_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_wifi_2_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_wifi_3_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_wifi_3_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_wifi_4_bar",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_wifi_4_bar.svg"
+            }
+          ]
+        },
+        {
+          "name": "signal_wifi_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/signal_wifi_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "sim_card",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/sim_card.svg"
+            }
+          ]
+        },
+        {
+          "name": "sim_card_alert",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/sim_card_alert.svg"
+            }
+          ]
+        },
+        {
+          "name": "skip_next",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/skip_next.svg"
+            }
+          ]
+        },
+        {
+          "name": "skip_previous",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/skip_previous.svg"
+            }
+          ]
+        },
+        {
+          "name": "slideshow",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/slideshow.svg"
+            }
+          ]
+        },
+        {
+          "name": "smartphone",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/smartphone.svg"
+            }
+          ]
+        },
+        {
+          "name": "sms",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/sms.svg"
+            }
+          ]
+        },
+        {
+          "name": "sms_failed",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/sms_failed.svg"
+            }
+          ]
+        },
+        {
+          "name": "snooze",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/snooze.svg"
+            }
+          ]
+        },
+        {
+          "name": "sort",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/sort.svg"
+            }
+          ]
+        },
+        {
+          "name": "speaker",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/speaker.svg"
+            }
+          ]
+        },
+        {
+          "name": "speaker_notes",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/speaker_notes.svg"
+            }
+          ]
+        },
+        {
+          "name": "spellcheck",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/spellcheck.svg"
+            }
+          ]
+        },
+        {
+          "name": "star",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/star.svg"
+            }
+          ]
+        },
+        {
+          "name": "star_half",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/star_half.svg"
+            }
+          ]
+        },
+        {
+          "name": "star_outline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/star_outline.svg"
+            }
+          ]
+        },
+        {
+          "name": "star_rate",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/star_rate.svg"
+            }
+          ]
+        },
+        {
+          "name": "stars",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/stars.svg"
+            }
+          ]
+        },
+        {
+          "name": "stay_current_landscape",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/stay_current_landscape.svg"
+            }
+          ]
+        },
+        {
+          "name": "stay_current_portrait",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/stay_current_portrait.svg"
+            }
+          ]
+        },
+        {
+          "name": "stay_primary_landscape",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/stay_primary_landscape.svg"
+            }
+          ]
+        },
+        {
+          "name": "stay_primary_portrait",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/stay_primary_portrait.svg"
+            }
+          ]
+        },
+        {
+          "name": "stop",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/stop.svg"
+            }
+          ]
+        },
+        {
+          "name": "storage",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/storage.svg"
+            }
+          ]
+        },
+        {
+          "name": "store",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/store.svg"
+            }
+          ]
+        },
+        {
+          "name": "store_mall_directory",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/store_mall_directory.svg"
+            }
+          ]
+        },
+        {
+          "name": "straighten",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/straighten.svg"
+            }
+          ]
+        },
+        {
+          "name": "style",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/style.svg"
+            }
+          ]
+        },
+        {
+          "name": "subject",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/subject.svg"
+            }
+          ]
+        },
+        {
+          "name": "subtitles",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/subtitles.svg"
+            }
+          ]
+        },
+        {
+          "name": "supervisor_account",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/supervisor_account.svg"
+            }
+          ]
+        },
+        {
+          "name": "surround_sound",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/surround_sound.svg"
+            }
+          ]
+        },
+        {
+          "name": "swap_calls",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/swap_calls.svg"
+            }
+          ]
+        },
+        {
+          "name": "swap_horiz",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/swap_horiz.svg"
+            }
+          ]
+        },
+        {
+          "name": "swap_vert",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/swap_vert.svg"
+            }
+          ]
+        },
+        {
+          "name": "swap_vert_circle",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/swap_vert_circle.svg"
+            }
+          ]
+        },
+        {
+          "name": "switch_camera",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/switch_camera.svg"
+            }
+          ]
+        },
+        {
+          "name": "switch_video",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/switch_video.svg"
+            }
+          ]
+        },
+        {
+          "name": "sync",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/sync.svg"
+            }
+          ]
+        },
+        {
+          "name": "sync_disabled",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/sync_disabled.svg"
+            }
+          ]
+        },
+        {
+          "name": "sync_problem",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/sync_problem.svg"
+            }
+          ]
+        },
+        {
+          "name": "system_update",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/system_update.svg"
+            }
+          ]
+        },
+        {
+          "name": "system_update_tv",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/system_update_tv.svg"
+            }
+          ]
+        },
+        {
+          "name": "tab",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/tab.svg"
+            }
+          ]
+        },
+        {
+          "name": "tab_unselected",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/tab_unselected.svg"
+            }
+          ]
+        },
+        {
+          "name": "tablet",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/tablet.svg"
+            }
+          ]
+        },
+        {
+          "name": "tablet_android",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/tablet_android.svg"
+            }
+          ]
+        },
+        {
+          "name": "tablet_mac",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/tablet_mac.svg"
+            }
+          ]
+        },
+        {
+          "name": "tag_faces",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/tag_faces.svg"
+            }
+          ]
+        },
+        {
+          "name": "tap_and_play",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/tap_and_play.svg"
+            }
+          ]
+        },
+        {
+          "name": "terrain",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/terrain.svg"
+            }
+          ]
+        },
+        {
+          "name": "text_format",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/text_format.svg"
+            }
+          ]
+        },
+        {
+          "name": "textsms",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/textsms.svg"
+            }
+          ]
+        },
+        {
+          "name": "texture",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/texture.svg"
+            }
+          ]
+        },
+        {
+          "name": "theaters",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/theaters.svg"
+            }
+          ]
+        },
+        {
+          "name": "thumb_down",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/thumb_down.svg"
+            }
+          ]
+        },
+        {
+          "name": "thumb_up",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/thumb_up.svg"
+            }
+          ]
+        },
+        {
+          "name": "thumbs_up_down",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/thumbs_up_down.svg"
+            }
+          ]
+        },
+        {
+          "name": "time_to_leave",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/time_to_leave.svg"
+            }
+          ]
+        },
+        {
+          "name": "timelapse",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/timelapse.svg"
+            }
+          ]
+        },
+        {
+          "name": "timer",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/timer.svg"
+            }
+          ]
+        },
+        {
+          "name": "timer_10",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/timer_10.svg"
+            }
+          ]
+        },
+        {
+          "name": "timer_3",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/timer_3.svg"
+            }
+          ]
+        },
+        {
+          "name": "timer_auto",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/timer_auto.svg"
+            }
+          ]
+        },
+        {
+          "name": "timer_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/timer_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "toc",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/toc.svg"
+            }
+          ]
+        },
+        {
+          "name": "today",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/today.svg"
+            }
+          ]
+        },
+        {
+          "name": "tonality",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/tonality.svg"
+            }
+          ]
+        },
+        {
+          "name": "track_changes",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/track_changes.svg"
+            }
+          ]
+        },
+        {
+          "name": "traffic",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/traffic.svg"
+            }
+          ]
+        },
+        {
+          "name": "transform",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/transform.svg"
+            }
+          ]
+        },
+        {
+          "name": "translate",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/translate.svg"
+            }
+          ]
+        },
+        {
+          "name": "trending_down",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/trending_down.svg"
+            }
+          ]
+        },
+        {
+          "name": "trending_neutral",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/trending_neutral.svg"
+            }
+          ]
+        },
+        {
+          "name": "trending_up",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/trending_up.svg"
+            }
+          ]
+        },
+        {
+          "name": "tune",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/tune.svg"
+            }
+          ]
+        },
+        {
+          "name": "turned_in",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/turned_in.svg"
+            }
+          ]
+        },
+        {
+          "name": "turned_in_not",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/turned_in_not.svg"
+            }
+          ]
+        },
+        {
+          "name": "tv",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/tv.svg"
+            }
+          ]
+        },
+        {
+          "name": "twitter",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/twitter.svg"
+            }
+          ]
+        },
+        {
+          "name": "undo",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/undo.svg"
+            }
+          ]
+        },
+        {
+          "name": "unfold_less",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/unfold_less.svg"
+            }
+          ]
+        },
+        {
+          "name": "unfold_more",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/unfold_more.svg"
+            }
+          ]
+        },
+        {
+          "name": "usb",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/usb.svg"
+            }
+          ]
+        },
+        {
+          "name": "verified_user",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/verified_user.svg"
+            }
+          ]
+        },
+        {
+          "name": "vertical_align_bottom",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/vertical_align_bottom.svg"
+            }
+          ]
+        },
+        {
+          "name": "vertical_align_center",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/vertical_align_center.svg"
+            }
+          ]
+        },
+        {
+          "name": "vertical_align_top",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/vertical_align_top.svg"
+            }
+          ]
+        },
+        {
+          "name": "vibration",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/vibration.svg"
+            }
+          ]
+        },
+        {
+          "name": "video_collection",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/video_collection.svg"
+            }
+          ]
+        },
+        {
+          "name": "videocam",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/videocam.svg"
+            }
+          ]
+        },
+        {
+          "name": "videocam_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/videocam_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "view_agenda",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/view_agenda.svg"
+            }
+          ]
+        },
+        {
+          "name": "view_array",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/view_array.svg"
+            }
+          ]
+        },
+        {
+          "name": "view_carousel",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/view_carousel.svg"
+            }
+          ]
+        },
+        {
+          "name": "view_column",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/view_column.svg"
+            }
+          ]
+        },
+        {
+          "name": "view_day",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/view_day.svg"
+            }
+          ]
+        },
+        {
+          "name": "view_headline",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/view_headline.svg"
+            }
+          ]
+        },
+        {
+          "name": "view_list",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/view_list.svg"
+            }
+          ]
+        },
+        {
+          "name": "view_module",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/view_module.svg"
+            }
+          ]
+        },
+        {
+          "name": "view_quilt",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/view_quilt.svg"
+            }
+          ]
+        },
+        {
+          "name": "view_stream",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/view_stream.svg"
+            }
+          ]
+        },
+        {
+          "name": "view_week",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/view_week.svg"
+            }
+          ]
+        },
+        {
+          "name": "visibility",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/visibility.svg"
+            }
+          ]
+        },
+        {
+          "name": "visibility_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/visibility_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "voice_chat",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/voice_chat.svg"
+            }
+          ]
+        },
+        {
+          "name": "voicemail",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/voicemail.svg"
+            }
+          ]
+        },
+        {
+          "name": "volume_down",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/volume_down.svg"
+            }
+          ]
+        },
+        {
+          "name": "volume_mute",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/volume_mute.svg"
+            }
+          ]
+        },
+        {
+          "name": "volume_off",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/volume_off.svg"
+            }
+          ]
+        },
+        {
+          "name": "volume_up",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/volume_up.svg"
+            }
+          ]
+        },
+        {
+          "name": "vpn_key",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/vpn_key.svg"
+            }
+          ]
+        },
+        {
+          "name": "vpn_lock",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/vpn_lock.svg"
+            }
+          ]
+        },
+        {
+          "name": "wallet_giftcard",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/wallet_giftcard.svg"
+            }
+          ]
+        },
+        {
+          "name": "wallet_membership",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/wallet_membership.svg"
+            }
+          ]
+        },
+        {
+          "name": "wallet_travel",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/wallet_travel.svg"
+            }
+          ]
+        },
+        {
+          "name": "warning",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/warning.svg"
+            }
+          ]
+        },
+        {
+          "name": "watch",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/watch.svg"
+            }
+          ]
+        },
+        {
+          "name": "wb_auto",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/wb_auto.svg"
+            }
+          ]
+        },
+        {
+          "name": "wb_cloudy",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/wb_cloudy.svg"
+            }
+          ]
+        },
+        {
+          "name": "wb_incandescent",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/wb_incandescent.svg"
+            }
+          ]
+        },
+        {
+          "name": "wb_irradescent",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/wb_irradescent.svg"
+            }
+          ]
+        },
+        {
+          "name": "wb_sunny",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/wb_sunny.svg"
+            }
+          ]
+        },
+        {
+          "name": "web",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/web.svg"
+            }
+          ]
+        },
+        {
+          "name": "whatshot",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/whatshot.svg"
+            }
+          ]
+        },
+        {
+          "name": "wifi_lock",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/wifi_lock.svg"
+            }
+          ]
+        },
+        {
+          "name": "wifi_tethering",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/wifi_tethering.svg"
+            }
+          ]
+        },
+        {
+          "name": "work",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/work.svg"
+            }
+          ]
+        },
+        {
+          "name": "wrap_text",
+          "css": [
+            {
+              "property": "background-image",
+              "value": "resources/icon/wrap_text.svg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
