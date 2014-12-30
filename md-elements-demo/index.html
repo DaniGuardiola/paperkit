@@ -8,20 +8,170 @@
 	<script src="bower_components/materializer/materializer.js"></script>
 	<link rel="stylesheet" href="bower_components/materializer/materializer.css">
 	<link rel="stylesheet" href="style.css">
+	<link href="prism.css" rel="stylesheet">
 </head>
-<body md-color="grey-200">
-	<md-toolbar md-fill="white" md-color="green" md-height="x3">
+<body md-layout="fixed" md-color="grey-200">
+	<md-toolbar md-fill="white" md-color="green">
 		<md-row>
-			<md-icon-button md-image="icon:menu"></md-icon-button>
+			<md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
 			<md-text>Materializer elements</md-text>
 			<md-space></md-space>
 			<md-icon-button md-image="icon:share"></md-icon-button>
 		</md-row>
 	</md-toolbar>
+	<md-sidemenu></md-sidemenu>
 	<md-content>
-		<md-paper></md-paper>
+		<md-paper style="margin: 16px auto" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+		
+			<!-- Toolbar -->		
+			<div class="el">
+				<div class="el-header" md-typo="display-1">
+					<span>Toolbar</span>
+					<md-space></md-space>
+					<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/toolbar">
+						<span md-color="grey" md-font-color="white">&lt;md-toolbar&gt;</span>
+					</a>
+				</div>
+				<div class="el-demo">
+					<md-toolbar md-color="red" md-fill="white">
+						<md-row>
+							<md-icon-button md-image="icon:menu"></md-icon-button>
+							<md-text>I'm a toolbar!</md-text>
+							<md-space></md-space>
+							<md-icon-button md-image="icon:favorite"></md-icon-button>
+						</md-row>
+					</md-toolbar>
+				</div>
+				<pre class="language-markup"><code>&lt;md-toolbar md-color="red" md-fill="white"&gt;
+	&lt;md-row&gt;
+		&lt;md-icon-button md-image="icon:menu"&gt;&lt;/md-icon-button&gt;
+		&lt;md-text&gt;I'm a toolbar!&lt;/md-text&gt;
+		&lt;md-space&gt;&lt;/md-space&gt;
+		&lt;md-icon-button md-image="icon:favorite"&gt;&lt;/md-icon-button&gt;
+	&lt;/md-row&gt;
+&lt;/md-toolbar&gt;</code></pre>
+			</div>
+		
+			<!-- Icon -->		
+			<div class="el">
+				<div class="el-header" md-typo="display-1">
+					<span>Icon</span>
+					<md-space></md-space>
+					<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/icon">
+						<span md-color="grey" md-font-color="white">&lt;md-icon&gt;</span>
+					</a>
+				</div>
+				<div md-flex="display" class="el-demo">
+					<md-icon md-image="icon:menu"></md-icon>
+					<md-icon md-fill="red" md-image="icon:get_app"></md-icon>
+					<md-icon md-fill="green" md-image="icon:skip_next"></md-icon>
+					<md-icon md-fill="orange" md-image="icon:thumb_up"></md-icon>
+					<md-icon md-fill="purple" md-image="mail.svg"></md-icon>
+					<md-icon md-type="avatar" md-image="homer.jpg"></md-icon>
+				</div>
+				<pre class="language-markup"><code>&lt;md-icon md-image="icon:menu"&gt;&lt;/md-icon&gt;
+&lt;md-icon md-fill="red" md-image="icon:get_app"&gt;&lt;/md-icon&gt;
+&lt;md-icon md-fill="green" md-image="icon:skip_next"&gt;&lt;/md-icon&gt;
+&lt;md-icon md-fill="orange" md-image="icon:thumb_up"&gt;&lt;/md-icon&gt;
+&lt;md-icon md-fill="purple" md-image="mail.svg"&gt;&lt;/md-icon&gt;
+&lt;md-icon md-typo="avatar" md-image="homer.jpg"&gt;&lt;/md-icon&gt;</code></pre>
+			</div>
+		
+			<!-- Tabs -->		
+			<div class="el">
+				<div class="el-header" md-typo="display-1">
+					<span>Tabs</span>
+					<md-space></md-space>
+					<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/tabbar">
+						<span md-color="grey" md-font-color="white">&lt;md-tabbar&gt;</span>
+					</a>
+				</div>
+				<div class="el-demo">
+					<md-toolbar md-color="cyan">
+						<md-row>
+							<md-space></md-space>
+							<md-tabbar md-type="fixed">
+								<md-tab md-typo="button">Tab 1</md-tab>
+								<md-tab md-typo="button">Tab 2</md-tab>
+								<md-tab md-typo="button">Tab 3</md-tab>
+							</md-tabbar>
+							<md-space></md-space>
+						</md-row>
+					</md-toolbar>
+				</div>
+				<pre class="language-markup"><code>&lt;md-toolbar md-color="cyan"&gt;
+	&lt;md-row&gt;
+		&lt;md-space&gt;&lt;/md-space&gt;
+		&lt;md-tabbar md-type="fixed"&gt;
+			&lt;md-tab md-typo="button"&gt;Tab 1&lt;/md-tab&gt;
+			&lt;md-tab md-typo="button"&gt;Tab 2&lt;/md-tab&gt;
+			&lt;md-tab md-typo="button"&gt;Tab 3&lt;/md-tab&gt;
+		&lt;/md-tabbar&gt;
+		&lt;md-space&gt;&lt;/md-space&gt;
+	&lt;/md-row&gt;
+&lt;/md-toolbar&gt;</code></pre>
+			</div>
+		
+			<!-- Icon button -->		
+			<div class="el">
+				<div class="el-header" md-typo="display-1">
+					<span>Icon button</span>
+					<md-space></md-space>
+					<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/iconbutton">
+						<span md-color="grey" md-font-color="white">&lt;md-icon-button&gt;</span>
+					</a>
+				</div>
+				<div class="el-demo">
+					<md-icon-button md-fill="green" md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
+				</div>
+				<pre class="language-markup"><code>&lt;md-icon-button md-fill="green" md-image="icon:menu" md-action="custom: md.sidemenu.open"&gt;&lt;/md-icon-button&gt;</code></pre>
+			</div>
+		
+			<!-- Textarea -->		
+			<div class="el">
+				<div class="el-header" md-typo="display-1">
+					<span>Textarea</span>
+					<md-space></md-space>
+					<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/textarea">
+						<span md-color="grey" md-font-color="white">&lt;md-input type="text"&gt;</span>
+					</a>
+				</div>
+				<div class="el-demo">
+					<form md-layout>
+						<md-row>
+							<md-tile md-flex="f1">
+								<md-input md-flex="f1" type="text" placeholder="I'm an input" md-mode="animated"></md-input>
+								<md-input md-flex="f1" type="text" placeholder="I have an static placeholder" md-mode="placeholder"></md-input>
+							</md-tile>
+						</md-row>
+						<md-row>
+							<md-tile md-flex="f1">
+								<md-input md-flex="f1" type="password" placeholder="And I am a password input" md-error md-mode="animated"></md-input>
+								<md-input md-flex="f1" type="text" placeholder="I have an error" md-error="Something is wrong!!!1one" md-mode="animated"></md-input>
+							</md-tile>
+						</md-row>
+					</form>
+				</div>
+				<pre class="language-markup"><code>&lt;form md-layout&gt;
+	&lt;md-row&gt;
+		&lt;md-tile md-flex="f1"&gt;
+			&lt;md-input md-flex="f1" type="text" placeholder="I'm an input" md-mode="animated"&gt;&lt;/md-input&gt;
+			&lt;md-input md-flex="f1" type="text" placeholder="I have an static placeholder" md-mode="placeholder"&gt;&lt;/md-input&gt;
+		&lt;/md-tile&gt;
+	&lt;/md-row&gt;
+	&lt;md-row&gt;
+		&lt;md-tile md-flex="f1"&gt;
+			&lt;md-input md-flex="f1" type="password" placeholder="And I am a password input" md-error md-mode="animated"&gt;&lt;/md-input&gt;
+			&lt;md-input md-flex="f1" type="text" placeholder="I have an error" md-error="Something is wrong!!!1one" md-mode="animated"&gt;&lt;/md-input&gt;
+		&lt;/md-tile&gt;
+	&lt;/md-row&gt;
+&lt;/form&gt;</code></pre>
+			</div>
+
+		</md-paper>
 	</md-content>
 
 	<script src="script.js"></script>
+	<script src="prism.js"></script>
 </body>
 </html>

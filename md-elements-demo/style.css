@@ -1,0 +1,22 @@
+.el {
+	width: 100%;
+	margin-bottom: 32px;
+}
+
+.el:last-child {
+	margin-bottom: 0;
+}
+
+.el-header {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.el-header a {
+	text-decoration: none;
+}
+
+.el-demo {
+	margin-top: 16px;
+}
