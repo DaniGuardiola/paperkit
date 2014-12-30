@@ -23,4 +23,14 @@ while (i < 11) {
     output.values.push(value);
     i++;
 }
+var display = {
+    name: 'display',
+    css: [
+        {
+            property: "display",
+            value: 'flex'
+        }
+    ]
+}
+output.values.push(display);
 console.log(JSON.stringify(output, undefined, 2));
