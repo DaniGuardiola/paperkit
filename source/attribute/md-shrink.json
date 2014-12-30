@@ -1,0 +1,114 @@
+{
+  "type": "attribute",
+  "name": "md-shrink",
+  "css": [
+    {
+      "property": "flex-shrink",
+      "value": "0"
+    }
+  ],
+  "values": [
+    {
+      "name": "f0",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-shrink",
+              "value": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f1",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-shrink",
+              "value": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f2",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-shrink",
+              "value": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f3",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-shrink",
+              "value": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f4",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-shrink",
+              "value": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f5",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-shrink",
+              "value": "5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
