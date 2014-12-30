@@ -188,6 +188,15 @@
           ]
         }
       ]
+    },
+    {
+      "name": "display",
+      "css": [
+        {
+          "property": "display",
+          "value": "flex"
+        }
+      ]
     }
   ]
 }

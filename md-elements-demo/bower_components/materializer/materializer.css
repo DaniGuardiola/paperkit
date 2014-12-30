@@ -2274,6 +2274,10 @@ md-sidemenu {
     -ms-flex-direction: column;
     flex-direction: column;
     will-change: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 md-sidemenu> md-list:not([md-bottom]) {
@@ -6034,6 +6038,14 @@ only screen and (min-width: 992px) {
 [md-fill~=white] {
     fill: #ffffff;
 }
+[md-flex~=display] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 992px),
 only screen and (min-width: 992px) {
     [md-flex~=f0]:not([md-flex$=noresponsive]):not([noresponsive]) {
