@@ -1,6 +1,11 @@
-.el {
-	width: 100%;
+.el-paper:first-child {
+	margin-top: 16px;
+}
+.el-paper {
 	margin-bottom: 32px;
+}
+.el-paper:last-child {
+	margin-bottom: 16px;
 }
 
 .el:last-child {
@@ -12,7 +17,6 @@
 	width: 100%;
 	flex-wrap: wrap;
 }
-
 .el-header a {
 	text-decoration: none;
 }
