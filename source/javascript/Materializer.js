@@ -109,7 +109,7 @@ Materializer.prototype.create= function(what,opt){
     var newSnackbar = document.createElement('md-snackbar');
     if (opt.text) {
       var text = document.createElement('md-text');
-      text.innerText = opt.text;
+      text.contentText = opt.text;
       newSnackbar.appendChild(text);
     }
     if (opt.position) {
