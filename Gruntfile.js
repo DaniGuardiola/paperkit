@@ -8,8 +8,13 @@ module.exports = function(grunt) {
       clean: [
         'bin/grunt-materializer',
         'bin/materializer',
+        'bin/materializer-min',
         'bin/md',
         'bin/resources',
+        'bin/bower/resources/',
+        'bin/bower/bower.json',
+        'bin/bower-min/resources/',
+        'bin/bower-min/bower.json',
         'grunt-materializer/sources/'
         ],
 
@@ -83,12 +88,12 @@ module.exports = function(grunt) {
           dest: 'bin/materializer/resources/other/',
           flatten: true
         },
-        resources: {
+        resourcesToMin: {
           expand: true,
-          src: 'source/resources/font/',
-          dest: 'bin/',
+          src: 'bin/materializer/resources/**',
+          dest: 'bin/materializer-min/',
           rename: function(dest, src) {
-            var newDest = dest + src.replace("source/", "");
+            var newDest = dest + src.replace("bin/materializer/", "");
             return newDest;
           }
         },
@@ -101,6 +106,30 @@ module.exports = function(grunt) {
         mdcss: {
           src: 'grunt-materializer/**',
           dest: 'bin/'
+        },
+        bower: {
+          expand: true,
+          src: [
+          'bin/materializer/**',
+          'source/repo_files/bower.json'
+          ],
+          dest: 'bin/',
+          rename: function(dest, src) {
+            var newDest = dest + src.replace("source/repo_files", "bower").replace("bin/materializer", "bower");
+            return newDest;
+          }
+        },
+        bowerMin: {
+          expand: true,
+          src: [
+          'bin/materializer-min/**',
+          'source/repo_files/bower-min.json'
+          ],
+          dest: 'bin/',
+          rename: function(dest, src) {
+            var newDest = dest + src.replace("source/repo_files", "bower-min").replace("bin/materializer-min", "bower-min").replace("bower-min.json", "bower.json");
+            return newDest;
+          }
         }
 
       },
@@ -145,19 +174,17 @@ module.exports = function(grunt) {
       cssmin: {
         minify: {
           src: 'bin/materializer/materializer.css',
-          dest: 'bin/materializer/materializer.min.css'
+          dest: 'bin/materializer-min/materializer.css'
         }
       },
 
       // 7 - Uglify css
-      /*
       uglify: {
         build: {
-          src: 'bin/materializer.js',
-          dest: 'bin/materializer.min.js'
+          src: 'bin/materializer/materializer.js',
+          dest: 'bin/materializer-min/materializer.js'
         }
       }
-      */
   });
 
 
@@ -174,8 +201,11 @@ module.exports = function(grunt) {
   //grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-cssbeautifier');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // This will run when executing grunt
-  grunt.registerTask('default', ['clean','compiler','copy',"autoprefixer",'cssbeautifier','concat','cssmin'/*,'uglify'*/]);
+  grunt.registerTask('default', ['clean','compiler',
+    'copy:main','copy:font','copy:cursor','copy:icon','copy:moreicon','copy:other','copy:resourcesToMin','copy:dev','copy:mdcss',
+    "autoprefixer",'cssbeautifier','concat','cssmin','uglify','copy:bower','copy:bowerMin']);
   grunt.registerTask('dev', ['copy:dev']);
 };
