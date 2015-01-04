@@ -1,4 +1,7 @@
 var initMDSidemenu = function(MDSidemenu) {
+  /**
+   * Opens side menu.
+   */
   MDSidemenu.open = function() {
     if (MDSidemenu.materializer.toolbar.getAttribute('md-drag') === "drag") {
       MDSidemenu.materializer.toolbar.setAttribute('md-drag','no-drag');
@@ -11,6 +14,9 @@ var initMDSidemenu = function(MDSidemenu) {
     });
   }
 
+  /**
+   * Closes side menu.
+   */
   MDSidemenu.close = function() {
     if (MDSidemenu.style.width !== "") {
       MDSidemenu.style.left = "-" + MDSidemenu.style.width;
@@ -22,7 +28,10 @@ var initMDSidemenu = function(MDSidemenu) {
     }
   }
 
-  MDSidemenu.switch = function() {
+  /**
+   * Toggles side menu, opening or closing it.
+   */
+  MDSidemenu.toggle = function() {
     if (MDSidemenu.getAttribute('md-state') !== "open") {
       MDSidemenu.close();
     } else {
@@ -30,10 +39,20 @@ var initMDSidemenu = function(MDSidemenu) {
     }
   }
  
+  /**
+   * Callback function, called when an attribute changes.
+   * @param {string} attrname Changed attribute name
+   * @param {string} oldvalue Old value for attribute or null if previous value does not exist.
+   * @param {string} newvalue New value for attribute or null if value removed.
+   */
   MDSidemenu.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
   };
 
+  /**
+   * Autoresizes side menu, adapting it to different widths and making it more responsive.
+   * TODO: Review, now there are functions to know if this is mobile or desktop, no need to calculate.
+   */
   MDSidemenu.autoResize = function() {
     var viewport = getViewport();
     if (viewport.width <= 456) { // We should generate display vars from md-settings.json
