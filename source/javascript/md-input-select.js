@@ -114,12 +114,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     this.addEventListener('click', this.clickListener.bind(this));
 
   }
-  
-  MDInputSelect.getOption= function(value) {
-    var option = this.querySelector('option[value="' + value + '"]');
-    return option;
-  }
-
+    
   /**
    * Sets the value of this select
    * @param {string} value The value to set.
@@ -144,7 +139,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
       } 
     }
   }
-  
+    
   /**
    * Removes an option from this select.
    * @param {string} option The option to remove. 
@@ -173,6 +168,15 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     
     this.calcWidth();
   }
+
+  /**
+   * 
+   */
+  MDInputSelect.getOption= function(value) {
+    var option = this.querySelector('option[value="' + value + '"]');
+    return option;
+  }
+
 
   /**
    * Calculates width of element based on font size.
