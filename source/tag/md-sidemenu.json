@@ -51,6 +51,10 @@
     {
       "property": "will-change",
       "value": "left"
+    },
+    {
+      "property": "user-select",
+      "value": "none"
     }
   ],
   "attributes": [
