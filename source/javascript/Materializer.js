@@ -238,8 +238,11 @@ Materializer.prototype.calcTextMetrics= function(string, style) {
     document.body.appendChild(this.tmpDiv);    
   }
     
-  this.tmpDiv.style.position="absolute";
+  this.tmpDiv.style.position="absolute";  
   this.tmpDiv.style.visibility="hidden";
+  this.tmpDiv.style.top="0px";
+  this.tmpDiv.style.left="0px";
+  this.tmpDiv.style.zIndex="-1";
   this.tmpDiv.style.height="auto";
   this.tmpDiv.style.width="auto";
   this.tmpDiv.style.whiteSpace="nowrap";
