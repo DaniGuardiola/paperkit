@@ -3,6 +3,24 @@
   "name": "md-height",
   "values": [
     {
+      "name": "full",
+      "css": [
+        {
+          "property": "height",
+          "value": "100%"
+        }
+      ]
+    },
+    {
+      "name": "x0",
+      "css": [
+        {
+          "property": "height",
+          "value": "0"
+        }
+      ]
+    },
+    {
       "name": "x1",
       "responsive": [
         {
