@@ -3,6 +3,33 @@
   "name": "md-flex",
   "values": [
     {
+      "name": "no-shrink",
+      "css": [
+        {
+          "property": "flex-shrink",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "name": "shrink",
+      "css": [
+        {
+          "property": "flex-shrink",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "display",
+      "css": [
+        {
+          "property": "display",
+          "value": "flex"
+        }
+      ]
+    },
+    {
       "name": "f0",
       "responsive": [
         {
@@ -186,15 +213,6 @@
               "value": "10"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "display",
-      "css": [
-        {
-          "property": "display",
-          "value": "flex"
         }
       ]
     }
