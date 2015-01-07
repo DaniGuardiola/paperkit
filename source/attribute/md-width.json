@@ -3,6 +3,24 @@
   "name": "md-width",
   "values": [
     {
+      "name": "full",
+      "css": [
+        {
+          "property": "width",
+          "value": "100%"
+        }
+      ]
+    },
+    {
+      "name": "x0",
+      "css": [
+        {
+          "property": "width",
+          "value": "0"
+        }
+      ]
+    },
+    {
       "name": "x1",
       "responsive": [
         {
