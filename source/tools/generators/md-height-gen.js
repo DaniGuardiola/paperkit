@@ -1,7 +1,26 @@
 var output  = {
 	type: "attribute",
 	name: "md-height",
-	values: []
+	values: [
+        {
+            name: "full",
+            css: [
+                {
+                    property: "height",
+                    value: "100%"
+                }
+            ]
+        },
+        {
+            name: "x0",
+            css: [
+                {
+                    property: "height",
+                    value: "0"
+                }
+            ]
+        }
+    ]
 }
 var i = 1;
 while (i < 16) {

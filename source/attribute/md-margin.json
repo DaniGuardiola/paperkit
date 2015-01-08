@@ -1,0 +1,89 @@
+{
+  "type": "attribute",
+  "name": "md-margin",
+  "css": [
+    {
+      "property": "display",
+      "value": "block"
+    }
+  ],
+  "values": [
+    {
+      "name": "top",
+      "responsive": [
+        {
+          "target": ["watch","mobile"],
+          "css": [
+            {
+              "property": "margin-top",
+              "value": "16px"
+            }
+          ]          
+        },
+        {
+          "target": ["tablet","desktop"],
+          "css": [
+            {
+              "property": "margin-top",
+              "value": "24px"
+            }
+          ]          
+        }
+      ]
+    },
+    {
+      "name": "top-left",
+      "responsive": [
+        {
+          "target": ["watch","mobile"],
+          "css": [
+            {
+              "property": "margin-top",
+              "value": "16px"
+            },
+            {
+              "property": "margin-left",
+              "value": "16px"
+            }
+          ]          
+        },
+        {
+          "target": ["tablet","desktop"],
+          "css": [
+            {
+              "property": "margin-top",
+              "value": "24px"
+            },
+            {
+              "property": "margin-left",
+              "value": "24px"
+            }
+          ]          
+        }
+      ]
+    },
+    {
+      "name": "left",
+      "responsive": [
+        {
+          "target": ["watch","mobile"],
+          "css": [
+            {
+              "property": "margin-left",
+              "value": "16px"
+            }
+          ]          
+        },
+        {
+          "target": ["tablet","desktop"],
+          "css": [
+            {
+              "property": "margin-left",
+              "value": "24px"
+            }
+          ]          
+        }
+      ]
+    }
+  ]
+}
