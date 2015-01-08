@@ -1,7 +1,26 @@
 var output  = {
 	type: "attribute",
 	name: "md-width",
-	values: []
+	values: [
+        {
+            name: "full",
+            css: [
+                {
+                    property: "width",
+                    value: "100%"
+                }
+            ]
+        },
+        {
+            name: "x0",
+            css: [
+                {
+                    property: "width",
+                    value: "0"
+                }
+            ]
+        }
+    ]
 }
 var i = 1;
 while (i < 41) {
