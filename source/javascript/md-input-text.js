@@ -22,12 +22,12 @@ var initMDInputText = function(MDInput) {
 		divLine.classList.add("line");
 		this.appendChild(divLine);
 		
-    this.input = document.createElement("input");
-    this.input.id=this.id + "-input";
-    this.input.type= this.getAttribute("type");
-    this.value = this.input.value= this.getAttribute("value") ? this.getAttribute("value") : "";
-    this.input.name= this.getAttribute("name");
-    this.appendChild(this.input);
+		this.input = document.createElement("input");
+		this.input.id=this.id + "-input";
+		this.input.type= this.getAttribute("type");
+		this.value = this.input.value= this.getAttribute("value") ? this.getAttribute("value") : "";
+		this.input.name= this.getAttribute("name");
+		this.appendChild(this.input);
 
 
 		// Sets initial status
@@ -74,6 +74,7 @@ var initMDInputText = function(MDInput) {
 	  if(this===MDInput) { // Sanity check.
   	  var el = e.currentTarget;
   	  this.value = el.value;
+  	  this.setAttribute("value", this.value);
 	  }
 	}
 	
@@ -128,6 +129,10 @@ var initMDInputText = function(MDInput) {
     } else if(attrname==="value") {
       this.value = this.input.value = newvalue;
       this.setFocus();
+    } else if(attrname==="name") {
+      this.input.name= newvalue;
+    } else if(attrname==="id") {
+      this.input.id= newvalue + "-input"
     } else if(attrname==="md-error") {
       this.spanError.innerHTML = newvalue;
     }
