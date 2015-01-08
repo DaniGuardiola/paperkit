@@ -1,0 +1,4 @@
+open f username password
+lcd /usr/joe/site1_files
+mirror -R
+exit 
