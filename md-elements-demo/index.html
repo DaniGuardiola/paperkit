@@ -37,30 +37,47 @@
 	<md-content md-rel="main">
 		<md-pager id="content-pager">
 			<md-page>
+				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="subhead">
+					<span>Materializer is a <b>Material Design web framework</b> that works on top of native and standard technologies: HTML, CSS and JavaScript</span><br><br>
+					Our main goal is to provide a simple and fast way to create webpages and apps following the latest guidelines from Google. We do <b>not</b> use any other framework or CSS preprocessor (like jQuery or Sass).<br><br>
+					<div md-width="full" md-flex="display" md-color="orange">
+						<md-space></md-space>
+						<md-tabbar>
+							<md-tab md-typo="button">Getting ready</md-tab>
+							<md-tab md-typo="button">Basic layout</md-tab>
+							<md-tab md-typo="button">Tags and attributes</md-tab>
+						</md-tabbar>
+						<md-space></md-space>
+					</div>
+				</md-paper>
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 					<span md-typo="display-1">1- Import materializer to your project</span><br>
-					<span md-typo="header">Bower</span><br>
+					<span md-typo="title"><b>Bower</b></span><br>
 					<span md-typo="body-1">Minified (recommended)</span>
 					<pre class="language-bash"><code>bower install materializer-min</code></pre>
 					<span md-typo="body-1">Full size</span>
 					<pre class="language-bash"><code>bower install materializer</code></pre>
-					<span md-typo="header">Manual download - <a href="">Minified</a> (recommended) <a href="">Full size</a></span><br>
+					<span md-typo="title"><b>Manual download</b></span><br>
+					<span md-typo="body-1"><a href="">Minified</a> (recommended) <a href="">Full size</a></span><br>
 					<span md-typo="body-1">Note: extract on your project's folder</span>
 				</md-paper>
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 					<span md-typo="display-1">2- Include the css and js files</span><br>
-					<span md-typo="header">Important: include before every other css or js that overwrites Materializer styles and scripts</span><br>
+					<span md-typo="subhead">Important: include before every other css or js that overwrites Materializer styles and scripts</span><br>
 					<pre class="language-markup"><code>&lt;head&gt;
     &lt;link rel="stylesheet" href="&lt;path&gt;/materializer/materializer.css"&gt;
     &lt;script src="&lt;path&gt;/materializer/materializer.js"&gt;&lt;/script&gt;
 &lt;/head&gt;</code></pre>
-					<span md-typo="header">Note: &lt;path&gt; is the folder containing the Materializer folder. If you installed it with bower, the path will be 'bower_components'. Also, remember that the Materializer folder has '-min' at the end when it is the minified version.</span>
+					<span md-typo="subhead">Note: &lt;path&gt; is the folder containing the Materializer folder. If you installed it with bower, the path will be 'bower_components'. Also, remember that the Materializer folder has '-min' at the end when it is the minified version.</span>
 				</md-paper>
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 					<span md-typo="display-1">3- Load and initialize Materializer</span><br>
-					<span md-typo="header">Note: you can choose a different variable name other than 'materializer'</span><br>
+					<span md-typo="subhead">Note: you can choose a different variable name other than 'materializer'</span><br>
 					<pre class="language-javascript"><code>var materializer = new Materializer(); // Instantiate Materializer on a variable of your choice
 window.addEventListener('load', function(){ materializer.init() }); // Initialize Materializer on window load</code></pre>
+				</md-paper>
+				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+					<a href="">Next step: basic layout</a>
 				</md-paper>
 			</md-page>
 			<md-page>
