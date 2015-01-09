@@ -167,7 +167,7 @@
     ],
     "responsive": [
         {
-          "target": ["device"],
+          "target": ["watch", "mobile", "tablet"],
           "css": [
             {
               "property": "font-size",
