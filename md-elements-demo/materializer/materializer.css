@@ -4996,6 +4996,10 @@ only screen and (min-width: 992px) {
     fill: transparent;
 }
 
+[md-fill~=secondary] {
+    fill: rgba(0, 0, 0, 0.54);
+}
+
 [md-fill~=red-50] {
     fill: #ffebee;
 }
@@ -6150,6 +6154,22 @@ only screen and (min-width: 992px) {
 }
 [md-font-color~=transparent] {
     color: transparent;
+}
+
+[md-font-color~=secondary] {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+[md-font-color~=secondary-white] {
+    color: rgba(255, 255, 255, 0.70);
+}
+
+[md-font-color~=disabled] {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+[md-font-color~=disabled-white] {
+    color: rgba(255, 255, 255, 0.30);
 }
 
 [md-font-color~=red-50] {

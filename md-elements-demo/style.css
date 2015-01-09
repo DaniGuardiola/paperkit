@@ -1,15 +1,17 @@
-.el-paper:first-child {
-	margin-top: 16px;
-}
-.el-paper {
-	margin-bottom: 32px;
-}
-.el-paper:last-child {
-	margin-bottom: 16px;
-}
+@media only screen and (min-width: 600px) {
+	.el-paper:first-child {
+		margin-top: 16px;
+	}
+	.el-paper {
+		margin-bottom: 32px;
+	}
+	.el-paper:last-child {
+		margin-bottom: 16px;
+	}
 
-.el:last-child {
-	margin-bottom: 0;
+	.el:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .el-header {

@@ -99,7 +99,7 @@ var generateMDColor = function() {
     {
       name: "white",
       value1: "#ffffff",
-      value2: "#000000"
+      value2: "rgba(0, 0, 0, 0.87)"
     }
   );
   return mdObject;

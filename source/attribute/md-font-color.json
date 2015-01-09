@@ -16,6 +16,42 @@
           "value": "transparent"
         }
       ]
+    },
+    {
+      "name": "secondary",
+      "css": [
+        {
+          "property": "color",
+          "value": "rgba(0, 0, 0, 0.54)"
+        }
+      ]
+    },
+    {
+      "name": "secondary-white",
+      "css": [
+        {
+          "property": "color",
+          "value": "rgba(255, 255, 255, 0.70)"
+        }
+      ]
+    },
+    {
+      "name": "disabled",
+      "css": [
+        {
+          "property": "color",
+          "value": "rgba(0, 0, 0, 0.26)"
+        }
+      ]
+    },
+    {
+      "name": "disabled-white",
+      "css": [
+        {
+          "property": "color",
+          "value": "rgba(255, 255, 255, 0.30)"
+        }
+      ]
     }
   ]
 }
