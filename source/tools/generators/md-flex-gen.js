@@ -28,6 +28,51 @@ var output  = {
                     value: 'flex'
                 }
             ]
+        },
+        {
+            name: 'no-wrap',
+            css: [
+                {
+                    property: "flex-wrap",
+                    value: 'nowrap'
+                }
+            ]
+        },
+        {
+            name: 'wrap',
+            css: [
+                {
+                    property: "flex-wrap",
+                    value: 'wrap'
+                }
+            ]
+        },
+        {
+            name: 'wrap-reverse',
+            css: [
+                {
+                    property: "flex-wrap",
+                    value: 'wrap-reverse'
+                }
+            ]
+        },
+        {
+            name: 'column',
+            css: [
+                {
+                    property: "flex-direction",
+                    value: 'column'
+                }
+            ]
+        },
+        {
+            name: 'row',
+            css: [
+                {
+                    property: "flex-direction",
+                    value: 'row'
+                }
+            ]
         }
     ]
 }
