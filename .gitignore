@@ -9,3 +9,4 @@ script.sh
 tmp*.css
 .settings
 md-elements-demo/materializer/
+.DS_Store
