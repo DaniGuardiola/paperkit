@@ -192,7 +192,7 @@
                   "value": "4px"
                 }
               ]
-            }
+            },
             {
               "comment": "TODO: REVISAR ESTE SELECTOR, antes estaba md-tile> *:not(div):last-child",
               "after": " md-tile> md-icon-button:last-child",
