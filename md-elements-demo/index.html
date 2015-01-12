@@ -14,18 +14,18 @@
 	<md-toolbar md-fill="white" md-color="green" md-shadow="shadow-1">
 		<md-row>
 			<md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
-			<md-text id="toolbar-title-small" style="display:none">Materializer</md-text>
+			<md-text id="toolbar-title-small" style="display:none">Paperkit</md-text>
 			<md-space></md-space>
 			<md-icon-button md-image="icon:expand_less" md-action="custom: toggleCollapse"></md-icon-button>
 			<md-icon-button md-image="icon:share"></md-icon-button>
 		</md-row>
 		<md-row id="toolbar-title-row">
 			<div style="width: 61px; height: 100%; flex-shrink: 1;"></div>
-			<span md-shrink="s0" md-typo="display-4">Materializer</span>
+			<span md-shrink="s0" md-typo="display-4">Paperkit</span>
 		</md-row>
 		<md-row>
 			<md-space></md-space>
-			<md-tabbar md-shrink="s0" md-rel="main" md-pager="content-pager">
+			<md-tabbar id="content-tabbar" md-shrink="s0" md-rel="main" md-pager="content-pager" md-action="custom: scrollTopContentPager">
 				<md-tab md-typo="button">Quick start</md-tab>
 				<md-tab md-typo="button">Components</md-tab>
 				<md-tab md-typo="button">Demos</md-tab>
@@ -36,13 +36,13 @@
 	<md-sidemenu></md-sidemenu>
 	<md-content md-rel="main">
 		<md-pager id="content-pager">
-			<md-page>
+			<md-page md-rel="quick-start">
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="subhead">
-					<span>Materializer is a <b>Material Design web framework</b> that works on top of native and standard technologies: HTML, CSS and JavaScript</span><br><br>
+					<span>Paperkit is a <b>Material Design web framework</b> that works on top of native and standard technologies: HTML, CSS and JavaScript</span><br><br>
 					Our main goal is to provide a simple and fast way to create webpages and apps following the latest guidelines from Google. We do <b>not</b> use any other framework or CSS preprocessor (like jQuery or Sass).<br><br>
-					<div md-width="full" md-flex="display" md-color="orange">
+					<div md-width="full" md-flex="display" md-color="blue">
 						<md-space></md-space>
-						<md-tabbar>
+						<md-tabbar id="quick-start-tabbar" md-rel="quick-start" md-pager="quick-start-pager">
 							<md-tab md-typo="button">Getting ready</md-tab>
 							<md-tab md-typo="button">Basic layout</md-tab>
 							<md-tab md-typo="button">Tags and attributes</md-tab>
@@ -50,37 +50,90 @@
 						<md-space></md-space>
 					</div>
 				</md-paper>
-				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
-					<span md-typo="display-1">1- Import materializer to your project</span><br>
-					<span md-typo="title"><b>Bower</b></span><br>
-					<span md-typo="body-1">Minified (recommended)</span>
-					<pre class="language-bash"><code>bower install materializer-min</code></pre>
-					<span md-typo="body-1">Full size</span>
-					<pre class="language-bash"><code>bower install materializer</code></pre>
-					<span md-typo="title"><b>Manual download</b></span><br>
-					<span md-typo="body-1"><a href="">Minified</a> (recommended) <a href="">Full size</a></span><br>
-					<span md-typo="body-1">Note: extract on your project's folder</span>
-				</md-paper>
-				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
-					<span md-typo="display-1">2- Include the css and js files</span><br>
-					<span md-typo="subhead">Important: include before every other css or js that overwrites Materializer styles and scripts</span><br>
-					<pre class="language-markup"><code>&lt;head&gt;
+				<md-pager id="quick-start-pager">
+					<md-page>
+						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+							<span md-typo="display-1">1- Import paperkit to your project</span><br>
+							<span md-typo="title"><b>Bower</b></span><br>
+							<span md-typo="subhead">Minified (recommended)</span>
+							<pre class="language-bash"><code>bower install materializer-min</code></pre>
+							<span md-typo="subhead">Full size</span>
+							<pre class="language-bash"><code>bower install materializer</code></pre>
+							<span md-typo="title"><b>Manual download</b></span><br>
+							<span md-typo="subhead"><a href="paperkit-min.zip">Minified</a> (recommended) <a href="paperkit.zip">Full size</a></span><br>
+							<span md-typo="subhead">Note: extract on your project's folder</span>
+						</md-paper>
+						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+							<span md-typo="display-1">2- Include the css and js files</span><br>
+							<span md-typo="subhead">Important: include before every other css or js that overwrites Materializer styles and scripts</span><br>
+							<pre class="language-markup"><code>&lt;head&gt;
     &lt;link rel="stylesheet" href="&lt;path&gt;/materializer/materializer.css"&gt;
     &lt;script src="&lt;path&gt;/materializer/materializer.js"&gt;&lt;/script&gt;
 &lt;/head&gt;</code></pre>
-					<span md-typo="subhead">Note: &lt;path&gt; is the folder containing the Materializer folder. If you installed it with bower, the path will be 'bower_components'. Also, remember that the Materializer folder has '-min' at the end when it is the minified version.</span>
-				</md-paper>
-				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
-					<span md-typo="display-1">3- Load and initialize Materializer</span><br>
-					<span md-typo="subhead">Note: you can choose a different variable name other than 'materializer'</span><br>
-					<pre class="language-javascript"><code>var materializer = new Materializer(); // Instantiate Materializer on a variable of your choice
-window.addEventListener('load', function(){ materializer.init() }); // Initialize Materializer on window load</code></pre>
-				</md-paper>
-				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
-					<a href="">Next step: basic layout</a>
-				</md-paper>
+							<span md-typo="subhead">Note: &lt;path&gt; is the folder containing the Materializer folder. If you installed it with bower, the path will be 'bower_components'. Also, remember that the Materializer folder has '-min' at the end when it is the minified version.</span>
+						</md-paper>
+						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+							<span md-typo="display-1">3- Load and initialize Paperkit</span><br>
+							<span md-typo="subhead">Note: you can choose a different variable name other than 'paperkit'</span><br>
+							<pre class="language-javascript"><code>var paperkit = new Materializer(); // Instantiate Paperkit on a variable of your choice
+window.addEventListener('load', function(){ paperkit.init() }); // Initialize Paperkit on window load</code></pre>
+						</md-paper>
+						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+							<span id="next-page-layout" md-font-color="blue" style="cursor: pointer">Next step: basic layout</span>
+						</md-paper>
+					</md-page>
+
+					<md-page>
+						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+							<span md-typo="display-1">Top level elements</span><br>
+							<span md-typo="subhead">Childs of <b>body</b> tag, they define the basic layout.<br>
+							They are &lt;md-toolbar&gt;, &lt;md-sidemenu&gt;, &lt;md-fab&gt; and &lt;md-content&gt;.</span>
+							<pre class="language-markup"><code>&lt;body&gt;
+	&lt;md-toolbar&gt;&lt;/md-toolbar&gt;
+	&lt;md-sidemenu&gt;&lt;/md-sidemenu&gt;
+	&lt;md-fab&gt;&lt;/md-fab&gt;
+	&lt;md-content&gt;&lt;/md-content&gt;
+&lt;/body&gt;</code></pre>
+						</md-paper>
+						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+							<span md-typo="display-1">Content elements</span><br>
+							<span md-typo="subhead">Childs of <b>md-content</b> tag, they are the actual content of the page.<br>
+							They can be any element, from &lt;md-list&gt; to &lt;md-input&gt;.</span>
+							<pre class="language-markup"><code>&lt;body&gt;
+	&lt;md-toolbar&gt;&lt;/md-toolbar&gt;
+	&lt;md-sidemenu&gt;&lt;/md-sidemenu&gt;
+	&lt;md-fab&gt;&lt;/md-fab&gt;
+	&lt;md-content&gt;
+		&lt;md-list&gt;
+			&lt;md-tile&gt;
+				&lt;md-icon md-image="icon:android" md-fill="green"&gt;&lt;/md-icon&gt;
+				&lt;md-text&gt;I'm a list tile on the content tag!&lt;/md-text&gt;
+			&lt;/md-tile&gt;
+		&lt;/md-list&gt;
+	&lt;/md-content&gt;
+&lt;/body&gt;</code></pre>
+						</md-paper>
+						<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+							<span id="back-page-ready" md-font-color="blue" style="cursor: pointer">Back</span>
+							<md-space></md-space>
+							<span id="next-page-tags" md-font-color="blue" style="cursor: pointer">Next step: tags and attributes</span>
+						</md-paper>
+					</md-page>
+
+					<md-page>
+						<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+							<span id="back-page-layout" md-font-color="blue" style="cursor: pointer">Back</span>
+							<md-space></md-space>
+							<span id="next-page-components" md-font-color="blue" style="cursor: pointer">Next step: discover the components</span>
+						</md-paper>
+					</md-page>
+				</md-pager>
 			</md-page>
 			<md-page>
+				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="subhead">
+					<span>These are some live demos of most of the elements from Paperkit, and the code is right under them.</span><br><br>
+					Click on the tag name (you'll see it like this: <span md-color="grey" md-font-color="white">&lt;md-tag&gt;</span>) to go to the reference page for that component.
+				</md-paper>
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 				
 					<!-- Toolbar -->
