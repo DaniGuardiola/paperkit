@@ -10,3 +10,4 @@ tmp*.css
 .settings
 md-elements-demo/materializer/
 .DS_Store
+*~
