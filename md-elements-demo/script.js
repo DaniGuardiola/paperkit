@@ -1,16 +1,16 @@
 var md = new Materializer(); // Instantiate Materializer on a variable of your choice
 window.addEventListener('load', function(){
 	md.init(); // Initialize Materializer on window load
-	document.getElementById('next-page-layout').addEventListener('click', function(){
+	document.getElementById('next-page-tags').addEventListener('click', function(){
 		quickStartPage(1);
 	});
 	document.getElementById('back-page-ready').addEventListener('click', function(){
 		quickStartPage(0);
 	});
-	document.getElementById('next-page-tags').addEventListener('click', function(){
+	document.getElementById('next-page-layout').addEventListener('click', function(){
 		quickStartPage(2);
 	});
-	document.getElementById('back-page-layout').addEventListener('click', function(){
+	document.getElementById('back-page-tags').addEventListener('click', function(){
 		quickStartPage(1);
 	});
 	document.getElementById('next-page-components').addEventListener('click', function(){
