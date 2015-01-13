@@ -32,6 +32,7 @@ var initMDIconButton = function(MDIconButton, materializer) {
   
   
   MDIconButton.clickListener = function(e) {
+    e.stopPropagation();
     var el = e.currentTarget;
     var action = el.getAttribute("md-action") ? el.getAttribute('md-action') : 'submit';
 
