@@ -33,7 +33,6 @@ window.addEventListener('load', function(){
 
 	// Components tab pagers
 	document.getElementById('back-page-quickstart').addEventListener('click', function(){
-		quickStartPage(0);
 		contentPage(0);
 	});
 	document.getElementById('next-page-demos').addEventListener('click', function(){
@@ -80,8 +79,9 @@ function contentPage(index){
 
 function tabColorChange(index){
 	if(index === 0){
-		md.toolbar.set('color','purple');
-		md.fab.set('color','purple');
+		quickStartPage(0);
+		md.toolbar.set('color','cyan');
+		md.fab.set('color','cyan');
 	} else if(index === 1){
 		md.toolbar.set('color','blue');
 		md.fab.set('color','blue');
@@ -89,8 +89,8 @@ function tabColorChange(index){
 		md.toolbar.set('color','teal');
 		md.fab.set('color','teal');
 	} else if(index === 3){
-		md.toolbar.set('color','orange');
-		md.fab.set('color','orange');
+		md.toolbar.set('color','light-green');
+		md.fab.set('color','light-green');
 	}
 }
 
