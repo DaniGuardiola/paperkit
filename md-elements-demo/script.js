@@ -78,15 +78,19 @@ function contentPage(index){
 	contentPagerAction(false, index);
 }
 
-function toolbarRainbow(index){
+function tabColorChange(index){
 	if(index === 0){
 		md.toolbar.set('color','purple');
+		md.fab.set('color','purple');
 	} else if(index === 1){
 		md.toolbar.set('color','blue');
+		md.fab.set('color','blue');
 	} else if(index === 2){
 		md.toolbar.set('color','teal');
+		md.fab.set('color','teal');
 	} else if(index === 3){
 		md.toolbar.set('color','orange');
+		md.fab.set('color','orange');
 	}
 }
 
@@ -102,5 +106,5 @@ function quickStartPage(index){
 function contentPagerAction(tab, index){
 	var contentPager = document.getElementById('content-pager');
 	contentPager.scrollIntoView();
-	toolbarRainbow(index);
+	tabColorChange(index);
 }
