@@ -24,7 +24,7 @@
 			<span md-shrink="s0" md-typo="display-4">Paperkit</span>
 		</md-row>
 		<md-row>
-			<md-space></md-space>
+			<div style="width: 61px; height: 100%; flex-shrink: 1;"></div>
 			<md-tabbar id="content-tabbar" md-shrink="s0" md-rel="main" md-pager="content-pager" md-action="custom: contentPagerAction">
 				<md-tab md-typo="button">Quick start</md-tab>
 				<md-tab md-typo="button">Components</md-tab>
@@ -33,6 +33,7 @@
 			</md-tabbar>
 			<md-space></md-space>
 	</md-toolbar>
+	<md-fab md-action="custom: transition.morph" md-color="purple" md-image="icon:share" md-fill="white" md-shadow="shadow-1"></md-fab>
 	<md-sidemenu></md-sidemenu>
 	<md-content md-rel="main">
 		<md-pager id="content-pager">
@@ -53,7 +54,7 @@
 
 			
 			<md-page md-rel="quick-start">
-				<md-paper style="margin-bottom: 16px;" class="el-paper" md-shadow="shadow-1" md-width="x16" md-position="center-x" md-padding md-typo="subhead">
+				<md-paper style="margin-bottom: 0;" class="el-paper" md-shadow="shadow-1" md-width="x16" md-position="center-x" md-padding md-typo="subhead">
 					<span>Paperkit is a <b>Material Design web framework</b> that works on top of native and standard technologies: HTML, CSS and JavaScript</span><br><br>
 					Our main goal is to provide a simple and fast way to create webpages and apps following the latest guidelines from Google. We do <b>not</b> use any other framework or CSS preprocessor (like jQuery or Sass).<br><br>
 					<div md-width="full" md-flex="display" md-color="purple">
