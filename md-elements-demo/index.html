@@ -11,7 +11,7 @@
 	<link href="prism.css" rel="stylesheet">
 </head>
 <body md-layout="fixed" md-color="grey-200">
-	<md-toolbar md-fill="white" md-color="purple" md-shadow="shadow-1" md-font-color="white">
+	<md-toolbar md-fill="white" md-color="purple" md-shadow="shadow-1" md-font-color="white" style="overflow: hidden">
 		<md-row>
 			<md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
 			<md-text id="toolbar-title-small" style="display:none">Paperkit</md-text>
@@ -136,7 +136,7 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 							For example, you can only use the <b>md-image</b> attribute on image-related tags like <b>&lt;md-icon&gt;</b> or <b>&lt;md-icon-button&gt;</b>.<br>
 							Also, <b>&lt;md-row&gt;</b> is only used on some elements including <b>&lt;md-toolbar&gt;</b> and <b>&lt;md-form&gt;</b>.</span>
 						</md-paper>
-						<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+						<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
 							<span id="back-page-ready" md-font-color="purple" style="cursor: pointer">Back</span>
 							<md-space></md-space>
 							<span id="next-page-layout" md-font-color="purple" style="cursor: pointer">Next step: basic layout</span>
@@ -197,7 +197,7 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 	&lt;/md-content&gt;
 &lt;/body&gt;</code></pre>
 						</md-paper>
-						<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+						<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
 							<span id="back-page-tags" md-font-color="purple" style="cursor: pointer">Back</span>
 							<md-space></md-space>
 							<span id="next-page-scripting" md-font-color="purple" style="cursor: pointer">Next step: scripting</span>
@@ -224,7 +224,7 @@ paperkit.initElement(paperkit.content)
 							</code></pre>
 							<span md-typo="subhead">Note that &lt;md-content&gt; tag has already been initialized (if it wasn't, it wouldn't be available at paperkit.content). This means that the element won't be initialized again, but this does not stop its children from being initialized.</span>
 						</md-paper>
-						<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+						<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
 							<span id="back-page-layout" md-font-color="purple" style="cursor: pointer">Back</span>
 							<md-space></md-space>
 							<span id="next-page-customization" md-font-color="purple" style="cursor: pointer">Next step: customization</span>
@@ -239,7 +239,7 @@ paperkit.initElement(paperkit.content)
 					<!-- CUTOMIZATION PAGE -->
 					
 					<md-page>
-						<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+						<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
 							<span id="back-page-scripting" md-font-color="purple" style="cursor: pointer">Back</span>
 							<md-space></md-space>
 							<span id="next-page-components" md-font-color="purple" style="cursor: pointer">Next step: discover the components</span>
@@ -396,7 +396,7 @@ paperkit.initElement(paperkit.content)
 &lt;md-input md-width="full" type="text" placeholder="I have an error" md-error="Something is wrong!!!1one" md-mode="animated"&gt;&lt;/md-input&gt;</code></pre>
 				</md-paper>
 
-				<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+				<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
 					<span id="back-page-quickstart" md-font-color="blue" style="cursor: pointer">Back</span>
 					<md-space></md-space>
 					<span id="next-page-demos" md-font-color="blue" style="cursor: pointer">Next step: see some demos</span>
@@ -491,7 +491,7 @@ paperkit.initElement(paperkit.content)
 					</div>
 				</md-paper>
 
-				<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+				<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
 					<span id="back-page-components" md-font-color="teal" style="cursor: pointer">Back</span>
 					<md-space></md-space>
 					<span id="next-page-tutorial" md-font-color="teal" style="cursor: pointer">Next step: follow a tutorial</span>
@@ -514,7 +514,7 @@ paperkit.initElement(paperkit.content)
 
 			
 			<md-page>
-				<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+				<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
 					<span id="back-page-demos" md-font-color="orange" style="cursor: pointer">Back</span>
 					<md-space></md-space>
 					<span id="next-page-reference" md-font-color="orange" style="cursor: pointer">Next step: check out the reference</span>
