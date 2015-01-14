@@ -36,6 +36,22 @@
 	<md-sidemenu></md-sidemenu>
 	<md-content md-rel="main">
 		<md-pager id="content-pager">
+
+
+
+
+
+
+
+
+
+
+
+		<!-- QUICK START PAGE -->
+
+
+
+			
 			<md-page md-rel="quick-start">
 				<md-paper style="margin-bottom: 16px;" class="el-paper" md-shadow="shadow-1" md-width="x16" md-position="center-x" md-padding md-typo="subhead">
 					<span>Paperkit is a <b>Material Design web framework</b> that works on top of native and standard technologies: HTML, CSS and JavaScript</span><br><br>
@@ -53,6 +69,14 @@
 					</div>
 				</md-paper>
 				<md-pager id="quick-start-pager">
+
+
+
+
+
+
+					<!-- GETTING READY PAGE -->
+
 					<md-page>
 						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 							<span md-typo="display-1">1- Import paperkit to your project</span><br>
@@ -85,6 +109,13 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 						</md-paper>
 					</md-page>
 
+
+
+
+
+
+					<!-- TAGS AND ATTRIBUTES PAGE -->
+					
 					<md-page>
 						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 							<span md-typo="subhead">Paperkit works with its own <b>tags and attributes</b>.<br>
@@ -112,7 +143,18 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 						</md-paper>
 					</md-page>
 
+
+
+
+
+
+					<!-- BASIC LAYOUT PAGE -->
+					
 					<md-page>
+						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+							<span md-typo="display-1">Considerations</span><br>
+							<span md-typo="subhead">In order to avoid problems with some browsers and resolutions (specially in mobile webpages and apps), we have the following recommendations:</span>
+						</md-paper>
 						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 							<span md-typo="display-1">Top level elements</span><br>
 							<span md-typo="subhead">Childs of <b>body</b> tag, they define the basic layout.<br>
@@ -123,14 +165,27 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 	&lt;md-fab&gt;&lt;/md-fab&gt;
 	&lt;md-content&gt;&lt;/md-content&gt;
 &lt;/body&gt;</code></pre>
+							<span md-typo="subhead">These elements are available under the Paperkit namespace (remember that you can change it when loading the framework with <i>var paperkit = new Paperkit()</i>). The only difference is that they drop the 'md-' prefix.<br>
+							For example: <b>paperkit.toolbar, paperkit.sidemenu, paperkit.fab and paperkit.content</b>.<br><br>
+							<b>IMPORTANT:</b> These elements should be unique, and included in the page when the framework inits. They should not be deleted or moved (in the DOM, not by style). You can still use them freely having these limitations in consideration (for example, you can change color, content or attributes, and use its JavaScript methods).<br>
+							This doesn't mean that you must include <i>all</i> of them, but if you plan to use one of these elements only after the framework inits, just load it hidden from the start, and show it when you need it. If you won't use it at all, you don't have to include it.<br><br>
+							As an exception to this rule, you can use a toolbar inside the content tag. The paperkit.toolbar namespace won't point to that toolbar, it will contain the top-level one instead.</span>
 						</md-paper>
 						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 							<span md-typo="display-1">Content elements</span><br>
-							<span md-typo="subhead">Childs of <b>md-content</b> tag, they are the actual content of the page.<br>
+							<span md-typo="subhead">Childs of top-level tags, mainly the <b>md-content</b> tag.<br>
 							They can be any element, from &lt;md-list&gt; to &lt;md-input&gt;.</span>
 							<pre class="language-markup"><code>&lt;body&gt;
-	&lt;md-toolbar&gt;&lt;/md-toolbar&gt;
-	&lt;md-sidemenu&gt;&lt;/md-sidemenu&gt;
+	&lt;md-toolbar&gt;
+		&lt;md-row&gt;
+			(...)
+		&lt;/md-row&gt;
+	&lt;/md-toolbar&gt;
+	&lt;md-sidemenu&gt;
+		&lt;md-list&gt;
+			(...)
+		&lt;/md-list&gt;
+	&lt;/md-sidemenu&gt;
 	&lt;md-fab&gt;&lt;/md-fab&gt;
 	&lt;md-content&gt;
 		&lt;md-list&gt;
@@ -145,11 +200,68 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 						<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
 							<span id="back-page-tags" md-font-color="blue" style="cursor: pointer">Back</span>
 							<md-space></md-space>
+							<span id="next-page-scripting" md-font-color="blue" style="cursor: pointer">Next step: scripting</span>
+						</md-paper>
+					</md-page>
+
+
+
+
+
+
+					<!-- SCRIPTING PAGE -->
+					
+					<md-page>
+						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+							<span md-typo="display-1">Elements initialization</span><br>
+							<span md-typo="subhead">The Paperkit elements on the DOM must be <b>initialized</b>. This proccess is automatic when the elements are already on the DOM when Paperkit inits (if you didn't customize the way of initializing Paperkit, it should happen on window load).<br><br>
+							When you add new Paperkit custom elements (for example, loading pages with AJAX), you must init them by using <b>paperkit.initElement(<i>element</i>)</b>. This function inits the <i>element</i> and all the elements in it. When an element has already been initialized, it won't be initialized again.<br><br>
+							For example, let's say you have retrieved a page by AJAX and you store it in a variable named 'ajaxResponse' (note: it is a string). Then you insert it on &lt;md-content&gt;. This means you'll have to initialize the &lt;md-content&gt; tag.</span>
+							<pre class="language-javascript"><code>// Paperkit.content contains the &lt;md-content&gt; tag. We fill it with ajaxResponse
+paperkit.content.innerHTML = ajaxResponse;
+// After adding the HTML, we must initialize the content tag and all its elements
+paperkit.initElement(paperkit.content)
+							</code></pre>
+							<span md-typo="subhead">Note that &lt;md-content&gt; tag has already been initialized (if it wasn't, it wouldn't be available at paperkit.content). This means that the element won't be initialized again, but this does not stop its children from being initialized.</span>
+						</md-paper>
+						<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+							<span id="back-page-layout" md-font-color="blue" style="cursor: pointer">Back</span>
+							<md-space></md-space>
+							<span id="next-page-customization" md-font-color="blue" style="cursor: pointer">Next step: customization</span>
+						</md-paper>
+					</md-page>
+
+
+
+
+
+
+					<!-- CUTOMIZATION PAGE -->
+					
+					<md-page>
+						<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+							<span id="back-page-scripting" md-font-color="blue" style="cursor: pointer">Back</span>
+							<md-space></md-space>
 							<span id="next-page-components" md-font-color="blue" style="cursor: pointer">Next step: discover the components</span>
 						</md-paper>
 					</md-page>
 				</md-pager>
 			</md-page>
+
+
+
+
+
+
+
+
+
+
+
+		<!-- COMPONENTS PAGE -->
+
+
+
 			<md-page>
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="subhead">
 					<span>These are some live demos of most of the elements from Paperkit, and the code is right under them.</span><br>
@@ -249,12 +361,12 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 				</md-paper>
 
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>				
-					<!-- Sidenav -->		
+					<!-- Sidemenu -->		
 					<div class="el-header" md-typo="display-1">
-						<span>Icon button</span>
+						<span>Sidemenu</span>
 						<md-space></md-space>
-						<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/iconbutton">
-							<span md-color="blue" md-font-color="white">&lt;md-icon-button&gt;</span>
+						<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/sidemenu">
+							<span md-color="blue" md-font-color="white">&lt;md-sidemenu&gt;</span>
 						</a>
 					</div>
 					<div class="el-demo" md-flex="display">
@@ -286,6 +398,21 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 
 			</md-page>
 
+
+
+
+
+
+
+
+
+
+
+		<!-- DEMO PAGE -->
+
+
+
+			
 			<md-page>
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x8" md-position="center-x" md-padding>
 					<span md-typo="title" style="display: inline-block">Chat app - <a target="_blank" href="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cFhSdl9CN1VTeDg/components_lists_keylines_single9.png">Inspiration</a></span>
@@ -358,6 +485,22 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 					</div>
 				</md-paper>
 			</md-page>
+
+
+
+
+
+
+
+
+
+
+
+		<!-- REFERENCE PAGE -->
+
+
+
+			
 			<md-page>
 			</md-page>
 		</md-pager>
