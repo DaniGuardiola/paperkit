@@ -1,6 +1,8 @@
 var md = new Materializer(); // Instantiate Materializer on a variable of your choice
 window.addEventListener('load', function(){
 	md.init(); // Initialize Materializer on window load
+
+	// Quick start tab pagers
 	document.getElementById('next-page-tags').addEventListener('click', function(){
 		quickStartPage(1);
 	});
@@ -28,6 +30,31 @@ window.addEventListener('load', function(){
 	document.getElementById('next-page-components').addEventListener('click', function(){
 		contentPage(1);
 	});
+
+	// Components tab pagers
+	document.getElementById('back-page-quickstart').addEventListener('click', function(){
+		quickStartPage(0);
+		contentPage(0);
+	});
+	document.getElementById('next-page-demos').addEventListener('click', function(){
+		contentPage(2);
+	});
+
+	// Demos tab pagers
+	document.getElementById('back-page-components').addEventListener('click', function(){
+		contentPage(1);
+	});
+	document.getElementById('next-page-tutorial').addEventListener('click', function(){
+		contentPage(3);
+	});
+
+	// Tutorial tab pagers
+	document.getElementById('back-page-demos').addEventListener('click', function(){
+		contentPage(2);
+	});
+	document.getElementById('next-page-reference').addEventListener('click', function(){
+		window.location.href = 'https://gitlab.datatrends.es/opensource/materializer/wikis/reference/';
+	});
 });
 function toggleCollapse(target){
 	var titleRow = document.getElementById('toolbar-title-row');
@@ -48,7 +75,19 @@ function contentPage(index){
 	var tabbar = document.getElementById('content-tabbar');
 	pager.moveToPage(index);
 	tabbar.moveIndicatorToTab(index);
-	pager.scrollIntoView();
+	contentPagerAction(false, index);
+}
+
+function toolbarRainbow(index){
+	if(index === 0){
+		md.toolbar.set('color','purple');
+	} else if(index === 1){
+		md.toolbar.set('color','blue');
+	} else if(index === 2){
+		md.toolbar.set('color','teal');
+	} else if(index === 3){
+		md.toolbar.set('color','orange');
+	}
 }
 
 function quickStartPage(index){
@@ -60,7 +99,8 @@ function quickStartPage(index){
 	contentPager.scrollIntoView();
 }
 
-function scrollTopContentPager(){
+function contentPagerAction(tab, index){
 	var contentPager = document.getElementById('content-pager');
-	contentPager.scrollIntoView();	
+	contentPager.scrollIntoView();
+	toolbarRainbow(index);
 }
