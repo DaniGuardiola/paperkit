@@ -13,6 +13,18 @@ window.addEventListener('load', function(){
 	document.getElementById('back-page-tags').addEventListener('click', function(){
 		quickStartPage(1);
 	});
+	document.getElementById('next-page-scripting').addEventListener('click', function(){
+		quickStartPage(3);
+	});
+	document.getElementById('back-page-layout').addEventListener('click', function(){
+		quickStartPage(2);
+	});
+	document.getElementById('next-page-customization').addEventListener('click', function(){
+		quickStartPage(4);
+	});
+	document.getElementById('back-page-scripting').addEventListener('click', function(){
+		quickStartPage(3);
+	});
 	document.getElementById('next-page-components').addEventListener('click', function(){
 		contentPage(1);
 	});
