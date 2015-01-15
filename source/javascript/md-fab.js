@@ -1,4 +1,4 @@
-var initMDFab = function(MDFab) {
+var initMDFab = function(MDFab, materializer) {
   MDFab.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
     if(attrname==='md-action' && newvalue==='submit') {
@@ -13,6 +13,22 @@ var initMDFab = function(MDFab) {
       }
     } 
   };
+
+  MDFab.updateIcon = function() {
+    var image = this.getAttribute('md-image') ? this.getAttribute('md-image') : '';
+    var type = this.getAttribute('md-type') ? this.getAttribute('md-type') : 'icon';
+    
+    var iconElement = this.querySelector('md-icon');    
+    if(!iconElement) {
+      iconElement = document.createElement('md-icon');
+      materializer.initElement(iconElement);
+      this.appendChild(iconElement);
+    }
+    
+    iconElement.setAttribute('md-type', type);
+    iconElement.setAttribute('md-image', image);
+  }
+  MDFab.updateIcon();
 
   MDFab.enterKeyListener = function(e) {
     var el = e.currentTarget;
