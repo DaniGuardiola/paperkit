@@ -13,18 +13,42 @@ var initMDInputList = function(MDInputList) {
     
   MDInputList.unsetSelected= function(tile) {
     tile.removeAttribute("selected");
-    var checkbox = tile.querySelector('md-input[type="checkbox"]');
-    if(checkbox) {
-      checkbox.removeAttribute("checked");
+    var multiple= this.getAttribute("md-multiple");
+    if(multiple==="checkbox") {
+      var checkbox = tile.querySelector('md-input[type="checkbox"]');
+      if(checkbox) {
+        checkbox.removeAttribute("checked");
+      }
+    } else {
+      tile.removeAttribute("md-color");
     }
   }
   
   MDInputList.setSelected= function(tile) {
     tile.setAttribute("selected","");
     var checkbox = tile.querySelector('md-input[type="checkbox"]');
-    if(checkbox) {
-      checkbox.setAttribute("checked", "");
+    var multiple= this.getAttribute("md-multiple");
+    if(multiple==="checkbox") {    
+      if(checkbox) {
+        checkbox.setAttribute("checked", "");
+      }
+    } else {
+      var backgroundColorClass = this.getAttribute("md-selected-color");
+      if(backgroundColorClass) {
+        tile.setAttribute("md-color", backgroundColorClass);
+      }      
     }
+  }
+  
+  MDInputList.getSelectedValues= function() {
+    var values = [];
+    var options = MDInputList.querySelectorAll("md-tile"); 
+    for(var i=0; i<options.length; i++) {
+      if(options[i].getAttribute("selected")==="" || options[i].getAttribute("selected")) {
+        values.push(options[i].value);
+      }      
+    }
+    return values;
   }
   
   MDInputList.getSelectedItem= function() {
@@ -51,7 +75,7 @@ var initMDInputList = function(MDInputList) {
     }
   }
   
-  MDInputList.addItem=function(value, label) {
+  MDInputList.addItem=function(value, label, selected) {
     var tile = document.createElement("md-tile");
     tile.value = value;
         
@@ -70,14 +94,18 @@ var initMDInputList = function(MDInputList) {
     materializer.initElement(tile);
     tile.addEventListener('click', this.clickListener.bind(this));
     this.appendChild(tile);
+    
+    if(selected) {
+      this.setSelectedItem(tile);
+    }
   }
   
   var options = MDInputList.querySelectorAll("option"); 
   for(var i=0; i<options.length; i++) {
     var option = options[i];
     MDInputList.removeChild(option);
-    MDInputList.addItem(option.value, option.textContent);
-    
+    var selected = option.getAttribute("selected");
+    MDInputList.addItem(option.value, option.textContent, selected==="" | selected ? true: false);    
   }
   
   return MDInputList;
