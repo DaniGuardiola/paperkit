@@ -134,7 +134,7 @@ module.exports = function(grunt) {
         materializerDemo: {
           expand: true,
           cwd: 'bin',
-          src: [ 'materializer/**' ],
+          src: [ 'materializer-min/**' ],
           dest: 'md-elements-demo/'
         }        
       },
