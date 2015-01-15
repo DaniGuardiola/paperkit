@@ -2,59 +2,95 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Materializer elements</title>
+	<title>Paperkit</title>
  	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width" />
 
 	<script src="materializer/materializer.js"></script>
 	<link rel="stylesheet" href="materializer/materializer.css">
 	<link rel="stylesheet" href="style.css">
 	<link href="prism.css" rel="stylesheet">
+	<!-- ANALITYCS -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-58574637-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	<meta name="google-site-verification" content="djfogzB_zdcp84TB00VSlkez3QV9pU20KAeQcaSMXb4" />
 </head>
 <body md-layout="fixed" md-color="grey-200">
-	<md-toolbar md-fill="white" md-color="green" md-shadow="shadow-1">
+	<md-toolbar md-fill="white" md-color="cyan" md-shadow="shadow-1" md-font-color="white" style="overflow: hidden">
 		<md-row>
 			<md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
 			<md-text id="toolbar-title-small" style="display:none">Paperkit</md-text>
 			<md-space></md-space>
 			<md-icon-button md-image="icon:expand_less" md-action="custom: toggleCollapse"></md-icon-button>
-			<md-icon-button md-image="icon:share"></md-icon-button>
 		</md-row>
 		<md-row id="toolbar-title-row">
-			<div style="width: 61px; height: 100%; flex-shrink: 1;"></div>
-			<span md-shrink="s0" md-typo="display-4">Paperkit</span>
+			<span md-shrink="s0" md-typo="display-4" md-margin="left" style="font-size: 90px; line-height: 90px;">Paperkit</span>
 		</md-row>
 		<md-row>
-			<md-space></md-space>
-			<md-tabbar id="content-tabbar" md-shrink="s0" md-rel="main" md-pager="content-pager" md-action="custom: scrollTopContentPager">
+			<md-tabbar md-margin="left" style="display: flex" id="content-tabbar" md-shrink="s0" md-rel="main" md-pager="content-pager" md-action="custom: contentPagerAction">
 				<md-tab md-typo="button">Quick start</md-tab>
 				<md-tab md-typo="button">Components</md-tab>
 				<md-tab md-typo="button">Demos</md-tab>
-				<md-tab md-typo="button">Reference</md-tab>
+				<md-tab md-typo="button">Tutorial</md-tab>
 			</md-tabbar>
 			<md-space></md-space>
 	</md-toolbar>
+	<md-fab md-action="custom: transition.morph" md-color="cyan" md-image="icon:share" md-fill="white" md-shadow="shadow-1"></md-fab>
 	<md-sidemenu></md-sidemenu>
 	<md-content md-rel="main">
 		<md-pager id="content-pager">
+
+
+
+
+
+
+
+
+
+
+
+		<!-- QUICK START PAGE -->
+
+
+
+			
 			<md-page md-rel="quick-start">
-				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="subhead">
+				<md-paper style="margin-bottom: 0;" class="el-paper" md-shadow="shadow-1" md-width="x16" md-position="center-x" md-padding md-typo="subhead">
 					<span>Paperkit is a <b>Material Design web framework</b> that works on top of native and standard technologies: HTML, CSS and JavaScript</span><br><br>
 					Our main goal is to provide a simple and fast way to create webpages and apps following the latest guidelines from Google. We do <b>not</b> use any other framework or CSS preprocessor (like jQuery or Sass).<br><br>
-					<div md-width="full" md-flex="display" md-color="blue">
+					<div md-width="full" md-flex="display" md-color="cyan">
 						<md-space></md-space>
 						<md-tabbar id="quick-start-tabbar" md-rel="quick-start" md-pager="quick-start-pager">
 							<md-tab md-typo="button">Getting ready</md-tab>
-							<md-tab md-typo="button">Basic layout</md-tab>
 							<md-tab md-typo="button">Tags and attributes</md-tab>
+							<md-tab md-typo="button">Basic layout</md-tab>
+							<md-tab md-typo="button">Scripting</md-tab>
+							<md-tab md-typo="button">Customization</md-tab>
 						</md-tabbar>
 						<md-space></md-space>
 					</div>
 				</md-paper>
 				<md-pager id="quick-start-pager">
+
+
+
+
+
+
+					<!-- GETTING READY PAGE -->
+
 					<md-page>
 						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
-							<span md-typo="display-1">1- Import paperkit to your project</span><br>
-							<span md-typo="title"><b>Bower</b></span><br>
+							<span md-typo="display-1">1- Import paperkit to your project</span><br><span md-typo="subhead">Important: the bower version is outdated at the moment and we are moving it to a new repository. Use the manual download instead to get the latest version.</span><br>
+							<span md-typo="title"><b>Bower</b> - <a target="_blank" href="http://bower.io/">What?</a></span><br>
 							<span md-typo="subhead">Minified (recommended)</span>
 							<pre class="language-bash"><code>bower install materializer-min</code></pre>
 							<span md-typo="subhead">Full size</span>
@@ -79,11 +115,56 @@
 window.addEventListener('load', function(){ paperkit.init() }); // Initialize Paperkit on window load</code></pre>
 						</md-paper>
 						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
-							<span id="next-page-layout" md-font-color="blue" style="cursor: pointer">Next step: basic layout</span>
+							<span id="next-page-tags" md-font-color="cyan" style="cursor: pointer">Next step: tags and attributes</span>
 						</md-paper>
 					</md-page>
 
+
+
+
+
+
+					<!-- TAGS AND ATTRIBUTES PAGE -->
+					
 					<md-page>
+						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+							<span md-typo="subhead">Paperkit works with its own <b>tags and attributes</b>.<br>
+							They are precceded by the <b>"md-" prefix</b>.<br>
+							The structure looks like this: <b>&lt;md-tag md-attribute="value"&gt;&lt;/md-tag&gt;</b><br><br>
+							For example:</span>
+							<pre class="language-markup"><code>&lt;md-toolbar md-color="red" md-fill="white"&gt;
+	&lt;md-row&gt;
+		&lt;md-icon-button md-image="icon:menu"&gt;&lt;/md-icon-button&gt;
+		&lt;md-text&gt;I'm a toolbar!&lt;/md-text&gt;
+		&lt;md-space&gt;&lt;/md-space&gt;
+		&lt;md-icon-button md-image="icon:favorite"&gt;&lt;/md-icon-button&gt;
+	&lt;/md-row&gt;
+&lt;/md-toolbar&gt;</code></pre>
+							<span md-typo="subhead">Here we use a few Paperkit custom tags: <b>&lt;md-toolbar&gt;, &lt;md-row&gt;, &lt;md-icon-button&gt;, &lt;md-text&gt; and &lt;md-space&gt;</b>.<br>
+							We can also find some Paperkit attributes: <b>md-color, md-fill and md-image</b>.<br><br>
+							Most of the tags and attributes can be used anywhere in the DOM, but there are some that can only be used under <b>certain conditions</b>.<br>
+							For example, you can only use the <b>md-image</b> attribute on image-related tags like <b>&lt;md-icon&gt;</b> or <b>&lt;md-icon-button&gt;</b>.<br>
+							Also, <b>&lt;md-row&gt;</b> is only used on some elements including <b>&lt;md-toolbar&gt;</b> and <b>&lt;md-form&gt;</b>.</span>
+						</md-paper>
+						<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+							<span id="back-page-ready" md-font-color="cyan" style="cursor: pointer">Back</span>
+							<md-space></md-space>
+							<span id="next-page-layout" md-font-color="cyan" style="cursor: pointer">Next step: basic layout</span>
+						</md-paper>
+					</md-page>
+
+
+
+
+
+
+					<!-- BASIC LAYOUT PAGE -->
+					
+					<md-page>
+						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+							<span md-typo="display-1">Considerations</span><br>
+							<span md-typo="subhead">In order to avoid problems with some browsers and resolutions (specially in mobile webpages and apps), we have the following recommendations:</span>
+						</md-paper>
 						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 							<span md-typo="display-1">Top level elements</span><br>
 							<span md-typo="subhead">Childs of <b>body</b> tag, they define the basic layout.<br>
@@ -94,14 +175,27 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 	&lt;md-fab&gt;&lt;/md-fab&gt;
 	&lt;md-content&gt;&lt;/md-content&gt;
 &lt;/body&gt;</code></pre>
+							<span md-typo="subhead">These elements are available under the Paperkit namespace (remember that you can change it when loading the framework with <i>var paperkit = new Paperkit()</i>). The only difference is that they drop the 'md-' prefix.<br>
+							For example: <b>paperkit.toolbar, paperkit.sidemenu, paperkit.fab and paperkit.content</b>.<br><br>
+							<b>IMPORTANT:</b> These elements should be unique, and included in the page when the framework inits. They should not be deleted or moved (in the DOM, not by style). You can still use them freely having these limitations in consideration (for example, you can change color, content or attributes, and use its JavaScript methods).<br>
+							This doesn't mean that you must include <i>all</i> of them, but if you plan to use one of these elements only after the framework inits, just load it hidden from the start, and show it when you need it. If you won't use it at all, you don't have to include it.<br><br>
+							As an exception to this rule, you can use a toolbar inside the content tag. The paperkit.toolbar namespace won't point to that toolbar, it will contain the top-level one instead.</span>
 						</md-paper>
 						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 							<span md-typo="display-1">Content elements</span><br>
-							<span md-typo="subhead">Childs of <b>md-content</b> tag, they are the actual content of the page.<br>
+							<span md-typo="subhead">Childs of top-level tags, mainly the <b>md-content</b> tag.<br>
 							They can be any element, from &lt;md-list&gt; to &lt;md-input&gt;.</span>
 							<pre class="language-markup"><code>&lt;body&gt;
-	&lt;md-toolbar&gt;&lt;/md-toolbar&gt;
-	&lt;md-sidemenu&gt;&lt;/md-sidemenu&gt;
+	&lt;md-toolbar&gt;
+		&lt;md-row&gt;
+			(...)
+		&lt;/md-row&gt;
+	&lt;/md-toolbar&gt;
+	&lt;md-sidemenu&gt;
+		&lt;md-list&gt;
+			(...)
+		&lt;/md-list&gt;
+	&lt;/md-sidemenu&gt;
 	&lt;md-fab&gt;&lt;/md-fab&gt;
 	&lt;md-content&gt;
 		&lt;md-list&gt;
@@ -113,35 +207,84 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 	&lt;/md-content&gt;
 &lt;/body&gt;</code></pre>
 						</md-paper>
-						<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
-							<span id="back-page-ready" md-font-color="blue" style="cursor: pointer">Back</span>
+						<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+							<span id="back-page-tags" md-font-color="cyan" style="cursor: pointer">Back</span>
 							<md-space></md-space>
-							<span id="next-page-tags" md-font-color="blue" style="cursor: pointer">Next step: tags and attributes</span>
+							<span id="next-page-scripting" md-font-color="cyan" style="cursor: pointer">Next step: scripting</span>
 						</md-paper>
 					</md-page>
 
+
+
+
+
+
+					<!-- SCRIPTING PAGE -->
+					
 					<md-page>
-						<md-paper class="el-paper" md-flex="display" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
-							<span id="back-page-layout" md-font-color="blue" style="cursor: pointer">Back</span>
+						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+							<span md-typo="display-1">Elements initialization</span><br>
+							<span md-typo="subhead">The Paperkit elements on the DOM must be <b>initialized</b>. This proccess is automatic when the elements are already on the DOM when Paperkit inits (if you didn't customize the way of initializing Paperkit, it should happen on window load).<br><br>
+							When you add new Paperkit custom elements (for example, loading pages with AJAX), you must init them by using <b>paperkit.initElement(<i>element</i>)</b>. This function inits the <i>element</i> and all the elements in it. When an element has already been initialized, it won't be initialized again.<br><br>
+							For example, let's say you have retrieved a page by AJAX and you store it in a variable named 'ajaxResponse' (note: it is a string). Then you insert it on &lt;md-content&gt;. This means you'll have to initialize the &lt;md-content&gt; tag.</span>
+							<pre class="language-javascript"><code>// Paperkit.content contains the &lt;md-content&gt; tag. We fill it with ajaxResponse
+paperkit.content.innerHTML = ajaxResponse;
+// After adding the HTML, we must initialize the content tag and all its elements
+paperkit.initElement(paperkit.content)
+							</code></pre>
+							<span md-typo="subhead">Note that &lt;md-content&gt; tag has already been initialized (if it wasn't, it wouldn't be available at paperkit.content). This means that the element won't be initialized again, but this does not stop its children from being initialized.</span>
+						</md-paper>
+						<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+							<span id="back-page-layout" md-font-color="cyan" style="cursor: pointer">Back</span>
 							<md-space></md-space>
-							<span id="next-page-components" md-font-color="blue" style="cursor: pointer">Next step: discover the components</span>
+							<span id="next-page-customization" md-font-color="cyan" style="cursor: pointer">Next step: customization</span>
+						</md-paper>
+					</md-page>
+
+
+
+
+
+
+					<!-- CUTOMIZATION PAGE -->
+					
+					<md-page>
+						<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+							<span id="back-page-scripting" md-font-color="cyan" style="cursor: pointer">Back</span>
+							<md-space></md-space>
+							<span id="next-page-components" md-font-color="cyan" style="cursor: pointer">Next step: discover the components</span>
 						</md-paper>
 					</md-page>
 				</md-pager>
 			</md-page>
+
+
+
+
+
+
+
+
+
+
+
+		<!-- COMPONENTS PAGE -->
+
+
+
 			<md-page>
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="subhead">
-					<span>These are some live demos of most of the elements from Paperkit, and the code is right under them.</span><br><br>
-					Click on the tag name (you'll see it like this: <span md-color="grey" md-font-color="white">&lt;md-tag&gt;</span>) to go to the reference page for that component.
+					<span>These are some live demos of most of the elements from Paperkit, and the code is right under them.</span><br>
+					Click on the tag name (you'll see it like this: <span md-color="blue" md-font-color="white">&lt;md-tag&gt;</span>) to go to the reference page for that component.
 				</md-paper>
-				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
-				
+
+				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>				
 					<!-- Toolbar -->
 					<div class="el-header" md-typo="display-1">
 						<span>Toolbar</span>
 						<md-space></md-space>
 						<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/toolbar">
-							<span md-color="grey" md-font-color="white">&lt;md-toolbar&gt;</span>
+							<span md-color="blue" md-font-color="white">&lt;md-toolbar&gt;</span>
 						</a>
 					</div>
 					<div class="el-demo">
@@ -161,16 +304,16 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 		&lt;md-space&gt;&lt;/md-space&gt;
 		&lt;md-icon-button md-image="icon:favorite"&gt;&lt;/md-icon-button&gt;
 	&lt;/md-row&gt;
-&lt;/md-toolbar&gt;</code></pre>
-				
+&lt;/md-toolbar&gt;</code></pre>				
 				</md-paper>
+
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 					<!-- Icon -->
 					<div class="el-header" md-typo="display-1">
 						<span>Icon</span>
 						<md-space></md-space>
 						<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/icon">
-							<span md-color="grey" md-font-color="white">&lt;md-icon&gt;</span>
+							<span md-color="blue" md-font-color="white">&lt;md-icon&gt;</span>
 						</a>
 					</div>
 					<div md-flex="display" class="el-demo">
@@ -186,102 +329,106 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 &lt;md-icon md-fill="green" md-image="icon:skip_next"&gt;&lt;/md-icon&gt;
 &lt;md-icon md-fill="orange" md-image="icon:thumb_up"&gt;&lt;/md-icon&gt;
 &lt;md-icon md-fill="purple" md-image="mail.svg"&gt;&lt;/md-icon&gt;
-&lt;md-icon md-typo="avatar" md-image="homer.jpg"&gt;&lt;/md-icon&gt;</code></pre>
-				
+&lt;md-icon md-typo="avatar" md-image="homer.jpg"&gt;&lt;/md-icon&gt;</code></pre>				
 				</md-paper>
+
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 					<!-- Tabs -->
 					<div class="el-header" md-typo="display-1">
 						<span>Tabs</span>
 						<md-space></md-space>
 						<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/tabbar">
-							<span md-color="grey" md-font-color="white">&lt;md-tabbar&gt;</span>
+							<span md-color="blue" md-font-color="white">&lt;md-tabbar&gt;</span>
 						</a>
 					</div>
 					<div class="el-demo">
-						<md-toolbar md-color="cyan">
-							<md-row>
-								<md-space></md-space>
-								<md-tabbar md-type="fixed">
-									<md-tab md-typo="button">Tab 1</md-tab>
-									<md-tab md-typo="button">Tab 2</md-tab>
-									<md-tab md-typo="button">Tab 3</md-tab>
-								</md-tabbar>
-								<md-space></md-space>
-							</md-row>
-						</md-toolbar>
+						<md-tabbar md-color="blue" md-type="fixed">
+							<md-tab md-typo="button">Tab 1</md-tab>
+							<md-tab md-typo="button">Tab 2</md-tab>
+							<md-tab md-typo="button">Tab 3</md-tab>
+						</md-tabbar>
 					</div>
-					<pre class="language-markup"><code>&lt;md-toolbar md-color="cyan"&gt;
-	&lt;md-row&gt;
-		&lt;md-space&gt;&lt;/md-space&gt;
-		&lt;md-tabbar md-type="fixed"&gt;
-			&lt;md-tab md-typo="button"&gt;Tab 1&lt;/md-tab&gt;
-			&lt;md-tab md-typo="button"&gt;Tab 2&lt;/md-tab&gt;
-			&lt;md-tab md-typo="button"&gt;Tab 3&lt;/md-tab&gt;
-		&lt;/md-tabbar&gt;
-		&lt;md-space&gt;&lt;/md-space&gt;
-	&lt;/md-row&gt;
-&lt;/md-toolbar&gt;</code></pre>
-
+					<pre class="language-markup"><code>&lt;md-tabbar md-color="blue" md-type="fixed"&gt;
+	&lt;md-tab md-typo="button"&gt;Tab 1&lt;/md-tab&gt;
+	&lt;md-tab md-typo="button"&gt;Tab 2&lt;/md-tab&gt;
+	&lt;md-tab md-typo="button"&gt;Tab 3&lt;/md-tab&gt;
+&lt;/md-tabbar&gt;</code></pre>
 				</md-paper>
+
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>				
 					<!-- Icon button -->		
 					<div class="el-header" md-typo="display-1">
 						<span>Icon button</span>
 						<md-space></md-space>
 						<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/iconbutton">
-							<span md-color="grey" md-font-color="white">&lt;md-icon-button&gt;</span>
+							<span md-color="blue" md-font-color="white">&lt;md-icon-button&gt;</span>
 						</a>
 					</div>
 					<div class="el-demo">
 						<md-icon-button md-fill="green" md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
 					</div>
-					<pre class="language-markup"><code>&lt;md-icon-button md-fill="green" md-image="icon:menu" md-action="custom: md.sidemenu.open"&gt;&lt;/md-icon-button&gt;</code></pre>
-			
+					<pre class="language-markup"><code>&lt;md-icon-button md-fill="green" md-image="icon:menu" md-action="custom: md.sidemenu.open"&gt;&lt;/md-icon-button&gt;</code></pre>			
 				</md-paper>
-				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 
+				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>				
+					<!-- Sidemenu -->		
+					<div class="el-header" md-typo="display-1">
+						<span>Sidemenu</span>
+						<md-space></md-space>
+						<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/sidemenu">
+							<span md-color="blue" md-font-color="white">&lt;md-sidemenu&gt;</span>
+						</a>
+					</div>
+					<div class="el-demo" md-flex="display">
+						<md-button md-buttontype="flat-light" md-action="custom: md.sidemenu.open" md-typo="button">Open sidemenu</md-icon-button>
+					</div>
+					<pre class="language-markup"><code>&lt;md-sidemenu&gt;&lt;/md-sidemenu&gt;</code></pre>			
+				</md-paper>
+
+				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 					<!-- Textarea -->
 					<div class="el-header" md-typo="display-1">
 						<span>Textarea</span>
 						<md-space></md-space>
 						<a href="https://gitlab.datatrends.es/opensource/materializer/wikis/reference/tag/textarea">
-							<span md-color="grey" md-font-color="white">&lt;md-input type="text"&gt;</span>
+							<span md-color="blue" md-font-color="white">&lt;md-input type="text"&gt;</span>
 						</a>
 					</div>
 					<div class="el-demo">
-						<form md-layout>
-							<md-row>
-								<md-tile md-flex="f1">
-									<md-input md-flex="f1" type="text" placeholder="I'm an input" md-mode="animated"></md-input>
-									<md-input md-flex="f1" type="text" placeholder="I have an static placeholder" md-mode="placeholder"></md-input>
-								</md-tile>
-							</md-row>
-							<md-row>
-								<md-tile md-flex="f1">
-									<md-input md-flex="f1" type="password" placeholder="And I am a password input" md-error md-mode="animated"></md-input>
-									<md-input md-flex="f1" type="text" placeholder="I have an error" md-error="Something is wrong!!!1one" md-mode="animated"></md-input>
-								</md-tile>
-							</md-row>
-						</form>
+						<md-input md-width="full" type="text" placeholder="I'm an input" md-mode="animated"></md-input>
+						<md-input md-width="full" type="text" placeholder="I have an static placeholder" md-mode="placeholder"></md-input>
+						<md-input md-width="full" type="password" placeholder="And I am a password input" md-error md-mode="animated"></md-input>
+						<md-input md-width="full" type="text" placeholder="I have an error" md-error="Something is wrong!!!1one" md-mode="animated"></md-input>
 					</div>
-					<pre class="language-markup"><code>&lt;form md-layout&gt;
-	&lt;md-row&gt;
-		&lt;md-tile md-flex="f1"&gt;
-			&lt;md-input md-flex="f1" type="text" placeholder="I'm an input" md-mode="animated"&gt;&lt;/md-input&gt;
-			&lt;md-input md-flex="f1" type="text" placeholder="I have an static placeholder" md-mode="placeholder"&gt;&lt;/md-input&gt;
-		&lt;/md-tile&gt;
-	&lt;/md-row&gt;
-	&lt;md-row&gt;
-		&lt;md-tile md-flex="f1"&gt;
-			&lt;md-input md-flex="f1" type="password" placeholder="And I am a password input" md-error md-mode="animated"&gt;&lt;/md-input&gt;
-			&lt;md-input md-flex="f1" type="text" placeholder="I have an error" md-error="Something is wrong!!!1one" md-mode="animated"&gt;&lt;/md-input&gt;
-		&lt;/md-tile&gt;
-	&lt;/md-row&gt;
-&lt;/form&gt;</code></pre>
-
+					<pre class="language-markup"><code>&lt;md-input md-width="full" type="text" placeholder="I'm an input" md-mode="animated"&gt;&lt;/md-input&gt;
+&lt;md-input md-width="full" type="text" placeholder="I have an static placeholder" md-mode="placeholder"&gt;&lt;/md-input&gt;
+&lt;md-input md-width="full" type="password" placeholder="And I am a password input" md-error md-mode="animated"&gt;&lt;/md-input&gt;
+&lt;md-input md-width="full" type="text" placeholder="I have an error" md-error="Something is wrong!!!1one" md-mode="animated"&gt;&lt;/md-input&gt;</code></pre>
 				</md-paper>
+
+				<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+					<span id="back-page-quickstart" md-font-color="blue" style="cursor: pointer">Back</span>
+					<md-space></md-space>
+					<span id="next-page-demos" md-font-color="blue" style="cursor: pointer">Next step: see some demos</span>
+				</md-paper>
+
 			</md-page>
+
+
+
+
+
+
+
+
+
+
+
+		<!-- DEMO PAGE -->
+
+
+
+			
 			<md-page>
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x8" md-position="center-x" md-padding>
 					<span md-typo="title" style="display: inline-block">Chat app - <a target="_blank" href="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cFhSdl9CN1VTeDg/components_lists_keylines_single9.png">Inspiration</a></span>
@@ -353,8 +500,35 @@ window.addEventListener('load', function(){ paperkit.init() }); // Initialize Pa
 						</md-content>
 					</div>
 				</md-paper>
+
+				<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+					<span id="back-page-components" md-font-color="teal" style="cursor: pointer">Back</span>
+					<md-space></md-space>
+					<span id="next-page-tutorial" md-font-color="teal" style="cursor: pointer">Next step: follow a tutorial</span>
+				</md-paper>
 			</md-page>
+
+
+
+
+
+
+
+
+
+
+
+		<!-- REFERENCE PAGE -->
+
+
+
+			
 			<md-page>
+				<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
+					<span id="back-page-demos" md-font-color="light-green" style="cursor: pointer">Back</span>
+					<md-space></md-space>
+					<span id="next-page-reference" md-font-color="light-green" style="cursor: pointer">Next step: check out the reference</span>
+				</md-paper>
 			</md-page>
 		</md-pager>
 	</md-content>

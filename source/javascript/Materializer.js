@@ -96,7 +96,9 @@ Materializer.prototype.addMDMethods= function(element) {
       initMDTabBar(element, this);
     } else if(tag=="md-toolbar") {
       initMDToolBar(element, this);
-      this.toolbar = element;
+      if (element.parentNode.tagName.toLowerCase() === 'body') {
+        this.toolbar = element;
+      };
     } else if(tag=="md-switch") {
       initMDSwitch(element, this);
     } else if(tag=="md-fab") {
