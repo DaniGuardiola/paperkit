@@ -82,15 +82,27 @@ function tabColorChange(index){
 		quickStartPage(0);
 		md.toolbar.set('color','cyan');
 		md.fab.set('color','cyan');
+		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
+			span.setAttribute('md-font-color','cyan-700');
+		});
 	} else if(index === 1){
 		md.toolbar.set('color','blue');
-		md.fab.set('color','blue');
+		md.fab.set('color','blue');		
+		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
+			span.setAttribute('md-font-color','blue-700');
+		});
 	} else if(index === 2){
 		md.toolbar.set('color','teal');
 		md.fab.set('color','teal');
+		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
+			span.setAttribute('md-font-color','teal-700');
+		});
 	} else if(index === 3){
 		md.toolbar.set('color','light-green');
 		md.fab.set('color','light-green');
+		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
+			span.setAttribute('md-font-color','light-green-700');
+		});
 	}
 }
 
