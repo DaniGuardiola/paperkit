@@ -52,6 +52,10 @@
 		.el-demo {
 			margin-top: 16px;
 		}
+
+		.version-name {
+			transition: color 0.25s;
+		}
 	</style>
 
 </head>
@@ -59,12 +63,12 @@
 	<md-toolbar md-fill="white" md-color="cyan" md-shadow="shadow-1" md-font-color="white" style="overflow: hidden">
 		<md-row>
 			<md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
-			<md-text id="toolbar-title-small" style="display:none">Paperkit</md-text>
+			<md-text id="toolbar-title-small" style="display:none">Paperkit <span class="version-name" md-font-color="cyan-700">alpha 0.5</span></md-text>
 			<md-space></md-space>
 			<md-icon-button md-image="icon:expand_less" md-action="custom: toggleCollapse"></md-icon-button>
 		</md-row>
 		<md-row id="toolbar-title-row">
-			<span md-shrink="s0" md-typo="display-4" md-margin="left" style="font-size: 90px; line-height: 90px;">Paperkit</span>
+			<span md-shrink="s0" md-typo="display-4" md-margin="left" style="font-size: 90px; line-height: 90px;">Paperkit <span class="version-name" md-font-color="cyan-700">alpha 0.5</span></span>
 		</md-row>
 		<md-row>
 			<md-tabbar md-margin="left" style="display: flex" id="content-tabbar" md-shrink="s0" md-rel="main" md-pager="content-pager" md-action="custom: contentPagerAction">
