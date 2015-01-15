@@ -1,6 +1,6 @@
 {
   "type": "tag",
-  "names": [ "md-list", "md-menu" ],
+  "names": [ "md-list", "md-menu", "md-input[type=list]" ],
   "css": [
     {
       "property": "display",

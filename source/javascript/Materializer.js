@@ -17,6 +17,12 @@ Materializer.prototype.initListener= function(func) {
   this.initFuncs.push(func);
 }
 
+Materializer.prototype.createElement= function(tag) {
+  var element = document.createElement(tag);
+  this.addMDMethods(element);
+  return element;
+}
+
 Materializer.prototype.init= function() {
   // Init materializer path
   var url = document.querySelector("link[href*='materializer.css']").href;
