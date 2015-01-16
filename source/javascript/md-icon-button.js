@@ -32,7 +32,6 @@ var initMDIconButton = function(MDIconButton, materializer) {
   
   
   MDIconButton.clickListener = function(e) {
-    e.stopPropagation();
     var el = e.currentTarget;
     var action = el.getAttribute("md-action") ? el.getAttribute('md-action') : 'submit';
 
@@ -62,12 +61,6 @@ var initMDIconButton = function(MDIconButton, materializer) {
         menu.open(this);
         
       }
-    }
-    
-    if (event.stopPropagation) {
-      event.stopPropagation()
-    } else {
-      event.cancelBubble = true
     }
   }
 
