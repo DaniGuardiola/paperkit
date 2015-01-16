@@ -103,6 +103,12 @@ function tabColorChange(index){
 		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
 			span.setAttribute('md-font-color','light-green-700');
 		});
+	} else if(index === 4){
+		md.toolbar.set('color','orange');
+		md.fab.set('color','orange');
+		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
+			span.setAttribute('md-font-color','orange-700');
+		});
 	}
 }
 
@@ -119,4 +125,8 @@ function contentPagerAction(tab, index){
 	var contentPager = document.getElementById('content-pager');
 	contentPager.scrollIntoView();
 	tabColorChange(index);
+}
+
+function openDiscussion(){
+	contentPage(4);
 }
