@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Principles - Layout - Google design guidelines</title>
+    <meta itemprop="name" content="Principles - Layout - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Principles - Layout - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Principles - Layout" />
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Principles</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">Layout</Attribute>
+      <Attribute name="section_slug">layout</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51798601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+
+  <body class="section-layout first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header class="qp-ui" data-qp-ui="{
+  'Peekaboo': {
+    'mobile': 72,
+    'desktop-sm': 72,
+    'default': 192
+  }
+}">
+  <div class="header-wrapper qp-ui" data-qp-ui="{
+    'Peekaboo': {
+      'mobile': 28,
+      'desktop-sm': 28,
+      'default': 82
+    }
+  }">
+    <div class="header-title">      <span class="section-title">Layout</span>
+      <span class="chapter-title">Principles</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+    <span id="logo"><img src="https://material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"/></span>
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Material design
+                </dt>
+        <dd>
+                    <a class="" href="../index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="../what-is-material/environment.html">Environment
+                    </a>
+                    <a class="" href="../what-is-material/material-properties.html">Material properties
+                    </a>
+                    <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="../animation/delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="../style/color.html">Color
+                    </a>
+                    <a class="" href="../style/icons.html">Icons
+                    </a>
+                    <a class="" href="../style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="../style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Layout
+                </dt>
+        <dd>
+                    <a class="nav_selected" href="principles.html">Principles
+                    </a>
+                    <a class="" href="metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="" href="structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Components
+                </dt>
+        <dd>
+                    <a class="" href="../components/bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="../components/buttons.html">Buttons
+                    </a>
+                    <a class="" href="../components/cards.html">Cards
+                    </a>
+                    <a class="" href="../components/chips.html">Chips
+                    </a>
+                    <a class="" href="../components/dialogs.html">Dialogs
+                    </a>
+                    <a class="" href="../components/dividers.html">Dividers
+                    </a>
+                    <a class="" href="../components/grids.html">Grids
+                    </a>
+                    <a class="" href="../components/lists.html">Lists
+                    </a>
+                    <a class="" href="../components/list-controls.html">List controls
+                    </a>
+                    <a class="" href="../components/menus.html">Menus
+                    </a>
+                    <a class="" href="../components/pickers.html">Pickers
+                    </a>
+                    <a class="" href="../components/progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="../components/sliders.html">Sliders
+                    </a>
+                    <a class="" href="../components/snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="../components/subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="../components/switches.html">Switches
+                    </a>
+                    <a class="" href="../components/tabs.html">Tabs
+                    </a>
+                    <a class="" href="../components/text-fields.html">Text fields
+                    </a>
+                    <a class="" href="../components/tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                </dt>
+        <dd>
+                    <a class="" href="../patterns/data-formats.html">Data formats
+                    </a>
+                    <a class="" href="../patterns/errors.html">Errors
+                    </a>
+                    <a class="" href="../patterns/gestures.html">Gestures
+                    </a>
+                    <a class="" href="../patterns/loading-images.html">Loading images
+                    </a>
+                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="../patterns/search.html">Search
+                    </a>
+                    <a class="" href="../patterns/selection.html">Selection
+                    </a>
+                    <a class="" href="../patterns/settings.html">Settings
+                    </a>
+                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="../usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="../usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="../resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Principles
+      </h1>
+
+  <div class="chapter-content">
+        
+        <div class="chapter-intro">
+       <p>Material design uses fundamental tools that have come from the world of print design, like baseline grids and a common set of structural grids that work across various pages. The layout is designed to scale across different screen sizes and will help facilitate UI development and ultimately help you create scalable apps.</p><p>The layout guidelines also encourage apps to have a consistent look and feel by using the same visual elements, structural grids, and general spacing rules across platforms and screen sizes. Structural and visual consistency creates an environment for the user that is recognizable across products, which provides users with a high level of familiarity and comfort.</p><p>Before delving into layout details, consider the rules of how the material behaves and how it is crafted.</p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="principles.html#principles-paper-craft">Paper craft
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="principles-paper-craft" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Paper craft
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>In material design, every pixel drawn by an application resides on a sheet of paper. Paper has a flat background color and can be sized to serve a variety of purposes. A typical layout is composed of multiple sheets of paper.</p><p>The system may draw pixels for elements such as status or system bars, which don’t reside on paper. It’s helpful to think of such system elements as being printed on the back side of the display’s glass, on a surface that is separate from the app content beneath it.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Arranging paper</h3>
+    <div class="module-body">
+    <p><strong>Seams</strong><span> are created when two sheets of paper share the full length of a common edge. Sheets joined by a seam generally move together.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RVhqalJxN01Fb0U/layout_principles_papercraft_paper1.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p><strong>Steps</strong><span> are created when two sheets of paper overlap. Sheets that have different z-positions typically move independently of each other.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ck5NWGtlRHBCWVE/layout_principles_papercraft_paper2.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Paper toolbars</h3>
+    <div class="module-body">
+    <p>A toolbar is a strip of paper used to present actions. The actions cluster on either side of the toolbar. Navigation actions, such as a drawer menu icon or an up arrow, appear at the left, while contextual actions appear at the right.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dmswWS1BM2hrLWc/layout_principles_papercraft_toolbars1.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>The left and right actions in a toolbar are never split by another sheet of paper. However, a toolbar can constrain its width to less than the full length of its paper.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SHo3cVhQWlY5SzA/layout_principles_papercraft_toolbars2.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div><p>Constrain width to less than the full length of its paper</p>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7N3E3NUhyMjA2V3c/layout_principles_papercraft_toolbars3.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>Never allow a sheet of paper to be split by another sheet of paper.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Toolbars frequently form a step above another sheet of paper that displays the content that the toolbar’s actions relate to. As that sheet of paper scrolls beneath the toolbar, the toolbar clips it at the point of entry, preventing it from passing through to the opposite side.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Zm5Fek5odzU1TE0/layout_principles_papercraft_toolbars4.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>A toolbar can also be initially presented as seamed with a second sheet of paper, but then lift to form a step. This variant of clipping is called </span><strong>waterfall</strong><span>.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TVZlZ1NlUUdtc1k/layout_principles_papercraft_toolbars5.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Alternately, the toolbar can maintain its seam, pushing</span><strong> </strong><span>off the screen as the two sheets of paper move together.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7b2xmTHB6c1ZGSjg/layout_principles_papercraft_toolbars6.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Finally, the second sheet can cover the toolbar as it moves.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cWtSQldzVWROUmc/layout_principles_papercraft_toolbars7.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Toolbars have a standard height, 56 dp on mobile and 64 dp on desktop, but they can be taller. When taller, the actions can be pinned to either the top or the bottom of the toolbar.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MXpXTXB5ZWd6bTQ/layout_principles_papercraft_toolbars8.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Toolbars can change height dynamically once they become pinned. When resizing, they snap incrementally.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7d3dUUW9hVkpQRE0/layout_principles_papercraft_toolbars9.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Floating actions</h3>
+    <div class="module-body">
+    <p>A </span><strong>floating action</strong><span> is a circular sheet of paper separate from a toolbar. </p><p>A floating action represents a single promoted action. A floating action can straddle a step if it relates to the content of the paper creating that step.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aGcyakNwSW1iR1U/layout_principles_papercraft_actions1.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>A floating action can straddle a seam if it relates to the content of both of the papers creating that seam. </p><p>Never introduce a decorative seam merely to provide an anchoring point for an action.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7eVA3azhXVEFabUE/layout_principles_papercraft_actions2.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-style">&nbsp;</div>
+    <div class="footer-grid-L section-style">
+            <a class="footer-text" href="../style/typography.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
+        <span>Previous</span>
+        <div>
+                      Style
+                  </div>
+      </a>
+          </div>
+
+    <div class="footer-R section-layout">&nbsp;</div>
+    <div class="footer-grid-R section-layout">
+            <a class="footer-text" href="metrics-keylines.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      Metrics &amp; keylines
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Errors - Patterns - Google design guidelines</title>
+    <meta itemprop="name" content="Errors - Patterns - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Errors - Patterns - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Errors - Patterns" />
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Errors</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">Patterns</Attribute>
+      <Attribute name="section_slug">patterns</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51798601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+
+  <body class="section-patterns noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">Patterns</span>
+      <span class="chapter-title">Errors</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+    <span id="logo"><img src="https://material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"/></span>
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Material design
+                </dt>
+        <dd>
+                    <a class="" href="../index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="../what-is-material/environment.html">Environment
+                    </a>
+                    <a class="" href="../what-is-material/material-properties.html">Material properties
+                    </a>
+                    <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="../animation/delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="../style/color.html">Color
+                    </a>
+                    <a class="" href="../style/icons.html">Icons
+                    </a>
+                    <a class="" href="../style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="../style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Layout
+                </dt>
+        <dd>
+                    <a class="" href="../layout/principles.html">Principles
+                    </a>
+                    <a class="" href="../layout/metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="" href="../layout/structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Components
+                </dt>
+        <dd>
+                    <a class="" href="../components/bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="../components/buttons.html">Buttons
+                    </a>
+                    <a class="" href="../components/cards.html">Cards
+                    </a>
+                    <a class="" href="../components/chips.html">Chips
+                    </a>
+                    <a class="" href="../components/dialogs.html">Dialogs
+                    </a>
+                    <a class="" href="../components/dividers.html">Dividers
+                    </a>
+                    <a class="" href="../components/grids.html">Grids
+                    </a>
+                    <a class="" href="../components/lists.html">Lists
+                    </a>
+                    <a class="" href="../components/list-controls.html">List controls
+                    </a>
+                    <a class="" href="../components/menus.html">Menus
+                    </a>
+                    <a class="" href="../components/pickers.html">Pickers
+                    </a>
+                    <a class="" href="../components/progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="../components/sliders.html">Sliders
+                    </a>
+                    <a class="" href="../components/snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="../components/subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="../components/switches.html">Switches
+                    </a>
+                    <a class="" href="../components/tabs.html">Tabs
+                    </a>
+                    <a class="" href="../components/text-fields.html">Text fields
+                    </a>
+                    <a class="" href="../components/tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Patterns
+                </dt>
+        <dd>
+                    <a class="" href="data-formats.html">Data formats
+                    </a>
+                    <a class="nav_selected" href="errors.html">Errors
+                    </a>
+                    <a class="" href="gestures.html">Gestures
+                    </a>
+                    <a class="" href="loading-images.html">Loading images
+                    </a>
+                    <a class="" href="navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="search.html">Search
+                    </a>
+                    <a class="" href="selection.html">Selection
+                    </a>
+                    <a class="" href="settings.html">Settings
+                    </a>
+                    <a class="" href="swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="../usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="../usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="../resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Errors
+      </h1>
+
+  <div class="chapter-content">
+        
+        <div class="chapter-intro">
+       <p>Errors are instances where an app fails to complete what is expected. Errors happen when: </p><ul><li><span>The app does not understand user input. </span></li><li><span>The system or app fails.</span></li><li><span>A user intends to run incompatible operations concurrently. </span></li></ul><p>Try to prevent errors through good design. Make your app understand the user, rather than making the user have to understand the app. When an error occurs, communicate clearly about what is happening and how a user can quickly resolve it. Save and preserve as much state as possible, especially when the user has input content. </p><p>As with all feedback, prioritize which messages are most important, communicate through content states to avoid extraneous elements on screen, and be consistent with screen placements within and across form factors.</p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="errors.html#errors-user-input-errors">User input errors
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="errors.html#errors-app-errors">App errors
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="errors.html#errors-incompatible-state-errors">Incompatible state errors
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="errors-user-input-errors" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    User input errors
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>Give context for user input errors to help users fix them. Politely let users know as soon as possible that they have made an error that they need to correct. Don’t let them submit a long form before telling them they made an error. Disable a form submission button if errors are detected. If the error can only be found after the user has submitted a form, be clear about what went wrong and what the user specifically needs to do to fix it. </p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Text field input  </h3>
+    <div class="module-body">
+    <p>Helper text may appear at any time before, during, or after user interaction. Error text should not appear before user interaction with the field. Helper text may transform into error text if the user inputs incorrect text.  </p><p>Do not slow down users with too much text on screen. Not every text field needs helper and/or error text. </p><p>If the text field can have an error below it, it should have an additional 16dps of padding below it to account for the error field. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SE1HYTloZG5mNUE/patterns_errors_userinput1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TnhTdHpNU1hMZFk/patterns_errors_userinput2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <h4>Light</h4><ul><li><span>Error font is Roboto Regular 12sp</span></li><li><span>Hint and helper text is #000000 with 38% alpha</span></li></ul>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OG1RbDFYT0FGMDQ/patterns_errors_userinput3.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <h4>Dark </h4><ul><li><span>Error font is Roboto Regular 12sp</span></li><li><span>Hint and helper text is #FFFFFF with 30% alpha</span></li></ul>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7c3J2SzRDMEdlMGs/patterns_errors_userinput4.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h4>Helper and error text </h4>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Z1liMzR1R1ZvZkU/patterns_errors_userinput5.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VjRYVUlxa0txcDg/patterns_errors_userinput6.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UC1UTWcwRVlQajg/patterns_errors_userinput7.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RjZINjVHNTBGZUk/patterns_errors_userinput8.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VVN1TkIxdGlGejg/patterns_errors_userinput9.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VDVselVhU3pwMGc/patterns_errors_userinput_keyline1.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h4>Error with floating text label </h4>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OXk2ZHdEeGNCWGs/patterns_errors_userinput10.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZE5qQXZkb2xsaXM/patterns_errors_userinput11.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TjdLdmlic3BsRUk/patterns_errors_userinput12.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QU5VMDhmYkdpM1k/patterns_errors_userinput_keyline2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>Text field input - Over/under character or word count </h3>
+        <div class="module-body">
+      <p>Counter may be displayed before, during, and after user interaction with the field. Consider not displaying the counter until the user is approaching the limit. Counter fields should have additional 16dps of padding below it.</p><ul><li><span>Counter font is Roboto Regular 12sp</span></li></ul>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h4>Single line with character counter </h4>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NGxTeFRPcjUwb3M/patterns_errors_userinput13.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZkpJblhfWGRHbGc/patterns_errors_userinput14.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h4>Multi line with character counter</h4>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZE9jbTBsNDJvSTA/patterns_errors_userinput15.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7U3FaM0dUa1JoYTQ/patterns_errors_userinput16.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WnVXVC1sWmM0ZWM/patterns_errors_userinput17.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NV9fS2szc2JnQTg/patterns_errors_userinput_keyline3.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Incompatible values</h3>
+    <div class="module-body">
+    <p>Incompatible value errors should be displayed during or after user interaction with the text field that triggers the error.</p><p>If two or more fields have incompatible inputs, the text field and error message below each field should indicate a fix is needed. An additional message should be added at the top of the form or screen summarizing the fixes needed and any additional explanation.</p><h4>Errors detected after attempted form submission</h4><p>The form should reload with scroll position at the top of the form, where the error messages are consolidated. Error messages for individual fields may be resolved as the user works through the form. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TFh3Vy10UHRiVHc/patterns_errors_userinput18.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7STdPMkctYVZjUEE/patterns_errors_userinput19.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Incomplete form </h3>
+    <div class="module-body">
+    <p>Incomplete form errors should be displayed after a user has sufficiently advanced through the form to indicate they have skipped the field. If unable to detect user progress through the form, display the error after the user has attempted to submit the form. </p><p>If fields in a form are left empty, the text field and error message below each field should indicate the error. </p><h4>Multiple errors in a form</span><strong> </strong><span>before submission</h4><p>It is sufficient to individually label error messages as the user works through the form. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VWFTajBlNGpNLU0/patterns_errors_userinput21.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TUdDZ1ljVFo4eWs/patterns_errors_userinput22.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Single line list error</h3>
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OXRQZHZSeVgxdEk/patterns_errors_userinput23.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="errors-app-errors" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    App errors
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>App errors are failures that occur regardless of user input.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>General app error</h3>
+    <div class="module-body">
+    <p>While an error is in progress, an app should continue to display its activity/loading indicators until the failure state is reached and the app error is displayed. </p><p>If a feature is not available, it may be represented within the UI. Not every error requires a new component to pop up. </p><p>If possible, give your user an action that will help them address the error. Don’t let them get stuck. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7b3V6Mm04WDFSdnM/patterns_errors_app1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Alert dialog: app feedback about an error that is blocking normal operation  </div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YlNGcGp3ZjgzX3c/patterns_errors_app2.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Snackbar: app feedback about a peripheral error. Snackbars are transient, don't use them for critical, persistent, or bulk errors.</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Sync error/failure to load</h3>
+    <div class="module-body">
+    <p>A key part of designing an app is determining how screens will present content. A subset of that is determining what each screen should do when its regular content can't be shown. Examples include:</p><ul><li><span>A screen that normally presents a list of items, but no items exist yet.</span></li><li><span>A screen that normally shows search results, but the current search yielded zero results.</span></li><li><span>A screen that normally shows cloud-based content, but can't right now because of an unknown error.</span></li></ul><p>These types of scenarios are called empty states. Although they're not the norm, they're important to design well because users may already be disappointed from encountering something unexpected.</p><p>When sync is down or content has failed to load, the user should be able to interact with as much of the rest of the app as possible. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aks4T0lTcG5HWVU/patterns_errors_app3.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Empty state for the screen/content being loaded.</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cHZDakxGY0V0Z1U/patterns_errors_app4.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Container/component specific error with action.</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Connectivity </h3>
+    <div class="module-body">
+    <p>When connectivity is down, the user should be able to interact with as much of the rest of the app as possible. </p><p>If appropriate, present a link to help a user accomplish their task. Only offer links that you can actually support. For example, don't offer an option like "Try again" in cases where you can already detect that the operation will fail.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dnlDU2NfcVFFclE/patterns_errors_app5.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Snackbar with action to retry </div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7alp1RHNsV1hUSTg/patterns_errors_app6.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Empty state for a screen only available online </div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="errors-incompatible-state-errors" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Incompatible state errors
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>Incompatible state errors occur when users attempt to run operations that conflict, such as making a call while in airplane mode or taking a screenshot from a restricted work account. Try to avoid letting users putt themselves into these situations by clearly communicating the states they are selecting and the implications for the rest of their experience. When these errors are triggered, do not imply that they are the user’s fault. </p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h4>General incompatibility </h4><p>Be clear about why the error is occurring and where it originates.  </p><p>Example: </p><ul><li><span>Screenshots and premium features are not allowed while in a restricted mode. </span></li></ul>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VE9peENkZmFOS0E/patterns_errors_state1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Snackbar + Special mode indicator</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h4>Offline by choice</h4><p>Consider displaying an unintrusive but persistent indicator when users are in these states. </p><p>Examples: </p><ul><li><span>Placing a call while in airplane mode</span></li><li><span>Music availability while offline</span></li></ul>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7djdyZl9FV1pvZnM/patterns_errors_state2.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Snackbar </div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NmpxMDRXWWFlZDg/patterns_errors_state3.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Indicator that device has been placed into airplane mode. </div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h4>Permission requested</h4><p>If your app requires user permission granted before proceeding along a workflow, consider working the permission request into the app flow instead of treating it as an error. </p><p>If permissions are necessary before the first run of an app, consider how they might fit into your app’s warm welcome. </p><p>Examples: </p><ul><li><span>An app’s permissions have changed.</span></li><li><span>In-app purchases have been disabled.</span></li></ul>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZGlObjhZQ2lYZkk/patterns_errors_state4.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Dialog </div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-patterns">&nbsp;</div>
+    <div class="footer-grid-L section-patterns">
+            <a class="footer-text" href="data-formats.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
+        <span>Previous</span>
+        <div>
+                      Data formats
+                  </div>
+      </a>
+          </div>
+
+    <div class="footer-R section-patterns">&nbsp;</div>
+    <div class="footer-grid-R section-patterns">
+            <a class="footer-text" href="gestures.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      Gestures
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+
+  </body>
+
+</html>

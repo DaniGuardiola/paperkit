@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Responsive interaction - Animation - Google design guidelines</title>
+    <meta itemprop="name" content="Responsive interaction - Animation - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Responsive interaction - Animation - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Responsive interaction - Animation" />
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Responsive interaction</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">Animation</Attribute>
+      <Attribute name="section_slug">animation</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51798601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+
+  <body class="section-animation noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">Animation</span>
+      <span class="chapter-title">Responsive interaction</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+    <span id="logo"><img src="https://material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"/></span>
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Material design
+                </dt>
+        <dd>
+                    <a class="" href="../index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="../what-is-material/environment.html">Environment
+                    </a>
+                    <a class="" href="../what-is-material/material-properties.html">Material properties
+                    </a>
+                    <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="nav_selected" href="responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="../style/color.html">Color
+                    </a>
+                    <a class="" href="../style/icons.html">Icons
+                    </a>
+                    <a class="" href="../style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="../style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Layout
+                </dt>
+        <dd>
+                    <a class="" href="../layout/principles.html">Principles
+                    </a>
+                    <a class="" href="../layout/metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="" href="../layout/structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Components
+                </dt>
+        <dd>
+                    <a class="" href="../components/bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="../components/buttons.html">Buttons
+                    </a>
+                    <a class="" href="../components/cards.html">Cards
+                    </a>
+                    <a class="" href="../components/chips.html">Chips
+                    </a>
+                    <a class="" href="../components/dialogs.html">Dialogs
+                    </a>
+                    <a class="" href="../components/dividers.html">Dividers
+                    </a>
+                    <a class="" href="../components/grids.html">Grids
+                    </a>
+                    <a class="" href="../components/lists.html">Lists
+                    </a>
+                    <a class="" href="../components/list-controls.html">List controls
+                    </a>
+                    <a class="" href="../components/menus.html">Menus
+                    </a>
+                    <a class="" href="../components/pickers.html">Pickers
+                    </a>
+                    <a class="" href="../components/progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="../components/sliders.html">Sliders
+                    </a>
+                    <a class="" href="../components/snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="../components/subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="../components/switches.html">Switches
+                    </a>
+                    <a class="" href="../components/tabs.html">Tabs
+                    </a>
+                    <a class="" href="../components/text-fields.html">Text fields
+                    </a>
+                    <a class="" href="../components/tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                </dt>
+        <dd>
+                    <a class="" href="../patterns/data-formats.html">Data formats
+                    </a>
+                    <a class="" href="../patterns/errors.html">Errors
+                    </a>
+                    <a class="" href="../patterns/gestures.html">Gestures
+                    </a>
+                    <a class="" href="../patterns/loading-images.html">Loading images
+                    </a>
+                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="../patterns/search.html">Search
+                    </a>
+                    <a class="" href="../patterns/selection.html">Selection
+                    </a>
+                    <a class="" href="../patterns/settings.html">Settings
+                    </a>
+                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="../usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="../usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="../resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Responsive interaction
+      </h1>
+
+  <div class="chapter-content">
+        
+        <div class="chapter-intro">
+       <p>Responsive interaction builds trust with the user and engages them. When a user interacts with an app and beautiful yet perfectly logical things happen, the user feels satisfied—even delighted.  The interaction is thoughtful and purposeful, not random, and can be gently whimsical but never distracting. It encourages deeper exploration of an app. What will happen if I touch this? And then this?</p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="responsive-interaction.html#responsive-interaction-user-input">User input
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="responsive-interaction.html#responsive-interaction-surface-reaction">Surface reaction
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="responsive-interaction.html#responsive-interaction-material-response">Material response
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="responsive-interaction.html#responsive-interaction-radial-action">Radial action
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="responsive-interaction-user-input" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    User input
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>In material design, apps are responsive to and eager for user input: </p><ul><li><span>Touch, voice, mouse and keyboard are all first-class input methods.</span></li><li><span>Although UI elements appear tangible, they are locked behind a layer of glass (the computer or device’s screen). Visual and motion cues help bridge that gap by immediately acknowledging input and implying direct manipulation.</span></li></ul><p>Responsive interaction elevates an app from something that delivers information to the user upon request to something that communicates with the user in a tangible way. </p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleC1 moduleC2">
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                          <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+                <video id="1-None_0B0NGgBg38lWWWEt6WTNEc3hCSDQ" crossorigin="anonymous" preload="metadata" loop  controls>
+                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWUUhndWxCNFN6b00/animation-responsiveinteraction-userinput-030201_Surface_Reaction_xhdpi_002.webm" type="video/webm" />
+                                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWWEt6WTNEc3hCSDQ/animation-responsiveinteraction-userinput-030201_Surface_Reaction_xhdpi_002.mp4" type="video/mp4" />
+                                </video>
+              </div>
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Surface reaction</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+                <video id="1-None_0B0NGgBg38lWWTFRzaVFZUGZINXM" crossorigin="anonymous" preload="metadata" loop  controls>
+                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWeEFXZGlVaVFZekU/animation-responsiveinteraction-userinput-030201_Material_Response_xhdpi_001.webm" type="video/webm" />
+                                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWTFRzaVFZUGZINXM/animation-responsiveinteraction-userinput-030201_Material_Response_xhdpi_001.mp4" type="video/mp4" />
+                                </video>
+              </div>
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Material response</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+                <video id="1-None_0B0NGgBg38lWWZ0tWWm9IMDZEMDA" crossorigin="anonymous" preload="metadata" loop  controls>
+                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWNkJYYXZvcGFXZDg/animation-responsiveinteraction-userinput-030201_Radial_Reaction_xhdpi_001.webm" type="video/webm" />
+                                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWZ0tWWm9IMDZEMDA/animation-responsiveinteraction-userinput-030201_Radial_Reaction_xhdpi_001.mp4" type="video/mp4" />
+                                </video>
+              </div>
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Radial reaction</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="responsive-interaction-surface-reaction" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Surface reaction
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>Upon receiving an input event, the system provides an instantaneous visual confirmation at the point of contact: under the pad of a finger for touch, at the mic for voice, or in the appropriate field for a keyboard press. One way to express this acknowledgment is through the ink metaphor, the dynamic display surface that coats every sheet of paper.</p><p>The core visual mechanism to express this contact is the Touch Ripple. This device articulates the attack and duration of a touch event, as well as dynamic aspects, such as the amplitude of voice or the interpreted pressure of a touch.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <h4 class="related">
+Related
+</h4>
+        </div>
+              <div>
+          <div class="modulettes">
+          <a class="modulette android" href="http://developer.android.com/training/material/animations.html#Touch" title="Customize Touch Feedback">
+      <img class="icon callout-icon" src="../static/images/callout_android.svg" alt="" />
+      <div class="info">
+        <div class="title">Customize Touch Feedback</div>
+        <span class="subtitle">Provide visual confirmation when users touch UI elements.</span>
+      </div>
+    </a>
+              <a class="modulette polymer" href="http://www.polymer-project.org/docs/elements/material.html#touch-ripple-effect" title="Customize Touch Feedback">
+      <img class="icon callout-icon" src="../static/images/callout_polymer.svg" alt="" />
+      <div class="info">
+        <div class="title">Customize Touch Feedback</div>
+        <span class="subtitle">Provide visual confirmation when users touch UI elements.</span>
+      </div>
+    </a>
+      </div>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Best Practices</h3>
+    <div class="module-body">
+    <p>Input occurs at specific points: at the contact point of a finger or at the mic icon for voice. From this point, make the visual reaction radial.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWMndwZm1ScmlEY1U" crossorigin="anonymous" preload="metadata"  loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWdjdXZUtDc2szc2c/animation-responsiveinteraction-surfacereaction-030202_TouchRipple_PressRelease_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWMndwZm1ScmlEY1U/animation-responsiveinteraction-surfacereaction-030202_TouchRipple_PressRelease_xhdpi_002.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Touch ripple: press and release</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWZmNTSmxsdXd5SGM" crossorigin="anonymous" preload="metadata"  loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWZGIxcG5melFNSVE/animation-responsiveinteraction-surfacereaction-030202_TouchRipple_DragRelease_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWZmNTSmxsdXd5SGM/animation-responsiveinteraction-surfacereaction-030202_TouchRipple_DragRelease_xhdpi_002.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Touch ripple: drag in and out</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="responsive-interaction-material-response" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Material response
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>In addition to ink-like actions on the surface, the material itself can also react. The material can lift up when touched, indicating an active state. The user can generate new or transform existing material on touch, or directly manipulate sheets of material by dragging or flinging them.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <h4 class="related">
+Related
+</h4>
+        </div>
+              <div>
+          <div class="modulettes">
+          <a class="modulette android" href="http://developer.android.com/training/material/animations.html#ViewState" title="Animate View State Changes">
+      <img class="icon callout-icon" src="../static/images/callout_android.svg" alt="" />
+      <div class="info">
+        <div class="title">Animate View State Changes</div>
+        <span class="subtitle">Show animations between state changes.</span>
+      </div>
+    </a>
+      </div>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Point of origin</h3>
+    <div class="module-body">
+    <p>When new material is generated as a result of direct user interaction, surface growth motion should originate from the point of input. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWdlg3S2IwcWYyUDQ" crossorigin="anonymous" preload="metadata"  loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWMXpyWDRDWDJpeDA/animation-responsiveinteraction-materialresponse-030202_PointOfOrigin_DO_001.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWdlg3S2IwcWYyUDQ/animation-responsiveinteraction-materialresponse-030202_PointOfOrigin_DO_001.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div><p>Material appears from the touch point, visually tying the element to the point of touch.</p>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWRXlrYVd6bHFIbU0" crossorigin="anonymous" preload="metadata"  loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWTmppTnl4aTF6X0k/animation-responsiveinteraction-materialresponse-030202_PointOfOrigin_DONT_001.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWRXlrYVd6bHFIbU0/animation-responsiveinteraction-materialresponse-030202_PointOfOrigin_DONT_001.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>Paper appears from the center of screen, breaking the relationship with the input.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Lift on touch</h3>
+    <div class="module-body">
+    <p>When a card or separable element is activated, the card should lift to indicate an active state. </p><h4 class="related">
+Related
+</h4><div class="modulettes">
+          <a class="modulette android" href="http://developer.android.com/training/material/shadows-clipping.html#Elevation" title="Assign Elevation to Your Views">
+      <img class="icon callout-icon" src="../static/images/callout_android.svg" alt="" />
+      <div class="info">
+        <div class="title">Assign Elevation to Your Views</div>
+        <span class="subtitle">Use animation when elevating elements.</span>
+      </div>
+    </a>
+      </div>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWR0NfZ29yR1p5M2s" crossorigin="anonymous" preload="metadata"  loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWcURPLXpTc2FQRUk/animation-responsiveinteraction-materialresponse-030203_Material_Response_xhdpi_001.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWR0NfZ29yR1p5M2s/animation-responsiveinteraction-materialresponse-030203_Material_Response_xhdpi_001.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                        <figcaption>
+          <p>Lift on touch</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>   </h3>
+        <div class="module-body">
+      
+    </div>
+  </section>
+
+        </div>
+              </div>
+  </div>
+</div>                  <div id="responsive-interaction-radial-action" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Radial action
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>All user-initiated actions have an epicenter; the place or places where their intent enters the system. Add clarity to user-initiated events by creating strong visual connections from user input, whether by fingers on a touch screen or voice through a microphone. State changes across the screen should trigger progressively as their distance to the point of contact increases, creating a ripple of action.</p><ul><li><span>Inputs have an epicenter. Touch occurs at the point of contact, voice enters through the mic icon, keyboard through the individual keys.</span></li><li><span>Actions should visually connect to their respective input epicenter. Closer actions occur sooner than more distant ones, creating a ripple of actions (movement occurs from the distance from the epicenter).</span></li></ul>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <h4 class="related">
+Related
+</h4>
+        </div>
+              <div>
+          <div class="modulettes">
+          <a class="modulette android" href="http://developer.android.com/training/material/animations.html#Reveal" title="Use the Reveal Effect">
+      <img class="icon callout-icon" src="../static/images/callout_android.svg" alt="" />
+      <div class="info">
+        <div class="title">Use the Reveal Effect</div>
+        <span class="subtitle">Keep visual continuity when showing or hiding UI elements.</span>
+      </div>
+    </a>
+      </div>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-animation">&nbsp;</div>
+    <div class="footer-grid-L section-animation">
+            <a class="footer-text" href="authentic-motion.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
+        <span>Previous</span>
+        <div>
+                      Authentic motion
+                  </div>
+      </a>
+          </div>
+
+    <div class="footer-R section-animation">&nbsp;</div>
+    <div class="footer-grid-R section-animation">
+            <a class="footer-text" href="meaningful-transitions.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      Meaningful transitions
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+
+  </body>
+
+</html>
