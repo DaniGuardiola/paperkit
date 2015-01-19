@@ -52,7 +52,39 @@
         buttonDiv.classList.add("show-code");
         buttonDiv.setAttribute('md-shadow','shadow-1');
         buttonDiv.setAttribute('md-fill','white');
-        buttonDiv.setAttribute('md-flex','display');
+        buttonDiv.setAttribute('md-flex','display wrap');
+        var devices = document.createElement('div');
+        devices.classList.add('devices');
+        devices.setAttribute('md-flex','display');
+        var devicesSpace = document.createElement('md-space');
+        devices.appendChild(devicesSpace);
+        if (!paper.classList.contains('no-mobile')) {
+          var deviceMobile = document.createElement('md-icon-button');
+          deviceMobile.classList.add('device','mobile');
+          deviceMobile.setAttribute('md-image','icon:smartphone');
+          deviceMobile.setAttribute('md-action','custom:changeDevice');
+          devices.appendChild(deviceMobile);
+        }
+        if (!paper.classList.contains('no-tablet')) {
+          var deviceTablet = document.createElement('md-icon-button');
+          deviceTablet.classList.add('device','tablet');
+          deviceTablet.setAttribute('md-image','icon:tablet');
+          deviceTablet.setAttribute('md-action','custom:changeDevice');
+          devices.appendChild(deviceTablet);
+        }
+        if (!paper.classList.contains('no-desktop')) {
+          var deviceDesktop = document.createElement('md-icon-button');
+          deviceDesktop.classList.add('device','desktop');
+          deviceDesktop.setAttribute('md-image','icon:computer');
+          deviceDesktop.setAttribute('md-action','custom:changeDevice');
+          devices.appendChild(deviceDesktop);
+        }
+        buttonDiv.appendChild(devices);
+        var space = document.createElement('div');
+        space.style.height = '48px';
+        space.style.width = '1px';
+        space.style.flexGrow = '1';
+        buttonDiv.appendChild(space);
         var link = document.createElement('md-icon-button');
         link.setAttribute('md-image','icon:link');
         link.setAttribute('md-action','custom:getLink');
@@ -93,13 +125,29 @@
 
     function toggleFullscreen(el){
       var button = el;
-      el = el.parentNode.parentNode;
+      el = el.parentNode.parentNode;      
       if (el.classList.contains('fullscreen')) {
         paperkit.greylayer.hide();
+        changeDevice('desktop',true,el);
+        el.style.overflow = '';
+        document.querySelector('html').style.overflow = '';
         button.setAttribute('md-image','icon:fullscreen');
-        el.classList.remove('fullscreen');        
+        el.classList.remove('fullscreen');
       } else {
         paperkit.greylayer.show();
+        if (paperkit.viewport.get().width < 768 || el.classList.contains('show-mobile')) {
+          changeDevice('mobile',true,el);
+        } else if (paperkit.viewport.get().width < 992 || el.classList.contains('show-tablet')) {
+          changeDevice('tablet',true,el);
+        } else if (el.classList.contains('show-desktop')) {
+          changeDevice('desktop',true,el);
+        }
+        if (el.code && el.querySelector('.code').classList.contains('on')) {
+          el.style.overflow = '';
+        } else {
+          el.style.overflow = 'hidden';
+        }
+        document.querySelector('html').style.overflow = 'hidden';
         button.setAttribute('md-image','icon:fullscreen_exit');
         el.classList.add('fullscreen');
       }
@@ -119,6 +167,64 @@
       return str.replace(new RegExp(find, 'g'), replace);
     }
 
+    function changeDevice(el, string, element){
+      if (string === true) {
+        var button = el;
+        el = element;
+      } else {
+        var button = el;
+        el = el.parentNode.parentNode.parentNode;
+      }
+      if (button === 'desktop' || (button.classList && button.classList.contains('desktop'))) {
+        hideIframe(el);
+        el.classList.remove('mobile','tablet');
+      } else if (button === 'tablet' || (button.classList && button.classList.contains('tablet'))) {
+        showIframe(el);
+        el.classList.remove('mobile');
+        el.classList.add('tablet');
+      } else if (button === 'mobile' || (button.classList && button.classList.contains('mobile'))) {
+        showIframe(el);
+        el.classList.remove('tablet');
+        el.classList.add('mobile');
+      }
+    }
+
+    function hideIframe(el){
+      if (el.iframe) {
+        el.iframe.parentNode.removeChild(el.iframe);
+        el.classList.remove('iframe');
+        el.iframe = null;
+      }
+    }
+
+    function showIframe(el){
+      if (!el.iframe) {
+        var example = el.querySelector('.example').cloneNode();
+        example.innerHTML = el.querySelector('.example').innerHTML;
+        console.log(example);
+        example.style.width = '100%';
+        example.style.height = '100%';
+        var wrapper = document.createElement('div');
+        wrapper.appendChild(example);
+        example = wrapper.innerHTML.toString();
+        var content = '<html><head><link rel="stylesheet" href="../../materializer-min/materializer.css"><script src="../../materializer-min/materializer.js"><script type="text/javascript">var paperkit = new Materializer();window.addEventListener("load", function(){paperkit.init();<\/script></head><body>' + example + '</body></html>';
+        var iframe = document.createElement('iframe');
+        iframe.classList.add('example-iframe');
+        el.insertBefore(iframe, el.querySelector('.example'));
+        el.iframe = iframe;
+        var doc = iframe.document;
+        if(iframe.contentDocument)
+            doc = iframe.contentDocument; // For NS6
+        else if(iframe.contentWindow)
+            doc = iframe.contentWindow.document; // For IE5.5 and IE6
+        // Put the content in the iframe
+        doc.open();
+        doc.writeln(content);
+        doc.close();
+      }
+      el.classList.add('iframe');
+    }
+
     function showCode(el){
       el = el.parentNode.parentNode;
       if (!el.code) {
@@ -127,13 +233,20 @@
         code.show = function(){
           this.classList.add('on');
           el.querySelector('.show-code md-button').textContent = 'Hide code';
-          if (code.parentNode.classList.contains('fullscreen')) {
-            code.scrollIntoView();            
+          if (el.classList.contains('fullscreen')) {
+            code.scrollIntoView();
+            el.style.overflow = '';
           }
         };
         code.hide = function(){
           this.classList.remove('on');
           el.querySelector('.show-code md-button').textContent = 'Show code';
+          if (el.classList.contains('fullscreen')) {
+            if (el.iframe) {
+              el.iframe.scrollIntoView();
+            }
+            el.style.overflow = 'hidden';
+          }
         };
         var pre = document.createElement('pre');
         pre.classList.add('language-markup');
@@ -173,9 +286,45 @@
       box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
     }
 
-    .paperkit-paper.fullscreen .example {
+    .paperkit-paper.fullscreen .example, .paperkit-paper.fullscreen .example-iframe {
       height: auto !important;
       min-height: 100% !important;
+    }
+
+    .paperkit-paper.fullscreen.mobile {
+      top: 50%;
+      left: 50%;
+      width: 360px !important;
+      max-width: 100% !important;
+      transform: translate(-50%,-50%);
+      height: 100%;
+      max-height: 640px;
+    }
+
+    .paperkit-paper.fullscreen.mobile .show-code {
+      width: 258px;
+    }
+
+    .paperkit-paper.fullscreen.mobile .devices {
+      width: 100%;
+    }
+
+    .paperkit-paper.fullscreen.tablet {
+      top: 50%;
+      left: 50%;
+      width: 960px !important;
+      max-width: 100% !important;
+      transform: translate(-50%,-50%);
+      height: 100%;
+      max-height: 600px;
+    }
+
+    .paperkit-paper:not(.fullscreen) .devices {
+      display: none;
+    }
+
+    .paperkit-paper .example-iframe {
+      border: 0;
     }
 
     .paperkit-paper.fullscreen .logo {
@@ -188,7 +337,7 @@
       width: 56px;
     }
 
-    .paperkit-paper .example {
+    .paperkit-paper .example, .paperkit-paper .example-iframe {
       width: 100%;
       overflow: hidden;
     }
@@ -214,6 +363,7 @@
       border-radius: 2px;
       opacity: 0;
       transition: opacity 0.25s;
+      max-width: 100%;
     }
 
     .paperkit-paper:hover .show-code {
@@ -238,6 +388,59 @@
       box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
     }
 
+    .paperkit-paper.iframe .example {
+      display: none;
+    }
+
+    .paperkit-paper:not(.iframe) .example-iframe {
+      display: none;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .paperkit-paper .show-code .devices {
+        display: none;
+      }
+
+      .paperkit-paper.fullscreen.mobile {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: 800px;
+      }      
+    }
+
+    @media only screen and (max-width: 992px) {
+      .paperkit-paper .logo {
+        left: 16px;
+        bottom: 16px;
+        transition: width .25s;
+      }
+
+      .paperkit-paper .show-code {
+        opacity: 1;
+        right: 0;
+        bottom: 0;
+        width: auto;
+      }
+
+      .paperkit-paper:hover .logo {
+        left: 16px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .paperkit-paper .show-code .device.desktop {
+        display: none;
+      }
+
+      .paperkit-paper.fullscreen.tablet {
+        width: 100% !important;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+      }
+    }
+    
     @media only screen and (min-width: 1241px) {
       .paperkit-paper {
         margin-right: 0 !important;
@@ -675,7 +878,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-fullwidth-defaultheight" class="paperkit-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+<md-paper id="paperkit-fullwidth-defaultheight" class="paperkit-paper show-tablet" md-shadow="shadow-1" md-width="x12" md-position="center-x">
   <div class="example" md-height="x3" md-color="grey-200">
 <md-toolbar md-color="blue" md-shadow="shadow-1">
   <md-row>
@@ -717,7 +920,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-fullwidth-extendedheight" class="paperkit-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+<md-paper id="paperkit-fullwidth-extendedheight" class="paperkit-paper show-tablet" md-shadow="shadow-1" md-width="x12" md-position="center-x">
 	<div class="example" md-height="x4" md-color="grey-200">
 <md-toolbar md-color="blue" md-shadow="shadow-1">
   <md-row>
@@ -762,7 +965,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-columnwidth" class="paperkit-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+<md-paper id="paperkit-columnwidth" class="paperkit-paper no-mobile show-tablet" md-shadow="shadow-1" md-width="x12" md-position="center-x">
 	<div class="example" md-height="x4" md-flex="display">
 <div md-width="x4" md-height="full" md-color="white">
   <md-toolbar md-fill="grey-700" md-color="transparent">
@@ -774,7 +977,7 @@
     </md-row>
   </md-toolbar>
 </div>
-<div md-flex="f1" md-color="black" md-fill="white" md-shadow="shadow-1">
+<div style="flex-grow: 1" md-color="grey-900" md-fill="white" md-shadow="shadow-1">
   <md-toolbar md-color="transparent" md-fill="white">
     <md-row>
       <md-space></md-space>
@@ -812,7 +1015,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-flexibletoolbar-cardtoolbar" class="paperkit-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" style="margin-bottom: 192px;">
+<md-paper id="paperkit-flexibletoolbar-cardtoolbar" class="paperkit-paper no-mobile show-tablet" md-shadow="shadow-1" md-width="x12" md-position="center-x" style="margin-bottom: 192px;">
   <div class="example" md-height="x4" md-color="grey-200" style="overflow: visible">
 
 
@@ -862,7 +1065,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-floating-toolbar" class="paperkit-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+<md-paper id="paperkit-floating-toolbar" class="paperkit-paper show-tablet no-mobile" md-shadow="shadow-1" md-width="x12" md-position="center-x">
   <div class="example" md-height="x4" md-color="grey-200">
 <div md-height="full" md-width="full" style="background-image: url(../paperkit/map.png); background-size: 100% auto; position: absolute;">
   <md-toolbar md-color="white" md-fill="grey-700" md-shadow="shadow-1" md-width="x6" style="position: absolute; top: 16px; left: 16px; z-index: 0;">
