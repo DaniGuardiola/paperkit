@@ -29,7 +29,7 @@
 				margin-bottom: 0;
 			}
 		}
-		
+
 
 		.el-header {
 			display: flex;
@@ -66,6 +66,7 @@
 			<md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
 			<md-text id="toolbar-title-small" style="display:none">Paperkit <span class="version-name" md-font-color="cyan-700">alpha 0.5</span></md-text>
 			<md-space></md-space>
+			<md-icon-button md-image="icon:twitter" md-action="link: twitter.com/paperkit"></md-icon-button>
 			<md-icon-button md-image="icon:expand_less" md-action="custom: toggleCollapse"></md-icon-button>
 		</md-row>
 		<md-row id="toolbar-title-row">
@@ -82,7 +83,14 @@
 			<md-space></md-space>
 	</md-toolbar>
 	<md-fab md-action="custom: openDiscussion" md-color="cyan" md-image="icon:forum" md-fill="white" md-shadow="shadow-1"></md-fab>
-	<md-sidemenu></md-sidemenu>
+	<md-sidemenu>
+		<md-list md-action="link: data-url">
+			<md-tile data-url="/spec">
+				<md-icon md-image="icon:web"></md-icon>
+				<md-text>Spec with demos</md-text>
+			</md-tile>
+		</md-list>
+	</md-sidemenu>
 	<md-content md-rel="main">
 		<md-pager id="content-pager">
 
@@ -610,6 +618,17 @@ paperkit.initElement(paperkit.content)
 				        })();
 				    </script>
 				    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</md-paper>
+				<md-paper class="el-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<div id="google_comments"></div>
+					<script>
+					gapi.comments.render('google_comments', {
+					    href: window.location,
+					    width: '650',
+					    first_party_property: 'BLOGGER',
+					    view_type: 'FILTERED_POSTMOD'
+					});
+					</script>
 				</md-paper>
 			</md-page>
 		</md-pager>
