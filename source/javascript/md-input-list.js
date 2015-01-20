@@ -44,7 +44,7 @@ var initMDInputList = function(MDInputList) {
     var values = [];
     var options = MDInputList.querySelectorAll("md-tile"); 
     for(var i=0; i<options.length; i++) {
-      if(options[i].getAttribute("selected")==="" || options[i].getAttribute("selected")) {
+      if(options[i].hasAttribute("selected")) {
         values.push(options[i].value);
       }      
     }
@@ -104,8 +104,7 @@ var initMDInputList = function(MDInputList) {
   for(var i=0; i<options.length; i++) {
     var option = options[i];
     MDInputList.removeChild(option);
-    var selected = option.getAttribute("selected");
-    MDInputList.addItem(option.value, option.textContent, selected==="" | selected ? true: false);    
+    MDInputList.addItem(option.value, option.textContent, option.hasAttribute("selected") ? true: false);    
   }
   
   return MDInputList;
