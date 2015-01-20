@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Tabs - Components - Google design guidelines</title>
+    <meta itemprop="name" content="Tabs - Components - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Tabs - Components - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Tabs - Components" />
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Tabs</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">Components</Attribute>
+      <Attribute name="section_slug">components</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51798601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+
+  <body class="section-components noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">Components</span>
+      <span class="chapter-title">Tabs</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+    <span id="logo"><img src="https://material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"/></span>
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Material design
+                </dt>
+        <dd>
+                    <a class="" href="../index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="../what-is-material/environment.html">Environment
+                    </a>
+                    <a class="" href="../what-is-material/material-properties.html">Material properties
+                    </a>
+                    <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="../animation/delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="../style/color.html">Color
+                    </a>
+                    <a class="" href="../style/icons.html">Icons
+                    </a>
+                    <a class="" href="../style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="../style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Layout
+                </dt>
+        <dd>
+                    <a class="" href="../layout/principles.html">Principles
+                    </a>
+                    <a class="" href="../layout/metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="" href="../layout/structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Components
+                </dt>
+        <dd>
+                    <a class="" href="bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="buttons.html">Buttons
+                    </a>
+                    <a class="" href="cards.html">Cards
+                    </a>
+                    <a class="" href="chips.html">Chips
+                    </a>
+                    <a class="" href="dialogs.html">Dialogs
+                    </a>
+                    <a class="" href="dividers.html">Dividers
+                    </a>
+                    <a class="" href="grids.html">Grids
+                    </a>
+                    <a class="" href="lists.html">Lists
+                    </a>
+                    <a class="" href="list-controls.html">List controls
+                    </a>
+                    <a class="" href="menus.html">Menus
+                    </a>
+                    <a class="" href="pickers.html">Pickers
+                    </a>
+                    <a class="" href="progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="sliders.html">Sliders
+                    </a>
+                    <a class="" href="snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="switches.html">Switches
+                    </a>
+                    <a class="nav_selected" href="tabs.html">Tabs
+                    </a>
+                    <a class="" href="text-fields.html">Text fields
+                    </a>
+                    <a class="" href="tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                </dt>
+        <dd>
+                    <a class="" href="../patterns/data-formats.html">Data formats
+                    </a>
+                    <a class="" href="../patterns/errors.html">Errors
+                    </a>
+                    <a class="" href="../patterns/gestures.html">Gestures
+                    </a>
+                    <a class="" href="../patterns/loading-images.html">Loading images
+                    </a>
+                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="../patterns/search.html">Search
+                    </a>
+                    <a class="" href="../patterns/selection.html">Selection
+                    </a>
+                    <a class="" href="../patterns/settings.html">Settings
+                    </a>
+                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="../usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="../usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="../resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Tabs
+      </h1>
+
+  <div class="chapter-content">
+        
+        <div class="chapter-intro">
+       <p>Tabs make it easy to explore and switch between different views or functional aspects of an app or to browse categorized data sets.</p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="tabs.html#tabs-usage">Usage
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="tabs.html#tabs-content">Content
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="tabs.html#tabs-types-of-tabs">Types of tabs
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="tabs.html#tabs-specs">Specs
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="tabs-usage" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Usage
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>A tab provides the affordance for displaying grouped content. A tab label succinctly describes the tab’s associated grouping of content.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>Mobile tabs</h3>
+        <div class="module-body">
+      
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleC1 moduleC2">
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bVBGcHYzNWtPT00/components_tabs_usage_mobile1.png" />
+                      </div>
+                        <figcaption>
+          <p>Extended app bar and tab bar</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RUpCaHJKbG01Wmc/components_tabs_usage_mobile2.png" />
+                      </div>
+                        <figcaption>
+          <p>Inset search, app bar, and tab bar</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bHQ0WGJGSy04WTA/components_tabs_usage_mobile3.png" />
+                      </div>
+                        <figcaption>
+          <p>Default app bar and tab bar</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleC1 moduleC2">
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZUhpN3RMNzRuRUk/components_tabs_usage_mobile5.png" />
+                      </div>
+                        <figcaption>
+          <p>Default app bar and scrollable tab bar</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Y2phU2tETzJPcEk/components_tabs_usage_mobile4.png" />
+                      </div>
+                        <figcaption>
+          <p>Text color same as tab indicator</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OG54SlpiY2paMUk/components_tabs_usage_mobile6.png" />
+                      </div>
+                        <figcaption>
+          <p>Tab bar locked on scroll</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Desktop tabs</h3>
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Sm82ZENoSXZLSGM/components_tabs_usage_desktop1.png" />
+                    </div>
+                        <figcaption>
+          <p>Default app bar and tab bar</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RWZCMFNfZHp1bVk/components_tabs_usage_desktop2.png" />
+                    </div>
+                        <figcaption>
+          <p>Addition of the More dropdown menu</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7d3g5N2tBN3g4MUk/components_tabs_usage_desktop4.png" />
+                    </div>
+                        <figcaption>
+          <p>Tab overflow pagination, Step 1</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QzA2aGhOUHNSYjA/components_tabs_usage_desktop5.png" />
+                    </div>
+                        <figcaption>
+          <p>Tab overflow pagination, Step 2</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SjhoR2JIN1hjdEE/components_tabs_usage_desktop3.png" />
+                    </div>
+                        <figcaption>
+          <p>Menu expanded</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NDllTUxWSEQ2Z1E/components_tabs_usage_desktop6.png" />
+                    </div>
+                        <figcaption>
+          <p>Tab bar centered </p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>When to use</h3>
+    <div class="module-body">
+    <p>Use tabs to organize content at a high level, for example, presenting different sections of a newspaper. Don’t use tabs for carousels or pagination of content. Those use cases involve viewing content, not navigating between groups of content.</p><p>For more detail about using tabs for navigating top-level views, see “Top-level view strategies” in <a href="../layout/structure.html#structure-ui-regions-guidance">Layout &gt; Structure &gt; UI Regions and Guidance</a>.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VmQyZnlIZUVCNm8/components_tabs_usage_example1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7c1JhcDZjelRVVEE/components_tabs_usage_example2.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Tab characteristics</h3>
+    <div class="module-body">
+    <p>Tabs are presented as a single row.</p><p>Tabs should not be nested. Content in a tab should not consist of another set of tabbed content.</p><p>A set of tabs contains at minimum a pair of tabs and no more than six tabs.</p><p>Tabs control the display of content in a consistent location. </p><p>The tab corresponding to the visible content is highlighted.</p><p>Tabs are grouped together and the group of tabs is in turn connected with their content. </p><p>Keeping tabs adjacent to their content helps maintain the relationship between the two, as too great a separation can introduce ambiguity.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aWJsSnIyUGducFE/components_tabs_usage_example5.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7S2ZBVnotTm5EeFE/components_tabs_usage_example6.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OXRNRXRYS3V1aTQ/components_tabs_usage_example3.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Zkg5SWtuUmJKYUk/components_tabs_usage_example4.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="tabs-content" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Content
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Content presented in tabs can vary widely, even between tabs. For example, different years within a tabbed portfolio or different types of settings.</p><p>All content within a set of tabs should be related under a larger organizing principle (for example, Settings or Directions), with each tab’s content mutually exclusive of the others'.</p><p>Tab labels should provide meaningful distinctions that logically organize associated content.</p><p>Tab labels may be icons or text and must not be truncated.</p><p>Avoid the need for cross-tab comparison of content; significant cross-tab comparison may indicate the content would benefit from a different organization or presentation.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aFdwaG12cTA3MlU/components_tabs_usage_content.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="tabs-types-of-tabs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Types of tabs
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>Depending on the platform and the context of use, tabbed content can be presented as either fixed tabs or scrollable (swipeable) tabs.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Fixed tabs</h3>
+    <div class="module-body">
+    <p>Fixed tabs display all tabs concurrently and are best used with content that benefits from quick pivots between tabs, such as switching transportation methods for directions in Google Maps.</p><p>The maximum number of tabs is limited by the view’s width. Fixed tabs have equal width, based on the widest tab label. To navigate between fixed tabs, touch the tab or swipe the content area left or right.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZUhpN3RMNzRuRUk/components_tabs_usage_mobile5.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Scrollable tabs</h3>
+    <div class="module-body">
+    <p>Scrollable tabs display a subset of tabs at any given moment, and can contain longer tab labels and a larger number of tabs. They are best used for browsing contexts in touch interfaces when users don’t need to directly compare the tab labels.</p><p>To navigate between scrollable tabs, touch the tab, swipe the tabs left or right, or swipe the content area left or right.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7d3g5N2tBN3g4MUk/components_tabs_usage_desktop4.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QzA2aGhOUHNSYjA/components_tabs_usage_desktop5.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="tabs-specs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Specs
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+      <h3>Fixed and full-screen width</h3>
+    <div class="module-body">
+    <p>Tab width: 1/3 of screen<br/>Tab indicator: 2dp height<br/>Text: 14sp Roboto Medium<br/>Text is centered in the tab cell<br/>Active text color: #fff or secondary color</p><p>Disabled text color: #fff 60%</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OWxWU0JiNjA4Vzg/components_tabs_usage_specs1.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Scrollable</h3>
+    <div class="module-body">
+    <p>Tab width: 12dp + word length + 12dp<br/>Tab indicator: 2dp height<br/>Text: 14sp Roboto Medium<br/>Active text color: #fff or secondary color<br/>Disabled text color: #fff 60%</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UzFGMVpzM2lxNHc/components_tabs_usage_specs2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Desktop/tablet</h3>
+    <div class="module-body">
+    <p>Tab width: 24dp + word length + 24dp<br/>Tab indicator: 2dp height<br/>Text: 14sp tablet, 13sp desktop Roboto Medium<br/>Active text color: #fff or secondary color<br/>Disabled text color: #fff 60%</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bmNSQjB1NElVX1U/components_tabs_usage_specs3.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Tab touch target animation</h3>
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWYnZwZjNrLUQyQUE" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWcjl0X2hEa0hqRzA/components-tabs-spec-061604_TabTouch_Target_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWYnZwZjNrLUQyQUE/components-tabs-spec-061604_TabTouch_Target_xhdpi_002.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-components">&nbsp;</div>
+    <div class="footer-grid-L section-components">
+            <a class="footer-text" href="switches.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
+        <span>Previous</span>
+        <div>
+                      Switches
+                  </div>
+      </a>
+          </div>
+
+    <div class="footer-R section-components">&nbsp;</div>
+    <div class="footer-grid-R section-components">
+            <a class="footer-text" href="text-fields.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      Text fields
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+
+  </body>
+
+</html>

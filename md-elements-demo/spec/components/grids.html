@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Grids - Components - Google design guidelines</title>
+    <meta itemprop="name" content="Grids - Components - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Grids - Components - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Grids - Components" />
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Grids</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">Components</Attribute>
+      <Attribute name="section_slug">components</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51798601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+
+  <body class="section-components noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">Components</span>
+      <span class="chapter-title">Grids</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+    <span id="logo"><img src="https://material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"/></span>
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Material design
+                </dt>
+        <dd>
+                    <a class="" href="../index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="../what-is-material/environment.html">Environment
+                    </a>
+                    <a class="" href="../what-is-material/material-properties.html">Material properties
+                    </a>
+                    <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="../animation/delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="../style/color.html">Color
+                    </a>
+                    <a class="" href="../style/icons.html">Icons
+                    </a>
+                    <a class="" href="../style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="../style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Layout
+                </dt>
+        <dd>
+                    <a class="" href="../layout/principles.html">Principles
+                    </a>
+                    <a class="" href="../layout/metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="" href="../layout/structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Components
+                </dt>
+        <dd>
+                    <a class="" href="bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="buttons.html">Buttons
+                    </a>
+                    <a class="" href="cards.html">Cards
+                    </a>
+                    <a class="" href="chips.html">Chips
+                    </a>
+                    <a class="" href="dialogs.html">Dialogs
+                    </a>
+                    <a class="" href="dividers.html">Dividers
+                    </a>
+                    <a class="nav_selected" href="grids.html">Grids
+                    </a>
+                    <a class="" href="lists.html">Lists
+                    </a>
+                    <a class="" href="list-controls.html">List controls
+                    </a>
+                    <a class="" href="menus.html">Menus
+                    </a>
+                    <a class="" href="pickers.html">Pickers
+                    </a>
+                    <a class="" href="progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="sliders.html">Sliders
+                    </a>
+                    <a class="" href="snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="switches.html">Switches
+                    </a>
+                    <a class="" href="tabs.html">Tabs
+                    </a>
+                    <a class="" href="text-fields.html">Text fields
+                    </a>
+                    <a class="" href="tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                </dt>
+        <dd>
+                    <a class="" href="../patterns/data-formats.html">Data formats
+                    </a>
+                    <a class="" href="../patterns/errors.html">Errors
+                    </a>
+                    <a class="" href="../patterns/gestures.html">Gestures
+                    </a>
+                    <a class="" href="../patterns/loading-images.html">Loading images
+                    </a>
+                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="../patterns/search.html">Search
+                    </a>
+                    <a class="" href="../patterns/selection.html">Selection
+                    </a>
+                    <a class="" href="../patterns/settings.html">Settings
+                    </a>
+                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="../usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="../usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="../resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Grids
+      </h1>
+
+  <div class="chapter-content">
+        
+        <div class="chapter-intro">
+       <p>Grid lists are an alternative to standard list views. Grid lists are distinct from grids used for layouts and other visual presentations.</p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="grids.html#grids-usage">Usage
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="grids.html#grids-content">Content
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="grids.html#grids-behavior">Behavior
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="grids.html#grids-specs">Specs
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="grids-usage" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Usage
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>A grid list is best suited to presenting a </span><strong>homogenous data type,</strong><span> typically images, and is optimized for </span><strong>visual comprehension</strong><span> and differentiating between like data types.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YTU2ekJPMU80MVU/components_grids_usage1.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>A </span><strong>grid list</strong><span> is a continuous element consisting of tessellated, regular subdivisions called cells that contain tiles.</p><p><strong>Cells</strong><span> are arrayed vertically and horizontally within the grid.</p><p><strong>Tiles</strong><span> hold content and can span one or more cells vertically or horizontally.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OVlEaXZ5YmU1Xzg/components_grids_usage2.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VGhsOE5idWlJWXM/components_grids_usage3.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>If the text in tiles needs to be prominent enough to distinguish between primary content pieces, consider using a different container, like a list or cards, optimized for displaying text and facilitating reading comprehension.</p><p><strong>Lists: </strong><span>Optimized for reading comprehension, particularly when comparing a set of data containing multiple data types.</p><p><strong>Cards:</strong><span> Used for content with inconsistent formatting, such as photos with captions of variable length, or data sets with heterogeneous content, such as a mixed collection of photos and videos and books.</p>
+    </div>
+  </section>
+
+        </div>
+              </div>
+  </div>
+</div>                  <div id="grids-content" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Content
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+      <h3>Content in tiles</h3>
+    <div class="module-body">
+    <p>Tile content consists of primary content and secondary content. Primary content is the main differentiating element, typically an image. Secondary content can be an action or text.</p><p>Provide a default image for tiles that lack an image for primary content.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YzdVdmpZT3FRX1E/components_grids_content1.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Actions in tiles</h3>
+    <div class="module-body">
+    <p>Actions on both primary and secondary content—such as play, zoom in, delete, or select—are immediate and typically do not result in a submenu of options (action overflow) within the grid list.</p><p>Actions can open a subsequent view, such as a card.</p><h4>Primary actions</h4><ul><li><span>Fill the entire tile and therefore are not represented via icons or text.</span></li><li><span>Are consistent throughout tiles in a specific grid. For example, the primary action for all tiles in a single grid could be to view details for an image.</span></li></ul><h4>Secondary actions or content</h4><ul><li><span>Are represented in tiles with icons or text.</span></li><li><span>Are consistent throughout tiles in a specific grid.</span></li><li><span>Are placed in a consistent location within the tiles of a specific grid, but that consistent location may vary between grids (at corners or edges). For example, all titles in a grid could be located at the bottom left corner.</span></li></ul>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MHktdTZCcWZQcjA/components_grids_content2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="grids-behavior" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Behavior
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+      <h3>Scrolling</h3>
+    <div class="module-body">
+    <p>Grids typically scroll only vertically.</p><p>Horizontally scrolling grids are discouraged because the scrolling interferes with typical reading patterns, affecting comprehension.</p><p>Cut off grid tiles to communicate the scroll direction for content overflow.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZVpFMDhCbXlXaEk/components_grids_behavior1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div><p>Indicate content overflow by cutting off grid tiles.</p>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dFdYTzkxLTI0X1E/components_grids_behavior2.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>Gestures</h3>
+        <div class="module-body">
+      <p>Per-tile swipe actions are not permitted. Pick-up-and-move actions are discouraged.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>Tile filtering and sorting</h3>
+        <div class="module-body">
+      <p>Content in a grid list can be programmatically filtered or sorted by date, file size, alphabetical order, or other parameters.</p><p>The first item in the grid is positioned at the top left of the grid, and the order proceeds left to right and top to bottom.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>Dimensions and resizing</h3>
+        <div class="module-body">
+      <p>Resizing a grid list causes the tiles to re-sort as horizontal space becomes available. Tiles do not scale to fill available horizontal space. </p><p>A grid list does not transform into a list when horizontal space contracts. Grid lists and lists are separate structures for emphasizing different data types. Grid lists prioritize images over text and lists prioritize text over images.</p>
+    </div>
+  </section>
+
+        </div>
+              </div>
+  </div>
+</div>                  <div id="grids-specs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Specs
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+      <h3>Grid list header/footers</h3>
+    <div class="module-body">
+    <h4>Single-line header/footer </h4><p>Height: 48dp<br/>Text padding: 16dp<br/>Default font size: 16sp<br/>Secondary action is flush right to the footer.</p><h4>Two-line header/footer</h4><p>Height: 68dp<br/>Text padding: 16dp<br/>Default font size for each line: 16sp/12sp or 14sp/14sp</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YkJPUDRZNm9iNlU/components_grids_specs1.png" />
+                    </div>
+                      </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Z2tGNG1nRTI4UTQ/components_grids_specs2.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Image-only grid list</h3>
+    <div class="module-body">
+    <p>Grid padding: 4dp or 1dp</p><p>Tiles in grid lists can span multiple columns.</p><p>Carefully consider whether secondary text is needed in grid lists that use multi-column tiles, as larger tiles can develop significant empty space.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MS1NVzlzeVc1RWs/components_grids_specs3.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Element</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QVM0UkhqUVJHTlE/components_grids_specs4.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Context</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Single-line grid list</h3>
+    <div class="module-body">
+    <h4>Text only</h4><p>Height: 48dp<br/>Text padding: 16dp<br/>Default font size: 16sp<br/>Grid padding: 4dp or 1dp</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cklMSmJ6MmlfSUk/components_grids_specs5.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Element</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UEUtY1BrTmIzeTA/components_grids_specs6.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dXNwRmdYYmFoS28/components_grids_specs7.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Context</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h4>Text with icon</h4><p>Height: 48dp<br/>Text padding: 16dp<br/>Default font size: 16sp<br/>Grid padding: 4dp or 1dp</p><p>The secondary action can be flush right or flush left within the footer or header.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aXpmN2k3V3k3djg/components_grids_specs8.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NnVjLV9QaVh1VjA/components_grids_specs9.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RVl0VEZ2aEZVZUk/components_grids_specs10.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Element</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7d0Y5N0tIdFdaMkk/components_grids_specs11.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aGhrSXhXdC1rbzA/components_grids_specs12.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Context</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Two-line grid list</h3>
+    <div class="module-body">
+    <h4>Text only</h4><p>Height: 68dp<br/>Text padding: 16dp<br/>Default font size for each line:16sp/12sp or 14sp/14sp<br/>Grid padding: 4dp or 1dp</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OGVOdG5KZl9fMGM/components_grids_specs13.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Element</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UF9pU0VHVnZYTUE/components_grids_specs14.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MEhXb19hZkJYMzQ/components_grids_specs16.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Context, 1dp example</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VFNkd1lOSVBRUzA/components_grids_specs15.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Context, 4dp example</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h4>Text with icon</h4><p>Height: 68dp<br/>Text padding: 16dp<br/>Default font size for each line: 16sp/12sp or 14sp/14sp</p><p>The secondary action can be flush right or flush left within the footer or header.</p><p>Grid padding: 4dp or 1dp</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SDFHT2JpYXRDN0k/components_grids_specs17.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aE9yT29Ua1JsNXc/components_grids_specs18.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bTg0OHdTNW5XM2s/components_grids_specs19.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Element</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Mk16UWtfTTRNZmc/components_grids_specs20.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7T0k5UXR2Z1lBcDg/components_grids_specs21.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Context</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-components">&nbsp;</div>
+    <div class="footer-grid-L section-components">
+            <a class="footer-text" href="dividers.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
+        <span>Previous</span>
+        <div>
+                      Dividers
+                  </div>
+      </a>
+          </div>
+
+    <div class="footer-R section-components">&nbsp;</div>
+    <div class="footer-grid-R section-components">
+            <a class="footer-text" href="lists.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      Lists
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+
+  </body>
+
+</html>

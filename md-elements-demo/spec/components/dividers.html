@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Dividers - Components - Google design guidelines</title>
+    <meta itemprop="name" content="Dividers - Components - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Dividers - Components - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Dividers - Components" />
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Dividers</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">Components</Attribute>
+      <Attribute name="section_slug">components</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51798601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+
+  <body class="section-components noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">Components</span>
+      <span class="chapter-title">Dividers</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+    <span id="logo"><img src="https://material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"/></span>
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Material design
+                </dt>
+        <dd>
+                    <a class="" href="../index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="../what-is-material/environment.html">Environment
+                    </a>
+                    <a class="" href="../what-is-material/material-properties.html">Material properties
+                    </a>
+                    <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="../animation/delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="../style/color.html">Color
+                    </a>
+                    <a class="" href="../style/icons.html">Icons
+                    </a>
+                    <a class="" href="../style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="../style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Layout
+                </dt>
+        <dd>
+                    <a class="" href="../layout/principles.html">Principles
+                    </a>
+                    <a class="" href="../layout/metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="" href="../layout/structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Components
+                </dt>
+        <dd>
+                    <a class="" href="bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="buttons.html">Buttons
+                    </a>
+                    <a class="" href="cards.html">Cards
+                    </a>
+                    <a class="" href="chips.html">Chips
+                    </a>
+                    <a class="" href="dialogs.html">Dialogs
+                    </a>
+                    <a class="nav_selected" href="dividers.html">Dividers
+                    </a>
+                    <a class="" href="grids.html">Grids
+                    </a>
+                    <a class="" href="lists.html">Lists
+                    </a>
+                    <a class="" href="list-controls.html">List controls
+                    </a>
+                    <a class="" href="menus.html">Menus
+                    </a>
+                    <a class="" href="pickers.html">Pickers
+                    </a>
+                    <a class="" href="progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="sliders.html">Sliders
+                    </a>
+                    <a class="" href="snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="switches.html">Switches
+                    </a>
+                    <a class="" href="tabs.html">Tabs
+                    </a>
+                    <a class="" href="text-fields.html">Text fields
+                    </a>
+                    <a class="" href="tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                </dt>
+        <dd>
+                    <a class="" href="../patterns/data-formats.html">Data formats
+                    </a>
+                    <a class="" href="../patterns/errors.html">Errors
+                    </a>
+                    <a class="" href="../patterns/gestures.html">Gestures
+                    </a>
+                    <a class="" href="../patterns/loading-images.html">Loading images
+                    </a>
+                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="../patterns/search.html">Search
+                    </a>
+                    <a class="" href="../patterns/selection.html">Selection
+                    </a>
+                    <a class="" href="../patterns/settings.html">Settings
+                    </a>
+                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="../usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="../usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="../resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Dividers
+      </h1>
+
+  <div class="chapter-content">
+        
+        <div class="chapter-intro">
+       <p>Dividers group and separate content within lists and page layouts. The divider is a thin rule, lightweight yet sufficient to distinguish content visually and spatially. </p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="dividers.html#dividers-usage">Usage
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="dividers.html#dividers-types-of-dividers">Types of dividers
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="dividers.html#dividers-specs">Specs
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="dividers-usage" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Usage
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>Dividers help users understand how content is organized by establishing a rhythm and hierarchy on a page. But a heavy use of dividers can lead to visual noise and dilute their impact. </p><p>Full-bleed dividers emphasize separate content areas and sections, but if such strong divisions are not required, consider using white space, subheaders, or inset dividers.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h4>Items without anchors</h4><p>When lists don’t have an anchoring element such as an avatar or icon, spacing alone isn’t always enough to separate tiles. In this case, full-bleed dividers can help create rhythm and separate individual tiles.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bjVRb2hELXB6cXc/components_dividers_usage1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bEhBbkVwYXpxTW8/components_dividers_usage2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h4>Image-based content</h4><p>Because the grid itself creates visual distinction, grid lists do not need dividers to separate subheaders from content. In this case, the white space and the subheaders separate the sections adequately.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Yks5eHp1ZTJGSEE/components_dividers_usage3.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VjRxLUdKcWN5aE0/components_dividers_usage6.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div><p>Judicious use of inset dividers helps demarcate major sections of content.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aWVydmhSV2ZiYzQ/components_dividers_usage4.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>Overuse of full-bleed dividers creates visual noise and ultimately diminishes the meaning of the dividers.</p>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dkxMWGp3ZVI0VXM/components_dividers_usage5.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>Inset dividers help cut down on visual noise and should be used with anchor elements, but overuse reduces their meaning.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="dividers-types-of-dividers" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Types of dividers
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+      <h3>Full-bleed dividers</h3>
+    <div class="module-body">
+    <p>Full-bleed dividers separate distinct content sections (e.g., biographic details from contact information) or distinct content elements (e.g., list items) in both lists and page layouts.</p><p>Full-bleed dividers can also indicate seams in material where the material will expand when content is expanded.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dlY2OVRaMFJTR1k/components_dividers_type1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7djQtdzFQN291akU/components_dividers_type2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Inset dividers</h3>
+    <div class="module-body">
+    <p>Inset dividers subdivide related content, such as phone numbers from email addresses from street addresses in a contact detail.</p><p>Inset dividers should be used in conjunction with anchoring elements such as icons or avatars aligned with the Title Key Line.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7clpJWEoxNmY1cXc/components_dividers_type3.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7STZRdWxNNzBQYW8/components_dividers_type4.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Subheaders and dividers</h3>
+    <div class="module-body">
+    <p>When using a divider with a subheader, place the divider above the subheader to reinforce the relationship between the subheader and the content.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TGRrb29GdVFMblE/components_dividers_type5.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UFJNRWt4MlVVMVE/components_dividers_type6.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="dividers-specs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Specs
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Dividers are 1dp thick, with an opacity of either 12% black in light themes or 12% white in dark themes.</p><p>Dividers are placed along the bottom edge of the content tiles, independent of the grid.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bndwU3BGbVViZEU/components_dividers_specs.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-components">&nbsp;</div>
+    <div class="footer-grid-L section-components">
+            <a class="footer-text" href="dialogs.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
+        <span>Previous</span>
+        <div>
+                      Dialogs
+                  </div>
+      </a>
+          </div>
+
+    <div class="footer-R section-components">&nbsp;</div>
+    <div class="footer-grid-R section-components">
+            <a class="footer-text" href="grids.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      Grids
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+
+  </body>
+
+</html>

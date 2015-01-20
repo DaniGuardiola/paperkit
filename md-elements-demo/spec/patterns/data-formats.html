@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Data formats - Patterns - Google design guidelines</title>
+    <meta itemprop="name" content="Data formats - Patterns - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Data formats - Patterns - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Data formats - Patterns" />
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Data formats</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">Patterns</Attribute>
+      <Attribute name="section_slug">patterns</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51798601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+
+  <body class="section-patterns first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header class="qp-ui" data-qp-ui="{
+  'Peekaboo': {
+    'mobile': 72,
+    'desktop-sm': 72,
+    'default': 192
+  }
+}">
+  <div class="header-wrapper qp-ui" data-qp-ui="{
+    'Peekaboo': {
+      'mobile': 28,
+      'desktop-sm': 28,
+      'default': 82
+    }
+  }">
+    <div class="header-title">      <span class="section-title">Patterns</span>
+      <span class="chapter-title">Data formats</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+    <span id="logo"><img src="https://material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"/></span>
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Material design
+                </dt>
+        <dd>
+                    <a class="" href="../index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="../what-is-material/environment.html">Environment
+                    </a>
+                    <a class="" href="../what-is-material/material-properties.html">Material properties
+                    </a>
+                    <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="../animation/delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="../style/color.html">Color
+                    </a>
+                    <a class="" href="../style/icons.html">Icons
+                    </a>
+                    <a class="" href="../style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="../style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Layout
+                </dt>
+        <dd>
+                    <a class="" href="../layout/principles.html">Principles
+                    </a>
+                    <a class="" href="../layout/metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="" href="../layout/structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Components
+                </dt>
+        <dd>
+                    <a class="" href="../components/bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="../components/buttons.html">Buttons
+                    </a>
+                    <a class="" href="../components/cards.html">Cards
+                    </a>
+                    <a class="" href="../components/chips.html">Chips
+                    </a>
+                    <a class="" href="../components/dialogs.html">Dialogs
+                    </a>
+                    <a class="" href="../components/dividers.html">Dividers
+                    </a>
+                    <a class="" href="../components/grids.html">Grids
+                    </a>
+                    <a class="" href="../components/lists.html">Lists
+                    </a>
+                    <a class="" href="../components/list-controls.html">List controls
+                    </a>
+                    <a class="" href="../components/menus.html">Menus
+                    </a>
+                    <a class="" href="../components/pickers.html">Pickers
+                    </a>
+                    <a class="" href="../components/progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="../components/sliders.html">Sliders
+                    </a>
+                    <a class="" href="../components/snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="../components/subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="../components/switches.html">Switches
+                    </a>
+                    <a class="" href="../components/tabs.html">Tabs
+                    </a>
+                    <a class="" href="../components/text-fields.html">Text fields
+                    </a>
+                    <a class="" href="../components/tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Patterns
+                </dt>
+        <dd>
+                    <a class="nav_selected" href="data-formats.html">Data formats
+                    </a>
+                    <a class="" href="errors.html">Errors
+                    </a>
+                    <a class="" href="gestures.html">Gestures
+                    </a>
+                    <a class="" href="loading-images.html">Loading images
+                    </a>
+                    <a class="" href="navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="search.html">Search
+                    </a>
+                    <a class="" href="selection.html">Selection
+                    </a>
+                    <a class="" href="settings.html">Settings
+                    </a>
+                    <a class="" href="swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="../usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="../usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="../resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Data formats
+      </h1>
+
+  <div class="chapter-content">
+        
+        <div class="chapter-intro">
+       <p>Display data such as date &amp; time in a consistent and user-friendly way. Present the information concisely and avoid unnecessary redundancy.</p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="data-formats.html#data-formats-date-time">Date &amp; time
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="data-formats-date-time" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Date &amp; time
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>These guidelines apply to: </p><ul><li><span>The current date and time</span></li><li><span>A date and time setting, such as an alarm or reminder</span></li><li><span>A date and time when an object was created, sent, edited, or otherwise acted upon</span></li></ul>
+    </div>
+  </section>
+
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>Basic displays</h3>
+        <div class="module-body">
+      
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>For time, use uppercase AM or PM without periods, separated from time with a space.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>10:00 AM</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>If a timestamp is within the current day,  it’s generally unnecessary to show either “today”, the day or date. Only display the time in “hour:minute AM/PM” format.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>11:51 AM</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>If the day is in the past or future within the current calendar year, display the abbreviated date.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Jul 14</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>If the day is in the past or future outside of the current calendar year, display the abbreviated date and year.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Jul 14, 2012</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>If the date is a range of time, separate with an en-dash without a space on either side.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>8:00 AM–12:30 PM</span></p><p>Jan 6–Feb 2</p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>If both dates in a range start and end in the current year, omit the year. Otherwise, show the year on both the start and end.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Dec 6, 2013–Jan 2, 2014</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>When a range shares a common AM/PM, append only on the end of the range.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>8:00–10:30 AM</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>When listing the time zone, drop the leading 0 for single digits. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>UTC+5:00</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>Using human and relative language and approximate time</h3>
+        <div class="module-body">
+      <p>When space permits, display the relevant date/time information in the context of the current date/time, as people normally speak to each other.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>If the day is yesterday or tomorrow, use those terms.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Yesterday, Tomorrow</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>If the day is in the future and within a week, display the unabbreviated day of the week.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Tuesday</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>If a word alternative helps understanding or describes a time-of-day preset, display that alternative.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Store open 9:00 AM–MidnightReminder for tomorrow afternoon</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>If absolute time isn’t necessary for specificity or comparison, you may choose to display approximate relative times.</p><p>Don’t combine units (e.g. “1 hour 32 minutes ago”). Instead, round down to the most recent largest unit (e.g. “1 hour ago”). </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>In 5 minutes<br/>8 hours from now<br/>3 days ago</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Relative language may not always be appropriate, e.g. current date in a clock app, or the specific time of an event or alarm. In these cases, use absolute time.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Mon, Jan 10<br/>Today, 10:00 AM</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>Be modular</h3>
+        <div class="module-body">
+      <p>Depending on the context, show either date or time, or both date and time.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Typically, future settings should append time to a day or date.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Jan 10, 8:00 AM </span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>When a past time is necessary, such as a triggered reminder, display both date and time.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Reminded Jan 5, 7:16 AM</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>When the day of week is necessary, such as on a calendar invite, display the abbreviated day separated by a comma.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Mon, Jan 10, 8:00 AM</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>When it’s an event in the distant past, omit the time.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Jan 3</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Use HH:MM:SS to show the duration of a recording, like audio or video. If hours or seconds don’t apply, then omit them.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>0:30<br/>2:14<br/>1:01:05</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>Be brief</h3>
+        <div class="module-body">
+      
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Always abbreviate months, with single or double digit dates.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Jan 6, Feb 7, Mar 8, Apr 9, May 10, Jun 11, <br/>Jul 12, Aug 13, Sep 14, Oct 15, Nov 16, Dec 17</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Abbreviate days of the week when combined with a time.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Mon, 8:00 AM</span></p><p>Tue, 9:00 AM</p><p>Wed, 10:00 AM </p><p>Thu, 11:00 AM</p><p>Fri, 12:00 PM</p><p>Sat, 1:00 PM</p><p>Sun, 2:00 PM</p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>If real estate is limited (such as with timestamps, labels on graphs, durations, etc.) abbreviate units, using numerical versions and/or by removing the “:00”: </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>8 AM</span></p><p>2 hr 32 min ago</p><p>3/12/12</p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>If truncation of “tomorrow” or “yesterday” happens repeatedly, do not abbreviate. Instead, use the month date format.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body">
+            <p><span>Jun 6</span></p>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-components">&nbsp;</div>
+    <div class="footer-grid-L section-components">
+            <a class="footer-text" href="../components/tooltips.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
+        <span>Previous</span>
+        <div>
+                      Components
+                  </div>
+      </a>
+          </div>
+
+    <div class="footer-R section-patterns">&nbsp;</div>
+    <div class="footer-grid-R section-patterns">
+            <a class="footer-text" href="errors.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      Errors
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+
+  </body>
+
+</html>
