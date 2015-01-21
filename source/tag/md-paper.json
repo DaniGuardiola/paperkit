@@ -15,27 +15,6 @@
       "value": "white"
     }
   ],
-  "attributes": [
-    {
-      "type": "attribute",
-      "name": "md-position",
-      "values": [
-        {
-          "name": "center-x",
-          "css": [
-            {
-              "property": "margin-left",
-              "value": "auto"
-            },
-            {
-              "property": "margin-right",
-              "value": "auto"
-            } 
-          ]
-        }
-      ]
-    }
-  ],
   "fixes": [
     {
       "after": "[md-width]",
