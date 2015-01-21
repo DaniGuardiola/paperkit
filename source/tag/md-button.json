@@ -4,7 +4,7 @@
   "css": [
     {
       "property": "display",
-      "value": "block"
+      "value": "inline-block"
     },
     {
       "property": "min-width",
