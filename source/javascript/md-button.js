@@ -47,6 +47,9 @@ var initMDButton = function(MDButton) {
           this.callUserFunction(f, [ el ]);
         } else if(action.indexOf('link:') != -1) {
           var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
+          window.open(f,'_self');
+        } else if(action.indexOf('link-out:') != -1) {
+          var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
           window.open(f);
         } else if (action = "chrome-app-close") {
           chrome.app.window.current().close();
