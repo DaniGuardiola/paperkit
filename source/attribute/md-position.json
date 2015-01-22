@@ -16,10 +16,6 @@
         {
           "property": "margin-right",
           "value": "auto"
-        },
-        {
-          "property": "text-align",
-          "value": "center"
         }
       ]
     }
