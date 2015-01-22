@@ -45,7 +45,7 @@
 <body md-layout="fixed" md-color="grey-200">
 
 
-	<md-paper md-width="x12" style="position: fixed; bottom: 32px; left: 50%; transform: translate(-50%);" id="disclaimer" md-padding md-shadow="shadow-3">
+	<md-paper md-width="x12" style="position: fixed; bottom: 32px; left: 50%; transform: translate(-50%); z-index: 2;" id="disclaimer" md-padding md-shadow="shadow-3">
 		<span md-typo="subhead">Hey! Thanks for checking out our webpage!<br>
 		As you probably noticed, it is <b>on construction</b>. We made it public because this is a growing opensource project, and this way we can get feedback, but it is incomplete, broken, and will change in the future. We'll let you know when is it finished.<br>
 		You can send me any questions or feedback at <a href="mailto:contacto@daniguardiola.me">contacto@daniguardiola.me</a></span>
@@ -65,7 +65,7 @@
 			<md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
 			<md-text id="toolbar-title-small">Paperkit <span class="version-name" md-font-color="cyan-700">alpha 0.5</span></md-text>
 			<md-space></md-space>
-			<md-icon-button md-image="icon:twitter" md-action="link: twitter.com/paperkit"></md-icon-button>
+			<md-icon-button md-image="icon:twitter" md-action="link-out:http://twitter.com/PaperkitMDesign/"></md-icon-button>
 		</md-row>
 		<md-row>
 			<md-tabbar md-margin="left" style="display: flex" id="content-tabbar" md-shrink="s0" md-rel="main" md-pager="content-pager" md-action="custom: contentPagerAction">
