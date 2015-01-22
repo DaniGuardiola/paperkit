@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Dialogs - Components - Google design guidelines</title>
+    <meta itemprop="name" content="Dialogs - Components - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Dialogs - Components - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Dialogs - Components" />
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Dialogs</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">Components</Attribute>
+      <Attribute name="section_slug">components</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51798601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+
+  <body class="section-components noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">Components</span>
+      <span class="chapter-title">Dialogs</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+    <span id="logo"><img src="https://material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"/></span>
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Material design
+                </dt>
+        <dd>
+                    <a class="" href="../index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="../what-is-material/environment.html">Environment
+                    </a>
+                    <a class="" href="../what-is-material/material-properties.html">Material properties
+                    </a>
+                    <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="../animation/delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="../style/color.html">Color
+                    </a>
+                    <a class="" href="../style/icons.html">Icons
+                    </a>
+                    <a class="" href="../style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="../style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Layout
+                </dt>
+        <dd>
+                    <a class="" href="../layout/principles.html">Principles
+                    </a>
+                    <a class="" href="../layout/metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="" href="../layout/structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Components
+                </dt>
+        <dd>
+                    <a class="" href="bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="buttons.html">Buttons
+                    </a>
+                    <a class="" href="cards.html">Cards
+                    </a>
+                    <a class="" href="chips.html">Chips
+                    </a>
+                    <a class="nav_selected" href="dialogs.html">Dialogs
+                    </a>
+                    <a class="" href="dividers.html">Dividers
+                    </a>
+                    <a class="" href="grids.html">Grids
+                    </a>
+                    <a class="" href="lists.html">Lists
+                    </a>
+                    <a class="" href="list-controls.html">List controls
+                    </a>
+                    <a class="" href="menus.html">Menus
+                    </a>
+                    <a class="" href="pickers.html">Pickers
+                    </a>
+                    <a class="" href="progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="sliders.html">Sliders
+                    </a>
+                    <a class="" href="snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="switches.html">Switches
+                    </a>
+                    <a class="" href="tabs.html">Tabs
+                    </a>
+                    <a class="" href="text-fields.html">Text fields
+                    </a>
+                    <a class="" href="tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                </dt>
+        <dd>
+                    <a class="" href="../patterns/data-formats.html">Data formats
+                    </a>
+                    <a class="" href="../patterns/errors.html">Errors
+                    </a>
+                    <a class="" href="../patterns/gestures.html">Gestures
+                    </a>
+                    <a class="" href="../patterns/loading-images.html">Loading images
+                    </a>
+                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="../patterns/search.html">Search
+                    </a>
+                    <a class="" href="../patterns/selection.html">Selection
+                    </a>
+                    <a class="" href="../patterns/settings.html">Settings
+                    </a>
+                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="../usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="../usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="../resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Dialogs
+      </h1>
+
+  <div class="chapter-content">
+        
+        <div class="chapter-intro">
+       <p>Dialogs inform users about critical information, require users to make decisions, or encapsulate multiple tasks within a discrete process. Use dialogs sparingly because they are interruptive in nature—their sudden appearance forces users to stop their current task and refocus on the dialog content. Not every choice, setting, or detail warrants such interruption and prominence.</p><p>Alternatives to dialogs include simple menus or inline expansion within the current content area. Both approaches present information or options while maintaining the current context and are less disruptive.</p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="dialogs.html#dialogs-content">Content
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="dialogs.html#dialogs-behavior">Behavior
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="dialogs.html#dialogs-alerts">Alerts
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="dialogs.html#dialogs-simple-menus">Simple menus
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="dialogs.html#dialogs-simple-dialogs">Simple dialogs
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="dialogs.html#dialogs-confirmation-dialogs">Confirmation dialogs
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="dialogs.html#dialogs-full-screen-dialogs">Full-screen dialogs
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="dialogs.html#dialogs-specs">Specs
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="dialogs-content" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Content
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Dialog content can vary widely, but typically consists of text and/or UI control elements and is focused on a specific task or process, such as confirming item deletion or choosing a setting.</p><p>Use inline expansion within the content area of dialogs to disclose additional information or content such as advanced options. Avoid opening additional dialogs from within a dialog.</p><p>Full-screen dialogs may open additional dialogs, such as pickers, because their design accommodates additional layers of material without significantly increasing the perceived z-depth of the app or increasing visual noise.</p><p>Avoid creating dialogs with scrolling content, particularly alerts. Instead, consider alternate containers or layouts that are optimized for reading or interacting with significant amounts of content.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-Q3BQOERCOG5tNW8/components_dialogs_content1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YzI3dnI2ZE5QN1E/components_dialogs_content2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="dialogs-behavior" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Behavior
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Dialogs are separate from the underlying parent material and do not scroll with the parent material.</p><p>Certain types of dialog content naturally needs to scroll, such as a long list of ringtones. In these cases, make it obvious that content scrolls by displaying scroll bars by default.</p><p>Dialogs should never be obscured by other elements or appear only partially on screen. Dialogs always retain focus until they have been affirmed or dismissed or a required action has been taken, such as choosing a setting.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7S21qWlJveU12aWM/components_dialogs_1.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="dialogs-alerts" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Alerts
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>Alerts inform the user about a situation or action that requires their confirmation or acknowledgement before proceeding. They differ slightly in appearance based upon the severity and impact of the message conveyed.</p><p>Alerts are interruptive and urgent, and prevent users from proceeding until they make a decision. </p><p><strong>Disambiguation:</strong><span> In contrast to Alerts, <a href="snackbars-toasts.html">Snackbars</a> present optional but important information or actions and usually appear after an action. For example, use an alert to confirm discarding a draft. Use a snackbar to present an undo action, because the action is optional and the user can continue with their primary task without taking action.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p><strong>Alerts without title bars</strong></p><p>Most alerts don't need titles. Usually the decision doesn't have a severe impact and can be summed up succinctly in a sentence or two. The content area should either ask a question (such as "Delete this conversation?") or make a clear statement whose relationship to the action buttons is obvious.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-NGg0d2d2akhWMU0/components_alerts_1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div><p>The affirmative action text Discard clearly indicates the outcome of the decision.</p>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-cEpId3UzUVEwdFE/components_alerts_2.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>The dismissive action text No answers the question, but does not suggest what will happen afterwards. A better action pair would be an explicit Cancel and Delete.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p><strong>Alerts with title bars</strong></p><p>Use alerts with title bars sparingly. They are appropriate only for high-risk situations, such as potential loss of data or connectivity, or extra charges. </p><p>If a title is required, use a clear question or statement along with some additional explanation in the content area. For example, "Erase USB storage?"</p><p>Avoid apologies and ambiguous statements or questions. For example, “Warning!” or “Are you sure?”</p><p>A user should be able to skip the content completely and still have a clear idea of what choices are available based on the title and the text of the action buttons.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-Y2htZWlVWFgyRUE/components_dialogs_usage1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div><p>This dialog poses a specific question, concisely elaborates on its impact, and provides clear actions.</p>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7elJmcEtsZzVtVGM/components_dialogs_alerts4.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>This dialog poses an ambiguous question and its scope of impact is unclear.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="dialogs-simple-menus" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Simple menus
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Simple menus are used in list views on tablet and mobile devices to display the options for a specific list item. Simple menus immediately commit choices upon selection. See <a href="menus.html#menus-simple-menus">Components &gt; Menus &gt; Simple Menus</a> for more details about simple menus.</p><p><strong>Disambiguation:</strong><span> In contrast to simple menus, <a href="dialogs.html#dialogs-simple-dialogs">simple dialogs</a> can present additional detail related to the options available for a list item or provide navigational or orthogonal actions related to the primary task. Although they can display the same content, simple menus are preferred over simple dialogs because simple menus are less disruptive to the user’s current context.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NzNOeWppei1qVms/components_dialogs_simplemenu.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="dialogs-simple-dialogs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Simple dialogs
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Simple dialogs can present additional detail related to the options available for a list item or provide navigational or orthogonal actions related to the primary task. For example, simple dialogs can display avatars, icons, or clarifying subtext, or they can enable users to add an account that’s not currently listed as an option. </p><p>Choosing an option immediately commits the option and closes the menu.</p><p>Touching outside of the dialog, or pressing Back, cancels the action and closes the dialog.</p><p>Simple dialogs are more interruptive than simple menus and should be used sparingly.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VlBxRUNLdk5ZbU0/components_dialogs_simple1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VEY5aXF1Q21nT2c/components_dialogs_simple2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Simple dialogs do not have explicit buttons that accept or cancel the operation.</p><p>A simple dialog appears centered vertically and horizontally in the screen.</p><p>The distance between the edges of the screen and the edges of the dialog is minimum 40dp on the left and right, and minimum 24dp on the top and bottom.</p><p>The distance between the edge of the dialog and content is 24dp.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7eEFSeEtCMEduU1U/components_dialogs_simple3.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UVR6MmtXTHFkZUk/components_dialogs_simple4.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="dialogs-confirmation-dialogs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Confirmation dialogs
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Confirmation dialogs require users to explicitly confirm their choice before the option is committed. For example, users can listen to multiple ringtones, but only upon touching OK is the final selection committed.<br/></p><p>Touching Cancel in a confirmation dialog, or pressing Back, cancels the action, discards any changes, and closes the dialog.</p><p>Touching outside of a confirmation dialog will not perform any action; the user must explicitly confirm or cancel to dismiss the confirmation dialog.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Zlp1UzBrXzRzcTg/components_dialogs_confirmation1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>The ringtone choice in the confirmation dialog will not be set until the user touches OK.</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Y3RiNHJuOTNRMms/components_dialogs_confirmation2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Confirmation dialogs can use layouts other than lists, for example a date picker, but they are still focused on specifying a single value (picking the date, but not picking the time &amp; date).</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7M0Jrd1hyamhaZUk/components_dialogs_confirmation3.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Y0J6RXk3Sk5LUlE/components_dialogs_confirmation4.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Confirmation dialogs provide both an explicit confirmation button and explicit Cancel button. The explicit Cancel button clarifies that leaving the confirmation dialog will discard changes, for example, by touching Cancel or pressing Back.</p><p>Confirmation dialogs should avoid launching additional simple dialogs or simple menus. The additional layers of material can increase the app’s perceived z-depth, and add unnecessary visual complexity.</p><p>If additional simple dialogs or simple menus are needed to complete the task or process, consider using a <a href="dialogs.html#dialogs-full-screen-dialogs">full-screen dialog</a> instead of a confirmation dialog.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SHQ3cVZ3U3E4U3M/components_dialogs_confirmation5.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div><p>Provide an explicit confirmation button and explicit cancel button.</p>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7emZMZUtZZXZ3cTA/components_dialogs_confirmation6.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>A single dialog button makes the system Back action ambiguous: does Back cancel or confirm?</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="dialogs-full-screen-dialogs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Full-screen dialogs
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p><strong>Mobile only</strong><span>: Because of limited real estate on mobile devices, content that may appear as a dialog in other form factors (tablet, desktop, etc.) may be more appropriately presented in a full-screen dialog.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Full-screen dialogs can be used to group a set of tasks forming a complex operation that requires an explicit confirmation or action, such as save or create, before changes are committed or discarded, for example, creating a calendar entry.</p><p>Full-screen dialogs enable complex layouts, minimize the appearance of stacked sheets of material (dialogs above dialogs) and thus an increase in the app’s perceived z-depth. They enable individual tasks to launch simple menus or simple dialogs as part of the complex operation.</p><p>Consider using a full-screen dialog when the content or process meets any of the following criteria:</p><ul><li><span>The dialog’s content includes components like pickers or form fields requiring IME input</span></li><li><span>When changes are not saved in real time</span></li><li><span>When there is no draft capability in the app</span></li><li><span>When performing batch operations or queuing changes prior to submitting them</span></li></ul><p>In the example to the right, the full-screen dialog supports a simple dialog used to pick dates. No modifications and selections made in the full-screen dialog are saved until Save is touched. Touching the X will discard all changes and exit the full-screen dialog.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bkw4S1dWazgzdms/components_dialogs_fullscreen1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>Full-screen dialog</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UERFaS1fTnprTTA/components_dialogs_fullscreen2.png" />
+                    </div>
+                        <figcaption>
+          <p>Date picker opened from full-screen dialog</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>In full-screen dialogs, the confirmation and dismissive actions are at the top of the screen. </p><p>The confirmation action is at the top right of the screen and uses descriptive and accurate words, such as “save”, “send”, “add”, “share”, “update”, or “create”.</p><p>Don’t use vague actions such as “done” or “ok” or “close” for the confirmation action. They are too similar in meaning to the X and non-specific in their result.</p><p>The confirmation action is disabled until all mandatory criteria in the dialog are met.</p><p>The discard action, an X at the top left of the screen, closes the full-screen dialog and discards any changes. The Back button is equivalent to the discard action.</p><p>If the user has made any changes, they are prompted to confirm the discard action.</p><p>If no changes have been made, touching the X or Back immediately closes the dialog and no discard confirmation is required.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7al9oUE0zM3FDZzQ/components_dialogs_fullscreen3.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>Don’t use vague terms like Close for confirmation actions.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>The X differs from an Up arrow, which is used when the view’s state is constantly being saved or when apps have draft or autosave capabilities. For example, an Up arrow is used in Settings because all changes are committed immediately. In these cases, the Back button navigation and action match the Up arrow functionality, and there are no explicit confirmation or cancel actions.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bDRvVFFuRUxGbzg/components_dialogs_fullscreen4.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>The Up arrow in this Settings example indicates that any changes will be immediately saved upon selection.</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SFdRRUJoeEVPTjg/components_dialogs_fullscreen5.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>Touching the X in this Settings example will discard all changes. Changes will be saved only upon touching Save.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="dialogs-specs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Specs
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Dialogs contain an optional title, content, and actions.</p><p>The optional title briefly describes the type of choice being made. Titles should always be displayed in their entirety and should be used only when necessary. Titles can be used to clarify the decision being made. For example, a title may indicate what part of a process the dialog relates to or by identifying what will be affected by the decision, such as a setting.</p><p>Dialog content can vary widely, but typically consists of text and/or UI control elements and is focused on a specific task or process, such as confirming item deletion or choosing a setting.</p><p>When needed, actions acknowledge, affirm, or dismiss the particular choice or process presented by the dialog content.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dE83ZElxenE2a3c/components_dialogs_usage2.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <h4>A note on accessibility</h4><p>To ensure usability for people with disabilities, make sure that your buttons have a minimum height of 36dp, but that the touchable target has a minimum height of 48dp.</p><p>The default color of all dialog action text is the application’s theme accent color. Always make sure the action text color uses a <a href="../usability/accessibility.html">sufficient contrast ratio</a> to meet accessibility guidelines. Change the default text color as needed to create a sufficient contrast ratio.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7S3ZUZS00VmlpVFE/components_dialogs_usage3.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Dialogs present a focused and limited set of actions, which are generally affirmative or dismissive.</p><p>Affirmative actions are placed on the right side and continue the process. Affirmative actions may be destructive, like Delete or Remove.</p><p>Dismissive actions are placed directly to the left of affirmative actions and return the user to the originating screen or step in the process.</p><p>Dismissive and affirmative action text can be Cancel/OK or can be more specific active verbs or verb phrases that indicate the outcome of the decision.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Z2FuOWtFZEVGakE/components_dialogs_swapped_actions_16.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>Dismissive actions are always placed directly to the left of affirmative actions.</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Button width and padding guidelines</h3>
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SU5iQkI1R0FYejQ/components_dialogs_usage4.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-ZS1Ib1ZXMEY3ZWc/components_dialogs_actions.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UElGLUZndWFZXzA/components_dialogs_keyline1.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Side-by-side buttons</h3>
+    <div class="module-body">
+    <p>Side-by-side buttons are recommended when the text of each label does not exceed the maximum button width, such as the commonly used OK/Cancel buttons. </p><p>Use the following formula to calculate maximum button width for a given dialog:</p><p>The maximum width for buttons in a dialog = </span><strong>(</strong><strong>Dialog width</strong><strong> - 16dp - 16dp - 8dp) / 2</strong></p><p>For example:</p><p>The maximum width for buttons in a 280dp wide dialog = (280dp - 16dp - 16dp - 8dp) / 2 = 120dp</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RVBBbHM3XzhOMkU/components_dialogs_sidebyside.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Stacked full-width buttons</h3>
+    <div class="module-body">
+    <p>When text labels exceed the maximum button width, use stacked buttons to accommodate the text. Affirmative actions are stacked above dismissive actions</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TlN0OGM4aG80Q0U/components_dialogs_stacked.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-components">&nbsp;</div>
+    <div class="footer-grid-L section-components">
+            <a class="footer-text" href="chips.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
+        <span>Previous</span>
+        <div>
+                      Chips
+                  </div>
+      </a>
+          </div>
+
+    <div class="footer-R section-components">&nbsp;</div>
+    <div class="footer-grid-R section-components">
+            <a class="footer-text" href="dividers.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      Dividers
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+
+  </body>
+
+</html>
