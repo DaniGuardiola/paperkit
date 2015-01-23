@@ -1,0 +1,10 @@
+{
+  "type": "tag",
+  "names": [ "md-input[type=list]" ],
+  "css": [
+    {
+    	"property": "overflow-y",
+    	"value": "auto"
+    }
+  ]
+}
