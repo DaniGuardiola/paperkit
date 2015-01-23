@@ -18,6 +18,28 @@
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
     <meta property="article:section" content="Material properties - What is material?" />
+
+
+
+
+
+  <!-- PAPERKIT SETTINGS -->
+  <meta id="mdvars" path="../../">
+  <link rel="stylesheet" href="../../materializer-min/materializer.css">
+  <link href="../../resources/prism.css" rel="stylesheet">
+  <link href="../../resources/spec/style.css" rel="stylesheet">
+  <script src="../../materializer-min/materializer.js"></script>
+  <script src="../../resources/spec/script.js"></script>
+
+
+
+
+
+
+
+
+
+
 <!--
 <PageMap>
     <DataObject type="document">
@@ -34,6 +56,25 @@
     </DataObject>
 </PageMap>
 -->
+
+
+
+
+
+
+
+<!-- PAPERKIT ANALYTICS -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58574637-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -302,6 +343,35 @@
           </div>
   </div>
 </section>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display">
+<md-paper md-shadow="shadow-0" id="paperkit-shadow-animated-paper" md-width="x2" md-height="x2" style="margin: 64px auto; transition: box-shadow 0.5s; border-radius: 2px;" md-position="center-x" md-color="cyan">
+</md-paper>
+<script type="text/javascript">
+  var shadowPaper = document.getElementById('paperkit-shadow-animated-paper');
+  function changeShadow(){
+    var shadowAttr = shadowPaper.getAttribute('md-shadow');
+    var shadow = shadowAttr.substring(shadowAttr.indexOf('shadow-') + 'shadow-'.length).trim();;
+    if (shadow>1) {
+      shadow = 1;
+    } else {
+      shadow = 5;
+    }
+    shadowPaper.setAttribute('md-shadow','shadow-'+shadow);
+    setTimeout(changeShadow,1800);
+  }
+  changeShadow();
+</script>
+  </div>
+</md-paper>
+
+
+
         </div>
               <div>
           <section class="moduleE1">
@@ -351,6 +421,19 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
               <div>
           <section class="moduleE1">
     <div class="module-body">
@@ -375,6 +458,19 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
               <div>
           <section class="moduleD1">
     <div class="module-body">
@@ -402,6 +498,19 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
               <div>
           <section class="moduleD1">
     <div class="module-body">
@@ -429,6 +538,19 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
               <div>
           <section class="moduleE1">
     <div class="module-body">
@@ -482,6 +604,19 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
               <div>
           <section class="moduleE1">
     <div class="module-body">
@@ -506,6 +641,19 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
               <div>
           <section class="moduleE1">
     <div class="module-body">
@@ -551,6 +699,19 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
               <div>
           <section class="moduleE1">
     <div class="module-body">
@@ -572,6 +733,19 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
               </div>
   </div>
 </div>                  <div id="material-properties-movement-of-material" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
@@ -606,6 +780,19 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
               <div>
           <section class="moduleE1">
     <div class="module-body">
@@ -627,6 +814,19 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
               <div>
           <section class="moduleE1">
     <div class="module-body">
@@ -648,6 +848,19 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
               </div>
   </div>
 </div>                  </div>
@@ -684,6 +897,13 @@
 </footer>
     <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
     <script src="../static/js/main.js"></script>
+
+
+
+
+
+<!-- PAPERKIT SETTINGS -->
+    <script src="../../resources/prism.js"></script>
 
 
   </body>
