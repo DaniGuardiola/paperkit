@@ -8,4 +8,7 @@ grunt-materializer/sources/
 script.sh
 tmp*.css
 .settings
-md-elements-demo/materializer/
+md-elements-demo/materializer-min/
+md-elements-demo/spec/materializer-min/
+.DS_Store
+*~

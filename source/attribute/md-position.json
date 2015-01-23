@@ -1,0 +1,27 @@
+{
+  "type": "attribute",
+  "name": "md-position",
+  "values": [
+    {
+      "name": "center-x",
+      "css": [
+        {
+          "property": "margin-left",
+          "value": "auto"
+        },
+        {
+          "property": "display",
+          "value": "block"
+        },
+        {
+          "property": "margin-right",
+          "value": "auto"
+        },
+        {
+          "property": "text-align",
+          "value": "center"
+        }
+      ]
+    }
+  ]
+}

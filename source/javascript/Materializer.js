@@ -17,6 +17,12 @@ Materializer.prototype.initListener= function(func) {
   this.initFuncs.push(func);
 }
 
+Materializer.prototype.createElement= function(tag) {
+  var element = document.createElement(tag);
+  this.addMDMethods(element);
+  return element;
+}
+
 Materializer.prototype.init= function() {
   // Init materializer path
   var url = document.querySelector("link[href*='materializer.css']").href;
@@ -90,7 +96,9 @@ Materializer.prototype.addMDMethods= function(element) {
       initMDTabBar(element, this);
     } else if(tag=="md-toolbar") {
       initMDToolBar(element, this);
-      this.toolbar = element;
+      if (element.parentNode.tagName.toLowerCase() === 'body') {
+        this.toolbar = element;
+      };
     } else if(tag=="md-switch") {
       initMDSwitch(element, this);
     } else if(tag=="md-fab") {
