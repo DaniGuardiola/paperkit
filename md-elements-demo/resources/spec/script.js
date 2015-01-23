@@ -20,6 +20,24 @@ window.addEventListener('load', function(){
     }
   });
 
+  // Adding help button
+  var helpButton = document.createElement('md-icon-button');
+  helpButton.id = 'paperkit-help-button';
+  helpButton.setAttribute('md-image','icon:help');
+  helpButton.setAttribute('md-fill','white');
+  helpButton.setAttribute('md-action','custom: showHelp');
+  paperkit.initElement(helpButton);
+  if (document.getElementById('paperkit-intro')) {
+    document.getElementById('paperkit-intro').appendChild(helpButton);
+  } else {
+    document.body.appendChild(helpButton);    
+  }
+
+  // Adding legal content
+  var legal = document.querySelector('#side-nav > div > div.legal');
+  legal.innerHTML = '<p class="copyright">Google &copy;</p><p class="copyright">Modified by Paperkit for informational purposes</p><p class="copyright"><a href="https://www.google.com/design/spec/">Go to the original spec</a></p><a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>';
+
+  // Adding stuff to papers
   [].forEach.call(document.querySelectorAll('.paperkit-paper'), function(paper){
     var image = document.createElement('img');
     image.classList.add('logo');
@@ -92,6 +110,10 @@ window.addEventListener('load', function(){
   });
 });
 
+function showHelp(el){
+  console.log('COMING SOON');
+}
+
 function anchorJump(id, onlyLink){
   if (!onlyLink) {
     var url = location.href;
@@ -138,7 +160,6 @@ function toggleFullscreen(el){
     button.setAttribute('md-image','icon:fullscreen_exit');
     el.classList.add('fullscreen');
   }
-        
 }
 
 function getLink(el){
