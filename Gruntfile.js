@@ -130,8 +130,13 @@ module.exports = function(grunt) {
             var newDest = dest + src.replace("source/repo_files", "bower-min").replace("bin/materializer-min", "bower-min").replace("bower-min.json", "bower.json");
             return newDest;
           }
-        }
-
+        },
+        materializerDemo: {
+          expand: true,
+          cwd: 'bin',
+          src: [ 'materializer-min/**' ],
+          dest: 'md-elements-demo/'
+        }        
       },
 
       // 4 - Autoprefixing all css from bin/materializer/
@@ -187,8 +192,6 @@ module.exports = function(grunt) {
       }
   });
 
-
-
   // Loading our custom tasks
   grunt.loadTasks('tasks');
   grunt.loadTasks('tasks/grunt-materializer-compiler-v2');
@@ -206,6 +209,6 @@ module.exports = function(grunt) {
   // This will run when executing grunt
   grunt.registerTask('default', ['clean','compiler',
     'copy:main','copy:font','copy:cursor','copy:icon','copy:moreicon','copy:other','copy:resourcesToMin','copy:dev','copy:mdcss',
-    "autoprefixer",'cssbeautifier','concat','cssmin','uglify','copy:bower','copy:bowerMin']);
+    "autoprefixer",'cssbeautifier','concat','cssmin','uglify','copy:bower','copy:bowerMin','copy:materializerDemo',]);
   grunt.registerTask('dev', ['copy:dev']);
 };

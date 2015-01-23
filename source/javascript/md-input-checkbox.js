@@ -5,11 +5,6 @@ var initMDInputCheckbox = function(MDCheckbox) {
     } else {
       this.check();
     }
-    if (e.stopPropagation) {
-        e.stopPropagation();
-    } else { // Older IE.
-        e.cancelBubble = true;
-    }
   }
 
   MDCheckbox.check = function() {

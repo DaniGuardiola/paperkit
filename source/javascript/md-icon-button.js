@@ -42,7 +42,7 @@ var initMDIconButton = function(MDIconButton, materializer) {
       default:
         if(action.indexOf('custom:') != -1) {
           var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
-          el.callUserFunction(f, [ el ]);
+          el.callUserFunction(f, [ el, e ]);
         } else if(action.indexOf('menu:') != -1) {
           var f = action.substring(action.indexOf('menu:') + 'menu:'.length).trim();
           el.openMenu(f);
@@ -61,12 +61,6 @@ var initMDIconButton = function(MDIconButton, materializer) {
         menu.open(this);
         
       }
-    }
-    
-    if (event.stopPropagation) {
-      event.stopPropagation()
-    } else {
-      event.cancelBubble = true
     }
   }
 

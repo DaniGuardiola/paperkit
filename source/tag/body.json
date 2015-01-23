@@ -16,6 +16,10 @@
             {
               "property": "flex-direction",
               "value": "column"
+            },
+            {
+              "property": "height",
+              "value": "100%"
             }
           ],
           "fixes": [

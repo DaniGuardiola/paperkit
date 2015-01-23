@@ -51,21 +51,17 @@
     {
       "after": "> md-row> md-tile",
       "css": [
-      	{
-      		"property": "display",
-      		"value": "flex"
-      	},
+        {
+          "property": "display",
+          "value": "flex"
+        },
+        {
+          "property": "align-items",
+          "value": "flex-start"
+        },
       	{
       		"property": "width",
       		"value": "0px"
-      	},
-      	{
-      		"property": "padding-left",
-      		"value": "24px"
-      	},
-      	{
-      		"property": "align-items",
-      		"value": "center"
       	}
       ],
       "responsive": [
@@ -79,24 +75,16 @@
             {
               "property": "flex-shrink",
               "value": "0"
-            },
-            {
-            	"property": "padding-left",
-            	"value": "16px"
-            },
-            {
-            	"property": "padding-right",
-            	"value": "16px"
             }
           ]
         }
       ]
     },
-  	{
-  		"after": "> md-row> md-tile:last-child",
+    {
+    	"after": "> md-row> md-tile > *:first-child:not(md-form)",
   		"css": [
   			{
-  				"property": "padding-right",
+  				"property": "margin-left",
   				"value": "24px"
   			}
   		],
@@ -105,13 +93,65 @@
   				"target": [ "mobile", "watch" ],
   				"css": [
   					{
-  						"property": "padding-right",
+  						"property": "margin-left",
+  						"value": "16px"
+  					},
+  					{
+  						"property": "margin-right",
+  						"value": "16px"
+  					}
+  				] 
+  			}
+  		]    	
+    },
+    {
+    	"after": "> md-row> md-tile> md-form",
+    	"css": [
+    		{
+    			"property": "margin-left",
+    			"value": "0px"
+    		},
+    		{
+    			"property": "margin-right",
+    			"value": "0px"
+    		}
+    	],
+			"responsive": [
+  			{  				
+  				"target": [ "mobile", "watch" ],
+  				"css": [
+  					{
+  						"property": "margin-left",
+  						"value": "0px"
+  					},
+  					{
+  						"property": "margin-right",
+  						"value": "0px"
+  					}
+  				] 
+  			}
+  		]    	    	
+    },  	       
+  	{
+  		"after": "> md-row> md-tile:last-child > *:last-child:not(md-form)",
+  		"css": [
+  			{
+  				"property": "margin-right",
+  				"value": "24px"
+  			}
+  		],
+  		"responsive": [
+  			{  				
+  				"target": [ "mobile", "watch" ],
+  				"css": [
+  					{
+  						"property": "margin-right",
   						"value": "16px"
   					}
   				] 
   			}
   		]
-  	},    
+  	}, 
     {
       "after": "> md-row> md-tile[md-space]",      
       "responsive": [
