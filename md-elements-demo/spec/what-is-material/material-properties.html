@@ -350,22 +350,31 @@
 <!-- PAPERKIT -->
 <md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
   <div class="example" md-flex="display">
-<md-paper md-shadow="shadow-0" id="paperkit-shadow-animated-paper" md-width="x2" md-height="x2" style="margin: 64px auto; transition: box-shadow 0.5s; border-radius: 2px;" md-position="center-x" md-color="cyan">
+<md-paper md-shadow="shadow-1" id="paperkit-shadow-animated-paper" md-width="x2" md-height="x2" style="margin: 64px auto; transition: box-shadow 0.5s; border-radius: 2px;" md-position="center-x" md-color="cyan">
 </md-paper>
 <script type="text/javascript">
+  // Get the paper in a variable
   var shadowPaper = document.getElementById('paperkit-shadow-animated-paper');
-  function changeShadow(){
+  // Define a function that switchs the shadow between 1 and 5
+  function switchShadow(){
+    // Get the md-shadow attribute value
     var shadowAttr = shadowPaper.getAttribute('md-shadow');
-    var shadow = shadowAttr.substring(shadowAttr.indexOf('shadow-') + 'shadow-'.length).trim();;
-    if (shadow>1) {
+    // Get the number from the attribute in the shadow var (example: get 5 from 'shadow-5')
+    var shadow = shadowAttr.substring(shadowAttr.indexOf('shadow-') + 'shadow-'.length).trim();
+    // If the shadow var is 5, set it to 1
+    if (shadow==5) {
       shadow = 1;
+    // If it is 1, set it to 5
     } else {
       shadow = 5;
     }
+    // Set the md-shadow attribute to the value of the shadow var
     shadowPaper.setAttribute('md-shadow','shadow-'+shadow);
-    setTimeout(changeShadow,1800);
+    // Repeat again in 1.8 seconds
+    setTimeout(switchShadow,1800);
   }
-  changeShadow();
+  // Start the function
+  switchShadow();
 </script>
   </div>
 </md-paper>
@@ -463,9 +472,71 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
-  <div class="example" md-flex="display" md-padding>
-<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+<md-paper id="paperkit-decoupled-behavior" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display">
+<md-paper md-shadow="shadow-2" id="paperkit-decoupled-behavior-paper" md-width="x1" md-height="x1" style="position: relative; margin: 192px auto; transition: margin 0.25s, width 0.25s, height 0.25s; border-radius: 2px; overflow: hidden;" md-position="center-x" md-color="white">
+  <img style="position: absolute; top: 0; left: 0; transition: height 0.25s, width 0.25s, top 0.25s, left 0.25s, margin 0.25s; flex-shrink: 0;" md-height="x1" md-width="x1" src="../../resources/spec/img/kodaline.jpg">
+</md-paper>
+<script type="text/javascript">
+  // Get the paper in a variable
+  var decoupledPaper = document.getElementById('paperkit-decoupled-behavior-paper');
+  // Get the image in another variable
+  var decoupledImage = decoupledPaper.querySelector('img');
+  // Declare a function to move both things
+  function decoupledAnimation(){
+    // States:
+    // Initial    
+    // Paper size
+    decoupledPaper.setAttribute('md-width','x1');
+    decoupledPaper.setAttribute('md-height','x1');
+    // Image size
+    decoupledImage.setAttribute('md-width','x1');
+    decoupledImage.setAttribute('md-height','x1');
+    // Paper margin      
+    decoupledPaper.style.margin = '160px auto';
+    // Image position
+    decoupledImage.style.left = '0';
+    decoupledImage.style.top = '0';
+    // 2
+    setTimeout(function(){
+      // Paper size
+      decoupledPaper.setAttribute('md-width','x4');
+      decoupledPaper.setAttribute('md-height','x4');
+      // Paper margin
+      decoupledPaper.style.margin = '64px auto';
+      // Image position
+      decoupledImage.style.left = '96px';
+      decoupledImage.style.top = '96px';
+    },500);
+    // 3
+    setTimeout(function(){
+      // Image position
+      decoupledImage.style.left = '0';
+      decoupledImage.style.top = '0';
+    },1000);
+    // 4
+    setTimeout(function(){
+      // Image size
+      decoupledImage.setAttribute('md-width','x4');
+      decoupledImage.setAttribute('md-height','x4');
+    },1500);
+    // 5
+    setTimeout(function(){
+      // Paper size
+      decoupledPaper.setAttribute('md-width','x1');
+      decoupledPaper.setAttribute('md-height','x1');
+      // Image position
+      decoupledImage.style.left = '-32px';
+      decoupledImage.style.top = '-32px';
+    },2000);
+    // And repeat
+    setTimeout(function(){
+      //decoupledAnimation();
+    },2500);
+  }
+  decoupledAnimation();
+
+</script>
   </div>
 </md-paper>
 
