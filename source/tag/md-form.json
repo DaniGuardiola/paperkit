@@ -57,7 +57,7 @@
         },
         {
           "property": "align-items",
-          "value": "flex-start"
+          "value": "center"
         },
       	{
       		"property": "width",

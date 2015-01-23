@@ -18,6 +18,15 @@
           "value": "auto"
         }
       ]
+    },
+    {
+      "name": "text-center-x",
+      "css": [
+        {
+          "property": "text-align",
+          "value": "center"
+        }
+      ]
     }
   ]
 }
