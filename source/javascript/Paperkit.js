@@ -165,8 +165,6 @@ Paperkit.prototype.create= function(what,opt){
  * @param mutations
  */
 Paperkit.prototype.observeMDElements = function(mutations) {
-  var mat = this;
-
   mutations.forEach(function(mutation) {
     if(mutation.type === 'childList') {
       [].forEach.call(mutation.addedNodes, function(node) {
@@ -174,7 +172,7 @@ Paperkit.prototype.observeMDElements = function(mutations) {
           return;
         }
         if(node.tagName.indexOf("MD-") === 0) {
-          this.addMDMethods(node);
+          Paperkit.prototype.addMDMethods(node);
         }
       });
     }

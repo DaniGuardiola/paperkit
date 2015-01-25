@@ -5,31 +5,30 @@ module.exports = function(grunt) {
       pkg: grunt.file.readJSON('package.json'),
 
       // 1 - Cleaning bin and grunt-materializer/sources/
-      clean: [
-        'bin/grunt-materializer',
-        'bin/materializer',
-        'bin/materializer-min',
-        'bin/md',
-        'bin/resources',
-        'bin/bower/resources/',
-        'bin/bower/bower.json',
-        'bin/bower-min/resources/',
-        'bin/bower-min/bower.json',
-        'grunt-materializer/sources/'
-        ],
+      clean: {
+        bin: {
+          src: [ 'bin/' ]
+        },
+        web: {
+          src: [ 'web/paperkit-min/' ]
+        },
+        publish: {
+          src: [ 'web/d/' ]
+        }
+      },
 
-      // 2 - Compiling json to css on bin/materializer/
+      // 2 - Compiling json to css on bin/paperkit-files/
       compiler: {
         css: {
             expand: true,
             src: [
-              'source/attribute/*.json',
-              'source/tag/*.json'
+              'source/attribute/**/*.json',
+              'source/tag/**/*.json'
             ],
             dest: 'bin/',
             ext: '.css',
             rename: function(dest, src) {
-              var newDest = dest + src.replace("source", "md");
+              var newDest = dest + src.replace("source", "paperkit-files");
               return newDest;
           },
           options: {
@@ -41,34 +40,33 @@ module.exports = function(grunt) {
 
       // 3 - Coping everything
       copy: {
-        main: {
+        css: {
           expand: true,
           src: [
-            'source/css/*',
-            '!source/**.json'
+            'source/css/*'
           ],
           dest: 'bin/',
           rename: function(dest, src) {
-            var newDest = dest + src.replace("source", "md");
+            var newDest = dest + src.replace("source", "paperkit-files");
             return newDest;
           }
         },
-        font: {
+        resourcesFont: {
           expand: true,
           src: 'source/resources/font/*',
-          dest: 'bin/materializer/resources/font/',
+          dest: 'bin/paperkit-files/resources/font/',
           flatten: true
         },
-        cursor: {
+        resourcesCursor: {
           expand: true,
           src: 'source/resources/cursor/*',
-          dest: 'bin/materializer/resources/cursor/',
+          dest: 'bin/paperkit-files/resources/cursor/',
           flatten: true
         },
-        icon: {
+        resourcesIcon: {
           expand: true,
           src: 'node_modules/material-design-icons/*/svg/production/*_24px.svg',
-          dest: 'bin/materializer/resources/icon/',
+          dest: 'bin/paperkit-files/resources/icon/',
           flatten: true,
           rename: function(dest,src) {
             var newDest = dest + src.replace("ic_", "");
@@ -76,65 +74,74 @@ module.exports = function(grunt) {
             return newDest;
           }
         },
-        moreicon: {
+        resourcesMoreIcon: {
           expand: true,
           src: 'source/resources/more-icons/**/*.svg',
-          dest: 'bin/materializer/resources/icon/',
+          dest: 'bin/paperkit-files/resources/icon/',
           flatten: true
         },
-        other: {
+        resourcesOther: {
           expand: true,
           src: 'source/resources/other/**/*',
-          dest: 'bin/materializer/resources/other/',
+          dest: 'bin/paperkit-files/resources/other/',
           flatten: true
         },
-        resourcesToMin: {
+        resourcesToPaperkit: {
           expand: true,
-          src: 'bin/materializer/resources/**',
-          dest: 'bin/materializer-min/',
+          src: 'bin/paperkit-files/resources/**',
+          dest: 'bin/paperkit/',
           rename: function(dest, src) {
-            var newDest = dest + src.replace("bin/materializer/", "");
+            var newDest = dest + src.replace("bin/paperkit-files/", "");
             return newDest;
           }
         },
-        dev: {
+        resourcesToPaperkitMin: {
+          expand: true,
+          src: 'bin/paperkit-files/resources/**',
+          dest: 'bin/paperkit-min/',
+          rename: function(dest, src) {
+            var newDest = dest + src.replace("bin/paperkit-files/", "");
+            return newDest;
+          }
+        },
+        sourceToMdcss: {
           expand: true,
           src: 'source/**/*.json',
-          dest: 'grunt-materializer/sources/',
+          dest: 'grunt-paperkit/sources/',
           flatten: true
         },
         mdcss: {
-          src: 'grunt-materializer/**',
+          src: 'grunt-paperkit/**',
           dest: 'bin/'
         },
-        bower: {
+        /*bower: {
           expand: true,
           src: [
-          'bin/materializer/**',
+          'bin/paperkit/**',
           'source/repo_files/bower.json'
           ],
           dest: 'bin/',
           rename: function(dest, src) {
-            var newDest = dest + src.replace("source/repo_files", "bower").replace("bin/materializer", "bower");
+            var newDest = dest + src.replace("source/repo_files", "bower").replace("bin/paperkit", "bower");
             return newDest;
           }
         },
         bowerMin: {
           expand: true,
           src: [
-          'bin/materializer-min/**',
+          'bin/paperkit-min/**',
           'source/repo_files/bower-min.json'
           ],
           dest: 'bin/',
           rename: function(dest, src) {
-            var newDest = dest + src.replace("source/repo_files", "bower-min").replace("bin/materializer-min", "bower-min").replace("bower-min.json", "bower.json");
+            var newDest = dest + src.replace("source/repo_files", "bower-min").replace("bin/paperkit-min", "bower-min").replace("bower-min.json", "bower.json");
             return newDest;
           }
-        },
-        materializerDemo: {
+        },*/
+        web: {
           expand: true,
           cwd: 'bin',
-          src: [ 'materializer-min/**' ],
+          src: [ 'paperkit-min/**' ],
           dest: 'web/'
         }        
       },
@@ -146,48 +153,48 @@ module.exports = function(grunt) {
         },
         prefix: {
           src: [
-            'bin/md/attribute/*.css',
-            'bin/md/tag/*.css',
-            'bin/md/class/*.css',
-            'bin/md/css/*.css'
+            'bin/paperkit-files/attribute/*.css',
+            'bin/paperkit-files/tag/*.css',
+            'bin/paperkit-files/css/*.css'
           ]
         }
       },
 
+
       // 4 - Beautify everything
-      cssbeautifier:{files:[    "bin/md/**/*.css"    ]},
+      cssbeautifier:{files:[    "bin/paperkit-files/**/*.css"    ]},
 
       // 5 - Concatenating css and js from bin/materializer/ to bin/
       concat: {
         css: {
           src: [
-            'bin/md/css/*.css',
-            'bin/md/tag/*.css',
-            'bin/md/attribute/*.css'
+            'bin/paperkit-files/css/*.css',
+            'bin/paperkit-files/tag/*.css',
+            'bin/paperkit-files/attribute/*.css'
           ],
-          dest: 'bin/materializer/materializer.css'
+          dest: 'bin/paperkit/paperkit.css'
         },
         js: {
           src: [
             'source/javascript/*.js'
           ],
-          dest: 'bin/materializer/materializer.js'
+          dest: 'bin/paperkit/paperkit.js'
         }
       },
 
       // 6 - Minify css
       cssmin: {
         minify: {
-          src: 'bin/materializer/materializer.css',
-          dest: 'bin/materializer-min/materializer.css'
+          src: 'bin/paperkit/paperkit.css',
+          dest: 'bin/paperkit-min/paperkit.css'
         }
       },
 
       // 7 - Uglify css
       uglify: {
         build: {
-          src: 'bin/materializer/materializer.js',
-          dest: 'bin/materializer-min/materializer.js'
+          src: 'bin/paperkit/paperkit.js',
+          dest: 'bin/paperkit-min/paperkit.js'
         }
       },
       
@@ -199,9 +206,9 @@ module.exports = function(grunt) {
             archive: 'web/d/paperkit.zip'
           },
           expand: true,
-          cwd: 'bin/materializer',
+          cwd: 'bin/paperkit',
           src: [ '**' ],
-          dest: 'materializer/'
+          dest: 'paperkit/'
         },
         paperkitmin: {          
           options: {
@@ -209,9 +216,9 @@ module.exports = function(grunt) {
             archive: 'web/d/paperkit-min.zip'
           },
           expand: true,
-          cwd: 'bin/materializer-min',
+          cwd: 'bin/paperkit-min',
           src: [ '**' ],
-          dest: 'materializer/'
+          dest: 'paperkit/'
         }        
       }
   });
@@ -230,9 +237,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compress');
 
-  // This will run when executing grunt
-  grunt.registerTask('default', ['clean','compiler',
-    'copy:main','copy:font','copy:cursor','copy:icon','copy:moreicon','copy:other','copy:resourcesToMin','copy:dev','copy:mdcss',
-    "autoprefixer",'cssbeautifier','concat','cssmin','uglify','copy:bower','copy:bowerMin','copy:materializerDemo','compress']);
-  grunt.registerTask('dev', ['copy:dev']);
+  // Tasks
+  grunt.registerTask('package', ['clean:bin','compiler',
+    'copy:css','copy:resourcesFont','copy:resourcesCursor','copy:resourcesIcon','copy:resourcesMoreIcon','copy:resourcesOther','copy:resourcesToPaperkit','copy:resourcesToPaperkitMin',
+    "autoprefixer",'cssbeautifier','concat','cssmin','uglify']);
+
+  grunt.registerTask('web', ['package', 'clean:web', 'copy:web']);
+  grunt.registerTask('publish', ['package', 'clean:publish', 'compress']);  
+  grunt.registerTask('default', ['package']);
 };
