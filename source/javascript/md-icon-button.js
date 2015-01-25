@@ -43,6 +43,12 @@ var initMDIconButton = function(MDIconButton, materializer) {
         if(action.indexOf('custom:') != -1) {
           var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
           el.callUserFunction(f, [ el, e ]);
+        } else if(action.indexOf('link:') != -1) {
+          var f = action.substring(action.indexOf('link:') + 'link:'.length).trim();
+          window.open(f,'_self');
+        } else if(action.indexOf('link-out:') != -1) {
+          var f = action.substring(action.indexOf('link-out:') + 'link-out:'.length).trim();
+          window.open(f);
         } else if(action.indexOf('menu:') != -1) {
           var f = action.substring(action.indexOf('menu:') + 'menu:'.length).trim();
           el.openMenu(f);

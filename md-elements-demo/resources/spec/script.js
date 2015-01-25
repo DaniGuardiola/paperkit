@@ -1,0 +1,277 @@
+var paperkit = new Materializer();
+window.addEventListener('load', function(){
+  paperkit.init();
+
+  window.mdpath = document.getElementById('mdvars').getAttribute('path');
+
+  // Check anchor link
+  var url = window.location.hash, idx = url.indexOf("#");
+  var anchor = idx != -1 ? url.substring(idx+1) : false;
+  if (anchor && anchor.indexOf("paperkit-") != -1) {
+    anchorJump(anchor);
+  }
+
+  // Jump to anchor when url changes
+  window.addEventListener('hashchange', function(){
+    var url = window.location.hash, idx = url.indexOf("#");
+    var anchor = idx != -1 ? url.substring(idx+1) : false;
+    if (anchor && anchor.indexOf("paperkit-") != -1) {
+      anchorJump(anchor);
+    }
+  });
+
+  // Adding help button
+  var helpButton = document.createElement('md-icon-button');
+  helpButton.id = 'paperkit-help-button';
+  helpButton.setAttribute('md-image','icon:help');
+  helpButton.setAttribute('md-fill','white');
+  helpButton.setAttribute('md-action','custom: showHelp');
+  paperkit.initElement(helpButton);
+  if (document.getElementById('paperkit-intro')) {
+    document.getElementById('paperkit-intro').appendChild(helpButton);
+  } else {
+    document.body.appendChild(helpButton);    
+  }
+
+  // Adding legal content
+  var legal = document.querySelector('#side-nav > div > div.legal');
+  legal.innerHTML = '<p class="copyright">Google &copy;</p><p class="copyright">Modified by Paperkit for informational purposes</p><p class="copyright"><a href="https://www.google.com/design/spec/">Go to the original spec</a></p><a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>';
+
+  // Adding stuff to papers
+  [].forEach.call(document.querySelectorAll('.paperkit-paper'), function(paper){
+    var image = document.createElement('img');
+    image.classList.add('logo');
+    image.setAttribute('src', mdpath+'resources/brand/logo.png');
+    paper.appendChild(image);
+    if (!paper.classList.contains('no-controls')) {
+      var buttonDiv = document.createElement('div');
+      buttonDiv.classList.add("controls");
+      buttonDiv.setAttribute('md-shadow','shadow-1');
+      buttonDiv.setAttribute('md-fill','white');
+      buttonDiv.setAttribute('md-flex','display wrap');
+      if (!paper.classList.contains('no-devices')) {
+        var devices = document.createElement('div');
+        devices.classList.add('devices');
+        devices.setAttribute('md-flex','display');
+        var devicesSpace = document.createElement('md-space');
+        devices.appendChild(devicesSpace);
+        if (!paper.classList.contains('no-mobile')) {
+          var deviceMobile = document.createElement('md-icon-button');
+          deviceMobile.classList.add('device','mobile');
+          deviceMobile.setAttribute('md-image','icon:smartphone');
+          deviceMobile.setAttribute('md-action','custom:changeDevice');
+          devices.appendChild(deviceMobile);
+        }
+        if (!paper.classList.contains('no-tablet')) {
+          var deviceTablet = document.createElement('md-icon-button');
+          deviceTablet.classList.add('device','tablet');
+          deviceTablet.setAttribute('md-image','icon:tablet');
+          deviceTablet.setAttribute('md-action','custom:changeDevice');
+          devices.appendChild(deviceTablet);
+        }
+        if (!paper.classList.contains('no-desktop')) {
+          var deviceDesktop = document.createElement('md-icon-button');
+          deviceDesktop.classList.add('device','desktop');
+          deviceDesktop.setAttribute('md-image','icon:computer');
+          deviceDesktop.setAttribute('md-action','custom:changeDevice');
+          devices.appendChild(deviceDesktop);
+        }
+        buttonDiv.appendChild(devices);
+      }
+      var space = document.createElement('div');
+      space.style.height = '48px';
+      space.style.width = '1px';
+      space.style.flexGrow = '1';
+      buttonDiv.appendChild(space);
+      if (!paper.classList.contains('no-link')) {
+        var link = document.createElement('md-icon-button');
+        link.setAttribute('md-image','icon:link');
+        link.setAttribute('md-action','custom:getLink');
+        buttonDiv.appendChild(link);
+      }
+      if (!paper.classList.contains('no-fullscreen')) {
+        var fullscreen = document.createElement('md-icon-button');
+        fullscreen.setAttribute('md-image','icon:fullscreen');
+        fullscreen.setAttribute('md-action','custom:toggleFullscreen');
+        buttonDiv.appendChild(fullscreen);
+      }
+      if (!paper.classList.contains('no-showcode')) {
+        var button = document.createElement('md-button');
+        button.setAttribute('md-typo','button');
+        button.textContent = "Show code";
+        button.setAttribute('md-buttontype','flat-dark');
+        button.setAttribute('md-font-color','white');
+        button.setAttribute('md-action','custom:showCode');
+        buttonDiv.appendChild(button);
+      }
+      paper.appendChild(buttonDiv);
+    }
+    paperkit.initElement(paper);
+  });
+});
+
+function showHelp(el){
+  console.log('COMING SOON');
+}
+
+function anchorJump(id, onlyLink){
+  if (!onlyLink) {
+    var url = location.href;
+    location.href = "#"+id;
+    document.body.scrollTop = document.body.scrollTop - 128;
+  }
+  window.history.pushState(id, document.title, '#'+id);
+  setTimeout(function(){
+    window.history.pushState(id, document.title, '#'+id);
+  },50);
+  setTimeout(function(){
+    window.history.pushState(id, document.title, '#'+id);
+  },150);
+  setTimeout(function(){
+    window.history.pushState(id, document.title, '#'+id);
+  },250);
+}
+
+function toggleFullscreen(el){
+  var button = el;
+  el = el.parentNode.parentNode;      
+  if (el.classList.contains('fullscreen')) {
+    paperkit.greylayer.hide();
+    changeDevice('desktop',true,el);
+    el.style.overflow = '';
+    document.querySelector('html').style.overflow = '';
+    button.setAttribute('md-image','icon:fullscreen');
+    el.classList.remove('fullscreen');
+  } else {
+    paperkit.greylayer.show();
+    if (paperkit.viewport.get().width < 768 || el.classList.contains('show-mobile')) {
+      changeDevice('mobile',true,el);
+    } else if (paperkit.viewport.get().width < 992 || el.classList.contains('show-tablet')) {
+      changeDevice('tablet',true,el);
+    } else if (el.classList.contains('show-desktop')) {
+      changeDevice('desktop',true,el);
+    }
+    if (el.code && el.querySelector('.code').classList.contains('on')) {
+      el.style.overflow = '';
+    } else {
+      el.style.overflow = 'hidden';
+    }
+    document.querySelector('html').style.overflow = 'hidden';
+    button.setAttribute('md-image','icon:fullscreen_exit');
+    el.classList.add('fullscreen');
+  }
+}
+
+function getLink(el){
+  el = el.parentNode.parentNode;
+  var onlyLink = false;
+  if (el.classList.contains('fullscreen')) {
+    var onlyLink = true;
+  }
+  anchorJump(el.id, onlyLink);  
+}
+
+function replaceAll(find, replace, str) {
+  return str.replace(new RegExp(find, 'g'), replace);
+}
+
+function changeDevice(el, string, element){
+  if (string === true) {
+    var button = el;
+    el = element;
+  } else {
+    var button = el;
+    el = el.parentNode.parentNode.parentNode;
+  }
+  if (button === 'desktop' || (button.classList && button.classList.contains('desktop'))) {
+    hideIframe(el);
+    el.classList.remove('mobile','tablet');
+  } else if (button === 'tablet' || (button.classList && button.classList.contains('tablet'))) {
+    showIframe(el);
+    el.classList.remove('mobile');
+    el.classList.add('tablet');
+  } else if (button === 'mobile' || (button.classList && button.classList.contains('mobile'))) {
+    showIframe(el);
+    el.classList.remove('tablet');
+    el.classList.add('mobile');
+  }
+}
+
+function hideIframe(el){
+  if (el.iframe) {
+    el.iframe.parentNode.removeChild(el.iframe);
+    el.classList.remove('iframe');
+    el.iframe = null;
+  }
+}
+
+function showIframe(el){
+  if (!el.iframe) {
+    var example = el.querySelector('.example').cloneNode();
+    example.innerHTML = el.querySelector('.example').innerHTML;
+    console.log(example);
+    example.style.width = '100%';
+    example.style.height = '100%';
+    var wrapper = document.createElement('div');
+    wrapper.appendChild(example);
+    example = wrapper.innerHTML.toString();
+    var content = '<html><head><link rel="stylesheet" href="'+mdpath+'materializer-min/materializer.css"><script src="'+mdpath+'materializer-min/materializer.js"><script type="text/javascript">var paperkit = new Materializer();window.addEventListener("load", function(){paperkit.init();<\/script></head><body>' + example + '</body></html>';
+    var iframe = document.createElement('iframe');
+    iframe.classList.add('example-iframe');
+    el.insertBefore(iframe, el.querySelector('.example'));
+    el.iframe = iframe;
+    var doc = iframe.document;
+    if(iframe.contentDocument)
+        doc = iframe.contentDocument; // For NS6
+    else if(iframe.contentWindow)
+        doc = iframe.contentWindow.document; // For IE5.5 and IE6
+    // Put the content in the iframe
+    doc.open();
+    doc.writeln(content);
+    doc.close();
+  }
+  el.classList.add('iframe');
+}
+
+function showCode(el){
+  el = el.parentNode.parentNode;
+  if (!el.code) {
+    var code = document.createElement('div');
+    code.classList.add('code');
+    code.show = function(){
+      this.classList.add('on');
+      el.querySelector('.controls md-button').textContent = 'Hide code';
+      if (el.classList.contains('fullscreen')) {
+        code.scrollIntoView();
+        el.style.overflow = '';
+      }
+    };
+    code.hide = function(){
+      this.classList.remove('on');
+      el.querySelector('.controls md-button').textContent = 'Show code';
+      if (el.classList.contains('fullscreen')) {
+        if (el.iframe) {
+          el.iframe.scrollIntoView();
+        }
+        el.style.overflow = 'hidden';
+      }
+    };
+    var pre = document.createElement('pre');
+    pre.classList.add('language-markup');
+    var codeTag = document.createElement('code');
+    var codeText = el.querySelector('.example').innerHTML.toString();
+    codeText = replaceAll('<','&lt;',codeText);
+    codeText = replaceAll('>','&gt;',codeText);
+    codeTag.innerHTML = codeText;
+    pre.appendChild(codeTag);
+    code.appendChild(pre);
+    el.appendChild(code);
+    el.code = code;
+    Prism.highlightAll();
+    el.code.show();
+  } else if (el.code.classList.contains('on')) {
+    el.code.hide();
+  } else {
+    el.code.show();
+  }
+}

@@ -1,3 +1,0 @@
-open -u u994069025,avaadore -p 21 ftp://31.170.163.224
-mirror -c -X .lftp -X .svg -e -R /home/dani/proyectos/materializer/md-elements-demo  /public_html/materializer
-exit
