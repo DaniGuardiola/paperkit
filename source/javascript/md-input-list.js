@@ -82,16 +82,16 @@ var initMDInputList = function(MDInputList) {
     if(this.getAttribute("md-multiple")==='checkbox') {
       var checkbox = document.createElement("md-input");
       checkbox.setAttribute("type","checkbox");
-      materializer.initElement(checkbox);
+      paperkit.initElement(checkbox);
       tile.appendChild(checkbox);
     }
     
     var text = document.createElement("md-text");
     text.textContent=label;
-    materializer.initElement(text);
+    paperkit.initElement(text);
     tile.appendChild(text);
     
-    materializer.initElement(tile);
+    paperkit.initElement(tile);
     tile.addEventListener('click', this.clickListener.bind(this));
     this.appendChild(tile);
     

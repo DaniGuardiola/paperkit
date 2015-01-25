@@ -1,4 +1,4 @@
-Materializer.prototype.viewport = {	
+Paperkit.prototype.viewport = {	
 	get: function(){
 		var e = window;
 	  	var a = 'inner';

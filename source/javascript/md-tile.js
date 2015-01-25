@@ -1,4 +1,4 @@
-var initMDTile = function(MDTile,materializer) {
+var initMDTile = function(MDTile,paperkit) {
   var createAvatarTile= function(text, avatarImage, iconImage, handler){
     
   }
