@@ -135,7 +135,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'bin',
           src: [ 'materializer-min/**' ],
-          dest: 'md-elements-demo/'
+          dest: 'web/'
         }        
       },
 
@@ -189,6 +189,30 @@ module.exports = function(grunt) {
           src: 'bin/materializer/materializer.js',
           dest: 'bin/materializer-min/materializer.js'
         }
+      },
+      
+      // 8 - Generate zip files
+      compress: {
+        paperkit: {          
+          options: {
+            mode: 'zip',
+            archive: 'web/d/paperkit.zip'
+          },
+          expand: true,
+          cwd: 'bin/materializer',
+          src: [ '**' ],
+          dest: 'materializer/'
+        },
+        paperkitmin: {          
+          options: {
+            mode: 'zip',
+            archive: 'web/d/paperkit-min.zip'
+          },
+          expand: true,
+          cwd: 'bin/materializer-min',
+          src: [ '**' ],
+          dest: 'materializer/'
+        }        
       }
   });
 
@@ -201,10 +225,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  //grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-cssbeautifier');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-compress');
 
   // This will run when executing grunt
   grunt.registerTask('default', ['clean','compiler',
