@@ -5,11 +5,6 @@ var initMDSwitch = function(MDSwitch) {
     } else {
       this.off();
     }
-    if (e.stopPropagation) {
-        e.stopPropagation();
-    } else { // Older IE.
-        e.cancelBubble = true;
-    }
   }
 
   MDSwitch.on = function() {
@@ -22,8 +17,19 @@ var initMDSwitch = function(MDSwitch) {
     this.value = "off";
   }
 
-  MDSwitch.addEventListener('click', MDSwitch.toggle);
- 
+  MDSwitch.clickListener =  function(e) {
+	MDSwitch.toggle();
+	var el = e.currentTarget;
+	var action = el.getAttribute("md-action") ? el.getAttribute('md-action') : 'submit';
+
+    if(action.indexOf('custom:') != -1) {
+    	var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
+    	el.callUserFunction(f, [ el ]);
+    }
+  };
+  
+  MDSwitch.addEventListener('click', MDSwitch.clickListener);
+  
   MDSwitch.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
   };

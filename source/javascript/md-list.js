@@ -33,11 +33,11 @@ var initMDList = function(MDList,materializer) {
             var f = action.substring(action.indexOf('link:') + 'link:'.length).trim();
             linkRedirect(f, el);
           } else if(action.indexOf('ajax:') != -1) {
-            var f = action.substring(action.indexOf('ajax:') + 'link:'.length).trim();
-            materializer.ajaxInsert(el.getAttribute('md-ajax'), getEl(f), function(){
-              materializer.justInCase('reload');
+            var f = action.substring(action.indexOf('ajax:') + 'ajax:'.length).trim();
+            materializer.ajaxInsert(el.getAttribute('md-ajax'), getEl(f), function(resp, container){
+              materializer.initElement(container);
               if (el.getAttribute('md-ajax-callback')) {
-                executeFunctionByName(el.getAttribute('md-ajax-callback'));
+                callFunction(el.getAttribute('md-ajax-callback'), el);
               };
             });
           }

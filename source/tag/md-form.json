@@ -51,17 +51,17 @@
     {
       "after": "> md-row> md-tile",
       "css": [
-      	{
-      		"property": "display",
-      		"value": "flex"
-      	},
+        {
+          "property": "display",
+          "value": "flex"
+        },
+        {
+          "property": "align-items",
+          "value": "center"
+        },
       	{
       		"property": "width",
       		"value": "0px"
-      	},
-      	{
-      		"property": "align-items",
-      		"value": "center"
       	}
       ],
       "responsive": [
