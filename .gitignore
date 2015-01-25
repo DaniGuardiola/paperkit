@@ -3,7 +3,8 @@ bin/
 grunt-materializer/sources/
 script.sh
 .settings
-web/materializer-min/
+web/paperkit-min/
 web/d/
 .DS_Store
 *~
+*.save
