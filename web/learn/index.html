@@ -6,10 +6,10 @@
  	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width" />
  	<meta name="Description" content="A Material Design web framework. Simple, beautiful, powerful and open source. Create webpages and apps following the Google guidelines.">
 
-	<link rel="stylesheet" href="../materializer-min/materializer.css">
+	<link rel="stylesheet" href="../paperkit-min/paperkit.css">
 	<link href="../resources/prism.css" rel="stylesheet">
 
-	<script src="../materializer-min/materializer.js"></script>
+	<script src="../paperkit-min/paperkit.js"></script>
 	<!-- ANALITYCS -->
 	<meta name="google-site-verification" content="djfogzB_zdcp84TB00VSlkez3QV9pU20KAeQcaSMXb4" />
 
@@ -63,7 +63,7 @@
 <body md-layout="fixed" md-color="grey-200">
 	<md-toolbar md-fill="white" md-color="cyan" md-shadow="shadow-1" md-font-color="white" style="overflow: hidden">
 		<md-row>
-			<md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
+			<md-icon-button md-image="icon:menu" md-action="custom: paperkit.sidemenu.open"></md-icon-button>
 			<md-text id="toolbar-title-small" style="display:none">Paperkit <span class="version-name" md-font-color="cyan-700">alpha 0.5</span></md-text>
 			<md-space></md-space>
 			<md-icon-button md-image="icon:expand_less" md-action="custom: toggleCollapse"></md-icon-button>
@@ -143,7 +143,7 @@
 							<span md-typo="display-1">1- Import paperkit to your project</span><br><span md-typo="subhead">Important: the bower version is outdated at the moment and we are moving it to a new repository. Use the manual download instead to get the latest version.</span><br>
 							<span md-typo="title"><b>Bower</b> - <a target="_blank" href="http://bower.io/">What?</a></span><br>
 							<span md-typo="subhead">Minified (recommended)</span>
-							<pre class="language-bash"><code>bower install materializer-min</code></pre>
+							<pre class="language-bash"><code>bower install paperkit-min</code></pre>
 							<span md-typo="subhead">Full size</span>
 							<pre class="language-bash"><code>bower install materializer</code></pre>
 							<span md-typo="title"><b>Manual download</b></span><br>
@@ -153,17 +153,17 @@
 						</md-paper>
 						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 							<span md-typo="display-1">2- Include the css and js files</span><br>
-							<span md-typo="subhead">Important: include before every other css or js that overwrites Materializer styles and scripts</span><br>
+							<span md-typo="subhead">Important: include before every other css or js that overwrites Paperkit styles and scripts</span><br>
 							<pre class="language-markup"><code>&lt;head&gt;
-    &lt;link rel="stylesheet" href="&lt;path&gt;/materializer/materializer.css"&gt;
-    &lt;script src="&lt;path&gt;/materializer/materializer.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="&lt;path&gt;/materializer/paperkit.css"&gt;
+    &lt;script src="&lt;path&gt;/materializer/paperkit.js"&gt;&lt;/script&gt;
 &lt;/head&gt;</code></pre>
-							<span md-typo="subhead">Note: &lt;path&gt; is the folder containing the Materializer folder. If you installed it with bower, the path will be 'bower_components'. Also, remember that the Materializer folder has '-min' at the end when it is the minified version.</span>
+							<span md-typo="subhead">Note: &lt;path&gt; is the folder containing the Paperkit folder. If you installed it with bower, the path will be 'bower_components'. Also, remember that the Paperkit folder has '-min' at the end when it is the minified version.</span>
 						</md-paper>
 						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
 							<span md-typo="display-1">3- Load and initialize Paperkit</span><br>
 							<span md-typo="subhead">Note: you can choose a different variable name other than 'paperkit'</span><br>
-							<pre class="language-javascript"><code>var paperkit = new Materializer(); // Instantiate Paperkit on a variable of your choice
+							<pre class="language-javascript"><code>var paperkit = new Paperkit(); // Instantiate Paperkit on a variable of your choice
 window.addEventListener('load', function(){ paperkit.init() }); // Initialize Paperkit on window load</code></pre>
 						</md-paper>
 						<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="display-1">
@@ -417,9 +417,9 @@ paperkit.initElement(paperkit.content)
 						</a>
 					</div>
 					<div class="el-demo">
-						<md-icon-button md-fill="green" md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
+						<md-icon-button md-fill="green" md-image="icon:menu" md-action="custom: paperkit.sidemenu.open"></md-icon-button>
 					</div>
-					<pre class="language-markup"><code>&lt;md-icon-button md-fill="green" md-image="icon:menu" md-action="custom: md.sidemenu.open"&gt;&lt;/md-icon-button&gt;</code></pre>			
+					<pre class="language-markup"><code>&lt;md-icon-button md-fill="green" md-image="icon:menu" md-action="custom: paperkit.sidemenu.open"&gt;&lt;/md-icon-button&gt;</code></pre>			
 				</md-paper>
 
 				<md-paper class="el-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>				
@@ -432,7 +432,7 @@ paperkit.initElement(paperkit.content)
 						</a>
 					</div>
 					<div class="el-demo" md-flex="display">
-						<md-button md-buttontype="flat-light" md-action="custom: md.sidemenu.open" md-typo="button">Open sidemenu</md-icon-button>
+						<md-button md-buttontype="flat-light" md-action="custom: paperkit.sidemenu.open" md-typo="button">Open sidemenu</md-icon-button>
 					</div>
 					<pre class="language-markup"><code>&lt;md-sidemenu&gt;&lt;/md-sidemenu&gt;</code></pre>			
 				</md-paper>
