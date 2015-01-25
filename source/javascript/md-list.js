@@ -1,6 +1,6 @@
 // TODO: Review callFunction and execuieFunctionByName calls
 
-var initMDList = function(MDList,materializer) {
+var initMDList = function(MDList,paperkit) {
   /**
    * Callback for attribute change
    * @param {string} attrname Attribute name
@@ -34,8 +34,8 @@ var initMDList = function(MDList,materializer) {
             linkRedirect(f, el);
           } else if(action.indexOf('ajax:') != -1) {
             var f = action.substring(action.indexOf('ajax:') + 'ajax:'.length).trim();
-            materializer.ajaxInsert(el.getAttribute('md-ajax'), getEl(f), function(resp, container){
-              materializer.initElement(container);
+            paperkit.ajaxInsert(el.getAttribute('md-ajax'), getEl(f), function(resp, container){
+              paperkit.initElement(container);
               if (el.getAttribute('md-ajax-callback')) {
                 callFunction(el.getAttribute('md-ajax-callback'), el);
               };

@@ -3,13 +3,13 @@ var initMDSidemenu = function(MDSidemenu) {
    * Opens side menu.
    */
   MDSidemenu.open = function() {
-    if (MDSidemenu.materializer.toolbar.getAttribute('md-drag') === "drag") {
-      MDSidemenu.materializer.toolbar.setAttribute('md-drag','no-drag');
+    if (MDSidemenu.paperkit.toolbar.getAttribute('md-drag') === "drag") {
+      MDSidemenu.paperkit.toolbar.setAttribute('md-drag','no-drag');
     }
     MDSidemenu.style.left = "";
     MDSidemenu.setAttribute("md-state", "open");
-    MDSidemenu.materializer.greylayer.show();
-    MDSidemenu.materializer.greylayer.addEventListener('click', function(){
+    MDSidemenu.paperkit.greylayer.show();
+    MDSidemenu.paperkit.greylayer.addEventListener('click', function(){
       MDSidemenu.close();
     });
   }
@@ -22,9 +22,9 @@ var initMDSidemenu = function(MDSidemenu) {
       MDSidemenu.style.left = "-" + MDSidemenu.style.width;
     };
     MDSidemenu.setAttribute("md-state", "closed");
-    MDSidemenu.materializer.greylayer.hide();
-    if (MDSidemenu.materializer.toolbar.getAttribute('md-drag') === "no-drag") {
-      MDSidemenu.materializer.toolbar.setAttribute('md-drag','drag');
+    MDSidemenu.paperkit.greylayer.hide();
+    if (MDSidemenu.paperkit.toolbar.getAttribute('md-drag') === "no-drag") {
+      MDSidemenu.paperkit.toolbar.setAttribute('md-drag','drag');
     }
   }
 

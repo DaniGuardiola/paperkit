@@ -1,4 +1,4 @@
-var initMDFab = function(MDFab, materializer) {
+var initMDFab = function(MDFab, paperkit) {
   MDFab.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
     if(attrname==='md-action' && newvalue==='submit') {
@@ -21,7 +21,7 @@ var initMDFab = function(MDFab, materializer) {
     var iconElement = this.querySelector('md-icon');    
     if(!iconElement) {
       iconElement = document.createElement('md-icon');
-      materializer.initElement(iconElement);
+      paperkit.initElement(iconElement);
       this.appendChild(iconElement);
     }
     
@@ -87,10 +87,10 @@ var initMDFab = function(MDFab, materializer) {
   MDFab.onClick = function(action) {
     if (action) {
       MDFab.setAttribute('md-action', action);
-      console.log(MDFab.materializer.consoleBanner + "md-fab has a new action: " + action);
+      console.log(MDFab.paperkit.consoleBanner + "md-fab has a new action: " + action);
     } else {
       MDFab.removeAttribute('md-action');
-      console.log(MDFab.materializer.consoleBanner + "md-fab has no action");
+      console.log(MDFab.paperkit.consoleBanner + "md-fab has no action");
     }
   }
 

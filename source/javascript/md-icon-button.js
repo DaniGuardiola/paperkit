@@ -1,5 +1,5 @@
 // TODO: Review, it doesn't work with new menu...
-var initMDIconButton = function(MDIconButton, materializer) {
+var initMDIconButton = function(MDIconButton, paperkit) {
 //  Herencia no funciona como planeado...
 //  TODO: Buscar otra forma de hacerlo, esto da muchos problemas de reescritura de objetos y funciones
 //  initMDButton(MDIconButton);
@@ -22,7 +22,7 @@ var initMDIconButton = function(MDIconButton, materializer) {
 	  var iconElement = this.querySelector('md-icon');	  
 	  if(!iconElement) {
 	    iconElement = document.createElement('md-icon');
-	    materializer.initElement(iconElement);
+	    paperkit.initElement(iconElement);
 	    this.appendChild(iconElement);
 	  }
 	  

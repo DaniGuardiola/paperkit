@@ -1,6 +1,6 @@
-var initGlobalMDFunctions = function(MDElement, materializer) {
-  /* Materializer object */
-  MDElement.materializer = materializer;
+var initGlobalMDFunctions = function(MDElement, paperkit) {
+  /* Paperkit object */
+  MDElement.paperkit = paperkit;
   /* True if element is already initialized */
   MDElement.alreadyInitialized = true;
 

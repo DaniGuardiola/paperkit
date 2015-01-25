@@ -3,7 +3,7 @@
  * 
  * @param {element} el Element being initialized
  */
-var initMDInputSelect = function(MDInputSelect, materializer) {
+var initMDInputSelect = function(MDInputSelect, paperkit) {
   var spanText;
   var value;
   var menu;
@@ -21,7 +21,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
       if(!this.menu) {
         this.menu = document.createElement('md-menu');
         this.menu.id = this.getMenuId();
-        materializer.initElement(this.menu);        
+        paperkit.initElement(this.menu);        
         document.body.appendChild(this.menu);
       }
 
@@ -94,7 +94,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
     var icon = document.createElement('md-icon');
     icon.setAttribute('md-image', 'icon:arrow_drop_down');
     icon.setAttribute('md-fill', 'grey');
-    initMDIcon(icon, materializer);
+    initMDIcon(icon, paperkit);
     this.appendChild(icon);
 
     var divLine = document.createElement("div");
@@ -190,7 +190,7 @@ var initMDInputSelect = function(MDInputSelect, materializer) {
               ? option.textContent : longestString;
     });
     
-    this.style.width = (materializer.calcTextMetrics(longestString,
+    this.style.width = (paperkit.calcTextMetrics(longestString,
             elementStyle).width + 36)
             + "px";
   }

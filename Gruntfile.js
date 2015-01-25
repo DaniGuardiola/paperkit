@@ -233,6 +233,6 @@ module.exports = function(grunt) {
   // This will run when executing grunt
   grunt.registerTask('default', ['clean','compiler',
     'copy:main','copy:font','copy:cursor','copy:icon','copy:moreicon','copy:other','copy:resourcesToMin','copy:dev','copy:mdcss',
-    "autoprefixer",'cssbeautifier','concat','cssmin','uglify','copy:bower','copy:bowerMin','copy:materializerDemo',]);
+    "autoprefixer",'cssbeautifier','concat','cssmin','uglify','copy:bower','copy:bowerMin','copy:materializerDemo','compress']);
   grunt.registerTask('dev', ['copy:dev']);
 };

@@ -4,7 +4,7 @@
  * @param  {object} opt Options
  * @return {boolean}     True on success, false on error
  */
-// Materializer.prototype.init.action = function(el, opt) {
+// Paperkit.prototype.init.action = function(el, opt) {
 
 //   /**
 //    * Action listener, has multiple predetermined actions and a custom one

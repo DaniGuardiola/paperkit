@@ -1,13 +1,13 @@
-var initMDInput = function(MDInput, materializer) {
+var initMDInput = function(MDInput, paperkit) {
 	var inputtype=MDInput.getAttribute("type");
 
 	if(inputtype==="text" || inputtype==="password" || inputtype==="email" || inputtype==="tel" || inputtype==="number" || inputtype==="url") {
-		initMDInputText(MDInput, materializer);
+		initMDInputText(MDInput, paperkit);
 	} else if(inputtype==="select") {
-		initMDInputSelect(MDInput, materializer);
+		initMDInputSelect(MDInput, paperkit);
 	} else if(inputtype==="checkbox") {
-		initMDInputCheckbox(MDInput, materializer);
+		initMDInputCheckbox(MDInput, paperkit);
 	} else if(inputtype==="list") {
-	  initMDInputList(MDInput, materializer);
+	  initMDInputList(MDInput, paperkit);
 	}
 }
