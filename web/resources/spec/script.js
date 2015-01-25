@@ -1,4 +1,4 @@
-var paperkit = new Materializer();
+var paperkit = new Paperkit();
 window.addEventListener('load', function(){
   paperkit.init();
 
@@ -215,7 +215,7 @@ function showIframe(el){
     var wrapper = document.createElement('div');
     wrapper.appendChild(example);
     example = wrapper.innerHTML.toString();
-    var content = '<html><head><link rel="stylesheet" href="'+mdpath+'materializer-min/materializer.css"><script src="'+mdpath+'materializer-min/materializer.js"><script type="text/javascript">var paperkit = new Materializer();window.addEventListener("load", function(){paperkit.init();<\/script></head><body>' + example + '</body></html>';
+    var content = '<html><head><link rel="stylesheet" href="'+mdpath+'paperkit-min/paperkit.css"><script src="'+mdpath+'paperkit-min/paperkit.js"><script type="text/javascript">var paperkit = new Paperkit();window.addEventListener("load", function(){paperkit.init();<\/script></head><body>' + example + '</body></html>';
     var iframe = document.createElement('iframe');
     iframe.classList.add('example-iframe');
     el.insertBefore(iframe, el.querySelector('.example'));
