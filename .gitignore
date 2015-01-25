@@ -1,11 +1,7 @@
-upload.x
-uploadguide.x
-uploadbin.x
 node_modules
 bin/
 grunt-materializer/sources/
 script.sh
-tmp*.css
 .settings
 web/materializer-min/
 web/d/

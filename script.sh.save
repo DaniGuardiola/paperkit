@@ -1,2 +1,0 @@
-grunt
-sudo rm -rf ~/proyectos/datafeelings/web/public/assets/material cp -R bin/materializer ~/proyectos/datafeelings/web/public/assets
