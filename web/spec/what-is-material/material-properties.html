@@ -25,10 +25,10 @@
 
   <!-- PAPERKIT SETTINGS -->
   <meta id="mdvars" path="../../">
-  <link rel="stylesheet" href="../../materializer-min/materializer.css">
+  <link rel="stylesheet" href="../../paperkit-min/paperkit.css">
   <link href="../../resources/prism.css" rel="stylesheet">
   <link href="../../resources/spec/style.css" rel="stylesheet">
-  <script src="../../materializer-min/materializer.js"></script>
+  <script src="../../paperkit-min/paperkit.js"></script>
   <script src="../../resources/spec/script.js"></script>
 
 
@@ -475,7 +475,7 @@
 <md-paper id="paperkit-decoupled-behavior" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
   <div class="example" md-flex="display">
 <md-paper md-shadow="shadow-2" id="paperkit-decoupled-behavior-paper" md-width="x1" md-height="x1" style="position: relative; margin: 192px auto; transition: margin 0.25s, width 0.25s, height 0.25s; border-radius: 2px; overflow: hidden;" md-position="center-x" md-color="white">
-  <img style="position: absolute; top: 0; left: 0; transition: height 0.25s, width 0.25s, top 0.25s, left 0.25s, margin 0.25s; flex-shrink: 0;" md-height="x1" md-width="x1" src="../../resources/spec/img/kodaline.jpg">
+  <img style="position: absolute; top: 0; left: 0; transition: height 0.25s, width 0.25s, top 0.25s, left 0.25s, margin 0.25s; flex-shrink: 0; max-width: none;" md-height="x1" md-width="x1" src="../../resources/spec/img/kodaline.jpg">
 </md-paper>
 <script type="text/javascript">
   // Get the paper in a variable
@@ -525,14 +525,22 @@
       // Paper size
       decoupledPaper.setAttribute('md-width','x1');
       decoupledPaper.setAttribute('md-height','x1');
+      // Paper margin      
+      decoupledPaper.style.margin = '160px auto';
       // Image position
-      decoupledImage.style.left = '-32px';
-      decoupledImage.style.top = '-32px';
+      decoupledImage.style.left = '-96px';
+      decoupledImage.style.top = '-96px';
     },2000);
+    // 6
+    setTimeout(function(){
+      // Image position
+      decoupledImage.style.left = '-192px';
+      decoupledImage.style.top = '0';
+    },2500);
     // And repeat
     setTimeout(function(){
-      //decoupledAnimation();
-    },2500);
+      decoupledAnimation();
+    },3000);
   }
   decoupledAnimation();
 

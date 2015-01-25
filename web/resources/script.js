@@ -1,6 +1,6 @@
-var md = new Materializer(); // Instantiate Materializer on a variable of your choice
+var paperkit = new Paperkit(); // Instantiate Paperkit on a variable of your choice
 window.addEventListener('load', function(){
-	md.init(); // Initialize Materializer on window load
+	paperkit.init(); // Initialize Paperkit on window load
 });
 
 function contentPage(index){
@@ -13,32 +13,32 @@ function contentPage(index){
 
 function tabColorChange(index){
 	if(index === 0){
-		md.toolbar.set('color','cyan');
-		md.fab.set('color','cyan');
+		paperkit.toolbar.set('color','cyan');
+		paperkit.fab.set('color','cyan');
 		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
 			span.setAttribute('md-font-color','cyan-700');
 		});
 	} else if(index === 1){
-		md.toolbar.set('color','blue');
-		md.fab.set('color','blue');		
+		paperkit.toolbar.set('color','blue');
+		paperkit.fab.set('color','blue');		
 		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
 			span.setAttribute('md-font-color','blue-700');
 		});
 	} else if(index === 2){
-		md.toolbar.set('color','teal');
-		md.fab.set('color','teal');
+		paperkit.toolbar.set('color','teal');
+		paperkit.fab.set('color','teal');
 		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
 			span.setAttribute('md-font-color','teal-700');
 		});
 	} else if(index === 3){
-		md.toolbar.set('color','light-green');
-		md.fab.set('color','light-green');
+		paperkit.toolbar.set('color','light-green');
+		paperkit.fab.set('color','light-green');
 		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
 			span.setAttribute('md-font-color','light-green-700');
 		});
 	} else if(index === 4){
-		md.toolbar.set('color','orange');
-		md.fab.set('color','orange');
+		paperkit.toolbar.set('color','orange');
+		paperkit.fab.set('color','orange');
 		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
 			span.setAttribute('md-font-color','orange-700');
 		});
