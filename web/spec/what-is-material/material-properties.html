@@ -349,7 +349,7 @@
 
 <!-- PAPERKIT -->
 <md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
-  <div class="example" md-flex="display">
+  <div class="example" md-flex="display" md-color="grey-200">
 <md-paper md-shadow="shadow-1" id="paperkit-shadow-animated-paper" md-width="x2" md-height="x2" style="margin: 64px auto; transition: box-shadow 0.5s; border-radius: 2px;" md-position="center-x" md-color="cyan">
 </md-paper>
 <script type="text/javascript">
@@ -370,8 +370,8 @@
     }
     // Set the md-shadow attribute to the value of the shadow var
     shadowPaper.setAttribute('md-shadow','shadow-'+shadow);
-    // Repeat again in 1.8 seconds
-    setTimeout(switchShadow,1800);
+    // Repeat again every 1.592 seconds (half of the video duration)
+    setTimeout(switchShadow,1592);
   }
   // Start the function
   switchShadow();
@@ -472,10 +472,10 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-decoupled-behavior" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
-  <div class="example" md-flex="display">
-<md-paper md-shadow="shadow-2" id="paperkit-decoupled-behavior-paper" md-width="x1" md-height="x1" style="position: relative; margin: 192px auto; transition: margin 0.25s, width 0.25s, height 0.25s; border-radius: 2px; overflow: hidden;" md-position="center-x" md-color="white">
-  <img style="position: absolute; top: 0; left: 0; transition: height 0.25s, width 0.25s, top 0.25s, left 0.25s, margin 0.25s; flex-shrink: 0; max-width: none;" md-height="x1" md-width="x1" src="../../resources/spec/img/kodaline.jpg">
+<md-paper todo="Make it responsive" id="paperkit-decoupled-behavior" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-color="grey-200">
+<md-paper md-shadow="shadow-2" id="paperkit-decoupled-behavior-paper" md-width="x1" md-height="x1" style="position: relative; margin: 192px auto; transition: margin 0.3s, width 0.3s, height 0.3s; border-radius: 2px; overflow: hidden; border: 2px white solid;" md-position="center-x" md-color="white">
+  <img style="position: absolute; top: 0; left: 0; transition: height 0.3s, width 0.3s, top 0.3s, left 0.3s, margin 0.3s; flex-shrink: 0; max-width: none;" md-height="x1" md-width="x1" src="../../resources/spec/img/kodaline.jpg">
 </md-paper>
 <script type="text/javascript">
   // Get the paper in a variable
@@ -485,7 +485,7 @@
   // Declare a function to move both things
   function decoupledAnimation(){
     // States:
-    // Initial    
+    // Initial
     // Paper size
     decoupledPaper.setAttribute('md-width','x1');
     decoupledPaper.setAttribute('md-height','x1');
@@ -507,19 +507,19 @@
       // Image position
       decoupledImage.style.left = '96px';
       decoupledImage.style.top = '96px';
-    },500);
+    },905.666666667);
     // 3
     setTimeout(function(){
       // Image position
       decoupledImage.style.left = '0';
       decoupledImage.style.top = '0';
-    },1000);
+    },1811.33333333);
     // 4
     setTimeout(function(){
       // Image size
       decoupledImage.setAttribute('md-width','x4');
       decoupledImage.setAttribute('md-height','x4');
-    },1500);
+    },2717);
     // 5
     setTimeout(function(){
       // Paper size
@@ -530,17 +530,17 @@
       // Image position
       decoupledImage.style.left = '-96px';
       decoupledImage.style.top = '-96px';
-    },2000);
+    },3622.66666667);
     // 6
     setTimeout(function(){
       // Image position
       decoupledImage.style.left = '-192px';
       decoupledImage.style.top = '0';
-    },2500);
+    },4528.33333333);
     // And repeat
     setTimeout(function(){
       decoupledAnimation();
-    },3000);
+    },5434);
   }
   decoupledAnimation();
 
