@@ -10,24 +10,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Authentic motion - Animation - Google design guidelines</title>
-    <meta itemprop="name" content="Authentic motion - Animation - Google design guidelines"/>
+    <title>Navigational transitions - Patterns - Google design guidelines</title>
+    <meta itemprop="name" content="Navigational transitions - Patterns - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Authentic motion - Animation - Google design guidelines" />
+    <meta property="og:title" content="Navigational transitions - Patterns - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Authentic motion - Animation" />
+    <meta property="article:section" content="Navigational transitions - Patterns" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Authentic motion</Attribute>
+      <Attribute name="title">Navigational transitions</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
-      <Attribute name="section_title">Animation</Attribute>
-      <Attribute name="section_slug">animation</Attribute>
+      <Attribute name="section_title">Patterns</Attribute>
+      <Attribute name="section_slug">patterns</Attribute>
     </DataObject>
     <DataObject type="thumbnail">
       <Attribute name="src" value="" />
@@ -45,23 +45,11 @@
 </script>
   </head>
 
-  <body class="section-animation first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
-    <header class="qp-ui" data-qp-ui="{
-  'Peekaboo': {
-    'mobile': 72,
-    'desktop-sm': 72,
-    'default': 192
-  }
-}">
-  <div class="header-wrapper qp-ui" data-qp-ui="{
-    'Peekaboo': {
-      'mobile': 28,
-      'desktop-sm': 28,
-      'default': 82
-    }
-  }">
-    <div class="header-title">      <span class="section-title">Animation</span>
-      <span class="chapter-title">Authentic motion</span>
+  <body class="section-patterns noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">Patterns</span>
+      <span class="chapter-title">Navigational transitions</span>
     </div>
   </div>
 </header>
@@ -89,16 +77,16 @@
                     <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Animation
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
                 </dt>
         <dd>
-                    <a class="nav_selected" href="authentic-motion.html">Authentic motion
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
                     </a>
-                    <a class="" href="responsive-interaction.html">Responsive interaction
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
                     </a>
-                    <a class="" href="meaningful-transitions.html">Meaningful transitions
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
                     </a>
-                    <a class="" href="delightful-details.html">Delightful details
+                    <a class="" href="../animation/delightful-details.html">Delightful details
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
@@ -165,30 +153,30 @@
                     <a class="" href="../components/tooltips.html">Tooltips
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Patterns
                 </dt>
         <dd>
-                    <a class="" href="../patterns/data-formats.html">Data formats
+                    <a class="" href="data-formats.html">Data formats
                     </a>
-                    <a class="" href="../patterns/errors.html">Errors
+                    <a class="" href="errors.html">Errors
                     </a>
-                    <a class="" href="../patterns/gestures.html">Gestures
+                    <a class="" href="gestures.html">Gestures
                     </a>
-                    <a class="" href="../patterns/loading-images.html">Loading images
+                    <a class="" href="loading-images.html">Loading images
                     </a>
-                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
+                    <a class="" href="navigation-drawer.html">Navigation drawer
                     </a>
-                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
+                    <a class="nav_selected" href="navigational-transitions.html">Navigational transitions
                     </a>
-                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
+                    <a class="" href="scrolling-techniques.html">Scrolling techniques
                     </a>
-                    <a class="" href="../patterns/search.html">Search
+                    <a class="" href="search.html">Search
                     </a>
-                    <a class="" href="../patterns/selection.html">Selection
+                    <a class="" href="selection.html">Selection
                     </a>
-                    <a class="" href="../patterns/settings.html">Settings
+                    <a class="" href="settings.html">Settings
                     </a>
-                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
+                    <a class="" href="swipe-to-refresh.html">Swipe to refresh
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
@@ -228,13 +216,13 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Authentic motion
+  <h1 class="chapter-title">Navigational transitions
       </h1>
 
   <div class="chapter-content">
         
         <div class="chapter-intro">
-       <p>Perceiving an object’s tangible form helps us understand how to manipulate it. Observing an object’s motion tells us whether it is light or heavy, flexible or rigid, small or large. Motion in the world of material design is not only beautiful, it builds meaning about the spatial relationships, functionality, and intention of the system.</p>
+       <p>Navigational transitions occur when the user is taken from one state to another within the app, such as moving from a high-level view to a detailed view or a task-completion view. Most transitions are hierarchical in nature, but non-hierarchical transitions also occur. </p><p>These brief moments are very important for the user experience. Consider the user’s journey carefully to determine which transition to use when. Different kinds of transitions are appropriate for various cases. </p>
 
       
       
@@ -243,15 +231,17 @@
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="authentic-motion.html#authentic-motion-mass-weight">Mass and weight
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="navigational-transitions.html#navigational-transitions-parent-to-child">Parent to child
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="navigational-transitions.html#navigational-transitions-sibling-to-sibling">Sibling to sibling
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="authentic-motion-mass-weight" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="navigational-transitions-parent-to-child" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Mass and weight
+    Parent to child
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -263,132 +253,90 @@
                   <div>
             <section class="moduleB1">
         <div class="module-body">
-      <p>Physical objects have mass and move only when forces are applied to them. Consequently, objects can’t start or stop instantaneously. Animation with abrupt starts and stops or rapid changes in direction appears unnatural and can be an unexpected and unpleasant disruption for the user.</p><p>A critical aspect of motion for material design is to retain the feeling of physicality without sacrificing elegance, simplicity, beauty, and the magic of a seamless user experience.</p>
+      <p>One of the most important transitions is when the user “drills down” into content. It can be thought of as a parent-to-child transition, because it is hierarchical in nature.</p><p>In material design, a parent-to-child transition is indicated by a change in elevation. The surface or the area of the surface that the user touches should lift up and expand into place from its origin. This motion guides the user from point A to point B and should highlight both the origin as well as the destination. It should feel natural, using the material motion curves, and familiar, because the expansion and movement from the origin appears logical.</p>
     </div>
   </section>
 
         </div>
               <div>
-          <h4 class="related">
-Related
-</h4>
-        </div>
-              <div>
-          <div class="modulettes">
-          <a class="modulette android" href="http://developer.android.com/training/material/animations.html#CurvedMotion" title="Use Curved Motion">
-      <img class="icon callout-icon" src="../static/images/callout_android.svg" alt="" />
-      <div class="info">
-        <div class="title">Use Curved Motion</div>
-        <span class="subtitle">Define timing curves and curved motion patterns for animations.</span>
-      </div>
-    </a>
-      </div>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Best practices</h3>
-    <div class="module-body">
-    <p>Accelerate objects swiftly and decelerate them slowly to avoid abrupt changes in velocity.</p>
-  </div>
+          <section class="moduleF1">
   <div class="figure-group">
     <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6SXl5UUtsc09ZUFU" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex1_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex1_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div><p>Motion with swift acceleration and gentle deceleration feels natural and delightful.</p>
-        </figcaption>
-              </figure>
+      <figure>
+      <div class="media">
+                  <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+            <video id="1-None_0B2wX4iIvu8L6OG5GWnBqWFFRdVU" crossorigin="anonymous" preload="metadata" loop  controls>
+                          <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6UjZvd0w1MmdQVWs/patterns_navigational-transitions_parent-to-child_list-01_xhdpi.webm" type="video/webm" />
+                                      <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6OG5GWnBqWFFRdVU/patterns_navigational-transitions_parent-to-child_list-01_xhdpi.mp4" type="video/mp4" />
+                        </video>
           </div>
+              </div>
+            </figure>
+    </div>
   </div>
 </section>
+
         </div>
               <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>An abrupt change in velocity at both the beginning and end of the animation curve means the object instantaneously starts and stops, which is unrealistic.</p>
-  </div>
+          <section class="moduleF1">
   <div class="figure-group">
     <div class="figure-row">
-            <figure class="example dont">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6TWtqQi16MDhpRm8" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex2_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex2_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Linear motion feels mechanical. </p>
-        </figcaption>
-              </figure>
+      <figure>
+      <div class="media">
+                  <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+            <video id="1-None_0B2wX4iIvu8L6aklPVUgzZ1BYR0U" crossorigin="anonymous" preload="metadata" loop  controls>
+                          <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6U0Q0M3FtYUE0VHM/patterns_navigational-transitions_parent-to-child_calendar_tablet_xhdpi.webm" type="video/webm" />
+                                      <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6aklPVUgzZ1BYR0U/patterns_navigational-transitions_parent-to-child_calendar_tablet_xhdpi.mp4" type="video/mp4" />
+                        </video>
           </div>
+              </div>
+            </figure>
+    </div>
   </div>
 </section>
+
         </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Special cases: Entering and exiting frame</h3>
-    <div class="module-body">
-    <p>When an object enters the frame, ensure that it's moving at its peak velocity. This behavior emulates natural movement. A person entering the frame of vision does not begin walking at the edge of the frame, but before it. Similarly, when an object exits the frame, maintain the object’s velocity, rather than slowing it down as it exits the frame. The user’s attention is drawn to an object slowly entering and exiting the frame. In most cases, that isn’t your desired effect.  </p>
+              </div>
   </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6TXk5OHZFYldIamc" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex3_do_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex3_do_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div><p>Enter and exit frame at peak velocity. The ball enters and exits frame at peak velocity, creating a confident transition.</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example dont">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6N2szakNGeTE5UEU" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex4_dont_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex4_dont_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Don’t speed up when entering or slow down when exiting. Don’t distract the user with unnecessary changes in velocity.</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
+</div>                  <div id="navigational-transitions-sibling-to-sibling" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Sibling to sibling
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
             <section class="moduleB1">
-          <h3>Making Adjustments</h3>
         <div class="module-body">
-      <p>Not all objects move the same way. Lighter/smaller objects may accelerate or decelerate faster because they have less mass and require less force to do so. Larger/heavier objects may need more time to reach peak speed and come to rest. Think about how this applies to the various UI elements in your app and consider how their motion should be represented.</p>
+      <p>Transitions that are not hierarchical in nature behave differently than hierarchical transitions. You can think of non-hierarchical transitions as sibling transitions. </p><p>An example for this kind of transition is when a user navigates through a row of tabs. There is no elevation change; the content and surface of each tab stays on the same elevation level. New content slides in from the right and pushes its sibling off screen to the left.</p>
     </div>
   </section>
+
+        </div>
+              <div>
+          <section class="moduleF1">
+  <div class="figure-group">
+    <div class="figure-row">
+      <figure>
+      <div class="media">
+                  <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+            <video id="1-None_0B2wX4iIvu8L6bDNpdXBkdElHWDg" crossorigin="anonymous" preload="metadata" loop  controls>
+                          <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6bXdoMlplMWtMeWs/patterns_navigational-transitions_sibling-to-sibling_tabs-01_xhdpi.webm" type="video/webm" />
+                                      <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6bDNpdXBkdElHWDg/patterns_navigational-transitions_sibling-to-sibling_tabs-01_xhdpi.mp4" type="video/mp4" />
+                        </video>
+          </div>
+              </div>
+            <figcaption>
+        <p>Sibling transition</p>
+      </figcaption>
+            </figure>
+    </div>
+  </div>
+</section>
 
         </div>
               </div>
@@ -401,24 +349,24 @@ Related
 
     <footer>
   <div class="footer-grid">
-    <div class="footer-L section-what-is-material">&nbsp;</div>
-    <div class="footer-grid-L section-what-is-material">
-            <a class="footer-text" href="../what-is-material/objects-in-3d-space.html">
+    <div class="footer-L section-patterns">&nbsp;</div>
+    <div class="footer-grid-L section-patterns">
+            <a class="footer-text" href="navigation-drawer.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      What is material?
+                      Navigation drawer
                   </div>
       </a>
           </div>
 
-    <div class="footer-R section-animation">&nbsp;</div>
-    <div class="footer-grid-R section-animation">
-            <a class="footer-text" href="responsive-interaction.html">
+    <div class="footer-R section-patterns">&nbsp;</div>
+    <div class="footer-grid-R section-patterns">
+            <a class="footer-text" href="scrolling-techniques.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Responsive interaction
+                      Scrolling techniques
                   </div>
       </a>
           </div>

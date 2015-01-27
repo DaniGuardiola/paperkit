@@ -10,24 +10,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Authentic motion - Animation - Google design guidelines</title>
-    <meta itemprop="name" content="Authentic motion - Animation - Google design guidelines"/>
+    <title>Loading images - Patterns - Google design guidelines</title>
+    <meta itemprop="name" content="Loading images - Patterns - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Authentic motion - Animation - Google design guidelines" />
+    <meta property="og:title" content="Loading images - Patterns - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Authentic motion - Animation" />
+    <meta property="article:section" content="Loading images - Patterns" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Authentic motion</Attribute>
+      <Attribute name="title">Loading images</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
-      <Attribute name="section_title">Animation</Attribute>
-      <Attribute name="section_slug">animation</Attribute>
+      <Attribute name="section_title">Patterns</Attribute>
+      <Attribute name="section_slug">patterns</Attribute>
     </DataObject>
     <DataObject type="thumbnail">
       <Attribute name="src" value="" />
@@ -45,23 +45,11 @@
 </script>
   </head>
 
-  <body class="section-animation first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
-    <header class="qp-ui" data-qp-ui="{
-  'Peekaboo': {
-    'mobile': 72,
-    'desktop-sm': 72,
-    'default': 192
-  }
-}">
-  <div class="header-wrapper qp-ui" data-qp-ui="{
-    'Peekaboo': {
-      'mobile': 28,
-      'desktop-sm': 28,
-      'default': 82
-    }
-  }">
-    <div class="header-title">      <span class="section-title">Animation</span>
-      <span class="chapter-title">Authentic motion</span>
+  <body class="section-patterns noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">Patterns</span>
+      <span class="chapter-title">Loading images</span>
     </div>
   </div>
 </header>
@@ -89,16 +77,16 @@
                     <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Animation
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
                 </dt>
         <dd>
-                    <a class="nav_selected" href="authentic-motion.html">Authentic motion
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
                     </a>
-                    <a class="" href="responsive-interaction.html">Responsive interaction
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
                     </a>
-                    <a class="" href="meaningful-transitions.html">Meaningful transitions
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
                     </a>
-                    <a class="" href="delightful-details.html">Delightful details
+                    <a class="" href="../animation/delightful-details.html">Delightful details
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
@@ -165,30 +153,30 @@
                     <a class="" href="../components/tooltips.html">Tooltips
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Patterns
                 </dt>
         <dd>
-                    <a class="" href="../patterns/data-formats.html">Data formats
+                    <a class="" href="data-formats.html">Data formats
                     </a>
-                    <a class="" href="../patterns/errors.html">Errors
+                    <a class="" href="errors.html">Errors
                     </a>
-                    <a class="" href="../patterns/gestures.html">Gestures
+                    <a class="" href="gestures.html">Gestures
                     </a>
-                    <a class="" href="../patterns/loading-images.html">Loading images
+                    <a class="nav_selected" href="loading-images.html">Loading images
                     </a>
-                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
+                    <a class="" href="navigation-drawer.html">Navigation drawer
                     </a>
-                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
+                    <a class="" href="navigational-transitions.html">Navigational transitions
                     </a>
-                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
+                    <a class="" href="scrolling-techniques.html">Scrolling techniques
                     </a>
-                    <a class="" href="../patterns/search.html">Search
+                    <a class="" href="search.html">Search
                     </a>
-                    <a class="" href="../patterns/selection.html">Selection
+                    <a class="" href="selection.html">Selection
                     </a>
-                    <a class="" href="../patterns/settings.html">Settings
+                    <a class="" href="settings.html">Settings
                     </a>
-                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
+                    <a class="" href="swipe-to-refresh.html">Swipe to refresh
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
@@ -228,30 +216,24 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Authentic motion
+  <h1 class="chapter-title">Loading images
       </h1>
 
   <div class="chapter-content">
         
-        <div class="chapter-intro">
-       <p>Perceiving an object’s tangible form helps us understand how to manipulate it. Observing an object’s motion tells us whether it is light or heavy, flexible or rigid, small or large. Motion in the world of material design is not only beautiful, it builds meaning about the spatial relationships, functionality, and intention of the system.</p>
-
-      
-      
-    </div>
     
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="authentic-motion.html#authentic-motion-mass-weight">Mass and weight
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="loading-images.html#loading-images-loading-images">Loading images
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="authentic-motion-mass-weight" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="loading-images-loading-images" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Mass and weight
+    Loading images
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -261,135 +243,146 @@
   <div class="article-content">
     <div class="module-list">
                   <div>
-            <section class="moduleB1">
-        <div class="module-body">
-      <p>Physical objects have mass and move only when forces are applied to them. Consequently, objects can’t start or stop instantaneously. Animation with abrupt starts and stops or rapid changes in direction appears unnatural and can be an unexpected and unpleasant disruption for the user.</p><p>A critical aspect of motion for material design is to retain the feeling of physicality without sacrificing elegance, simplicity, beauty, and the magic of a seamless user experience.</p>
-    </div>
-  </section>
-
-        </div>
-              <div>
-          <h4 class="related">
-Related
-</h4>
-        </div>
-              <div>
-          <div class="modulettes">
-          <a class="modulette android" href="http://developer.android.com/training/material/animations.html#CurvedMotion" title="Use Curved Motion">
-      <img class="icon callout-icon" src="../static/images/callout_android.svg" alt="" />
-      <div class="info">
-        <div class="title">Use Curved Motion</div>
-        <span class="subtitle">Define timing curves and curved motion patterns for animations.</span>
-      </div>
-    </a>
-      </div>
-        </div>
-              <div>
           <section class="moduleE1">
-      <h3>Best practices</h3>
     <div class="module-body">
-    <p>Accelerate objects swiftly and decelerate them slowly to avoid abrupt changes in velocity.</p>
+    <p>Rather than relying heavily on opacity shifts, illustrations and photographs may load and transition in three phases at staggered durations. <br/></p><p>The levels are adjusted for a low contrast exposure and desaturated in color. The final stage would be a full color saturation, only after the opacity is at 100%. </p><p>The lower contrast effect is a combination of a shift in gamma and black output for darker images. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7M05lWkx3NTVncEE/patterns_loadingimages1.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleC1 moduleC2">
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNYUtBc1paS3hmY0U/patterns-imagetreatment-imageload2_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Low opacity and low contrast</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNY3FnbmJOeGNEMFE/patterns-imagetreatment-imageload3_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Full opacity and exposure</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNaFhNWkc0bHdEUVk/patterns-imagetreatment-imageload4_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Color saturation</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Aperture vs development</h3>
+    <div class="module-body">
+    <p>Don’t adjust the levels in a way that will blow out the whites. This creates an effect that implies an overexposure of the aperture through a camera lens.</p><p>Do imagine the image is fading in like a photographic print during the photo developing process.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="example do">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6SXl5UUtsc09ZUFU" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex1_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex1_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNTWdocmdNQ3pERmM/patterns-imagetreatment-aperturevsdevelopment1-yes-no_large_xhdpi.png" />
                     </div>
                         <figcaption>
-          <div class="caption-title">Do.</div><p>Motion with swift acceleration and gentle deceleration feels natural and delightful.</p>
+          <div class="caption-title">Do.</div>
         </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>An abrupt change in velocity at both the beginning and end of the animation curve means the object instantaneously starts and stops, which is unrealistic.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
+                </figure>
             <figure class="example dont">
                           <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNV3Nna1RjSjc1TlU/patterns-imagetreatment-aperturevsdevelopment2-yes-no_large_xhdpi.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Load and transition</h3>
+    <div class="module-body">
+    <p>Use the ratio of the three phases (opacity, contrast and saturation) graphed above to suit your needs. A longer duration is recommended for loads and a shorter durations is recommended for transitions.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6TWtqQi16MDhpRm8" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex2_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex2_xhdpi.mp4" type="video/mp4" />
+              <video id="1-None_0B08MbvYZK1iNU2VGSFotTTluU2s" crossorigin="anonymous" preload="metadata"  loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNM2xXbGwyN2pISUE/patterns-imagerytreatment-imageload-transition_large_xhdpi.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNU2VGSFotTTluU2s/patterns-imagerytreatment-imageload-transition_large_xhdpi.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Linear motion feels mechanical. </p>
-        </figcaption>
-              </figure>
+                        </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
           <section class="moduleE1">
-      <h3>Special cases: Entering and exiting frame</h3>
+      <h3>Loading on larger screens</h3>
     <div class="module-body">
-    <p>When an object enters the frame, ensure that it's moving at its peak velocity. This behavior emulates natural movement. A person entering the frame of vision does not begin walking at the edge of the frame, but before it. Similarly, when an object exits the frame, maintain the object’s velocity, rather than slowing it down as it exits the frame. The user’s attention is drawn to an object slowly entering and exiting the frame. In most cases, that isn’t your desired effect.  </p>
+    <p>This process is ideal for larger screens, such as in this Chrome OS wallpaper loading use case.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
-            <figure class="example do">
+            <figure class="">
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6TXk5OHZFYldIamc" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex3_do_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex3_do_xhdpi.mp4" type="video/mp4" />
+              <video id="1-None_0B2wX4iIvu8L6UE5ndDctVDVxdEU" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6RkFKU3Nvd2hwZGM/patterns-imagerytreatment-imageload-transition_desktop_large_xhdpi_004.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6UE5ndDctVDVxdEU/patterns-imagerytreatment-imageload-transition_desktop_large_xhdpi_004.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div><p>Enter and exit frame at peak velocity. The ball enters and exits frame at peak velocity, creating a confident transition.</p>
-        </figcaption>
-              </figure>
+                      </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
           <section class="moduleE1">
+      <h3>Adding animation</h3>
     <div class="module-body">
-    
+    <p>Add a small position shift on top of this image treatment for instances, such as an account switcher.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
-            <figure class="example dont">
+            <figure class="">
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6N2szakNGeTE5UEU" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex4_dont_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex4_dont_xhdpi.mp4" type="video/mp4" />
+              <video id="1-None_0B0NGgBg38lWWRm5QODB0bk95SUE" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWdlUtbnpFOUMzRUk/patterns-loadingimages-loading-070901_Load_Add_Animation_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWRm5QODB0bk95SUE/patterns-loadingimages-loading-070901_Load_Add_Animation_xhdpi_002.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Don’t speed up when entering or slow down when exiting. Don’t distract the user with unnecessary changes in velocity.</p>
-        </figcaption>
-              </figure>
+                      </figure>
           </div>
   </div>
 </section>
-        </div>
-              <div>
-            <section class="moduleB1">
-          <h3>Making Adjustments</h3>
-        <div class="module-body">
-      <p>Not all objects move the same way. Lighter/smaller objects may accelerate or decelerate faster because they have less mass and require less force to do so. Larger/heavier objects may need more time to reach peak speed and come to rest. Think about how this applies to the various UI elements in your app and consider how their motion should be represented.</p>
-    </div>
-  </section>
-
         </div>
               </div>
   </div>
@@ -401,24 +394,24 @@ Related
 
     <footer>
   <div class="footer-grid">
-    <div class="footer-L section-what-is-material">&nbsp;</div>
-    <div class="footer-grid-L section-what-is-material">
-            <a class="footer-text" href="../what-is-material/objects-in-3d-space.html">
+    <div class="footer-L section-patterns">&nbsp;</div>
+    <div class="footer-grid-L section-patterns">
+            <a class="footer-text" href="gestures.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      What is material?
+                      Gestures
                   </div>
       </a>
           </div>
 
-    <div class="footer-R section-animation">&nbsp;</div>
-    <div class="footer-grid-R section-animation">
-            <a class="footer-text" href="responsive-interaction.html">
+    <div class="footer-R section-patterns">&nbsp;</div>
+    <div class="footer-grid-R section-patterns">
+            <a class="footer-text" href="navigation-drawer.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Responsive interaction
+                      Navigation drawer
                   </div>
       </a>
           </div>

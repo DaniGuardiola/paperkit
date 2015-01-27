@@ -10,19 +10,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Tabs - Components - Google design guidelines</title>
-    <meta itemprop="name" content="Tabs - Components - Google design guidelines"/>
+    <title>Snackbars &amp; toasts - Components - Google design guidelines</title>
+    <meta itemprop="name" content="Snackbars & toasts - Components - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Tabs - Components - Google design guidelines" />
+    <meta property="og:title" content="Snackbars & toasts - Components - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Tabs - Components" />
+    <meta property="article:section" content="Snackbars & toasts - Components" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Tabs</Attribute>
+      <Attribute name="title">Snackbars &amp; toasts</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
@@ -49,7 +49,7 @@
     <header>
   <div class="header-wrapper">
     <div class="header-title">      <span class="section-title">Components</span>
-      <span class="chapter-title">Tabs</span>
+      <span class="chapter-title">Snackbars &amp; toasts</span>
     </div>
   </div>
 </header>
@@ -140,13 +140,13 @@
                     </a>
                     <a class="" href="sliders.html">Sliders
                     </a>
-                    <a class="" href="snackbars-toasts.html">Snackbars &amp; toasts
+                    <a class="nav_selected" href="snackbars-toasts.html">Snackbars &amp; toasts
                     </a>
                     <a class="" href="subheaders.html">Subheaders
                     </a>
                     <a class="" href="switches.html">Switches
                     </a>
-                    <a class="nav_selected" href="tabs.html">Tabs
+                    <a class="" href="tabs.html">Tabs
                     </a>
                     <a class="" href="text-fields.html">Text fields
                     </a>
@@ -216,13 +216,13 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Tabs
+  <h1 class="chapter-title">Snackbars &amp; toasts
       </h1>
 
   <div class="chapter-content">
         
         <div class="chapter-intro">
-       <p>Tabs make it easy to explore and switch between different views or functional aspects of an app or to browse categorized data sets.</p>
+       <p>Snackbars provide lightweight feedback about an operation. They show a brief message at the bottom of the screen on mobile and lower left on desktop. Snackbars appear above all other elements on screen. Snackbars can contain an action.</p><p>They automatically disappear after a timeout or after user interaction elsewhere on the screen, particularly after interactions that summon a new surface or activity. Snackbars can be swiped off screen. They do not block input on the screens on which they appear. Show only one snackbar on screen at a time. </p><p>Android also provides a capsule-shaped toast, primarily used for system messaging. Toasts are similar to snackbars but do not contain actions and cannot be swiped off screen.</p>
 
       
       
@@ -231,19 +231,15 @@
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="tabs.html#tabs-usage">Usage
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="snackbars-toasts.html#snackbars-toasts-usage">Usage
                 </a></li>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="tabs.html#tabs-content">Content
-                </a></li>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="tabs.html#tabs-types-of-tabs">Types of tabs
-                </a></li>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="tabs.html#tabs-specs">Specs
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="snackbars-toasts.html#snackbars-toasts-specs">Specs
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="tabs-usage" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="snackbars-toasts-usage" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
     Usage
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
@@ -255,212 +251,16 @@
   <div class="article-content">
     <div class="module-list">
                   <div>
-            <section class="moduleB1">
-        <div class="module-body">
-      <p>A tab provides the affordance for displaying grouped content. A tab label succinctly describes the tab’s associated grouping of content.</p>
-    </div>
-  </section>
-
-        </div>
-              <div>
-            <section class="moduleB1">
-          <h3>Mobile tabs</h3>
-        <div class="module-body">
-      
-    </div>
-  </section>
-
-        </div>
-              <div>
-          <section class="moduleC1 moduleC2">
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bVBGcHYzNWtPT00/components_tabs_usage_mobile1.png" />
-                      </div>
-                        <figcaption>
-          <p>Extended app bar and tab bar</p>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RUpCaHJKbG01Wmc/components_tabs_usage_mobile2.png" />
-                      </div>
-                        <figcaption>
-          <p>Inset search, app bar, and tab bar</p>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bHQ0WGJGSy04WTA/components_tabs_usage_mobile3.png" />
-                      </div>
-                        <figcaption>
-          <p>Default app bar and tab bar</p>
-        </figcaption>
-                </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleC1 moduleC2">
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZUhpN3RMNzRuRUk/components_tabs_usage_mobile5.png" />
-                      </div>
-                        <figcaption>
-          <p>Default app bar and scrollable tab bar</p>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Y2phU2tETzJPcEk/components_tabs_usage_mobile4.png" />
-                      </div>
-                        <figcaption>
-          <p>Text color same as tab indicator</p>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OG54SlpiY2paMUk/components_tabs_usage_mobile6.png" />
-                      </div>
-                        <figcaption>
-          <p>Tab bar locked on scroll</p>
-        </figcaption>
-                </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Desktop tabs</h3>
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Sm82ZENoSXZLSGM/components_tabs_usage_desktop1.png" />
-                    </div>
-                        <figcaption>
-          <p>Default app bar and tab bar</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RWZCMFNfZHp1bVk/components_tabs_usage_desktop2.png" />
-                    </div>
-                        <figcaption>
-          <p>Addition of the More dropdown menu</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7d3g5N2tBN3g4MUk/components_tabs_usage_desktop4.png" />
-                    </div>
-                        <figcaption>
-          <p>Tab overflow pagination, Step 1</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QzA2aGhOUHNSYjA/components_tabs_usage_desktop5.png" />
-                    </div>
-                        <figcaption>
-          <p>Tab overflow pagination, Step 2</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SjhoR2JIN1hjdEE/components_tabs_usage_desktop3.png" />
-                    </div>
-                        <figcaption>
-          <p>Menu expanded</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NDllTUxWSEQ2Z1E/components_tabs_usage_desktop6.png" />
-                    </div>
-                        <figcaption>
-          <p>Tab bar centered </p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
           <section class="moduleD1">
-      <h3>When to use</h3>
+      <h3>Very short text strings</h3>
     <div class="module-body">
-    <p>Use tabs to organize content at a high level, for example, presenting different sections of a newspaper. Don’t use tabs for carousels or pagination of content. Those use cases involve viewing content, not navigating between groups of content.</p><p>For more detail about using tabs for navigating top-level views, see “Top-level view strategies” in <a href="../layout/structure.html#structure-ui-regions-guidance">Layout &gt; Structure &gt; UI Regions and Guidance</a>.</p>
+    <p>Snackbars should generally only be tall enough to accommodate one string, and the string should be directly related to the operation performed. They cannot contain icons or action icons. Actions are in the form of text. </p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="example do">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VmQyZnlIZUVCNm8/components_tabs_usage_example1.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7M2QzbjlPWUwtcXc/components_toasts_usage1.png" />
                     </div>
                         <figcaption>
           <div class="caption-title">Do.</div>
@@ -468,7 +268,7 @@
                 </figure>
             <figure class="example dont">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7c1JhcDZjelRVVEE/components_tabs_usage_example2.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YzA0VE1uS0xPd2s/components_toasts_usage2.png" />
                     </div>
                         <figcaption>
           <div class="caption-title">Don't.</div>
@@ -480,15 +280,15 @@
         </div>
               <div>
           <section class="moduleD1">
-      <h3>Tab characteristics</h3>
+      <h3>Transient</h3>
     <div class="module-body">
-    <p>Tabs are presented as a single row.</p><p>Tabs should not be nested. Content in a tab should not consist of another set of tabbed content.</p><p>A set of tabs contains at minimum a pair of tabs and no more than six tabs.</p><p>Tabs control the display of content in a consistent location. </p><p>The tab corresponding to the visible content is highlighted.</p><p>Tabs are grouped together and the group of tabs is in turn connected with their content. </p><p>Keeping tabs adjacent to their content helps maintain the relationship between the two, as too great a separation can introduce ambiguity.</p>
+    <p>For usability, snackbars should not contain the only way to access a core use case. They should not be persistent or stack, as they are above other elements on screen. </p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="example do">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aWJsSnIyUGducFE/components_tabs_usage_example5.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cno2UTE4MmEwQlE/components_toasts_usage3.png" />
                     </div>
                         <figcaption>
           <div class="caption-title">Do.</div>
@@ -496,7 +296,7 @@
                 </figure>
             <figure class="example dont">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7S2ZBVnotTm5EeFE/components_tabs_usage_example6.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZDd4OXY0X0t3cEE/components_toasts_usage4.png" />
                     </div>
                         <figcaption>
           <div class="caption-title">Don't.</div>
@@ -508,14 +308,15 @@
         </div>
               <div>
           <section class="moduleD1">
+      <h3>0-1 actions, not dismiss or cancel</h3>
     <div class="module-body">
-    
+    <p>If an action is present, comply with dialog spacing and affordance rules. For two or more actions, use a dialog, not a snackbar, even when one of the actions is a dismiss action. If the action described in the snackbar is important enough to block the use of the screen, it should be a dialog. </p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="example do">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OXRNRXRYS3V1aTQ/components_tabs_usage_example3.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Mm5pd0t5VmVRb1U/components_toasts_usage5.png" />
                     </div>
                         <figcaption>
           <div class="caption-title">Do.</div>
@@ -523,7 +324,35 @@
                 </figure>
             <figure class="example dont">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Zkg5SWtuUmJKYUk/components_tabs_usage_example4.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Mm02RldQdm5XWTA/components_toasts_usage6.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Don’t block the floating action button</h3>
+    <div class="module-body">
+    <p>Move your floating action button vertically to accommodate the snackbar height. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cWV6SE9KeFVnVjg/components_toasts_usage7.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SlBKblM1TTlSd3c/components_toasts_usage8.png" />
                     </div>
                         <figcaption>
           <div class="caption-title">Don't.</div>
@@ -535,107 +364,7 @@
         </div>
               </div>
   </div>
-</div>                  <div id="tabs-content" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
-  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Content
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
-      <title id="title">Expand and collapse content</title>
-      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
-      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
-    </svg>
-  </h2>
-  <div class="article-content">
-    <div class="module-list">
-                  <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>Content presented in tabs can vary widely, even between tabs. For example, different years within a tabbed portfolio or different types of settings.</p><p>All content within a set of tabs should be related under a larger organizing principle (for example, Settings or Directions), with each tab’s content mutually exclusive of the others'.</p><p>Tab labels should provide meaningful distinctions that logically organize associated content.</p><p>Tab labels may be icons or text and must not be truncated.</p><p>Avoid the need for cross-tab comparison of content; significant cross-tab comparison may indicate the content would benefit from a different organization or presentation.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aFdwaG12cTA3MlU/components_tabs_usage_content.png" />
-                    </div>
-                      </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              </div>
-  </div>
-</div>                  <div id="tabs-types-of-tabs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
-  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Types of tabs
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
-      <title id="title">Expand and collapse content</title>
-      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
-      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
-    </svg>
-  </h2>
-  <div class="article-content">
-    <div class="module-list">
-                  <div>
-            <section class="moduleB1">
-        <div class="module-body">
-      <p>Depending on the platform and the context of use, tabbed content can be presented as either fixed tabs or scrollable (swipeable) tabs.</p>
-    </div>
-  </section>
-
-        </div>
-              <div>
-          <section class="moduleD1">
-      <h3>Fixed tabs</h3>
-    <div class="module-body">
-    <p>Fixed tabs display all tabs concurrently and are best used with content that benefits from quick pivots between tabs, such as switching transportation methods for directions in Google Maps.</p><p>The maximum number of tabs is limited by the view’s width. Fixed tabs have equal width, based on the widest tab label. To navigate between fixed tabs, touch the tab or swipe the content area left or right.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZUhpN3RMNzRuRUk/components_tabs_usage_mobile5.png" />
-                    </div>
-                        </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Scrollable tabs</h3>
-    <div class="module-body">
-    <p>Scrollable tabs display a subset of tabs at any given moment, and can contain longer tab labels and a larger number of tabs. They are best used for browsing contexts in touch interfaces when users don’t need to directly compare the tab labels.</p><p>To navigate between scrollable tabs, touch the tab, swipe the tabs left or right, or swipe the content area left or right.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7d3g5N2tBN3g4MUk/components_tabs_usage_desktop4.png" />
-                    </div>
-                      </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QzA2aGhOUHNSYjA/components_tabs_usage_desktop5.png" />
-                    </div>
-                      </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              </div>
-  </div>
-</div>                  <div id="tabs-specs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+</div>                  <div id="snackbars-toasts-specs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
     Specs
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
@@ -648,15 +377,20 @@
     <div class="module-list">
                   <div>
           <section class="moduleD1">
-      <h3>Fixed and full-screen width</h3>
+      <h3>Mobile snackbar</h3>
     <div class="module-body">
-    <p>Tab width: 1/3 of screen<br/>Tab indicator: 2dp height<br/>Text: 14sp Roboto Medium<br/>Text is centered in the tab cell<br/>Active text color: #fff or secondary color</p><p>Disabled text color: #fff 60%</p>
+    <ul><li><span>Single-line snackbar height: 48dp </span></li><li><span>Multi-line snackbar height: 80dp</span></li><li><span>Text: Roboto Regular 14sp</span></li><li><span>Action button: Roboto Medium 14sp, all-caps text</span></li><li><span>Default background fill: #323232 100% </span></li></ul>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OWxWU0JiNjA4Vzg/components_tabs_usage_specs1.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Tk5GSDhzNUp1SzA/components_toasts_mobile1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7a0VoZldpaG14ODQ/components_toasts_mobile2.png" />
                     </div>
                         </figure>
           </div>
@@ -665,41 +399,6 @@
         </div>
               <div>
           <section class="moduleD1">
-      <h3>Scrollable</h3>
-    <div class="module-body">
-    <p>Tab width: 12dp + word length + 12dp<br/>Tab indicator: 2dp height<br/>Text: 14sp Roboto Medium<br/>Active text color: #fff or secondary color<br/>Disabled text color: #fff 60%</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UzFGMVpzM2lxNHc/components_tabs_usage_specs2.png" />
-                    </div>
-                        </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Desktop/tablet</h3>
-    <div class="module-body">
-    <p>Tab width: 24dp + word length + 24dp<br/>Tab indicator: 2dp height<br/>Text: 14sp tablet, 13sp desktop Roboto Medium<br/>Active text color: #fff or secondary color<br/>Disabled text color: #fff 60%</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bmNSQjB1NElVX1U/components_tabs_usage_specs3.png" />
-                    </div>
-                      </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Tab touch target animation</h3>
     <div class="module-body">
     
   </div>
@@ -708,11 +407,146 @@
             <figure class="">
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWYnZwZjNrLUQyQUE" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-tabs-spec-061604_TabTouch_Target_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-tabs-spec-061604_TabTouch_Target_xhdpi_002.mp4" type="video/mp4" />
+              <video id="1-None_0B0NGgBg38lWWVHFGQWVfN0VFSFE" crossorigin="anonymous" preload="metadata"  loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWZFcwa2wyTG1ybE0/components-snackbarstoasts-spec-061302_Mobile_Snackbar_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWVHFGQWVfN0VFSFE/components-snackbarstoasts-spec-061302_Mobile_Snackbar_xhdpi_002.mp4" type="video/mp4" />
                             </video>
             </div>
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MjVaNzd6aFlVdlU/components_toasts_mobile3.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Tablet/desktop snackbar</h3>
+    <div class="module-body">
+    <ul><li><span>Single-line snackbar height: 48dp tall</span></li><li><span>Minimum width: 288dp</span></li><li><span>Maximum width:  568dp</span></li><li><span>2dp rounded corner</span></li><li><span>Text: Roboto Regular 14sp</span></li><li><span>Action button: Roboto Medium 14sp, all-caps text</span></li><li><span>Default background fill: #323232 100%  </span></li></ul>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7eFVNaUpBeVdTb1U/components_toasts_tabletdesktop1.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bjM5V3Nxb09sQms/components_toasts_tabletdesktop2.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TU95TVFabThhTEU/components_toasts_tabletdesktop3.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWT3R3b3k3cDI0Q28" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWV3RmVzk4Zm1kenc/components-snackbarstoasts-spec-061302_Tablet_Snackbar_xhdpi_003.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWT3R3b3k3cDI0Q28/components-snackbarstoasts-spec-061302_Tablet_Snackbar_xhdpi_003.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Android toast</h3>
+    <div class="module-body">
+    <p>Developers can create custom toasts or custom screen placements for them. If making a custom toast, you are strongly encouraged to adhere to the snackbar style provided above. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7V2RCS3F5NDlOM2c/components_toasts_android1.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7emxxMy1oZHFSODQ/components_toasts_android2.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WGZHVzdMbzY2Q2c/components_toasts_android3.png" />
                     </div>
                       </figure>
           </div>
@@ -731,22 +565,22 @@
   <div class="footer-grid">
     <div class="footer-L section-components">&nbsp;</div>
     <div class="footer-grid-L section-components">
-            <a class="footer-text" href="switches.html">
+            <a class="footer-text" href="sliders.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      Switches
+                      Sliders
                   </div>
       </a>
           </div>
 
     <div class="footer-R section-components">&nbsp;</div>
     <div class="footer-grid-R section-components">
-            <a class="footer-text" href="text-fields.html">
+            <a class="footer-text" href="subheaders.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Text fields
+                      Subheaders
                   </div>
       </a>
           </div>

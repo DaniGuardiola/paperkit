@@ -10,24 +10,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Delightful details - Animation - Google design guidelines</title>
-    <meta itemprop="name" content="Delightful details - Animation - Google design guidelines"/>
+    <title>What&#39;s new - What&#39;s new - Google design guidelines</title>
+    <meta itemprop="name" content="What's new - What's new - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Delightful details - Animation - Google design guidelines" />
+    <meta property="og:title" content="What's new - What's new - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Delightful details - Animation" />
+    <meta property="article:section" content="What's new - What's new" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Delightful details</Attribute>
+      <Attribute name="title">What&#39;s new</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
-      <Attribute name="section_title">Animation</Attribute>
-      <Attribute name="section_slug">animation</Attribute>
+      <Attribute name="section_title">What&#39;s new</Attribute>
+      <Attribute name="section_slug">whats-new</Attribute>
     </DataObject>
     <DataObject type="thumbnail">
       <Attribute name="src" value="" />
@@ -45,11 +45,23 @@
 </script>
   </head>
 
-  <body class="section-animation noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
-    <header>
-  <div class="header-wrapper">
-    <div class="header-title">      <span class="section-title">Animation</span>
-      <span class="chapter-title">Delightful details</span>
+  <body class="section-whats-new first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header class="qp-ui" data-qp-ui="{
+  'Peekaboo': {
+    'mobile': 72,
+    'desktop-sm': 72,
+    'default': 192
+  }
+}">
+  <div class="header-wrapper qp-ui" data-qp-ui="{
+    'Peekaboo': {
+      'mobile': 28,
+      'desktop-sm': 28,
+      'default': 82
+    }
+  }">
+    <div class="header-title">      <span class="section-title">What&#39;s new</span>
+      <span class="chapter-title">What&#39;s new</span>
     </div>
   </div>
 </header>
@@ -77,16 +89,16 @@
                     <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Animation
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
                 </dt>
         <dd>
-                    <a class="" href="authentic-motion.html">Authentic motion
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
                     </a>
-                    <a class="" href="responsive-interaction.html">Responsive interaction
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
                     </a>
-                    <a class="" href="meaningful-transitions.html">Meaningful transitions
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
                     </a>
-                    <a class="nav_selected" href="delightful-details.html">Delightful details
+                    <a class="" href="../animation/delightful-details.html">Delightful details
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
@@ -199,10 +211,10 @@
                     <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">What&#39;s new
                         </dt>
         <dd>
-                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    <a class="nav_selected" href="whats-new.html">What&#39;s new
                     </a>
                   </dd>
               </dl>
@@ -216,41 +228,14 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Delightful details
+  <h1 class="chapter-title">What&#39;s new
       </h1>
 
   <div class="chapter-content">
         
         <div class="chapter-intro">
-      <section class="moduleD1">
-    <div class="module-body">
-    <p>Animation can exist within all components of an app and at all scales, from finely detailed icons to key transitions and actions. All elements work together to construct a seamless experience and a beautiful, functional app.</p><p>The most basic use of animation is in transitions, but an app can truly delight a user when animation is used in ways beyond the obvious. A menu icon that becomes an arrow or playback controls that smoothly change from one to the other serve dual functions: to inform the user and to imbue your app with a moment of wonder and a sense of superb craftsmanship. Users do notice such small details.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B08MbvYZK1iNZk1zbFZfSXI2Snc" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-DelightfulDetails-DelightfulDetails-WellCrafted_v01_large_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-DelightfulDetails-DelightfulDetails-WellCrafted_v01_large_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        </figure>
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6eVd5SmhJUTZxWVk" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-delightfuldetails-030401_Status_Change_xhdpi_003.webm" type="video/webm" />
-                                            <source src="animation-delightfuldetails-030401_Status_Change_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        </figure>
-          </div>
-  </div>
-</section>
+       <p>The November 3, 2014 release of the material design spec includes the following new sections:</p><ul><li><span>A new section “What is material?” provides an overview of key aspects of material design, with chapters on <a href="../what-is-material/environment.html">Environment</a>, which contains information about shadows and depth in a 3D world; <a href="../what-is-material/material-properties.html">material properties</a>; and <a href="../what-is-material/objects-in-3d-space.html">organizing objects in 3D space</a></span></li><li><span><a href="../components/pickers.html">Picker component</a>, for picking date and time.</span></li><li><span><a href="../patterns/navigation-drawer.html">Navigation drawer</a></span></li><li><span><a href="../patterns/navigational-transitions.html">Navigational transitions</a></span></li><li><span><a href="../patterns/scrolling-techniques.html">Scrolling techniques</a></span></li><li><span><a href="../patterns/swipe-to-refresh.html">Swipe to refresh</a></span></li><li><span><a href="../patterns/data-formats.html">Date &amp; time formats</a></span></li><li><span><a href="../patterns/errors.html">Errors</a></span></li><li><span><a href="../style/icons.html#icons-product-icons">Product icons</a></span></li><li><span><a href="../usability/bidirectionality.html">Bidirectionality</a>, which contains info about supporting internationalization and RTL language scripts.</span></li></ul><p> </p><p>Additional significant content updates include:</p><ul><li><span><a href="../resources/sticker-sheets-icons.html">Comprehensive sticker sheets</a> for Illustrator, Photoshop, and Sketch replace the individual sticker sheets.</span></li></ul><ul><li><span><a href="../resources/sticker-sheets-icons.html#sticker-sheets-icons-components">System icons</a> contain the most commonly used system icons for your apps on any platform.</span></li><li><span>In the <a href="../style/color.html">color palette</a>, Teal has been renamed Cyan, and Deep Teal has been renamed Teal. </span></li></ul><ul><li><span><a href="../style/typography.html">Typography</a> includes information about Noto fonts and clarifications on line length.</span></li><li><span><a href="../components/dialogs.html">Dialogs</a> and <a href="../components/menus.html">menus</a> contain extended guidance on usage of these components.</span></li><li><span>Links to relevant sections of <a href="http://developer.android.com/index.html">Android developer documentation</a></span></li></ul>
+
       
       
     </div>
@@ -265,26 +250,19 @@
 
     <footer>
   <div class="footer-grid">
-    <div class="footer-L section-animation">&nbsp;</div>
-    <div class="footer-grid-L section-animation">
-            <a class="footer-text" href="meaningful-transitions.html">
+    <div class="footer-L section-resources">&nbsp;</div>
+    <div class="footer-grid-L section-resources">
+            <a class="footer-text" href="../resources/sticker-sheets-icons.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      Meaningful transitions
+                      Resources
                   </div>
       </a>
           </div>
 
-    <div class="footer-R section-style">&nbsp;</div>
-    <div class="footer-grid-R section-style">
-            <a class="footer-text" href="../style/color.html">
-        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
-        <span>Next</span>
-        <div>
-                      Style
-                  </div>
-      </a>
+    <div class="footer-R section-resources">&nbsp;</div>
+    <div class="footer-grid-R section-resources">
           </div>
 
   </div>

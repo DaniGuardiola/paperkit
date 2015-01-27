@@ -390,8 +390,8 @@
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B08MbvYZK1iNd2s3WE1CRkN5aU0" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-menus-menus-appbar_dropdown_spec_large_xhdpi.webm" type="video/webm" />
-                                            <source src="components-menus-menus-appbar_dropdown_spec_large_xhdpi.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNb3hiNjFBTUU4V0k/components-menus-menus-appbar_dropdown_spec_large_xhdpi.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNd2s3WE1CRkN5aU0/components-menus-menus-appbar_dropdown_spec_large_xhdpi.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -414,8 +414,8 @@
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B0NGgBg38lWWcF9Ndmt1RTZoWk0" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-menus-usage-061001_Textfield_Dropdown_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-menus-usage-061001_Textfield_Dropdown_xhdpi_003.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWX2VYY3Vnd1J2cTQ/components-menus-usage-061001_Textfield_Dropdown_xhdpi_003.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWcF9Ndmt1RTZoWk0/components-menus-usage-061001_Textfield_Dropdown_xhdpi_003.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -427,8 +427,8 @@
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B2wX4iIvu8L6d3BWRGNFMEdWUnM" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-menus-usage-061001_Appbar_Dropdown_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-menus-usage-061001_Appbar_Dropdown_xhdpi_002.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6YVh1eDYzUTdLNVU/components-menus-usage-061001_Appbar_Dropdown_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6d3BWRGNFMEdWUnM/components-menus-usage-061001_Appbar_Dropdown_xhdpi_002.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -451,8 +451,8 @@
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B08MbvYZK1iNWVBad29DaVJrREk" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-menus-menus-cascading_dropdown_spec_large_xhdpi.webm" type="video/webm" />
-                                            <source src="components-menus-menus-cascading_dropdown_spec_large_xhdpi.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNaDNNa01QX2x4UkU/components-menus-menus-cascading_dropdown_spec_large_xhdpi.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNWVBad29DaVJrREk/components-menus-menus-cascading_dropdown_spec_large_xhdpi.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>

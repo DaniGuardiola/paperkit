@@ -10,19 +10,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Menus - Components - Google design guidelines</title>
-    <meta itemprop="name" content="Menus - Components - Google design guidelines"/>
+    <title>Text fields - Components - Google design guidelines</title>
+    <meta itemprop="name" content="Text fields - Components - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Menus - Components - Google design guidelines" />
+    <meta property="og:title" content="Text fields - Components - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Menus - Components" />
+    <meta property="article:section" content="Text fields - Components" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Menus</Attribute>
+      <Attribute name="title">Text fields</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
@@ -49,7 +49,7 @@
     <header>
   <div class="header-wrapper">
     <div class="header-title">      <span class="section-title">Components</span>
-      <span class="chapter-title">Menus</span>
+      <span class="chapter-title">Text fields</span>
     </div>
   </div>
 </header>
@@ -132,7 +132,7 @@
                     </a>
                     <a class="" href="list-controls.html">List controls
                     </a>
-                    <a class="nav_selected" href="menus.html">Menus
+                    <a class="" href="menus.html">Menus
                     </a>
                     <a class="" href="pickers.html">Pickers
                     </a>
@@ -148,7 +148,7 @@
                     </a>
                     <a class="" href="tabs.html">Tabs
                     </a>
-                    <a class="" href="text-fields.html">Text fields
+                    <a class="nav_selected" href="text-fields.html">Text fields
                     </a>
                     <a class="" href="tooltips.html">Tooltips
                     </a>
@@ -216,13 +216,13 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Menus
+  <h1 class="chapter-title">Text fields
       </h1>
 
   <div class="chapter-content">
         
         <div class="chapter-intro">
-       <p>Menus allow users to take an action by selecting from a list of choices revealed upon opening a temporary, new sheet of material.</p>
+       <p>Text fields allow the user to input text. They can be single line, with or without scrolling, or multi-line, and can have an icon. Touching a text field places the cursor and automatically displays the keyboard. In addition to typing, text fields allow for a variety of other tasks, such as text selection (cut, copy, paste) and data lookup via auto-completion. See <a href="../patterns/selection.html">Patterns &gt; Selection</a> for text selection design. </p><p>The type of text field determines what kind of characters are allowed inside the field and may prompt the virtual keyboard to optimize its layout for frequently used characters. Common types for which you should optimize include number, text, email address, phone number, person’s name, username, URL, street address, credit card number, PIN, and search query. </p>
 
       
       
@@ -231,23 +231,27 @@
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="menus.html#menus-usage">Usage
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="text-fields.html#text-fields-single-line-text-field">Single-line text field
                 </a></li>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="menus.html#menus-menu-items">Menu items
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="text-fields.html#text-fields-floating-labels">Floating labels
                 </a></li>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="menus.html#menus-behavior">Behavior
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="text-fields.html#text-fields-multi-line-text-field">Multi-line text field
                 </a></li>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="menus.html#menus-simple-menus">Simple Menus
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="text-fields.html#text-fields-full-width-text-field">Full-width text field
                 </a></li>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="menus.html#menus-specs">Specs
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="text-fields.html#text-fields-character-counter">Character counter
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="text-fields.html#text-fields-auto-complete-text-field">Auto-complete text field
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="text-fields.html#text-fields-search-filter">Search filter
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="menus-usage" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="text-fields-single-line-text-field" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Usage
+    Single-line text field
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -258,40 +262,22 @@
     <div class="module-list">
                   <div>
           <section class="moduleD1">
+      <h3>Single-line fields </h3>
     <div class="module-body">
-    <p>A menu is a temporary piece of material emitted from a button, an action, a pointer, or another control that contains at least two menu items.</p><p>Each menu item is a discrete option or action that can affect the app, the view, or selected elements within a view.</p><p>Menus should not be used as a primary method for navigation within an app.</p>
+    <p>Single-line fields automatically scroll their content to the left as the text input cursor reaches the right edge of the input field. </p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SXp4WFFUZDZwSE0/components_menus_usage1.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7akpZOU5SRXYtdmM/components_textfields_single1.png" />
                     </div>
                         </figure>
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7R0l2QjZLbW1uQ3c/components_menus_usage2.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bEdJLWVEZjcwQjA/components_textfields_single2.png" />
                     </div>
                         </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>The label of an emitting button or control concisely and accurately reflects the menu items contained within the menu. Menu bars typically use single words as labels, like “file”, “format”, “edit”, and “view”, while other contexts may have more verbose labels.</p><p>Menus display a consistent set of menu items, each of which may be enabled or disabled based on the current state of the application.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VW5LS2JTQ2puOUE/components_menus_usage3do.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div>
-        </figcaption>
-              </figure>
           </div>
   </div>
 </section>
@@ -303,28 +289,9 @@
   </div>
   <div class="figure-group">
     <div class="figure-row">
-            <figure class="example dont">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bGFGNkhwcF9mZVk/components_menus_usage3dont.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>Contextual menus dynamically change their available and enabled menu items based on the current state of the application. </p><p>Generally, remove menu items that are irrelevant to the current context, and disable menu items which are relevant but need certain conditions to be met (for example, Copy becomes enabled when text is selected). </p><p>Certain application states may result in a contextual menu containing only a single menu item. For example,  when highlighting text on a web page, Android reveals only Copy,  since users cannot cut or paste text.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UUlrSDVuTktCLUE/components_menus_usage4.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aXhSeDQyQWIzb2c/components_textfields_single3.png" />
                     </div>
                       </figure>
           </div>
@@ -333,14 +300,15 @@
         </div>
               <div>
           <section class="moduleE1">
+      <h3>Light theme</h3>
     <div class="module-body">
-    <p>Reposition menus vertically and horizontally based on their proximity to screen edges.</p>
+    <ul><li><span>Hint and input font: Roboto Regular 16sp</span></li><li><span>Tile height: 48dp</span></li><li><span>Text top and bottom padding: 16dp</span></li><li><span>Text field divider padding: 8dp</span></li></ul>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MHBnQlFGeFRtYTQ/components_menus_usage5.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NjBXVDd4eUhWbDA/components_textfields_single4.png" />
                     </div>
                       </figure>
           </div>
@@ -349,56 +317,17 @@
         </div>
               <div>
           <section class="moduleE1">
+      <h3>Dark theme</h3>
     <div class="module-body">
-    <p>If the height of a menu prevents all menu items from being displayed, the menu can scroll internally. One example is when viewing a menu on a phone in landscape orientation.</p>
+    
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Rkd3MndBT0ZZblk/components_menus_usage6.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7R0NLRHd5NWJVUFE/components_textfields_single5.png" />
                     </div>
                       </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>A menu can also cascade.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dlkwTUdncmtTTXM/components_menus_usage7.png" />
-                    </div>
-                      </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>These animations show scrolling and cascading menus in action.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B08MbvYZK1iNd2s3WE1CRkN5aU0" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-menus-menus-appbar_dropdown_spec_large_xhdpi.webm" type="video/webm" />
-                                            <source src="components-menus-menus-appbar_dropdown_spec_large_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Drop down</div>
-        </figcaption>
-              </figure>
           </div>
   </div>
 </section>
@@ -412,36 +341,33 @@
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWcF9Ndmt1RTZoWk0" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-menus-usage-061001_Textfield_Dropdown_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-menus-usage-061001_Textfield_Dropdown_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0J8hsRkk91LYmhoNU5sWXp0LUE/components_textfields_single6.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Textfield drop down</div>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6d3BWRGNFMEdWUnM" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-menus-usage-061001_Appbar_Dropdown_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-menus-usage-061001_Appbar_Dropdown_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">App bar drop down</div>
-        </figcaption>
-                </figure>
+                        </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
           <section class="moduleE1">
+      <h3>Light theme with icon</h3>
+    <div class="module-body">
+    <ul><li><span>Hint and input font: Roboto Regular 16sp</span></li><li><span>Tile height: 48dp</span></li><li><span>Text top and bottom padding: 16dp</span></li><li><span>Text field divider padding: 8dp</span></li></ul>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7S2NCRjNkZk9SVkU/components_textfields_single7.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Dark theme with icon</h3>
     <div class="module-body">
     
   </div>
@@ -449,26 +375,34 @@
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B08MbvYZK1iNWVBad29DaVJrREk" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-menus-menus-cascading_dropdown_spec_large_xhdpi.webm" type="video/webm" />
-                                            <source src="components-menus-menus-cascading_dropdown_spec_large_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WVBhSkFhUm5XdWM/components_textfields_single8.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Cascading drop down</div>
-        </figcaption>
-              </figure>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MzFBNE9JWTk5ZHc/components_textfields_single9.png" />
+                    </div>
+                        </figure>
           </div>
   </div>
 </section>
         </div>
               </div>
   </div>
-</div>                  <div id="menus-menu-items" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+</div>                  <div id="text-fields-floating-labels" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Menu items
+    Floating labels
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -478,15 +412,38 @@
   <div class="article-content">
     <div class="module-list">
                   <div>
-          <section class="moduleE1">
+          <section class="moduleD1">
+      <h3>Floating labels</h3>
     <div class="module-body">
-    <p>Each menu item is limited to a single line of text that describes the action it will perform when selected.</p><p>The text is generally a single word or short phrase, but it can include icons and helper text, like keyboard shortcuts, as well as controls like checkmarks to indicate multiple selected items or states. See also <a href="list-controls.html">List controls</a>.</p><p>Menus with static content should have the most frequently used menu items placed at the top of the menu.</p><p>Menus with dynamic content may have other behavior, such as placing previously used fonts at the top of the menu. The order can change based on user actions.</p><p>Menu items can reveal nested submenus. Try to limit nesting to one level deep, as it can be difficult to navigate multiple nested submenus.</p>
+    <p>With floating inline labels, when the user engages with the text input field, the labels move to float above the field. </p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VkEwT09kS3lOdFE/components_menus_items1.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cm5Nd3pMdlBVQ1k/components_textfields_labels1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NF9BVjcxdUlJR0U/components_textfields_labels2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Light theme</h3>
+    <div class="module-body">
+    <ul><li><span>Hint and input font: Roboto Regular 16sp</span></li><li><span>Label font: Roboto Regular 12sp</span></li><li><span>Tile height: 72dp</span></li><li><span>Text top and bottom padding: 16dp</span></li><li><span>Text field divider padding: 8dp</span></li></ul>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SGthNmdNaFZhT00/components_textfields_labels3.png" />
                     </div>
                       </figure>
           </div>
@@ -495,25 +452,42 @@
         </div>
               <div>
           <section class="moduleE1">
+      <h3>Dark theme</h3>
     <div class="module-body">
-    <p>Displaying actions as disabled, rather than removing them, lets the user know they exist under the right conditions.</p><p>For example, Redo is disabled when there is nothing to redo. Cut and Copy are disabled until content is selected. </p>
+    
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bmZ1ajBVaXhsNTQ/components_menus_items2.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7d1VjallhcTNJQkU/components_textfields_labels4.png" />
                     </div>
                       </figure>
           </div>
   </div>
 </section>
         </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7V1hoemJNQk5UQlU/components_textfields_labels5.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
               </div>
   </div>
-</div>                  <div id="menus-behavior" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+</div>                  <div id="text-fields-multi-line-text-field" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Behavior
+    Multi-line text field
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -523,15 +497,37 @@
   <div class="article-content">
     <div class="module-list">
                   <div>
-          <section class="moduleE1">
+          <section class="moduleD1">
     <div class="module-body">
-    <p>Menus appear above all other in-app UI elements.</p><p>Dismiss a menu by tapping outside of the menu, or by tapping the emitting button (if visible).</p><p>Generally, selecting a menu item will also dismiss the menu. An exception is when a menu allows for multiple items to be chosen, for example, by using checkmarks.</p>
+    <p>Multi-line text fields automatically break to a new line for overflow text and scroll vertically when the cursor reaches the lower edge.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Q1pnd2dGclRhRTQ/components_menus_behavior1.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7enlWc0RvcnFSekU/components_textfields_multiline1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VzBWNzd0WjBFcmM/components_textfields_multiline2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Light theme</h3>
+    <div class="module-body">
+    <ul><li><span>Hint and input font: Roboto Regular 16sp</span></li><li><span>Label font: Roboto Regular 12sp</span></li><li><span>Text top and bottom padding: 16dp</span></li><li><span>Text field divider padding: 8dp</span></li></ul>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UWx4R0FIcllndEU/components_textfields_multiline3.png" />
                     </div>
                       </figure>
           </div>
@@ -540,66 +536,109 @@
         </div>
               <div>
           <section class="moduleE1">
+      <h3>Dark theme</h3>
     <div class="module-body">
-    <p>Menus are positioned over their emitting elements such that the currently selected menu item appears on top of the emitting element.</p>
+    
   </div>
   <div class="figure-group">
     <div class="figure-row">
-            <figure class="example do">
+            <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VzU0YU41UDRPV0E/components_menus_behavior2.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7X0Yya1RCVmFXOFU/components_textfields_multiline4.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div>
-        </figcaption>
-              </figure>
+                      </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
-          <section class="moduleE1">
+          <section class="moduleD1">
     <div class="module-body">
-    <p>Do not display a duplicate of the selected menu item.</p>
+    
   </div>
   <div class="figure-group">
     <div class="figure-row">
-            <figure class="example dont">
+            <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Y0lzQUFmc3RXcjA/components_menus_behavior3.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aUJxbVJOSWtOQ00/components_textfields_multiline5.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>Positioning the menu below the emitting element separates it from its context.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example dont">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YUxtOEdHdElRcjQ/components_menus_behavior4.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div>
-        </figcaption>
-              </figure>
+                        </figure>
           </div>
   </div>
 </section>
         </div>
               </div>
   </div>
-</div>                  <div id="menus-simple-menus" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+</div>                  <div id="text-fields-full-width-text-field" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Simple Menus
+    Full-width text field
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Full-width text fields are useful for more in-depth tasks.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cm9paWNPS3U3Y3c/components_textfields_full1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NkxpZEZteG9HNTQ/components_textfields_full2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Single and multi-line fields</h3>
+    <div class="module-body">
+    <ul><li><span>Hint and input font: Roboto Regular 16sp </span></li><li><span>Top and bottom padding for text: 20dp</span></li></ul>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MGZia09EYkk1VHM/components_textfields_full3.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Q1FhU3h5OVY5VlU/components_textfields_full4.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="text-fields-character-counter" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Character counter
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -611,150 +650,27 @@
                   <div>
             <section class="moduleB1">
         <div class="module-body">
-      <p>Simple menus are used in list views on tablet and mobile devices to display the options for a specific list item.</p><p><strong>Disambiguation:</strong><span> In contrast to simple menus, <a href="dialogs.html#dialogs-simple-dialogs">simple dialogs</a> can present additional detail related to the options available for a list item or provide navigational or orthogonal actions related to the primary task. Although they can display the same content, simple menus are preferred over simple dialogs because simple menus are less disruptive to the user’s current context.</p>
+      <p>Use a character counter in fields where a character restriction is in place. </p>
     </div>
   </section>
 
         </div>
               <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>Use simple menus in lists to display the options for a specific list item.</p><p>Choosing an option immediately commits the option and closes the menu.</p><p>Touching outside of the menu, or pressing Back, cancels the action and closes the menu</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OG9VQU1KemZFcUU/components_dialogs_simplemenus1.png" />
-                    </div>
-                      </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>When opened, simple menus attempt to vertically align the currently selected menu item with the list item. </p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZXZIOE05RkxENTg/components_dialogs_simplemenus2.png" />
-                    </div>
-                      </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MFE5VE1TUF9HRGc/components_dialogs_simplemenus3.png" />
-                    </div>
-                      </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>When close to a screen edge, simple menus reposition their vertical alignment so that all menu items are completely visible.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UUhDUFZLMHZnNlk/components_dialogs_simplemenus4.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>Do not arbitrarily position the first menu item over the list item.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example dont">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SldfYzhLV1Q4ZjA/components_dialogs_simplemenus5.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>Simple menus appear over their emitting element, not below.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NzVwUlN5aDlPVU0/components_dialogs_simplemenus6.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example dont">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Q3Y2RE9DVDF4UmM/components_dialogs_simplemenus7.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
           <section class="moduleD1">
+      <h3>Single line with character counter</h3>
     <div class="module-body">
-    <p>Menu width varies depending on string length.</p><p>Simple menus always maintain a 16dp margin (phone) or 24dp margin (tablet) to the left and right edges of the screen.</p>
+    <p>Counter text: Roboto Regular 12sp</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MG9uWEhpXzFHNVk/components_dialogs_simplemenus8.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ejV4VjJpUXZIcHc/components_textfields_counter1.png" />
                     </div>
                         </figure>
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aVp1bUlkRHUweE0/components_dialogs_simplemenus9.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7S2xMdlRUbGZzLXM/components_textfields_counter2.png" />
                     </div>
                         </figure>
           </div>
@@ -763,14 +679,20 @@
         </div>
               <div>
           <section class="moduleD1">
+      <h3>Multi-line with character counter</h3>
     <div class="module-body">
-    
+    <p>Counter text: Roboto Regular 12sp</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OU1aYWc3MmRCams/components_dialogs_simplemenus10.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NzNVV0JwaHVYQlE/components_textfields_counter3.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QXBEV1dMUUxVU2s/components_textfields_counter4.png" />
                     </div>
                         </figure>
           </div>
@@ -778,74 +700,39 @@
 </section>
         </div>
               <div>
-          <section class="moduleD1">
-    <div class="module-body">
-    <p>Menus show a persistent scroll bar when content is scrollable.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SHVOck5JSXBERzA/components_dialogs_simplemenus11.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div><p>Display a scroll bar by default for scrollable content.</p>
-        </figcaption>
-                </figure>
-            <figure class="example dont">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WlFaUU9fOG1Jbnc/components_dialogs_simplemenus12.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Without a scroll bar, it’s unclear there are additional menu items available.</p>
-        </figcaption>
-                </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleD1">
-    <div class="module-body">
-    <p>Don’t duplicate the selected menu item.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NmNBOHRTRFVic00/components_dialogs_simplemenus13.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div>
-        </figcaption>
-                </figure>
-            <figure class="example dont">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UWZYVFdIOUpWY0k/components_dialogs_simplemenus14.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Don’t display a duplicate of the selected element.</p>
-        </figcaption>
-                </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
           <section class="moduleE1">
     <div class="module-body">
-    <p>Simple menus are always aligned with the start of the list item text and do not reposition horizontally based on touch location.</p>
+    
   </div>
   <div class="figure-group">
     <div class="figure-row">
-            <figure class="example do">
+            <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZW12S2lzRXdwMU0/components_dialogs_simplemenus15.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NkI4aFllQjliWjQ/components_textfields_counter5.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div><p>Simple menus are left-aligned regardless of touch location.</p>
-        </figcaption>
-              </figure>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Full width with character counter</h3>
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YXNtMUQzR0k1elk/components_textfields_counter6.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VzZtaTJldllJQ1E/components_textfields_counter7.png" />
+                    </div>
+                        </figure>
           </div>
   </div>
 </section>
@@ -857,23 +744,20 @@
   </div>
   <div class="figure-group">
     <div class="figure-row">
-            <figure class="example dont">
+            <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7X1diM193SWpmdlU/components_dialogs_simplemenus16.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WlJzNlVQeEF3TEU/components_textfields_counter8.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Simple menus do not reposition based on touch location.</p>
-        </figcaption>
-              </figure>
+                      </figure>
           </div>
   </div>
 </section>
         </div>
               </div>
   </div>
-</div>                  <div id="menus-specs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+</div>                  <div id="text-fields-auto-complete-text-field" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Specs
+    Auto-complete text field
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -883,16 +767,29 @@
   <div class="article-content">
     <div class="module-list">
                   <div>
-            <section class="moduleB1">
-        <div class="module-body">
-      <p>Specs are provided for various sizes and types of menus and for different platforms.</p>
-    </div>
-  </section>
-
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Use auto-complete text fields to present real-time suggestions or completions in dropdowns, so users can enter information more accurately and efficiently.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bkZmTE42dVZhRWM/components_textfields_auto1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RWlOR0MtazNLRnc/components_textfields_auto2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
         </div>
               <div>
           <section class="moduleE1">
-      <h3>Mobile</h3>
+      <h3>Full-width auto-complete</h3>
     <div class="module-body">
     
   </div>
@@ -900,7 +797,83 @@
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bEZ2SjJVb195VmM/components_menus_specs1.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7N2ZlVVJxYks5UWc/components_textfields_auto3.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Inset auto-complete</h3>
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aGRfbDg3T1dDN1U/components_textfields_auto4.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7M0p2VTNIZlNhaE0/components_textfields_auto5.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7T3V1b3ZZVHJwTFU/components_textfields_auto6.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Full-width inline auto-complete</h3>
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NHJ1amhzM1JlYzA/components_textfields_auto7.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7S2gyTlBSYk9GRG8/components_textfields_auto8.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZXoxOFhCcmtCX0E/components_textfields_auto9.png" />
                     </div>
                       </figure>
           </div>
@@ -909,7 +882,7 @@
         </div>
               <div>
           <section class="moduleE1">
-      <h3>Various widths</h3>
+      <h3>In-line auto-complete</h3>
     <div class="module-body">
     
   </div>
@@ -917,33 +890,50 @@
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Y0EtMTR1YXN5dTg/components_menus_specs2.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Y0pGNWVFRGgyWlk/components_textfields_auto10.png" />
                     </div>
                       </figure>
           </div>
   </div>
 </section>
         </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Cascading menu</h3>
+              </div>
+  </div>
+</div>                  <div id="text-fields-search-filter" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Search filter
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
     <div class="module-body">
-    
+    <p>The app bar can act as a text input field. As the user types, the content underneath it is filtered and sorted. </p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TWEzWUtlNW9GeEE/components_menus_specs3.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YlVReEdkTURqQk0/components_textfields_search1.png" />
                     </div>
-                      </figure>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7S1Rmd3lkRUtJRmc/components_textfields_search2.png" />
+                    </div>
+                        </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
           <section class="moduleE1">
-      <h3>Cascading redlines</h3>
+      <h3>Full-width text field in app bar</h3>
     <div class="module-body">
     
   </div>
@@ -951,7 +941,7 @@
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WjFra1IxUXp5NGM/components_menus_specs4.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VGxwYjZ5MkdSbms/components_textfields_search3.png" />
                     </div>
                       </figure>
           </div>
@@ -970,22 +960,22 @@
   <div class="footer-grid">
     <div class="footer-L section-components">&nbsp;</div>
     <div class="footer-grid-L section-components">
-            <a class="footer-text" href="list-controls.html">
+            <a class="footer-text" href="tabs.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      List controls
+                      Tabs
                   </div>
       </a>
           </div>
 
     <div class="footer-R section-components">&nbsp;</div>
     <div class="footer-grid-R section-components">
-            <a class="footer-text" href="pickers.html">
+            <a class="footer-text" href="tooltips.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Pickers
+                      Tooltips
                   </div>
       </a>
           </div>

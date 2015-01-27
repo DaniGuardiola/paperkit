@@ -10,24 +10,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Delightful details - Animation - Google design guidelines</title>
-    <meta itemprop="name" content="Delightful details - Animation - Google design guidelines"/>
+    <title>Color palettes - Resources - Google design guidelines</title>
+    <meta itemprop="name" content="Color palettes - Resources - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Delightful details - Animation - Google design guidelines" />
+    <meta property="og:title" content="Color palettes - Resources - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Delightful details - Animation" />
+    <meta property="article:section" content="Color palettes - Resources" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Delightful details</Attribute>
+      <Attribute name="title">Color palettes</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
-      <Attribute name="section_title">Animation</Attribute>
-      <Attribute name="section_slug">animation</Attribute>
+      <Attribute name="section_title">Resources</Attribute>
+      <Attribute name="section_slug">resources</Attribute>
     </DataObject>
     <DataObject type="thumbnail">
       <Attribute name="src" value="" />
@@ -45,11 +45,23 @@
 </script>
   </head>
 
-  <body class="section-animation noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
-    <header>
-  <div class="header-wrapper">
-    <div class="header-title">      <span class="section-title">Animation</span>
-      <span class="chapter-title">Delightful details</span>
+  <body class="section-resources first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header class="qp-ui" data-qp-ui="{
+  'Peekaboo': {
+    'mobile': 72,
+    'desktop-sm': 72,
+    'default': 192
+  }
+}">
+  <div class="header-wrapper qp-ui" data-qp-ui="{
+    'Peekaboo': {
+      'mobile': 28,
+      'desktop-sm': 28,
+      'default': 82
+    }
+  }">
+    <div class="header-title">      <span class="section-title">Resources</span>
+      <span class="chapter-title">Color palettes</span>
     </div>
   </div>
 </header>
@@ -77,16 +89,16 @@
                     <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Animation
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
                 </dt>
         <dd>
-                    <a class="" href="authentic-motion.html">Authentic motion
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
                     </a>
-                    <a class="" href="responsive-interaction.html">Responsive interaction
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
                     </a>
-                    <a class="" href="meaningful-transitions.html">Meaningful transitions
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
                     </a>
-                    <a class="nav_selected" href="delightful-details.html">Delightful details
+                    <a class="" href="../animation/delightful-details.html">Delightful details
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
@@ -187,16 +199,16 @@
                     <a class="" href="../usability/bidirectionality.html">Bidirectionality
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Resources
                 </dt>
         <dd>
-                    <a class="" href="../resources/color-palettes.html">Color palettes
+                    <a class="nav_selected" href="color-palettes.html">Color palettes
                               </a>
-                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    <a class="" href="layout-templates.html">Layout templates
                     </a>
-                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    <a class="" href="roboto-noto-fonts.html">Roboto &amp; Noto fonts
                     </a>
-                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    <a class="" href="sticker-sheets-icons.html">Sticker sheets &amp; icons
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
@@ -216,41 +228,22 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Delightful details
-      </h1>
+  <h1 class="chapter-title">Color palettes
+          </h1>
 
   <div class="chapter-content">
         
         <div class="chapter-intro">
-      <section class="moduleD1">
-    <div class="module-body">
-    <p>Animation can exist within all components of an app and at all scales, from finely detailed icons to key transitions and actions. All elements work together to construct a seamless experience and a beautiful, functional app.</p><p>The most basic use of animation is in transitions, but an app can truly delight a user when animation is used in ways beyond the obvious. A menu icon that becomes an arrow or playback controls that smoothly change from one to the other serve dual functions: to inform the user and to imbue your app with a moment of wonder and a sense of superb craftsmanship. Users do notice such small details.</p>
+       <p>The downloadable zip file contains Adobe Photoshop and Adobe Illustrator color swatches that you can install. Included in the zip file is a Read-Me.pdf with instructions on how to install the .aco files into Photoshop and .ase files into Illustrator.</p>
+<div class="modulettes">
+    <a download class="modulette download trackdl" href="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNT0dFWFBjdTNKaXM/color_swatches.zip" title="Color Swatches">
+    <img class="icon download-icon" src="../static/images/download_black.svg" alt="" />
+    <div class="info">
+      <div class="title">Color Swatches</div>
+      <span class="subtitle">0.02 MB (.zip)</span>
+    </div>
+  </a>
   </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B08MbvYZK1iNZk1zbFZfSXI2Snc" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-DelightfulDetails-DelightfulDetails-WellCrafted_v01_large_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-DelightfulDetails-DelightfulDetails-WellCrafted_v01_large_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        </figure>
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6eVd5SmhJUTZxWVk" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-delightfuldetails-030401_Status_Change_xhdpi_003.webm" type="video/webm" />
-                                            <source src="animation-delightfuldetails-030401_Status_Change_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        </figure>
-          </div>
-  </div>
-</section>
       
       
     </div>
@@ -265,24 +258,24 @@
 
     <footer>
   <div class="footer-grid">
-    <div class="footer-L section-animation">&nbsp;</div>
-    <div class="footer-grid-L section-animation">
-            <a class="footer-text" href="meaningful-transitions.html">
+    <div class="footer-L section-usability">&nbsp;</div>
+    <div class="footer-grid-L section-usability">
+            <a class="footer-text" href="../usability/bidirectionality.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      Meaningful transitions
+                      Usability
                   </div>
       </a>
           </div>
 
-    <div class="footer-R section-style">&nbsp;</div>
-    <div class="footer-grid-R section-style">
-            <a class="footer-text" href="../style/color.html">
+    <div class="footer-R section-resources">&nbsp;</div>
+    <div class="footer-grid-R section-resources">
+            <a class="footer-text" href="layout-templates.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Style
+                      Layout templates
                   </div>
       </a>
           </div>
