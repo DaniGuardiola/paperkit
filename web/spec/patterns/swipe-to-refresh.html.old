@@ -263,8 +263,8 @@
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B8v7jImPsDi-MGhWZkMzNHl4c0E" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="070601_swipeToRefresh_xdpi_v14f.webm" type="video/webm" />
-                                            <source src="070601_swipeToRefresh_xdpi_v14f.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-TUMwQjBnZmYwcFE/070601_swipeToRefresh_xdpi_v14f.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-MGhWZkMzNHl4c0E/070601_swipeToRefresh_xdpi_v14f.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -398,8 +398,8 @@
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B8v7jImPsDi-M2ppYnR1a3J4bkk" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="070601_posSwipeYes_xdpi_v08b.webm" type="video/webm" />
-                                            <source src="070601_posSwipeYes_xdpi_v08b.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-NllyUG1oSUx6XzA/070601_posSwipeYes_xdpi_v08b.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-M2ppYnR1a3J4bkk/070601_posSwipeYes_xdpi_v08b.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -411,8 +411,8 @@
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B8v7jImPsDi-VzJuZnQwMEc1cWs" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="070601_posSwipeNo_xdpi_v08a.webm" type="video/webm" />
-                                            <source src="070601_posSwipeNo_xdpi_v08a.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-eC0tODNIZldoWjA/070601_posSwipeNo_xdpi_v08a.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-VzJuZnQwMEc1cWs/070601_posSwipeNo_xdpi_v08a.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -436,8 +436,8 @@
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B8v7jImPsDi-ZEhlY2xJU3RpUGM" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="070601_scaleOverApp_xdpi_v06c.webm" type="video/webm" />
-                                            <source src="070601_scaleOverApp_xdpi_v06c.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-MVFHeEw1WVRYQm8/070601_scaleOverApp_xdpi_v06c.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-ZEhlY2xJU3RpUGM/070601_scaleOverApp_xdpi_v06c.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -457,8 +457,8 @@
                           <div class="media">
                           <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
                 <video id="1-None_0B8v7jImPsDi-MERaYklvUTNzd2M" crossorigin="anonymous" preload="metadata" loop  controls>
-                                  <source src="070601_scaleCopApp_xdpi_v07c.webm" type="video/webm" />
-                                                  <source src="070601_scaleCopApp_xdpi_v07c.mp4" type="video/mp4" />
+                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-dFpiZ2dQeHRsNzg/070601_scaleCopApp_xdpi_v07c.webm" type="video/webm" />
+                                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-MERaYklvUTNzd2M/070601_scaleCopApp_xdpi_v07c.mp4" type="video/mp4" />
                                 </video>
               </div>
                       </div>
@@ -470,8 +470,8 @@
                           <div class="media">
                           <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
                 <video id="1-None_0B8v7jImPsDi-RlBDVU1ZcmxJcTQ" crossorigin="anonymous" preload="metadata" loop  controls>
-                                  <source src="070601_clipped_xdpi_v05a.webm" type="video/webm" />
-                                                  <source src="070601_clipped_xdpi_v05a.mp4" type="video/mp4" />
+                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-Z01sUzUwU29VLUk/070601_clipped_xdpi_v05a.webm" type="video/webm" />
+                                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-RlBDVU1ZcmxJcTQ/070601_clipped_xdpi_v05a.mp4" type="video/mp4" />
                                 </video>
               </div>
                       </div>
@@ -483,8 +483,8 @@
                           <div class="media">
                           <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
                 <video id="1-None_0B8v7jImPsDi-YkpkeTZTQnAwTWM" crossorigin="anonymous" preload="metadata" loop  controls>
-                                  <source src="070601_scaleInApp_xdpi_v06c.webm" type="video/webm" />
-                                                  <source src="070601_scaleInApp_xdpi_v06c.mp4" type="video/mp4" />
+                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-WV9GYmFrQl8ybzQ/070601_scaleInApp_xdpi_v06c.webm" type="video/webm" />
+                                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-YkpkeTZTQnAwTWM/070601_scaleInApp_xdpi_v06c.mp4" type="video/mp4" />
                                 </video>
               </div>
                       </div>

@@ -10,19 +10,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Progress &amp; activity - Components - Google design guidelines</title>
-    <meta itemprop="name" content="Progress & activity - Components - Google design guidelines"/>
+    <title>List controls - Components - Google design guidelines</title>
+    <meta itemprop="name" content="List controls - Components - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Progress & activity - Components - Google design guidelines" />
+    <meta property="og:title" content="List controls - Components - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Progress & activity - Components" />
+    <meta property="article:section" content="List controls - Components" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Progress &amp; activity</Attribute>
+      <Attribute name="title">List controls</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
@@ -49,7 +49,7 @@
     <header>
   <div class="header-wrapper">
     <div class="header-title">      <span class="section-title">Components</span>
-      <span class="chapter-title">Progress &amp; activity</span>
+      <span class="chapter-title">List controls</span>
     </div>
   </div>
 </header>
@@ -130,13 +130,13 @@
                     </a>
                     <a class="" href="lists.html">Lists
                     </a>
-                    <a class="" href="list-controls.html">List controls
+                    <a class="nav_selected" href="list-controls.html">List controls
                     </a>
                     <a class="" href="menus.html">Menus
                     </a>
                     <a class="" href="pickers.html">Pickers
                     </a>
-                    <a class="nav_selected" href="progress-activity.html">Progress &amp; activity
+                    <a class="" href="progress-activity.html">Progress &amp; activity
                     </a>
                     <a class="" href="sliders.html">Sliders
                     </a>
@@ -216,13 +216,13 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Progress &amp; activity
+  <h1 class="chapter-title">List controls
       </h1>
 
   <div class="chapter-content">
         
         <div class="chapter-intro">
-       <p>Make loading content in your app as delightful and painless as possible by minimizing the amount of visual change a user sees before they can view and interact with content. Each operation should only be represented by one activity indicator—for example, one refresh operation should not display both a refresh bar and an activity circle.</p>
+       <p>List controls are icons that appear to the left or right of the list text. They indicate the state of a list item, information about a list item, or serve as an action related to the list item. Leave-behinds are list controls, which are revealed only upon swipe.</p>
 
       
       
@@ -231,17 +231,202 @@
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="progress-activity.html#progress-activity-types-of-indicators">Types of indicators
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="list-controls.html#list-controls-usage">Usage
                 </a></li>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="progress-activity.html#progress-activity-behavior">Behavior
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="list-controls.html#list-controls-types-of-list-controls">Types of list controls
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="list-controls.html#list-controls-types-of-menu-controls">Types of menu controls
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="progress-activity-types-of-indicators" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="list-controls-usage" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Types of indicators
+    Usage
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>List controls fall under four categories:</p><ul><li><span>State</span></li><li><span>Primary action (including text strings)</span></li><li><span>Secondary action</span></li><li><span>Secondary info</span></li></ul><p>Distinguishing elements of list tiles need to be on the left for Left-to-Right interfaces, and vice versa. States and primary actions are placed on the left side of a list tile. Text within a list item should be considered part of the primary action target.</p><p>Don’t place two icons or actions next to one another, such as a checkbox next to an avatar. </p><p>If the primary action of the list item is navigational, don’t use an icon. The list item itself and its context should be sufficient to communicate the destination. </p><p>Secondary actions and Info should be placed on the right side of the title. Secondary actions are always a separate target from the primary action, as users increasingly expect every icon to trigger an action. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TWlQcWJZRE1NQ1U/components_listcontrols_usage.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="list-controls-types-of-list-controls" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Types of list controls
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+      <h3>Checkbox</h3>
+    <div class="module-body">
+    <p>A checkbox can either be a primary action or a secondary action.</p><p>Type: primary action/state</p><p>Desktop checkboxes should appear only on hover and focus.  </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Vnh0b0VhSlE5ajg/components_listcontrols_checkbox1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">The checkbox is the primary action and the state indicator for the list item.</div>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Type: secondary action</p><p>Separate target</p><p>When controlling a family of variables, consider using switches instead. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YUQ5TEFVT3ZJQjg/components_listcontrols_checkbox2.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">The checkbox is the secondary action for the list item.</div>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Switch</h3>
+    <div class="module-body">
+    <p>Type: secondary action</p><p>Separate target</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7b1RwZkowNzdQckE/components_listcontrols_switch.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Reorder</h3>
+    <div class="module-body">
+    <p>Type: secondary action</p><p>Usually a separate target, depending on which mode list it is in. </p><p>Allows dragging of the list item to other locations within the list. It usually appears in list editing mode.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7X0pmWjRNZ21UUFE/components_listcontrols_reorder.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">The reorder icon is the secondary action for the list item. </div>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Expand/collapse</h3>
+    <div class="module-body">
+    <p>Type: secondary action</p><p>Separate target</p><p>Expands and collapses a list view vertically to show and hide details of existing list items.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SFMxeEZvQWI4dzA/components_listcontrols_expand1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Ti0ySGFpMlFZb2c/components_listcontrols_expand2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cEozNDBDcENPdHM/components_listcontrols_expand3.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WHZIRF94SHNmRHc/components_listcontrols_expand4.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Leave-behinds</h3>
+    <div class="module-body">
+    <p>Type: Other</p><p>A leave-behind is an informative hint as to what swiping a list item away will do to that item. The leave-behind can transform into an action.</p><p>Swiping on a list item from either direction will reveal an icon indicating the action. After swiping, the action appears as a text button centered within the space of the list item.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TXZ6STc2c1hsRms/components_listcontrols_leave1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SElzX2VPbkpJMmM/components_listcontrols_leave2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="list-controls-types-of-menu-controls" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Types of menu controls
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -253,276 +438,58 @@
                   <div>
             <section class="moduleB1">
         <div class="module-body">
-      <p>For operations where the percentage of the operation completed can be ascertained, use a determinate indicator. They give users a quick sense of how long an operation will take.</p><p>For operations where the user is asked to wait a moment while something finishes, and it’s not necessary to expose what's happening behind the scenes and how long it will take, use an indeterminate indicator.</p><p>There are two types of indicators: linear and circular. You can use either one for determinate and indeterminate operations. </p>
+      <p>A menu is a special type of list. In menus, use controls that are appropriate for dropdown menus, overflow menus, and so on. Don’t use these controls in regular lists. Use the regular list controls instead.</p>
     </div>
   </section>
 
         </div>
               <div>
           <section class="moduleE1">
-      <h3>Linear</h3>
+      <h3>Check</h3>
     <div class="module-body">
-    <p>A linear progress indicator should always fill from 0% to 100% and never move backwards to a lower value. If multiple operations are happening in sequence, use the progress indicator to represent the delay as a whole. This way, when the bar reaches 100%, it doesn't return back to 0%.</p><p>Linear bars should appear and disappear on the edge of a header or sheet.</p>
+    <p>Type: state</p><p>Not a separate target. </p><p>Menus only. Indicates that the list item has been selected. The selection is done through a different control.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWVXBBVF9qR3E4a2s" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Linear_Sheet_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Linear_Sheet_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MEdoQjlzVjZZOVk/components_listcontrols_menu1.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Linear progress indicators</div>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleD1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWbjNqR2VRakhTODA" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Linear_Video_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Linear_Video_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Buffering progress indicator on a video</div><p> </p>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6MHBFZE5Wcm55ME0" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Linear_Image_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Linear_Image_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Query indicator on a webpage</div>
-        </figcaption>
-                </figure>
+                      </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
           <section class="moduleE1">
-      <h3>Circular</h3>
+      <h3>Inline information</h3>
     <div class="module-body">
-    
+    <p>Type: secondary info</p><p>Not a separate target. </p><p>Menus only. Inline information is a small snippet of text related to the line title that can provide information or a tip, like a keyboard shortcut. It cannot be truncated.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQnF5WGo1UEZBYkk" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Circular_Sheet_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Circular_Sheet_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MTlwWk9tajlPeFE/components_listcontrols_menu2.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Circular determinate progress indicators</div>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleD1">
-    <div class="module-body">
-    <p>Circular with integration</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWaVpNbk1SV3dSbXc" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Circular_Aspirational_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Circular_Aspirational_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">A circular loader may be integrated with a floating action button. </div>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWNmdHSWcxekI1Z0k" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Circular_wFab_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Circular_wFab_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              </div>
-  </div>
-</div>                  <div id="progress-activity-behavior" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
-  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Behavior
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
-      <title id="title">Expand and collapse content</title>
-      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
-      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
-    </svg>
-  </h2>
-  <div class="article-content">
-    <div class="module-list">
-                  <div>
-          <section class="moduleD1">
-    <div class="module-body">
-    <p>Loading in phases</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWcXdJR1RGRVZ3YUU" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_SwipeDown_xhdpi_004.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_SwipeDown_xhdpi_004.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">One-phased loads</div><p>Ink (copy and images) loads within an existing, unchanging container. </p>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQ3hCU2k3UXRBT0E" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_Photos_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_Photos_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Two-phased loads</div><p>The paper container is generated, then the ink (copy and images) load within it. </p>
-        </figcaption>
-                </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleD1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQjlvYm1rVFMwVlU" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_Files_Linear_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_Files_Linear_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Loading content for the first time.</div>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWNjNYREh0M3YxMGs" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_Files_Circular_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_Files_Circular_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Load and display all content at once.</div>
-        </figcaption>
-                </figure>
+                      </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
           <section class="moduleE1">
+      <h3>Nested menu indicator</h3>
     <div class="module-body">
-    <p><strong>Loading additional content</strong></p>
+    <p>Type: primary action</p><p>Not a separate target. </p><p>Menus only. The glyph indicates that a secondary menu will fly out upon hover, focus, and/or selection. </p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQW5WdklybnVhdXc" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_BigTop_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_BigTop_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MTZ3SU1HZ1V3dVE/components_listcontrols_menu3.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Example 1: Card expansion</div><p>An indeterminate linear indicator is recommended for a card expanding on larger surfaces such as desktop.</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleD1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQ3hCU2k3UXRBT0E" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_Photos_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_Photos_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Example 2: Scroll up to load more</div><p>An indeterminate circular indicator with an initial radial ink reaction is recommended when loading a list from below.</p>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWcXdJR1RGRVZ3YUU" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_SwipeDown_xhdpi_004.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_SwipeDown_xhdpi_004.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Example 3: Swipe down to refresh</div><p>An indeterminate circular indicator with a radial ink reaction is recommended when refreshing a list from above.</p>
-        </figcaption>
-                </figure>
+                      </figure>
           </div>
   </div>
 </section>
@@ -539,22 +506,22 @@
   <div class="footer-grid">
     <div class="footer-L section-components">&nbsp;</div>
     <div class="footer-grid-L section-components">
-            <a class="footer-text" href="pickers.html">
+            <a class="footer-text" href="lists.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      Pickers
+                      Lists
                   </div>
       </a>
           </div>
 
     <div class="footer-R section-components">&nbsp;</div>
     <div class="footer-grid-R section-components">
-            <a class="footer-text" href="sliders.html">
+            <a class="footer-text" href="menus.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Sliders
+                      Menus
                   </div>
       </a>
           </div>

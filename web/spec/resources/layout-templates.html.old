@@ -10,24 +10,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Authentic motion - Animation - Google design guidelines</title>
-    <meta itemprop="name" content="Authentic motion - Animation - Google design guidelines"/>
+    <title>Layout templates - Resources - Google design guidelines</title>
+    <meta itemprop="name" content="Layout templates - Resources - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Authentic motion - Animation - Google design guidelines" />
+    <meta property="og:title" content="Layout templates - Resources - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Authentic motion - Animation" />
+    <meta property="article:section" content="Layout templates - Resources" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Authentic motion</Attribute>
+      <Attribute name="title">Layout templates</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
-      <Attribute name="section_title">Animation</Attribute>
-      <Attribute name="section_slug">animation</Attribute>
+      <Attribute name="section_title">Resources</Attribute>
+      <Attribute name="section_slug">resources</Attribute>
     </DataObject>
     <DataObject type="thumbnail">
       <Attribute name="src" value="" />
@@ -45,23 +45,11 @@
 </script>
   </head>
 
-  <body class="section-animation first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
-    <header class="qp-ui" data-qp-ui="{
-  'Peekaboo': {
-    'mobile': 72,
-    'desktop-sm': 72,
-    'default': 192
-  }
-}">
-  <div class="header-wrapper qp-ui" data-qp-ui="{
-    'Peekaboo': {
-      'mobile': 28,
-      'desktop-sm': 28,
-      'default': 82
-    }
-  }">
-    <div class="header-title">      <span class="section-title">Animation</span>
-      <span class="chapter-title">Authentic motion</span>
+  <body class="section-resources noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">Resources</span>
+      <span class="chapter-title">Layout templates</span>
     </div>
   </div>
 </header>
@@ -89,16 +77,16 @@
                     <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Animation
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
                 </dt>
         <dd>
-                    <a class="nav_selected" href="authentic-motion.html">Authentic motion
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
                     </a>
-                    <a class="" href="responsive-interaction.html">Responsive interaction
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
                     </a>
-                    <a class="" href="meaningful-transitions.html">Meaningful transitions
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
                     </a>
-                    <a class="" href="delightful-details.html">Delightful details
+                    <a class="" href="../animation/delightful-details.html">Delightful details
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
@@ -199,16 +187,16 @@
                     <a class="" href="../usability/bidirectionality.html">Bidirectionality
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Resources
                 </dt>
         <dd>
-                    <a class="" href="../resources/color-palettes.html">Color palettes
+                    <a class="" href="color-palettes.html">Color palettes
                               </a>
-                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    <a class="nav_selected" href="layout-templates.html">Layout templates
                     </a>
-                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    <a class="" href="roboto-noto-fonts.html">Roboto &amp; Noto fonts
                     </a>
-                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    <a class="" href="sticker-sheets-icons.html">Sticker sheets &amp; icons
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
@@ -228,30 +216,30 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Authentic motion
+  <h1 class="chapter-title">Layout templates
       </h1>
 
   <div class="chapter-content">
         
-        <div class="chapter-intro">
-       <p>Perceiving an object’s tangible form helps us understand how to manipulate it. Observing an object’s motion tells us whether it is light or heavy, flexible or rigid, small or large. Motion in the world of material design is not only beautiful, it builds meaning about the spatial relationships, functionality, and intention of the system.</p>
-
-      
-      
-    </div>
     
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="authentic-motion.html#authentic-motion-mass-weight">Mass and weight
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="layout-templates.html#layout-templates-mobile">Mobile
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="layout-templates.html#layout-templates-tablet">Tablet
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="layout-templates.html#layout-templates-desktop">Desktop
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="layout-templates.html#layout-templates-whiteframes">Whiteframes
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="authentic-motion-mass-weight" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="layout-templates-mobile" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Mass and weight
+    Mobile
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -263,133 +251,117 @@
                   <div>
             <section class="moduleB1">
         <div class="module-body">
-      <p>Physical objects have mass and move only when forces are applied to them. Consequently, objects can’t start or stop instantaneously. Animation with abrupt starts and stops or rapid changes in direction appears unnatural and can be an unexpected and unpleasant disruption for the user.</p><p>A critical aspect of motion for material design is to retain the feeling of physicality without sacrificing elegance, simplicity, beauty, and the magic of a seamless user experience.</p>
+      <p>The mobile layout template includes a variety of 10 screens. Use the layers palette to toggle on and off keylines and spacing rules. </p>
     </div>
   </section>
 
-        </div>
-              <div>
-          <h4 class="related">
-Related
-</h4>
         </div>
               <div>
           <div class="modulettes">
-          <a class="modulette android" href="http://developer.android.com/training/material/animations.html#CurvedMotion" title="Use Curved Motion">
-      <img class="icon callout-icon" src="../static/images/callout_android.svg" alt="" />
-      <div class="info">
-        <div class="title">Use Curved Motion</div>
-        <span class="subtitle">Define timing curves and curved motion patterns for animations.</span>
-      </div>
-    </a>
-      </div>
+    <a download class="modulette download trackdl" href="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7V2s1ay1rTmM0dG8/Layout_Mobile_Whiteframe.ai" title="Mobile Whiteframe">
+    <img class="icon download-icon" src="../static/images/download_black.svg" alt="" />
+    <div class="info">
+      <div class="title">Mobile Whiteframe</div>
+      <span class="subtitle">2.57 MB (.ai)</span>
+    </div>
+  </a>
+  </div>
         </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Best practices</h3>
-    <div class="module-body">
-    <p>Accelerate objects swiftly and decelerate them slowly to avoid abrupt changes in velocity.</p>
+              </div>
   </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6SXl5UUtsc09ZUFU" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex1_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex1_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div><p>Motion with swift acceleration and gentle deceleration feels natural and delightful.</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>An abrupt change in velocity at both the beginning and end of the animation curve means the object instantaneously starts and stops, which is unrealistic.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example dont">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6TWtqQi16MDhpRm8" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex2_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex2_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Linear motion feels mechanical. </p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Special cases: Entering and exiting frame</h3>
-    <div class="module-body">
-    <p>When an object enters the frame, ensure that it's moving at its peak velocity. This behavior emulates natural movement. A person entering the frame of vision does not begin walking at the edge of the frame, but before it. Similarly, when an object exits the frame, maintain the object’s velocity, rather than slowing it down as it exits the frame. The user’s attention is drawn to an object slowly entering and exiting the frame. In most cases, that isn’t your desired effect.  </p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6TXk5OHZFYldIamc" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex3_do_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex3_do_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div><p>Enter and exit frame at peak velocity. The ball enters and exits frame at peak velocity, creating a confident transition.</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example dont">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6N2szakNGeTE5UEU" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex4_dont_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex4_dont_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Don’t speed up when entering or slow down when exiting. Don’t distract the user with unnecessary changes in velocity.</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
+</div>                  <div id="layout-templates-tablet" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Tablet
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
             <section class="moduleB1">
-          <h3>Making Adjustments</h3>
         <div class="module-body">
-      <p>Not all objects move the same way. Lighter/smaller objects may accelerate or decelerate faster because they have less mass and require less force to do so. Larger/heavier objects may need more time to reach peak speed and come to rest. Think about how this applies to the various UI elements in your app and consider how their motion should be represented.</p>
+      <p>The tablet layout template includes a variety of 14 screens. Use the layers palette to toggle on and off keylines and spacing rules.</p>
     </div>
   </section>
 
+        </div>
+              <div>
+          <div class="modulettes">
+    <a download class="modulette download trackdl" href="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7U2hHWS1kS1JjT0k/Layout_Tablet_Whiteframe.ai" title="Tablet Whiteframe">
+    <img class="icon download-icon" src="../static/images/download_black.svg" alt="" />
+    <div class="info">
+      <div class="title">Tablet Whiteframe</div>
+      <span class="subtitle">1.88 MB (.ai)</span>
+    </div>
+  </a>
+  </div>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="layout-templates-desktop" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Desktop
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>The desktop layout template includes a variety of four screens each with four different window sizes. Use the layers palette to toggle on and off keylines and spacing rules.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <div class="modulettes">
+    <a download class="modulette download trackdl" href="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UHpjdlh5bUd6Z2c/Layout_Desktop_Whiteframe.ai" title="Desktop Whiteframe">
+    <img class="icon download-icon" src="../static/images/download_black.svg" alt="" />
+    <div class="info">
+      <div class="title">Desktop Whiteframe</div>
+      <span class="subtitle">89.40 MB (.ai)</span>
+    </div>
+  </a>
+  </div>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="layout-templates-whiteframes" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Whiteframes
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>Whiteframes provide a variety of layout structures using a consistent approach to surfaces, layering, and shadows.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <div class="modulettes">
+    <a download class="modulette download trackdl" href="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SUJUS0dQVktmSXc/whiteframes.ai" title="Whiteframes">
+    <img class="icon download-icon" src="../static/images/download_black.svg" alt="" />
+    <div class="info">
+      <div class="title">Whiteframes</div>
+      <span class="subtitle">14.92 MB (.ai)</span>
+    </div>
+  </a>
+  </div>
         </div>
               </div>
   </div>
@@ -401,24 +373,24 @@ Related
 
     <footer>
   <div class="footer-grid">
-    <div class="footer-L section-what-is-material">&nbsp;</div>
-    <div class="footer-grid-L section-what-is-material">
-            <a class="footer-text" href="../what-is-material/objects-in-3d-space.html">
+    <div class="footer-L section-resources">&nbsp;</div>
+    <div class="footer-grid-L section-resources">
+            <a class="footer-text" href="color-palettes.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      What is material?
+                      Color palettes
                   </div>
       </a>
           </div>
 
-    <div class="footer-R section-animation">&nbsp;</div>
-    <div class="footer-grid-R section-animation">
-            <a class="footer-text" href="responsive-interaction.html">
+    <div class="footer-R section-resources">&nbsp;</div>
+    <div class="footer-grid-R section-resources">
+            <a class="footer-text" href="roboto-noto-fonts.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Responsive interaction
+                      Roboto &amp; Noto fonts
                   </div>
       </a>
           </div>

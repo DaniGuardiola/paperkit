@@ -10,24 +10,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Authentic motion - Animation - Google design guidelines</title>
-    <meta itemprop="name" content="Authentic motion - Animation - Google design guidelines"/>
+    <title>Environment - What is material? - Google design guidelines</title>
+    <meta itemprop="name" content="Environment - What is material? - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Authentic motion - Animation - Google design guidelines" />
+    <meta property="og:title" content="Environment - What is material? - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Authentic motion - Animation" />
+    <meta property="article:section" content="Environment - What is material?" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Authentic motion</Attribute>
+      <Attribute name="title">Environment</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
-      <Attribute name="section_title">Animation</Attribute>
-      <Attribute name="section_slug">animation</Attribute>
+      <Attribute name="section_title">What is material?</Attribute>
+      <Attribute name="section_slug">what-is-material</Attribute>
     </DataObject>
     <DataObject type="thumbnail">
       <Attribute name="src" value="" />
@@ -45,7 +45,7 @@
 </script>
   </head>
 
-  <body class="section-animation first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+  <body class="section-what-is-material first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
     <header class="qp-ui" data-qp-ui="{
   'Peekaboo': {
     'mobile': 72,
@@ -60,8 +60,8 @@
       'default': 82
     }
   }">
-    <div class="header-title">      <span class="section-title">Animation</span>
-      <span class="chapter-title">Authentic motion</span>
+    <div class="header-title">      <span class="section-title">What is material?</span>
+      <span class="chapter-title">Environment</span>
     </div>
   </div>
 </header>
@@ -79,26 +79,26 @@
                     <a class="" href="../index.html">Introduction
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What is material?
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">What is material?
                 </dt>
         <dd>
-                    <a class="" href="../what-is-material/environment.html">Environment
+                    <a class="nav_selected" href="environment.html">Environment
                     </a>
-                    <a class="" href="../what-is-material/material-properties.html">Material properties
+                    <a class="" href="material-properties.html">Material properties
                     </a>
-                    <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
+                    <a class="" href="objects-in-3d-space.html">Objects in 3D space
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Animation
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
                 </dt>
         <dd>
-                    <a class="nav_selected" href="authentic-motion.html">Authentic motion
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
                     </a>
-                    <a class="" href="responsive-interaction.html">Responsive interaction
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
                     </a>
-                    <a class="" href="meaningful-transitions.html">Meaningful transitions
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
                     </a>
-                    <a class="" href="delightful-details.html">Delightful details
+                    <a class="" href="../animation/delightful-details.html">Delightful details
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
@@ -228,30 +228,55 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Authentic motion
+  <h1 class="chapter-title">Environment
       </h1>
 
   <div class="chapter-content">
         
-        <div class="chapter-intro">
-       <p>Perceiving an object’s tangible form helps us understand how to manipulate it. Observing an object’s motion tells us whether it is light or heavy, flexible or rigid, small or large. Motion in the world of material design is not only beautiful, it builds meaning about the spatial relationships, functionality, and intention of the system.</p>
-
-      
-      
-    </div>
     
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="authentic-motion.html#authentic-motion-mass-weight">Mass and weight
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="environment.html#environment-3d-world">3D world
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="environment.html#environment-light-shadow">Light and shadow
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="authentic-motion-mass-weight" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="environment-3d-world" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Mass and weight
+    3D world
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>The material environment is a 3D space, which means all objects have x, y, and z dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the positive z-axis extending towards the viewer. Every sheet of material occupies a single position along the z-axis and has a standard 1dp thickness.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UXpQYWltVjNPWXc/whatismaterial_environment_3d.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="environment-light-shadow" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Light and shadow
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -263,133 +288,42 @@
                   <div>
             <section class="moduleB1">
         <div class="module-body">
-      <p>Physical objects have mass and move only when forces are applied to them. Consequently, objects can’t start or stop instantaneously. Animation with abrupt starts and stops or rapid changes in direction appears unnatural and can be an unexpected and unpleasant disruption for the user.</p><p>A critical aspect of motion for material design is to retain the feeling of physicality without sacrificing elegance, simplicity, beauty, and the magic of a seamless user experience.</p>
+      <p>Within the material environment, virtual lights illuminate the scene and allow objects to cast shadows. A key light creates directional shadows, while an ambient light creates consistent, soft shadows from all angles.</p><p>All shadows in the material environment are cast by these two light sources. Shadows are the absence of light resulting from the occlusion of these light sources by sheets of material at various positions along the z-axis.</p>
     </div>
   </section>
 
         </div>
               <div>
-          <h4 class="related">
-Related
-</h4>
-        </div>
-              <div>
-          <div class="modulettes">
-          <a class="modulette android" href="http://developer.android.com/training/material/animations.html#CurvedMotion" title="Use Curved Motion">
-      <img class="icon callout-icon" src="../static/images/callout_android.svg" alt="" />
-      <div class="info">
-        <div class="title">Use Curved Motion</div>
-        <span class="subtitle">Define timing curves and curved motion patterns for animations.</span>
-      </div>
-    </a>
-      </div>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Best practices</h3>
-    <div class="module-body">
-    <p>Accelerate objects swiftly and decelerate them slowly to avoid abrupt changes in velocity.</p>
-  </div>
+          <section class="moduleC1 moduleC2">
   <div class="figure-group">
     <div class="figure-row">
-            <figure class="example do">
+            <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6SXl5UUtsc09ZUFU" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex1_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex1_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aUEtMG1ielNEaEk/whatismaterial_environment_shadow1.png" />
+                      </div>
                         <figcaption>
-          <div class="caption-title">Do.</div><p>Motion with swift acceleration and gentle deceleration feels natural and delightful.</p>
+          <div class="caption-title"></div><p>Shadow cast by key light</p>
         </figcaption>
-              </figure>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZlNXZTJFX245YUE/whatismaterial_environment_shadow2.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>Shadow cast by ambient light</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Z19QQzFJWXhYT0E/whatismaterial_environment_shadow3.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>Combined shadow from key and ambient lights</p>
+        </figcaption>
+                </figure>
           </div>
   </div>
 </section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>An abrupt change in velocity at both the beginning and end of the animation curve means the object instantaneously starts and stops, which is unrealistic.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example dont">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6TWtqQi16MDhpRm8" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex2_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex2_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Linear motion feels mechanical. </p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Special cases: Entering and exiting frame</h3>
-    <div class="module-body">
-    <p>When an object enters the frame, ensure that it's moving at its peak velocity. This behavior emulates natural movement. A person entering the frame of vision does not begin walking at the edge of the frame, but before it. Similarly, when an object exits the frame, maintain the object’s velocity, rather than slowing it down as it exits the frame. The user’s attention is drawn to an object slowly entering and exiting the frame. In most cases, that isn’t your desired effect.  </p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6TXk5OHZFYldIamc" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex3_do_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex3_do_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div><p>Enter and exit frame at peak velocity. The ball enters and exits frame at peak velocity, creating a confident transition.</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example dont">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6N2szakNGeTE5UEU" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex4_dont_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex4_dont_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Don’t speed up when entering or slow down when exiting. Don’t distract the user with unnecessary changes in velocity.</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-            <section class="moduleB1">
-          <h3>Making Adjustments</h3>
-        <div class="module-body">
-      <p>Not all objects move the same way. Lighter/smaller objects may accelerate or decelerate faster because they have less mass and require less force to do so. Larger/heavier objects may need more time to reach peak speed and come to rest. Think about how this applies to the various UI elements in your app and consider how their motion should be represented.</p>
-    </div>
-  </section>
-
         </div>
               </div>
   </div>
@@ -401,24 +335,24 @@ Related
 
     <footer>
   <div class="footer-grid">
-    <div class="footer-L section-what-is-material">&nbsp;</div>
-    <div class="footer-grid-L section-what-is-material">
-            <a class="footer-text" href="../what-is-material/objects-in-3d-space.html">
+    <div class="footer-L section-material-design">&nbsp;</div>
+    <div class="footer-grid-L section-material-design">
+            <a class="footer-text" href="../index.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      What is material?
+                      Material design
                   </div>
       </a>
           </div>
 
-    <div class="footer-R section-animation">&nbsp;</div>
-    <div class="footer-grid-R section-animation">
-            <a class="footer-text" href="responsive-interaction.html">
+    <div class="footer-R section-what-is-material">&nbsp;</div>
+    <div class="footer-grid-R section-what-is-material">
+            <a class="footer-text" href="material-properties.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Responsive interaction
+                      Material properties
                   </div>
       </a>
           </div>

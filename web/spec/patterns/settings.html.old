@@ -10,24 +10,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Authentic motion - Animation - Google design guidelines</title>
-    <meta itemprop="name" content="Authentic motion - Animation - Google design guidelines"/>
+    <title>Settings - Patterns - Google design guidelines</title>
+    <meta itemprop="name" content="Settings - Patterns - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Authentic motion - Animation - Google design guidelines" />
+    <meta property="og:title" content="Settings - Patterns - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Authentic motion - Animation" />
+    <meta property="article:section" content="Settings - Patterns" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Authentic motion</Attribute>
+      <Attribute name="title">Settings</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
-      <Attribute name="section_title">Animation</Attribute>
-      <Attribute name="section_slug">animation</Attribute>
+      <Attribute name="section_title">Patterns</Attribute>
+      <Attribute name="section_slug">patterns</Attribute>
     </DataObject>
     <DataObject type="thumbnail">
       <Attribute name="src" value="" />
@@ -45,23 +45,11 @@
 </script>
   </head>
 
-  <body class="section-animation first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
-    <header class="qp-ui" data-qp-ui="{
-  'Peekaboo': {
-    'mobile': 72,
-    'desktop-sm': 72,
-    'default': 192
-  }
-}">
-  <div class="header-wrapper qp-ui" data-qp-ui="{
-    'Peekaboo': {
-      'mobile': 28,
-      'desktop-sm': 28,
-      'default': 82
-    }
-  }">
-    <div class="header-title">      <span class="section-title">Animation</span>
-      <span class="chapter-title">Authentic motion</span>
+  <body class="section-patterns noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">Patterns</span>
+      <span class="chapter-title">Settings</span>
     </div>
   </div>
 </header>
@@ -89,16 +77,16 @@
                     <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Animation
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
                 </dt>
         <dd>
-                    <a class="nav_selected" href="authentic-motion.html">Authentic motion
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
                     </a>
-                    <a class="" href="responsive-interaction.html">Responsive interaction
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
                     </a>
-                    <a class="" href="meaningful-transitions.html">Meaningful transitions
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
                     </a>
-                    <a class="" href="delightful-details.html">Delightful details
+                    <a class="" href="../animation/delightful-details.html">Delightful details
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
@@ -165,30 +153,30 @@
                     <a class="" href="../components/tooltips.html">Tooltips
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Patterns
                 </dt>
         <dd>
-                    <a class="" href="../patterns/data-formats.html">Data formats
+                    <a class="" href="data-formats.html">Data formats
                     </a>
-                    <a class="" href="../patterns/errors.html">Errors
+                    <a class="" href="errors.html">Errors
                     </a>
-                    <a class="" href="../patterns/gestures.html">Gestures
+                    <a class="" href="gestures.html">Gestures
                     </a>
-                    <a class="" href="../patterns/loading-images.html">Loading images
+                    <a class="" href="loading-images.html">Loading images
                     </a>
-                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
+                    <a class="" href="navigation-drawer.html">Navigation drawer
                     </a>
-                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
+                    <a class="" href="navigational-transitions.html">Navigational transitions
                     </a>
-                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
+                    <a class="" href="scrolling-techniques.html">Scrolling techniques
                     </a>
-                    <a class="" href="../patterns/search.html">Search
+                    <a class="" href="search.html">Search
                     </a>
-                    <a class="" href="../patterns/selection.html">Selection
+                    <a class="" href="selection.html">Selection
                     </a>
-                    <a class="" href="../patterns/settings.html">Settings
+                    <a class="nav_selected" href="settings.html">Settings
                     </a>
-                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
+                    <a class="" href="swipe-to-refresh.html">Swipe to refresh
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
@@ -228,30 +216,24 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Authentic motion
+  <h1 class="chapter-title">Settings
       </h1>
 
   <div class="chapter-content">
         
-        <div class="chapter-intro">
-       <p>Perceiving an object’s tangible form helps us understand how to manipulate it. Observing an object’s motion tells us whether it is light or heavy, flexible or rigid, small or large. Motion in the world of material design is not only beautiful, it builds meaning about the spatial relationships, functionality, and intention of the system.</p>
-
-      
-      
-    </div>
     
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="authentic-motion.html#authentic-motion-mass-weight">Mass and weight
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="settings.html#settings-settings">Settings
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="authentic-motion-mass-weight" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="settings-settings" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Mass and weight
+    Settings
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -263,130 +245,64 @@
                   <div>
             <section class="moduleB1">
         <div class="module-body">
-      <p>Physical objects have mass and move only when forces are applied to them. Consequently, objects can’t start or stop instantaneously. Animation with abrupt starts and stops or rapid changes in direction appears unnatural and can be an unexpected and unpleasant disruption for the user.</p><p>A critical aspect of motion for material design is to retain the feeling of physicality without sacrificing elegance, simplicity, beauty, and the magic of a seamless user experience.</p>
+      <p>Application settings allow users to indicate their preferences for how the app should behave. They grant the user a genuine sense of control and can be useful in avoiding repeated interruptions with the same question.</p>
     </div>
   </section>
 
         </div>
               <div>
-          <h4 class="related">
-Related
-</h4>
-        </div>
-              <div>
-          <div class="modulettes">
-          <a class="modulette android" href="http://developer.android.com/training/material/animations.html#CurvedMotion" title="Use Curved Motion">
-      <img class="icon callout-icon" src="../static/images/callout_android.svg" alt="" />
-      <div class="info">
-        <div class="title">Use Curved Motion</div>
-        <span class="subtitle">Define timing curves and curved motion patterns for animations.</span>
-      </div>
-    </a>
-      </div>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Best practices</h3>
+          <section class="moduleD1">
+      <h3>Accessing settings</h3>
     <div class="module-body">
-    <p>Accelerate objects swiftly and decelerate them slowly to avoid abrupt changes in velocity.</p>
+    <p>Settings are given low prominence in the UI because they’re not frequently needed by users. When your app uses settings:</p><ul><li><span>The action for accessing Settings should always be simply labelled as “Settings”.</span></li><li><span>If the current screen supports a side nav drawer, place a menu item for Settings in the drawer, below all other items except Help &amp; Feedback.</span></li><li><span>Otherwise, if there is a toolbar on the current screen, place a menu item for Settings in the toolbar’s action overflow, below all other items except Help &amp; Feedback.</span></li></ul>
   </div>
   <div class="figure-group">
     <div class="figure-row">
-            <figure class="example do">
+            <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6SXl5UUtsc09ZUFU" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex1_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex1_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7clVkSXA1Tk9QVnc/patterns_settings_menu.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div><p>Motion with swift acceleration and gentle deceleration feels natural and delightful.</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>An abrupt change in velocity at both the beginning and end of the animation curve means the object instantaneously starts and stops, which is unrealistic.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example dont">
+                        </figure>
+            <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6TWtqQi16MDhpRm8" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex2_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex2_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dFBLTWNCSHNjaVk/patterns_settings_sidenav.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Linear motion feels mechanical. </p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Special cases: Entering and exiting frame</h3>
-    <div class="module-body">
-    <p>When an object enters the frame, ensure that it's moving at its peak velocity. This behavior emulates natural movement. A person entering the frame of vision does not begin walking at the edge of the frame, but before it. Similarly, when an object exits the frame, maintain the object’s velocity, rather than slowing it down as it exits the frame. The user’s attention is drawn to an object slowly entering and exiting the frame. In most cases, that isn’t your desired effect.  </p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6TXk5OHZFYldIamc" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex3_do_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex3_do_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div><p>Enter and exit frame at peak velocity. The ball enters and exits frame at peak velocity, creating a confident transition.</p>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example dont">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6N2szakNGeTE5UEU" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-authenticmotion-massandweight-ex4_dont_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-authenticmotion-massandweight-ex4_dont_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Don’t speed up when entering or slow down when exiting. Don’t distract the user with unnecessary changes in velocity.</p>
-        </figcaption>
-              </figure>
+                        </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
             <section class="moduleB1">
-          <h3>Making Adjustments</h3>
+          <h3>Using settings appropriately</h3>
         <div class="module-body">
-      <p>Not all objects move the same way. Lighter/smaller objects may accelerate or decelerate faster because they have less mass and require less force to do so. Larger/heavier objects may need more time to reach peak speed and come to rest. Think about how this applies to the various UI elements in your app and consider how their motion should be represented.</p>
+      <p>When users visit Settings—however infrequently—they’ll hold this screen to the same expectations as the rest of their experience. It should be well-organized and predictable. Don’t overwhelm the user with too many options.</p><p>Avoid the urge to “just make it a setting”. For each control you’re considering adding to Settings, make sure it’s appropriate by asking the following questions:</p><ul><li><strong>Is this actually a user preference? </strong><span>Information and actions are not user preferences.<br/>If not, don’t make it a setting. If it’s static information about the app (e.g. version number, terms of service, open source licenses), organize it into a Help screen.If it’s an action (e.g. refresh, change account), find an appropriate place for it within the main flow of your app.</span></li><li><strong>Is this infrequently changed by users?</strong><span> Would users feel burdened by taking multiple actions to access this control each time?<br/>If not, don’t make it a setting. Make the control more readily available, possibly via a toolbar or action overflow.</span></li><li><strong>Would fewer than 20% of users change the value of this control?</strong><span> <br/>If not, don’t make it a setting.</span></li></ul><p>These same questions should be applied to both new and existing settings. For existing settings, you may have to think more about the last question: If the setting were removed, would it cause harm to the minority who would no longer be able to change it? If so, then maintaining it as a setting is appropriate.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Grouping settings</h3>
+    <div class="module-body">
+    <p>When you have many settings, turn one long list into multiple shorter lists by clustering the settings. Your strategy for arranging them will depend on the total number of settings in the Settings panel in your app.</p><h4>Seven or fewer</h4><p>Don’t group at all.</p><h4>Nine to 10</h4><p>Try grouping related settings under 1 or 2 section dividers. If you have any "singletons" (settings that don't relate to any other settings and can't be grouped under your section dividers), treat them as follows:</p><ul><li><span>If they include some of your most important settings, list them at the top without a section divider.</span></li><li><span>Otherwise, list them at the bottom with a section divider called "Other", in order of importance.</span></li></ul><h4>11 to 15</h4><p>Same advice as above, but try two to four section dividers. Look for "doubles": two settings that relate to one another, but not to any other settings. Try to combine them into one setting. For example, you might be able to redesign two related checkbox settings into one multiple choice setting.</p><h4>16 or more</h4><p>If you have any instances of four or more related settings, group them under a subscreen. Apply the guidance above to each subscreen.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZDdRVXRYd3p6R2M/patterns_settings_subscreen2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3><br/>Choosing defaults</h3>
+        <div class="module-body">
+      <p>Users will expect the initial value for each setting to be sensible. The following questions can help inform your decisions:</p><ul><li><span>Which choice would most users be likely to choose on their own if there were no default?</span></li><li><span>Which choice is the most neutral or middle-of-the-road?</span></li><li><span>Which choice is the least risky, controversial, or over-the-top?</span></li><li><span>Which choice uses the least amount of battery or mobile data?</span></li><li><span>Which choice most respects the user’s attention, and only interrupts when it is important?</span></li></ul>
     </div>
   </section>
 
@@ -401,24 +317,24 @@ Related
 
     <footer>
   <div class="footer-grid">
-    <div class="footer-L section-what-is-material">&nbsp;</div>
-    <div class="footer-grid-L section-what-is-material">
-            <a class="footer-text" href="../what-is-material/objects-in-3d-space.html">
+    <div class="footer-L section-patterns">&nbsp;</div>
+    <div class="footer-grid-L section-patterns">
+            <a class="footer-text" href="selection.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      What is material?
+                      Selection
                   </div>
       </a>
           </div>
 
-    <div class="footer-R section-animation">&nbsp;</div>
-    <div class="footer-grid-R section-animation">
-            <a class="footer-text" href="responsive-interaction.html">
+    <div class="footer-R section-patterns">&nbsp;</div>
+    <div class="footer-grid-R section-patterns">
+            <a class="footer-text" href="swipe-to-refresh.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Responsive interaction
+                      Swipe to refresh
                   </div>
       </a>
           </div>

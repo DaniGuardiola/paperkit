@@ -10,24 +10,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Delightful details - Animation - Google design guidelines</title>
-    <meta itemprop="name" content="Delightful details - Animation - Google design guidelines"/>
+    <title>Chips - Components - Google design guidelines</title>
+    <meta itemprop="name" content="Chips - Components - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Delightful details - Animation - Google design guidelines" />
+    <meta property="og:title" content="Chips - Components - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Delightful details - Animation" />
+    <meta property="article:section" content="Chips - Components" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Delightful details</Attribute>
+      <Attribute name="title">Chips</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
-      <Attribute name="section_title">Animation</Attribute>
-      <Attribute name="section_slug">animation</Attribute>
+      <Attribute name="section_title">Components</Attribute>
+      <Attribute name="section_slug">components</Attribute>
     </DataObject>
     <DataObject type="thumbnail">
       <Attribute name="src" value="" />
@@ -45,11 +45,11 @@
 </script>
   </head>
 
-  <body class="section-animation noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+  <body class="section-components noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
     <header>
   <div class="header-wrapper">
-    <div class="header-title">      <span class="section-title">Animation</span>
-      <span class="chapter-title">Delightful details</span>
+    <div class="header-title">      <span class="section-title">Components</span>
+      <span class="chapter-title">Chips</span>
     </div>
   </div>
 </header>
@@ -77,16 +77,16 @@
                     <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Animation
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
                 </dt>
         <dd>
-                    <a class="" href="authentic-motion.html">Authentic motion
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
                     </a>
-                    <a class="" href="responsive-interaction.html">Responsive interaction
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
                     </a>
-                    <a class="" href="meaningful-transitions.html">Meaningful transitions
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
                     </a>
-                    <a class="nav_selected" href="delightful-details.html">Delightful details
+                    <a class="" href="../animation/delightful-details.html">Delightful details
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
@@ -111,46 +111,46 @@
                     <a class="" href="../layout/structure.html">Structure
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Components
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Components
                 </dt>
         <dd>
-                    <a class="" href="../components/bottom-sheets.html">Bottom sheets
+                    <a class="" href="bottom-sheets.html">Bottom sheets
                     </a>
-                    <a class="" href="../components/buttons.html">Buttons
+                    <a class="" href="buttons.html">Buttons
                     </a>
-                    <a class="" href="../components/cards.html">Cards
+                    <a class="" href="cards.html">Cards
                     </a>
-                    <a class="" href="../components/chips.html">Chips
+                    <a class="nav_selected" href="chips.html">Chips
                     </a>
-                    <a class="" href="../components/dialogs.html">Dialogs
+                    <a class="" href="dialogs.html">Dialogs
                     </a>
-                    <a class="" href="../components/dividers.html">Dividers
+                    <a class="" href="dividers.html">Dividers
                     </a>
-                    <a class="" href="../components/grids.html">Grids
+                    <a class="" href="grids.html">Grids
                     </a>
-                    <a class="" href="../components/lists.html">Lists
+                    <a class="" href="lists.html">Lists
                     </a>
-                    <a class="" href="../components/list-controls.html">List controls
+                    <a class="" href="list-controls.html">List controls
                     </a>
-                    <a class="" href="../components/menus.html">Menus
+                    <a class="" href="menus.html">Menus
                     </a>
-                    <a class="" href="../components/pickers.html">Pickers
+                    <a class="" href="pickers.html">Pickers
                     </a>
-                    <a class="" href="../components/progress-activity.html">Progress &amp; activity
+                    <a class="" href="progress-activity.html">Progress &amp; activity
                     </a>
-                    <a class="" href="../components/sliders.html">Sliders
+                    <a class="" href="sliders.html">Sliders
                     </a>
-                    <a class="" href="../components/snackbars-toasts.html">Snackbars &amp; toasts
+                    <a class="" href="snackbars-toasts.html">Snackbars &amp; toasts
                     </a>
-                    <a class="" href="../components/subheaders.html">Subheaders
+                    <a class="" href="subheaders.html">Subheaders
                     </a>
-                    <a class="" href="../components/switches.html">Switches
+                    <a class="" href="switches.html">Switches
                     </a>
-                    <a class="" href="../components/tabs.html">Tabs
+                    <a class="" href="tabs.html">Tabs
                     </a>
-                    <a class="" href="../components/text-fields.html">Text fields
+                    <a class="" href="text-fields.html">Text fields
                     </a>
-                    <a class="" href="../components/tooltips.html">Tooltips
+                    <a class="" href="tooltips.html">Tooltips
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
@@ -216,48 +216,99 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Delightful details
+  <h1 class="chapter-title">Chips
       </h1>
 
   <div class="chapter-content">
         
         <div class="chapter-intro">
-      <section class="moduleD1">
+       <p>Chips are small blocks that represent a complex entity, such as a calendar event or contact.  They can contain a photo, short title string (truncated if necessary), and other brief information. Chips are easily manipulated through drag and drop. Touching them invokes the full entity view in a card or full screen view or invokes a menu of options related to that chip’s entity. </p><p>Animations invoking and invoked from chips should resize the chip material between entity views for element persistence. </p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="chips.html#chips-contact-chips">Contact chips
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="chips-contact-chips" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Contact chips
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
     <div class="module-body">
-    <p>Animation can exist within all components of an app and at all scales, from finely detailed icons to key transitions and actions. All elements work together to construct a seamless experience and a beautiful, functional app.</p><p>The most basic use of animation is in transitions, but an app can truly delight a user when animation is used in ways beyond the obvious. A menu icon that becomes an arrow or playback controls that smoothly change from one to the other serve dual functions: to inform the user and to imbue your app with a moment of wonder and a sense of superb craftsmanship. Users do notice such small details.</p>
+    <p>Contact chips represent people for whom the user has contact information. They are invoked and inserted into a text field (usually the To field) when the user starts typing a contact’s name, sees the contact’s addresses, and selects the correct one. Contact chips can be added directly to a text field from a menu of contacts.</p><p>Contact chips confirm that the user will be sending their message to the correct person, and are space and operationally efficient. </p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B08MbvYZK1iNZk1zbFZfSXI2Snc" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-DelightfulDetails-DelightfulDetails-WellCrafted_v01_large_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-DelightfulDetails-DelightfulDetails-WellCrafted_v01_large_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aF92ZTRxOTU4U00/components_chips_contact1.png" />
                     </div>
                         </figure>
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6eVd5SmhJUTZxWVk" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-delightfuldetails-030401_Status_Change_xhdpi_003.webm" type="video/webm" />
-                                            <source src="animation-delightfuldetails-030401_Status_Change_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MVF2bUpGcWhlUVE/components_chips_contact2.png" />
                     </div>
                         </figure>
           </div>
   </div>
 </section>
-      
-      
-    </div>
-    
-    
-    <div class="article-list">
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h4>Closed contact chip</h4><ul><li><span>The contact name text is Roboto Regular 14sp.</span></li><li><span>Upon focus, the chip rises. When pressed, it expands to shows alternative addresses for the contact.</span></li></ul><h4>Open contact chip</h4><ul><li><span>Contact name text:  Roboto Regular 16sp</span></li><li><span>Address text: Roboto Regular 14sp</span></li><li><span>On press, the contact chip closes automatically.</span></li><li><span>By default, the top field is activated and focused.</span></li></ul>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MmdUUVdtcW9SVWM/components_chips_contact_keyline1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7c3lOMERFblZhOHc/components_chips_contact_keyline2.png" />
+                    </div>
+                        </figure>
           </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Yy1WSUVWSEVmN28/components_chips_contact3.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
 
   </div>
 
@@ -265,24 +316,24 @@
 
     <footer>
   <div class="footer-grid">
-    <div class="footer-L section-animation">&nbsp;</div>
-    <div class="footer-grid-L section-animation">
-            <a class="footer-text" href="meaningful-transitions.html">
+    <div class="footer-L section-components">&nbsp;</div>
+    <div class="footer-grid-L section-components">
+            <a class="footer-text" href="cards.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      Meaningful transitions
+                      Cards
                   </div>
       </a>
           </div>
 
-    <div class="footer-R section-style">&nbsp;</div>
-    <div class="footer-grid-R section-style">
-            <a class="footer-text" href="../style/color.html">
+    <div class="footer-R section-components">&nbsp;</div>
+    <div class="footer-grid-R section-components">
+            <a class="footer-text" href="dialogs.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Style
+                      Dialogs
                   </div>
       </a>
           </div>

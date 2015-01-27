@@ -709,8 +709,8 @@
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B0NGgBg38lWWYnZwZjNrLUQyQUE" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-tabs-spec-061604_TabTouch_Target_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-tabs-spec-061604_TabTouch_Target_xhdpi_002.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWcjl0X2hEa0hqRzA/components-tabs-spec-061604_TabTouch_Target_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWYnZwZjNrLUQyQUE/components-tabs-spec-061604_TabTouch_Target_xhdpi_002.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
