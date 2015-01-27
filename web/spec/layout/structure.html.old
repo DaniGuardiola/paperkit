@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Paperkit - Flavored Spec [Structure - Layout]</title>
+    <meta itemprop="name" content="Structure - Layout - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Structure - Layout - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Structure - Layout" />
+
+
+
+
+
+  <!-- PAPERKIT SETTINGS -->
+  <meta id="mdvars" path="../../">
+  <link rel="stylesheet" href="../../paperkit-min/paperkit.css">
+  <link href="../../resources/prism.css" rel="stylesheet">
+  <link href="../../resources/spec/style.css" rel="stylesheet">
+  <script src="../../paperkit-min/paperkit.js"></script>
+  <script src="../../resources/spec/script.js"></script>
+
+
+
+
+
+
+
+
+
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Structure</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">Layout</Attribute>
+      <Attribute name="section_slug">layout</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+
+
+
+
+
+
+
+<!-- PAPERKIT ANALYTICS -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58574637-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+
+  <body class="section-layout noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">Layout</span>
+      <span class="chapter-title">Structure</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+
+    <!-- PAPERKIT BANNER -->
+    <a href="/"><span id="logo" style="height: auto; padding: 5px 10px;"><img style="height: auto; width: auto;" src="../../resources/brand/banner.png" alt="Google logo"/></span></a>
+
+
+
+
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Material design
+                </dt>
+        <dd>
+                    <a class="" href="../index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="../what-is-material/environment.html">Environment
+                    </a>
+                    <a class="" href="../what-is-material/material-properties.html">Material properties
+                    </a>
+                    <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="../animation/delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="../style/color.html">Color
+                    </a>
+                    <a class="" href="../style/icons.html">Icons
+                    </a>
+                    <a class="" href="../style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="../style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Layout
+                </dt>
+        <dd>
+                    <a class="" href="principles.html">Principles
+                    </a>
+                    <a class="" href="metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="nav_selected" href="structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Components
+                </dt>
+        <dd>
+                    <a class="" href="../components/bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="../components/buttons.html">Buttons
+                    </a>
+                    <a class="" href="../components/cards.html">Cards
+                    </a>
+                    <a class="" href="../components/chips.html">Chips
+                    </a>
+                    <a class="" href="../components/dialogs.html">Dialogs
+                    </a>
+                    <a class="" href="../components/dividers.html">Dividers
+                    </a>
+                    <a class="" href="../components/grids.html">Grids
+                    </a>
+                    <a class="" href="../components/lists.html">Lists
+                    </a>
+                    <a class="" href="../components/list-controls.html">List controls
+                    </a>
+                    <a class="" href="../components/menus.html">Menus
+                    </a>
+                    <a class="" href="../components/pickers.html">Pickers
+                    </a>
+                    <a class="" href="../components/progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="../components/sliders.html">Sliders
+                    </a>
+                    <a class="" href="../components/snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="../components/subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="../components/switches.html">Switches
+                    </a>
+                    <a class="" href="../components/tabs.html">Tabs
+                    </a>
+                    <a class="" href="../components/text-fields.html">Text fields
+                    </a>
+                    <a class="" href="../components/tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                </dt>
+        <dd>
+                    <a class="" href="../patterns/data-formats.html">Data formats
+                    </a>
+                    <a class="" href="../patterns/errors.html">Errors
+                    </a>
+                    <a class="" href="../patterns/gestures.html">Gestures
+                    </a>
+                    <a class="" href="../patterns/loading-images.html">Loading images
+                    </a>
+                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="../patterns/search.html">Search
+                    </a>
+                    <a class="" href="../patterns/selection.html">Selection
+                    </a>
+                    <a class="" href="../patterns/settings.html">Settings
+                    </a>
+                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="../usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="../usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="../resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+
+    <!-- PAPERKIT LEGAL MODIFICATION -->
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <p class="copyright">Modified by Paperkit for informational purposes</p>
+      <p class="copyright"><a href="https://www.google.com/design/spec/">Go to the original spec</a></p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+
+
+
+
+
+
+
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Structure
+      </h1>
+
+  <div class="chapter-content">
+        
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="structure.html#structure-ui-regions-guidance">UI regions and guidance
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="structure.html#structure-toolbars">Toolbars
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="structure.html#structure-app-bar">App bar
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="structure.html#structure-system-bars">System bars
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="structure.html#structure-side-nav">Side nav
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="structure.html#structure-whiteframes">Whiteframes
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="structure-ui-regions-guidance" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    UI regions and guidance
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>This section covers the high level structure of our apps ranging from mobile to desktop and contains guidance.</p><p>Note: For guidance on arranging elements in z-space to achieve the correct behavior and shadows, see the <a href="../what-is-material/environment.html">Environment</a> and <a href="../what-is-material/objects-in-3d-space.html">Objects in 3D space</a> sections.</p><p>Apps come in many varieties that address very different needs. For example:</p><ul><li><span>Apps built around a single focused activity handled from a single screen (such as a calculator, a camera, and many games)</span></li><li><span>Apps whose main purpose is to switch between different activities without deeper navigation (such as a phone dialer offering favorites, recents, and contacts)</span></li><li><span>Apps that combine a broad set of data views with deep navigation (such as different folders for a mail app or product categories in a shopping app)</span></li></ul><p>Your app's structure will depend largely on the content and tasks you want to surface for your users. </p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>Starting from the top</h3>
+        <div class="module-body">
+      <p>The layout of your start screen requires special attention. This is the first screen people see after launching your app, so it should be an equally rewarding experience for new and frequent visitors alike.</p><p>Ask yourself: "What will typical users most likely want to do in my app?", and structure your start screen experience accordingly.</p><p><strong>Put content forward</strong><span>. Many apps focus on the content display. Avoid navigation-only screens and instead let people get to the core experience of your app right away by making content the centerpiece of your start screen. Choose layouts that are visually engaging and appropriate for the data type and screen size.</p><p><strong>Anchor navigation and actions</strong><span>. Like any toolbar, the app bar can organize important actions. Its position at the top of a screen makes it ideal for presenting navigation controls, including switching between tabs or opening the left navigation bar. If your content is searchable, include the Search action in the app bar so people can cut through the navigation hierarchy.</p><p><strong>Be opinionated about functionality</strong><span>. When your app has a large amount of content or capabilities, direct the user’s focus to the most critical aspects of your product. Highlight navigation to important destinations within the content area. Promote the most characterful action as a floating action button. De-emphasize less frequently traveled paths in your app.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>Top-level view strategies</h3>
+        <div class="module-body">
+      <p>The top level communicates your app’s capabilities by introducing the user to the major functional areas. Some apps will be very focused and have modest navigation needs. In other apps, the top level will consist of multiple views, and you'll want to make sure that the user can navigate between them efficiently.</p><p>Select the approach that best matches your app's navigation needs.</p><p><strong>Focus on a single view with embedded navigation</strong><span>. By putting all the necessary navigation directly inline with other app content, you make it extremely visible to the user. This can be appropriate when the app’s navigation model is very simple. However, presenting a large number of navigation paths in this manner can reduce the space available to display content. These pathways could be distributed throughout the screen rather than co-located in a predictable and convenient location.</p><p>Use in-context navigation if:</p><ul><li><span>Your app has a strong primary view, and no or few alternate ones.</span></li><li><span>Your users can complete the most common tasks easily within the main view.</span></li><li><span>You expect users will use your app very infrequently and will appreciate well-exposed paths.</span></li></ul><p><strong>Use tabs to switch between a small number of equally important views</strong><span>. If your app has only a handful of functional areas, each with shallow hierarchies, using tabs increases the awareness of these peer top-level views. It also accelerates switching between them, bringing them into view with just a click or a swipe. However, displaying the tabs takes up significant space on smaller displays, and is efficient only for a small number of peers with succinct labels.</p><p>Use tabs if:</p><ul><li><span>You expect your app's users to switch views frequently.</span></li><li><span>You have a limited number of top-level views.</span></li><li><span>You want the user to be highly aware of the alternate views.</span></li></ul><p><strong>Manage more complex structure through a left navigation drawer</strong><span>. The left nav panel can display large numbers of navigation targets concurrently. It is particularly useful when your app has a single, natural “home”, and the drawer can then act as an index of less frequently visited destinations. If your app requires cross-navigation directly from a lower-level screen to other important sections of your app, the ability to swipe in the side nav panel from any point in your app can make that context switch more efficient for the user. However, because it is a less obvious affordance, it may take the user time to familiarize themselves with the contents.</p><p>Use a navigation drawer if:</p><ul><li><span>Your app has a large number of top-level views.</span></li><li><span>You want to enable quick cross-navigation between views which aren’t directly related.</span></li><li><span>You have particularly deep navigation branches and want to accelerate returning to the top of the app.</span></li><li><span>You want to reduce the visibility and user awareness of less frequently visited destinations.</span></li></ul><p>Regardless of the top-level view strategy you select, in-context navigation is always a powerful tactic for moving between related sets of data. Some examples are providing direct links between one song and other from that artist, between recent items and a complete history, or between one post from a user and their overall profile. These direct paths make it natural to extend from a main task into a related one.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Mobile structure</h3>
+    <div class="module-body">
+    <p>This structure includes a permanent app bar and floating action button. An optional bottom bar can be added for additional functionality or action overflow. Side nav menus overlay all other structural elements.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7T0hfM01sSmRyTG8/layout_structure_regions_mobile.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Tablet structure</h3>
+    <div class="module-body">
+    <p>This structure shows a permanent app bar with a floating action button. The app bar absorbs elements from the tablet and mobile bottom bars. An optional bottom bar can be added for additional functionality or action overflow. A side nav overlays all other structural elements. A right nav menu can be accessed temporarily or pinned for permanent display.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VmpjWnp5UDZEWEU/layout_structure_regions_tablet.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Desktop structure</h3>
+    <div class="module-body">
+    <p>This structure contains a permanent app bar with a floating action button. The app bar absorbs elements from the tablet and mobile bottom bars. Where possible, the window controls are absorbed into the app bar. Side navigation menus can be accessed temporarily or pinned for permanent display. Side nav menus as well as the content canvas can have their own secondary toolbars for tabs, palettes, or secondary actions.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SnotM2RNN2FFMzQ/layout_structure_regions_desktop.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>UI regions</h3>
+    <div class="module-body">
+    <p>Define a primary horizontal or vertical divider.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cGZWZmxBV1d1M2s/layout_structure_regions_guidance1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dnhDVHg4WTBrbnc/layout_structure_regions_guidance2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Avoid slicing up the interface into too many regions which can cause L shapes. Instead, use whitespace to delineate secondary areas.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RVg5NlRYc29XRTQ/layout_structure_regions_guidance3.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NHNfYW03U28wYnM/layout_structure_regions_guidance4.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Break edges with cards and floating action buttons.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RHJsbFhpanhPQXc/layout_structure_regions_guidance5.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aTFlbjdxV2dwZVE/layout_structure_regions_guidance6.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Use cards to organize content when specific behaviors are needed or if groupings of information need more separation than what whitespace or dividers can provide.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QzR3ZFdSS1VhSkk/layout_structure_regions_guidance7.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZXRFRzA3eGpQSG8/layout_structure_regions_guidance8.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="structure-toolbars" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Toolbars
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Toolbars are versatile and can be used in many different ways. Here are some examples.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7eW41S2JtRm9CSmc/layout_structure_toolbars1.png" />
+                    </div>
+                        <figcaption>
+          <p>Full-width, default height app bar</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-fullwidth-defaultheight" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-height="x3" md-color="grey-200">
+<md-toolbar md-color="blue" md-shadow="shadow-1">
+  <md-row>
+    <md-icon-button md-image="icon:menu" md-fill="blue-900"></md-icon-button>
+    <md-text style="line-height: initial">Title</md-text>
+    <md-space></md-space>
+    <md-icon-button md-image="icon:search" md-fill="blue-900"></md-icon-button>
+    <md-icon-button md-image="icon:view_module" md-fill="blue-900"></md-icon-button>
+    <md-icon-button md-image="icon:refresh" md-fill="blue-900"></md-icon-button>
+    <md-icon-button md-image="icon:more_vert" md-fill="blue-900"></md-icon-button>
+  </md-row>
+</md-toolbar>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UnNtdkNxY05oelk/layout_structure_toolbars2.png" />
+                    </div>
+                        <figcaption>
+          <p>Full-width, extended height app bar </p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-fullwidth-extendedheight" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+	<div class="example" md-height="x4" md-color="grey-200">
+<md-toolbar md-color="blue" md-shadow="shadow-1">
+  <md-row>
+    <md-icon-button md-image="icon:menu" md-fill="blue-900"></md-icon-button>
+    <md-space></md-space>
+    <md-icon-button md-image="icon:search" md-fill="blue-900"></md-icon-button>
+    <md-icon-button md-image="icon:view_module" md-fill="blue-900"></md-icon-button>
+    <md-icon-button md-image="icon:refresh" md-fill="blue-900"></md-icon-button>
+    <md-icon-button md-image="icon:more_vert" md-fill="blue-900"></md-icon-button>
+  </md-row>
+  <md-row md-height="x1">
+    <div style="width: 44px"></div>
+    <md-text style="line-height: initial;">Title</md-text>
+  </md-row>
+</md-toolbar>
+	</div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7eTQ0WmN0cUlHWGs/layout_structure_toolbars3.png" />
+                    </div>
+                        <figcaption>
+          <p>Column-width toolbars at multiple levels of hierarchy</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-columnwidth" class="paperkit-paper no-mobile show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+	<div class="example" md-height="x4" md-flex="display">
+<div md-width="x4" md-height="full" md-color="grey-100">
+  <md-toolbar md-fill="grey-700" md-color="transparent">
+    <md-row>
+      <md-icon-button md-image="icon:arrow_back"></md-icon-button>
+      <md-text style="line-height: initial;">Title</md-text>
+      <md-space></md-space>
+      <md-icon-button md-image="icon:search"></md-icon-button>
+    </md-row>
+  </md-toolbar>
+</div>
+<div style="flex-grow: 1" md-color="grey-900" md-fill="white" md-shadow="shadow-1">
+  <md-toolbar md-color="transparent" md-fill="white">
+    <md-row>
+      <md-space></md-space>
+      <md-icon-button md-image="icon:reply"></md-icon-button>
+      <md-icon-button md-image="icon:more_vert"></md-icon-button>
+    </md-row>
+  </md-toolbar>
+</div>
+	</div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bW1TYXlMT0JxUWM/layout_structure_toolbars4.png" />
+                    </div>
+                        <figcaption>
+          <p>Flexible toolbar and card toolbar</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-flexibletoolbar-cardtoolbar" class="paperkit-paper no-mobile show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x" style="margin-bottom: 192px;">
+  <div class="example" md-height="x4" md-color="grey-200" style="overflow: visible">
+
+
+<md-toolbar md-color="blue" md-height="x2">
+  <md-row>
+    <md-icon-button md-image="icon:menu" md-fill="blue-900"></md-icon-button>
+  </md-row>
+</md-toolbar>
+<md-paper md-width="x8" md-height="x4" md-shadow="shadow-2" md-position="center-x" style="position: relative; top: -64px; border-radius: 2px;">
+<md-toolbar md-fill="grey-700" md-font-color="grey-700" md-color="transparent" md-separator="full" style="border-bottom: 1px solid rgba(0, 0, 0, 0.12);">
+  <md-row>
+    <div class="fix-this-bug"></div>
+    <md-text style="line-height: initial;" md-typo="subhead">Title</md-text>
+    <md-space></md-space>
+    <md-icon-button md-image="icon:search"></md-icon-button>
+    <md-icon-button md-image="icon:view_module"></md-icon-button>
+    <md-icon-button md-image="icon:more_vert"></md-icon-button>
+  </md-row>
+</md-toolbar>
+    </md-paper>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7M1VKVkhLLUxuTGs/layout_structure_toolbars5.png" />
+                    </div>
+                        <figcaption>
+          <p>Floating toolbar</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-floating-toolbar" class="paperkit-paper show-tablet no-mobile right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-height="x4" md-color="grey-200">
+<div md-height="full" md-width="full" style="background-image: url(../../resources/spec/img/map.png); background-size: 100% auto; position: absolute;">
+  <md-toolbar md-color="white" md-fill="grey-700" md-shadow="shadow-1" md-width="x6" style="position: absolute; top: 16px; left: 16px; z-index: 0;">
+    <md-row>
+      <md-icon-button md-image="icon:search"></md-icon-button>
+      <md-space></md-space>
+      <md-icon-button md-image="icon:my_location"></md-icon-button>
+      <md-icon-button md-image="icon:more_vert"></md-icon-button>          
+    </md-row>
+  </md-toolbar>
+</div>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aEJPTW1iV0EwQ0E/layout_structure_toolbars6.png" />
+                    </div>
+                        <figcaption>
+          <p>Detached toolbar palette</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7M2djcm1TSG1ZQVU/layout_structure_toolbars7.png" />
+                    </div>
+                        <figcaption>
+          <p>Bottom toolbar that launches to a shelf and clings to top of keyboard or other bottom component</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7R21ES09zcURiR0k/layout_structure_toolbars8.png" />
+                    </div>
+                        <figcaption>
+          <p>Bottom toolbar shelf</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="structure-app-bar" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    App bar
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>The app bar, formerly known as the action bar in Android, is a special kind of toolbar that’s used for branding, navigation, search, and actions.</p><p>If your app has a side nav, the control to open/close the side nav is on the left side of the app bar. The control can also morph into an up arrow for page navigation. The title in the app bar reflects the current page and can be an app title, page title or a page filter.</p><p>Icons on the right side of the app bar are app-related actions. The menu icon opens the overflow menu, which contains secondary actions and menu items like help, settings, and feedback.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RTFrbmpoWjRrY00/layout_structure_appbar_structure1.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7alNDOHdDRUtyWWc/layout_structure_appbar_structure2.png" />
+                    </div>
+                        <figcaption>
+          <p>Light</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ak5KTDdoU1BsRzg/layout_structure_appbar_structure3.png" />
+                    </div>
+                        <figcaption>
+          <p>Dark</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NTl0UzktM0psQUU/layout_structure_appbar_structure4.png" />
+                    </div>
+                        <figcaption>
+          <p>Colored</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7X181UElXVFVZSG8/layout_structure_appbar_structure5.png" />
+                    </div>
+                        <figcaption>
+          <p>Transparent</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Metrics</h3>
+    <div class="module-body">
+    <p>Default height:</p><p>Mobile Landscape: 48dp</p><p>Mobile Portrait: 56dp</p><p>Tablet/Desktop: 64dp</p><p>For extended app bars, the height is equal to the default height plus content increment(s).</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QkFKQkdMcEN6dmM/layout_structure_appbar_metrics1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TEV6U2RkUVZyNlE/layout_structure_appbar_metrics2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dUJTcFl5RFNTeU0/layout_structure_appbar_metrics3.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bzRtTVY0YWc4R1k/layout_structure_appbar_metrics4.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7elpXS2hjdHd2ZEU/layout_structure_appbar_metrics5.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NnhXZmxIQmZTX0k/layout_structure_appbar_metrics6.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OXhYcTM0QUR6Vms/layout_structure_appbar_metrics7.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cXdrTE5rV0pXLXc/layout_structure_appbar_metrics8.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WXRLSlJTTUJJWFk/layout_structure_appbar_metrics9.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Menus</h3>
+    <div class="module-body">
+    <p>A menu is a temporary sheet of paper that always overlaps the App Bar, rather than behaving as an extension of the App Bar.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QmRrQUF2VlFla3c/layout_structure_appbar_menu1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QXI3TDYxc2liMWM/layout_structure_appbar_menu2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cnVnZHVkMUpLZkk/layout_structure_appbar_menu3.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aG5Cczc0S1NYNkU/layout_structure_appbar_menu4.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7X1pUWXlwVng2cXM/layout_structure_appbar_menu5.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="structure-system-bars" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    System bars
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+      <h3>Status bar/window bar</h3>
+    <div class="module-body">
+    <p>On Android, the status bar contains notification icons and system icons. On Chrome, the top bar contains the window controls: minimize, full screen, and close. In a Chrome app, the top bar can disappear, and the window controls are then brought into the app bar. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bjBaa2lpTnY3ajA/layout_structure_system_status1.png" />
+                    </div>
+                        <figcaption>
+          <p>Android status bar</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Tkh3MGZVVktoOTQ/layout_structure_system_status2.png" />
+                    </div>
+                        <figcaption>
+          <p>Chrome window bar</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Metrics:</p><p>Android status bar height: 24dp</p><p>Chrome window height: 32dp</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NTVQd0hZNi1pdFE/layout_structure_system_status3.png" />
+                    </div>
+                        <figcaption>
+          <p>Android status bar on top of the app bar</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OFZxQTM5SmxHQjA/layout_structure_system_status4.png" />
+                    </div>
+                        <figcaption>
+          <p>Chrome window bar on top of the app bar </p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cHV2LWpmTnRUbm8/layout_structure_system_status5.png" />
+                    </div>
+                        <figcaption>
+          <p>Chrome window controls inside app bar</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Color variants</h3>
+    <div class="module-body">
+    <p>By default, the color of the status or window bar is a darker tone of the app bar color. It can also reference an element in the layout or it can be translucent.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7STVfdi10U1hkaXc/layout_structure_system_color1.png" />
+                    </div>
+                        <figcaption>
+          <p>Color is based on a sample taken from the content.</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NWl0bmRRTnNZeHM/layout_structure_system_color2.png" />
+                    </div>
+                        <figcaption>
+          <p>Translucent status bar, 20% Black #000000</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7XzcyLTZxU2pMTGc/layout_structure_system_color3.png" />
+                    </div>
+                        <figcaption>
+          <p>Dark status bar</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7c2QxMzJ4SXRabnM/layout_structure_system_color4.png" />
+                    </div>
+                        <figcaption>
+          <p>Status bar color in a darker tone of the app bar color</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Android navigation bar</h3>
+    <div class="module-body">
+    <p>The system bar in Android houses the device navigation controls: Back, Home, and Recents. It also displays a menu for apps written for Android 2.3 or earlier.</p><p>Metrics:</p><p>Height: 48dp</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RWpaeTZqTmlYOHc/layout_structure_system_android1.png" />
+                    </div>
+                        <figcaption>
+          <p>Dark</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QkxkZjVDYmtSYXc/layout_structure_system_android2.png" />
+                    </div>
+                        <figcaption>
+          <p>Light</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Color variants</h3>
+    <div class="module-body">
+    <p>By default, the color of the status or window bar is a darker tone of the app bar color. It can also reference an element in the layout or it can be translucent.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RzhjWURpTWVsRTA/layout_structure_system_android3.png" />
+                    </div>
+                        <figcaption>
+          <p>Translucent</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bl93YnVqdWE3NGM/layout_structure_system_android4.png" />
+                    </div>
+                        <figcaption>
+          <p>Translucent over complex image</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MzdRU2EtbHlaRlk/layout_structure_system_android5.png" />
+                    </div>
+                        <figcaption>
+          <p>Transparent</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7S2tTVjBjcUNEM00/layout_structure_system_android6.png" />
+                    </div>
+                        <figcaption>
+          <p>Transparent over even-toned image</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QXphalRPWHJPRkk/layout_structure_system_android7.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div><p>Color is based on a sample taken from the content.</p>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7R2I5cFc5dy1VeVk/layout_structure_system_android8.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>Don’t use a transparent bar over a complex image.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7a3d5YmZzVlBIdkE/layout_structure_system_android9.png" />
+                    </div>
+                        <figcaption>
+          <p>Reference color of device</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bExsYU5Yam5aRzQ/layout_structure_system_android10.png" />
+                    </div>
+                        <figcaption>
+          <p>Compliment device color</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Chrome OS shelf</h3>
+    <div class="module-body">
+    <p>The shelf houses the app launcher, application icons, and system settings on Chrome OS.</p><p>Metrics:</p><p>Height: 56dp</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7R3BySy1UQ2pDbGc/layout_structure_system_chrome.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="structure-side-nav" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Side nav
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>If present, the left and right nav bars can be pinned for permanent display or they can float temporarily as overlays. </p><p>The content in the left nav is ideally navigation- or identity-based. The content in the right nav should be secondary to the main content on a page.</p><p>See also <a href="../patterns/navigation-drawer.html">Navigation drawer</a>.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7eDFoYlp1QzEwUDQ/layout_structure_sidenav1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SkR5bDYzaFFVVDQ/layout_structure_sidenav2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+      <h3>Structure</h3>
+    <div class="module-body">
+    <p>Nav drawers that are temporary overlay the content canvas. Nav panels that are pinned sit alongside or below the content canvas.</p><h4>Metrics</h4><p><strong>Mobile</strong><span>: Width = screen width - app bar height</p><p>Examples:</p><ul><li><span>Nexus 4: 304dp</span></li><li><span>Nexus 5: 288dp</span></li><li><span>iPhone: 264dp</span></li></ul><p><strong>Desktop</strong><span>: Max width for the left nav is 400dp. The right nav can vary depending on content.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NzhpQzI0R21kOTg/layout_structure_sidenav_structure1.png" />
+                    </div>
+                        <figcaption>
+          <p>Mobile</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SlR2OWd6Z1ZhVzA/layout_structure_sidenav_structure2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bXlOVlM1bGV2Q0k/layout_structure_sidenav_structure3.png" />
+                    </div>
+                        <figcaption>
+          <p>Desktop left nav </p>
+        </figcaption>
+              </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7d2Z0QURUVk5hV2M/layout_structure_sidenav_structure4.png" />
+                    </div>
+                        <figcaption>
+          <p>Desktop right nav</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="structure-whiteframes" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Whiteframes
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Whiteframes provide a variety of layout structures using a consistent approach to surfaces, layering, and shadows.</p><div class="modulettes">
+    <a download class="modulette download trackdl" href="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SUJUS0dQVktmSXc/whiteframes.ai" title="Whiteframes">
+    <img class="icon download-icon" src="../static/images/download_black.svg" alt="" />
+    <div class="info">
+      <div class="title">Whiteframes</div>
+      <span class="subtitle">14.92 MB (.ai)</span>
+    </div>
+  </a>
+  </div>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNVGJCUHZUcUtBSVE/layout-structure-whiteframe_bigtop_large_xhdpi.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Carded content that expands and collapses</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNZ3ZWYkxacmJBZ1E/layout-structure-whiteframe_calendar_large_xhdpi.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Overlayed content details</div><p>With focused app bar on mobile</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNbjdWb0JqRmpOZFk/layout-structure-whiteframe_contacts_large_xhdpi.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Overlapping content card</div><p>With multiple toolbars and background image on mobile</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNbjdWb0JqRmpOZFk/layout-structure-whiteframe_contacts_large_xhdpi.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Extended app bar and right side nav </div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNWFBhWmo1d1gyMlU/layout-structure-whiteframe_gallery_large_xhdpi.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Left side nav and one-up stream on mobile</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNMU12c2xDS1QtZFk/layout-structure-whiteframe_mail_large_xhdpi.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Source list</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNM2k4eGVaYjg0LVk/layout-structure-whiteframe_maps_large_xhdpi.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Fullscreen background image</div><p>With inset search field and carded search results</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNT29PaWxfZ21iOW8/layout-structure-whiteframe_music_large_xhdpi.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Expandable footer drawer</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-layout">&nbsp;</div>
+    <div class="footer-grid-L section-layout">
+            <a class="footer-text" href="metrics-keylines.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
+        <span>Previous</span>
+        <div>
+                      Metrics &amp; keylines
+                  </div>
+      </a>
+          </div>
+
+    <div class="footer-R section-components">&nbsp;</div>
+    <div class="footer-grid-R section-components">
+            <a class="footer-text" href="../components/bottom-sheets.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      Components
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+
+
+
+
+<!-- PAPERKIT SETTINGS -->
+    <script src="../../resources/prism.js"></script>
+  </body>
+
+</html>

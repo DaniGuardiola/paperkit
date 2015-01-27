@@ -10,24 +10,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Scrolling techniques - Patterns - Google design guidelines</title>
-    <meta itemprop="name" content="Scrolling techniques - Patterns - Google design guidelines"/>
+    <title>Sliders - Components - Google design guidelines</title>
+    <meta itemprop="name" content="Sliders - Components - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Scrolling techniques - Patterns - Google design guidelines" />
+    <meta property="og:title" content="Sliders - Components - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Scrolling techniques - Patterns" />
+    <meta property="article:section" content="Sliders - Components" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Scrolling techniques</Attribute>
+      <Attribute name="title">Sliders</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
-      <Attribute name="section_title">Patterns</Attribute>
-      <Attribute name="section_slug">patterns</Attribute>
+      <Attribute name="section_title">Components</Attribute>
+      <Attribute name="section_slug">components</Attribute>
     </DataObject>
     <DataObject type="thumbnail">
       <Attribute name="src" value="" />
@@ -45,11 +45,11 @@
 </script>
   </head>
 
-  <body class="section-patterns noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+  <body class="section-components noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
     <header>
   <div class="header-wrapper">
-    <div class="header-title">      <span class="section-title">Patterns</span>
-      <span class="chapter-title">Scrolling techniques</span>
+    <div class="header-title">      <span class="section-title">Components</span>
+      <span class="chapter-title">Sliders</span>
     </div>
   </div>
 </header>
@@ -111,72 +111,72 @@
                     <a class="" href="../layout/structure.html">Structure
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Components
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Components
                 </dt>
         <dd>
-                    <a class="" href="../components/bottom-sheets.html">Bottom sheets
+                    <a class="" href="bottom-sheets.html">Bottom sheets
                     </a>
-                    <a class="" href="../components/buttons.html">Buttons
+                    <a class="" href="buttons.html">Buttons
                     </a>
-                    <a class="" href="../components/cards.html">Cards
+                    <a class="" href="cards.html">Cards
                     </a>
-                    <a class="" href="../components/chips.html">Chips
+                    <a class="" href="chips.html">Chips
                     </a>
-                    <a class="" href="../components/dialogs.html">Dialogs
+                    <a class="" href="dialogs.html">Dialogs
                     </a>
-                    <a class="" href="../components/dividers.html">Dividers
+                    <a class="" href="dividers.html">Dividers
                     </a>
-                    <a class="" href="../components/grids.html">Grids
+                    <a class="" href="grids.html">Grids
                     </a>
-                    <a class="" href="../components/lists.html">Lists
+                    <a class="" href="lists.html">Lists
                     </a>
-                    <a class="" href="../components/list-controls.html">List controls
+                    <a class="" href="list-controls.html">List controls
                     </a>
-                    <a class="" href="../components/menus.html">Menus
+                    <a class="" href="menus.html">Menus
                     </a>
-                    <a class="" href="../components/pickers.html">Pickers
+                    <a class="" href="pickers.html">Pickers
                     </a>
-                    <a class="" href="../components/progress-activity.html">Progress &amp; activity
+                    <a class="" href="progress-activity.html">Progress &amp; activity
                     </a>
-                    <a class="" href="../components/sliders.html">Sliders
+                    <a class="nav_selected" href="sliders.html">Sliders
                     </a>
-                    <a class="" href="../components/snackbars-toasts.html">Snackbars &amp; toasts
+                    <a class="" href="snackbars-toasts.html">Snackbars &amp; toasts
                     </a>
-                    <a class="" href="../components/subheaders.html">Subheaders
+                    <a class="" href="subheaders.html">Subheaders
                     </a>
-                    <a class="" href="../components/switches.html">Switches
+                    <a class="" href="switches.html">Switches
                     </a>
-                    <a class="" href="../components/tabs.html">Tabs
+                    <a class="" href="tabs.html">Tabs
                     </a>
-                    <a class="" href="../components/text-fields.html">Text fields
+                    <a class="" href="text-fields.html">Text fields
                     </a>
-                    <a class="" href="../components/tooltips.html">Tooltips
+                    <a class="" href="tooltips.html">Tooltips
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Patterns
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
                 </dt>
         <dd>
-                    <a class="" href="data-formats.html">Data formats
+                    <a class="" href="../patterns/data-formats.html">Data formats
                     </a>
-                    <a class="" href="errors.html">Errors
+                    <a class="" href="../patterns/errors.html">Errors
                     </a>
-                    <a class="" href="gestures.html">Gestures
+                    <a class="" href="../patterns/gestures.html">Gestures
                     </a>
-                    <a class="" href="loading-images.html">Loading images
+                    <a class="" href="../patterns/loading-images.html">Loading images
                     </a>
-                    <a class="" href="navigation-drawer.html">Navigation drawer
+                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
                     </a>
-                    <a class="" href="navigational-transitions.html">Navigational transitions
+                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
                     </a>
-                    <a class="nav_selected" href="scrolling-techniques.html">Scrolling techniques
+                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
                     </a>
-                    <a class="" href="search.html">Search
+                    <a class="" href="../patterns/search.html">Search
                     </a>
-                    <a class="" href="selection.html">Selection
+                    <a class="" href="../patterns/selection.html">Selection
                     </a>
-                    <a class="" href="settings.html">Settings
+                    <a class="" href="../patterns/settings.html">Settings
                     </a>
-                    <a class="" href="swipe-to-refresh.html">Swipe to refresh
+                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
@@ -216,24 +216,32 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Scrolling techniques
+  <h1 class="chapter-title">Sliders
       </h1>
 
   <div class="chapter-content">
         
+        <div class="chapter-intro">
+       <p>Sliders let users select a value from a continuous or discrete range of values by moving the slider thumb. The smallest value is to the left, the largest to the right. Sliders can have icons to the left and right of the bar that reflect the value intensity. The interactive nature of the slider makes it a great choice for settings that reflect intensity levels, such as volume, brightness, or color saturation.</p>
+
+      
+      
+    </div>
     
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="scrolling-techniques.html#scrolling-techniques-scrolling">Scrolling
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="sliders.html#sliders-continuous-slider">Continuous slider
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="sliders.html#sliders-discrete-slider">Discrete slider
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="scrolling-techniques-scrolling" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="sliders-continuous-slider" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Scrolling
+    Continuous slider
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -243,102 +251,82 @@
   <div class="article-content">
     <div class="module-list">
                   <div>
-          <section class="moduleD1">
-      <h3>Based on blocks</h3>
+          <section class="moduleE1">
     <div class="module-body">
-    <p>When designing scrolling behavior, it is helpful to think in blocks. This is just a mental model and won’t be represented with any visual affordance. </p><p>These are the main four blocks for app bars that help with the scrolling structure:</p><ul><li><span>Status bar: 24dp </span></li></ul><ul><li><span>Navigation bar: 56dp on mobile and 64dp on tablet and desktop.</span></li></ul><ul><li><span>Tab bar/search bar: 48dp</span></li></ul><ul><li><span>Flexible space: space to accommodate a desired aspect ratio for images or extended app bars.</span></li></ul>
+    <p>Use continuous sliders for subjective settings that do not require a specific value for the user to make meaningful adjustments.</p><h4>Light</h4><p>Thumb on: Swatch 500, Alpha 100%<br/>Track on: Swatch 500, Alpha 100%</p><p>Thumb off: #000000, Alpha 26%<br/>Track off: #000000, Alpha 26%</p><p>Disabled (disconnected): #000000, Alpha 26%</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SWxDWlFmZGRrc00/patterns_scrolling_scroll1.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QkJlRGNfTGEzQlE/components_sliders_continuous1.png" />
                     </div>
-                        </figure>
+                        <figcaption>
+          <div class="caption-title">Light theme</div>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <h4>Dark</h4><p>Thumb on: Swatch 200, Alpha 100%<br/>Track on: Swatch 200, Alpha 100%</p><p>Thumb off: #000000, Alpha 30%<br/>Track off: #000000, Alpha 30%</p><p>Disabled (disconnected): #000000, Alpha 30%</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cnBrRDhSTUhEaFE/patterns_scrolling_video1.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7R2s2OGFDcVRkZFE/components_sliders_continuous2.png" />
                     </div>
-                        </figure>
+                        <figcaption>
+          <div class="caption-title">Dark theme</div>
+        </figcaption>
+              </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
           <section class="moduleD1">
-      <h3>Standard app bar</h3>
     <div class="module-body">
-    <p>The standard app bar height is 56dp on mobile and 64dp on larger screen sizes. There are two options when it comes to scrolling. </p><ol start="1"><li><span>The app bar can scroll off screen with the content and come back when the user reverse- scrolls. </span></li><li><span>The app bar can stay fixed at the top and let the content scroll under it.</span></li></ol>
+    
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7b1lCWkgwM0lWdk0/patterns_scrolling_scroll2.png" />
-                    </div>
-                        </figure>
-            <figure class="">
-                          <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWbGpsUDgxN1VwX0U" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="patterns-scrollingtech-scrolling-070801_Standard_AppBar_xhdpi_003.webm" type="video/webm" />
-                                            <source src="patterns-scrollingtech-scrolling-070801_Standard_AppBar_xhdpi_003.mp4" type="video/mp4" />
+              <video id="1-None_0B0NGgBg38lWWUmVqMEI2d0t1b3M" crossorigin="anonymous" preload="metadata"  loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWTlhMcnRsMjJJU0E/components-sliders-continuousslider-061201_Slider_LightTheme_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWUmVqMEI2d0t1b3M/components-sliders-continuousslider-061201_Slider_LightTheme_xhdpi_002.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
-                        </figure>
+                        <figcaption>
+          <div class="caption-title">Various slider behaviors</div>
+        </figcaption>
+                </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
           <section class="moduleD1">
-      <h3>Tabs</h3>
     <div class="module-body">
-    <p>The standard app bar can be extended to include tabs or a search box. Using the blocks as a mental model is helpful when determining the scrolling behavior. In this case, you have two options:</p><ol start="1"><li><span>The navigation bar scrolls off and the tab bar stays anchored at the top.</span></li><li><span>The app bars stays in place and the content scrolls under it.</span></li></ol>
+    <p>Spacing for icons to the left and/or right of the bar:</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZzZBZnNJN1BrRUU/patterns_scrolling_scroll3.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7M0Voc2NyM3VheE0/components_sliders_continuous3.png" />
                     </div>
                         </figure>
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWU0RhQy1ab3FWOWM" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="patterns-scrollingtech-scrolling-070801_TabBar_xhdpi_003.webm" type="video/webm" />
-                                            <source src="patterns-scrollingtech-scrolling-070801_TabBar_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleD1">
-      <h3>Flexible space</h3>
-    <div class="module-body">
-    <p>The app bar is flexible and can be extended to accommodate larger typography or images. To extend the app bar, add a flexible space block.</p><ol start="1"><li><span>The flexible space shrinks until only the navigation bar is left. The title should also shrink into place to become a 20sp title in the navigation bar. When scrolling all the way back, the flexible space and the title grow into place again.</span></li><li><span>The whole app bar scrolls off. When the user reverse-scrolls, the navigation bar returns anchored to the top. When scrolling all the way back, the flexible space and the title grow into place again.</span></li></ol>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TS1teXNiZ1ZLVUU/patterns_scrolling_scroll4.png" />
-                    </div>
-                        </figure>
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWUGZzYXdKZWpDNWM" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="patterns-scrollingtech-scrolling-070801_Flexible_Space_xhdpi_003.webm" type="video/webm" />
-                                            <source src="patterns-scrollingtech-scrolling-070801_Flexible_Space_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7cG5vbFVudGNVRms/components_sliders_continuous4.png" />
                     </div>
                         </figure>
           </div>
@@ -347,23 +335,88 @@
         </div>
               <div>
           <section class="moduleD1">
-      <h3>Flexible space with image</h3>
+      <h3>With an editable numeric value</h3>
     <div class="module-body">
-    <p>To use images in the app bar, you can use flexible space to accommodate the desired aspect ratio. In this example, the aspect ratio is 4:3. When scrolling, the content pushes up the image so that the flexible space shrinks. The last 20% of the image’s flexible space is tinted with the primary color for the app. </p>
+    <p>Use for settings for which users need to set the exact value. Upon pressing the thumb, the text box becomes editable.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OHRYODhQN2FMa1k/patterns_scrolling_scroll5.png" />
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dDFpcFo0V2JLS2c/components_sliders_continuous5.png" />
                     </div>
                         </figure>
             <figure class="">
                           <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7V29WTnNrd0JtY3c/components_sliders_continuous6.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="sliders-discrete-slider" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Discrete slider
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>The discrete slider thumb snaps to evenly spaced tick marks along the slider rail. Use for objective settings that require specific values for the user to make meaningful adjustments. Each tick mark should change the setting to a level that’s discernible to the user. The values are predetermined and aren’t user-editable.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>With a numeric value label</h3>
+    <div class="module-body">
+    <p>Use for settings for which users need to know the exact value of the setting. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dEtQQ2s4VUZxZG8/components_sliders_discrete1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Light theme</div>
+        </figcaption>
+              </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WnY0a3RrcEI0ZXc/components_sliders_discrete2.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Dark theme</div>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWWHR2eG5ITnZlMmM" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="patterns-scrollingtech-scrolling-070801_Flexible_Space_with_Image_xhdpi_002.webm" type="video/webm" />
-                                            <source src="patterns-scrollingtech-scrolling-070801_Flexible_Space_with_Image_xhdpi_002.mp4" type="video/mp4" />
+              <video id="1-None_0B0NGgBg38lWWZ1BIYzJZY0pQVEE" crossorigin="anonymous" preload="metadata"  loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWWmpKc2h2Y2J5Ujg/components-sliders-discreteslider-061202_Slider_LightTheme_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWZ1BIYzJZY0pQVEE/components-sliders-discreteslider-061202_Slider_LightTheme_xhdpi_002.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -382,24 +435,24 @@
 
     <footer>
   <div class="footer-grid">
-    <div class="footer-L section-patterns">&nbsp;</div>
-    <div class="footer-grid-L section-patterns">
-            <a class="footer-text" href="navigational-transitions.html">
+    <div class="footer-L section-components">&nbsp;</div>
+    <div class="footer-grid-L section-components">
+            <a class="footer-text" href="progress-activity.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      Navigational transitions
+                      Progress &amp; activity
                   </div>
       </a>
           </div>
 
-    <div class="footer-R section-patterns">&nbsp;</div>
-    <div class="footer-grid-R section-patterns">
-            <a class="footer-text" href="search.html">
+    <div class="footer-R section-components">&nbsp;</div>
+    <div class="footer-grid-R section-components">
+            <a class="footer-text" href="snackbars-toasts.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Search
+                      Snackbars &amp; toasts
                   </div>
       </a>
           </div>

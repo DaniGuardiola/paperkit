@@ -10,19 +10,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Progress &amp; activity - Components - Google design guidelines</title>
-    <meta itemprop="name" content="Progress & activity - Components - Google design guidelines"/>
+    <title>Switches - Components - Google design guidelines</title>
+    <meta itemprop="name" content="Switches - Components - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Progress & activity - Components - Google design guidelines" />
+    <meta property="og:title" content="Switches - Components - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Progress & activity - Components" />
+    <meta property="article:section" content="Switches - Components" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Progress &amp; activity</Attribute>
+      <Attribute name="title">Switches</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
@@ -49,7 +49,7 @@
     <header>
   <div class="header-wrapper">
     <div class="header-title">      <span class="section-title">Components</span>
-      <span class="chapter-title">Progress &amp; activity</span>
+      <span class="chapter-title">Switches</span>
     </div>
   </div>
 </header>
@@ -136,7 +136,7 @@
                     </a>
                     <a class="" href="pickers.html">Pickers
                     </a>
-                    <a class="nav_selected" href="progress-activity.html">Progress &amp; activity
+                    <a class="" href="progress-activity.html">Progress &amp; activity
                     </a>
                     <a class="" href="sliders.html">Sliders
                     </a>
@@ -144,7 +144,7 @@
                     </a>
                     <a class="" href="subheaders.html">Subheaders
                     </a>
-                    <a class="" href="switches.html">Switches
+                    <a class="nav_selected" href="switches.html">Switches
                     </a>
                     <a class="" href="tabs.html">Tabs
                     </a>
@@ -216,13 +216,13 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Progress &amp; activity
+  <h1 class="chapter-title">Switches
       </h1>
 
   <div class="chapter-content">
         
         <div class="chapter-intro">
-       <p>Make loading content in your app as delightful and painless as possible by minimizing the amount of visual change a user sees before they can view and interact with content. Each operation should only be represented by one activity indicator—for example, one refresh operation should not display both a refresh bar and an activity circle.</p>
+       <p>Switches allow the user to select options. There are three kinds: checkboxes, radio buttons, and on/off switches. </p><p>*Note: The graphic rings shown in the following examples represent animation and do not represent what buttons should look like in implementation.</p>
 
       
       
@@ -231,17 +231,19 @@
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="progress-activity.html#progress-activity-types-of-indicators">Types of indicators
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="switches.html#switches-checkbox">Checkbox
                 </a></li>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="progress-activity.html#progress-activity-behavior">Behavior
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="switches.html#switches-radio-button">Radio button
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="switches.html#switches-switch">Switch
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="progress-activity-types-of-indicators" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="switches-checkbox" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Types of indicators
+    Checkbox
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -251,69 +253,26 @@
   <div class="article-content">
     <div class="module-list">
                   <div>
-            <section class="moduleB1">
-        <div class="module-body">
-      <p>For operations where the percentage of the operation completed can be ascertained, use a determinate indicator. They give users a quick sense of how long an operation will take.</p><p>For operations where the user is asked to wait a moment while something finishes, and it’s not necessary to expose what's happening behind the scenes and how long it will take, use an indeterminate indicator.</p><p>There are two types of indicators: linear and circular. You can use either one for determinate and indeterminate operations. </p>
-    </div>
-  </section>
-
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Linear</h3>
-    <div class="module-body">
-    <p>A linear progress indicator should always fill from 0% to 100% and never move backwards to a lower value. If multiple operations are happening in sequence, use the progress indicator to represent the delay as a whole. This way, when the bar reaches 100%, it doesn't return back to 0%.</p><p>Linear bars should appear and disappear on the edge of a header or sheet.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWVXBBVF9qR3E4a2s" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Linear_Sheet_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Linear_Sheet_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Linear progress indicators</div>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
           <section class="moduleD1">
     <div class="module-body">
-    
+    <p>Checkboxes allow the user to select multiple options from a set. </p><p>If you have multiple on/off options appearing in a list, checkboxes are a good way to preserve space.</p><p>If you have a single on/off option, avoid using a checkbox and use an on/off switch instead.</p><p>Checkboxes use animation to communicate focused and pressed states. </p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWbjNqR2VRakhTODA" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Linear_Video_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Linear_Video_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7T2xGbGo0cUlPVG8/components_switches_check1.png" />
                     </div>
                         <figcaption>
-          <div class="caption-title">Buffering progress indicator on a video</div><p> </p>
+          <div class="caption-title">Light theme</div>
         </figcaption>
                 </figure>
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6MHBFZE5Wcm55ME0" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Linear_Image_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Linear_Image_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZnE0N1dvZHlxMGc/components_switches_check2.png" />
                     </div>
                         <figcaption>
-          <div class="caption-title">Query indicator on a webpage</div>
+          <div class="caption-title">Dark theme</div>
         </figcaption>
                 </figure>
           </div>
@@ -322,68 +281,43 @@
         </div>
               <div>
           <section class="moduleE1">
-      <h3>Circular</h3>
+      <h3>Light</h3>
     <div class="module-body">
-    
+    <p>On: Swatch 500, Alpha 100%<br/>Off: #000000, Alpha 54%<br/>Disabled: #000000, Alpha 26%</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQnF5WGo1UEZBYkk" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Circular_Sheet_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Circular_Sheet_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bWVSQWs0SE5BNm8/components_switches_check3.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Circular determinate progress indicators</div>
-        </figcaption>
-              </figure>
+                      </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
-          <section class="moduleD1">
+          <section class="moduleE1">
+      <h3>Dark</h3>
     <div class="module-body">
-    <p>Circular with integration</p>
+    <p>On: Swatch 500, Alpha 100%<br/>Off: #FFFFFF, Alpha 70%<br/>Disabled: #FFFFFF, Alpha 30%</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWaVpNbk1SV3dSbXc" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Circular_Aspirational_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Circular_Aspirational_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ajZOUEV6VFJRY0E/components_switches_check4.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">A circular loader may be integrated with a floating action button. </div>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWNmdHSWcxekI1Z0k" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Circular_wFab_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Circular_wFab_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        </figure>
+                      </figure>
           </div>
   </div>
 </section>
         </div>
               </div>
   </div>
-</div>                  <div id="progress-activity-behavior" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+</div>                  <div id="switches-radio-button" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Behavior
+    Radio button
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -395,71 +329,24 @@
                   <div>
           <section class="moduleD1">
     <div class="module-body">
-    <p>Loading in phases</p>
+    <p>Radio buttons allow the user to select one option from a set. Use radio buttons for exclusive selection if you think that the user needs to see all available options side-by-side. </p><p>Otherwise, consider a pulldown, which uses less space than displaying all options. </p><p>Radio buttons use animation to communicate focused and pressed states.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWcXdJR1RGRVZ3YUU" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_SwipeDown_xhdpi_004.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_SwipeDown_xhdpi_004.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Z1NaaXh2ZkpDRkE/components_switches_radio1.png" />
                     </div>
                         <figcaption>
-          <div class="caption-title">One-phased loads</div><p>Ink (copy and images) loads within an existing, unchanging container. </p>
+          <div class="caption-title">Light theme</div>
         </figcaption>
                 </figure>
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQ3hCU2k3UXRBT0E" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_Photos_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_Photos_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7c0tab1dSa3R4emM/components_switches_radio2.png" />
                     </div>
                         <figcaption>
-          <div class="caption-title">Two-phased loads</div><p>The paper container is generated, then the ink (copy and images) load within it. </p>
-        </figcaption>
-                </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleD1">
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQjlvYm1rVFMwVlU" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_Files_Linear_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_Files_Linear_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Loading content for the first time.</div>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWNjNYREh0M3YxMGs" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_Files_Circular_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_Files_Circular_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Load and display all content at once.</div>
+          <div class="caption-title">Dark theme</div>
         </figcaption>
                 </figure>
           </div>
@@ -468,24 +355,108 @@
         </div>
               <div>
           <section class="moduleE1">
+      <h3>Light</h3>
     <div class="module-body">
-    <p><strong>Loading additional content</strong></p>
+    <p>On: Swatch 500, Alpha 100%<br/>Off: #000000, Alpha 54%<br/>Disabled: #000000, Alpha 26%</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQW5WdklybnVhdXc" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_BigTop_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_BigTop_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7d1kxcWV3QWlsX0E/components_switches_radio3.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Dark</h3>
+    <div class="module-body">
+    <p>On: Swatch 500, Alpha 100%<br/>Off: #FFFFFF, Alpha 70%<br/>Disabled: #FFFFFF, Alpha 30%</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RUticFRPQVM0Ukk/components_switches_radio4.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="switches-switch" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Switch
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>On/off switches toggle the state of a single settings option. The option that the switch controls, as well as the state it’s in, should be made clear from the corresponding inline label. Switches take on the same visual properties of the radio button. </p><p>Switches use animation to communicate focused and pressed states.</p><p>The on/off slide toggle with the words “on” and “off” baked within the asset is deprecated. Use the switch shown here instead. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NDg4aGIzVXYxVEE/components_switches_switch1.png" />
                     </div>
                         <figcaption>
-          <div class="caption-title">Example 1: Card expansion</div><p>An indeterminate linear indicator is recommended for a card expanding on larger surfaces such as desktop.</p>
+          <div class="caption-title">Light theme</div>
         </figcaption>
-              </figure>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7V0R4UVJ3Y21obkU/components_switches_switch2.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Dark theme</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Light</h3>
+    <div class="module-body">
+    <p>Thumb On: Swatch 500, Alpha 100%<br/>Track On: Swatch 500, Alpha 50%</p><p>Thumb Off: Grey 50, #FAFAFA, Alpha 100%<br/>Track Off: #000000, Alpha 26%</p><p>Thumb Disabled: Grey 400, #BDBDBD, Alpha 100%<br/>Track Disabled: #000000, Alpha 12%</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7c1hvVm1YUU5PNlU/components_switches_switch3.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Dark</h3>
+    <div class="module-body">
+    <p>Thumb On: Swatch 200, Alpha 100%<br/>Track On: Swatch 200, Alpha 50%</p><p>Thumb Off: Grey 400, #BDBDBD, Alpha 100%<br/>Track Off: #FFFFFF, Alpha 30%</p><p>Thumb Disabled: Grey 800, #424242, Alpha 100%Track Disabled: #FFFFFF, Alpha 10%</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7a2hFeFJIVEFCUnc/components_switches_switch4.png" />
+                    </div>
+                      </figure>
           </div>
   </div>
 </section>
@@ -493,34 +464,24 @@
               <div>
           <section class="moduleD1">
     <div class="module-body">
-    
+    <p>Use the outer radial reaction only on form factors that favor finger touch, where interaction may obstruct the element completely. For desktop usage with a mouse, you do not need this extra indication.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQ3hCU2k3UXRBT0E" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_Photos_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_Photos_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ajdnOGFPY21xRHM/components_switches_switch5.png" />
                     </div>
                         <figcaption>
-          <div class="caption-title">Example 2: Scroll up to load more</div><p>An indeterminate circular indicator with an initial radial ink reaction is recommended when loading a list from below.</p>
+          <div class="caption-title">Radial reaction on mobile</div>
         </figcaption>
                 </figure>
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWcXdJR1RGRVZ3YUU" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_SwipeDown_xhdpi_004.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_SwipeDown_xhdpi_004.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aU9raG5tSDl5b2c/components_switches_switch6.png" />
                     </div>
                         <figcaption>
-          <div class="caption-title">Example 3: Swipe down to refresh</div><p>An indeterminate circular indicator with a radial ink reaction is recommended when refreshing a list from above.</p>
+          <div class="caption-title">No radial reaction on desktop</div>
         </figcaption>
                 </figure>
           </div>
@@ -539,22 +500,22 @@
   <div class="footer-grid">
     <div class="footer-L section-components">&nbsp;</div>
     <div class="footer-grid-L section-components">
-            <a class="footer-text" href="pickers.html">
+            <a class="footer-text" href="subheaders.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      Pickers
+                      Subheaders
                   </div>
       </a>
           </div>
 
     <div class="footer-R section-components">&nbsp;</div>
     <div class="footer-grid-R section-components">
-            <a class="footer-text" href="sliders.html">
+            <a class="footer-text" href="tabs.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Sliders
+                      Tabs
                   </div>
       </a>
           </div>

@@ -10,19 +10,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Meaningful transitions - Animation - Google design guidelines</title>
-    <meta itemprop="name" content="Meaningful transitions - Animation - Google design guidelines"/>
+    <title>Authentic motion - Animation - Google design guidelines</title>
+    <meta itemprop="name" content="Authentic motion - Animation - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Meaningful transitions - Animation - Google design guidelines" />
+    <meta property="og:title" content="Authentic motion - Animation - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Meaningful transitions - Animation" />
+    <meta property="article:section" content="Authentic motion - Animation" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Meaningful transitions</Attribute>
+      <Attribute name="title">Authentic motion</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
@@ -45,11 +45,23 @@
 </script>
   </head>
 
-  <body class="section-animation noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
-    <header>
-  <div class="header-wrapper">
+  <body class="section-animation first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header class="qp-ui" data-qp-ui="{
+  'Peekaboo': {
+    'mobile': 72,
+    'desktop-sm': 72,
+    'default': 192
+  }
+}">
+  <div class="header-wrapper qp-ui" data-qp-ui="{
+    'Peekaboo': {
+      'mobile': 28,
+      'desktop-sm': 28,
+      'default': 82
+    }
+  }">
     <div class="header-title">      <span class="section-title">Animation</span>
-      <span class="chapter-title">Meaningful transitions</span>
+      <span class="chapter-title">Authentic motion</span>
     </div>
   </div>
 </header>
@@ -80,11 +92,11 @@
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Animation
                 </dt>
         <dd>
-                    <a class="" href="authentic-motion.html">Authentic motion
+                    <a class="nav_selected" href="authentic-motion.html">Authentic motion
                     </a>
                     <a class="" href="responsive-interaction.html">Responsive interaction
                     </a>
-                    <a class="nav_selected" href="meaningful-transitions.html">Meaningful transitions
+                    <a class="" href="meaningful-transitions.html">Meaningful transitions
                     </a>
                     <a class="" href="delightful-details.html">Delightful details
                     </a>
@@ -216,13 +228,13 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Meaningful transitions
+  <h1 class="chapter-title">Authentic motion
       </h1>
 
   <div class="chapter-content">
         
         <div class="chapter-intro">
-       <p>Sometimes, it is difficult for a user to know where to look or understand how an element got from point A to point B. Carefully choreographed motion design can effectively guide the user’s attention and focus through multiple steps of a process or procedure, avoid confusion when layouts change or elements are rearranged, and improve the overall beauty of the experience. Motion design should serve a functional purpose.</p>
+       <p>Perceiving an object’s tangible form helps us understand how to manipulate it. Observing an object’s motion tells us whether it is light or heavy, flexible or rigid, small or large. Motion in the world of material design is not only beautiful, it builds meaning about the spatial relationships, functionality, and intention of the system.</p>
 
       
       
@@ -231,19 +243,15 @@
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="meaningful-transitions.html#meaningful-transitions-visual-continuity">Visual continuity
-                </a></li>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="meaningful-transitions.html#meaningful-transitions-hierarchical-timing">Hierarchical timing
-                </a></li>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="meaningful-transitions.html#meaningful-transitions-consistent-choreography">Consistent choreography
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="authentic-motion.html#authentic-motion-mass-weight">Mass and weight
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="meaningful-transitions-visual-continuity" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="authentic-motion-mass-weight" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Visual continuity
+    Mass and weight
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -253,195 +261,132 @@
   <div class="article-content">
     <div class="module-list">
                   <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>Transitioning between two visual states should be clear, smooth and effortless and not confuse the user. A well-designed transition does the heavy lifting and enables the user to clearly understand where their attention should be focused. A transition has three categories of elements: </p><ul><li><span>Incoming elements - whether newly generated or translated into the scene, these items need to be introduced or re-established.</span></li><li><span>Outgoing elements - elements that are no longer relevant to the new context must be removed from the scene in an appropriate manner.</span></li><li><span>Shared elements - elements that persist from the start to end of a transition. They can be as subtle as a single icon or become dominant as a gallery image grows to fit the screen.</span></li></ul><h4 class="related">
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>Physical objects have mass and move only when forces are applied to them. Consequently, objects can’t start or stop instantaneously. Animation with abrupt starts and stops or rapid changes in direction appears unnatural and can be an unexpected and unpleasant disruption for the user.</p><p>A critical aspect of motion for material design is to retain the feeling of physicality without sacrificing elegance, simplicity, beauty, and the magic of a seamless user experience.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <h4 class="related">
 Related
-</h4><div class="modulettes">
-          <a class="modulette android" href="http://developer.android.com/training/material/animations.html#Transitions" title="Customize Activity Transitions">
+</h4>
+        </div>
+              <div>
+          <div class="modulettes">
+          <a class="modulette android" href="http://developer.android.com/training/material/animations.html#CurvedMotion" title="Use Curved Motion">
       <img class="icon callout-icon" src="../static/images/callout_android.svg" alt="" />
       <div class="info">
-        <div class="title">Customize Activity Transitions</div>
-        <span class="subtitle">Coordinate the entrance and exit of animations.</span>
+        <div class="title">Use Curved Motion</div>
+        <span class="subtitle">Define timing curves and curved motion patterns for animations.</span>
       </div>
     </a>
       </div>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6WlhSSjR4LTZULUk" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="animation-meaningfultransitions-visualcontinuity_music-tablet-01_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-meaningfultransitions-visualcontinuity_music-tablet-01_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                      </figure>
-          </div>
-  </div>
-</section>
         </div>
               <div>
-          <section class="moduleD1">
-      <h3>Considerations</h3>
+          <section class="moduleE1">
+      <h3>Best practices</h3>
     <div class="module-body">
-    <p>When you design your animations, consider the following:</p><ul><li><span>Think about how the user’s attention should be directed. What elements and motions support that goal? How should incoming, outgoing, and shared elements be emphasized or de-emphasized through the transition?</span></li><li><span>Consider transitions when designing screens and find opportunities to create visual connections between transition states through color and persisting elements.</span></li><li><span>Add motion judiciously: consider how moving a certain element adds clarity and delight to a transition.</span></li></ul>
+    <p>Accelerate objects swiftly and decelerate them slowly to avoid abrupt changes in velocity.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="example do">
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWLUgzTnVJZVlDeTg" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-meaningfultransitions-visualcontinuity-030301_PhotoList_Do_xhdpi_002.webm" type="video/webm" />
-                                            <source src="animation-meaningfultransitions-visualcontinuity-030301_PhotoList_Do_xhdpi_002.mp4" type="video/mp4" />
+              <video id="1-None_0B2wX4iIvu8L6SXl5UUtsc09ZUFU" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6SERxSXVhMVpsd1E/animation-authenticmotion-massandweight-ex1_xhdpi.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6SXl5UUtsc09ZUFU/animation-authenticmotion-massandweight-ex1_xhdpi.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
                         <figcaption>
-          <div class="caption-title">Do.</div><p>Layer paper where appropriate. In general, incoming paper elements may slide into view, but ink elements don’t: they should fade in. Full screen cross-fades are not desirable, but preferred over cuts.</p>
+          <div class="caption-title">Do.</div><p>Motion with swift acceleration and gentle deceleration feels natural and delightful.</p>
         </figcaption>
-                </figure>
-            <figure class="example dont">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWZll3dFAwT1dUbmM" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-meaningfultransitions-visualcontinuity-030301_PhotoList_Dont_xhdpi_002.webm" type="video/webm" />
-                                            <source src="animation-meaningfultransitions-visualcontinuity-030301_PhotoList_Dont_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Hard cuts are jarring and require the user to do all the work in order to understand the transition.</p>
-        </figcaption>
-                </figure>
+              </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
-            <section class="moduleB1">
-        <div class="module-body">
-      <p>  </p>
-    </div>
-  </section>
-
-        </div>
-              </div>
-  </div>
-</div>                  <div id="meaningful-transitions-hierarchical-timing" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
-  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Hierarchical timing
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
-      <title id="title">Expand and collapse content</title>
-      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
-      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
-    </svg>
-  </h2>
-  <div class="article-content">
-    <div class="module-list">
-                  <div>
-          <section class="moduleD1">
+          <section class="moduleE1">
     <div class="module-body">
-    <p>When building a transition, consider the order and timing of the elements’ movement. Ensure that motion supports the information hierarchy, conveying what content is most important by creating a path for the eye to follow. </p><p>However, it’s not a simple formula in which the most important thing moves first and the least important last. The timing of transition elements should flow smoothly and avoid feeling disjointed.</p>
+    <p>An abrupt change in velocity at both the beginning and end of the animation curve means the object instantaneously starts and stops, which is unrealistic.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example dont">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B2wX4iIvu8L6TWtqQi16MDhpRm8" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6c0wwY2FPSVdnYlk/animation-authenticmotion-massandweight-ex2_xhdpi.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6TWtqQi16MDhpRm8/animation-authenticmotion-massandweight-ex2_xhdpi.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>Linear motion feels mechanical. </p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+      <h3>Special cases: Entering and exiting frame</h3>
+    <div class="module-body">
+    <p>When an object enters the frame, ensure that it's moving at its peak velocity. This behavior emulates natural movement. A person entering the frame of vision does not begin walking at the edge of the frame, but before it. Similarly, when an object exits the frame, maintain the object’s velocity, rather than slowing it down as it exits the frame. The user’s attention is drawn to an object slowly entering and exiting the frame. In most cases, that isn’t your desired effect.  </p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="example do">
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B08MbvYZK1iNYjV0cXlhWURFMFU" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-meaningfultransitions-hierarchicaltiming-4do_large_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-meaningfultransitions-hierarchicaltiming-4do_large_xhdpi.mp4" type="video/mp4" />
+              <video id="1-None_0B2wX4iIvu8L6TXk5OHZFYldIamc" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6ckdKbll4b2RvRnM/animation-authenticmotion-massandweight-ex3_do_xhdpi.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6TXk5OHZFYldIamc/animation-authenticmotion-massandweight-ex3_do_xhdpi.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
                         <figcaption>
-          <div class="caption-title">Do.</div><p>Use overlapping motion to direct user attention.</p>
+          <div class="caption-title">Do.</div><p>Enter and exit frame at peak velocity. The ball enters and exits frame at peak velocity, creating a confident transition.</p>
         </figcaption>
-                </figure>
-            <figure class="example dont">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B08MbvYZK1iNTHVNbE96RU5ka0U" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-meaningfultransitions-hierarchicaltiming-1dont_large_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-meaningfultransitions-hierarchicaltiming-1dont_large_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div><p>Concurrent timing for all elements provides no indication of what is important. If all elements have equal importance, consider larger-scale motion to introduce them as a group.</p>
-        </figcaption>
-                </figure>
+              </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
-            <section class="moduleB1">
-        <div class="module-body">
-      <p>   </p>
-    </div>
-  </section>
-
-        </div>
-              </div>
-  </div>
-</div>                  <div id="meaningful-transitions-consistent-choreography" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
-  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Consistent choreography
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
-      <title id="title">Expand and collapse content</title>
-      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
-      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
-    </svg>
-  </h2>
-  <div class="article-content">
-    <div class="module-list">
-                  <div>
-          <section class="moduleD1">
+          <section class="moduleE1">
     <div class="module-body">
-    <p>As transitioning elements move around the screen, they should behave in a coordinated manner. The paths elements travel along should all make sense and be orderly. Haphazard motion is distracting.</p><p>A well-choreographed app also provides teachable moments. When transitioning elements are coordinated, the user’s understanding of the app grows. They “get” the app; they don’t feel disoriented by the animation.</p>
+    
   </div>
   <div class="figure-group">
     <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B08MbvYZK1iNMVY1TUdwblJ3cGs" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-meaningfultransitions-consistentchoreography-do1_large_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-meaningfultransitions-consistentchoreography-do1_large_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div><p>Direct user attention with coordinated, orderly motion.</p>
-        </figcaption>
-                </figure>
             <figure class="example dont">
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B08MbvYZK1iNR0ZlR1BRd0doWFE" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-meaningfultransitions-consistentchoreography-dont3_large_xhdpi.webm" type="video/webm" />
-                                            <source src="animation-meaningfultransitions-consistentchoreography-dont3_large_xhdpi.mp4" type="video/mp4" />
+              <video id="1-None_0B2wX4iIvu8L6N2szakNGeTE5UEU" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6TnJvREpCZy1nMUU/animation-authenticmotion-massandweight-ex4_dont_xhdpi.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6N2szakNGeTE5UEU/animation-authenticmotion-massandweight-ex4_dont_xhdpi.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
                         <figcaption>
-          <div class="caption-title">Don't.</div><p>Don’t confuse users with inconsistent or disorderly motion and objects leaving/entering in seemingly random directions.</p>
+          <div class="caption-title">Don't.</div><p>Don’t speed up when entering or slow down when exiting. Don’t distract the user with unnecessary changes in velocity.</p>
         </figcaption>
-                </figure>
+              </figure>
           </div>
   </div>
 </section>
         </div>
               <div>
             <section class="moduleB1">
-          <h3>Best Practices</h3>
+          <h3>Making Adjustments</h3>
         <div class="module-body">
-      <ul><li><span>Avoid linear spatial paths, except when movement is constrained to an axis or moving towards/away from a specific point in concert with other elements.</span></li><li><span>Make sure that the direction in which elements move is cohesive across the transition. Avoid conflicting movements and overlapping paths.</span></li><li><span>Consider the depth story: what moves under what, and why?</span></li><li><span>If all moving elements traced their paths on screen, would it look beautiful and organized? Does it create a clear picture of where to look? </span></li><li><span>Support spatial relationships through consistent motions for incoming and outgoing elements.</span></li></ul>
+      <p>Not all objects move the same way. Lighter/smaller objects may accelerate or decelerate faster because they have less mass and require less force to do so. Larger/heavier objects may need more time to reach peak speed and come to rest. Think about how this applies to the various UI elements in your app and consider how their motion should be represented.</p>
     </div>
   </section>
 
@@ -456,24 +401,24 @@ Related
 
     <footer>
   <div class="footer-grid">
-    <div class="footer-L section-animation">&nbsp;</div>
-    <div class="footer-grid-L section-animation">
-            <a class="footer-text" href="responsive-interaction.html">
+    <div class="footer-L section-what-is-material">&nbsp;</div>
+    <div class="footer-grid-L section-what-is-material">
+            <a class="footer-text" href="../what-is-material/objects-in-3d-space.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      Responsive interaction
+                      What is material?
                   </div>
       </a>
           </div>
 
     <div class="footer-R section-animation">&nbsp;</div>
     <div class="footer-grid-R section-animation">
-            <a class="footer-text" href="delightful-details.html">
+            <a class="footer-text" href="responsive-interaction.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Delightful details
+                      Responsive interaction
                   </div>
       </a>
           </div>

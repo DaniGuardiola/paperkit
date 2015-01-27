@@ -10,19 +10,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Progress &amp; activity - Components - Google design guidelines</title>
-    <meta itemprop="name" content="Progress & activity - Components - Google design guidelines"/>
+    <title>Bottom sheets - Components - Google design guidelines</title>
+    <meta itemprop="name" content="Bottom sheets - Components - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Progress & activity - Components - Google design guidelines" />
+    <meta property="og:title" content="Bottom sheets - Components - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Progress & activity - Components" />
+    <meta property="article:section" content="Bottom sheets - Components" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Progress &amp; activity</Attribute>
+      <Attribute name="title">Bottom sheets</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
@@ -45,11 +45,23 @@
 </script>
   </head>
 
-  <body class="section-components noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
-    <header>
-  <div class="header-wrapper">
+  <body class="section-components first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header class="qp-ui" data-qp-ui="{
+  'Peekaboo': {
+    'mobile': 72,
+    'desktop-sm': 72,
+    'default': 192
+  }
+}">
+  <div class="header-wrapper qp-ui" data-qp-ui="{
+    'Peekaboo': {
+      'mobile': 28,
+      'desktop-sm': 28,
+      'default': 82
+    }
+  }">
     <div class="header-title">      <span class="section-title">Components</span>
-      <span class="chapter-title">Progress &amp; activity</span>
+      <span class="chapter-title">Bottom sheets</span>
     </div>
   </div>
 </header>
@@ -114,7 +126,7 @@
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Components
                 </dt>
         <dd>
-                    <a class="" href="bottom-sheets.html">Bottom sheets
+                    <a class="nav_selected" href="bottom-sheets.html">Bottom sheets
                     </a>
                     <a class="" href="buttons.html">Buttons
                     </a>
@@ -136,7 +148,7 @@
                     </a>
                     <a class="" href="pickers.html">Pickers
                     </a>
-                    <a class="nav_selected" href="progress-activity.html">Progress &amp; activity
+                    <a class="" href="progress-activity.html">Progress &amp; activity
                     </a>
                     <a class="" href="sliders.html">Sliders
                     </a>
@@ -216,13 +228,13 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Progress &amp; activity
+  <h1 class="chapter-title">Bottom sheets
       </h1>
 
   <div class="chapter-content">
         
         <div class="chapter-intro">
-       <p>Make loading content in your app as delightful and painless as possible by minimizing the amount of visual change a user sees before they can view and interact with content. Each operation should only be represented by one activity indicator—for example, one refresh operation should not display both a refresh bar and an activity circle.</p>
+       <p>One way to present a set of actions to a user is with a bottom sheet, a sheet of paper that slides up from the bottom edge of the screen. Bottom sheets offer flexibility in the display of clear and simple actions that do not need explanation.</p>
 
       
       
@@ -231,17 +243,21 @@
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="progress-activity.html#progress-activity-types-of-indicators">Types of indicators
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="bottom-sheets.html#bottom-sheets-usage">Usage
                 </a></li>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="progress-activity.html#progress-activity-behavior">Behavior
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="bottom-sheets.html#bottom-sheets-content">Content
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="bottom-sheets.html#bottom-sheets-behavior">Behavior
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="bottom-sheets.html#bottom-sheets-specs">Specs
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="progress-activity-types-of-indicators" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="bottom-sheets-usage" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Types of indicators
+    Usage
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -253,32 +269,49 @@
                   <div>
             <section class="moduleB1">
         <div class="module-body">
-      <p>For operations where the percentage of the operation completed can be ascertained, use a determinate indicator. They give users a quick sense of how long an operation will take.</p><p>For operations where the user is asked to wait a moment while something finishes, and it’s not necessary to expose what's happening behind the scenes and how long it will take, use an indeterminate indicator.</p><p>There are two types of indicators: linear and circular. You can use either one for determinate and indeterminate operations. </p>
+      <p>Bottom sheets are especially suitable when three or more actions are displayed to the user and when the actions do not require a description. If there are two or fewer actions or detailed description is required, consider using a menu or dialog instead.</p><p>Bottom sheets can be list-style or grid-style. Grid layouts increase visual disambiguation.</p><p>You can use bottom sheets to show actions related to other apps or to allow entry points to other apps (via the app icon).</p>
+    </div>
+  </section>
+
+        </div>
+              </div>
+  </div>
+</div>                  <div id="bottom-sheets-content" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Content
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>In a standard list-style bottom sheet, each action should have a text description and a left-aligned icon. When necessary, use separators to logically group actions. Also use subheaders or titles to give context to the choices. </p>
     </div>
   </section>
 
         </div>
               <div>
-          <section class="moduleE1">
-      <h3>Linear</h3>
+          <section class="moduleD1">
     <div class="module-body">
-    <p>A linear progress indicator should always fill from 0% to 100% and never move backwards to a lower value. If multiple operations are happening in sequence, use the progress indicator to represent the delay as a whole. This way, when the bar reaches 100%, it doesn't return back to 0%.</p><p>Linear bars should appear and disappear on the edge of a header or sheet.</p>
+    <p>A scrollable grid-style bottom sheet can contain icons for standard share actions.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWVXBBVF9qR3E4a2s" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Linear_Sheet_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Linear_Sheet_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YmxYNmNhNkhGbXc/components_bottomsheets1.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Linear progress indicators</div>
-        </figcaption>
-              </figure>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7XzRWUmxIa285UDA/components_bottomsheets2.png" />
+                    </div>
+                        </figure>
           </div>
   </div>
 </section>
@@ -292,87 +325,12 @@
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWbjNqR2VRakhTODA" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Linear_Video_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Linear_Video_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UHh2NndsMTAxV2c/components_bottomsheets3.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Buffering progress indicator on a video</div><p> </p>
-        </figcaption>
-                </figure>
+                        </figure>
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6MHBFZE5Wcm55ME0" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Linear_Image_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Linear_Image_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Query indicator on a webpage</div>
-        </figcaption>
-                </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Circular</h3>
-    <div class="module-body">
-    
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQnF5WGo1UEZBYkk" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Circular_Sheet_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Circular_Sheet_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Circular determinate progress indicators</div>
-        </figcaption>
-              </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleD1">
-    <div class="module-body">
-    <p>Circular with integration</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWaVpNbk1SV3dSbXc" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Circular_Aspirational_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Circular_Aspirational_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">A circular loader may be integrated with a floating action button. </div>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWNmdHSWcxekI1Z0k" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-typesofindicators-061101_Circular_wFab_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-progressactivity-typesofindicators-061101_Circular_wFab_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZndQRkxYWjM0T0E/components_bottomsheets4.png" />
                     </div>
                         </figure>
           </div>
@@ -381,7 +339,7 @@
         </div>
               </div>
   </div>
-</div>                  <div id="progress-activity-behavior" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+</div>                  <div id="bottom-sheets-behavior" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
     Behavior
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
@@ -393,38 +351,54 @@
   <div class="article-content">
     <div class="module-list">
                   <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>When a bottom sheet is displayed, it should animate upwards from the bottom edge of the screen. The previous content dims to give the user context for where they just were and the modal nature of the choice. Tapping on the dimmed area dismisses the sheet, as does swiping down on the sheet. </p><p>If the sheet contains more actions that can fit in the initial display, the sheet is scrollable. Scrolling should also pull up the sheet container and eventually cover the entire screen. </p><p>When the action sheet covers the entire screen, add a dismiss button to the header, on the left side of the title.</p>
+    </div>
+  </section>
+
+        </div>
+              </div>
+  </div>
+</div>                  <div id="bottom-sheets-specs" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Specs
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>The following font, color specs and redlines are provided for mobile apps.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
           <section class="moduleD1">
     <div class="module-body">
-    <p>Loading in phases</p>
+    <p>Font and color:</p><ul><li><span>Text: Roboto Regular 16sp,  #000 87% </span></li><li><span>Title (optional): Roboto Regular 16sp, #000 54%</span></li><li><span>Default bottom sheet background fill: #FFF</span></li><li><span>Overlay shield fill: #000 20%</span></li></ul>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWcXdJR1RGRVZ3YUU" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_SwipeDown_xhdpi_004.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_SwipeDown_xhdpi_004.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QmkwSk1Da0hvelE/components_bottomsheets_specs1.png" />
                     </div>
                         <figcaption>
-          <div class="caption-title">One-phased loads</div><p>Ink (copy and images) loads within an existing, unchanging container. </p>
+          <div class="caption-title">Redline for list-style bottom sheet</div>
         </figcaption>
                 </figure>
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQ3hCU2k3UXRBT0E" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_Photos_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_Photos_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OGZIb3pyclNMTXM/components_bottomsheets_specs2.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Two-phased loads</div><p>The paper container is generated, then the ink (copy and images) load within it. </p>
-        </figcaption>
-                </figure>
+                        </figure>
           </div>
   </div>
 </section>
@@ -438,54 +412,17 @@
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQjlvYm1rVFMwVlU" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_Files_Linear_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_Files_Linear_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VFFxVS1nUWoyYlk/components_bottomsheets_specs3.png" />
                     </div>
                         <figcaption>
-          <div class="caption-title">Loading content for the first time.</div>
+          <div class="caption-title">Redline for list-style sheet with header</div>
         </figcaption>
                 </figure>
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWNjNYREh0M3YxMGs" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_Files_Circular_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_Files_Circular_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ZU9tMzZ0em4zT0U/components_bottomsheets_specs4.png" />
                     </div>
-                        <figcaption>
-          <div class="caption-title">Load and display all content at once.</div>
-        </figcaption>
-                </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p><strong>Loading additional content</strong></p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQW5WdklybnVhdXc" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_BigTop_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_BigTop_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Example 1: Card expansion</div><p>An indeterminate linear indicator is recommended for a card expanding on larger surfaces such as desktop.</p>
-        </figcaption>
-              </figure>
+                        </figure>
           </div>
   </div>
 </section>
@@ -499,30 +436,41 @@
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWQ3hCU2k3UXRBT0E" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_Photos_xhdpi_003.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_Photos_xhdpi_003.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NHNBU0lmRXJNb2s/components_bottomsheets_specs5.png" />
                     </div>
                         <figcaption>
-          <div class="caption-title">Example 2: Scroll up to load more</div><p>An indeterminate circular indicator with an initial radial ink reaction is recommended when loading a list from below.</p>
+          <div class="caption-title">Example of bottom sheet moving up.</div>
         </figcaption>
                 </figure>
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWcXdJR1RGRVZ3YUU" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-progressactivity-behavior-061102_Loading_SwipeDown_xhdpi_004.webm" type="video/webm" />
-                                            <source src="components-progressactivity-behavior-061102_Loading_SwipeDown_xhdpi_004.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TWxlWUczX21CQU0/components_bottomsheets_specs6.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Rk9FQ0k1dGpvQjg/components_bottomsheets_specs7.png" />
                     </div>
                         <figcaption>
-          <div class="caption-title">Example 3: Swipe down to refresh</div><p>An indeterminate circular indicator with a radial ink reaction is recommended when refreshing a list from above.</p>
+          <div class="caption-title">Redline for grid-style bottom sheet that contains a standard set of actions for other apps.</div>
         </figcaption>
                 </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QTVTSU04U3ZJS0U/components_bottomsheets_specs8.png" />
+                    </div>
+                        </figure>
           </div>
   </div>
 </section>
@@ -537,24 +485,24 @@
 
     <footer>
   <div class="footer-grid">
-    <div class="footer-L section-components">&nbsp;</div>
-    <div class="footer-grid-L section-components">
-            <a class="footer-text" href="pickers.html">
+    <div class="footer-L section-layout">&nbsp;</div>
+    <div class="footer-grid-L section-layout">
+            <a class="footer-text" href="../layout/structure.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      Pickers
+                      Layout
                   </div>
       </a>
           </div>
 
     <div class="footer-R section-components">&nbsp;</div>
     <div class="footer-grid-R section-components">
-            <a class="footer-text" href="sliders.html">
+            <a class="footer-text" href="buttons.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Sliders
+                      Buttons
                   </div>
       </a>
           </div>

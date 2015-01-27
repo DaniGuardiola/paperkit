@@ -7,3 +7,5 @@ web/paperkit-min/
 .DS_Store
 *~
 *.save
+web/spec/**/*.mp4
+web/spec/**/*.webm

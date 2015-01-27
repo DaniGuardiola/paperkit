@@ -270,8 +270,8 @@
                           <div class="media">
                           <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
                 <video id="1-None_0B0NGgBg38lWWWEt6WTNEc3hCSDQ" crossorigin="anonymous" preload="metadata" loop  controls>
-                                  <source src="animation-responsiveinteraction-userinput-030201_Surface_Reaction_xhdpi_002.webm" type="video/webm" />
-                                                  <source src="animation-responsiveinteraction-userinput-030201_Surface_Reaction_xhdpi_002.mp4" type="video/mp4" />
+                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWUUhndWxCNFN6b00/animation-responsiveinteraction-userinput-030201_Surface_Reaction_xhdpi_002.webm" type="video/webm" />
+                                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWWEt6WTNEc3hCSDQ/animation-responsiveinteraction-userinput-030201_Surface_Reaction_xhdpi_002.mp4" type="video/mp4" />
                                 </video>
               </div>
                       </div>
@@ -283,8 +283,8 @@
                           <div class="media">
                           <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
                 <video id="1-None_0B0NGgBg38lWWTFRzaVFZUGZINXM" crossorigin="anonymous" preload="metadata" loop  controls>
-                                  <source src="animation-responsiveinteraction-userinput-030201_Material_Response_xhdpi_001.webm" type="video/webm" />
-                                                  <source src="animation-responsiveinteraction-userinput-030201_Material_Response_xhdpi_001.mp4" type="video/mp4" />
+                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWeEFXZGlVaVFZekU/animation-responsiveinteraction-userinput-030201_Material_Response_xhdpi_001.webm" type="video/webm" />
+                                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWTFRzaVFZUGZINXM/animation-responsiveinteraction-userinput-030201_Material_Response_xhdpi_001.mp4" type="video/mp4" />
                                 </video>
               </div>
                       </div>
@@ -296,8 +296,8 @@
                           <div class="media">
                           <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
                 <video id="1-None_0B0NGgBg38lWWZ0tWWm9IMDZEMDA" crossorigin="anonymous" preload="metadata" loop  controls>
-                                  <source src="animation-responsiveinteraction-userinput-030201_Radial_Reaction_xhdpi_001.webm" type="video/webm" />
-                                                  <source src="animation-responsiveinteraction-userinput-030201_Radial_Reaction_xhdpi_001.mp4" type="video/mp4" />
+                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWNkJYYXZvcGFXZDg/animation-responsiveinteraction-userinput-030201_Radial_Reaction_xhdpi_001.webm" type="video/webm" />
+                                                  <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWZ0tWWm9IMDZEMDA/animation-responsiveinteraction-userinput-030201_Radial_Reaction_xhdpi_001.mp4" type="video/mp4" />
                                 </video>
               </div>
                       </div>
@@ -365,8 +365,8 @@ Related
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B0NGgBg38lWWMndwZm1ScmlEY1U" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-responsiveinteraction-surfacereaction-030202_TouchRipple_PressRelease_xhdpi_002.webm" type="video/webm" />
-                                            <source src="animation-responsiveinteraction-surfacereaction-030202_TouchRipple_PressRelease_xhdpi_002.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWdjdXZUtDc2szc2c/animation-responsiveinteraction-surfacereaction-030202_TouchRipple_PressRelease_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWMndwZm1ScmlEY1U/animation-responsiveinteraction-surfacereaction-030202_TouchRipple_PressRelease_xhdpi_002.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -378,8 +378,8 @@ Related
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B0NGgBg38lWWZmNTSmxsdXd5SGM" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-responsiveinteraction-surfacereaction-030202_TouchRipple_DragRelease_xhdpi_002.webm" type="video/webm" />
-                                            <source src="animation-responsiveinteraction-surfacereaction-030202_TouchRipple_DragRelease_xhdpi_002.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWZGIxcG5melFNSVE/animation-responsiveinteraction-surfacereaction-030202_TouchRipple_DragRelease_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWZmNTSmxsdXd5SGM/animation-responsiveinteraction-surfacereaction-030202_TouchRipple_DragRelease_xhdpi_002.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -440,8 +440,8 @@ Related
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B0NGgBg38lWWdlg3S2IwcWYyUDQ" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-responsiveinteraction-materialresponse-030202_PointOfOrigin_DO_001.webm" type="video/webm" />
-                                            <source src="animation-responsiveinteraction-materialresponse-030202_PointOfOrigin_DO_001.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWMXpyWDRDWDJpeDA/animation-responsiveinteraction-materialresponse-030202_PointOfOrigin_DO_001.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWdlg3S2IwcWYyUDQ/animation-responsiveinteraction-materialresponse-030202_PointOfOrigin_DO_001.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -453,8 +453,8 @@ Related
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B0NGgBg38lWWRXlrYVd6bHFIbU0" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-responsiveinteraction-materialresponse-030202_PointOfOrigin_DONT_001.webm" type="video/webm" />
-                                            <source src="animation-responsiveinteraction-materialresponse-030202_PointOfOrigin_DONT_001.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWTmppTnl4aTF6X0k/animation-responsiveinteraction-materialresponse-030202_PointOfOrigin_DONT_001.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWRXlrYVd6bHFIbU0/animation-responsiveinteraction-materialresponse-030202_PointOfOrigin_DONT_001.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -488,8 +488,8 @@ Related
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B0NGgBg38lWWR0NfZ29yR1p5M2s" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="animation-responsiveinteraction-materialresponse-030203_Material_Response_xhdpi_001.webm" type="video/webm" />
-                                            <source src="animation-responsiveinteraction-materialresponse-030203_Material_Response_xhdpi_001.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWcURPLXpTc2FQRUk/animation-responsiveinteraction-materialresponse-030203_Material_Response_xhdpi_001.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWR0NfZ29yR1p5M2s/animation-responsiveinteraction-materialresponse-030203_Material_Response_xhdpi_001.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>

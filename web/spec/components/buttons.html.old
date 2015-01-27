@@ -659,8 +659,8 @@
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B08MbvYZK1iNQ2kxM0VKdXQ0Tmc" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-buttons-mainbuttons-buttons-motion1_large_xhdpi.webm" type="video/webm" />
-                                            <source src="components-buttons-mainbuttons-buttons-motion1_large_xhdpi.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNZUdUdVAzdUVPMG8/components-buttons-mainbuttons-buttons-motion1_large_xhdpi.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNQ2kxM0VKdXQ0Tmc/components-buttons-mainbuttons-buttons-motion1_large_xhdpi.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -672,8 +672,8 @@
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B08MbvYZK1iNelZlNW13UVRzUnc" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-buttons-mainbuttons-buttons-motionraised_large_xhdpi.webm" type="video/webm" />
-                                            <source src="components-buttons-mainbuttons-buttons-motionraised_large_xhdpi.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNRUdGNUlpVGpwbm8/components-buttons-mainbuttons-buttons-motionraised_large_xhdpi.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNelZlNW13UVRzUnc/components-buttons-mainbuttons-buttons-motionraised_large_xhdpi.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>
@@ -1527,8 +1527,8 @@
                           <div class="media">
                       <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
               <video id="1-None_0B0NGgBg38lWWZVV2LXRhWkprd3M" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="components-buttons-otherbuttons-060203_MobileDropdowns_xhdpi_002.webm" type="video/webm" />
-                                            <source src="components-buttons-otherbuttons-060203_MobileDropdowns_xhdpi_002.mp4" type="video/mp4" />
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWaFNpY1BsYlNZekU/components-buttons-otherbuttons-060203_MobileDropdowns_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWZVV2LXRhWkprd3M/components-buttons-otherbuttons-060203_MobileDropdowns_xhdpi_002.mp4" type="video/mp4" />
                             </video>
             </div>
                     </div>

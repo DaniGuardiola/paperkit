@@ -10,24 +10,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Loading images - Patterns - Google design guidelines</title>
-    <meta itemprop="name" content="Loading images - Patterns - Google design guidelines"/>
+    <title>Subheaders - Components - Google design guidelines</title>
+    <meta itemprop="name" content="Subheaders - Components - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Loading images - Patterns - Google design guidelines" />
+    <meta property="og:title" content="Subheaders - Components - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Loading images - Patterns" />
+    <meta property="article:section" content="Subheaders - Components" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Loading images</Attribute>
+      <Attribute name="title">Subheaders</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
-      <Attribute name="section_title">Patterns</Attribute>
-      <Attribute name="section_slug">patterns</Attribute>
+      <Attribute name="section_title">Components</Attribute>
+      <Attribute name="section_slug">components</Attribute>
     </DataObject>
     <DataObject type="thumbnail">
       <Attribute name="src" value="" />
@@ -45,11 +45,11 @@
 </script>
   </head>
 
-  <body class="section-patterns noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+  <body class="section-components noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
     <header>
   <div class="header-wrapper">
-    <div class="header-title">      <span class="section-title">Patterns</span>
-      <span class="chapter-title">Loading images</span>
+    <div class="header-title">      <span class="section-title">Components</span>
+      <span class="chapter-title">Subheaders</span>
     </div>
   </div>
 </header>
@@ -111,72 +111,72 @@
                     <a class="" href="../layout/structure.html">Structure
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Components
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Components
                 </dt>
         <dd>
-                    <a class="" href="../components/bottom-sheets.html">Bottom sheets
+                    <a class="" href="bottom-sheets.html">Bottom sheets
                     </a>
-                    <a class="" href="../components/buttons.html">Buttons
+                    <a class="" href="buttons.html">Buttons
                     </a>
-                    <a class="" href="../components/cards.html">Cards
+                    <a class="" href="cards.html">Cards
                     </a>
-                    <a class="" href="../components/chips.html">Chips
+                    <a class="" href="chips.html">Chips
                     </a>
-                    <a class="" href="../components/dialogs.html">Dialogs
+                    <a class="" href="dialogs.html">Dialogs
                     </a>
-                    <a class="" href="../components/dividers.html">Dividers
+                    <a class="" href="dividers.html">Dividers
                     </a>
-                    <a class="" href="../components/grids.html">Grids
+                    <a class="" href="grids.html">Grids
                     </a>
-                    <a class="" href="../components/lists.html">Lists
+                    <a class="" href="lists.html">Lists
                     </a>
-                    <a class="" href="../components/list-controls.html">List controls
+                    <a class="" href="list-controls.html">List controls
                     </a>
-                    <a class="" href="../components/menus.html">Menus
+                    <a class="" href="menus.html">Menus
                     </a>
-                    <a class="" href="../components/pickers.html">Pickers
+                    <a class="" href="pickers.html">Pickers
                     </a>
-                    <a class="" href="../components/progress-activity.html">Progress &amp; activity
+                    <a class="" href="progress-activity.html">Progress &amp; activity
                     </a>
-                    <a class="" href="../components/sliders.html">Sliders
+                    <a class="" href="sliders.html">Sliders
                     </a>
-                    <a class="" href="../components/snackbars-toasts.html">Snackbars &amp; toasts
+                    <a class="" href="snackbars-toasts.html">Snackbars &amp; toasts
                     </a>
-                    <a class="" href="../components/subheaders.html">Subheaders
+                    <a class="nav_selected" href="subheaders.html">Subheaders
                     </a>
-                    <a class="" href="../components/switches.html">Switches
+                    <a class="" href="switches.html">Switches
                     </a>
-                    <a class="" href="../components/tabs.html">Tabs
+                    <a class="" href="tabs.html">Tabs
                     </a>
-                    <a class="" href="../components/text-fields.html">Text fields
+                    <a class="" href="text-fields.html">Text fields
                     </a>
-                    <a class="" href="../components/tooltips.html">Tooltips
+                    <a class="" href="tooltips.html">Tooltips
                     </a>
                   </dd>
-                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Patterns
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
                 </dt>
         <dd>
-                    <a class="" href="data-formats.html">Data formats
+                    <a class="" href="../patterns/data-formats.html">Data formats
                     </a>
-                    <a class="" href="errors.html">Errors
+                    <a class="" href="../patterns/errors.html">Errors
                     </a>
-                    <a class="" href="gestures.html">Gestures
+                    <a class="" href="../patterns/gestures.html">Gestures
                     </a>
-                    <a class="nav_selected" href="loading-images.html">Loading images
+                    <a class="" href="../patterns/loading-images.html">Loading images
                     </a>
-                    <a class="" href="navigation-drawer.html">Navigation drawer
+                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
                     </a>
-                    <a class="" href="navigational-transitions.html">Navigational transitions
+                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
                     </a>
-                    <a class="" href="scrolling-techniques.html">Scrolling techniques
+                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
                     </a>
-                    <a class="" href="search.html">Search
+                    <a class="" href="../patterns/search.html">Search
                     </a>
-                    <a class="" href="selection.html">Selection
+                    <a class="" href="../patterns/selection.html">Selection
                     </a>
-                    <a class="" href="settings.html">Settings
+                    <a class="" href="../patterns/settings.html">Settings
                     </a>
-                    <a class="" href="swipe-to-refresh.html">Swipe to refresh
+                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
                     </a>
                   </dd>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
@@ -216,24 +216,34 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Loading images
+  <h1 class="chapter-title">Subheaders
       </h1>
 
   <div class="chapter-content">
         
+        <div class="chapter-intro">
+       <p>Subheaders are special list tiles that delineate distinct sections of a list or grid list and are typically related to the current filtering or sorting criteria. Subheader tiles are either displayed inline with tiles or can be associated with content, for example, in an adjacent column.</p><p>Upon scrolling, subheaders remain pinned to the top of the screen until pushed on or off screen by the next subheader.</p>
+
+      
+      
+    </div>
     
         <nav class="chapter-toc">
       <h1>Contents</h1>
       <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="loading-images.html#loading-images-loading-images">Loading images
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="subheaders.html#subheaders-list-subheaders">List subheaders
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="subheaders.html#subheaders-grid-subheaders">Grid subheaders
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="subheaders.html#subheaders-menu-subheaders">Menu subheaders
                 </a></li>
               </ul>
     </nav>
     
     <div class="article-list">
-                        <div id="loading-images-loading-images" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                        <div id="subheaders-list-subheaders" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Loading images
+    List subheaders
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
       <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
@@ -243,97 +253,20 @@
   <div class="article-content">
     <div class="module-list">
                   <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>Rather than relying heavily on opacity shifts, illustrations and photographs may load and transition in three phases at staggered durations. <br/></p><p>The levels are adjusted for a low contrast exposure and desaturated in color. The final stage would be a full color saturation, only after the opacity is at 100%. </p><p>The lower contrast effect is a combination of a shift in gamma and black output for darker images. </p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7M05lWkx3NTVncEE/patterns_loadingimages1.png" />
-                    </div>
-                      </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleC1 moduleC2">
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNYUtBc1paS3hmY0U/patterns-imagetreatment-imageload2_large_xhdpi.png" />
-                      </div>
-                        <figcaption>
-          <div class="caption-title">Low opacity and low contrast</div>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNY3FnbmJOeGNEMFE/patterns-imagetreatment-imageload3_large_xhdpi.png" />
-                      </div>
-                        <figcaption>
-          <div class="caption-title">Full opacity and exposure</div>
-        </figcaption>
-                </figure>
-            <figure class="">
-                          <div class="media">
-                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNaFhNWkc0bHdEUVk/patterns-imagetreatment-imageload4_large_xhdpi.png" />
-                      </div>
-                        <figcaption>
-          <div class="caption-title">Color saturation</div>
-        </figcaption>
-                </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
           <section class="moduleD1">
-      <h3>Aperture vs development</h3>
     <div class="module-body">
-    <p>Don’t adjust the levels in a way that will blow out the whites. This creates an effect that implies an overexposure of the aperture through a camera lens.</p><p>Do imagine the image is fading in like a photographic print during the photo developing process.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNTWdocmdNQ3pERmM/patterns-imagetreatment-aperturevsdevelopment1-yes-no_large_xhdpi.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div>
-        </figcaption>
-                </figure>
-            <figure class="example dont">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNV3Nna1RjSjc1TlU/patterns-imagetreatment-aperturevsdevelopment2-yes-no_large_xhdpi.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div>
-        </figcaption>
-                </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleD1">
-      <h3>Load and transition</h3>
-    <div class="module-body">
-    <p>Use the ratio of the three phases (opacity, contrast and saturation) graphed above to suit your needs. A longer duration is recommended for loads and a shorter durations is recommended for transitions.</p>
+    <p>Tile height: 48dp<br/>Subheader font: Roboto </p><p>Medium 14sp</p><p>Subheader color can either be the secondary grey text value (54% black) or the primary color of the app.</p><p>In long lists of complex information, consider using colored subheaders to delineate content. An example of the use of color for subheaders is in Android settings.</p><p>A subheader should be left-aligned with an avatar/icon in a list, unless there is a promoted action in that space.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B08MbvYZK1iNU2VGSFotTTluU2s" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="patterns-imagerytreatment-imageload-transition_large_xhdpi.webm" type="video/webm" />
-                                            <source src="patterns-imagerytreatment-imageload-transition_large_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7eThvY2hXZ2JNdkk/components_subheaders1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7N2JrUFNfV3o3RGc/components_subheaders2.png" />
                     </div>
                         </figure>
           </div>
@@ -341,45 +274,90 @@
 </section>
         </div>
               <div>
-          <section class="moduleE1">
-      <h3>Loading on larger screens</h3>
+          <section class="moduleD1">
     <div class="module-body">
-    <p>This process is ideal for larger screens, such as in this Chrome OS wallpaper loading use case.</p>
+    <p>If there is a floating action button left-aligned with the avatar/icon in a list, align the subheader with the text content.</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6UE5ndDctVDVxdEU" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="patterns-imagerytreatment-imageload-transition_desktop_large_xhdpi_004.webm" type="video/webm" />
-                                            <source src="patterns-imagerytreatment-imageload-transition_desktop_large_xhdpi_004.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OWVYZFY4N3lGRGs/components_subheaders3.png" />
                     </div>
-                      </figure>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dldHNWp5NXc5Wlk/components_subheaders4.png" />
+                    </div>
+                        </figure>
           </div>
   </div>
 </section>
         </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Adding animation</h3>
+              </div>
+  </div>
+</div>                  <div id="subheaders-grid-subheaders" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Grid subheaders
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
     <div class="module-body">
-    <p>Add a small position shift on top of this image treatment for instances, such as an account switcher.</p>
+    <p>Tile height: 48dp<br/>Subheader font: Roboto Medium 14sp<br/>Subheader is aligned 16dp from the left edge</p>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWRm5QODB0bk95SUE" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="patterns-loadingimages-loading-070901_Load_Add_Animation_xhdpi_002.webm" type="video/webm" />
-                                            <source src="patterns-loadingimages-loading-070901_Load_Add_Animation_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7OFRBazBRbDdUMEk/components_subheaders5.png" />
                     </div>
-                      </figure>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RDJ4MDJPb3o2b2c/components_subheaders6.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="subheaders-menu-subheaders" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Menu subheaders
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Tile height: 48dp<br/>Subheader font: Roboto Medium 14sp<br/>Subheader is aligned 16dp from the left edge</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SUN5WmF5TkJZWGs/components_subheaders7.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WXlXdXd0bndiQ1U/components_subheaders8.png" />
+                    </div>
+                        </figure>
           </div>
   </div>
 </section>
@@ -394,24 +372,24 @@
 
     <footer>
   <div class="footer-grid">
-    <div class="footer-L section-patterns">&nbsp;</div>
-    <div class="footer-grid-L section-patterns">
-            <a class="footer-text" href="gestures.html">
+    <div class="footer-L section-components">&nbsp;</div>
+    <div class="footer-grid-L section-components">
+            <a class="footer-text" href="snackbars-toasts.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      Gestures
+                      Snackbars &amp; toasts
                   </div>
       </a>
           </div>
 
-    <div class="footer-R section-patterns">&nbsp;</div>
-    <div class="footer-grid-R section-patterns">
-            <a class="footer-text" href="navigation-drawer.html">
+    <div class="footer-R section-components">&nbsp;</div>
+    <div class="footer-grid-R section-components">
+            <a class="footer-text" href="switches.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Navigation drawer
+                      Switches
                   </div>
       </a>
           </div>

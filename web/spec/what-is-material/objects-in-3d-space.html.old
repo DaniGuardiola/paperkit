@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Objects in 3D space - What is material? - Google design guidelines</title>
+    <meta itemprop="name" content="Objects in 3D space - What is material? - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Objects in 3D space - What is material? - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Objects in 3D space - What is material?" />
+
+
+
+
+
+  <!-- PAPERKIT SETTINGS -->
+  <meta id="mdvars" path="../../">
+  <link rel="stylesheet" href="../../paperkit-min/paperkit.css">
+  <link href="../../resources/prism.css" rel="stylesheet">
+  <link href="../../resources/spec/style.css" rel="stylesheet">
+  <script src="../../paperkit-min/paperkit.js"></script>
+  <script src="../../resources/spec/script.js"></script>
+
+
+
+
+
+
+
+
+
+
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Objects in 3D space</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">What is material?</Attribute>
+      <Attribute name="section_slug">what-is-material</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+
+
+
+
+
+
+
+<!-- PAPERKIT ANALYTICS -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58574637-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51798601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51798601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+
+  <body class="section-what-is-material noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">What is material?</span>
+      <span class="chapter-title">Objects in 3D space</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+    <span id="logo"><img src="https://material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"/></span>
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Material design
+                </dt>
+        <dd>
+                    <a class="" href="../index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="environment.html">Environment
+                    </a>
+                    <a class="" href="material-properties.html">Material properties
+                    </a>
+                    <a class="nav_selected" href="objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="../animation/delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="../style/color.html">Color
+                    </a>
+                    <a class="" href="../style/icons.html">Icons
+                    </a>
+                    <a class="" href="../style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="../style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Layout
+                </dt>
+        <dd>
+                    <a class="" href="../layout/principles.html">Principles
+                    </a>
+                    <a class="" href="../layout/metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="" href="../layout/structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Components
+                </dt>
+        <dd>
+                    <a class="" href="../components/bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="../components/buttons.html">Buttons
+                    </a>
+                    <a class="" href="../components/cards.html">Cards
+                    </a>
+                    <a class="" href="../components/chips.html">Chips
+                    </a>
+                    <a class="" href="../components/dialogs.html">Dialogs
+                    </a>
+                    <a class="" href="../components/dividers.html">Dividers
+                    </a>
+                    <a class="" href="../components/grids.html">Grids
+                    </a>
+                    <a class="" href="../components/lists.html">Lists
+                    </a>
+                    <a class="" href="../components/list-controls.html">List controls
+                    </a>
+                    <a class="" href="../components/menus.html">Menus
+                    </a>
+                    <a class="" href="../components/pickers.html">Pickers
+                    </a>
+                    <a class="" href="../components/progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="../components/sliders.html">Sliders
+                    </a>
+                    <a class="" href="../components/snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="../components/subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="../components/switches.html">Switches
+                    </a>
+                    <a class="" href="../components/tabs.html">Tabs
+                    </a>
+                    <a class="" href="../components/text-fields.html">Text fields
+                    </a>
+                    <a class="" href="../components/tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                </dt>
+        <dd>
+                    <a class="" href="../patterns/data-formats.html">Data formats
+                    </a>
+                    <a class="" href="../patterns/errors.html">Errors
+                    </a>
+                    <a class="" href="../patterns/gestures.html">Gestures
+                    </a>
+                    <a class="" href="../patterns/loading-images.html">Loading images
+                    </a>
+                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="../patterns/search.html">Search
+                    </a>
+                    <a class="" href="../patterns/selection.html">Selection
+                    </a>
+                    <a class="" href="../patterns/settings.html">Settings
+                    </a>
+                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="../usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="../usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="../resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Objects in 3D space
+      </h1>
+
+  <div class="chapter-content">
+        
+        <div class="chapter-intro">
+       <p>There are parallels between organizing objects in the physical world and arranging objects in space in material design. In the physical world, objects can be stacked or affixed to one another, but cannot pass through one another. The objects cast shadows and reflect light. </p><p>These qualities apply to objects in material design and help create a spatial model that can be consistently applied across apps in ways that are familiar to users.</p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="objects-in-3d-space.html#objects-in-3d-space-elevation">Elevation
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="objects-in-3d-space.html#objects-in-3d-space-object-relationships">Object relationships
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="objects-in-3d-space-elevation" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Elevation
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Elevation is the relative position of an object along its parent’s z-axis. Elevation is the relative value between parent and child objects.</p><p>Elevation is measured in the same units as the x and y axes, typically in density independent pixels (dps). Since material has a standard 1dp thickness, all elevation distances are measured from one top surface to another top surface.</p><div class="modulettes">
+          <a class="modulette polymer" href="https://www.polymer-project.org/docs/elements/material.html#shadow-effect" title="Shadow effect">
+      <img class="icon callout-icon" src="../static/images/callout_polymer.svg" alt="" />
+      <div class="info">
+        <div class="title">Shadow effect</div>
+        <span class="subtitle">Define shadows for custom elements</span>
+      </div>
+    </a>
+      </div>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7U05IYmxGcW1WcVU/whatismaterial_3d_elevation1.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+            <section class="moduleB1">
+          <h3>Resting elevation</h3>
+        <div class="module-body">
+      
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>All material objects have a resting elevation, whether the object is a small component or a sheet that spans the entire display.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WWF2M2pDSDJ6M3c/whatismaterial_3d_elevation2.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>Examples of typical resting elevations for components.</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>In the static state, the resting elevation for an object does not change. It is constant throughout an app. If an object changes elevation, it should return to its resting elevation as soon as possible.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UFFxc1NmZmNxY0U/whatismaterial_3d_elevation3.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>The resting elevation for a given component type is consistent across apps throughout a platform. However, that same component type may have different resting elevations from platform to platform depending on the depth of the environment (e.g., TV has a greater depth than mobile or desktop).</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VlNUdW5seTJVaTQ/whatismaterial_3d_elevation4.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+            <section class="moduleB1">
+          <h3>Responsive elevation and dynamic elevation offsets</h3>
+        <div class="module-body">
+      
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Certain component types have responsive elevation, which means they change their elevation in response to user input or system events. Different component states (e.g., normal, focused, pressed) may result in varying elevation changes, which are consistently implemented using dynamic elevation offsets.</p><p>Dynamic elevation offsets are relative to the resting state of the component, and act as the goal or target elevation for the component to move towards for a given component state. They also ensure that elevation changes for a given action are consistent across a component type. For example, all components that lift on press have the same elevation change, relative to their current/resting elevation.</p><p>Once the input event is completed or cancelled, the component will return to its resting elevation.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Q1N0RzZFcVhSWXM/whatismaterial_3d_elevation5.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+            <section class="moduleB1">
+          <h3>Functional shadows</h3>
+        <div class="module-body">
+      <p>Shadows provide several important visual cues about the arrangement of objects in space. Shadows are the only visual affordance indicating the amount of separation between surfaces. The elevation of an object determines the visual appearance of its shadow.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleC1 moduleC2">
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7XzNPLWJJYWw4ZVk/whatismaterial_3d_elevation_shadow1.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>Without a shadow, there is nothing to indicate that the floating action button is a separate surface from the background surfaces.</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-eGtOTkZLLWpJbXc/whatismaterial_3d_elevation_shadow2.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>Crisp shadows indicate both the floating action button and the app bar are separate surfaces very close to the background surface.</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-RmRfeDNPVnFld0U/whatismaterial_3d_elevation_shadow3.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>Softer, larger shadows indicate the floating action button is at a higher elevation than the app bar.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>In motion, shadows also provide cues about an object’s direction of movement. This is another useful tool to indicate whether the distance between surfaces is increasing or decreasing.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleC1 moduleC2">
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aWUtM3dURkhiWk0/whatismaterial_3d_elevation_shadow4.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>Without a shadow to indicate elevation, it’s unclear whether this circle is scaling at the same elevation, or simply increasing its elevation.</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7N2JJbC1QeC1vZUU/whatismaterial_3d_elevation_shadow5.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>The shadow grows softer and larger as the object’s elevation increases and grows crisper and smaller as the elevation decreases.</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7eEtZRWpCTGVxa1U/whatismaterial_3d_elevation_shadow6.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>In this case, the consistent shadow helps the user understand that the object is changing shape as opposed to changing elevation.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              </div>
+  </div>
+</div>                  <div id="objects-in-3d-space-object-relationships" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Object relationships
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>How you organize objects in an app determines how objects or collections of objects move in relation to one another. Objects can move independently of each other, or their movement can be constrained to, and dependent upon, their container. Containers and the objects they contain have a parent-child relationship. Every object has a single parent, and may or may not have one or more children.</p><p>Children inherit transformation properties from their parent, such as position, rotation, scale, and elevation. For example, in the case of a scrolling card collection where all cards move together, the cards are siblings and they are all children of the card collection container that handles the scrolling movement.</p><p>The hierarchy of parents and children determines how objects and groups of objects interact with one another. For example, child objects have minimal z-axis separation from their parent; other objects do not get inserted between parents and children. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RDVQb2FiUExTUjQ/whatismaterial_3d_relationship1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>The raised button (child) scrolls off screen as its parent content scrolls.</p>
+        </figcaption>
+              </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bUxFNWxtN2VnY2M/whatismaterial_3d_relationship2.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title"></div><p>The cards (siblings, and children of the card collection) scroll off screen as the floating action button (its own parent) remains in place.</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-what-is-material">&nbsp;</div>
+    <div class="footer-grid-L section-what-is-material">
+            <a class="footer-text" href="material-properties.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
+        <span>Previous</span>
+        <div>
+                      Material properties
+                  </div>
+      </a>
+          </div>
+
+    <div class="footer-R section-animation">&nbsp;</div>
+    <div class="footer-grid-R section-animation">
+            <a class="footer-text" href="../animation/authentic-motion.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      Animation
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+
+
+
+
+<!-- PAPERKIT SETTINGS -->
+    <script src="../../resources/prism.js"></script>
+
+
+
+
+  </body>
+
+</html>

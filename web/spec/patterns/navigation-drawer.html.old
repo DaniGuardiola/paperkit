@@ -10,19 +10,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <meta name="keywords" content=""/>
-    <title>Loading images - Patterns - Google design guidelines</title>
-    <meta itemprop="name" content="Loading images - Patterns - Google design guidelines"/>
+    <title>Navigation drawer - Patterns - Google design guidelines</title>
+    <meta itemprop="name" content="Navigation drawer - Patterns - Google design guidelines"/>
     <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Loading images - Patterns - Google design guidelines" />
+    <meta property="og:title" content="Navigation drawer - Patterns - Google design guidelines" />
     <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
     <meta property="og:site_name" content="Google design guidelines" />
-    <meta property="article:section" content="Loading images - Patterns" />
+    <meta property="article:section" content="Navigation drawer - Patterns" />
 <!--
 <PageMap>
     <DataObject type="document">
       <Attribute name="uid"></Attribute>
-      <Attribute name="title">Loading images</Attribute>
+      <Attribute name="title">Navigation drawer</Attribute>
       <Attribute name="keywords"></Attribute>
       <Attribute name="slug"></Attribute>
       <Attribute name="description"></Attribute>
@@ -49,7 +49,7 @@
     <header>
   <div class="header-wrapper">
     <div class="header-title">      <span class="section-title">Patterns</span>
-      <span class="chapter-title">Loading images</span>
+      <span class="chapter-title">Navigation drawer</span>
     </div>
   </div>
 </header>
@@ -162,9 +162,9 @@
                     </a>
                     <a class="" href="gestures.html">Gestures
                     </a>
-                    <a class="nav_selected" href="loading-images.html">Loading images
+                    <a class="" href="loading-images.html">Loading images
                     </a>
-                    <a class="" href="navigation-drawer.html">Navigation drawer
+                    <a class="nav_selected" href="navigation-drawer.html">Navigation drawer
                     </a>
                     <a class="" href="navigational-transitions.html">Navigational transitions
                     </a>
@@ -216,177 +216,182 @@
 
     <div id="grid-cont">
       <section class="grid_outer chapter">
-  <h1 class="chapter-title">Loading images
+  <h1 class="chapter-title">Navigation drawer
       </h1>
 
   <div class="chapter-content">
         
-    
-        <nav class="chapter-toc">
-      <h1>Contents</h1>
-      <ul>
-                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="loading-images.html#loading-images-loading-images">Loading images
-                </a></li>
-              </ul>
-    </nav>
-    
-    <div class="article-list">
-                        <div id="loading-images-loading-images" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
-  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
-    Loading images
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
-      <title id="title">Expand and collapse content</title>
-      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
-      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
-    </svg>
-  </h2>
-  <div class="article-content">
-    <div class="module-list">
-                  <div>
-          <section class="moduleE1">
-    <div class="module-body">
-    <p>Rather than relying heavily on opacity shifts, illustrations and photographs may load and transition in three phases at staggered durations. <br/></p><p>The levels are adjusted for a low contrast exposure and desaturated in color. The final stage would be a full color saturation, only after the opacity is at 100%. </p><p>The lower contrast effect is a combination of a shift in gamma and black output for darker images. </p>
-  </div>
+        <div class="chapter-intro">
+       <p>The navigation drawer is a common pattern found in Google apps.  The navigation drawer slides in from the left. It follows the keylines and metrics for lists. </p>
+<section class="moduleC1 moduleC2">
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7M05lWkx3NTVncEE/patterns_loadingimages1.png" />
-                    </div>
-                      </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleC1 moduleC2">
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNYUtBc1paS3hmY0U/patterns-imagetreatment-imageload2_large_xhdpi.png" />
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dF9QaTFEM1FrbXM/patterns_navdrawer_metrics1.png" />
                       </div>
                         <figcaption>
-          <div class="caption-title">Low opacity and low contrast</div>
+          <div class="caption-title">Typography</div><ol start="1"><li><span>Roboto Medium, 14sp, #FFFFFF</span></li><li><span>Roboto Regular, 14sp, #FFFFFF</span></li><li><span>List item: Roboto Medium, 14sp, 87% #000000</span></li><li><span>Subheader: Roboto Medium, 14sp, 54% #000000. Aligns to the 16dp keyline.</span></li></ol><div class="caption-title"> </div>
         </figcaption>
                 </figure>
             <figure class="">
                           <div class="media">
-                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNY3FnbmJOeGNEMFE/patterns-imagetreatment-imageload3_large_xhdpi.png" />
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NmEzM0ZZU1FZQjQ/patterns_navdrawer_metrics2.png" />
                       </div>
                         <figcaption>
-          <div class="caption-title">Full opacity and exposure</div>
+          <div class="caption-title">Vertical keylines and horizontal margins</div><p>Vertical keylines for icons are at 16dp from the left and right edges of the side nav and are 54% #000000.</p><p>Content associated with an icon or avatar aligns 72dp from the left edge of the side nav. </p><p>The width of the side nav is equal to the width of the screen minus the height of the action bar, or in this case 56dp from the right edge of the screen. The maximum width of the nav drawer is 5 times the standard increment (56dp on mobile and 64dp on tablet).</p><p>Use 16dp horizontal margins on mobile and 24dp on tablet</p>
         </figcaption>
                 </figure>
             <figure class="">
                           <div class="media">
-                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNaFhNWkc0bHdEUVk/patterns-imagetreatment-imageload4_large_xhdpi.png" />
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bWlwUGpORUVUS0k/patterns_navdrawer_metrics3.png" />
                       </div>
                         <figcaption>
-          <div class="caption-title">Color saturation</div>
+          <div class="caption-title">Vertical spacing</div><ol start="1"><li><span>24dp</span></li><li><span>56dp</span></li><li><span>8dp</span></li><li><span>48dp</span></li></ol><p>Add 8dp padding at the top and bottom of every list grouping. One exception is at the top of a list with a subheader, because subheaders contain their own padding. </p>
         </figcaption>
                 </figure>
           </div>
   </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleD1">
-      <h3>Aperture vs development</h3>
+</section><section class="moduleD1">
+      <h3>Elevation</h3>
     <div class="module-body">
-    <p>Don’t adjust the levels in a way that will blow out the whites. This creates an effect that implies an overexposure of the aperture through a camera lens.</p><p>Do imagine the image is fading in like a photographic print during the photo developing process.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="example do">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNTWdocmdNQ3pERmM/patterns-imagetreatment-aperturevsdevelopment1-yes-no_large_xhdpi.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Do.</div>
-        </figcaption>
-                </figure>
-            <figure class="example dont">
-                          <div class="media">
-                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNV3Nna1RjSjc1TlU/patterns-imagetreatment-aperturevsdevelopment2-yes-no_large_xhdpi.png" />
-                    </div>
-                        <figcaption>
-          <div class="caption-title">Don't.</div>
-        </figcaption>
-                </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleD1">
-      <h3>Load and transition</h3>
-    <div class="module-body">
-    <p>Use the ratio of the three phases (opacity, contrast and saturation) graphed above to suit your needs. A longer duration is recommended for loads and a shorter durations is recommended for transitions.</p>
+    <p>The nav drawer spans the full height of the screen and the drawer is below the status bar. Everything below the drawer will be darkened by a scrim. All the content is still visible under the scrim. </p><h4> </h4>
   </div>
   <div class="figure-group">
     <div class="figure-row">
             <figure class="">
                           <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B08MbvYZK1iNU2VGSFotTTluU2s" crossorigin="anonymous" preload="metadata"  loop  controls>
-                              <source src="patterns-imagerytreatment-imageload-transition_large_xhdpi.webm" type="video/webm" />
-                                            <source src="patterns-imagerytreatment-imageload-transition_large_xhdpi.mp4" type="video/mp4" />
-                            </video>
-            </div>
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7c2dhcFRZdzBPWnM/patterns_navdrawer_elevation1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Nav drawer on Android</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section><section class="moduleD1">
+      <h3>Selection state</h3>
+    <div class="module-body">
+    <p>After a list item is selected, that item becomes the app’s primary color or #000000 100% to clearly indicate selection. The touch ripple also becomes a highlight, to further indicate selection. </p><p>If this color the touch ripple/highlight doesn’t provide enough contrast with your primary color, use a darker tint of the primary color.</p><h4> </h4>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QmJSTTI0WTJOSVE/patterns_navdrawer_selection1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7X29mNnZoaXpUYjg/patterns_navdrawer_selection2.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dkhfTW5SOHFvcDQ/patterns_navdrawer_selection3.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7ekgwa251SzFoa3M/patterns_navdrawer_selection4.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Nlp4akoxTEVrUHM/patterns_navdrawer_selection5.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7T3dfbjBQcXM5Y28/patterns_navdrawer_selection6.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section><section class="moduleD1">
+      <h3>Dividers</h3>
+    <div class="module-body">
+    <p>All dividers in the nav drawer are full-bleed inside the panel. There is also an 8dp padding above and below the divider.</p><h4> </h4>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7U3Fjc2RjV2JjSFE/patterns_navdrawer_dividers1.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Context</div>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RG1CckZHWWIxOTg/patterns_navdrawer_dividers2.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">8 dp vertical spacing</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section><section class="moduleD1">
+      <h3>Scrolling</h3>
+    <div class="module-body">
+    <p>The navigation drawer can scroll like any normal view would.</p><h4> </h4>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YVhEWVVEdEJmalU/patterns_navdrawer_scrolling1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7YlpiWTZnWEdSUnM/patterns_navdrawer_scrolling2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section><section class="moduleD1">
+      <h3>Settings and support</h3>
+    <div class="module-body">
+    <p>Settings and support are located at the bottom of the scrolling list, in-line with the rest of the list content.</p><p>If the list of content in the navigation drawer is very long, the two options can be pinned to the bottom of the navigation drawer on a surface with a higher elevation. This surface is present only while at the top of the list; any other scroll position will immediately result in dismissing the surface and placing the options at the end of the list, in-line with the rest of the list content. The navigation drawer retains its scroll position when closed and reopened.</p><h4> </h4>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WjVXWld2TS1oNlk/patterns_navdrawer_settings1.png" />
+                    </div>
+                        </figure>
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VlRnamV2ZXpzSFE/patterns_navdrawer_settings2.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section><section class="moduleD1">
+    <div class="module-body">
+    <p>If the list doesn’t scroll, the settings and support items will appear at the end of the list and are not pinned.</p><h4> </h4>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Vnk5ZWl3NEREWXM/patterns_navdrawer_settings3.png" />
                     </div>
                         </figure>
           </div>
   </div>
 </section>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Loading on larger screens</h3>
-    <div class="module-body">
-    <p>This process is ideal for larger screens, such as in this Chrome OS wallpaper loading use case.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B2wX4iIvu8L6UE5ndDctVDVxdEU" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="patterns-imagerytreatment-imageload-transition_desktop_large_xhdpi_004.webm" type="video/webm" />
-                                            <source src="patterns-imagerytreatment-imageload-transition_desktop_large_xhdpi_004.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                      </figure>
+      
+      
+    </div>
+    
+    
+    <div class="article-list">
           </div>
-  </div>
-</section>
-        </div>
-              <div>
-          <section class="moduleE1">
-      <h3>Adding animation</h3>
-    <div class="module-body">
-    <p>Add a small position shift on top of this image treatment for instances, such as an account switcher.</p>
-  </div>
-  <div class="figure-group">
-    <div class="figure-row">
-            <figure class="">
-                          <div class="media">
-                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
-              <video id="1-None_0B0NGgBg38lWWRm5QODB0bk95SUE" crossorigin="anonymous" preload="metadata" loop  controls>
-                              <source src="patterns-loadingimages-loading-070901_Load_Add_Animation_xhdpi_002.webm" type="video/webm" />
-                                            <source src="patterns-loadingimages-loading-070901_Load_Add_Animation_xhdpi_002.mp4" type="video/mp4" />
-                            </video>
-            </div>
-                    </div>
-                      </figure>
-          </div>
-  </div>
-</section>
-        </div>
-              </div>
-  </div>
-</div>                  </div>
 
   </div>
 
@@ -396,22 +401,22 @@
   <div class="footer-grid">
     <div class="footer-L section-patterns">&nbsp;</div>
     <div class="footer-grid-L section-patterns">
-            <a class="footer-text" href="gestures.html">
+            <a class="footer-text" href="loading-images.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
         <span>Previous</span>
         <div>
-                      Gestures
+                      Loading images
                   </div>
       </a>
           </div>
 
     <div class="footer-R section-patterns">&nbsp;</div>
     <div class="footer-grid-R section-patterns">
-            <a class="footer-text" href="navigation-drawer.html">
+            <a class="footer-text" href="navigational-transitions.html">
         <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
         <span>Next</span>
         <div>
-                      Navigation drawer
+                      Navigational transitions
                   </div>
       </a>
           </div>
