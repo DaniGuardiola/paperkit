@@ -7,4 +7,5 @@ mv newver/sousers/www.google.com/design/spec/ .
 rm -rf newver/
 mv spec/ newver/
 meld -a . newver/
-rm -rf newver/
+rm -rf lastver/
+mv newver/ lastver/
