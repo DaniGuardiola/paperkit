@@ -1,0 +1,6 @@
+If you are reading this you at the "license/" folder on the repository.
+Same license as in "LICENSE" file is applied to the source code.
+
+You may notice there is not text under the THIRD PARTY LICENSES section. This is because the concatenation of licenses is made after GRUNT is executed. Please refer to the license of the processed version of Paperkit to see the complete file.
+
+Happy coding

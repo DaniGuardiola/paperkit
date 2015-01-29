@@ -9,3 +9,4 @@ web/paperkit-min/
 *.save
 web/spec/**/*.mp4
 web/spec/**/*.webm
+web/spec/lastver/
