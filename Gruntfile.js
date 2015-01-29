@@ -9,6 +9,9 @@ module.exports = function(grunt) {
         bin: {
           src: [ 'bin/' ]
         },
+        tmpBin: {
+          src: [ 'bin/tmp' ]
+        },
         web: {
           src: [ 'web/paperkit-min/' ]
         },
@@ -71,6 +74,43 @@ module.exports = function(grunt) {
           rename: function(dest,src) {
             var newDest = dest + src.replace("ic_", "");
             newDest = newDest.replace("_24px", "");
+            return newDest;
+          }
+        },
+        resourcesIconLicense: {
+          expand: true,
+          src: 'node_modules/material-design-icons/LICENSE',
+          dest: 'bin/paperkit-files/resources/icon/',
+          flatten: true,
+          rename: function(dest,src) {
+            var newDest = dest + src.replace("LICENSE", "google_license");
+            return newDest;
+          }
+        },
+        resourcesExtraIcon: {
+          expand: true,
+          src: 'bin/tmp/icons/svg/*.svg',
+          dest: 'bin/paperkit-files/resources/icon/',
+          flatten: true,
+          rename: function(dest,src) {
+            var newDest = dest + src.replace("ic_", "");
+            newDest = newDest.replace("_24px", "");
+            return newDest;
+          }
+        },
+        resourcesExtraIconConverter: {
+          expand: true,
+          src: 'source/tools/icon-convert.js',
+          dest: 'bin/tmp/icons/svg/',
+          flatten: true
+        },
+        resourcesExtraIconLicense: {
+          expand: true,
+          src: 'bin/tmp/license.txt',
+          dest: 'bin/paperkit-files/resources/icon/',
+          flatten: true,
+          rename: function(dest,src) {
+            var newDest = dest + src.replace("license.txt", "templarian_license");
             return newDest;
           }
         },
@@ -143,7 +183,19 @@ module.exports = function(grunt) {
           cwd: 'bin',
           src: [ 'paperkit-min/**' ],
           dest: 'web/'
-        }        
+        },
+        license: {
+          expand: true,
+          src: 'bin/paperkit-files/LICENSE',
+          dest: 'bin/paperkit',
+          flatten: true
+        },
+        licenseMin: {
+          expand: true,
+          src: 'bin/paperkit-files/LICENSE',
+          dest: 'bin/paperkit-min',
+          flatten: true
+        }
       },
 
       // 4 - Autoprefixing all css from bin/materializer/
@@ -157,6 +209,19 @@ module.exports = function(grunt) {
             'bin/paperkit-files/tag/*.css',
             'bin/paperkit-files/css/*.css'
           ]
+        }
+      },
+
+      // Cloning extra icons
+      exec: {
+        cloneIcons: {
+          command: 'git clone https://github.com/Templarian/MaterialDesign bin/tmp/'
+        },
+        convertIcons: {
+          command: 'node bin/tmp/icons/svg/icon-convert.js'
+        },
+        npmUpdate: {
+          command: 'npm update'
         }
       },
 
@@ -179,6 +244,18 @@ module.exports = function(grunt) {
             'source/javascript/*.js'
           ],
           dest: 'bin/paperkit/paperkit.js'
+        },
+        licenses: {
+          src: [
+            'license/LICENSE',
+            'license/font-banner.txt',
+            'source/resources/font/LICENSE.txt',
+            'license/icon-banner.txt',
+            'node_modules/material-design-icons/LICENSE',
+            'license/extra-icon-banner.txt',
+            'bin/paperkit-files/resources/icon/templarian_license'
+          ],
+          dest: 'bin/paperkit-files/LICENSE'
         }
       },
 
@@ -236,11 +313,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-cssbeautifier');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compress');
+  grunt.loadNpmTasks('grunt-exec');
 
   // Tasks
-  grunt.registerTask('package', ['clean:bin','compiler',
-    'copy:css','copy:resourcesFont','copy:resourcesCursor','copy:resourcesIcon','copy:resourcesMoreIcon','copy:resourcesOther','copy:resourcesToPaperkit','copy:resourcesToPaperkitMin',
-    "autoprefixer",'cssbeautifier','concat','cssmin','uglify']);
+  grunt.registerTask('package', ['exec:npmUpdate','clean:bin','compiler', 'exec:cloneIcons', 'copy:resourcesExtraIconConverter', 'exec:convertIcons', 
+    'copy:css','copy:resourcesFont','copy:resourcesCursor', 'copy:resourcesExtraIcon','copy:resourcesIcon', 'copy:resourcesIconLicense', 'copy:resourcesExtraIconLicense', 'clean:tmpBin', 'copy:resourcesMoreIcon','copy:resourcesOther','copy:resourcesToPaperkit','copy:resourcesToPaperkitMin',
+    "autoprefixer",'cssbeautifier','concat','copy:license','copy:licenseMin','cssmin','uglify']);
 
   grunt.registerTask('web', ['package', 'clean:web', 'copy:web']);
   grunt.registerTask('publish', ['package', 'clean:publish', 'compress']);  
