@@ -24,7 +24,7 @@
   width: 360px;
 }
 
-.paperkit-paper.left {
+.paperkit-paper.left,.paperkit-paper.left-first {
   float: left;
 }
 
@@ -33,7 +33,7 @@
   margin-right: 40px;
 }
 
-.paperkit-paper.right {
+.paperkit-paper.right,.paperkit-paper.right-first {
   float: right;
 }
 
@@ -223,7 +223,7 @@
     margin-right: 0 !important;
     margin-bottom: 128px;
   }
-  .paperkit-paper.left {
+  .paperkit-paper.left,.paperkit-paper.left-first {
     float: left;
     margin-left: 40px;
   }
@@ -231,7 +231,7 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .paperkit-paper.right {
+  .paperkit-paper.right,.paperkit-paper.right-first {
     float: right;
     margin-right: 40px;
   }
