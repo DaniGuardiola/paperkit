@@ -29,9 +29,6 @@ var initMDList = function(MDList,paperkit) {
           if(action.indexOf('custom:') != -1) {
             var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
             callFunction(f, el);
-          } else if(action.indexOf('link:') != -1) {
-            var f = action.substring(action.indexOf('link:') + 'link:'.length).trim();
-            linkRedirect(f, el);
           } else if(action.indexOf('ajax:') != -1) {
             var f = action.substring(action.indexOf('ajax:') + 'ajax:'.length).trim();
             paperkit.ajaxInsert(el.getAttribute('md-ajax'), getEl(f), function(resp, container){
@@ -40,6 +37,12 @@ var initMDList = function(MDList,paperkit) {
                 callFunction(el.getAttribute('md-ajax-callback'), el);
               };
             });
+          } else if(action.indexOf('link:') != -1) {
+            var f = action.substring(action.indexOf('link:') + 'link:'.length).trim();
+            linkRedirect(f, el);
+          } else if(action.indexOf('link-out:') != -1) {
+            var f = action.substring(action.indexOf('link-out:') + 'link-out:'.length).trim();
+            window.open(f);
           }
           break;
       }   
