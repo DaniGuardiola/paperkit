@@ -1,8 +1,43 @@
-var paperkit = new Paperkit();
-window.addEventListener('load', function(){
-  paperkit.init();
+var mdpath = document.querySelector('script[paperkit-path]').getAttribute('paperkit-path');
 
-  window.mdpath = document.getElementById('mdvars').getAttribute('path');
+var paperkitCSS = document.createElement('link');
+paperkitCSS.setAttribute('href','../../paperkit-min/paperkit.css');
+paperkitCSS.setAttribute('rel','stylesheet');
+var prismCSS = document.createElement('link');
+prismCSS.setAttribute('href','../../resources/prism.css');
+prismCSS.setAttribute('rel','stylesheet');
+var styleCSS = document.createElement('link');
+styleCSS.setAttribute('href','../../resources/spec/style.css');
+styleCSS.setAttribute('rel','stylesheet');
+var paperkitJS = document.createElement('script')
+paperkitJS.setAttribute('src','../../paperkit-min/paperkit.js');
+paperkitJS.setAttribute('rel','stylesheet');
+var prismJS = document.createElement('script')
+prismJS.setAttribute('src','../../resources/prism.js');
+prismJS.setAttribute('rel','stylesheet');
+
+document.head.appendChild(paperkitCSS);
+document.head.appendChild(prismCSS);
+document.head.appendChild(styleCSS);
+document.head.appendChild(paperkitJS);
+var paperkit;
+paperkitJS.addEventListener('load', function(){
+  paperkit = new Paperkit();
+});
+
+window.addEventListener('load', function(){
+  // Saving code before paperkit inits and proccesses it
+  [].forEach.call(document.querySelectorAll('.paperkit-paper'), function(paper){
+    var example = paper.querySelector('.example');
+    if (example) {
+      paper.paperkitCode = example.innerHTML.toString();      
+    } else {
+      paper.paperkitCode = "There is no code! You shoudn't see this message, did you add the 'no-controls' class?";
+    }
+  });
+
+  document.body.appendChild(prismJS);
+  paperkit.init();
 
   // Check anchor link
   var url = window.location.hash, idx = url.indexOf("#");
@@ -33,6 +68,19 @@ window.addEventListener('load', function(){
     document.body.appendChild(helpButton);    
   }
 
+  // Replacing logo
+  var logo = document.getElementById('logo');
+  logo.style.height = 'auto';
+  logo.style.padding = '5px 10px';
+  logo.style.cursor = 'pointer';
+  logo.addEventListener('click', function(){
+    window.location.href ='/';
+  });
+  var logoImg = logo.querySelector('img');
+  logoImg.style.height = 'auto';
+  logoImg.style.width = 'auto';
+  logoImg.setAttribute('src','/resources/brand/banner.png');
+  
   // Adding legal content
   var legal = document.querySelector('#side-nav > div > div.legal');
   legal.innerHTML = '<p class="copyright">Google &copy;</p><p class="copyright">Modified by Paperkit for informational purposes</p><p class="copyright"><a href="https://www.google.com/design/spec/">Go to the original spec</a></p><a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>';
@@ -259,7 +307,7 @@ function showCode(el){
     var pre = document.createElement('pre');
     pre.classList.add('language-markup');
     var codeTag = document.createElement('code');
-    var codeText = el.querySelector('.example').innerHTML.toString();
+    var codeText = el.paperkitCode;
     codeText = replaceAll('<','&lt;',codeText);
     codeText = replaceAll('>','&gt;',codeText);
     codeTag.innerHTML = codeText;
