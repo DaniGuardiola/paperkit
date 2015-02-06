@@ -6,6 +6,11 @@
   z-index: 1;
 }
 
+/* HELPERS */
+.float-clear {
+  clear: both;
+}
+
 
 /* PAPERS */
 .paperkit-paper {
@@ -15,12 +20,26 @@
   margin-bottom: 64px;
 }
 
+.paperkit-paper.half-size {
+  width: 360px;
+}
+
 .paperkit-paper.left {
+  float: left;
+}
+
+.paperkit-paper.left-first {
   margin-left: 0;
+  margin-right: 40px;
 }
 
 .paperkit-paper.right {
-  margin-left: 0;
+  float: right;
+}
+
+.paperkit-paper.right-first {
+  margin-left: 40px;
+  margin-right: 0;
 }
 
 .paperkit-paper.fullscreen {
@@ -155,7 +174,7 @@
     height: 100%;
     max-width: none;
     max-height: 800px;
-  }      
+  }
 }
 
 /* MOBILE AND TABLET */
@@ -194,11 +213,34 @@
     max-width: none;
     max-height: none;
   }
+  .paperkit-paper.half-size {
+    width: 360px;
+  }
 }
 
 @media only screen and (min-width: 1241px) {
   .paperkit-paper.right-desktop {
     margin-right: 0 !important;
     margin-bottom: 128px;
+  }
+  .paperkit-paper.left {
+    float: left;
+    margin-left: 40px;
+  }
+  .paperkit-paper.left-first {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .paperkit-paper.right {
+    float: right;
+    margin-right: 40px;
+  }
+  .paperkit-paper.right-first {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .paperkit-paper.desktop-center {
+    margin-right: 50%;
+    transform: translate(50%);
   }
 }

@@ -20,16 +20,9 @@
     <meta property="article:section" content="Introduction - Material design" />
 
 
+  <!-- PAPERKIT SCRIPT -->
+  <script src="../resources/spec/script.js" paperkit-path="../../"></script>
 
-
-
-  <!-- PAPERKIT SETTINGS -->
-  <meta id="mdvars" path="../">
-  <link rel="stylesheet" href="../paperkit-min/paperkit.css">
-  <link href="../resources/prism.css" rel="stylesheet">
-  <link href="../resources/spec/style.css" rel="stylesheet">
-  <script src="../paperkit-min/paperkit.js"></script>
-  <script src="../resources/spec/script.js"></script>
 
   <!-- PAPERKIT CUSTOM PAGE STYLE -->
   <style type="text/css">
@@ -52,10 +45,6 @@
   </style>
 
 
-
-
-
-  
 <!--
 <PageMap>
     <DataObject type="document">
@@ -119,13 +108,7 @@
 </nav>        
 <div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
   <div class="side-nav-wrapper">
-
-    <!-- PAPERKIT BANNER -->
-    <a href="/"><span id="logo" style="height: auto; padding: 5px 10px;"><img style="height: auto; width: auto;" src="../resources/brand/banner.png" alt="Google logo"/></span></a>
-
-
-
-
+    <span id="logo"><img src="https://material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"/></span>
     <nav>
       <dl>
                 <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Material design
@@ -274,21 +257,10 @@
                   </dd>
               </dl>
     </nav>
-
-    <!-- PAPERKIT LEGAL MODIFICATION -->
     <div class="legal">
       <p class="copyright">Google &copy;</p>
-      <p class="copyright">Modified by Paperkit for informational purposes</p>
-      <p class="copyright"><a href="https://www.google.com/design/spec/">Go to the original spec</a></p>
       <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
     </div>
-
-
-
-
-
-
-
   </div>
 </div>
 
@@ -311,7 +283,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-intro" class="paperkit-paper left no-controls logo-fix" md-shadow="shadow-1" md-width="full" md-position="center-x" md-padding>
+<md-paper id="paperkit-intro" class="paperkit-paper no-controls logo-fix" md-shadow="shadow-1" md-width="full" md-position="center-x" md-padding>
   <span md-typo="headline">Welcome! This is a <b>modified version</b> of the <a href="https://www.google.com/design/spec/">official Material Design specification</a> by the Paperkit team.</span><br><br>
   <span md-typo="subhead">It contains <b>live examples of this guide's content using Paperkit</b>, with its code and explanations.<br>
   We created this to make it easier to follow the guide. This way, next time you don't know how to do something that's on the spec with Paperkit, you'll just have to check this page and see how we did the live demo.<br><br>
@@ -335,6 +307,7 @@
       <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png" />
     </div>
 </figure>
+
     
         <div class="chapter-intro">
        <p>We challenged ourselves to create a visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science. This is material design. This spec is a living document that will be updated as we continue to develop the tenets and specifics of material design.</p>
@@ -342,6 +315,19 @@
       
       
     </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-intro-demo" class="paperkit-paper no-controls" md-shadow="shadow-1" md-color="blue" md-width="full">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
     
         <nav class="chapter-toc">
       <h1>Contents</h1>
@@ -397,10 +383,24 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-papers-different-width" class="paperkit-paper no-controls right" md-shadow="shadow-1" md-color="blue" md-width="x12">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+    
               </div>
   </div>
 </div>                  <div id="introduction-principles" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
-  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+  <h2 class="article-title qp-ui float-clear" data-qp-ui="{ 'ResponsiveZippy': {} }">
     Principles
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
       <title id="title">Expand and collapse content</title>
@@ -444,6 +444,33 @@
         </div>
               </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-link-material-interactions" class="paperkit-paper no-controls logo-fix" md-shadow="shadow-1" md-position="center-x" md-padding>
+  <span md-typo="headline" md-position="text-center-x center-x"><a target="_blank" href="http://material.cmiscm.com/">Check this cool website by Jongmin Kim with material interaction demos!</a></span>
+</md-paper>
+
+
+
+
+
+
+
+
+
+
+
 </div>                  </div>
 
   </div>
@@ -471,13 +498,6 @@
 </footer>
     <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
     <script src="static/js/main.js"></script>
-
-
-
-
-
-<!-- PAPERKIT SETTINGS -->
-    <script src="../resources/prism.js"></script>
 
 
   </body>

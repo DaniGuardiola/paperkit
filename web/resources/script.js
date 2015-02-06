@@ -1,6 +1,13 @@
 var paperkit = new Paperkit(); // Instantiate Paperkit on a variable of your choice
 window.addEventListener('load', function(){
+	paperkit.initListener(function(){
+		console.log('HEYYYYYYYYYYYYY');
+		paperkit.fab.addEventListener('click', function(e){
+			console.log(e.clientX,e.clientY);
+		});
+	});
 	paperkit.init(); // Initialize Paperkit on window load
+	rekt.pre();
 });
 
 function contentPage(index){
@@ -9,6 +16,16 @@ function contentPage(index){
 	pager.moveToPage(index);
 	tabbar.moveIndicatorToTab(index);
 	contentPagerAction(false, index);
+}
+
+function getRekt(e){
+	transition.morph(e, false, function(){
+		var bigfab = document.getElementById('md-morph');
+		bigfab.style.zIndex = 4500;
+	});
+	rekt.get(false,function(){
+		transition.morphBack();
+	});
 }
 
 function tabColorChange(index){
