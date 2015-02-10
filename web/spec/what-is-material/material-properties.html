@@ -304,6 +304,48 @@
   </div>
 </section>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-x-y-dimension" class="paperkit-space paper-style full-paper">
+  <span md-typo="headline" md-font-color="cyan">X and Y dimensions</span><br>
+  <span md-typo="subhead">To change the height and the width of an element, use <a target="_blank" href="http://www.tutorialspoint.com/css/css_dimension.htm">standard CSS properties</a>:</span>
+  <pre class="language-css"><code>element {
+  height: 64px;
+  width: 100%;
+  min-height: 32px;
+  max-width: 10em;
+}</code></pre>
+  <span md-typo="subhead">To make beautiful layouts, align the elements using the <a href="/spec/layout/metrics-keylines.html#metrics-keylines-baseline-grids">baseline grid</a>. Use also <a href="/spec/layout/metrics-keylines.html#metrics-keylines-incremental-keylines">incremental keylines</a>, it is easy on Paperkit with the <a target="_blank" href="/reference/attribute/width">md-width</a> and <a target="_blank" href="/reference/attribute/height">md-height</a> attributes:</span>
+  <pre class="language-markup"><code>&lt;element md-width="nx"&gt;&lt;/element&gt;</code></pre>
+  <span md-typo="subhead"><i><b>n</b></i> is a value between 0 and 40 (e.g: md-width="13x")</span>
+  <pre class="language-markup"><code>&lt;element md-height="nx"&gt;&lt;/element&gt;</code></pre>
+  <span md-typo="subhead"><i><b>n</b></i> is a value between 0 and 15 (e.g: md-height="8x")<br><br>
+  <i><b>n</b></i> is a multiplier that changes in a responsive way:<br>
+  - On mobile, 1<i><b>n</b></i> equals <b>56px</b> (1x = 56px, 2x = 112px, 4x = 224px...)<br>
+  - On tablet and desktop, 1<i><b>n</b></i> equals <b>64px</b> (1x = 64px, 2x = 128px, 4x = 256px...)<br><br>
+  <a href="#paperkit-decoupled-behavior">Here's a good demo</a> using md-width and md-height (try resizing this window)</span>
+</md-paper>
+
+
+
+
+
+
+
+
+
+
+
               <div>
           <section class="moduleE1">
     <div class="module-body">
@@ -332,7 +374,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x" paperkit-todo="Add outer paper">
   <div class="example" md-flex="display" md-color="grey-200">
 <md-paper md-shadow="shadow-1" id="paperkit-shadow-animated-paper" md-width="x2" md-height="x2" style="margin: 64px auto; transition: box-shadow 0.5s; border-radius: 2px;" md-position="center-x" md-color="cyan">
 </md-paper>
@@ -419,7 +461,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
+<md-paper paperkit-todo id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
   <div class="example" md-flex="display" md-padding>
 <span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
   </div>
@@ -456,7 +498,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper todo="Make it responsive" id="paperkit-decoupled-behavior" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+<md-paper paperkit-todo="Make it responsive,Correct border" id="paperkit-decoupled-behavior" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
   <div class="example" md-flex="display" md-color="grey-200">
 <md-paper md-shadow="shadow-2" id="paperkit-decoupled-behavior-paper" md-width="x1" md-height="x1" style="position: relative; margin: 192px auto; transition: margin 0.3s, width 0.3s, height 0.3s; border-radius: 2px; overflow: hidden; border: 2px white solid;" md-position="center-x" md-color="white">
   <img style="position: absolute; top: 0; left: 0; transition: height 0.3s, width 0.3s, top 0.3s, left 0.3s, margin 0.3s; flex-shrink: 0; max-width: none;" md-height="x1" md-width="x1" src="../../resources/spec/img/kodaline.jpg">
@@ -566,7 +608,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
+<md-paper paperkit-todo id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
   <div class="example" md-flex="display" md-padding>
 <span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
   </div>
@@ -606,7 +648,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
+<md-paper paperkit-todo id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
   <div class="example" md-flex="display" md-padding>
 <span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
   </div>
@@ -672,7 +714,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
+<md-paper paperkit-todo id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
   <div class="example" md-flex="display" md-padding>
 <span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
   </div>
@@ -709,7 +751,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
+<md-paper paperkit-todo id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
   <div class="example" md-flex="display" md-padding>
 <span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
   </div>
@@ -767,7 +809,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
+<md-paper paperkit-todo id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
   <div class="example" md-flex="display" md-padding>
 <span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
   </div>
@@ -801,7 +843,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
+<md-paper paperkit-todo id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
   <div class="example" md-flex="display" md-padding>
 <span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
   </div>
@@ -848,7 +890,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
+<md-paper paperkit-todo id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
   <div class="example" md-flex="display" md-padding>
 <span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
   </div>
@@ -882,7 +924,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
+<md-paper paperkit-todo id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
   <div class="example" md-flex="display" md-padding>
 <span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
   </div>
@@ -916,7 +958,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
+<md-paper paperkit-todo id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-color="blue">
   <div class="example" md-flex="display" md-padding>
 <span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
   </div>

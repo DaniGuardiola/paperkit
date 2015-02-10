@@ -271,6 +271,61 @@
         </div>
               </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-z-dimension" class="paperkit-space paper-style full-paper no-margin-bottom">
+  <span md-typo="headline" md-font-color="cyan">Z axis</span><br>
+  <span md-typo="subhead">Dimensionality is created by shadows. Use the <a target="_blank" href="/reference/attribute/shadow">md-shadow</a> attribute:</span>
+  <pre class="language-markup"><code>&lt;element md-shadow="shadow-n"&gt;&lt;/element&gt;</code></pre>
+  <span md-typo="subhead"><i><b>n</b></i> is a value between 0 and 5</span>
+  <div class="shadows-demo" md-color="grey-200">
+    <md-paper md-shadow="shadow-0">shadow-0</md-paper>
+    <md-paper md-shadow="shadow-1">shadow-1</md-paper>
+    <md-paper md-shadow="shadow-2">shadow-2</md-paper>
+    <md-paper md-shadow="shadow-3">shadow-3</md-paper>
+    <md-paper md-shadow="shadow-4">shadow-4</md-paper>
+    <md-paper md-shadow="shadow-5">shadow-5</md-paper>
+  </div>
+  <style type="text/css">
+    #paperkit-z-dimension .shadows-demo {
+      min-height: 64px;
+      width: 100%;
+      display: flex;
+      text-align: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      border-radius: 2px;
+    }
+    #paperkit-z-dimension .shadows-demo md-paper {
+      height: 64px;
+      width: 128px;
+      margin: 32px 0;
+      padding: 24px 0;
+      border-radius: 2px;
+    }
+  </style>
+</md-paper>
+
+
+
+
+
+
+
+
+
+
+
 </div>                  <div id="environment-light-shadow" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
   <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
     Light and shadow
@@ -327,7 +382,7 @@
 
 
 <!-- PAPERKIT -->
-<md-paper id="paperkit-combined-shadows" class="paperkit-paper show-mobile half-size right-first" md-shadow="shadow-1" md-position="center-x">
+<md-paper id="paperkit-combined-shadows" class="paperkit-paper show-mobile half-size right-first no-margin-bottom" md-shadow="shadow-1" md-position="center-x">
   <div class="example" md-flex="display" md-color="grey-200">
 <md-paper md-shadow="shadow-4" md-width="x3" md-height="x3" style="margin: 64px auto; border-radius: 2px;" md-color="white">
 </md-paper>
