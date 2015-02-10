@@ -1,3 +1,6 @@
+// Change title
+document.title = document.title.replace('Google design guidelines','Google guidelines - Paperkit edition');
+
 var mdpath = document.querySelector('script[paperkit-path]').getAttribute('paperkit-path');
 
 var paperkitCSS = document.createElement('link');
@@ -25,7 +28,15 @@ paperkitJS.addEventListener('load', function(){
   paperkit = new Paperkit();
 });
 
+var nextPage = false, backPage = false;
 window.addEventListener('load', function(){
+  if (document.querySelector('.footer-grid-R>a')) {
+    nextPage = document.querySelector('.footer-grid-R>a').href;
+  }  
+  if (document.querySelector('.footer-grid-L>a')) {
+    backPage = document.querySelector('.footer-grid-L>a').href;
+  }
+
   // Saving code before paperkit inits and proccesses it
   [].forEach.call(document.querySelectorAll('.paperkit-paper'), function(paper){
     var example = paper.querySelector('.example');
@@ -36,7 +47,32 @@ window.addEventListener('load', function(){
     }
   });
 
+  [].forEach.call(document.querySelectorAll('.paperkit-space'), function(paper){
+    if (paper) {
+      contentHTML = paper.innerHTML;
+      paper.innerHTML = '';
+      var bg = document.createElement('div');
+      bg.classList.add('bg');
+      paper.appendChild(bg);
+      var content = document.createElement('div');
+      content.innerHTML = contentHTML;
+      content.classList.add('content-pre');      
+      paper.appendChild(content);
+      var computedHeight = window.getComputedStyle(paper).height;
+      if (paper.classList.contains('paper-style') && !paper.classList.contains('disable-height-calc')) {
+        paper.style.height = (parseInt(computedHeight) + 32) + 'px';
+      } else {
+        paper.style.height = computedHeight;
+      }
+      content.classList.remove('content-pre');
+      content.classList.add('content');
+    }
+  });  
+
   document.body.appendChild(prismJS);
+  prismJS.addEventListener('load', function(){
+    Prism.highlightAll();    
+  });
   paperkit.init();
 
   // Check anchor link
@@ -62,11 +98,43 @@ window.addEventListener('load', function(){
   helpButton.setAttribute('md-fill','white');
   helpButton.setAttribute('md-action','custom: showHelp');
   paperkit.initElement(helpButton);
-  if (document.getElementById('paperkit-intro')) {
-    document.getElementById('paperkit-intro').appendChild(helpButton);
-  } else {
-    document.body.appendChild(helpButton);    
-  }
+  document.body.appendChild(helpButton);
+
+  // Adding warning button
+  var warningButton = document.createElement('md-icon-button');
+  warningButton.id = 'paperkit-warning-button';
+  warningButton.setAttribute('md-image','icon:warning');
+  warningButton.setAttribute('md-fill','white');
+  warningButton.setAttribute('md-action','custom: showWarning');
+  paperkit.initElement(warningButton);
+  document.body.appendChild(warningButton);
+
+
+  // Adding layers button
+  var layersButton = document.createElement('md-icon-button');
+  layersButton.id = 'paperkit-layers-button';
+  layersButton.setAttribute('md-image','icon:layers_clear');
+  layersButton.setAttribute('md-fill','white');
+  layersButton.setAttribute('md-action','custom: toggleLayers');
+  paperkit.initElement(layersButton);
+  document.body.appendChild(layersButton);
+
+
+  // Adding back and next buttons
+  var nextButton = document.createElement('md-icon-button');
+  nextButton.id = 'paperkit-next-button';
+  nextButton.setAttribute('md-image','icon:arrow_forward');
+  nextButton.setAttribute('md-fill','white');
+  nextButton.setAttribute('md-action','custom: nextPaperkit');
+  paperkit.initElement(nextButton);
+  document.body.appendChild(nextButton);
+  var backButton = document.createElement('md-icon-button');
+  backButton.id = 'paperkit-back-button';
+  backButton.setAttribute('md-image','icon:arrow_back');
+  backButton.setAttribute('md-fill','white');
+  backButton.setAttribute('md-action','custom: backPaperkit');
+  paperkit.initElement(backButton);
+  document.body.appendChild(backButton);
 
   // Replacing logo
   var logo = document.getElementById('logo');
@@ -84,6 +152,14 @@ window.addEventListener('load', function(){
   // Adding legal content
   var legal = document.querySelector('#side-nav > div > div.legal');
   legal.innerHTML = '<p class="copyright">Google &copy;</p><p class="copyright">Modified by Paperkit for informational purposes</p><p class="copyright"><a href="https://www.google.com/design/spec/">Go to the original spec</a></p><a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>';
+
+  [].forEach.call(document.querySelectorAll('.paperkit-space'), function(paper){
+    var image = document.createElement('img');
+    image.classList.add('logo');
+    image.setAttribute('src', mdpath+'resources/brand/logo-white.png');
+    paper.appendChild(image);
+  });
+
 
   // Adding stuff to papers
   [].forEach.call(document.querySelectorAll('.paperkit-paper'), function(paper){
@@ -157,6 +233,58 @@ window.addEventListener('load', function(){
     paperkit.initElement(paper);
   });
 });
+
+function nextPaperkit(){
+  var scroll = document.body.scrollTop;
+  var found = false;
+  [].forEach.call(document.querySelectorAll('.paperkit-paper,.paperkit-space'), function(element){
+    var elScroll = element.offsetTop;
+    if (scroll<elScroll-128 && !found) {
+      found = true;
+      document.body.scrollTop = elScroll-128;
+    }
+  });  
+  if (!found || ((window.innerHeight + scroll) >= document.body.offsetHeight)) {
+    if (nextPage) {
+      location.href = nextPage;
+    } else {
+      document.body.scrollTop = document.body.offsetHeight;
+    }
+  }
+}
+
+function backPaperkit(){
+  var scroll = document.body.scrollTop;
+  var found = false;
+  var last = false;
+
+  [].forEach.call(document.querySelectorAll('.paperkit-paper,.paperkit-space'), function(element){
+    var elScroll = element.offsetTop;
+    if (scroll>elScroll-128 && !found) {
+      last = elScroll;
+    } else if (last) {
+      document.body.scrollTop = last-128;
+      found = true;
+    }
+  });  
+  if (!found) {
+    if (backPage) {
+      location.href = backPage;
+    } else {
+      document.body.scrollTop = 0;
+    }
+  }
+}
+
+function toggleLayers(el){
+  if (document.body.classList.contains('no-paperkit')) {
+    document.body.classList.remove('no-paperkit');
+    el.setAttribute('md-image','icon:layers');
+  } else {
+    document.body.classList.add('no-paperkit');
+    el.setAttribute('md-image','icon:layers_clear');
+  }
+}
 
 function showHelp(el){
   console.log('COMING SOON');
