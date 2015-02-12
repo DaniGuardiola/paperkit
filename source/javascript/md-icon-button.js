@@ -9,7 +9,7 @@ var initMDIconButton = function(MDIconButton, paperkit) {
   MDIconButton.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE IN MD-ICON-BUTTON " + attrname + " VALUE " + newvalue);
     if(this.tagName==='MD-ICON-BUTTON') {   // Sanity Check
-      if(attrname==='md-image' || attrname==='md-type') {
+      if(attrname==='md-image' || attrname==='md-type' || attrname==='md-size' || attrname==='md-transition') {
         this.updateIcon();
       }
     }
@@ -17,7 +17,9 @@ var initMDIconButton = function(MDIconButton, paperkit) {
       
   MDIconButton.updateIcon = function() {
 	  var image = this.getAttribute('md-image') ? this.getAttribute('md-image') : '';
-	  var type = this.getAttribute('md-type') ? this.getAttribute('md-type') : 'icon';
+    var type = this.getAttribute('md-type') ? this.getAttribute('md-type') : 'icon';
+    var size = this.getAttribute('md-size') ? this.getAttribute('md-size') : '';
+    var transition = this.getAttribute('md-transition') ? this.getAttribute('md-transition') : '';
 	  
 	  var iconElement = this.querySelector('md-icon');	  
 	  if(!iconElement) {
@@ -27,7 +29,9 @@ var initMDIconButton = function(MDIconButton, paperkit) {
 	  }
 	  
 	  iconElement.setAttribute('md-type', type);
-	  iconElement.setAttribute('md-image', image);
+    iconElement.setAttribute('md-image', image);
+    iconElement.setAttribute('md-size', size);
+    iconElement.setAttribute('md-transition', transition);
   }
   
   
