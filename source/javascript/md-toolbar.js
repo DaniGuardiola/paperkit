@@ -1,4 +1,5 @@
 var initMDToolBar = function(MDToolBar) {
+/*
   MDToolBar.set = function(key,value){
     if (key=='image' || key=='md-image') {
       MDToolBar.querySelector('md-icon').setAttribute('md-image',value);
@@ -21,4 +22,5 @@ var initMDToolBar = function(MDToolBar) {
 
   var config = { attributes: true, childList: false, characterData: false };
   observer.observe(MDToolBar, config);
+*/
 }

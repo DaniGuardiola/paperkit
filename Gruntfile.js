@@ -25,6 +25,9 @@ module.exports = function(grunt) {
         css: {
             expand: true,
             src: [
+              'source/tag/md-toolbar/md-toolbar.json',
+
+
               'source/attribute/**/*.json',
               'source/tag/**/*.json'
             ],
@@ -233,15 +236,15 @@ module.exports = function(grunt) {
       concat: {
         css: {
           src: [
-            'bin/paperkit-files/css/*.css',
-            'bin/paperkit-files/tag/*.css',
-            'bin/paperkit-files/attribute/*.css'
+            'bin/paperkit-files/css/**/*.css',
+            'bin/paperkit-files/tag/**/*.css',
+            'bin/paperkit-files/attribute/**/*.css'
           ],
           dest: 'bin/paperkit/paperkit.css'
         },
         js: {
           src: [
-            'source/javascript/*.js'
+            'source/javascript/**/*.js'
           ],
           dest: 'bin/paperkit/paperkit.js'
         },
