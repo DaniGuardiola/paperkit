@@ -93,64 +93,23 @@
   							]
   						}
   					]
-  				}		
+  				}  				
   			]
   		},
       {
-        "type": "attribute",
-        "name": "md-size",
-        "values": [
-          {
-            "name": "small",
-            "css": [
-              {
-                "property": "width",
-                "value": "24px"
-              },
-              {
-                "property": "height",
-                "value": "24px"
-              },
-              {
-                "property": "padding",
-                "value": "0"
-              }
-            ],
-            "fixes": [
-              {
-                "after": "> svg",
-                "css": [          
-                  {
-                    "property": "top",
-                    "value": "0"
-                  },
-                  {
-                    "property": "left",
-                    "value": "0"
-                  }
-                ]
-              },              
-              {
-                "after": "[md-type=avatar]",
-                "css": [          
-                  {
-                    "property": "height",
-                    "value": "40px"
-                  },
-                  {
-                    "property": "width",
-                    "value": "40px"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
+      "name": "md-fill",
+      "type": "attribute",
+      "imports": [
+        {
+          "name": "md-colors",
+          "property1": "fill"
+        }
+      ]
+    }
   ],
   "fixes": [
     {
-      "after": ">svg",
+      "after": "> svg",
       "css": [
         {
           "property": "position",
@@ -165,24 +124,6 @@
           "value": "opacity 0.25s, fill 0.25s"
         }
       ]
-    },
-    {
-      "after": "[md-image$=more_vert]:not([md-size=normal])",
-      "css": [
-        {
-          "property": "width",
-          "value": "40px"
-        }
-      ]
-    },
-    {
-      "after": "[md-image$=more_vert]:not([md-size=normal])>svg",
-      "css": [
-        {
-          "property": "left",
-          "value": "6px"
-        }
-      ]
     }
-  ]
+  ]  
 }
