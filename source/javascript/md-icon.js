@@ -55,9 +55,35 @@ var initMDIcon = function(MDIcon, paperkit) {
    * @param {Element} newSVGElement The element with the loaded svg.
    */
   MDIcon.replaceSVG = function(newSVGElement) {
-    var oldSVGElement = this.children.length > 0 ? this.children[0] : null;
     var _this = this;
+    var oldSVGElement = _this.children.length > 0 ? _this.querySelector('svg:not(.transition)') : null;
     
+    var oldSVGElementParent = oldSVGElement != null ? oldSVGElement.parentElement : null;
+    if(oldSVGElementParent != null) {
+      var transition = _this.getAttribute('md-transition');
+      console.log(_this);
+      if (transition == "fade-in-out"){
+        _this.fadeInOutTransition(newSVGElement, oldSVGElement);
+      } else if (transition == "up") {
+        _this.upTransition(newSVGElement, oldSVGElement);
+      } else if (transition == "down") {
+
+      } else {
+        _this.fadeInOutTransition(newSVGElement, oldSVGElement);
+      }
+    }else{
+      _this.fadeInOutTransition(newSVGElement, oldSVGElement);
+    }
+  }
+  
+  /**
+   * The newSVGElement makes a fade in transition and the oldSVGElement 
+   * makes afade out transition
+   * @param {Element} newSVGElement The element with the new svg.
+   * @param {Element} oldSVGElement The element with the old svg.
+   */
+  MDIcon.fadeInOutTransition= function(newSVGElement, oldSVGElement) {
+    var _this = this;
     newSVGElement.style.opacity = "0";
     this.appendChild(newSVGElement);
     
@@ -67,10 +93,27 @@ var initMDIcon = function(MDIcon, paperkit) {
       });
       
       oldSVGElement.style.opacity = "0";
-    }    
+      oldSVGElement.classList.add("transition");
+    }
     newSVGElement.style.opacity = "";
   }
-  
+
+  MDIcon.upTransition= function(newSVGElement, oldSVGElement) {
+    var _this = this;
+    
+    if(oldSVGElement) {
+      oldSVGElement.addEventListener(transitionend, function(e) {
+          _this.removeChild(oldSVGElement);
+          oldSVGElement.style.opacity = "0";
+          this.appendChild(newSVGElement);
+          newSVGElement.style.top="";
+          newSVGElement.style.opacity = "0";
+      });
+      oldSVGElement.style.top = "5";
+      oldSVGElement.classList.add("transition");
+    }
+  }
+
   /**
    * Loads a SVG File from the server and uses it in this md-button.
    * It generates an avatar image or a icon image depending on the type of md-icon this is.
