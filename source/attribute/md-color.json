@@ -15,6 +15,18 @@
         {
           "property": "background-color",
           "value": "transparent"
+        },
+        {
+          "property": "color",
+          "value": "rgba(0, 0, 0, 0.867188)"
+        },
+        {
+          "property": "fill",
+          "value": "rgba(0, 0, 0, 0.867188)"
+        },
+        {
+          "property": "box-shadow",
+          "value": "none"
         }
       ]
     }
