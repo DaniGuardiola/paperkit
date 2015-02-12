@@ -1,12 +1,8 @@
 {
   "responsive": [
     {
-      "name": "watch",
-      "media": "only screen and (max-width: 320px)" 
-    },
-    {
       "name": "mobile",
-      "media": "only screen and (min-width: 320px) and (max-width: 768px)"
+      "media": "only screen and (max-width: 768px)"
     },
     {
       "name": "tablet",
@@ -18,11 +14,19 @@
     },
     {
       "name": "device",
-      "include": [ "watch", "mobile", "tablet" ]
+      "include": [ "mobile", "tablet" ]
+    },
+    {
+      "name": "min-tablet",
+      "include": [ "tablet", "desktop" ]
+    },
+    {
+      "name": "max-tablet",
+      "include": [ "mobile", "tablet" ]
     },
     {
       "name": "all",
-      "include": [ "watch", "mobile", "tablet", "desktop" ]
+      "include": [ "mobile", "tablet", "desktop" ]
     }
   ]
 }

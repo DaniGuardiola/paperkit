@@ -311,6 +311,28 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-mobile-structure" class="paperkit-paper show-mobile right no-tablet no-desktop no-mobile" md-shadow="shadow-1" md-width="x5">
+  <div class="example" md-height="x8">
+<md-toolbar md-color="indigo" md-shadow="shadow-1">
+  <md-row md-type="standard">
+    <md-text style="line-height: initial">App bar / primary toolbar</md-text>
+  </md-row>
+</md-toolbar>
+<md-content md-padding>
+  <span md-font-color="grey">Content area</span><br>
+  <md-button md-buttontype="flat-light">Open side nav</md-button>
+  <md-button md-buttontype="flat-light">Open right nav</md-button>
+</md-content>
+  </div>
+</md-paper>
+
+
+
               <div>
           <section class="moduleE1">
       <h3>Tablet structure</h3>
@@ -328,6 +350,28 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-mobile-structure" class="paperkit-paper show-tablet right-first no-tablet no-desktop no-mobile" md-shadow="shadow-1" md-width="x12">
+  <div class="example" md-height="x8">
+<md-toolbar md-color="indigo" md-shadow="shadow-1">
+  <md-row md-type="standard">
+    <md-text style="line-height: initial">App bar / primary toolbar</md-text>
+  </md-row>
+</md-toolbar>
+<md-content md-padding>
+  <span md-font-color="grey">Content canvas</span>
+  <md-button md-buttontype="flat-light">Open side nav</md-button>
+  <md-button md-buttontype="flat-light">Open right nav</md-button>
+</md-content>
+  </div>
+</md-paper>
+
+
+
               <div>
           <section class="moduleE1">
       <h3>Desktop structure</h3>
@@ -345,6 +389,26 @@
   </div>
 </section>
         </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-mobile-structure" class="paperkit-paper show-desktop right-first no-tablet no-desktop no-mobile" md-shadow="shadow-1" md-width="x12">
+  <div class="example" md-height="x8">
+<md-toolbar md-color="indigo" md-shadow="shadow-1">
+  <md-row md-type="standard">
+    <md-text style="line-height: initial">App bar / primary toolbar</md-text>
+  </md-row>
+</md-toolbar>
+<md-content md-padding>
+  <span md-font-color="grey">Content canvas</span>
+</md-content>
+  </div>
+</md-paper>
+
+
+
               <div>
           <section class="moduleD1">
       <h3>UI regions</h3>
@@ -476,7 +540,7 @@
 <md-paper id="paperkit-fullwidth-defaultheight" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
   <div class="example" md-height="x3" md-color="grey-200">
 <md-toolbar md-color="blue" md-shadow="shadow-1">
-  <md-row>
+  <md-row md-type="standard">
     <md-icon-button md-image="icon:menu" md-fill="blue-900"></md-icon-button>
     <md-text style="line-height: initial">Title</md-text>
     <md-space></md-space>
@@ -518,7 +582,7 @@
 <md-paper id="paperkit-fullwidth-extendedheight" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
 	<div class="example" md-height="x4" md-color="grey-200">
 <md-toolbar md-color="blue" md-shadow="shadow-1">
-  <md-row>
+  <md-row md-type="standard">
     <md-icon-button md-image="icon:menu" md-fill="blue-900"></md-icon-button>
     <md-space></md-space>
     <md-icon-button md-image="icon:search" md-fill="blue-900"></md-icon-button>
@@ -526,7 +590,7 @@
     <md-icon-button md-image="icon:refresh" md-fill="blue-900"></md-icon-button>
     <md-icon-button md-image="icon:more_vert" md-fill="blue-900"></md-icon-button>
   </md-row>
-  <md-row md-height="x1">
+  <md-row md-type="standard">
     <div style="width: 44px"></div>
     <md-text style="line-height: initial;">Title</md-text>
   </md-row>
@@ -564,7 +628,7 @@
 	<div class="example" md-height="x4" md-flex="display">
 <div md-width="x4" md-height="full" md-color="grey-100">
   <md-toolbar md-fill="grey-700" md-color="transparent">
-    <md-row>
+    <md-row md-type="standard">
       <md-icon-button md-image="icon:arrow_back"></md-icon-button>
       <md-text style="line-height: initial;">Title</md-text>
       <md-space></md-space>
@@ -574,7 +638,7 @@
 </div>
 <div style="flex-grow: 1" md-color="grey-900" md-fill="white" md-shadow="shadow-1">
   <md-toolbar md-color="transparent" md-fill="white">
-    <md-row>
+    <md-row md-type="standard">
       <md-space></md-space>
       <md-icon-button md-image="icon:reply"></md-icon-button>
       <md-icon-button md-image="icon:more_vert"></md-icon-button>
@@ -615,13 +679,13 @@
 
 
 <md-toolbar md-color="blue" md-height="x2">
-  <md-row>
+  <md-row md-type="standard">
     <md-icon-button md-image="icon:menu" md-fill="blue-900"></md-icon-button>
   </md-row>
 </md-toolbar>
 <md-paper md-width="x8" md-height="x4" md-shadow="shadow-2" md-position="center-x" style="position: relative; top: -64px; border-radius: 2px;">
 <md-toolbar md-fill="grey-700" md-font-color="grey-700" md-color="transparent" md-separator="full" style="border-bottom: 1px solid rgba(0, 0, 0, 0.12);">
-  <md-row>
+  <md-row md-type="standard">
     <div class="fix-this-bug"></div>
     <md-text style="line-height: initial;" md-typo="subhead">Title</md-text>
     <md-space></md-space>
@@ -664,7 +728,7 @@
   <div class="example" md-height="x4" md-color="grey-200">
 <div md-height="full" md-width="full" style="background-image: url(../../resources/spec/img/map.png); background-size: 100% auto; position: absolute;">
   <md-toolbar md-color="white" md-fill="grey-700" md-shadow="shadow-1" md-width="x6" style="position: absolute; top: 16px; left: 16px; z-index: 0;">
-    <md-row>
+    <md-row md-type="small">
       <md-icon-button md-image="icon:search"></md-icon-button>
       <md-space></md-space>
       <md-icon-button md-image="icon:my_location"></md-icon-button>

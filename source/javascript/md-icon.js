@@ -28,7 +28,7 @@ var initMDIcon = function(MDIcon, paperkit) {
    */
   MDIcon.getImageURI = function(value) {
     if(value.indexOf("icon:") != -1) {
-      var iconName = paperkit.path + "/resources/icon/" + value.substring(5).trim() + ".svg";      
+      var iconName = paperkit.path + "resources/icon/" + value.substring(5).trim() + ".svg";      
     } else {
       var iconName = value;
     }       
