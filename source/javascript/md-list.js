@@ -56,7 +56,7 @@ var initMDList = function(MDList,paperkit) {
 
   var callFunction= function(f, target) {
     console.log("calling function " + f);
-    executeFunctionByName(f, window, [ target ]);
+    executeFunctionByName(f, false, [ target ]);
   };
 
   MDList.initList= function() {

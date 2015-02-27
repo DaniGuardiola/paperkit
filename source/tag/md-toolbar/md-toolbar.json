@@ -4,7 +4,23 @@
   "css": [
     {
       "property": "display",
-      "value": "block"
+      "value": "flex"
+    },
+    {
+      "property": "flex-wrap",
+      "value": "wrap"
+    },
+    {
+      "property": "flex-shrink",
+      "value": "0"
+    },
+    {
+      "property": "align-items",
+      "value": "flex-end"
+    },
+    {
+      "property": "align-content",
+      "value": "flex-end"
     },
     {
       "property": "width",

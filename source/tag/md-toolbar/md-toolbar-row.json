@@ -284,6 +284,29 @@
                   ]
                 }
               ]
+            },            
+            {
+              "after": ">md-text:not([md-typo])",
+              "responsive": [
+                {
+                  "target": ["watch","mobile"],
+                  "css": [
+                    {
+                      "property": "padding-top",
+                      "value": "12px"
+                    }
+                  ]
+                },
+                {
+                  "target": ["tablet","desktop"],
+                  "css": [
+                    {
+                      "property": "padding-top",
+                      "value": "14px"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },

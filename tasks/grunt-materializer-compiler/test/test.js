@@ -3,7 +3,7 @@ var fs = require('fs');
 var Generator = require('../lib/generator.js');
 
 exports.testVariants = function(test) {
-    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var settings = fs.readFileSync('fixtures/settings.json');
     var attribute = fs.readFileSync('fixtures/md-variant.json');
     var expected = fs.readFileSync('expected/variant.css');
 
@@ -16,7 +16,7 @@ exports.testVariants = function(test) {
 }
 
 exports.testAttribute = function(test) {
-    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var settings = fs.readFileSync('fixtures/settings.json');
     var attribute = fs.readFileSync('fixtures/md-attribute.json');
     var expected = fs.readFileSync('expected/attribute.css');
 
@@ -29,7 +29,7 @@ exports.testAttribute = function(test) {
   }
 
 exports.testAttributeWithoutValues = function(test) {
-    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var settings = fs.readFileSync('fixtures/settings.json');
     var attribute = fs.readFileSync('fixtures/md-attribute-without-values.json');
     var expected = fs.readFileSync('expected/attribute-without-values.css');
 
@@ -42,7 +42,7 @@ exports.testAttributeWithoutValues = function(test) {
   }
 
   exports.testTag = function(test) {
-    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var settings = fs.readFileSync('fixtures/settings.json');
     var tag = fs.readFileSync('fixtures/md-tag.json');
     var expected = fs.readFileSync('expected/tag.css');
 
@@ -54,7 +54,7 @@ exports.testAttributeWithoutValues = function(test) {
   }
 
   exports.testAttributeWithImports= function(test) {
-    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var settings = fs.readFileSync('fixtures/settings.json');
     var tag = fs.readFileSync('fixtures/md-attribute-with-imports.json');
     var expected = fs.readFileSync('expected/attribute-with-imports.css');
     var imports = JSON.parse(fs.readFileSync('imports/md-colors.json'));
@@ -67,7 +67,7 @@ exports.testAttributeWithoutValues = function(test) {
   }
 
   exports.testTagParent = function(test) {
-    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var settings = fs.readFileSync('fixtures/settings.json');
     var tag = fs.readFileSync('fixtures/md-tag-parent.json');
     var expected = fs.readFileSync('expected/tag-parent.css');
 
@@ -79,7 +79,7 @@ exports.testAttributeWithoutValues = function(test) {
   }
 
   exports.testTagAlias = function(test) {
-    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var settings = fs.readFileSync('fixtures/settings.json');
     var tag = fs.readFileSync('fixtures/md-tag-alias.json');
     var expected = fs.readFileSync('expected/tag-alias.css');
 
@@ -91,7 +91,7 @@ exports.testAttributeWithoutValues = function(test) {
   }
 
   exports.testFixes = function(test) {
-    var settings = fs.readFileSync('fixtures/md-settings.json');
+    var settings = fs.readFileSync('fixtures/settings.json');
     var tag = fs.readFileSync('fixtures/md-fixes.json');
     var expected = fs.readFileSync('expected/md-fixes.css');
 

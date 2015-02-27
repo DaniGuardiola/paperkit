@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Paperkit framework - Reference</title>
+ 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width" />
+ 	<meta name="Description" content="A Material Design web framework. Simple, beautiful, powerful and open source. Create webpages and apps following the Google guidelines.">
+
+	<link rel="stylesheet" href="../paperkit-min/paperkit.css">
+	<link href="../resources/prism.css" rel="stylesheet">
+
+	<script src="../paperkit-min/paperkit.js"></script>
+	<!-- ANALITYCS -->
+	<meta name="google-site-verification" content="djfogzB_zdcp84TB00VSlkez3QV9pU20KAeQcaSMXb4" />
+
+	<style type="text/css">
+		a {
+			color: #2196f3;
+			text-decoration: none;
+		}
+		#content-pager {
+			width: 100%;
+		}
+		@media only screen and (max-width: 425px) {
+			#header-title .title-suffix {
+				display: none;
+			}
+		}
+		@media only screen and (max-width: 688px) {
+			.margin-paper {
+				box-shadow: none;
+			}
+			.white-margin-paper {
+				background: #fff;
+			}
+		}
+		@media only screen and (min-width: 688px) {
+			.margin-paper:first-child {
+				margin-top: 16px;
+			}
+			.margin-paper {
+				margin-bottom: 16px;
+			}
+			#slogan {
+				font-size: 56px;
+				font-weight: 400;
+				white-space: nowrap;
+				line-height: 60px;
+				letter-spacing: -.026em;
+			}
+			md-paper a.anchor-link {
+				opacity: 0;
+				transition: opacity 0.25s;
+			}
+			md-paper:hover a.anchor-link {
+				opacity: 1;
+			}
+		}
+
+		.title-suffix {
+			transition: color 0.25s;
+		}
+	</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58574637-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body md-layout md-color="grey-200">
+	<md-toolbar md-fill="white" md-color="cyan" md-shadow="shadow-1" md-font-color="white" style="overflow: hidden">
+		<md-row md-type="standard">
+			<md-icon-button md-image="icon:menu" md-action="custom: paperkit.sidemenu.open"></md-icon-button>
+			<md-text id="header-title">Paperkit <span class="title-suffix" style="font-weight: 300;">showcase</span></md-text>
+			<md-space></md-space>
+			<md-icon-button md-image="icon:google-plus" md-action="link-out:https://plus.google.com/113406175172786471629"></md-icon-button>
+			<md-icon-button md-image="icon:twitter" md-action="link-out:http://twitter.com/PaperkitMDesign"></md-icon-button>
+			<md-icon-button md-image="icon:facebook" md-action="link-out:https://www.facebook.com/paperkitframework"></md-icon-button>
+			<md-icon-button md-image="icon:github" md-action="link-out:https://gitlab.datatrends.es/opensource/materializer/"></md-icon-button>
+		</md-row>
+		<md-row md-type="small">
+			<md-tabbar id="content-tabbar" md-pager="content-pager" md-action="custom: contentPagerAction">
+				<md-tab md-typo="button">Coolest</md-tab>
+				<md-tab md-typo="button">From users</md-tab>
+				<md-tab md-typo="button">From team</md-tab>
+				<md-tab md-typo="button">Submit</md-tab>
+			</md-tabbar>
+	</md-toolbar>
+	<md-fab md-action="custom: openDiscussion" md-color="cyan" md-image="icon:add" md-fill="white" md-shadow="shadow-1"></md-fab>
+	<md-sidemenu style="max-width: 272px;">
+		<a href="/"><img src="../resources/brand/banner.png" md-width="full" style="padding: 12px 0px 0px 8px; max-width: 198px;"></a>
+		<md-list md-action="link: data-url">
+			<md-tile data-url="/learn">
+				<md-icon md-image="icon:school"></md-icon>
+				<md-text>Learn</md-text>
+			</md-tile>
+			<md-tile data-url="/reference">
+				<md-icon md-image="icon:description"></md-icon>
+				<md-text>Reference</md-text>
+			</md-tile>
+			<md-tile data-url="/dev">
+				<md-icon md-image="icon:settings_applications"></md-icon>
+				<md-text>Develop</md-text>
+			</md-tile>
+			<md-tile data-url="/showcase" md-font-color="cyan" md-fill="cyan">
+				<md-icon md-image="icon:view_module"></md-icon>
+				<md-text>Showcase</md-text>
+			</md-tile>
+		</md-list>
+	</md-sidemenu>
+	<md-content id="main-content" class="white-margin-paper">
+		<md-pager id="content-pager">
+
+
+
+
+
+
+
+
+
+
+
+		<!-- COMPONENTS PAGE -->
+
+
+
+			
+			<md-page>
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="subhead">
+					<span>Welcome to the Paperkit showcase page! Thanks for your interest in our framework.<br>
+					Please remember <b>Paperkit is still an alpha version</b>. This means it is in active development and not ready for production. We love feedback, drop us a line at <a href="mailto:feedback@paperkit.org" target="_blank">feedback@paperkit.org</a>.</span>
+				</md-paper>
+			</md-page>
+
+
+
+
+		<!-- ATTRIBUTES PAGE -->
+
+
+
+			<md-page>
+			</md-page>
+
+
+
+
+		<!-- APIS PAGE -->
+
+
+
+			<md-page>
+			</md-page>
+
+
+
+		<!-- MDCSS PAGE -->
+
+
+
+			<md-page>
+			</md-page>
+
+
+
+			
+		</md-pager>
+	</md-content>
+
+	<script src="resources/script.js"></script>
+	<script src="../resources/prism.js"></script>
+	<script src="../resources/shared.js"></script>
+</body>
+</html>
