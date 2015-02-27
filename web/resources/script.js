@@ -1,14 +1,4 @@
-var paperkit = new Paperkit(); // Instantiate Paperkit on a variable of your choice
-window.addEventListener('load', function(){
-	paperkit.initListener(function(){
-		console.log('HEYYYYYYYYYYYYY');
-		paperkit.fab.addEventListener('click', function(e){
-			console.log(e.clientX,e.clientY);
-		});
-	});
-	paperkit.init(); // Initialize Paperkit on window load
-	rekt.pre();
-});
+var scrollCollapse = true;
 
 function contentPage(index){
 	var pager = document.getElementById('content-pager');
@@ -30,32 +20,32 @@ function getRekt(e){
 
 function tabColorChange(index){
 	if(index === 0){
-		paperkit.toolbar.set('color','cyan');
-		paperkit.fab.set('color','cyan');
+		//paperkit.toolbar.set('color','cyan');
+		//paperkit.fab.set('color','cyan');
 		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
 			span.setAttribute('md-font-color','cyan-700');
 		});
 	} else if(index === 1){
-		paperkit.toolbar.set('color','blue');
-		paperkit.fab.set('color','blue');		
+		//paperkit.toolbar.set('color','blue');
+		//paperkit.fab.set('color','blue');		
 		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
 			span.setAttribute('md-font-color','blue-700');
 		});
 	} else if(index === 2){
-		paperkit.toolbar.set('color','teal');
-		paperkit.fab.set('color','teal');
+		//paperkit.toolbar.set('color','teal');
+		//paperkit.fab.set('color','teal');
 		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
 			span.setAttribute('md-font-color','teal-700');
 		});
 	} else if(index === 3){
-		paperkit.toolbar.set('color','light-green');
-		paperkit.fab.set('color','light-green');
+		//paperkit.toolbar.set('color','light-green');
+		//paperkit.fab.set('color','light-green');
 		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
 			span.setAttribute('md-font-color','light-green-700');
 		});
 	} else if(index === 4){
-		paperkit.toolbar.set('color','orange');
-		paperkit.fab.set('color','orange');
+		//paperkit.toolbar.set('color','orange');
+		//paperkit.fab.set('color','orange');
 		[].forEach.call(document.querySelectorAll('.version-name'),function(span){
 			span.setAttribute('md-font-color','orange-700');
 		});

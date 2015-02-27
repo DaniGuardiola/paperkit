@@ -297,20 +297,24 @@ var transitionend = transitionEndEventName();
  * 
  */
 var executeFunctionByName= function(functionName, context, args) {
-   //console.log(args);
-   var namespaces = functionName.split(".");
-   var func = namespaces.pop();
-   if (!context) {
-       var context = window;
+   var namespaces = functionName.split(".");   
+   var func = namespaces.pop();   
+   
+   if (!context && namespaces.length > 0) {
+     context = eval(namespaces.shift());
+   } else if(!context) {
+     context = window;
    }
+   
    for (var i = 0; i < namespaces.length; i++) {
        context = context[namespaces[i]];
    }
+   
    if (args) {
-       return context[func].apply(this, args);
+       return context[func].apply(context, args);
    } else {
-       return context[func].apply(this, ['false']);
-     }
+       return context[func].apply(context, ['false']);
+   }
  }
 
 /**

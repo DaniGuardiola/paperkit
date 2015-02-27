@@ -8,7 +8,7 @@ function contentPage(index){
 }
 
 function contentPagerAction(tab, index){
-	if (index === 4) {
+	if (index === 5) {
 		paperkit.fab.hide();
 	} else {
 		paperkit.fab.show();
@@ -16,5 +16,5 @@ function contentPagerAction(tab, index){
 }
 
 function openDiscussion(){
-	contentPage(4);
+	contentPage(5);
 }

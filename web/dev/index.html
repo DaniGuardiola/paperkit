@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Paperkit framework - Develop</title>
+ 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width" />
+ 	<meta name="Description" content="A Material Design web framework. Simple, beautiful, powerful and open source. Create webpages and apps following the Google guidelines.">
+
+	<link rel="stylesheet" href="../paperkit-min/paperkit.css">
+	<link href="../resources/prism.css" rel="stylesheet">
+
+	<script src="../paperkit-min/paperkit.js"></script>
+	<!-- ANALITYCS -->
+	<meta name="google-site-verification" content="djfogzB_zdcp84TB00VSlkez3QV9pU20KAeQcaSMXb4" />
+
+	<style type="text/css">
+		a {
+			color: #2196f3;
+			text-decoration: none;
+		}
+		#content-pager {
+			width: 100%;
+		}
+		@media only screen and (max-width: 425px) {
+			#header-title .title-suffix {
+				display: none;
+			}
+		}
+		@media only screen and (max-width: 688px) {
+			.margin-paper {
+				box-shadow: none;
+			}
+			.white-margin-paper {
+				background: #fff;
+			}
+		}
+		@media only screen and (min-width: 688px) {
+			.margin-paper:first-child {
+				margin-top: 16px;
+			}
+			.margin-paper {
+				margin-bottom: 16px;
+			}
+			#slogan {
+				font-size: 56px;
+				font-weight: 400;
+				white-space: nowrap;
+				line-height: 60px;
+				letter-spacing: -.026em;
+			}
+			md-paper a.anchor-link {
+				opacity: 0;
+				transition: opacity 0.25s;
+			}
+			md-paper:hover a.anchor-link {
+				opacity: 1;
+			}
+		}
+
+		.title-suffix {
+			transition: color 0.25s;
+		}
+	</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58574637-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body md-layout md-color="grey-200">
+	<md-toolbar md-fill="white" md-color="cyan" md-shadow="shadow-1" md-font-color="white" style="overflow: hidden">
+		<md-row md-type="standard">
+			<md-icon-button md-image="icon:menu" md-action="custom: paperkit.sidemenu.open"></md-icon-button>
+			<md-text id="header-title">Paperkit <span class="title-suffix" style="font-weight: 300;">contribute</span></md-text>
+			<md-space></md-space>
+			<md-icon-button md-image="icon:google-plus" md-action="link-out:https://plus.google.com/113406175172786471629"></md-icon-button>
+			<md-icon-button md-image="icon:twitter" md-action="link-out:http://twitter.com/PaperkitMDesign"></md-icon-button>
+			<md-icon-button md-image="icon:facebook" md-action="link-out:https://www.facebook.com/paperkitframework"></md-icon-button>
+			<md-icon-button md-image="icon:github" md-action="link-out:https://gitlab.datatrends.es/opensource/materializer/"></md-icon-button>
+		</md-row>
+		<md-row md-type="small">
+			<md-tabbar id="content-tabbar" md-pager="content-pager" md-action="custom: contentPagerAction">
+				<md-tab md-typo="button">How to</md-tab>
+				<md-tab md-typo="button">Development</md-tab>
+				<md-tab md-typo="button">Documentation</md-tab>
+				<md-tab md-typo="button">Testing</md-tab>
+				<md-tab md-typo="button">Spec demos</md-tab>
+				<md-tab md-typo="button">Discussion</md-tab>
+			</md-tabbar>
+	</md-toolbar>
+	<md-fab md-action="custom: openDiscussion" md-color="cyan" md-image="icon:forum" md-fill="white" md-shadow="shadow-1"></md-fab>
+	<md-sidemenu style="max-width: 272px;">
+		<a href="/"><img src="../resources/brand/banner.png" md-width="full" style="padding: 12px 0px 0px 8px; max-width: 198px;"></a>
+		<md-list md-action="link: data-url">
+			<md-tile data-url="/learn">
+				<md-icon md-image="icon:school"></md-icon>
+				<md-text>Learn</md-text>
+			</md-tile>
+			<md-tile data-url="/reference">
+				<md-icon md-image="icon:description"></md-icon>
+				<md-text>Reference</md-text>
+			</md-tile>
+			<md-tile data-url="/dev" md-font-color="cyan" md-fill="cyan">
+				<md-icon md-image="icon:settings_applications"></md-icon>
+				<md-text>Contribute</md-text>
+			</md-tile>
+			<md-tile data-url="/showcase">
+				<md-icon md-image="icon:view_module"></md-icon>
+				<md-text>Showcase</md-text>
+			</md-tile>
+		</md-list>
+	</md-sidemenu>
+	<md-content id="main-content" class="white-margin-paper">
+		<md-pager id="content-pager">
+
+
+
+
+
+
+
+
+
+
+
+		<!-- COMPONENTS PAGE -->
+
+
+
+			
+			<md-page>
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="subhead">
+					<span>Welcome to the Paperkit contributing page! Thanks for your interest in our framework.<br>
+					Please remember <b>Paperkit is still an alpha version</b>. This means it is in active development and not ready for production. We love feedback, drop us a line at <a href="mailto:feedback@paperkit.org" target="_blank">feedback@paperkit.org</a>.</span>
+				</md-paper>
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<span md-typo="display-1" md-font-color="red">IMPORTANT: This page is <b>not</b> about <b>using</b> Paperkit...</span><br>
+					<span md-typo="headline">This is the place for Paperkit development, with explanations on how we've built it and a few guidelines for contributing.</span><br><br>
+					<span md-typo="subhead">We really appreciate your help! Paperkit is an open source project and it depends on people like you that contribute to it and make it grow. Thank you!</span>
+				</md-paper>
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<span md-typo="display-1" md-font-color="cyan">How can I help?</span><br>
+					<span md-typo="subhead">The framework involves different kinds of work with different technical levels:</span><br><br>
+					<span md-typo="subhead">- <b>Development:</b> code some Paperkit components, APIs and other features using HTML, CSS and JavaScript. Read the development page.</span><br>
+					<span md-typo="subhead">- <b>Documentation:</b> redact the reference, guides, tutorial and other info with the latest Paperkit features. Read the documentation page, development is also recommended.</span><br>
+					<span md-typo="subhead">- <b>Testing:</b> test the latest Paperkit features to report bugs or suggest any improvement to the developers. Read the testing page.</span><br>
+					<span md-typo="subhead">- <b>Build spec demos:</b> use Paperkit to build demos right in the Material Design spec. Read the spec demos page.</span>
+					<span md-typo="subhead">- <b>Webpage:</b> lend a hand on improving the webpage. Just contact us.</span>
+				</md-paper>
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<span md-typo="display-1" md-font-color="cyan">How do I start?</span><br>
+					<span md-typo="subhead">If you already know where you can help, the next step is contact us or the community.<br>
+					Our communication and coordination channels:<br>
+					- <a href="mailto:contacto@daniguardiola.me">Email</a><br>
+					- Hangouts group (request access by sending us an email)<br>
+					- Trello boards: <a href="https://trello.com/b/1Pz3NpA7/paperkit-development">Development</a> / <a href="https://trello.com/b/OVoeum40/documentation">Documentation</a> / <a href="https://trello.com/b/pttPM0IW/flavored-spec">Flavored spec</a><br>
+					- Github pull requests: coming soon
+				</md-paper>
+			</md-page>
+
+
+
+
+		<!-- ATTRIBUTES PAGE -->
+
+
+
+			<md-page>
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<span md-typo="display-1" md-font-color="cyan">Setup</span><br>
+					<span md-typo="subhead" md-font-color="grey">Note: this dev guide is made for a linux OS, but you should be able to develop on other platforms.</span><br>
+					<span md-typo="subhead">Paperkit is built using HTML, CSS and JavaScript, but the architecture is a little more complex. Follow this guide to set up the neccesary development enviroment:<br><br>
+					1 - Install <a href="http://git-scm.com/">Git</a>, <a href="https://www.npmjs.com/">NPM</a> and <a href="http://gruntjs.com/">Grunt</a>
+					<pre class="language-bash"><code>sudo apt-get install git npm
+sudo npm install -g grunt-cli</code></pre>
+					2 - Clone Paperkit:
+					<pre class="language-bash"><code>git clone https://gitlab.datatrends.es/opensource/materializer.git</code></pre>
+					3 - Go to Paperkit folder and update npm packages
+					<pre class="language-bash"><code>cd Paperkit
+npm install</code></pre>
+					4 - Run Grunt from inside the Paperkit folder
+					<pre class="language-bash"><code>grunt</code></pre><br>
+					If everything works, you should see a bin/ folder, and three folders inside: paperkit/, paperkit-min/ and paperkit-files/</span>
+				</md-paper>
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<span md-typo="display-1" md-font-color="cyan">Project structure</span><br>
+					<span md-typo="subhead" md-font-color="grey">Note: the structure may have changed since the last time this guide was updated.</span><br>
+					<span md-typo="subhead">Paperkit folder has the following structure:<br><br>
+					<b>source/</b> - the code lives here<br>
+					- <b>attribute/</b> - attribute JSON-to-CSS files (more info later)<br>
+					- <b>css/</b> - CSS files with generic styles<br>
+					- <b>import/</b> - generic JSON files with re-usable data for JSON-to-CSS (more info later)<br>
+					- <b>javascript</b> - JavaScript files including the general namespace and component classes<br>
+					- <b>resources</b> - font files, cursor images and extra icons<br>
+					- <b>tag/</b> - component JSON files (that compiles to CSS)<br>
+					- <b>tools/</b> - a few tools like JSON generators (example: a script that extracts the colors from the official Material Design spec and outputs the colors.json import)<br><br>
+					<b>bin/</b> - the compiled framework files, after grunt is executed<br>
+					- <b>paperkit/</b> - Paperkit folder ready to use<br>
+					- <b>paperkit-min/</b> - same but minified<br>
+					- <b>paperkit-files</b> - compiled files without concatenation<br><br>
+					<b>labs</b> - a playground to test and develop Paperkit components<br>
+					<b>tasks/</b> - contains our custom grunt tasks, currently only the JSON to CSS compiler<br>
+					<b>web/</b> - the webpage files (this folder will probably move to another repository in a future)<br>
+					<b>license/</b> - licensing stuff<br>
+					<b>grunt-materializer/</b> - MDCSS grunt plugin, obsolete and discontinued, we will refactor it in the future<br>
+					<b>node_modules/</b> - this is the NPM packages folder</span>
+				</md-paper>
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<span md-typo="display-1" md-font-color="cyan">JSON to CSS? Whaaaat?</span><br>
+					<span md-typo="subhead">Paperkit code only has CSS and JS files in the ready to use package, but for a simpler development workflow we don't code CSS directly (except for general styles inside source/css/ folder).<br>
+					We made our own grunt plugin that converts JSON files to CSS. The JSON format for Paperkit is an abstraction of CSS that lets us create a structure closer to our components design without worring much about CSS selectors.<br><br>
+					For example, consider a simplified version (for example's sake) of md-color attribute, with only a "red" value. This will look like this:
+					<pre class="language-markup"><code>&lt;div md-color="red"&gt;&lt;/div&gt;</code></pre>
+					To select any element containing the attribute "md-color" with value "red", we use this CSS selector:
+					<pre class="language-css"><code>[md-color="red"] {
+    background-color: red;
+}</code></pre>
+					Instead of doing this, we write this piece of JSON on the file <b>source/attribute/md-color.json</b>:
+					<pre class="language-javascript"><code>{
+  "type": "attribute",
+  "name": "md-color",
+  "values": [
+    {
+      "name": "red",
+      "css": [
+        {
+          "property": "background-color",
+          "value": "red"
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+					After running grunt, we can find the file <b>bin/paperkit-files/attribute/md-color.css</b> that contains the CSS code that's right before the JSON example.<br><br>
+					It may seem complicated but it actually makes development (and life) far easier when you understand how it works. Read the following specification to get a deep understanding of the JSON structure.</span>
+				</md-paper>
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<span md-typo="display-1" md-font-color="cyan">JSON-to-CSS specification</span><br><br>
+					<span md-typo="headline" md-font-color="cyan">Styling</span><br>
+					<span md-typo="headline">CSS</span><br>
+					<span md-typo="subhead">Array that contains objects with a property name and its value. Always optional.</span>
+					<pre class="language-javascript"><code>"css": [
+	{
+		"property": "&lt;property&gt;", // Example: "background-color"
+		"value": "&lt;value&gt;" // Example: "#fff"
+	}
+]
+</code></pre>
+					<span md-typo="headline">Responsive</span><br>
+					<span md-typo="subhead">Array that contains objects with a device target and a CSS array. Always optional.</span>
+					<pre class="language-javascript"><code>"responsive": [
+	{
+		"target": [ &lt;targets&gt; ], // Check source/settings.json to see all available targets. Example: [ "mobile", "tablet" ]
+		"css": &lt;CSS array&gt;, // Optional
+		"fixes": &lt;Fixes array&gt; // Optional
+	}
+]
+</code></pre><br>
+					<span md-typo="headline" md-font-color="cyan">Selecting</span><br>
+					<span md-typo="subhead">The selector where styling applies varies depending on the context where they are located in the JSON. The following objects create contexts.</span><br>
+					<span md-typo="headline">Attribute</span><br>
+					<span md-typo="subhead">Can be top level or inside an attributes array of a tag. Selects attribute values.</span>
+					<pre class="language-javascript"><code>{
+	"name": &lt;name&gt;, // Example: "md-color"
+	"type": "attribute",
+	"imports": [ // Optional. Uses a JSON file from source/import/
+		{
+			"name": &lt;import name&gt;, // Example: "colors"
+			"property1": &lt;property name&gt;, // Example: "background-color"
+			"property2": &lt;property name&gt; // Optional. Example: "color"
+		}
+	],
+	"values": [ // Optional if there are imports. Array of values for the attribute
+		{ 	// Value without variants
+			"name": &lt;name&gt;, // Example: "black"
+			"css": &lt;CSS array&gt;, // Optional
+			"responsive": &lt;Responsive array&gt;, // Optional
+			"fixes": &lt;Fixes array&gt; // Optional
+		},
+		{ 	// Value with variants. Values with variants look like this: "value-variant". Example: "red-100"
+			"name": &lt;name&gt;, // Example: "red"
+			"defaultVariant": &lt;variant&gt;, // Example: "500"
+			"variants": [
+				{
+					"name": &lt;name&gt;, // Example: "100"
+					"css": &lt;CSS array&gt;, // Optional
+					"responsive": &lt;Responsive array&gt;, // Optional
+					"fixes": &lt;Fixes array&gt; // Optional
+				}
+			]
+			"css": &lt;CSS array&gt;, // Optional
+			"responsive": &lt;Responsive array&gt;, // Optional
+			"fixes": &lt;Fixes array&gt; // Optional
+		}
+	]
+}
+</code></pre>
+					<span md-typo="headline">Tag</span><br>
+					<span md-typo="subhead">Top level object that contains the tag definition.</span>
+					<pre class="language-javascript"><code>{
+  "type": "tag",
+  "names": [ &lt;names&gt; ], // Can be one or more tag names, and can use a selector. Example: [ "md-element", "div[md-element]" ]
+  "defaults": [ // Optional. Defines the default attributes and values
+  	{
+  		"name": "&lt;property&gt;", // Example: "md-color"
+  		"values":  &lt;values&gt;, // Example: [ "red" ]
+  	}
+  ],
+  "attributes": &lt;Attributes array&gt;, // Tag-specific attributes. The array contains regular attribute objects that will only work with this tag.
+  "css": &lt;CSS array&gt;, // Optional
+  "responsive": &lt;Responsive array&gt;, // Optional
+  "fixes": &lt;Fixes array&gt; // Optional
+}
+</code></pre>
+					<span md-typo="headline">Fixes</span><br>
+					<span md-typo="subhead">A fix provides a way to extend the selector. Use the properties "before" and/or "after" to add anything to the current selector.</span>
+					<pre class="language-javascript"><code>"fixes" : [
+{
+	"before": &lt;selector&gt;, // Optional. Example: "body>"
+	"after": &lt;selector&gt;, // Optional. Example: ":not(.off)"
+	"css": &lt;CSS array&gt;, // Optional
+	"responsive": &lt;Responsive array&gt; // Optional
+}
+</code></pre>
+					<span md-typo="subhead">Using the examples above inside the "md-toolbar" tag JSON would create the following selector:</span>
+					<pre class="language-css"><code>body>md-toolbar:not(.off)</code></pre>
+				</md-paper>
+			</md-page>
+
+
+
+
+		<!-- APIS PAGE -->
+
+
+
+			<md-page>
+			</md-page>
+
+
+
+
+
+
+
+		<!-- APIS PAGE -->
+
+
+
+			<md-page>
+			</md-page>
+
+
+
+
+
+
+
+
+
+
+		<!-- APIS PAGE -->
+
+
+
+			<md-page>
+			</md-page>
+
+
+
+		<!-- DISCUSSION PAGE -->
+
+
+
+
+			<md-page>
+				<md-paper class="margin-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+				    <span md-typo="display-1">Get in touch, say hi!</span><br>
+				    <span md-typo="subhead">Talk with other developers or ask something about development</span>
+				</md-paper>
+				<md-paper class="margin-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+				    <div id="disqus_thread" md-width="full"></div>
+				    <style type="text/css">
+						#disqus_thread a {
+							color: #ff9800;
+						}
+				    </style>
+				    <script type="text/javascript">
+				        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+				        var disqus_shortname = 'paperkit'; // required: replace example with your forum shortname
+
+				        /* * * DON'T EDIT BELOW THIS LINE * * */
+				        (function() {
+				            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				        })();
+				    </script>
+				    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</md-paper>
+			</md-page>
+		</md-pager>
+	</md-content>
+
+	<script src="resources/script.js"></script>
+	<script src="../resources/prism.js"></script>
+	<script src="../resources/shared.js"></script>
+</body>
+</html>

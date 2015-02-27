@@ -1,0 +1,29 @@
+{
+  "type": "tag",  
+  "names": [
+    "body[md-layout]>md-content",
+    "md-layout>md-content"
+  ],
+  "css": [
+  	{
+  		"property": "display",
+  		"value": "flex"
+  	},
+  	{
+  		"property": "flex-grow",
+  		"value": "1"
+  	},
+  	{
+  		"property": "overflow-y",
+  		"value": "auto"
+  	},
+  	{
+  		"property": "overflow-x",
+  		"value": "hidden"
+  	},
+    {
+      "property": "position",
+      "value": "relative"
+    }
+  ]
+}

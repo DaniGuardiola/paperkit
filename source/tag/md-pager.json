@@ -9,6 +9,10 @@
 		{
 			"property": "overflow-x",
 			"value": "hidden"
+		},
+		{
+			"property": "width",
+			"value": "100%"
 		}
 	],
 	"fixes": [
@@ -30,6 +34,10 @@
 				{
 					"property": "transition",
 					"value": "margin-left 0.45s ease-in-out"
+				},
+				{
+					"property": "overflow-y",
+					"value": "auto"
 				}
 			]
 		}
