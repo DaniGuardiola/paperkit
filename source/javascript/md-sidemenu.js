@@ -55,7 +55,7 @@ var initMDSidemenu = function(MDSidemenu) {
    */
   MDSidemenu.autoResize = function() {
     var viewport = getViewport();
-    if (viewport.width <= 456) { // We should generate display vars from md-settings.json
+    if (viewport.width <= 456) { // We should generate display vars from settings.json
       MDSidemenu.style.width = (viewport.width - 56) + "px";
       if (MDSidemenu.getAttribute('md-state') !== "open") {
         MDSidemenu.style.left = "-" + MDSidemenu.style.width;

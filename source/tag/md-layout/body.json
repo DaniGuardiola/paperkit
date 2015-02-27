@@ -1,0 +1,12 @@
+{
+  "type": "tag",
+  "names": [
+  	"body[md-layout]"
+  ],
+  "css": [
+  	{
+  		"property": "height",
+  		"value": "100%"
+  	}
+  ]
+}

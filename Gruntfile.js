@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
 
-      // 1 - Cleaning bin and grunt-materializer/sources/
+      // Clean tasks
       clean: {
         bin: {
           src: [ 'bin/' ]
@@ -16,11 +16,11 @@ module.exports = function(grunt) {
           src: [ 'web/paperkit-min/' ]
         },
         publish: {
-          src: [ 'web/d/' ]
+          src: [ 'web/download/paperkit.zip','web/download/paperkit-min.zip' ]
         }
       },
 
-      // 2 - Compiling json to css on bin/paperkit-files/
+      // Compiler: JSON to CSS
       compiler: {
         css: {
             expand: true,
@@ -38,13 +38,13 @@ module.exports = function(grunt) {
               return newDest;
           },
           options: {
-            configfile: 'source/md-settings.json',
+            configfile: 'source/settings.json',
             imports: 'source/import'
           }
         },
       },
 
-      // 3 - Coping everything
+      // Copy tasks
       copy: {
         css: {
           expand: true,
@@ -157,30 +157,28 @@ module.exports = function(grunt) {
           src: 'grunt-paperkit/**',
           dest: 'bin/'
         },
-        /*bower: {
+        bower: {
           expand: true,
           src: [
-          'bin/paperkit/**',
-          'source/repo_files/bower.json'
+          'bin/paperkit/**'
           ],
-          dest: 'bin/',
+          dest: 'bin/tmp/paperkit-bower/',
           rename: function(dest, src) {
-            var newDest = dest + src.replace("source/repo_files", "bower").replace("bin/paperkit", "bower");
+            var newDest = dest + src.replace("bin/paperkit", "").replace("source/repo_files", "");
             return newDest;
           }
         },
         bowerMin: {
           expand: true,
           src: [
-          'bin/paperkit-min/**',
-          'source/repo_files/bower-min.json'
+          'bin/paperkit-min/**'
           ],
-          dest: 'bin/',
+          dest: 'bin/tmp/paperkit-bower-min/',
           rename: function(dest, src) {
-            var newDest = dest + src.replace("source/repo_files", "bower-min").replace("bin/paperkit-min", "bower-min").replace("bower-min.json", "bower.json");
+            var newDest = dest + src.replace("bin/paperkit-min", "").replace("source/repo_files", "");
             return newDest;
           }
-        },*/
+        },
         web: {
           expand: true,
           cwd: 'bin',
@@ -201,7 +199,7 @@ module.exports = function(grunt) {
         }
       },
 
-      // 4 - Autoprefixing all css from bin/materializer/
+      // Autoprefixer
       autoprefixer: {
         options: {
           browsers: ["last 2 versions", "ie 9", "iOS 6", "Safari 6.2", "ChromeAndroid 25", "FirefoxAndroid 20", 'opera 12', 'ff 15', 'chrome 25']
@@ -215,7 +213,7 @@ module.exports = function(grunt) {
         }
       },
 
-      // Cloning extra icons
+      // Shell tasks
       exec: {
         cloneIcons: {
           command: 'git clone https://github.com/Templarian/MaterialDesign bin/tmp/'
@@ -225,14 +223,47 @@ module.exports = function(grunt) {
         },
         npmUpdate: {
           command: 'npm update'
+        },
+        ulimit: {
+          command: 'ulimit -S -n 2048'
+        },
+        bower: {
+          command: 'rm -rf -f ~/proyectos/stable-paperkit/resources/ && rm -f ~/proyectos/stable-paperkit/paperkit.css && rm -f ~/proyectos/stable-paperkit/paperkit.js && rm -f ~/proyectos/stable-paperkit/LICENSE && mv -f bin/tmp/paperkit-bower/* ~/proyectos/stable-paperkit/'
+        },
+        bowerMin: {
+          command: 'rm -rf -f ~/proyectos/stable-paperkit-min/resources/ && rm -f ~/proyectos/stable-paperkit-min/paperkit.css && rm -f ~/proyectos/stable-paperkit-min/paperkit.js && rm -f ~/proyectos/stable-paperkit-min/LICENSE && mv -f bin/tmp/paperkit-bower-min/* ~/proyectos/stable-paperkit-min/'
+        },
+        bowerGrunt: {
+          command: 'grunt --base ~/proyectos/stable-paperkit/ --gruntfile ~/proyectos/stable-paperkit/Gruntfile.js'
+        },
+        bowerMinGrunt: {
+          command: 'grunt --base ~/proyectos/stable-paperkit-min/ --gruntfile ~/proyectos/stable-paperkit-min/Gruntfile.js'
+        },
+        bowerGruntMinor: {
+          command: 'grunt --base ~/proyectos/stable-paperkit/ --gruntfile ~/proyectos/stable-paperkit/Gruntfile.js exec:stageAll release:minor'
+        },
+        bowerMinGruntMinor: {
+          command: 'grunt --base ~/proyectos/stable-paperkit-min/ --gruntfile ~/proyectos/stable-paperkit-min/Gruntfile.js exec:stageAll release:minor'
+        },
+        bowerGruntMajor: {
+          command: 'grunt --base ~/proyectos/stable-paperkit/ --gruntfile ~/proyectos/stable-paperkit/Gruntfile.js exec:stageAll release:major'
+        },
+        bowerMinGruntMajor: {
+          command: 'grunt --base ~/proyectos/stable-paperkit-min/ --gruntfile ~/proyectos/stable-paperkit-min/Gruntfile.js exec:stageAll release:major'
+        },
+        bowerGruntPre: {
+          command: 'grunt --base ~/proyectos/stable-paperkit/ --gruntfile ~/proyectos/stable-paperkit/Gruntfile.js exec:stageAll release:prerelease'
+        },
+        bowerMinGruntPre: {
+          command: 'grunt --base ~/proyectos/stable-paperkit-min/ --gruntfile ~/proyectos/stable-paperkit-min/Gruntfile.js exec:stageAll release:prerelease'
         }
       },
 
 
-      // 4 - Beautify everything
+      // Beautifier
       cssbeautifier:{files:[    "bin/paperkit-files/**/*.css"    ]},
 
-      // 5 - Concatenating css and js from bin/materializer/ to bin/
+      // Concatenator
       concat: {
         css: {
           src: [
@@ -262,7 +293,7 @@ module.exports = function(grunt) {
         }
       },
 
-      // 6 - Minify css
+      // Minifier
       cssmin: {
         minify: {
           src: 'bin/paperkit/paperkit.css',
@@ -270,7 +301,7 @@ module.exports = function(grunt) {
         }
       },
 
-      // 7 - Uglify css
+      // Uglifier
       uglify: {
         build: {
           src: 'bin/paperkit/paperkit.js',
@@ -278,28 +309,52 @@ module.exports = function(grunt) {
         }
       },
       
-      // 8 - Generate zip files
+      // Compressor
       compress: {
         paperkit: {          
           options: {
             mode: 'zip',
-            archive: 'web/d/paperkit.zip'
+            archive: 'web/download/paperkit.zip'
           },
           expand: true,
           cwd: 'bin/paperkit',
           src: [ '**' ],
           dest: 'paperkit/'
         },
-        paperkitmin: {          
+        paperkitMin: {          
           options: {
             mode: 'zip',
-            archive: 'web/d/paperkit-min.zip'
+            archive: 'web/download/paperkit-min.zip'
           },
           expand: true,
           cwd: 'bin/paperkit-min',
           src: [ '**' ],
           dest: 'paperkit/'
+        },
+        paperkitDev: {          
+          options: {
+            mode: 'zip',
+            archive: 'web/download/paperkit-dev.zip'
+          },
+          expand: true,
+          cwd: 'bin/paperkit',
+          src: [ '**' ],
+          dest: 'paperkit/'
         }        
+      },
+
+      // Releaser
+      release: {
+        options: {
+          file: 'bower.json', //default: package.json
+          npm: false, //default: true
+          folder: 'bin/bower', //default project root
+          github: {
+            repo: 'daniguardiola/paperkit-stable', //put your user/repo here
+            usernameVar: 'GITHUB_USERNAME', //ENVIRONMENT VARIABLE that contains Github username
+            passwordVar: 'GITHUB_PASSWORD' //ENVIRONMENT VARIABLE that contains Github password
+          }
+        }
       }
   });
 
@@ -323,7 +378,12 @@ module.exports = function(grunt) {
     'copy:css','copy:resourcesFont','copy:resourcesCursor', 'copy:resourcesExtraIcon','copy:resourcesIcon', 'copy:resourcesIconLicense', 'copy:resourcesExtraIconLicense', 'clean:tmpBin', 'copy:resourcesMoreIcon','copy:resourcesOther','copy:resourcesToPaperkit','copy:resourcesToPaperkitMin',
     "autoprefixer",'cssbeautifier','concat','copy:license','copy:licenseMin','cssmin','uglify']);
 
-  grunt.registerTask('web', ['package', 'clean:web', 'copy:web']);
-  grunt.registerTask('publish', ['package', 'clean:publish', 'compress']);  
+  grunt.registerTask('web', ['clean:web', 'copy:web']);
+  grunt.registerTask('publish', ['clean:publish', 'exec:ulimit', 'compress:paperkit', 'compress:paperkitMin', 'copy:bower', 'exec:bower', 'exec:bowerGrunt', 'copy:bowerMin', 'exec:bowerMin', 'exec:bowerMinGrunt', 'clean:tmpBin']);
+  grunt.registerTask('publishMinor', ['clean:publish', 'exec:ulimit', 'compress:paperkit', 'compress:paperkitMin', 'copy:bower', 'exec:bower', 'exec:bowerGruntMinor', 'copy:bowerMin', 'exec:bowerMin', 'exec:bowerMinGruntMinor', 'clean:tmpBin']);
+  grunt.registerTask('publishMajor', ['clean:publish', 'exec:ulimit', 'compress:paperkit', 'compress:paperkitMin', 'copy:bower', 'exec:bower', 'exec:bowerGruntMajor', 'copy:bowerMin', 'exec:bowerMin', 'exec:bowerMinGruntMajor', 'clean:tmpBin']);
+  grunt.registerTask('publishPre', ['clean:publish', 'exec:ulimit', 'compress:paperkit', 'compress:paperkitMin', 'copy:bower', 'exec:bower', 'exec:bowerGruntPre', 'copy:bowerMin', 'exec:bowerMin', 'exec:bowerMinGruntPre', 'clean:tmpBin']);
+
+  grunt.registerTask('publishDev', ['clean:publish', 'exec:ulimit', 'compress:paperkitDev']);
   grunt.registerTask('default', ['package']);
 };

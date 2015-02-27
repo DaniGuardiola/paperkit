@@ -77,6 +77,12 @@ var initMDFab = function(MDFab, paperkit) {
         if(action.indexOf('custom:') != -1) {
           var f = action.substring(action.indexOf('custom:') + 'custom:'.length).trim();
           this.callFunction(f, el);
+        } else if(action.indexOf('link:') != -1) {
+          var f = action.substring(action.indexOf('link:') + 'link:'.length).trim();
+          window.open(f,'_self');
+        } else if(action.indexOf('link-out:') != -1) {
+          var f = action.substring(action.indexOf('link-out:') + 'link-out:'.length).trim();
+          window.open(f);
         } else if (action = "chrome-app-close") {
           chrome.app.window.current().close();
         }
