@@ -1,0 +1,159 @@
+{
+  "type": "tag",
+  "name": "md-sidemenu",
+  "defaults": [
+    {
+      "name": "md-state",
+      "values": ["closed"]
+    }
+  ],
+  "css": [
+    {
+      "property": "display",
+      "value": "flex"
+    },
+    {
+      "property": "height",
+      "value": "100%"
+    },
+    {
+      "property": "width",
+      "value": "80%"
+    },
+    {
+      "property": "max-width",
+      "value": "400px"
+    },
+    {
+      "property": "position",
+      "value": "fixed"
+    },
+    {
+      "property": "top",
+      "value": "0"
+    },
+    {
+      "property": "transition",
+      "value": "left 0.25s"
+    },
+    {
+      "property": "z-index",
+      "value": "500"
+    },
+    {
+      "property": "background",
+      "value": "#fff"
+    },
+    {
+      "property": "flex-direction",
+      "value": "column"
+    },
+    {
+      "property": "will-change",
+      "value": "left"
+    },
+    {
+      "property": "user-select",
+      "value": "none"
+    }
+  ],
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-state",
+      "values": [
+        {
+          "name": "closed",
+          "responsive": [
+            {
+              "target": ["watch","mobile"],
+              "css": [
+                {
+                  "property": "left",
+                  "value": "-80%"
+                }
+              ]
+            },
+            {
+              "target": ["tablet", "desktop"],
+              "css": [
+                {
+                  "property": "left",
+                  "value": "-256px"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "open",
+          "responsive": [
+            {
+              "target": ["all"],
+              "css": [
+                {
+                  "property": "left",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fixes": [
+    {
+      "after": ">md-list",
+      "css": [
+        {
+          "property": "width",
+          "value": "100%"
+        }
+      ]
+    },
+    {
+      "after": " md-list md-tile md-text",
+      "css": [
+        {
+          "property": "font-size",
+          "value": "14px"
+        },
+        {
+          "property": "line-height",
+          "value": "14px"
+        },
+        {
+          "property": "font-weight",
+          "value": "500"
+        }
+      ]
+    }
+  ],
+  "responsive": [
+    {
+      "target": ["tablet", "desktop"],
+      "css": [
+        {
+          "property": "width",
+          "value": "256px"
+        }
+      ]
+    }
+  ],
+  "fixes": [
+    {
+      "after": "> md-list:not([md-bottom])",
+      "css": [
+        {
+          "property": "flex",
+          "value": "1"
+        },
+        {
+          "property": "overflow-y",
+          "value": "auto"
+        }
+      ]
+    }
+  ]
+}

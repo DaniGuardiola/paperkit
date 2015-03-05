@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Paperkit framework - Learn</title>
+ 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width" />
+ 	<meta name="Description" content="A Material Design web framework. Simple, beautiful, powerful and open source. Create webpages and apps following the Google guidelines.">
+
+	<link rel="stylesheet" href="../paperkit-min/paperkit.css">
+	<link href="../resources/prism.css" rel="stylesheet">
+
+	<script src="../paperkit-min/paperkit.js"></script>
+	<!-- ANALITYCS -->
+	<meta name="google-site-verification" content="djfogzB_zdcp84TB00VSlkez3QV9pU20KAeQcaSMXb4" />
+
+	<style type="text/css">
+		a {
+			color: #2196f3;
+			text-decoration: none;
+		}
+		#content-pager {
+			width: 100%;
+		}
+		@media only screen and (max-width: 425px) {
+			#header-title .title-suffix {
+				display: none;
+			}
+		}
+		@media only screen and (max-width: 688px) {
+			.margin-paper {
+				box-shadow: none;
+			}
+			.white-margin-paper {
+				background: #fff;
+			}
+		}
+		@media only screen and (min-width: 688px) {
+			.margin-paper:first-child {
+				margin-top: 16px;
+			}
+			.margin-paper {
+				margin-bottom: 16px;
+			}
+			#slogan {
+				font-size: 56px;
+				font-weight: 400;
+				white-space: nowrap;
+				line-height: 60px;
+				letter-spacing: -.026em;
+			}
+			md-paper a.anchor-link {
+				opacity: 0;
+				transition: opacity 0.25s;
+			}
+			md-paper:hover a.anchor-link {
+				opacity: 1;
+			}
+		}
+
+		.title-suffix {
+			transition: color 0.25s;
+		}
+	</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58574637-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body md-layout md-color="grey-200">
+	<md-toolbar md-fill="white" md-color="cyan" md-shadow="shadow-1" md-font-color="white" style="overflow: hidden">
+		<md-row md-type="standard">
+			<md-icon-button md-image="icon:menu" md-action="custom: paperkit.sidemenu.open"></md-icon-button>
+			<md-text id="header-title">Paperkit <span class="title-suffix" style="font-weight: 300;">learn</span></md-text>
+			<md-space></md-space>
+			<md-icon-button md-image="icon:google-plus" md-action="link-out:https://plus.google.com/113406175172786471629"></md-icon-button>
+			<md-icon-button md-image="icon:twitter" md-action="link-out:http://twitter.com/PaperkitMDesign"></md-icon-button>
+			<md-icon-button md-image="icon:facebook" md-action="link-out:https://www.facebook.com/paperkitframework"></md-icon-button>
+			<md-icon-button md-image="icon:github" md-action="link-out:https://gitlab.datatrends.es/opensource/materializer/"></md-icon-button>
+		</md-row>
+		<md-row md-type="small">
+			<md-tabbar id="content-tabbar" md-pager="content-pager" md-action="custom: contentPagerAction">
+				<md-tab md-typo="button">First steps</md-tab>
+				<md-tab md-typo="button">Layout</md-tab>
+				<md-tab md-typo="button">JavaScript</md-tab>
+				<md-tab md-typo="button">Tutorial</md-tab>
+				<md-tab md-typo="button">Help</md-tab>
+			</md-tabbar>
+	</md-toolbar>
+	<md-fab md-action="custom: openDiscussion" md-color="cyan" md-image="icon:help" md-fill="white" md-shadow="shadow-1"></md-fab>
+	<md-sidemenu style="max-width: 272px;">
+		<a href="/"><img src="../resources/brand/banner.png" md-width="full" style="padding: 12px 0px 0px 8px; max-width: 198px;"></a>
+		<md-list md-action="link: data-url">
+			<md-tile data-url="/learn" md-font-color="cyan" md-fill="cyan">
+				<md-icon md-image="icon:school"></md-icon>
+				<md-text>Learn</md-text>
+			</md-tile>
+			<md-tile data-url="/reference">
+				<md-icon md-image="icon:description"></md-icon>
+				<md-text>Reference</md-text>
+			</md-tile>
+			<md-tile data-url="/dev">
+				<md-icon md-image="icon:settings_applications"></md-icon>
+				<md-text>Develop</md-text>
+			</md-tile>
+			<md-tile data-url="/showcase">
+				<md-icon md-image="icon:view_module"></md-icon>
+				<md-text>Showcase</md-text>
+			</md-tile>
+		</md-list>
+	</md-sidemenu>
+	<md-content id="main-content" class="white-margin-paper">
+		<md-pager id="content-pager">
+
+
+
+
+
+
+
+
+
+
+
+		<!-- FIRST STEPS PAGE -->
+
+
+
+			
+			<md-page>
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding md-typo="subhead">
+					<span>Welcome to the Paperkit learning page! Thanks for your interest in our framework.<br>
+					Please remember <b>Paperkit is still an alpha version</b>. This means it is in active development and not ready for production. We love feedback, drop us a line at <a href="mailto:feedback@paperkit.org" target="_blank">feedback@paperkit.org</a>.</span>
+				</md-paper>
+
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<span md-typo="display-1" md-font-color="cyan" id="download">Download Paperkit 0.1<a class="anchor-link" md-font-color="grey" href="#download"> #</a></span><br>
+					<span md-typo="headline">Bower</span>
+					<pre class="language-bash"><code>bower install paperkit-min # Recommended</code></pre>
+					<pre class="language-bash"><code>bower install paperkit</code></pre>
+					<span md-typo="headline">Manual</span><br>
+			<!--
+					<span md-typo="subhead">Important: the bower version is outdated at the moment and we are moving it to a new repository. Use the manual download instead to get the latest version.</span><br>
+					<span md-typo="title"><b>Bower</b> - <a target="_blank" href="http://bower.io/">What?</a></span><br>
+					<span md-typo="subhead">Minified (recommended)</span>
+					<pre class="language-bash"><code>bower install paperkit-min</code></pre>
+					<span md-typo="subhead">Full size</span>
+					<pre class="language-bash"><code>bower install materializer</code></pre>
+					<span md-typo="title"><b>Manual download</b></span><br> -->
+
+					<md-button md-action="link: /download/paperkit-min.zip" style="display: inline-block" md-buttontype="flat-light" md-typo="button">Minified (recommended)</md-button>
+					<md-button md-action="link: /download/paperkit.zip" style="display: inline-block" md-buttontype="flat-light" md-typo="button">Full size</md-button>
+				</md-paper>
+
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<span md-typo="display-1" md-font-color="cyan" id="setup">Setup<a class="anchor-link" md-font-color="grey" href="#setup"> #</a></span>
+					<pre class="language-markup"><code>&lt;head&gt;
+	&lt;link rel="stylesheet" href="bower_components/paperkit/paperkit.css"&gt;
+	&lt;script src="bower_components/paperkit/paperkit.js"&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+				</md-paper>
+
+
+
+
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<span md-typo="display-1" md-font-color="cyan" id="basics">Basics<a class="anchor-link" md-font-color="grey" href="#basics"> #</a></span><br>
+					<span md-typo="subhead">Paperkit provides a set of <b>tags</b>, <b>attributes</b> and <b>JavaScript APIs</b>.<br>
+					The prefix is "md" (<b>M</b>aterial <b>D</b>esign): <b>&lt;md-tag&gt;</b>, <b>md-attribute="value"</b> and <b>md.api</b>.<br><br>
+					For example:</span><br>
+					<span md-typo="headline">HTML</span>
+					<pre class="language-markup"><code>&lt;md-toolbar md-color="red"&gt;
+	&lt;md-row&gt;
+		&lt;md-icon-button md-image="icon:menu"&gt;&lt;/md-icon-button&gt;
+		&lt;md-text id="toolbar-title"&gt;Screen type: desktop&lt;/md-text&gt;
+		&lt;md-space&gt;&lt;/md-space&gt;
+		&lt;md-icon-button md-image="icon:favorite"&gt;&lt;/md-icon-button&gt;
+	&lt;/md-row&gt;
+&lt;/md-toolbar&gt;</code></pre>
+
+					<span md-typo="headline">JavaScript</span>
+					<pre class="language-javascript"><code>window.addEventListener('md-device-changed', function(){
+	var device = md.viewport.device();
+	var title = document.getElementById('toolbar-title');
+	title.textContent = 'Screen type: ' + device;
+});</code></pre>
+
+					<span md-typo="headline">Live result</span>
+					<md-toolbar md-color="red">
+						<md-row md-type="standard">
+							<md-icon-button md-image="icon:menu"></md-icon-button>
+							<md-text id="toolbar-title">Screen type: desktop</md-text>
+							<md-space></md-space>
+							<md-icon-button md-image="icon:favorite"></md-icon-button>
+						</md-row>
+					</md-toolbar><br><br>
+
+					<span md-typo="subhead">Try resizing this window!</span>
+				</md-paper>
+
+
+
+
+
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<span md-typo="display-1" md-font-color="cyan" id="considerations">Considerations<a class="anchor-link" md-font-color="grey" href="#considerations"> #</a></span><br>
+					<span md-typo="subhead">Add this code to the &lt;header&gt; of your HTML to support some mobile browser resolutions and features:</span>
+					<pre class="language-markup"><code>&lt;meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" /&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
+&lt;meta name="mobile-web-app-capable" content="yes"&gt;
+&lt;meta name="theme-color" content="#3F51B5"&gt; &lt;!-- The color should be the 700 variation of your main palette -->
+&lt;link rel="manifest" href="manifest.json"&gt; &lt;!-- Check link below --&gt;
+&lt;link rel="icon" sizes="192x192" href="logo-highres.png"&gt; &lt;!-- Check link below --&gt;</code></pre>
+					<span md-typo="subhead">For <i>install to homescreen</i> capabilities, check the info about <a target="_blank" href="https://developer.chrome.com/multidevice/android/installtohomescreen#supporting">the manifest file</a> and <a target="_blank" href="https://developer.chrome.com/multidevice/android/installtohomescreen#icon">icons</a>.<br>
+					Check also <a target="_blank" href="http://www.html5rocks.com/en/mobile/mobifying/">this guide</a> on <i>mobifying</i> from html5rocks.</span>
+				</md-paper>
+
+				<md-paper class="margin-paper" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+					<span md-typo="display-1" md-font-color="cyan" id="initialization">Component initialization<a class="anchor-link" md-font-color="grey" href="#initialization"> #</a></span><br>
+					<span md-typo="subhead">Some Paperkit components must be <b>initialized</b>. This proccess is automatic when they are already present on window load. However, when you add new HTML with Paperkit components (for example, by loading pages with AJAX), the initialization is manual.<br>
+					Use <b>md.init()</b> for this purpose:<br><br>
+					The parameter is the element or array of elements to be initialized. The function runs throughout the whole subtree, meaning all children will be processed. The input element does not need to be a Paperkit component, it can be a standard &lt;div&gt; containing components.<br><br>
+					For example, you retrieve a page by AJAX or create some HTML, and you store it in the 'newHTML' variable. Then you inject it into a &lt;div&gt; and initialize it.</span>
+					<pre class="language-javascript"><code>// We fill the div element with newHTML
+div.innerHTML = newHTML;
+// After adding the HTML, we must initialize the div element
+md.init(div)
+					</code></pre>
+					<span md-typo="subhead">Note: components won't be initialized twice, but this won't stop their children from being initialized.</span>
+				</md-paper>
+			</md-page>
+
+
+
+
+		<!-- LAYOUT PAGE -->
+
+
+
+			<md-page>
+			</md-page>
+
+
+
+
+		<!-- JAVASCRIPT PAGE -->
+
+
+
+			<md-page>
+			</md-page>
+
+
+
+		<!-- TUTORIAL PAGE -->
+
+
+
+			<md-page>
+			</md-page>
+
+
+
+
+		<!-- DISCUSSION PAGE -->
+
+
+
+
+			<md-page>
+				<md-paper class="margin-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+				    <span md-typo="display-1">Any questions? Wanna tell us something?</span><br>
+				    <span md-typo="subhead">Go ahead! We will answer you directly.</span>
+				</md-paper>
+				<md-paper class="margin-paper" md-flex="display wrap" md-shadow="shadow-1" md-width="x12" md-position="center-x" md-padding>
+				    <div id="disqus_thread" md-width="full"></div>
+				    <style type="text/css">
+						#disqus_thread a {
+							color: #ff9800;
+						}
+				    </style>
+				    <script type="text/javascript">
+				        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+				        var disqus_shortname = 'paperkit'; // required: replace example with your forum shortname
+
+				        /* * * DON'T EDIT BELOW THIS LINE * * */
+				        (function() {
+				            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				        })();
+				    </script>
+				    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</md-paper>
+			</md-page>
+		</md-pager>
+	</md-content>
+
+	<script src="resources/script.js"></script>
+	<script src="../resources/prism.js"></script>
+	<script src="../resources/shared.js"></script>
+</body>
+</html>

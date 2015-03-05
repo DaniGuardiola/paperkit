@@ -1,0 +1,347 @@
+{
+  "type": "tag",
+  "names": [ "md-list", "md-menu", "md-input[type=list]" ],
+  "css": [
+    {
+      "property": "display",
+      "value": "block"
+    },
+    {
+      "property": "padding",
+      "value": "8px 0"
+    }
+  ],
+  "defaults": [
+    {
+      "name": "md-type",
+      "values": [ "one-line" ]
+    }
+  ],
+  "fixes": [
+    {
+      "after": "> md-tile",
+      "css": [
+        {
+          "property": "display",
+          "value": "flex"
+        },
+        {
+          "property": "flex-wrap",
+          "value": "wrap"
+        },
+        {
+          "property": "width",
+          "value": "100%"
+        },
+        {
+          "property": "position",
+          "value": "relative"
+        },
+        {
+          "property": "overflow",
+          "value": "hidden"
+        }
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-type",
+      "values": [
+        {
+          "name": "one-line",
+          "fixes": [
+            {
+              "after": "> md-tile",
+              "css": [
+                {
+                  "property": "min-height",
+                  "value": "48px"
+                },
+                {
+                  "property": "max-height",
+                  "value": "56px"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-text",
+              "css": [
+                {
+                  "property": "padding-top",
+                  "value": "16px"
+                },
+                {
+                  "property": "padding-bottom",
+                  "value": "16px"
+                },
+                {
+                  "property": "font-size",
+                  "value": "16px"
+                },
+                {
+                  "property": "line-height",
+                  "value": "16px"
+                },
+                {
+                  "property": "white-space",
+                  "value": "nowrap"
+                },
+                {
+                  "property": "flex",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-text:first-child",
+              "css": [
+                {
+                  "property": "margin-left",
+                  "value": "16px"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-text:last-child",
+              "css": [
+                {
+                  "property": "margin-right",
+                  "value": "16px"
+                }
+              ]
+            },
+            {
+              "after": " md-tile> md-icon + md-text",
+              "css": [
+                {
+                  "property": "margin-left",
+                  "value": "20px"
+                }                
+              ]
+            },
+            {
+              "after": "> md-tile> md-avatar + md-text",
+              "css": [
+                {
+                  "property": "margin-left",
+                  "value": "12px"
+                }                
+              ]
+            },
+            {
+              "after": "> md-tile> md-avatar + md-text",
+              "css": [
+                {
+                  "property": "padding-top",
+                  "value": "20px"
+                },
+                {
+                  "property": "padding-bottom",
+                  "value": "20px"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-avatar ~ md-icon-button",
+              "css":  [
+                {
+                  "property": "margin-top",
+                  "value": "4px"              
+                }                
+              ]
+            },
+            {
+              "after": "> md-tile> md-avatar:first-of-type",
+              "css": [
+                {
+                  "property": "margin-left",
+                  "value": "12px"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-avatar",
+              "css": [
+                {
+                  "property": "margin-top",
+                  "value": "4px"
+                },
+                {
+                  "property": "margin-bottom",
+                  "value": "4px"
+                }
+              ]
+            },
+            {
+              "after": "> md-tile> md-icon:first-child",
+              "css": [
+                {
+                  "property": "margin-left",
+                  "value": "4px"
+                }
+              ]
+            },
+            {
+              "comment": "TODO: REVISAR ESTE SELECTOR, antes estaba md-tile> *:not(div):last-child",
+              "after": " md-tile> md-icon:last-child",
+              "css": [
+                {
+                  "property": "margin-right",
+                  "value": "4px"
+                }
+              ]
+            },
+            {
+              "comment": "TODO: REVISAR ESTE SELECTOR, antes estaba md-tile> *:not(div):last-child",
+              "after": " md-tile> md-icon-button:last-child",
+              "css": [
+                {
+                  "property": "margin-right",
+                  "value": "4px"
+                }
+              ]
+            }            
+          ]
+        },
+        {
+          "name": "two-lines",
+          "fixes": [
+            {
+              "after": "> md-tile",
+              "css": [
+                {
+                  "property": "height",
+                  "value": "72px"
+                }
+              ]
+            }            
+          ]
+        },
+        {
+          "name": "three-lines",
+          "fixes": [
+            {
+              "after": "> md-tile",
+              "css": [
+                {
+                  "property": "height",
+                  "value": "88px"
+                }
+              ]              
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "attribute",
+      "name": "md-separator",
+      "values": [
+        {
+          "name": "full",
+          "fixes": [
+            {
+              "after": "> md-tile:after, md-list md-tile[md-separator=full]:after",
+              "css": [
+                {
+                  "property": "display",
+                  "value": "block"
+                },
+                {
+                  "property": "position",
+                  "value": "absolute"
+                },
+                {
+                  "property": "bottom",
+                  "value": "0px"
+                },
+                {
+                  "property": "left",
+                  "value": "0px"
+                },
+                {
+                  "property": "height",
+                  "value": "1px"
+                },
+                {
+                  "property": "width",
+                  "value": "100%"
+                },
+                {
+                  "property": "background-color",
+                  "value": "rgba(0, 0, 0, 0.12)"
+                },
+                {
+                  "property": "content",
+                  "value": "\"\""
+                }
+              ]
+            }            
+          ]
+        },
+        {
+          "name": "partial",
+          "fixes": [
+            {
+              "after": "> md-tile:after, md-list md-tile[md-separator=partial]:after",
+              "css": [
+                {
+                  "property": "display",
+                  "value": "block"
+                },
+                {
+                  "property": "position",
+                  "value": "absolute"
+                },
+                {
+                  "property": "bottom",
+                  "value": "0px"
+                },
+                {
+                  "property": "left",
+                  "value": "0px"
+                },
+                {
+                  "property": "height",
+                  "value": "1px"
+                },
+                {
+                  "property": "width",
+                  "value": "100%"
+                },
+                {
+                  "property": "background-color",
+                  "value": "rgba(0, 0, 0, 0.12)"
+                },
+                {
+                  "property": "content",
+                  "value": "\"\""
+                },
+                {
+                  "property": "margin-left",
+                  "value": "72px"
+                }
+              ]
+            }            
+          ]
+        },
+        {
+          "name": "none",
+          "fixes": [
+            {
+              "after": "> md-tile:after, md-list md-tile[md-separator=none]:after", 
+              "css": [
+                {
+                  "property": "display",
+                  "value": "none"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

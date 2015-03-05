@@ -1,0 +1,42 @@
+{
+  "type": "tag",
+  "name": "md-menu",
+  "css": [
+    {
+      "property": "position",
+      "value": "fixed"
+    },
+    {
+      "property": "box-shadow",
+      "value": "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)"
+    },
+    {
+      "property": "z-index",
+      "value": "9999"
+    },
+    {
+      "property": "display",
+      "value": "block"
+    },
+    {
+      "property": "background",
+      "value": "white"
+    },
+    {
+      "property": "max-width",
+      "value": "100%"
+    },
+    {
+      "property": "transition",
+      "value": "height 0.25s"
+    },
+    {
+      "property": "overflow",
+      "value": "hidden"
+    },
+    {
+      "property": "cursor",
+      "value": "pointer"
+    }
+  ]
+ }

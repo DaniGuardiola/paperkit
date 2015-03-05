@@ -1,0 +1,45 @@
+{
+	"type": "tag",
+	"name": "md-pager",
+	"css": [
+		{
+			"property": "display",
+			"value": "flex"
+		},
+		{
+			"property": "overflow-x",
+			"value": "hidden"
+		},
+		{
+			"property": "width",
+			"value": "100%"
+		}
+	],
+	"fixes": [
+		{
+			"after": "> md-page",
+			"css": [
+				{
+					"property": "flex-shrink",
+					"value": "0"
+				},
+				{
+					"property": "width",
+					"value": "100%"
+				},
+				{
+					"property": "overflow",
+					"value": "hidden"
+				},
+				{
+					"property": "transition",
+					"value": "margin-left 0.45s ease-in-out"
+				},
+				{
+					"property": "overflow-y",
+					"value": "auto"
+				}
+			]
+		}
+	]
+}

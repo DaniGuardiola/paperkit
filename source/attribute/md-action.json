@@ -1,0 +1,27 @@
+{
+  "type": "attribute",
+  "name": "md-action",
+  "css": [
+    {
+      "property": "cursor",
+      "value": "pointer"
+    },
+    {
+      "property": "user-select",
+      "value": "none"
+    }
+  ],
+  "fixes": {
+    "after": "> mdlist",
+    "css": [
+      {
+        "property": "cursor",
+        "value": "pointer"
+      },
+      {
+        "property": "user-select",
+        "value": "none"
+      }
+    ]
+  }
+}

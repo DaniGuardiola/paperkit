@@ -1,0 +1,360 @@
+{
+  "type": "tag",
+  "name": "md-button",
+  "css": [
+    {
+      "property": "display",
+      "value": "inline-block"
+    },
+    {
+      "property": "min-width",
+      "value": "88px"
+    },
+    {
+      "property": "height",
+      "value": "48px"
+    },
+    {
+      "property": "border",
+      "value": "none"
+    },
+    {
+      "property": "padding",
+      "value": "17px 24px"
+    },
+    {
+      "property": "outline",
+      "value": "0"
+    },
+    {
+      "property": "text-align",
+      "value": "center"
+    },
+    {
+      "property": "cursor",
+      "value": "pointer"
+    },
+    {
+      "property": "user-select",
+      "value": "none"
+    },
+    {
+      "property": "z-index",
+      "value": "1"
+    },
+    {
+      "property": "position",
+      "value": "relative"
+    }
+  ],
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-buttontype",
+      "values": [
+        {
+          "name": "flat-light",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "transparent"
+            },
+            {
+              "property": "box-shadow",
+              "value": "none"
+            }
+          ],
+          "fixes": [
+            {
+              "after": ":hover:before",
+              "css": [
+                {
+                  "property": "content",
+                  "value": "\"\""
+                },
+                {
+                  "property": "position",
+                  "value": "absolute"
+                },
+                {
+                  "property": "top",
+                  "value": "8px"
+                },
+                {
+                  "property": "left",
+                  "value": "0"
+                },
+                {
+                  "property": "background-color",
+                  "value": "rgba(153, 153, 153, 0.2)"
+                },
+                {
+                  "property": "height",
+                  "value": "32px"
+                },
+                {
+                  "property": "width",
+                  "value": "100%"
+                },
+                {
+                  "property": "z-index",
+                  "value": "-1"
+                }
+              ]
+            },
+            {
+              "after": ":focus:before",
+              "css": [
+                {
+                  "property": "content",
+                  "value": "\"\""
+                },
+                {
+                  "property": "position",
+                  "value": "absolute"
+                },
+                {
+                  "property": "top",
+                  "value": "8px"
+                },
+                {
+                  "property": "left",
+                  "value": "0"
+                },
+                {
+                  "property": "background-color",
+                  "value": "rgba(153, 153, 153, 0.2)"
+                },
+                {
+                  "property": "height",
+                  "value": "32px"
+                },
+                {
+                  "property": "width",
+                  "value": "100%"
+                },
+                {
+                  "property": "z-index",
+                  "value": "-1"
+                }
+              ]
+            },
+            {
+              "after": ":active:before",
+              "css": [
+                {
+                  "property": "content",
+                  "value": "\"\""
+                },
+                {
+                  "property": "position",
+                  "value": "absolute"
+                },
+                {
+                  "property": "top",
+                  "value": "8px"
+                },
+                {
+                  "property": "left",
+                  "value": "0"
+                },
+                {
+                  "property": "background-color",
+                  "value": "rgba(153, 153, 153, 0.4)"
+                },
+                {
+                  "property": "height",
+                  "value": "32px"
+                },
+                {
+                  "property": "width",
+                  "value": "100%"
+                },
+                {
+                  "property": "z-index",
+                  "value": "-1"
+                }
+              ]
+            },
+            {
+              "after": ":disabled",              
+              "css": [
+                {
+                  "property": "color",
+                  "value": "rgba(0, 0, 0, 0.26)"
+                }                
+              ]
+            }
+          ]
+        },
+        {
+          "name": "flat-dark",
+          "css": [
+            {
+              "property": "background-color",
+              "value": "transparent"
+            },
+            {
+              "property": "box-shadow",
+              "value": "none"
+            }
+          ],
+          "fixes": [
+            {
+              "after": ":hover:before",
+              "css": [
+                {
+                  "property": "content",
+                  "value": "\"\""
+                },
+                {
+                  "property": "position",
+                  "value": "absolute"
+                },
+                {
+                  "property": "top",
+                  "value": "8px"
+                },
+                {
+                  "property": "left",
+                  "value": "0"
+                },
+                {
+                  "property": "background-color",
+                  "value": "rgba(204, 204, 204, 0.2)"
+                },
+                {
+                  "property": "height",
+                  "value": "32px"
+                },
+                {
+                  "property": "width",
+                  "value": "100%"
+                },
+                {
+                  "property": "z-index",
+                  "value": "-1"
+                }
+              ]
+            },
+            {
+              "after": ":focus:before",
+              "css": [
+                {
+                  "property": "content",
+                  "value": "\"\""
+                },
+                {
+                  "property": "position",
+                  "value": "absolute"
+                },
+                {
+                  "property": "top",
+                  "value": "8px"
+                },
+                {
+                  "property": "left",
+                  "value": "0"
+                },
+                {
+                  "property": "background-color",
+                  "value": "rgba(204, 204, 204, 0.2)"
+                },
+                {
+                  "property": "height",
+                  "value": "32px"
+                },
+                {
+                  "property": "width",
+                  "value": "100%"
+                },
+                {
+                  "property": "z-index",
+                  "value": "-1"
+                }
+              ]
+            },
+            {
+              "after": ":active:before",
+              "css": [
+                {
+                  "property": "content",
+                  "value": "\"\""
+                },
+                {
+                  "property": "position",
+                  "value": "absolute"
+                },
+                {
+                  "property": "top",
+                  "value": "8px"
+                },
+                {
+                  "property": "left",
+                  "value": "0"
+                },
+                {
+                  "property": "background-color",
+                  "value": "rgba(204, 204, 204, 0.4)"
+                },
+                {
+                  "property": "height",
+                  "value": "32px"
+                },
+                {
+                  "property": "width",
+                  "value": "100%"
+                },
+                {
+                  "property": "z-index",
+                  "value": "-1"
+                }
+              ]
+            },
+            {
+              "after": ":disabled",              
+              "css": [
+                {
+                  "property": "color",
+                  "value": "rgba(255, 255, 255, 0.3)"
+                }                
+              ]
+            }
+          ]
+        },
+        {
+          "name": "raised-light",
+          "css": []
+        },
+        {
+          "name": "raised-dark",
+          "css": []
+        },
+        {
+          "name": "fab",
+          "css": []
+        }
+      ]
+    }
+  ],
+  "fixes" : [
+    {
+      "before": "md-snackbar > ",
+      "css": [
+        {
+          "property": "height",
+          "value": "auto"
+        },
+        {
+          "property": "padding",
+          "value": "0"
+        },
+        {
+          "property": "min-width",
+          "value": "0"
+        }
+      ]
+    }
+    
+  ]
+}

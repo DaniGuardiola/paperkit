@@ -1,0 +1,373 @@
+{
+	"type": "tag",
+	"name": "md-input[type=text]",
+	"alias": [
+		"md-input[type=password]",
+		"md-input[type=email]",
+		"md-input[type=tel]",
+		"md-input[type=number]",
+		"md-input[type=url]"
+	],
+	"defaults": [
+		{
+			"name": "md-mode",
+			"values": [
+				"animated"
+			]
+		}
+	],
+	"css": [		
+		{
+			"property": "position",
+			"value": "relative"
+		},
+		{
+			"property": "display",
+			"value": "block"
+		}
+	],
+	"attributes": [
+		{
+			"type": "attribute",
+			"name": "md-mode",
+			"values": [
+				{
+					"name": "placeholder",
+					"css": [
+							{
+								"property": "height",
+								"value": "48px"
+							}					
+					],
+					"fixes": [
+						{
+							"after": "[md-error]",
+							"css": [
+								{
+									"property": "height",
+									"value": "64px"
+								}
+							]
+						},
+						{
+							"after": "[md-error]> input",
+							"css": [
+								{
+									"property": "top",
+									"value": "16px"
+								}
+							]
+						},
+						{
+							"after": "[md-error]> .placeholder",
+							"css": [
+								{
+									"property": "top",
+									"value": "16px"
+								}
+							]
+						},						
+						{
+							"after": "> input",
+							"css": [
+								{
+									"property": "top",
+									"value": "16px"
+								}
+							]
+						},
+						{
+							"after": "> .placeholder",
+							"css": [
+								{
+									"property": "top",
+									"value": "16px"
+								}								
+							]
+						}
+					]
+				},
+				{
+					"name": "hint",
+					"css": [
+						{
+							"property": "height",
+							"value": "72px"
+						}
+					],
+					"fixes": [
+						{
+							"after": "[md-error]",
+							"css": [
+								{
+									"property": "height",
+									"value": "80px"
+								}
+							]
+						},
+						{
+							"after": "[md-error]> .placeholder.hint",
+							"css": [
+								{
+									"property": "top",
+									"value": "8px"
+								}
+							]
+						},
+						{
+							"after": "[md-error]> input",
+							"css": [
+								{
+									"property": "top",
+									"value": "28px"
+								}
+							]
+						},					
+						{
+							"after": "> input",
+							"css": [
+								{
+									"property": "top",
+									"value": "36px"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "animated",
+					"css": [
+						{
+							"property": "height",
+							"value": "72px"						
+						}
+					],
+					"fixes": [
+						{
+							"after": "[md-error]",
+							"css": [
+								{
+									"property": "height",
+									"value": "80px"
+								}
+							]
+						},
+						{
+							"after": "[md-error]> .placeholder.hint",
+							"css": [
+								{
+									"property": "top",
+									"value": "8px"
+								}
+							]
+						},
+						{
+							"after": "[md-error]> .placeholder",
+							"css": [
+								{
+									"property": "top",
+									"value": "28px"
+								}
+							]
+						},
+						{
+							"after": "[md-error]> input",
+							"css": [
+								{
+									"property": "top",
+									"value": "28px"
+								}
+							]
+						},						
+						{
+							"after": "> .placeholder",
+							"css": [
+								{
+									"property": "top",
+									"value": "36px"
+								}
+							]
+						},
+						{
+							"after": "> input",
+							"css": [
+								{
+									"property": "top",
+									"value": "36px"
+								}
+							]
+						}					
+					]
+				}
+			]
+		}
+	],
+	"fixes": [
+		{
+			"after": "> .placeholder",
+			"css": [
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "height",
+					"value": "22px"
+				},
+				{
+		      "property": "outline",
+		      "value": "none"
+		    },
+		    {
+		      "property": "font-size",
+		      "value": "16px"
+		    },
+		    {
+		      "property": "border-width",
+		      "value": "0"
+		    },
+		    {
+					"property": "transition",
+					"value": "top 0.25s ease, font-size 0.25s ease"
+				},
+				{
+					"property": "color",
+					"value": "rgba(0,0,0,0.26)"
+				},
+				{
+					"property": "white-space",
+					"value": "nowrap"
+				},
+				{
+					"property": "line-height",
+					"value": "22px"
+				}
+			]
+		},
+		{
+			"after": "> input",
+			"css": [
+				{
+					"property": "position",
+					"value": "relative"
+				},
+				{
+					"property": "height",
+					"value": "22px"
+				},
+				{
+		      "property": "outline",
+		      "value": "none"
+		    },
+		    {
+		      "property": "font-size",
+		      "value": "16px"
+		    },
+		    {
+		      "property": "border-width",
+		      "value": "0"
+		    },
+		    {
+		      "property": "overflow",
+		      "value": "auto"
+		    },
+		    {
+		    	"property": "background-color",
+		    	"value": "transparent"
+		    },
+		    {
+		    	"property": "width",
+		    	"value": "100%"
+		    }
+			]
+		},
+		{
+			"after": "[md-error]> div.line",
+			"css": [
+				{
+					"property": "bottom",
+					"value": "24px"
+				}
+			]
+		},		
+		{
+			"after": "> div.line",
+			"css": [
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "content",
+					"value": "\"\""
+				},
+				{
+					"property": "bottom",
+					"value": "8px"
+				},
+				{
+					"property": "width",
+					"value": "100%"
+				},
+				{
+					"property": "height",
+					"value": "1px"
+				},
+			  {
+		      "property": "background-color",
+		      "value": "rgba(0, 0, 0, 0.12)"
+		    }
+			]
+		},				
+		{
+			"after": "> span.error",
+			"css": [
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "bottom",
+					"value": "4px"					
+				},
+				{
+					"property": "font-size",
+					"value": "12px"
+				},
+				{
+					"property": "line-height",
+					"value": "12px"
+				},
+				{
+					"property": "color",
+					"value": "red"
+				}
+			]
+		},
+		{
+			"after": "> .placeholder.hint",
+			"css": [
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "content",
+					"value": "\"\""
+				},
+				{
+					"property": "top",
+					"value": "16px"
+				},
+				{
+					"property": "font-size",
+					"value": "12px"
+				},
+				{
+					"property": "height",
+					"value": "16px"
+				}
+			]
+		}
+	]
+}

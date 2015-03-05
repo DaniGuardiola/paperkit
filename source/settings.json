@@ -1,0 +1,32 @@
+{
+  "responsive": [
+    {
+      "name": "mobile",
+      "media": "only screen and (max-width: 768px)"
+    },
+    {
+      "name": "tablet",
+      "media": "only screen and (min-width: 768px) and (max-width: 992px)"
+    },
+    {
+      "name": "desktop",
+      "media": "only screen and (min-width: 992px)"
+    },
+    {
+      "name": "device",
+      "include": [ "mobile", "tablet" ]
+    },
+    {
+      "name": "min-tablet",
+      "include": [ "tablet", "desktop" ]
+    },
+    {
+      "name": "max-tablet",
+      "include": [ "mobile", "tablet" ]
+    },
+    {
+      "name": "all",
+      "include": [ "mobile", "tablet", "desktop" ]
+    }
+  ]
+}

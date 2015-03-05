@@ -1,0 +1,106 @@
+{
+  "type": "tag",
+  "name": "md-tabbar",
+  "css": [
+    {
+      "property": "display",
+      "value": "flex"
+    },
+    {
+      "property": "flex-wrap",
+      "value": "nowrap"
+    },
+    {
+      "property": "justify-content",
+      "value": "center"
+    },
+    {
+      "property": "height",
+      "value": "48px"
+    },
+    {
+      "property": "position",
+      "value": "relative"
+    }    
+  ],
+  "fixes": [
+    {
+      "after": ">#selector",
+      "css": [
+        {
+          "property": "display",
+          "value": "block"
+        },
+        {
+          "property": "position",
+          "value": "absolute"
+        },
+        {
+          "property": "bottom",
+          "value": "0px"
+        },
+        {
+          "property": "background-color",
+          "value": "yellow"
+        },
+        {
+          "property": "height",
+          "value": "2px"
+        }
+      ]
+    },
+    {
+      "after": " > md-tab",
+      "css": [
+        {
+          "property": "font-size",
+          "value": "14px"
+        },
+        {
+          "property": "text-align",
+          "value": "center"
+        },
+        {
+          "property": "text-transform",
+          "value": "uppercase"
+        },
+        {
+          "property": "color",
+          "value": "rgba(255, 255, 255, 0.6)"
+        },
+        {
+          "property": "font-weight",
+          "value": "500"
+        },
+        {
+          "property": "cursor",
+          "value": "pointer"
+        },
+        {
+          "property": "user-select",
+          "value": "none"
+        }
+      ],
+      "responsive": [
+        {
+          "target": ["watch","mobile"],
+          "css": [
+            {
+              "property": "padding",
+              "value": "17px 12px"
+            }
+          ]
+        },
+        {
+          "target": ["tablet","desktop"],
+          "css": [
+            {
+              "property": "padding",
+              "value": "17px 24px"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Paperkit - Flavored Spec - Material Design guidelines with Paperkit examples</title>
+    <meta itemprop="name" content="Introduction - Material design - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Introduction - Material design - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Introduction - Material design" />
+
+
+
+
+
+  <!-- PAPERKIT SETTINGS -->
+  <meta id="mdvars" path="../">
+  <link rel="stylesheet" href="../paperkit-min/paperkit.css">
+  <link href="../resources/prism.css" rel="stylesheet">
+  <link href="../resources/spec/style.css" rel="stylesheet">
+  <script src="../paperkit-min/paperkit.js"></script>
+  <script src="../resources/spec/script.js"></script>
+
+  <!-- PAPERKIT CUSTOM PAGE STYLE -->
+  <style type="text/css">
+    header {
+      height: auto;
+      min-height: 170px;
+    }
+
+    header .header-title span.section-title {
+      margin-left: 10%;
+      transform: translate(-5%);
+      white-space: normal;
+    }
+
+    @media only screen and (min-width: 760px) {
+      header {
+        min-height: 256px;
+      }
+    }
+  </style>
+
+
+
+
+
+  
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Introduction</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">Material design</Attribute>
+      <Attribute name="section_slug">material-design</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+
+
+
+
+
+
+
+<!-- PAPERKIT ANALYTICS -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58574637-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+
+  <body class="section-material-design first-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header class="qp-ui" data-qp-ui="{
+  'Peekaboo': {
+    'mobile': 72,
+    'desktop-sm': 72,
+    'default': 192
+  }
+}">
+  <div class="header-wrapper qp-ui" data-qp-ui="{
+    'Peekaboo': {
+      'mobile': 28,
+      'desktop-sm': 28,
+      'default': 82
+    }
+  }">
+    <div class="header-title" style="width: auto">      <span class="section-title">Material design - With Paperkit examples</span>    
+      <span class="chapter-title">Introduction</span>
+
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+
+    <!-- PAPERKIT BANNER -->
+    <a href="/"><span id="logo" style="height: auto; padding: 5px 10px;"><img style="height: auto; width: auto;" src="../resources/brand/banner.png" alt="Google logo"/></span></a>
+
+
+
+
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Material design
+                </dt>
+        <dd>
+                    <a class="nav_selected" href="index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="what-is-material/environment.html">Environment
+                    </a>
+                    <a class="" href="what-is-material/material-properties.html">Material properties
+                    </a>
+                    <a class="" href="what-is-material/objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="animation/authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="" href="animation/responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="animation/meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="animation/delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="style/color.html">Color
+                    </a>
+                    <a class="" href="style/icons.html">Icons
+                    </a>
+                    <a class="" href="style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Layout
+                </dt>
+        <dd>
+                    <a class="" href="layout/principles.html">Principles
+                    </a>
+                    <a class="" href="layout/metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="" href="layout/structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Components
+                </dt>
+        <dd>
+                    <a class="" href="components/bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="components/buttons.html">Buttons
+                    </a>
+                    <a class="" href="components/cards.html">Cards
+                    </a>
+                    <a class="" href="components/chips.html">Chips
+                    </a>
+                    <a class="" href="components/dialogs.html">Dialogs
+                    </a>
+                    <a class="" href="components/dividers.html">Dividers
+                    </a>
+                    <a class="" href="components/grids.html">Grids
+                    </a>
+                    <a class="" href="components/lists.html">Lists
+                    </a>
+                    <a class="" href="components/list-controls.html">List controls
+                    </a>
+                    <a class="" href="components/menus.html">Menus
+                    </a>
+                    <a class="" href="components/pickers.html">Pickers
+                    </a>
+                    <a class="" href="components/progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="components/sliders.html">Sliders
+                    </a>
+                    <a class="" href="components/snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="components/subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="components/switches.html">Switches
+                    </a>
+                    <a class="" href="components/tabs.html">Tabs
+                    </a>
+                    <a class="" href="components/text-fields.html">Text fields
+                    </a>
+                    <a class="" href="components/tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                </dt>
+        <dd>
+                    <a class="" href="patterns/data-formats.html">Data formats
+                    </a>
+                    <a class="" href="patterns/errors.html">Errors
+                    </a>
+                    <a class="" href="patterns/gestures.html">Gestures
+                    </a>
+                    <a class="" href="patterns/loading-images.html">Loading images
+                    </a>
+                    <a class="" href="patterns/navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="patterns/navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="patterns/scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="patterns/search.html">Search
+                    </a>
+                    <a class="" href="patterns/selection.html">Selection
+                    </a>
+                    <a class="" href="patterns/settings.html">Settings
+                    </a>
+                    <a class="" href="patterns/swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+
+    <!-- PAPERKIT LEGAL MODIFICATION -->
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <p class="copyright">Modified by Paperkit for informational purposes</p>
+      <p class="copyright"><a href="https://www.google.com/design/spec/">Go to the original spec</a></p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+
+
+
+
+
+
+
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Introduction
+      </h1>
+
+  <div class="chapter-content">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-intro" class="paperkit-paper left no-controls logo-fix" md-shadow="shadow-1" md-width="full" md-position="center-x" md-padding>
+  <span md-typo="headline">Welcome! This is a <b>modified version</b> of the <a href="https://www.google.com/design/spec/">official Material Design specification</a> by the Paperkit team.</span><br><br>
+  <span md-typo="subhead">It contains <b>live examples of this guide's content using Paperkit</b>, with its code and explanations.<br>
+  We created this to make it easier to follow the guide. This way, next time you don't know how to do something that's on the spec with Paperkit, you'll just have to check this page and see how we did the live demo.<br><br>
+  You'll see the Paperkit logo at the left bottom of Paperkit examples.<br><br>
+  <b>Check also the buttons at the right bottom, that allows you to go fullscreen, try different layouts, get the link to the example, and show the code.</b><br><br>
+  Enjoy!</span>
+</md-paper>
+
+
+
+
+
+
+
+
+
+
+
+              <figure>
+  <div class="media">
+      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png" />
+    </div>
+</figure>
+    
+        <div class="chapter-intro">
+       <p>We challenged ourselves to create a visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science. This is material design. This spec is a living document that will be updated as we continue to develop the tenets and specifics of material design.</p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="index.html#introduction-goals">Goals
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="index.html#introduction-principles">Principles
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="introduction-goals" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Goals
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Create a visual language that synthesizes classic principles of good design with the innovation and possibility of technology and science.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7QTA5cHFBUlV3RTA/materialdesign_goals_language.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Develop a single underlying system that allows for a unified experience across platforms and device sizes. Mobile precepts are fundamental, but touch, voice, mouse, and keyboard are all ﬁrst-class input methods.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7c0R4RUtiTkhMZTQ/materialdesign_goals_system.png" />
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="introduction-principles" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Principles
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleC1 moduleC2">
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7VG9DQVluOFJ4Tnc/materialdesign_principles_metaphor.png" />
+                      </div>
+                        <figcaption>
+          <h3>Material is the metaphor</h3><p>A material metaphor is the unifying theory of a rationalized space and a system of motion. The material is grounded in tactile reality, inspired by the study of paper and ink, yet technologically advanced and open to imagination and magic.</p><p>Surfaces and edges of the material provide visual cues that are grounded in reality. The use of familiar tactile attributes helps users quickly understand affordances. Yet the flexibility of the material creates new affordances that supercede those in the physical world, without breaking the rules of physics.</p><p>The fundamentals of light, surface, and movement are key to conveying how objects move, interact, and exist in space and in relation to each other. Realistic lighting shows seams, divides space, and indicates moving parts.</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7NndTQW9VZTlZV2s/materialdesign_principles_bold.png" />
+                      </div>
+                        <figcaption>
+          <h3>Bold, graphic, intentional</h3><p>The foundational elements of print-based design—typography, grids, space, scale, color, and use of imagery—guide visual treatments. These elements do far more than please the eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge-to-edge imagery, large-scale typography, and intentional white space create a bold and graphic interface that immerse the user in the experience.</p><p>An emphasis on user actions makes core functionality immediately apparent and provides waypoints for the user.</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7dkRYelJkeklqWFU/materialdesign_principles_motion.png" />
+                      </div>
+                        <figcaption>
+          <h3>Motion provides meaning</h3><p>Motion respects and reinforces the user as the prime mover. Primary user actions are inflection points that initiate motion, transforming the whole design. </p><p>All action takes place in a single environment. Objects are presented to the user without breaking the continuity of experience even as they transform and reorganize.</p><p>Motion is meaningful and appropriate, serving to focus attention and maintain continuity. Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-what-is-material">&nbsp;</div>
+    <div class="footer-grid-L section-what-is-material">
+          </div>
+
+    <div class="footer-R section-what-is-material">&nbsp;</div>
+    <div class="footer-grid-R section-what-is-material">
+            <a class="footer-text" href="what-is-material/environment.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      What is material?
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="static/js/main.js"></script>
+
+
+
+
+
+<!-- PAPERKIT SETTINGS -->
+    <script src="../resources/prism.js"></script>
+
+
+  </body>
+
+</html>

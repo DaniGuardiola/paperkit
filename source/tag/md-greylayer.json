@@ -1,0 +1,68 @@
+{
+	"type": "tag",
+	"name": "md-greylayer",
+	"css": [
+		{
+			"property": "position",
+			"value": "fixed"
+		},
+		{
+			"property": "width",
+			"value": "100%"
+		},
+		{
+			"property": "height",
+			"value": "100%"
+		},
+		{
+			"property": "top",
+			"value": "0"
+		},
+		{
+			"property": "left",
+			"value": "0"
+		},
+		{
+			"property": "z-index",
+			"value": "-1"
+		},
+		{
+			"property": "background-color",
+			"value": "rgba(0, 0, 0, 0)"
+		},
+		{
+			"property": "transition",
+			"value": "background-color 0.25s"
+		}
+	],
+	"attributes": [
+		{
+			"name": "md-state",
+			"type": "attribute",
+			"values": [
+				{
+					"name": "on",
+					"css": [
+						{
+							"property": "background-color",
+							"value": "rgba(0, 0, 0, 0.5)"
+						},
+						{
+							"property": "cursor",
+							"value": "url(resources/cursor/close.png), pointer"
+						}
+					]
+				},
+				{
+					"name": "off",
+					"css": [
+						{
+							"property": "background-color",
+							"value": "rgba(0, 0, 0, 0)"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "md-color",
+  "type": "attribute",
+  "imports": [
+    {
+      "name": "md-colors",
+      "property1": "background-color",
+      "property2": "color" 
+    }
+  ],
+  "values": [
+    {
+      "name": "transparent",
+      "css": [
+        {
+          "property": "background-color",
+          "value": "transparent"
+        },
+        {
+          "property": "color",
+          "value": "rgba(0, 0, 0, 0.867188)"
+        },
+        {
+          "property": "fill",
+          "value": "rgba(0, 0, 0, 0.867188)"
+        },
+        {
+          "property": "box-shadow",
+          "value": "none"
+        }
+      ]
+    }
+  ]
+}

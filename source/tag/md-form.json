@@ -1,0 +1,170 @@
+{
+  "type": "tag",
+  "names": [ "md-form", "form[md-layout]" ],
+  "css": [
+    {
+      "property": "display",
+      "value": "flex"
+    },
+    {
+      "property": "flex-wrap",
+      "value": "wrap"
+    },
+    {
+      "property": "flex-direction",
+      "value": "column"
+    }
+  ],
+  "fixes": [
+    {
+      "after": "> md-row",
+      "css": [
+        {
+          "property": "flex",
+          "value": "1"
+        },
+        {
+          "property": "display",
+          "value": "flex"
+        },
+        {
+          "property": "flex-wrap",
+          "value": "nowrap"
+        },
+       	{
+       		"property": "min-height",
+       		"value": "48px"
+       	}
+      ],
+      "responsive": [
+        {
+          "target": [ "mobile", "watch" ],
+          "css": [
+            {
+              "property": "flex-wrap",
+              "value": "wrap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "after": "> md-row> md-tile",
+      "css": [
+        {
+          "property": "display",
+          "value": "flex"
+        },
+        {
+          "property": "align-items",
+          "value": "center"
+        },
+      	{
+      		"property": "width",
+      		"value": "0px"
+      	}
+      ],
+      "responsive": [
+        {
+          "target": [ "mobile", "watch" ],
+          "css": [
+            {
+              "property": "width",
+              "value": "100%"
+            },
+            {
+              "property": "flex-shrink",
+              "value": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+    	"after": "> md-row> md-tile > *:first-child:not(md-form)",
+  		"css": [
+  			{
+  				"property": "margin-left",
+  				"value": "24px"
+  			}
+  		],
+  		"responsive": [
+  			{  				
+  				"target": [ "mobile", "watch" ],
+  				"css": [
+  					{
+  						"property": "margin-left",
+  						"value": "16px"
+  					},
+  					{
+  						"property": "margin-right",
+  						"value": "16px"
+  					}
+  				] 
+  			}
+  		]    	
+    },
+    {
+    	"after": "> md-row> md-tile> md-form",
+    	"css": [
+    		{
+    			"property": "margin-left",
+    			"value": "0px"
+    		},
+    		{
+    			"property": "margin-right",
+    			"value": "0px"
+    		}
+    	],
+			"responsive": [
+  			{  				
+  				"target": [ "mobile", "watch" ],
+  				"css": [
+  					{
+  						"property": "margin-left",
+  						"value": "0px"
+  					},
+  					{
+  						"property": "margin-right",
+  						"value": "0px"
+  					}
+  				] 
+  			}
+  		]    	    	
+    },  	       
+  	{
+  		"after": "> md-row> md-tile:last-child > *:last-child:not(md-form)",
+  		"css": [
+  			{
+  				"property": "margin-right",
+  				"value": "24px"
+  			}
+  		],
+  		"responsive": [
+  			{  				
+  				"target": [ "mobile", "watch" ],
+  				"css": [
+  					{
+  						"property": "margin-right",
+  						"value": "16px"
+  					}
+  				] 
+  			}
+  		]
+  	}, 
+    {
+      "after": "> md-row> md-tile[md-space]",      
+      "responsive": [
+        {
+          "target": [ "mobile", "watch" ],
+          "css": [
+            {
+              "property": "display",
+              "value": "none"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

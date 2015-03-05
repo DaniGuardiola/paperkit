@@ -1,0 +1,459 @@
+{
+  "type": "attribute",
+  "name": "md-height",
+  "values": [
+    {
+      "name": "full",
+      "css": [
+        {
+          "property": "height",
+          "value": "100%"
+        }
+      ]
+    },
+    {
+      "name": "x0",
+      "css": [
+        {
+          "property": "height",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "name": "x1",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "56px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "64px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x2",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "112px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "128px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x3",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "168px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "192px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x4",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "224px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "256px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x5",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "280px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "320px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x6",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "336px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "384px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x7",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "392px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "448px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x8",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "448px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "512px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x9",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "504px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "576px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x10",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "560px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "640px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x11",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "616px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "704px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x12",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "672px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "768px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x13",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "728px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "832px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x14",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "784px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "896px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x15",
+      "responsive": [
+        {
+          "target": [
+            "watch",
+            "mobile"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "840px"
+            }
+          ]
+        },
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "height",
+              "value": "960px"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

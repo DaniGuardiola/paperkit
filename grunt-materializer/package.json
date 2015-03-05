@@ -1,0 +1,45 @@
+{
+  "name": "grunt-materializer",
+  "description": "The easy Material Design framework, easier",
+  "version": "0.1.0",
+  "homepage": "http://materializer.daniguardiola.me",
+  "author": {
+    "name": "Dani Muñoz Guardiola",
+    "email": "contacto@daniguardiola.me",
+    "url": "daniguardiola.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.datatrends.es/opensource/materializer.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.datatrends.es/opensource/materializer/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "materializer.daniguardiola.me/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5",
+    "rework": "~1.0.0",
+    "rework-visit": "1.0.0",
+    "rework-walk": "1.0.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}

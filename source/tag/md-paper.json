@@ -1,0 +1,29 @@
+{
+  "type": "tag",
+  "name": "md-paper",
+  "css": [
+    {
+      "property": "display",
+      "value": "block"
+    },
+    {
+      "property": "max-width",
+      "value": "100%"
+    },
+    {
+      "property": "background",
+      "value": "white"
+    }
+  ],
+  "fixes": [
+    {
+      "after": "[md-width]",
+      "css": [
+        {
+          "property": "max-width",
+          "value": "100%"
+        }
+      ]
+    }
+  ]
+}

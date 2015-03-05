@@ -1,0 +1,10 @@
+{
+  "name": "md-border-color",
+  "type": "attribute",
+  "imports": [
+    {
+      "name": "md-colors",
+      "property1": "border-color"
+    }
+  ]
+}

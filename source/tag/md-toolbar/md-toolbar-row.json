@@ -1,0 +1,330 @@
+{
+  "type": "tag",
+  "name": "md-toolbar>md-row",
+  "css": [
+    {
+      "property": "display",
+      "value": "flex"
+    },
+    {
+      "property": "width",
+      "value": "100%"
+    },
+    {
+      "property": "height",
+      "value": "auto"
+    },
+    {
+      "property": "transition-property",
+      "value": "height, background-color"
+    },
+    {
+      "property": "transition-duration",
+      "value": "0.25s"
+    },
+    {
+      "property": "transition-timing-function",
+      "value": "cubic-bezier(.55,0,.1,1)"
+    }
+  ],
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-type",
+      "values": [
+        {
+          "name": "standard",
+          "css": [
+            {
+              "property": "min-height",
+              "value": "56px"
+            },
+            {
+              "property": "max-height",
+              "value": "64px"
+            }
+          ],
+          "responsive": [
+            {
+              "target": ["mobile"],
+              "css": [
+                {
+                  "property": "height",
+                  "value": "56px"
+                }
+              ]
+            },
+            {
+              "target": ["min-tablet"],
+              "css": [
+                {
+                  "property": "height",
+                  "value": "64px"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "after": ">*",
+              "responsive": [
+                {
+                  "target": ["mobile"],
+                  "css": [
+                    {
+                      "property": "margin-top",
+                      "value": "4px"
+                    }
+                  ]
+                },
+                {
+                  "target": ["min-tablet"],
+                  "css": [
+                    {
+                      "property": "margin-top",
+                      "value": "8px"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "after": ">md-icon:first-child",
+              "responsive": [
+                {
+                  "target": ["mobile"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "4px"
+                    }
+                  ]
+                },
+                {
+                  "target": ["min-tablet"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "8px"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "after": ">md-icon-button:first-child",
+              "responsive": [
+                {
+                  "target": ["mobile"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "4px"
+                    }
+                  ]
+                },
+                {
+                  "target": ["min-tablet"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "8px"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "after": ">md-text:not([md-typo])",
+              "css": [
+                {
+                  "property": "padding-top",
+                  "value": "12px"
+                },
+                {
+                  "property": "font-size",
+                  "value": "20px"
+                },
+                {
+                  "property": "font-weight",
+                  "value": "500"
+                },
+                {
+                  "property": "white-space",
+                  "value": "nowrap"
+                },
+                {
+                  "property": "letter-spacing",
+                  "value": "-.012em"
+                }
+              ]
+            },
+            {
+              "after": ">md-text:first-child",
+              "responsive": [
+                {
+                  "target": ["watch","mobile"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "16px"
+                    }
+                  ]
+                },
+                {
+                  "target": ["tablet","desktop"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "20px"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "after": ">*:first-child+md-text",
+              "responsive": [
+                {
+                  "target": ["watch","mobile"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "20px"
+                    }
+                  ]
+                },
+                {
+                  "target": ["tablet","desktop"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "24px"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "small",
+          "css": [
+            {
+              "property": "height",
+              "value": "48px"
+            }
+          ],
+          "fixes": [
+            {
+              "after": ">md-icon:first-child",
+              "responsive": [
+                {
+                  "target": ["mobile"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "4px"
+                    }
+                  ]
+                },
+                {
+                  "target": ["min-tablet"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "8px"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "after": ">md-icon-button:first-child",
+              "responsive": [
+                {
+                  "target": ["mobile"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "4px"
+                    }
+                  ]
+                },
+                {
+                  "target": ["min-tablet"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "8px"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "after": ">md-icon:first-child+md-tabbar",
+              "responsive": [
+                {
+                  "target": ["watch","mobile"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "20px"
+                    }
+                  ]
+                },
+                {
+                  "target": ["tablet","desktop"],
+                  "css": [
+                    {
+                      "property": "margin-left",
+                      "value": "24px"
+                    }
+                  ]
+                }
+              ]
+            },            
+            {
+              "after": ">md-text:not([md-typo])",
+              "responsive": [
+                {
+                  "target": ["watch","mobile"],
+                  "css": [
+                    {
+                      "property": "padding-top",
+                      "value": "12px"
+                    }
+                  ]
+                },
+                {
+                  "target": ["tablet","desktop"],
+                  "css": [
+                    {
+                      "property": "padding-top",
+                      "value": "14px"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "flexible"
+        }
+      ]
+    }
+  ],
+  "fixes": [
+    {
+      "after": ">*",
+      "css": [
+        {
+          "property": "flex-shrink",
+          "value": "0"
+        }
+      ]
+    }
+  ]
+}

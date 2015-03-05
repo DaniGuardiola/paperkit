@@ -1,0 +1,45 @@
+{
+  "type": "tag",
+  "name": "body",
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-layout",
+      "values": [
+        {
+          "name": "fixed",
+          "css": [
+            {
+              "property": "display",
+              "value": "flex"
+            },
+            {
+              "property": "flex-direction",
+              "value": "column"
+            },
+            {
+              "property": "height",
+              "value": "100%"
+            }
+          ],
+          "fixes": [
+            {
+              "after": "> md-content",
+              "css": [
+                {
+                  "property": "flex",
+                  "value": "1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "static",
+          "css": [
+          ]
+        }
+      ]
+    }
+  ]
+}

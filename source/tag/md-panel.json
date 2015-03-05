@@ -1,0 +1,49 @@
+{
+  "type": "tag",
+  "name": "md-panel",
+  "defaults": [
+  ],
+  "css": [
+    {
+      "property": "display",
+      "value": "block"
+    },
+    {
+      "property": "border-radius",
+      "value": "2px"
+    },
+    {
+      "property": "padding",
+      "value": "24px 24px 8px 24px"
+    }
+  ],
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-position",
+      "values": [
+        {
+          "name": "center",
+          "css": [
+            {
+              "property": "position",
+              "value": "fixed"
+            },
+            {
+              "property": "top",
+              "value": "50%"
+            },
+            {
+              "property": "left",
+              "value": "50%"
+            },
+            {
+              "property": "transform",
+              "value": "translate(-50%,-50%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

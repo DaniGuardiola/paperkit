@@ -1,0 +1,188 @@
+{
+  "type": "tag",
+  "name": "md-icon",
+  "defaults": [
+  	{
+  		"name": "md-type",
+  		"values": [ "icon" ]
+  	}
+  ],
+  "css": [
+    {
+      "property": "position",
+      "value": "relative"
+    },
+    {
+      "property": "display",
+      "value": "block"
+    },
+    {
+      "property": "width",
+      "value": "48px"
+    },
+    {
+      "property": "height",
+      "value": "48px"
+    }
+  ],
+  "attributes": [
+  		{
+  			"type": "attribute",
+  			"name": "md-type",
+  			"values": [
+  				{
+  					"name": "icon",
+  					"css": [
+					    {
+					      "property": "padding",
+					      "value": "12px"
+					    }  					
+  					],
+  					"fixes": [
+  						{
+  							"after": "> svg",
+  							"css": [
+					        {
+					          "property": "top",
+					          "value": "12px"
+					        },
+					        {
+					          "property": "left",
+					          "value": "12px"
+					        },  							
+					        {
+					          "property": "height",
+					          "value": "24px"
+					        },
+					        {
+					          "property": "width",
+					          "value": "24px"
+					        }  							
+  							]
+  						}  					
+  					]
+  				},
+  				{
+  					"name": "avatar",
+  					"css": [
+					    {
+					      "property": "padding",
+					      "value": "4px"
+					    }  					
+  					],
+  					"fixes": [
+  						{
+  							"after": "> svg",
+  							"css": [
+					        {
+					          "property": "top",
+					          "value": "4px"
+					        },
+					        {
+					          "property": "left",
+					          "value": "4px"
+					        },  							
+					        {
+					          "property": "height",
+					          "value": "40px"
+					        },
+					        {
+					          "property": "width",
+					          "value": "40px"
+					        }  							
+  							]
+  						}
+  					]
+  				}		
+  			]
+  		},
+      {
+        "type": "attribute",
+        "name": "md-size",
+        "values": [
+          {
+            "name": "small",
+            "css": [
+              {
+                "property": "width",
+                "value": "24px"
+              },
+              {
+                "property": "height",
+                "value": "24px"
+              },
+              {
+                "property": "padding",
+                "value": "0"
+              }
+            ],
+            "fixes": [
+              {
+                "after": "> svg",
+                "css": [          
+                  {
+                    "property": "top",
+                    "value": "0"
+                  },
+                  {
+                    "property": "left",
+                    "value": "0"
+                  }
+                ]
+              },              
+              {
+                "after": "[md-type=avatar]",
+                "css": [          
+                  {
+                    "property": "height",
+                    "value": "40px"
+                  },
+                  {
+                    "property": "width",
+                    "value": "40px"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+  ],
+  "fixes": [
+    {
+      "after": ">svg",
+      "css": [
+        {
+          "property": "position",
+          "value": "absolute"
+        },
+        {
+          "property": "opacity",
+          "value": "1"
+        },
+        {
+          "property": "transition",
+          "value": "opacity 0.25s, fill 0.25s"
+        }
+      ]
+    },
+    {
+      "after": "[md-image$=more_vert]:not([md-size=normal])",
+      "css": [
+        {
+          "property": "width",
+          "value": "40px"
+        }
+      ]
+    },
+    {
+      "after": "[md-image$=more_vert]:not([md-size=normal])>svg",
+      "css": [
+        {
+          "property": "left",
+          "value": "6px"
+        }
+      ]
+    }
+  ]
+}

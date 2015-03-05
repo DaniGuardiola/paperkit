@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Gestures - Patterns - Google design guidelines</title>
+    <meta itemprop="name" content="Gestures - Patterns - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Gestures - Patterns - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Gestures - Patterns" />
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Gestures</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">Patterns</Attribute>
+      <Attribute name="section_slug">patterns</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51798601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+
+  <body class="section-patterns noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">Patterns</span>
+      <span class="chapter-title">Gestures</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+    <span id="logo"><img src="https://material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"/></span>
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Material design
+                </dt>
+        <dd>
+                    <a class="" href="../index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="../what-is-material/environment.html">Environment
+                    </a>
+                    <a class="" href="../what-is-material/material-properties.html">Material properties
+                    </a>
+                    <a class="" href="../what-is-material/objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="../animation/delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="../style/color.html">Color
+                    </a>
+                    <a class="" href="../style/icons.html">Icons
+                    </a>
+                    <a class="" href="../style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="../style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Layout
+                </dt>
+        <dd>
+                    <a class="" href="../layout/principles.html">Principles
+                    </a>
+                    <a class="" href="../layout/metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="" href="../layout/structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Components
+                </dt>
+        <dd>
+                    <a class="" href="../components/bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="../components/buttons.html">Buttons
+                    </a>
+                    <a class="" href="../components/cards.html">Cards
+                    </a>
+                    <a class="" href="../components/chips.html">Chips
+                    </a>
+                    <a class="" href="../components/dialogs.html">Dialogs
+                    </a>
+                    <a class="" href="../components/dividers.html">Dividers
+                    </a>
+                    <a class="" href="../components/grids.html">Grids
+                    </a>
+                    <a class="" href="../components/lists.html">Lists
+                    </a>
+                    <a class="" href="../components/list-controls.html">List controls
+                    </a>
+                    <a class="" href="../components/menus.html">Menus
+                    </a>
+                    <a class="" href="../components/pickers.html">Pickers
+                    </a>
+                    <a class="" href="../components/progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="../components/sliders.html">Sliders
+                    </a>
+                    <a class="" href="../components/snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="../components/subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="../components/switches.html">Switches
+                    </a>
+                    <a class="" href="../components/tabs.html">Tabs
+                    </a>
+                    <a class="" href="../components/text-fields.html">Text fields
+                    </a>
+                    <a class="" href="../components/tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">Patterns
+                </dt>
+        <dd>
+                    <a class="" href="data-formats.html">Data formats
+                    </a>
+                    <a class="" href="errors.html">Errors
+                    </a>
+                    <a class="nav_selected" href="gestures.html">Gestures
+                    </a>
+                    <a class="" href="loading-images.html">Loading images
+                    </a>
+                    <a class="" href="navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="search.html">Search
+                    </a>
+                    <a class="" href="selection.html">Selection
+                    </a>
+                    <a class="" href="settings.html">Settings
+                    </a>
+                    <a class="" href="swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="../usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="../usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="../resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Gestures
+      </h1>
+
+  <div class="chapter-content">
+        
+        <div class="chapter-intro">
+       <p>Gestures are divided into </span><strong>Touch Mechanics</strong><span> (what your fingers do on the screen) and </span><strong>Touch Activities</strong><span> (context-specific results of specific gestures in the user interface).  A single touch mechanic (touch) may have multiple results depending on context (tap, cancel, enable/disable lights out), and a single touch activity (zoom in) may be achieved through multiple touch mechanics (pinch open, double touch, double-touch drag, etc.) </p><p>Note that Drag, Swipe, and Fling gesture activities are covered in more detail in their own section due to their highly contextual results.</p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="gestures.html#gestures-touch-mechanics">Touch mechanics
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="gestures.html#gestures-touch-activities">Touch activities
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="gestures.html#gestures-drag-swipe-or-fling-details">Drag, swipe, or fling details
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="gestures-touch-mechanics" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Touch mechanics
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>Touch mechanics are what the user's fingers do on the screen.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleC1 moduleC2">
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNQWJmd05meTMwVmM/patterns-gestures-gestures-touch_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Touch</div><p>one-finger press, lift</p><p>Example: Select</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNcm9nRFMzY2NGSW8/patterns-gestures-gestures-double-touch_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Double touch</div><p>one-finger press, lift, one-finger press, lift</p><p>Example: Zoom in</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNUDNQN1kweVBsbDg/patterns-gestures-gestures-swipe_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Drag, Swipe, or Fling</div><p>one-finger press, move, lift</p><p>Example: Dismiss, scroll, tilt, etc.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleC1 moduleC2">
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNM0Vpb0hlck0tWXc/patterns-gestures-gestures-long-press_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Long press</div><p>one-finger press, wait, lift</p><p>Example: Select an element, such as a list item</p><p>Long press is not used to display a contextual menu.</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNQlFaTWJXREp1UjA/patterns-gestures-gestures-long-press-drag_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Long-press drag</div><p>one-finger press, wait, move, lift</p><p>Example: Pick up and move, select multiple items</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNVmFwVnNZR0ltV0E/Patterns-Gestures-TouchMechanics-6-Long-press-drag_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Double-touch drag</div><p>one-finger press, lift, one-finger press, drag, lift</p><p>Example: Zoom in, zoom out</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleC1 moduleC2">
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNMS00Zi1TSG02YmM/patterns-gestures-gestures-pinch-open_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Pinch open</div><p>two-finger press, move outwards, lift</p><p>Example: Zoom in</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNLUV0TW9Jd1YzSUE/patterns-gestures-gestures-pinch-closed_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Pinch closed</div><p>two-finger press, move inwards, lift</p><p>Example: Zoom out</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNQUlHNEc5T3oxVzQ/patterns-gestures-gestures-two-finger-touch_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Two-finger touch</div><p>two-finger press, lift</p><p>Example: Zoom out</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleC1 moduleC2">
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNV2dWQk5ycGNCaWM/patterns-gestures-gestures-two-finger-swipe_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Two-finger swipe, drag, fling</div><p>two-finger press, move, lift</p><p>Example: Select multiple items, pan, tilt</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNN3JmUHVaZWxpSnc/patterns-gestures-gestures-two-finger-long-press_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Two-finger long-press</div><p>two-finger press, wait, lift</p><p>Example: None; this gesture is uncommon.</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNZUw0elpoNDdpOWc/patterns-gestures-gestures-two-finger-long-press-drag_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Two-finger long-press drag</div><p>two-finger press, wait, move, lift</p><p>Example: Pick up and move</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleC1 moduleC2">
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNSkhOQzJoS0tRWGc/patterns-gestures-gestures-two-finger-double-touch_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Two-finger double touch</div><p>two-finger press, lift, two-finger press, lift</p><p>Example: Zoom out</p>
+        </figcaption>
+                </figure>
+            <figure class="">
+                          <div class="media">
+                          <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNMmxWa3VSRVlONUU/patterns-gestures-gestures-rotate_large_xhdpi.png" />
+                      </div>
+                        <figcaption>
+          <div class="caption-title">Rotate</div><p>two-finger press, simultaneously orbit both fingers around center point, lift</p><p>Example: Rotate content, such as a map</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="gestures-touch-activities" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Touch activities
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>Context-specific results of specific gestures in the user interface.</p><h4>Activate</h4><p>Activates a screen element, like a button.</p><p>Touch mechanics: Touch</p><h4>Cancel or Escape </h4><p>Cancels or escapes out of the current task, as in dialogs or menus.</p><p>Touch mechanics: Touch</p><h4>Enable/Disable lights out</h4><p>Hides or shows a view’s chrome. </p><p>Touch mechanics: Touch</p><h4>Drag or Swipe or Fling</h4><p>See the following section for distinctions between Scroll, Reveal upon scroll, Pan, Dismiss, Swipe to refresh, Edge swipe, Paging swipe, Overscroll collapse, Menu open, and Tilt. </p><p>Touch mechanics: Drag, Swipe, or Fling</p><h4>Data selection (when nothing is selected)</h4><p>Selects a single element </p><p>Touch mechanics: Long press, two-finger touch</p><h4>Data selection (when items are already selected)</h4><p>Selects additional elements while in selection mode. Can use any combination of subsequent one- or two-finger gestures. </p><p>Touch mechanics: Touch, two-finger touch </p><h4>Data multi-selection drag</h4><p>Reveals selection box that originates from point of gesture initiation. Height and width can be adjusted based on finger position. Final selection is based on selection box dimensions upon finger(s) lifting. </p><p>Touch mechanics: Two-finger swipe or drag, long-press drag with no items selected</p><h4>Pick up and move</h4><p>Affects the selected item or items. It can be used to:</p><ul><li><span>Rearrange data within a view</span></li><li><span>Move an item into a container or onto a target</span></li><li><span>Reorder items in a list or a card collection</span></li></ul><p>Touch mechanics: Two-finger long-press drag, long-press drag on selected item </p><h4>Zoom in</h4><p>Scales up content. </p><p>Touch mechanics:</p><ul><li><span>Double-touch</span></li><li><span>Double-touch drag (down)</span></li><li><span>Pinch open</span></li></ul><h4>Zoom in to fit</h4><p>For nested views, scales up the smallest targetable view.</p><p>Touch mechanics: Double-touch</p><h4>Zoom out</h4><p>Scales down content. </p><p>Touch mechanics:</p><ul><li><span>Double-touch at maximum zoom</span></li><li><span>Double-touch drag (up)</span></li><li><span>Pinch closed</span></li><li><span>Two-finger touch</span></li><li><span>Two-finger double touch</span></li></ul><h4>Expand</h4><p>Expands collapsed content. </p><p>Touch mechanics: Pinch open</p><h4>Collapse</h4><p>Collapses expanded content. </p><p>Touch mechanics: Pinch closed</p><h4>Rotate</h4><p>Rotates the targeted content. </p><p>Touch mechanics: Rotate</p>
+    </div>
+  </section>
+
+        </div>
+              </div>
+  </div>
+</div>                  <div id="gestures-drag-swipe-or-fling-details" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Drag, swipe, or fling details
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+            <section class="moduleB1">
+        <div class="module-body">
+      <p>Because the activity performed by a swipe gesture can vary greatly based on context, this section describes some of the major swipe gesture patterns and their differences. Gesture velocity (from least to most) is the main distinction between Drag, Swipe, and Fling. Depending on context of use, gesture velocity can produce different results:</p><ul><li><span>Drag: Fine gesture, slower, more deliberate, controlled, typically has an on-screen target</span></li><li><span>Swipe: Gross gesture, faster, typically has no on-screen target</span></li><li><span>Fling: Gross gesture, no on-screen target</span></li></ul><p>A swipe becomes a fling based on ending velocity and whether the affected element has crossed a threshold.</p><p>Generally, gesture velocity impacts whether the action is immediately reversible once crossing that threshold: a Drag maintains contact with the element, and reversing the gesture will drag the element back across the threshold. A fling imparts velocity and removes contact with the element while it crosses the threshold, preventing a reversal.</p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h3 class="c22"><strong>Scroll</strong></h3><p>Vertical or horizontal swipe in content body.</p><p>Scroll amount varies based on velocity of gesture: drag (slow) vs. swipe vs. fling (fast)</p><p>Generally:</p><p>- scroll directions are mutually exclusive</p><p>- applied to content at 100% scale</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNS00tMHBTdXAtcE0/Patterns-Gestures-TouchActivities-02_large_xhdpi.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h3 class="c18"><strong>Reveal upon scroll</strong></h3><p>Reversing the scroll direction in a content area can have an additional effect of immediately revealing hidden in-app elements. E.g., scrolling up in Chrome shows the Omnibox.</p><p>Dismiss in-app elements by resuming original scroll direction.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNS00tMHBTdXAtcE0/Patterns-Gestures-TouchActivities-02_large_xhdpi.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h3 class="c18"><strong>Pan</strong></h3><p>Omnidirectional, one or two fingers</p><p>Generally applied to:</p><p>- unbounded content (maps)</p><p>- content that is larger than the screen height or width (zoomed in web page or photo)</p><p>two-finger pan gesture, when transitioning from another two-finger gesture (e.g., pinch zoom or rotate) such as in Maps, will result in </span><strong>two-finger pan</strong><span>.</p><p>Two-finger pan gesture as the initiating gesture will result in </span><strong>tilt</strong><span>.</p><p>Drag is typically used with Pan.</p><p>Fling will maintain gesture velocity, resulting in a significant pan of the content along the direction of the fling gesture.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNMjVoN0FZYXl4dUE/Patterns-Gestures-TouchActivities-03_large_xhdpi.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h3 class="c18"><strong>Dismiss</strong></h3><p>Originates on a swipeable element such as a list item or card.</p><p>Orthogonal to the direction of scrolling.</p><p>The gesture is typically horizontal, with symmetrical actions.</p><p>The Dismiss gesture is committed based on crossing a threshold.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNMjY0RVBLaXpzNkk/Patterns-Gestures-TouchActivities-04_large_xhdpi.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h3 class="c18"><strong>Swipe to refresh</strong></h3><p>Available at index zero of a list, or at the content origination edge of an empty container.</p><p>Generally vertical and in a downward direction.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNX0JSY0sxbHUzZFk/Patterns-Gestures-TouchActivities-05_large_xhdpi.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h3 class="c18"><span>Edge swipe</span></h3><p>A swipe that originates outside of the screen and reveals off-screen content. Invokes out-of-context content, that is, content separate and distinct from the current view.</p><p>If no edge swipe action is defined, an </span><strong>Edge swipe</strong><span> gesture can default to a </span><strong>Paging swipe</strong><span>.</p><p>The Edge swipe gesture is committed based on crossing a threshold.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNWXpQWWM5UzVlX2M/Patterns-Gestures-TouchActivities-06_large_xhdpi.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h3 class="c18"><strong>Paging swipe</strong></h3><p>An on-screen, in-content swipe that reveals additional, related off-screen content. </p><p>Don’t use paging swipes when individual elements are swipeable. The gesture reveals one page/tab per paging swipe.</p><p>Paged content may be &gt;100% zoom, in which case an in-content swipe will </span><strong>Pan</strong><span> to an edge of the content, and an additional in-content swipe will </span><strong>Page</strong><span>.</p><p>See also: </span><strong>Overscroll collapse</strong></p><p>The Paging swipe gesture is committed based on crossing a threshold.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNMmpuNlhPVDhGREk/Patterns-Gestures-TouchActivities-07_large_xhdpi.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h3 class="c18"><strong>Overscroll collapse</strong></h3><p>Navigate up in hierarchy.</p><p>Paging swipe at the top or bottom of scrolling content to navigate to Parent content.</p><p>The Overscroll collapse gesture is committed based on crossing a threshold.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNNmkxQmQ2MldrSjg/Patterns-Gestures-TouchActivities-08_large_xhdpi.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h3 class="c18"><strong>Menu open</strong></h3><p>Drag originating from a menu or picker reveals a menu. Upon lift, the highlighted menu option is selected.</p><p>Menu appears upon touch </p><p>Drag is used with </span><strong>Menu open</strong><span>.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNU3BEMXFuU2NhMlE/Patterns-Gestures-TouchActivities-09_large_xhdpi.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <h3 class="c18"><strong>Tilt</strong></h3><p>Tilts 3D content forward or backward</p><p>When transitioning from another two-finger gesture (e.g., pinch zoom or rotate) such as in Maps, will result in </span><strong>two-finger pan</strong><span>.</p><p>Drag is used with </span><strong>Tilt</strong><span>.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNenotUjEzT29NWEU/Patterns-Gestures-TouchActivities-10_large_xhdpi.png" />
+                    </div>
+                        </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-patterns">&nbsp;</div>
+    <div class="footer-grid-L section-patterns">
+            <a class="footer-text" href="errors.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
+        <span>Previous</span>
+        <div>
+                      Errors
+                  </div>
+      </a>
+          </div>
+
+    <div class="footer-R section-patterns">&nbsp;</div>
+    <div class="footer-grid-R section-patterns">
+            <a class="footer-text" href="loading-images.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      Loading images
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+
+  </body>
+
+</html>

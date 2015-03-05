@@ -1,0 +1,273 @@
+{
+  "type": "tag",
+  "name": "md-snackbar",
+  "defaults": [
+    {
+      "name": "md-height",
+      "values": [ "x1" ]
+    },
+    {
+      "name": "md-position",
+      "values": [ "top", "left" ]
+    }
+  ],
+  "css": [
+    {
+      "property": "display",
+      "value": "table"
+    },
+    {
+      "property": "border-radius",
+      "value": "2px"
+    },
+    {
+      "property": "background-color",
+      "value": "#323232"
+    },
+    {
+      "property": "color",
+      "value": "#fff"
+    },
+    {
+      "property": "position",
+      "value": "fixed"
+    },
+    {
+      "property": "transition",
+      "value": "bottom 0.25s, opacity 0.25s"
+    }
+  ],
+  "attributes": [
+    {
+      "type": "attribute",
+      "name": "md-height",
+      "values": [
+        {
+          "name": "x1",
+          "css": [
+            {
+              "property": "height",
+              "value": "48px"
+            }
+          ]
+        },
+        {
+          "name": "x2",
+          "responsive": [
+            {
+              "target": ["mobile"],
+              "css": [
+                {
+                  "property": "height",
+                  "value": "80px"
+                }                
+              ]
+            },
+            {
+              "target": [ "tablet", "desktop" ],
+              "css": [
+                {
+                  "property": "height",
+                  "value": "48px"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "attribute",
+      "name": "md-position",
+      "values": [
+        {
+          "name": "top",
+          "css": [
+            {
+              "property": "top",
+              "value": "-24px"
+            },
+            {
+              "property": "bottom",
+              "value": "auto"
+            },
+            {
+              "property": "opacity",
+              "value": "0"
+            }
+          ],
+          "fixes": [
+            {
+              "after": "[md-notanimated]",
+              "css": [
+                { 
+                  "property": "top",
+                  "value": "0px"
+                },
+                {
+                  "property": "bottom",
+                  "value": "auto"
+                },
+                {
+                  "property": "opacity",
+                  "value": "1"
+                }
+              ],
+              "responsive": [
+                {
+                  "target": [ "desktop", "tablet" ],
+                  "css": [
+                    {
+                      "property": "top",
+                      "value": "24px"
+                    },
+                    {
+                      "property": "bottom",
+                      "value": "auto"
+                    },
+                    {
+                      "property":"opacity",
+                      "value": "1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "bottom",
+          "css": [
+            {
+              "property": "bottom",
+              "value": "-24px"
+            },
+            {
+              "property": "top",
+              "value": "auto"
+            },
+            {
+              "property": "opacity",
+              "value": "0"
+            }
+          ],
+          "fixes": [
+            {
+              "after": "[md-notanimated]",
+              "css": [
+                {
+                  "property": "bottom",
+                  "value": "0px"
+                },
+                {
+                  "property": "top",
+                  "value": "auto"
+                },
+                {
+                  "property": "opacity",
+                  "value": "1"
+                }
+              ],
+              "responsive": [
+                {
+                  "target": [ "desktop", "tablet" ],
+                  "css": [
+                    {
+                      "property": "bottom",
+                      "value": "24px"
+                    },
+                    {
+                      "property": "top",
+                      "value": "auto"
+                    },
+                    {
+                      "property": "opacity",
+                      "value": "1"
+                    }
+                  ]
+                }
+              ]
+            }            
+          ]
+        },
+        {
+          "name": "left",
+          "css": [
+            {
+              "property": "left",
+              "value": "24px"
+            },
+            {
+              "property": "right",
+              "value": "auto"
+            }
+          ]          
+        },
+        {
+          "name": "right",
+          "css": [
+            {
+              "property": "right",
+              "value": "24px"              
+            },
+            {
+              "property": "left",
+              "value": "auto"
+            }
+          ]                    
+        }
+      ]
+    }
+  ],
+  "responsive": [
+    {
+      "target": ["mobile"],
+      "css": [
+        {
+          "property": "width",
+          "value": "100%"
+        },
+        {
+          "property": "padding",
+          "value": "18px 24px 18px 24px"
+        },
+        {
+          "property": "left",
+          "value": "auto"
+        },
+        {
+          "property": "right",
+          "value": "auto"
+        }
+      ]
+    },
+    {
+      "target": ["tablet", "desktop"],
+      "css": [
+        {
+          "property": "min-width",
+          "value": "288px"
+        },
+        {
+          "property": "max-width",
+          "value": "568px"
+        },
+        {
+          "property": "padding",
+          "value": "16px 24px 12px 24px"
+        }
+      ]
+    }
+  ],
+  "fixes": [
+    {
+      "after": "> md-message",
+      "css": [
+        {
+          "property": "display",
+          "value": "table-cell"
+        }
+      ]
+    }
+  ]
+}

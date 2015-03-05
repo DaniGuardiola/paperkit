@@ -1,0 +1,265 @@
+{
+  "type": "attribute",
+  "name": "md-flex",
+  "values": [
+    {
+      "name": "no-shrink",
+      "css": [
+        {
+          "property": "flex-shrink",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "name": "shrink",
+      "css": [
+        {
+          "property": "flex-shrink",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "display",
+      "css": [
+        {
+          "property": "display",
+          "value": "flex"
+        }
+      ]
+    },
+    {
+      "name": "no-wrap",
+      "css": [
+        {
+          "property": "flex-wrap",
+          "value": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "wrap",
+      "css": [
+        {
+          "property": "flex-wrap",
+          "value": "wrap"
+        }
+      ]
+    },
+    {
+      "name": "wrap-reverse",
+      "css": [
+        {
+          "property": "flex-wrap",
+          "value": "wrap-reverse"
+        }
+      ]
+    },
+    {
+      "name": "column",
+      "css": [
+        {
+          "property": "flex-direction",
+          "value": "column"
+        }
+      ]
+    },
+    {
+      "name": "row",
+      "css": [
+        {
+          "property": "flex-direction",
+          "value": "row"
+        }
+      ]
+    },
+    {
+      "name": "f0",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-grow",
+              "value": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f1",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-grow",
+              "value": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f2",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-grow",
+              "value": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f3",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-grow",
+              "value": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f4",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-grow",
+              "value": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f5",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-grow",
+              "value": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f6",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-grow",
+              "value": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f7",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-grow",
+              "value": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f8",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-grow",
+              "value": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f9",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-grow",
+              "value": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "f10",
+      "responsive": [
+        {
+          "target": [
+            "tablet",
+            "desktop"
+          ],
+          "css": [
+            {
+              "property": "flex-grow",
+              "value": "10"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

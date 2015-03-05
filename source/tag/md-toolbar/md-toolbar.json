@@ -1,0 +1,62 @@
+{
+  "type": "tag",
+  "name": "md-toolbar",
+  "css": [
+    {
+      "property": "display",
+      "value": "flex"
+    },
+    {
+      "property": "flex-wrap",
+      "value": "wrap"
+    },
+    {
+      "property": "flex-shrink",
+      "value": "0"
+    },
+    {
+      "property": "align-items",
+      "value": "flex-end"
+    },
+    {
+      "property": "align-content",
+      "value": "flex-end"
+    },
+    {
+      "property": "width",
+      "value": "100%"
+    },
+    {
+      "property": "height",
+      "value": "auto"
+    },
+    {
+      "property": "transition-property",
+      "value": "height, box-shadow, background-color, color"
+    },
+    {
+      "property": "transition-duration",
+      "value": "0.25s"
+    },
+    {
+      "property": "transition-timing-function",
+      "value": "cubic-bezier(.55,0,.1,1)"
+    },
+    {
+      "property": "background-color",
+      "value": "#9e9e9e"
+    },
+    {
+      "property": "md-shadow",
+      "value": "seam"
+    },
+    {
+      "property": "fill",
+      "value": "#fff"
+    },
+    {
+      "property": "color",
+      "value": "#fff"
+    }
+  ]
+}

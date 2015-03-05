@@ -1,0 +1,10 @@
+{
+  "type": "attribute",
+  "name": "md-padding",
+  "css": [
+    {
+      "property": "padding",
+      "value": "16px"
+    }
+  ]
+}

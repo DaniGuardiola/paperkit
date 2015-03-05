@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+  'Futurizr': {
+    'hasTouch': 'touch'
+  }
+}">
+  <head>
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta name="keywords" content=""/>
+    <title>Material properties - What is material? - Google design guidelines</title>
+    <meta itemprop="name" content="Material properties - What is material? - Google design guidelines"/>
+    <meta itemprop="image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Material properties - What is material? - Google design guidelines" />
+    <meta property="og:image" content="https://material-design.storage.googleapis.com/publish/v_1/social.png" />
+    <meta property="og:site_name" content="Google design guidelines" />
+    <meta property="article:section" content="Material properties - What is material?" />
+
+
+
+
+
+  <!-- PAPERKIT SETTINGS -->
+  <meta id="mdvars" path="../../">
+  <link rel="stylesheet" href="../../paperkit-min/paperkit.css">
+  <link href="../../resources/prism.css" rel="stylesheet">
+  <link href="../../resources/spec/style.css" rel="stylesheet">
+  <script src="../../paperkit-min/paperkit.js"></script>
+  <script src="../../resources/spec/script.js"></script>
+
+
+
+
+
+
+
+
+
+
+<!--
+<PageMap>
+    <DataObject type="document">
+      <Attribute name="uid"></Attribute>
+      <Attribute name="title">Material properties</Attribute>
+      <Attribute name="keywords"></Attribute>
+      <Attribute name="slug"></Attribute>
+      <Attribute name="description"></Attribute>
+      <Attribute name="section_title">What is material?</Attribute>
+      <Attribute name="section_slug">what-is-material</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="" />
+    </DataObject>
+</PageMap>
+-->
+
+
+
+
+
+
+
+<!-- PAPERKIT ANALYTICS -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58574637-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51798601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+
+  <body class="section-what-is-material noninitial-chapter qp-ui" data-qp-ui="{ 'Mask': {} }">
+    <header>
+  <div class="header-wrapper">
+    <div class="header-title">      <span class="section-title">What is material?</span>
+      <span class="chapter-title">Material properties</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab">Show navigation</button>
+</nav>        
+<div id="side-nav" class="qp-ui" data-qp-ui="{ 'SideNavDrawer': {} }">
+  <div class="side-nav-wrapper">
+    <span id="logo"><img src="https://material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"/></span>
+    <nav>
+      <dl>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Material design
+                </dt>
+        <dd>
+                    <a class="" href="../index.html">Introduction
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': true }">What is material?
+                </dt>
+        <dd>
+                    <a class="" href="environment.html">Environment
+                    </a>
+                    <a class="nav_selected" href="material-properties.html">Material properties
+                    </a>
+                    <a class="" href="objects-in-3d-space.html">Objects in 3D space
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Animation
+                </dt>
+        <dd>
+                    <a class="" href="../animation/authentic-motion.html">Authentic motion
+                    </a>
+                    <a class="" href="../animation/responsive-interaction.html">Responsive interaction
+                    </a>
+                    <a class="" href="../animation/meaningful-transitions.html">Meaningful transitions
+                    </a>
+                    <a class="" href="../animation/delightful-details.html">Delightful details
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Style
+                </dt>
+        <dd>
+                    <a class="" href="../style/color.html">Color
+                    </a>
+                    <a class="" href="../style/icons.html">Icons
+                    </a>
+                    <a class="" href="../style/imagery.html">Imagery
+                    </a>
+                    <a class="" href="../style/typography.html">Typography
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Layout
+                </dt>
+        <dd>
+                    <a class="" href="../layout/principles.html">Principles
+                    </a>
+                    <a class="" href="../layout/metrics-keylines.html">Metrics &amp; keylines
+                    </a>
+                    <a class="" href="../layout/structure.html">Structure
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Components
+                </dt>
+        <dd>
+                    <a class="" href="../components/bottom-sheets.html">Bottom sheets
+                    </a>
+                    <a class="" href="../components/buttons.html">Buttons
+                    </a>
+                    <a class="" href="../components/cards.html">Cards
+                    </a>
+                    <a class="" href="../components/chips.html">Chips
+                    </a>
+                    <a class="" href="../components/dialogs.html">Dialogs
+                    </a>
+                    <a class="" href="../components/dividers.html">Dividers
+                    </a>
+                    <a class="" href="../components/grids.html">Grids
+                    </a>
+                    <a class="" href="../components/lists.html">Lists
+                    </a>
+                    <a class="" href="../components/list-controls.html">List controls
+                    </a>
+                    <a class="" href="../components/menus.html">Menus
+                    </a>
+                    <a class="" href="../components/pickers.html">Pickers
+                    </a>
+                    <a class="" href="../components/progress-activity.html">Progress &amp; activity
+                    </a>
+                    <a class="" href="../components/sliders.html">Sliders
+                    </a>
+                    <a class="" href="../components/snackbars-toasts.html">Snackbars &amp; toasts
+                    </a>
+                    <a class="" href="../components/subheaders.html">Subheaders
+                    </a>
+                    <a class="" href="../components/switches.html">Switches
+                    </a>
+                    <a class="" href="../components/tabs.html">Tabs
+                    </a>
+                    <a class="" href="../components/text-fields.html">Text fields
+                    </a>
+                    <a class="" href="../components/tooltips.html">Tooltips
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Patterns
+                </dt>
+        <dd>
+                    <a class="" href="../patterns/data-formats.html">Data formats
+                    </a>
+                    <a class="" href="../patterns/errors.html">Errors
+                    </a>
+                    <a class="" href="../patterns/gestures.html">Gestures
+                    </a>
+                    <a class="" href="../patterns/loading-images.html">Loading images
+                    </a>
+                    <a class="" href="../patterns/navigation-drawer.html">Navigation drawer
+                    </a>
+                    <a class="" href="../patterns/navigational-transitions.html">Navigational transitions
+                    </a>
+                    <a class="" href="../patterns/scrolling-techniques.html">Scrolling techniques
+                    </a>
+                    <a class="" href="../patterns/search.html">Search
+                    </a>
+                    <a class="" href="../patterns/selection.html">Selection
+                    </a>
+                    <a class="" href="../patterns/settings.html">Settings
+                    </a>
+                    <a class="" href="../patterns/swipe-to-refresh.html">Swipe to refresh
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Usability
+                </dt>
+        <dd>
+                    <a class="" href="../usability/accessibility.html">Accessibility
+                    </a>
+                    <a class="" href="../usability/bidirectionality.html">Bidirectionality
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">Resources
+                </dt>
+        <dd>
+                    <a class="" href="../resources/color-palettes.html">Color palettes
+                              </a>
+                    <a class="" href="../resources/layout-templates.html">Layout templates
+                    </a>
+                    <a class="" href="../resources/roboto-noto-fonts.html">Roboto &amp; Noto fonts
+                    </a>
+                    <a class="" href="../resources/sticker-sheets-icons.html">Sticker sheets &amp; icons
+                    </a>
+                  </dd>
+                <dt class="qp-ui" data-qp-ui="{ 'SideNavZippy': false }">What&#39;s new
+                        </dt>
+        <dd>
+                    <a class="" href="../whats-new/whats-new.html">What&#39;s new
+                    </a>
+                  </dd>
+              </dl>
+    </nav>
+    <div class="legal">
+      <p class="copyright">Google &copy;</p>
+      <a href="http://www.google.com/intl/en/policies/privacy/">Privacy</a> &amp; <a href="http://www.google.com/intl/en/policies/terms/">Terms</a>
+    </div>
+  </div>
+</div>
+
+    <div id="grid-cont">
+      <section class="grid_outer chapter">
+  <h1 class="chapter-title">Material properties
+      </h1>
+
+  <div class="chapter-content">
+        
+        <div class="chapter-intro">
+       <p>Material has certain immutable characteristics and inherent behaviors. Understanding these qualities will help you manipulate material in a way that’s consistent with the vision of material design.</p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="material-properties.html#material-properties-physical-properties">Physical properties
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="material-properties.html#material-properties-transforming-material">Transforming material
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="material-properties.html#material-properties-movement-of-material">Movement of material
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="material-properties-physical-properties" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Physical properties
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Material has </span><strong>varying x &amp; y dimensions</strong><span> (measured in dps) and a </span><strong>uniform thickness</strong><span> (1dp). Material </span><strong>never</strong><span> has a thickness of 0.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-aTBFT1FDVEstenM/whatismaterial_materialproperties_physicalproperties_thickness_01_yes.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div><p>The height and width of material can vary.</p>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B8v7jImPsDi-Sno0Qy1FY3UtaFk/whatismaterial_materialproperties_physicalproperties_thickness_02_no.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>Material is always 1dp thick.</p>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Material casts shadows.</p><p>Shadows result naturally from the relative elevation (z-position) between material elements.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWRWJfTERvdnM1bGc" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWSE9IaUpqYzlpSW8/whatismaterial-materialprop-physicalprop-020201_PaperShadow_Do_xhdpi_007.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWRWJfTERvdnM1bGc/whatismaterial-materialprop-physicalprop-020201_PaperShadow_Do_xhdpi_007.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div><p>Material casts shadows.</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-color="grey-200">
+<md-paper md-shadow="shadow-1" id="paperkit-shadow-animated-paper" md-width="x2" md-height="x2" style="margin: 64px auto; transition: box-shadow 0.5s; border-radius: 2px;" md-position="center-x" md-color="cyan">
+</md-paper>
+<script type="text/javascript">
+  // Get the paper in a variable
+  var shadowPaper = document.getElementById('paperkit-shadow-animated-paper');
+  // Define a function that switchs the shadow between 1 and 5
+  function switchShadow(){
+    // Get the md-shadow attribute value
+    var shadowAttr = shadowPaper.getAttribute('md-shadow');
+    // Get the number from the attribute in the shadow var (example: get 5 from 'shadow-5')
+    var shadow = shadowAttr.substring(shadowAttr.indexOf('shadow-') + 'shadow-'.length).trim();
+    // If the shadow var is 5, set it to 1
+    if (shadow==5) {
+      shadow = 1;
+    // If it is 1, set it to 5
+    } else {
+      shadow = 5;
+    }
+    // Set the md-shadow attribute to the value of the shadow var
+    shadowPaper.setAttribute('md-shadow','shadow-'+shadow);
+    // Repeat again every 1.592 seconds (half of the video duration)
+    setTimeout(switchShadow,1592);
+  }
+  // Start the function
+  switchShadow();
+</script>
+  </div>
+</md-paper>
+
+
+
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example dont">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWM0xqQms4LWRkMVE" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWYU5lQ1VXQjA3NnM/whatismaterial-materialprop-physicalprop-020201_PaperShadow_Dont_xhdpi_007.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWM0xqQms4LWRkMVE/whatismaterial-materialprop-physicalprop-020201_PaperShadow_Dont_xhdpi_007.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div><p>Shadows are never approximated using material.</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Content is displayed on material, in any shape and color. Content does not add thickness to material.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWSGQycHdwcTdyRk0" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWTG41Rk9fT19qUXc/whatismaterial-materialprop-physicalprop-020201_InkDisplay_xhdpi_005.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWSGQycHdwcTdyRk0/whatismaterial-materialprop-physicalprop-020201_InkDisplay_xhdpi_005.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div><p>Material can display any shape and color.</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Content behavior can be decoupled from the behavior of material. However, the bounds of the material can limit the display of the content.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWVzltT01CSHpaNXM" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWeVBlbExGYjlTeEE/whatismaterial-materialprop-physicalprop-020201_InkBehavior_xhdpi_005.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWVzltT01CSHpaNXM/whatismaterial-materialprop-physicalprop-020201_InkBehavior_xhdpi_005.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper todo="Make it responsive" id="paperkit-decoupled-behavior" class="paperkit-paper show-tablet right-desktop" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-color="grey-200">
+<md-paper md-shadow="shadow-2" id="paperkit-decoupled-behavior-paper" md-width="x1" md-height="x1" style="position: relative; margin: 192px auto; transition: margin 0.3s, width 0.3s, height 0.3s; border-radius: 2px; overflow: hidden; border: 2px white solid;" md-position="center-x" md-color="white">
+  <img style="position: absolute; top: 0; left: 0; transition: height 0.3s, width 0.3s, top 0.3s, left 0.3s, margin 0.3s; flex-shrink: 0; max-width: none;" md-height="x1" md-width="x1" src="../../resources/spec/img/kodaline.jpg">
+</md-paper>
+<script type="text/javascript">
+  // Get the paper in a variable
+  var decoupledPaper = document.getElementById('paperkit-decoupled-behavior-paper');
+  // Get the image in another variable
+  var decoupledImage = decoupledPaper.querySelector('img');
+  // Declare a function to move both things
+  function decoupledAnimation(){
+    // States:
+    // Initial
+    // Paper size
+    decoupledPaper.setAttribute('md-width','x1');
+    decoupledPaper.setAttribute('md-height','x1');
+    // Image size
+    decoupledImage.setAttribute('md-width','x1');
+    decoupledImage.setAttribute('md-height','x1');
+    // Paper margin      
+    decoupledPaper.style.margin = '160px auto';
+    // Image position
+    decoupledImage.style.left = '0';
+    decoupledImage.style.top = '0';
+    // 2
+    setTimeout(function(){
+      // Paper size
+      decoupledPaper.setAttribute('md-width','x4');
+      decoupledPaper.setAttribute('md-height','x4');
+      // Paper margin
+      decoupledPaper.style.margin = '64px auto';
+      // Image position
+      decoupledImage.style.left = '96px';
+      decoupledImage.style.top = '96px';
+    },905.666666667);
+    // 3
+    setTimeout(function(){
+      // Image position
+      decoupledImage.style.left = '0';
+      decoupledImage.style.top = '0';
+    },1811.33333333);
+    // 4
+    setTimeout(function(){
+      // Image size
+      decoupledImage.setAttribute('md-width','x4');
+      decoupledImage.setAttribute('md-height','x4');
+    },2717);
+    // 5
+    setTimeout(function(){
+      // Paper size
+      decoupledPaper.setAttribute('md-width','x1');
+      decoupledPaper.setAttribute('md-height','x1');
+      // Paper margin      
+      decoupledPaper.style.margin = '160px auto';
+      // Image position
+      decoupledImage.style.left = '-96px';
+      decoupledImage.style.top = '-96px';
+    },3622.66666667);
+    // 6
+    setTimeout(function(){
+      // Image position
+      decoupledImage.style.left = '-192px';
+      decoupledImage.style.top = '0';
+    },4528.33333333);
+    // And repeat
+    setTimeout(function(){
+      decoupledAnimation();
+    },5434);
+  }
+  decoupledAnimation();
+
+</script>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Material is solid.</p><p>Input events cannot pass through material.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7bDZac2JGV2RUNk0/whatismaterial_properties_physical3.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RVdsUWRKN2xlaGc/whatismaterial_properties_physical4.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleD1">
+    <div class="module-body">
+    <p>Multiple material elements cannot occupy the same point in space simultaneously.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7aVhXV0EtZ29OSU0/whatismaterial_properties_physical5.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div>
+        </figcaption>
+                </figure>
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UFdUMnRKaW5PSXM/whatismaterial_properties_physical6.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+                </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Material cannot pass through other material.</p><p>For example, one sheet of material cannot pass through another sheet of material when changing elevation.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example dont">
+                          <div class="media">
+                      <img src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Ni14MHdScGx0czA/whatismaterial_properties_physical7.png" />
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="material-properties-transforming-material" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Transforming material
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Material can change shape.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWSkpqVG1NajV6MjA" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWd2N5R1lqeUFwWkk/whatismaterial-materialprop-transformingmaterial-020202_PaperShape_xhdpi_004.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWSkpqVG1NajV6MjA/whatismaterial-materialprop-transformingmaterial-020202_PaperShape_xhdpi_004.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Material grows and shrinks along only its plane.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example do">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWenFrem90Wlk4MFk" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWWFFOVGp2UFVNZzg/whatismaterial-materialprop-transformingmaterial-020202_PaperShapeLinear_xhdpi_004.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWenFrem90Wlk4MFk/whatismaterial-materialprop-transformingmaterial-020202_PaperShapeLinear_xhdpi_004.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Do.</div>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Material never bends or folds.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="example dont">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWUHg1YkxJMXJXZ2s" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWNktzeE04V0ZGNzg/whatismaterial-materialprop-transformingmaterial-020202_PaperBendFold_xhdpi_005.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWUHg1YkxJMXJXZ2s/whatismaterial-materialprop-transformingmaterial-020202_PaperBendFold_xhdpi_005.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                        <figcaption>
+          <div class="caption-title">Don't.</div>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Sheets of material can join together to become a single sheet of material.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWeUNMSk02cnYtc1k" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWbE1WWExWSURmTDg/whatismaterial-materialprop-transformingmaterial-020202_PaperHeal_xhdpi_003.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWeUNMSk02cnYtc1k/whatismaterial-materialprop-transformingmaterial-020202_PaperHeal_xhdpi_003.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>When split, material can heal. For example, if you remove a portion of material from a sheet of material, the sheet of material will become a whole sheet again. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWc2Y2QTRmbUFLLUE" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWX0dIVXh2QzlwcVU/whatismaterial-materialprop-transformingmaterial-020202_PaperSplitHeal_xhdpi_004.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWc2Y2QTRmbUFLLUE/whatismaterial-materialprop-transformingmaterial-020202_PaperSplitHeal_xhdpi_004.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              </div>
+  </div>
+</div>                  <div id="material-properties-movement-of-material" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">
+    Movement of material
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"/>
+    </svg>
+  </h2>
+  <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Material can be spontaneously generated or destroyed anywhere in the environment.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWQml4UFAxREJEQVE" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWWWhMRFVudjl4bTQ/whatismaterial-materialprop-movementmaterial-020203_PaperPointExpand_xhdpi_004.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWQml4UFAxREJEQVE/whatismaterial-materialprop-movementmaterial-020203_PaperPointExpand_xhdpi_004.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Material can move along any axis.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B2wX4iIvu8L6eDRlc0E2MWd0SlU" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6Y2Z1NUlzMWczaHc/whatismaterial-materialprop-movementmaterial-020203_PaperMove_xhdpi_007.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B2wX4iIvu8L6eDRlc0E2MWd0SlU/whatismaterial-materialprop-movementmaterial-020203_PaperMove_xhdpi_007.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Z-axis motion is typically a result of user interaction with material.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <div class="qp-ui" data-qp-ui="{ 'VideoPlayer': {} }">
+              <video id="1-None_0B0NGgBg38lWWRWROZkxDS2JySG8" crossorigin="anonymous" preload="metadata" loop  controls>
+                              <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWNW5xUERVcEd1bm8/whatismaterial-materialprop-movementmaterial-020203_Material_Response_xhdpi_002.webm" type="video/webm" />
+                                            <source src="https://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B0NGgBg38lWWRWROZkxDS2JySG8/whatismaterial-materialprop-movementmaterial-020203_Material_Response_xhdpi_002.mp4" type="video/mp4" />
+                            </video>
+            </div>
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+
+
+
+
+<!-- PAPERKIT -->
+<md-paper id="paperkit-shadow-animated" class="paperkit-paper show-tablet right-desktop no-controls" md-shadow="shadow-1" md-width="x12" md-position="center-x">
+  <div class="example" md-flex="display" md-padding>
+<span md-position="text-center-x center-x" md-typo="display-2">TODO!</span>
+  </div>
+</md-paper>
+
+
+
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>    </div>
+
+    <footer>
+  <div class="footer-grid">
+    <div class="footer-L section-what-is-material">&nbsp;</div>
+    <div class="footer-grid-L section-what-is-material">
+            <a class="footer-text" href="environment.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-left_24x24px.svg"/>
+        <span>Previous</span>
+        <div>
+                      Environment
+                  </div>
+      </a>
+          </div>
+
+    <div class="footer-R section-what-is-material">&nbsp;</div>
+    <div class="footer-grid-R section-what-is-material">
+            <a class="footer-text" href="objects-in-3d-space.html">
+        <img class="arrow-L" alt="" src="https://material-design.storage.googleapis.com/images/Arrow-right_24x24px.svg"/>
+        <span>Next</span>
+        <div>
+                      Objects in 3D space
+                  </div>
+      </a>
+          </div>
+
+  </div>
+</footer>
+    <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+
+
+
+
+<!-- PAPERKIT SETTINGS -->
+    <script src="../../resources/prism.js"></script>
+
+
+  </body>
+
+</html>

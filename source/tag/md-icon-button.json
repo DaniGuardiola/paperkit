@@ -1,0 +1,99 @@
+{
+	"type": "tag",
+	"name": "md-icon-button",
+	"css": [
+		{
+			"property": "display",
+			"value": "block"
+		},
+		{
+			"property": "width",
+			"value": "48px"
+		},
+		{
+			"property": "height",
+			"value": "48px"
+		},
+		{
+			"property": "cursor",
+			"value": "pointer"
+		},
+		{
+			"property": "overflow",
+			"value": "hidden"
+		},
+		{
+			"property": "border-radius",
+			"value": "50%"
+		},
+		{
+			"property": "transition",
+			"value": "background-color 0.05s"
+		}
+	],
+	"attributes": [
+	  {
+       "type": "attribute",
+        "name": "md-size",
+        "values": [
+          {
+            "name": "small",
+            "css": [
+              {
+                "property": "width",
+                "value": "24px"
+              },
+              {
+                "property": "height",
+                "value": "24px"
+              }
+            ],
+            "fixes": [
+              {
+                "after": "[md-type=avatar]",
+                "css": [          
+                  {
+                    "property": "height",
+                    "value": "40px"
+                  },
+                  {
+                    "property": "width",
+                    "value": "40px"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+	],
+	"fixes": [
+		{
+			"after": "[md-image$=more_vert]:not([md-size=normal])",
+			"css": [
+				{
+					"property": "width",
+					"value": "40px"
+				}
+			]
+		},
+		{
+			"after": "[md-image$=more_vert]:not([md-size=normal])>md-icon",
+			"css": [
+				{
+					"property": "width",
+					"value": "40px"
+				}
+			]
+		},
+		{
+			"after": "[md-image$=more_vert]:not([md-size=normal])>md-icon>svg",
+			"css": [
+				{
+					"property": "left",
+					"value": "6px"
+				}
+			]
+		}
+	]
+}

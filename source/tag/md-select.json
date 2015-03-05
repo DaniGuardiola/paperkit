@@ -1,0 +1,125 @@
+{
+	"type": "tag",
+	"name": "md-input[type=select]",
+	"css": [
+		{
+			"property": "display",
+			"value": "flex"
+		},
+		{
+			"property": "position",
+			"value": "relative"
+		},
+		{
+			"property": "height",
+			"value": "48px"
+		},
+		{
+			"property": "cursor",
+			"value": "pointer"
+		}
+	],
+	"fixes": [
+		{
+			"after": "> span.text",
+			"css": [
+				{
+					"property": "position",
+					"value": "relative"
+				},
+				{
+					"property": "top",
+					"value": "16px"
+				},
+				{
+					"property": "height",
+					"value": "16px"
+				},
+				{
+			      "property": "outline",
+			      "value": "none"
+			    },
+			    {
+			      "property": "font-size",
+			      "value": "16px"
+			    },
+			    {
+			      "property": "border-width",
+			      "value": "0"
+			    },			
+			    {
+					"property": "transition",
+					"value": "top 0.25s ease, font-size 0.25s ease"
+				},
+				{
+					"property": "color",
+					"value": "black"
+				},
+				{
+					"property": "flex",
+					"value": "1"
+				},
+				{
+					"property": "white-space",
+					"value": "nowrap"
+				}
+			]
+		},
+		{
+			"after": "> option",
+			"css": [
+				{
+					"property": "display",
+					"value": "none"
+				}
+			]
+		},
+		{
+			"after": "> div.line",
+			"css": [
+				{
+					"property": "position",
+					"value": "absolute"
+				},
+				{
+					"property": "content",
+					"value": "\"\""
+				},
+				{
+					"property": "bottom",
+					"value": "8px"
+				},
+				{
+					"property": "width",
+					"value": "100%"
+				},
+				{
+					"property": "height",
+					"value": "1px"
+				},
+				{
+			      "property": "background-color",
+			      "value": "rgba(0, 0, 0, 0.12)"
+			    },
+				{
+			      "property": "left",
+			      "value": "0"
+			    }
+			]
+		},
+		{
+			"after": "> md-icon",
+			"css": [
+				{
+					"property": "padding-rigth",
+					"value": "0"
+				},
+				{
+					"property": "width",
+					"value": "36px"
+				}
+			]
+		}
+	]
+
+}

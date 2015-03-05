@@ -1,0 +1,346 @@
+{
+  "type": "attribute",
+  "name": "md-typo",
+  "values": [
+    {
+      "name": "display-4",
+      "css": [
+        {
+          "property": "font-size",
+          "value": "112px"
+        },
+        {
+          "property": "font-weight",
+          "value": "300"
+        },
+        {
+          "property": "white-space",
+          "value": "nowrap"
+        },
+        {
+          "property": "line-height",
+          "value": "120px"
+        },
+        {
+          "property": "letter-spacing",
+          "value": "-.044em"
+        }
+      ]
+      },
+    {
+      "name": "display-3",
+      "css": [
+        {
+          "property": "font-size",
+          "value": "56px"
+        },
+        {
+          "property": "font-weight",
+          "value": "400"
+        },
+        {
+          "property": "white-space",
+          "value": "nowrap"
+        },
+        {
+          "property": "line-height",
+          "value": "60px"
+        },
+        {
+          "property": "letter-spacing",
+          "value": "-.026em"
+        }
+      ]
+      },
+    {
+      "name": "display-2",
+      "css": [
+        {
+          "property": "font-size",
+          "value": "45px"
+        },
+        {
+          "property": "font-weight",
+          "value": "400"
+        },
+        {
+          "property": "line-height",
+          "value": "48px"
+        },
+        {
+          "property": "letter-spacing",
+          "value": "-.018em"
+        }
+      ]
+      },
+    {
+      "name": "display-1",
+      "css": [
+        {
+          "property": "font-size",
+          "value": "34px"
+        },
+        {
+          "property": "font-weight",
+          "value": "400"
+        },
+        {
+          "property": "line-height",
+          "value": "40px"
+        },
+        {
+          "property": "letter-spacing",
+          "value": "-.01em"
+        }
+      ]
+      },
+    {
+      "name": "headline",
+      "css": [
+        {
+          "property": "font-size",
+          "value": "24px"
+        },
+        {
+          "property": "font-weight",
+          "value": "400"
+        },
+        {
+          "property": "line-height",
+          "value": "32px"
+        },
+        {
+          "property": "letter-spacing",
+          "value": "-.012em"
+        }
+      ]
+      },
+    {
+      "name": "title",
+      "css": [
+        {
+          "property": "font-size",
+          "value": "20px"
+        },
+        {
+          "property": "font-weight",
+          "value": "500"
+        },
+        {
+          "property": "white-space",
+          "value": "nowrap"
+        },
+        {
+          "property": "letter-spacing",
+          "value": "-.012em"
+        }
+      ]
+      },
+    {
+    "name": "subhead",
+    "css": [
+      {
+        "property": "font-weight",
+        "value": "400"
+      }
+    ],
+    "defaultVariant": "leading-1",
+    "variants": [
+      {
+        "name": "leading-1",
+        "css": [
+          {
+            "property": "line-height",
+            "value": "24px"
+          }
+        ]
+      },
+      {
+        "name": "leading-2",
+        "css": [
+          {
+            "property": "line-height",
+            "value": "28px"
+          }
+        ]
+      }
+    ],
+    "responsive": [
+        {
+          "target": ["watch", "mobile", "tablet"],
+          "css": [
+            {
+              "property": "font-size",
+              "value": "16px"
+            }
+          ]
+        },
+        {
+          "target": ["desktop"],
+          "css": [
+            {
+              "property": "font-size",
+              "value": "15px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+    "name": "body-2",
+    "css": [
+      {
+        "property": "font-weight",
+        "value": "500"
+      },
+      {
+        "property": "line-height",
+        "value": "24px"
+      }
+    ],
+    "responsive": [
+        {
+          "target": ["device"],
+          "css": [
+            {
+              "property": "font-size",
+              "value": "14px"
+            }
+          ]
+        },
+        {
+          "target": ["desktop"],
+          "css": [
+            {
+              "property": "font-size",
+              "value": "13px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+    "name": "body-1",
+    "css": [
+      {
+        "property": "font-weight",
+        "value": "400"
+      },
+      {
+        "property": "line-height",
+        "value": "20px"
+      }
+    ],
+    "responsive": [
+        {
+          "target": ["device"],
+          "css": [
+            {
+              "property": "font-size",
+              "value": "14px"
+            }
+          ]
+        },
+        {
+          "target": ["desktop"],
+          "css": [
+            {
+              "property": "font-size",
+              "value": "13px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "caption",
+      "css": [
+        {
+          "property": "font-size",
+          "value": "12px"
+        },
+        {
+          "property": "font-weight",
+          "value": "400"
+        },
+        {
+          "property": "white-space",
+          "value": "nowrap"
+        },
+        {
+          "property": "line-height",
+          "value": "20px"
+        },
+        {
+          "property": "letter-spacing",
+          "value": "0.011em"
+        }
+      ]
+      },
+    {
+    "name": "menu",
+    "css": [
+      {
+        "property": "font-weight",
+        "value": "500"
+      },
+      {
+        "property": "white-space",
+        "value": "nowrap"
+      },
+      {
+        "property": "line-height",
+        "value": "24px"
+      }
+    ],
+    "responsive": [
+        {
+          "target": ["device"],
+          "css": [
+            {
+              "property": "font-size",
+              "value": "14px"
+            }
+          ]
+        },
+        {
+          "target": ["desktop"],
+          "css": [
+            {
+              "property": "font-size",
+              "value": "13px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "css": [
+        {
+          "property": "font-size",
+          "value": "14px"
+        },
+        {
+          "property": "font-weight",
+          "value": "500"
+        },
+        {
+          "property": "white-space",
+          "value": "nowrap"
+        },
+        {
+          "property": "line-height",
+          "value": "14px"
+        },
+        {
+          "value": "0.018em"
+        },
+        {
+          "property": "text-transform",
+          "value": "uppercase"
+        }
+      ]
+    }
+  ]
+}

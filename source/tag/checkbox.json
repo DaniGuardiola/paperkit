@@ -1,0 +1,57 @@
+{
+	"type": "tag",
+	"name": "md-input[type=checkbox]",
+	"css": [
+		{
+			"property": "height",
+			"value": "48px"
+		},
+		{
+			"property": "width",
+			"value": "48px"
+		},
+		{
+			"property": "display",
+			"value": "block"
+		},
+		{
+			"property": "background-position",
+			"value": "center"
+		},
+		{
+			"property": "background-size",
+			"value": "24px"
+		},
+		{
+			"property": "background-repeat",
+			"value": "no-repeat"
+		},
+		{
+			"property": "cursor",
+			"value": "pointer"
+		}
+	],
+	"attributes": [
+		{
+			"type": "attribute",
+			"name": "checked",
+			"css": [
+				{
+					"property": "background-image",
+					"value": "url(resources/icon/check_box.svg)"
+				}
+			]
+		}
+	],
+	"fixes": [
+		{
+			"after": ":not([checked])",
+			"css": [
+				{
+					"property": "background-image",
+					"value": "url(resources/icon/check_box_outline_blank.svg)"
+				}
+			]
+		}
+	]	
+}
