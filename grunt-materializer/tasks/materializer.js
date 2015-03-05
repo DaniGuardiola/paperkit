@@ -33,7 +33,7 @@ module.exports = function(grunt) {
           var mdFile = grunt.file.read(options.mdPath + "materializer.min.css");
         }
       } else {
-          grunt.log.warn('Materializer was not found at ' + options.mdPath);
+        grunt.log.warn('Materializer was not found at ' + options.mdPath);
         return false;
       }
 
@@ -49,7 +49,9 @@ module.exports = function(grunt) {
         }
       }).map(function(filepath) {
         // Read file source.
-        var data = grunt.file.read(filepath, { encoding: 'utf8' })
+        var data = grunt.file.read(filepath, {
+          encoding: 'utf8'
+        })
         return data;
       }).join('\n');
 

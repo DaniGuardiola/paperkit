@@ -4,12 +4,12 @@ var initMDSidemenu = function(MDSidemenu) {
    */
   MDSidemenu.open = function() {
     if (MDSidemenu.paperkit.toolbar.getAttribute('md-drag') === "drag") {
-      MDSidemenu.paperkit.toolbar.setAttribute('md-drag','no-drag');
+      MDSidemenu.paperkit.toolbar.setAttribute('md-drag', 'no-drag');
     }
     MDSidemenu.style.left = "";
     MDSidemenu.setAttribute("md-state", "open");
     MDSidemenu.paperkit.greylayer.show();
-    MDSidemenu.paperkit.greylayer.addEventListener('click', function(){
+    MDSidemenu.paperkit.greylayer.addEventListener('click', function() {
       MDSidemenu.close();
     });
   }
@@ -24,7 +24,7 @@ var initMDSidemenu = function(MDSidemenu) {
     MDSidemenu.setAttribute("md-state", "closed");
     MDSidemenu.paperkit.greylayer.hide();
     if (MDSidemenu.paperkit.toolbar.getAttribute('md-drag') === "no-drag") {
-      MDSidemenu.paperkit.toolbar.setAttribute('md-drag','drag');
+      MDSidemenu.paperkit.toolbar.setAttribute('md-drag', 'drag');
     }
   }
 
@@ -38,7 +38,7 @@ var initMDSidemenu = function(MDSidemenu) {
       MDSidemenu.open();
     }
   }
- 
+
   /**
    * Callback function, called when an attribute changes.
    * @param {string} attrname Changed attribute name
@@ -68,13 +68,17 @@ var initMDSidemenu = function(MDSidemenu) {
   MDSidemenu.autoResize();
 
   // INIT OBSERVER
-  var observer = new MutationObserver(function(mutations) { 
-      mutations.forEach(function(mutation) {
-        var element = mutation.target;
-        element.attributeChangedCallback(mutation.attributeName, mutation.oldvalue, element.getAttribute(mutation.attributeName));
-      });
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      var element = mutation.target;
+      element.attributeChangedCallback(mutation.attributeName, mutation.oldvalue, element.getAttribute(mutation.attributeName));
+    });
   });
 
-  var config = { attributes: true, childList: false, characterData: false };
+  var config = {
+    attributes: true,
+    childList: false,
+    characterData: false
+  };
   observer.observe(MDSidemenu, config);
 }

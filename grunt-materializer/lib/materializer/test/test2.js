@@ -1,13 +1,14 @@
-fs = require('fs')
-winston = require('winston')
-mdcssParser = require('../mdcssparser.js')
+/* global require, fs, winston, mdcssParser */
+fs = require("fs");
+winston = require("winston");
+mdcssParser = require("../mdcssparser.js");
 
-var argv = require('optimist').argv;
+var argv = require("optimist").argv;
 
-winston.level = 'info';
+winston.level = "info";
 
-if(argv.v) {
-  winston.level = 'debug';
+if (argv.v) {
+  winston.level = "debug";
 }
 
 var parser = new mdcssParser();

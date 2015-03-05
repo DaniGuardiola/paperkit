@@ -15,12 +15,10 @@
   "bugs": {
     "url": "https://gitlab.datatrends.es/opensource/materializer/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "materializer.daniguardiola.me/blob/master/LICENSE-MIT"
-    }
-  ],
+  "licenses": [{
+    "type": "MIT",
+    "url": "materializer.daniguardiola.me/blob/master/LICENSE-MIT"
+  }],
   "engines": {
     "node": ">= 0.8.0"
   },

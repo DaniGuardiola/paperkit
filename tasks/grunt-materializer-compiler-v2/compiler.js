@@ -1,6 +1,6 @@
-var Generator=require('./lib/generator.js');
+var Generator = require('./lib/generator.js');
 
-module.exports = function(grunt) {  
+module.exports = function(grunt) {
   grunt.registerMultiTask('compiler', 'Materializer compiler', function() {
     var options = this.options();
 
@@ -16,11 +16,13 @@ module.exports = function(grunt) {
         }
       }).map(function(filepath) {
         // Read file source.
-        var data = grunt.file.read(filepath, { encoding: 'utf8' })
+        var data = grunt.file.read(filepath, {
+          encoding: 'utf8'
+        })
         return data;
       }).join('\n');
 
-      var config  = grunt.file.read(options.configfile);
+      var config = grunt.file.read(options.configfile);
       var importsPath = options.imports;
       var imports = [];
 

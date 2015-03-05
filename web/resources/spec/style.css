@@ -1,16 +1,17 @@
-body.no-paperkit .paperkit-space,body.no-paperkit .paperkit-paper,body.no-paperkit #paperkit-next-button,body.no-paperkit #paperkit-back-button {
+body.no-paperkit .paperkit-space,
+body.no-paperkit .paperkit-paper,
+body.no-paperkit #paperkit-next-button,
+body.no-paperkit #paperkit-back-button {
   display: none;
 }
-
 .paperkit-space {
   position: relative;
   margin-bottom: 64px;
   min-height: 96px
 }
-.paperkit-space:not(.paper-style) {  
+.paperkit-space:not(.paper-style) {
   color: white;
 }
-
 .paperkit-space .bg {
   position: absolute;
   top: 0;
@@ -19,65 +20,52 @@ body.no-paperkit .paperkit-space,body.no-paperkit .paperkit-paper,body.no-paperk
   width: 200%;
   height: 100%;
 }
-
-.paperkit-space .content-pre {  
+.paperkit-space .content-pre {
   padding: 16px 0;
 }
-.paperkit-space.paper-style .content-pre {  
+.paperkit-space.paper-style .content-pre {
   padding: 16px;
   margin: 16px 0;
 }
-
-.paperkit-space .content { 
-  position: absolute; 
+.paperkit-space .content {
+  position: absolute;
   top: 0;
   left: 0;
   padding: 16px 0;
 }
 .paperkit-space.paper-style .content {
   margin: 16px 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
   border-radius: 2px;
   background-color: #fff;
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
   padding: 16px;
 }
-
 .paperkit-space.paper-style.full-paper .content {
   width: 100%;
 }
-
 .paperkit-space.paper-style.center-paper .content {
   left: 50%;
   transform: translate(-50%);
 }
-
-.paperkit-space:not(.paper-style) a { 
+.paperkit-space:not(.paper-style) a {
   color: #FFF !important;
   text-decoration: underline !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* LAYOUT */
-#paperkit-help-button,#paperkit-warning-button,#paperkit-layers-button,#paperkit-next-button,#paperkit-back-button {
+
+#paperkit-help-button,
+#paperkit-warning-button,
+#paperkit-layers-button,
+#paperkit-next-button,
+#paperkit-back-button {
   position: fixed;
   top: 8px;
   z-index: 1;
 }
-#paperkit-help-button {  
+#paperkit-help-button {
   right: 8px;
 }
 #paperkit-warning-button {
@@ -92,47 +80,41 @@ body.no-paperkit .paperkit-space,body.no-paperkit .paperkit-paper,body.no-paperk
 #paperkit-back-button {
   right: 200px;
 }
-
 /* HELPERS */
+
 .float-clear {
   clear: both;
 }
-
-
 /* PAPERS */
+
 .paperkit-paper {
   border-radius: 2px;
   transition: box-shadow 0.25s;
   position: relative;
   margin-bottom: 64px;
 }
-
 .no-margin-bottom {
   margin-bottom: 0;
 }
-
 .paperkit-paper.half-size {
   width: 360px;
 }
-
-.paperkit-paper.left,.paperkit-paper.left-first {
+.paperkit-paper.left,
+.paperkit-paper.left-first {
   float: left;
 }
-
 .paperkit-paper.left-first {
   margin-left: 0;
   margin-right: 40px;
 }
-
-.paperkit-paper.right,.paperkit-paper.right-first {
+.paperkit-paper.right,
+.paperkit-paper.right-first {
   float: right;
 }
-
 .paperkit-paper.right-first {
   margin-left: 40px;
   margin-right: 0;
 }
-
 .paperkit-paper.fullscreen {
   position: fixed;
   z-index: 900;
@@ -141,65 +123,56 @@ body.no-paperkit .paperkit-space,body.no-paperkit .paperkit-paper,body.no-paperk
   width: 90% !important;
   height: 90%;
   overflow-y: auto;
-  box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
 }
-
-.paperkit-paper.fullscreen .example, .paperkit-paper.fullscreen .example-iframe {
+.paperkit-paper.fullscreen .example,
+.paperkit-paper.fullscreen .example-iframe {
   height: auto !important;
   min-height: 100% !important;
 }
-
 .paperkit-paper.fullscreen.mobile {
   top: 50%;
   left: 50%;
   width: 360px !important;
   max-width: 100% !important;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   height: 100%;
   max-height: 640px;
 }
-
 .paperkit-paper.fullscreen.mobile .controls {
   width: 258px;
 }
-
 .paperkit-paper.fullscreen.mobile .devices {
   width: 100%;
 }
-
 .paperkit-paper.fullscreen.tablet {
   top: 50%;
   left: 50%;
   width: 960px !important;
   max-width: 100% !important;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   height: 100%;
   max-height: 600px;
 }
-
 .paperkit-paper:not(.fullscreen) .devices {
   display: none;
 }
-
 .paperkit-paper .example-iframe {
   border: 0;
 }
-
 .paperkit-paper.fullscreen .logo {
   left: 24px;
   transition: width .25s;
 }
-
 .paperkit-paper.fullscreen:hover .logo {
   left: 24px;
   width: 56px;
 }
-
-.paperkit-paper .example, .paperkit-paper .example-iframe {
+.paperkit-paper .example,
+.paperkit-paper .example-iframe {
   width: 100%;
   overflow: hidden;
 }
-
 .paperkit-paper .logo {
   position: absolute;
   bottom: 24px;
@@ -207,19 +180,16 @@ body.no-paperkit .paperkit-space,body.no-paperkit .paperkit-paper,body.no-paperk
   width: 48px;
   transition: left 0.25s;
 }
-
 .paperkit-space .logo {
   position: absolute;
   top: 24px;
   left: -64px;
   width: 48px;
-  transition: left 0.25s;  
+  transition: left 0.25s;
 }
-
 .paperkit-paper:hover .logo {
   left: -64px;
 }
-
 .paperkit-paper .controls {
   position: absolute;
   bottom: 16px;
@@ -231,50 +201,43 @@ body.no-paperkit .paperkit-space,body.no-paperkit .paperkit-paper,body.no-paperk
   transition: opacity 0.25s;
   max-width: 100%;
 }
-
 .paperkit-paper:hover .controls {
   opacity: 1;
 }
-
 .paperkit-paper .code {
   width: 100%;
   overflow: hidden;
 }
-
 .paperkit-paper .code pre {
   margin: 0;
   border-radius: 0 0 3px 3px;
 }
-
 .paperkit-paper .code:not(.on) {
   height: 0;
 }
-
 .paperkit-paper:hover {
-  box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
 }
-
 .paperkit-paper.iframe .example {
   display: none;
 }
-
 .paperkit-paper:not(.iframe) .example-iframe {
   display: none;
 }
-
 /* MOBILE SMALL */
+
 @media only screen and (max-width: 360px) {
-  .paperkit-space .content,.paperkit-space .content-pre {
+  .paperkit-space .content,
+  .paperkit-space .content-pre {
     padding: 16px;
   }
 }
-
 /* MOBILE */
+
 @media only screen and (max-width: 768px) {
   .paperkit-paper .controls .devices {
     display: none;
   }
-
   .paperkit-paper.fullscreen.mobile {
     width: 100%;
     height: 100%;
@@ -282,8 +245,8 @@ body.no-paperkit .paperkit-space,body.no-paperkit .paperkit-paper,body.no-paperk
     max-height: 800px;
   }
 }
-
 /* MOBILE AND TABLET */
+
 @media only screen and (max-width: 992px) {
   .paperkit-paper.logo-fix {
     padding-bottom: 80px;
@@ -291,40 +254,36 @@ body.no-paperkit .paperkit-space,body.no-paperkit .paperkit-paper,body.no-paperk
   .paperkit-space {
     padding-top: 64px;
   }
-  .paperkit-space .content,.paperkit-space.paper-style .content {
+  .paperkit-space .content,
+  .paperkit-space.paper-style .content {
     top: 64px;
   }
-
   .paperkit-paper .logo {
     left: 16px;
     bottom: 16px;
     transition: width .25s;
   }
-
   .paperkit-space .logo {
     left: -10px;
     top: 16px;
-    transition: width .25s;    
+    transition: width .25s;
   }
-
   .paperkit-paper .controls {
     opacity: 1;
     right: 0;
     bottom: 0;
     width: auto;
   }
-
   .paperkit-paper:hover .logo {
     left: 16px;
   }
 }
-
 /* TABLET */
+
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .paperkit-paper .controls .device.desktop {
     display: none;
   }
-
   .paperkit-paper.fullscreen.tablet {
     width: 100% !important;
     height: 100%;
@@ -335,13 +294,13 @@ body.no-paperkit .paperkit-space,body.no-paperkit .paperkit-paper,body.no-paperk
     width: 360px;
   }
 }
-
 @media only screen and (min-width: 1241px) {
   .paperkit-paper.right-desktop {
     margin-right: 0 !important;
     margin-bottom: 128px;
   }
-  .paperkit-paper.left,.paperkit-paper.left-first {
+  .paperkit-paper.left,
+  .paperkit-paper.left-first {
     float: left;
     margin-left: 40px;
   }
@@ -349,7 +308,8 @@ body.no-paperkit .paperkit-space,body.no-paperkit .paperkit-paper,body.no-paperk
     margin-left: 0;
     margin-right: 0;
   }
-  .paperkit-paper.right,.paperkit-paper.right-first {
+  .paperkit-paper.right,
+  .paperkit-paper.right-first {
     float: right;
     margin-right: 40px;
   }

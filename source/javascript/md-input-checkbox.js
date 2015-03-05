@@ -1,5 +1,5 @@
 var initMDInputCheckbox = function(MDCheckbox) {
-	MDCheckbox.toggle = function(e) {
+  MDCheckbox.toggle = function(e) {
     if (MDCheckbox.hasAttribute('checked')) {
       this.uncheck();
     } else {
@@ -18,7 +18,7 @@ var initMDInputCheckbox = function(MDCheckbox) {
   }
 
   MDCheckbox.addEventListener('click', MDCheckbox.toggle);
- 
+
   MDCheckbox.attributeChangedCallback = function(attrname, oldvalue, newvalue) {
     console.log("CHANGED ATTRIBUTE " + attrname + " VALUE " + newvalue);
   };
@@ -26,13 +26,17 @@ var initMDInputCheckbox = function(MDCheckbox) {
   MDCheckbox.state = "unchecked";
 
   // INIT OBSERVER
-  var observer = new MutationObserver(function(mutations) { 
-      mutations.forEach(function(mutation) {
-        var element = mutation.target;
-        element.attributeChangedCallback(mutation.attributeName, mutation.oldvalue, element.getAttribute(mutation.attributeName));
-      });
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      var element = mutation.target;
+      element.attributeChangedCallback(mutation.attributeName, mutation.oldvalue, element.getAttribute(mutation.attributeName));
+    });
   });
 
-  var config = { attributes: true, childList: false, characterData: false };
+  var config = {
+    attributes: true,
+    childList: false,
+    characterData: false
+  };
   observer.observe(MDCheckbox, config);
 }

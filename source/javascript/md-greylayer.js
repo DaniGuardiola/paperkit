@@ -34,7 +34,7 @@ var initMDGreylayer = function(MDGreylayer) {
   MDGreylayer.noZIndex = function() {
     MDGreylayer.style.zIndex = "";
   }
- 
+
   /**
    * Callback function, called when an attribute changes.
    * @param {string} attrname Changed attribute name
@@ -46,13 +46,17 @@ var initMDGreylayer = function(MDGreylayer) {
   };
 
   // INIT OBSERVER
-  var observer = new MutationObserver(function(mutations) { 
-      mutations.forEach(function(mutation) {
-        var element = mutation.target;
-        element.attributeChangedCallback(mutation.attributeName, mutation.oldvalue, element.getAttribute(mutation.attributeName));
-      });
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      var element = mutation.target;
+      element.attributeChangedCallback(mutation.attributeName, mutation.oldvalue, element.getAttribute(mutation.attributeName));
+    });
   });
 
-  var config = { attributes: true, childList: false, characterData: false };
+  var config = {
+    attributes: true,
+    childList: false,
+    characterData: false
+  };
   observer.observe(MDGreylayer, config);
 }

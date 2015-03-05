@@ -5,57 +5,57 @@ var css = require('css')
 module.exports = Generator;
 
 function Generator(jsonData) {
-  var jsonData=JSON.parse(jsonData);
+  var jsonData = JSON.parse(jsonData);
 
   function Rule() {
-    this.type="rule";
-    this.selectors=[];
-    this.declarations=[];
+    this.type = "rule";
+    this.selectors = [];
+    this.declarations = [];
   };
 
   function Declaration() {
-    this.type="declaration";
+    this.type = "declaration";
     this.property = "";
     this.value = "";
   }
 
   function Media() {
-    this.type="media";
-    this.media="";
-    this.rules=[];
+    this.type = "media";
+    this.media = "";
+    this.rules = [];
   }
 
   var generatedMedias = [];
 
   this.generate = function() {
-    var generatedData = [];  
+    var generatedData = [];
 
     jsonData.values.forEach(function(value) {
-      if('css' in value) {
-        generatedData.push(generateRule(value.css, jsonData.name, value.name));      
+      if ('css' in value) {
+        generatedData.push(generateRule(value.css, jsonData.name, value.name));
       }
 
-      if('variants' in value) {
+      if ('variants' in value) {
         value.variants.forEach(function(variant) {
-          if('css' in variant) {
+          if ('css' in variant) {
             generatedData.push(generateRule(variant.css, jsonData.name, value.name, variant.name, value.defaultVariant));
-          }          
+          }
         });
       }
 
-      if('responsive' in value) {
+      if ('responsive' in value) {
         value.responsive.forEach(function(responsive) {
           generateMedia(responsive, jsonData.name, value.name);
         });
       }
 
-      if('variants' in value) {
+      if ('variants' in value) {
         value.variants.forEach(function(variant) {
-          if('responsive' in variant) {
+          if ('responsive' in variant) {
             variant.responsive.forEach(function(responsive) {
               generateMedia(responsive, jsonData.name, value.name, variant.name, false);
-            });            
-          }          
+            });
+          }
         });
       }
     });
@@ -73,12 +73,12 @@ function Generator(jsonData) {
   };
 
   var generateRule = function(css, tagname, valuename, variantname, defaultVariant) {
-    var rule = new Rule();        
+    var rule = new Rule();
     var ruleSelector = sprintf("[%s^=%s]", tagname, valuename);
 
     // Generate rule selectors
-    if(variantname) {      
-      if(defaultVariant && defaultVariant==variantname) {
+    if (variantname) {
+      if (defaultVariant && defaultVariant == variantname) {
         winston.debug("VARIANT => " + variantname + " DEFAULT => " + defaultVariant);
         rule.selectors.push(ruleSelector);
       }
@@ -89,17 +89,17 @@ function Generator(jsonData) {
     // Generate rule declarations
     css.forEach(function(cssValue) {
       cssValue['type'] = "declaration";
-      rule.declarations.push(cssValue);      
+      rule.declarations.push(cssValue);
     });
 
     return rule;
   };
 
-  var generateMedia=function(responsive, tagname, valuename, variantname) {
+  var generateMedia = function(responsive, tagname, valuename, variantname) {
     responsive.target.forEach(function(target) {
       var media = getMedia(target);
       winston.debug(sprintf("FOUND MEDIA => %s", target));
-      if(!media) {
+      if (!media) {
         media = new Media();
         media.media = target;
         media.rules = [];
@@ -115,12 +115,12 @@ function Generator(jsonData) {
     });
   };
 
-  var getMedia=function(mediaName) {
+  var getMedia = function(mediaName) {
     winston.debug(sprintf("SEARCHING FOR MEDIA => %s", mediaName));
-    for(var i=0; i < generatedMedias.length; i++) {
-      var generatedMedia=generatedMedias[i];
+    for (var i = 0; i < generatedMedias.length; i++) {
+      var generatedMedia = generatedMedias[i];
       winston.debug(sprintf("MEDIA IN ARRAY => %s", generatedMedia.media));
-      if(generatedMedia.media==mediaName) {
+      if (generatedMedia.media == mediaName) {
         winston.debug(sprintf("FOUND!!!!"));
         return generatedMedia;
       }
