@@ -1,0 +1,3 @@
+- Use: http://www.fontsquirrel.com/fonts/noto-sans and http://www.fontsquirrel.com/fonts/noto-serif
+- Allow variations?
+- May be useful: http://www.fontsquirrel.com/tools/webfont-generator

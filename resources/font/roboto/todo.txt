@@ -1,0 +1,3 @@
+- Use: http://www.fontsquirrel.com/fonts/roboto
+- Allow variations?
+- May be useful: http://www.fontsquirrel.com/tools/webfont-generator
