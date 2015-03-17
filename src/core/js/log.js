@@ -71,7 +71,7 @@
    * @param  {string} type The type/level of log
    * @param  {object} opt  Options with top priority
    */
-  window.md.log = function(what, type, opt) {
+  md.log = function(what, type, opt) {
     // Sanity checks
     if (!what) {
       this.log("[log] The \"what\" parameter is required", "error");
@@ -100,7 +100,11 @@
     }
     console[mode]("%c" + banner + what, "color: " + color + ";" + style);
   };
-  Object.defineProperties(window.md.log, {
-    "options": options
+  Object.defineProperties(md.log, {
+    "options": {
+      "get": function() {
+        return options;
+      }
+    }
   });
 })();
