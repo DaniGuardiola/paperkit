@@ -10,11 +10,10 @@
   }
   window.md = {
     load: function() {
-      md.log("Loaded!", "info");
+      md.log("[core] Loaded", "info");
     }
   };
 
   // DEBUG! TEMPORAL!
-  console.log("DEBUG-PK Before load: ", "debug");
-  console.log(md);
+  console.log("PK[debug] Before load: ", md);
 }());

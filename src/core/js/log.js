@@ -28,7 +28,7 @@
         color: "#000",
         mode: "log",
         on: true,
-        banner: "DEBUG-PK "
+        banner: "PK[debug] "
       },
       error: {
         color: "#F44336",
@@ -99,4 +99,6 @@
   Object.defineProperty(md, "log", {
     "value": log
   });
+
+  md.log("[log] Loaded", "info");
 })();
