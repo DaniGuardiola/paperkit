@@ -9,7 +9,7 @@ var md = {
      * Paperkit folder path
      * @type {String}
      */
-    path: "",
+    _path: "",
     /**
      * Array of load callback functions
      * @type {Array}
