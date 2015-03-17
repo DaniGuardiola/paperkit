@@ -1,5 +1,5 @@
-"use strict";
-(function(global) {
-  global.md = {};
+(function() {
+  "use strict";
+  window.md = {};
   console.log(global.md);
-}(window));
+}());
