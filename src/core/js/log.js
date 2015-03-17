@@ -50,19 +50,19 @@
 
   /**
    * Log API main function
-   * @param  {string} what The text to show on console
+   * @param  {string} message The text to show on console
    * @param  {string} type The type/level of log
    * @param  {object} opt  Options with top priority
    */
 
-   function log(what, type, opt) {
-    // Sanity checks
-    if (!what) {
-      this.log("[log] The \"what\" parameter is required", "error");
-      return false; 
+  function log(message, type, opt) {
+    // Error handling
+    if (!message) {
+      this.log("[log] The \"message\" parameter is required", "error");
+      return false;
     }
-    if (typeof what !== "string") {
-      this.log("[log] The \"what\" parameter must be string, it is " + typeof what + " instead", "error");
+    if (typeof message !== "string") {
+      this.log("[log] The \"message\" parameter must be string, it is " + typeof what + " instead", "error");
       return false;
     }
     type = type || "log";
@@ -85,10 +85,10 @@
       this.log("[log] Mode \"" + mode + "\" not available on console object, switching to \"log\"", "warn");
       mode = "log";
     }
-    console[mode]("%c" + banner + what, "color: " + color + ";" + style);
+    console[mode]("%c" + banner + message, "color: " + color + ";" + style);
   }
 
-  function getOptions(){
+  function getOptions() {
     return options;
   }
 
