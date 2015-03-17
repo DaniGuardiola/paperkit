@@ -71,11 +71,12 @@
    * @param  {string} type The type/level of log
    * @param  {object} opt  Options with top priority
    */
-  md.log = function(what, type, opt) {
+
+   function log(what, type, opt) {
     // Sanity checks
     if (!what) {
       this.log("[log] The \"what\" parameter is required", "error");
-      return false;
+      return false; 
     }
     if (typeof what !== "string") {
       this.log("[log] The \"what\" parameter must be string, it is " + typeof what + " instead", "error");
@@ -99,12 +100,17 @@
       mode = "log";
     }
     console[mode]("%c" + banner + what, "color: " + color + ";" + style);
-  };
-  Object.defineProperties(md.log, {
-    "options": {
-      "get": function() {
-        return options;
-      }
-    }
+  }
+
+  function getOptions(){
+    return options;
+  }
+
+  Object.defineProperty(log, "options", {
+    "get": getOptions
+  });
+
+  Object.defineProperty(md, "log", {
+    "value": log
   });
 })();
