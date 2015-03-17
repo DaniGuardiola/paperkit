@@ -55,20 +55,21 @@
    * @param  {object} opt  Options with top priority
    */
 
+
   function log(message, type, opt) {
     // Error handling
     if (!message) {
-      this.log("[log] The \"message\" parameter is required", "error");
+      log("[log] The \"message\" parameter is required", "error");
       return false;
     }
     if (typeof message !== "string") {
-      this.log("[log] The \"message\" parameter must be string, it is " + typeof what + " instead", "error");
+      log("[log] The \"message\" parameter must be string, it is " + typeof what + " instead", "error");
       return false;
     }
     type = type || "log";
     opt = opt || {};
     if (!options.types[type]) {
-      this.log("[log] Type \"" + type + "\" not found, switching to \"" + options.types.default+"\"", "warn");
+      log("[log] Type \"" + type + "\" not found, switching to \"" + options.types.default+"\"", "warn");
       type = options.types.default;
     }
     if (!options.types[type].on) {
@@ -82,7 +83,7 @@
       style = opt.style || option.style || options.style,
       mode = opt.mode || option.mode || options.mode;
     if (!console[mode]) {
-      this.log("[log] Mode \"" + mode + "\" not available on console object, switching to \"log\"", "warn");
+      log("[log] Mode \"" + mode + "\" not available on console object, switching to \"log\"", "warn");
       mode = "log";
     }
     console[mode]("%c" + banner + message, "color: " + color + ";" + style);
