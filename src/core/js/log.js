@@ -55,20 +55,20 @@
    * @param  {object} opt  Options with top priority
    */
 
-   function log(what, type, opt) {
+  function log(what, type, opt) {
     // Sanity checks
     if (!what) {
-      this.log("[log] The \"what\" parameter is required", "error");
-      return false; 
+      log("[log] The \"what\" parameter is required", "error");
+      return false;
     }
     if (typeof what !== "string") {
-      this.log("[log] The \"what\" parameter must be string, it is " + typeof what + " instead", "error");
+      log("[log] The \"what\" parameter must be string, it is " + typeof what + " instead", "error");
       return false;
     }
     type = type || "log";
     opt = opt || {};
     if (!options.types[type]) {
-      this.log("[log] Type \"" + type + "\" not found, switching to \"" + options.types.default+"\"", "warn");
+      log("[log] Type \"" + type + "\" not found, switching to \"" + options.types.default+"\"", "warn");
       type = options.types.default;
     }
     if (!options.types[type].on) {
@@ -82,13 +82,13 @@
       style = opt.style || option.style || options.style,
       mode = opt.mode || option.mode || options.mode;
     if (!console[mode]) {
-      this.log("[log] Mode \"" + mode + "\" not available on console object, switching to \"log\"", "warn");
+      log("[log] Mode \"" + mode + "\" not available on console object, switching to \"log\"", "warn");
       mode = "log";
     }
     console[mode]("%c" + banner + what, "color: " + color + ";" + style);
   }
 
-  function getOptions(){
+  function getOptions() {
     return options;
   }
 
