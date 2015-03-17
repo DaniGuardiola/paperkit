@@ -3,6 +3,8 @@
  */
 (function() {
   "use strict";
+
+  // Sanity check
   if (window.md === undefined) {
     console.error("PK [log] Paperkit was not found!");
     return;
@@ -22,6 +24,12 @@
         mode: "log",
         on: true
       },
+      debug: {
+        color: "#000",
+        mode: "log",
+        on: true,
+        banner: "DEBUG-PK "
+      },
       error: {
         color: "#F44336",
         mode: "error",
@@ -39,31 +47,6 @@
       }
     }
   };
-
-
-  /*
-    function awesome() {
-      console.log("test");
-    }
-    Object.defineProperties(awesome, {
-      "options": {
-        "value": {
-          "beAwesome": true
-        }
-      }
-    });
-
-    var someObject = {};
-    var awesome = true;
-    Object.defineProperty(someObject, {
-      "set": function(newValue) {
-        awesome = newValue;
-      },
-      "get": function() {
-        return awesome;
-      }
-    });
-  */
 
   /**
    * Log API main function
@@ -84,16 +67,19 @@
     type = type || "log";
     opt = opt || {};
     if (!options.types[type]) {
-      this.log("[log] Type \"" + type + "\" not found, switching to \"log\"", "warn");
-      type = "log";
+      this.log("[log] Type \"" + type + "\" not found, switching to \"" + options.types.default+"\"", "warn");
+      type = options.types.default;
+    }
+    if (!options.types[type].on) {
+      return false;
     }
 
     // Getting configuration
-    var option = options.types[type];
-    var banner = opt.banner || option.banner || options.banner;
-    var color = opt.color || option.color || options.color;
-    var style = opt.style || option.style || options.style;
-    var mode = opt.mode || option.mode || options.mode;
+    var option = options.types[type],
+      banner = opt.banner || option.banner || options.banner,
+      color = opt.color || option.color || options.color,
+      style = opt.style || option.style || options.style,
+      mode = opt.mode || option.mode || options.mode;
     if (!console[mode]) {
       this.log("[log] Mode \"" + mode + "\" not available on console object, switching to \"log\"", "warn");
       mode = "log";
