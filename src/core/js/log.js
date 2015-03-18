@@ -1,5 +1,5 @@
 /**
- * API log
+ * MODULE log
  */
 (function() {
   "use strict";
@@ -12,12 +12,12 @@
   // End
 
   /**
-   * API options
+   * Options
    * @type {Object}
    */
   var options = {
-    banner: "PK ",
-    style: " font-family: Roboto, Arial; font-size: 13px; font-weight: 600;",
+    banner: "PK",
+    style: "font-family: Roboto, Arial; font-size: 13px; font-weight: 600;",
     types: {
       default: "log",
       log: {
@@ -50,7 +50,7 @@
   };
 
   /**
-   * Log API main function
+   * Main function
    * @param  {string} message The text to show on console
    * @param  {string} type The type/level of log
    * @param  {object} opt  Options with top priority
@@ -87,7 +87,7 @@
       log("[log] Mode \"" + mode + "\" not available on console object, switching to \"log\"", "warn");
       mode = "log";
     }
-    console[mode]("%c" + banner + message, "color: " + color + ";" + style);
+    console[mode]("%c" + banner + " " + message, "color: " + color + "; " + style);
   }
 
   function getOptions() {
@@ -122,6 +122,12 @@
   }
 
   Object.defineProperties(log, {
+    "type": {
+      "value": "module"
+    },
+    "core": {
+      "value": true
+    },
     "options": {
       "get": getOptions
     },
@@ -136,10 +142,11 @@
   Object.defineProperty(md, "log", {
     "value": log
   });
+  md.module.list = "log";
 
   // Debug! TEMPORAL!
   enable("info");
   enable("debug");
 
-  log("[log] Loaded", "info");
+  log("[log] Module loaded", "info");
 })();
