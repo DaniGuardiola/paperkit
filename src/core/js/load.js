@@ -3,7 +3,9 @@
  */
 (function() {
   "use strict";
-  md.load();
+  window.addEventListener("load", function() {
+    md.load();
+  });
 
   // DEBUG! TEMPORAL!
   md.log("After load: ", "debug");

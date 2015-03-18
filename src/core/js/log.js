@@ -9,6 +9,7 @@
     console.error("PK [log] Paperkit was not found!");
     return;
   }
+  // End
 
   /**
    * API options
@@ -27,7 +28,7 @@
       debug: {
         color: "#000",
         mode: "log",
-        on: true,
+        on: false,
         banner: "PK[debug] "
       },
       error: {
@@ -43,7 +44,7 @@
       info: {
         color: "#0D47A1",
         mode: "info",
-        on: true
+        on: false
       }
     }
   };
@@ -60,11 +61,11 @@
     // Error handling
     if (!message) {
       log("[log] The \"message\" parameter is required", "error");
-      return false;
+      return;
     }
     if (typeof message !== "string") {
       log("[log] The \"message\" parameter must be string, it is " + typeof what + " instead", "error");
-      return false;
+      return;
     }
     type = type || "log";
     opt = opt || {};
@@ -73,7 +74,7 @@
       type = options.types.default;
     }
     if (!options.types[type].on) {
-      return false;
+      return;
     }
 
     // Getting configuration
@@ -90,16 +91,55 @@
   }
 
   function getOptions() {
-    return options;
+    var readonly = Object.create(options); // Is this the best way to make properties inside options readonly?
+    return readonly;
   }
 
-  Object.defineProperty(log, "options", {
-    "get": getOptions
+  function enable(level) {
+    if (!level) {
+      log("[log.enable] No level was specified", "error");
+      return;
+    }
+    if (!options.types[level]) {
+      log("[log.enable] Level \"" + level + "\" does not exists", "error");
+      return;
+    }
+    options.types[level].on = true;
+    log("[log.enable] Level \"" + level + "\" was enabled", "info");
+  }
+
+  function disable(level) {
+    if (!level) {
+      log("[log.disable] No level was specified", "error");
+      return;
+    }
+    if (!options.types[level]) {
+      log("[log.disable] Level \"" + level + "\" does not exists", "error");
+      return;
+    }
+    options.types[level].on = false;
+    log("[log.disable] Level \"" + level + "\" was disabled", "info");
+  }
+
+  Object.defineProperties(log, {
+    "options": {
+      "get": getOptions
+    },
+    "enable": {
+      "value": enable
+    },
+    "disable": {
+      "value": disable
+    }
   });
 
   Object.defineProperty(md, "log", {
     "value": log
   });
 
-  md.log("[log] Loaded", "info");
+  // Debug! TEMPORAL!
+  enable("info");
+  enable("debug");
+
+  log("[log] Loaded", "info");
 })();
