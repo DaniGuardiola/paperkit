@@ -45,9 +45,18 @@
         color: "#0D47A1",
         mode: "info",
         on: false
+      },
+      dir: {
+        mode: "dir"
       }
     }
   };
+
+  // Options getter
+  function getOptions() {
+    var readonly = Object.create(options); // Is this the best way to make properties inside options readonly?
+    return readonly;
+  }
 
   /**
    * Main function
@@ -57,20 +66,20 @@
    */
 
 
-  function log(message, type, opt) {
+  function main(message, type, opt) {
     // Error handling
     if (!message) {
-      log("[log] The \"message\" parameter is required", "error");
+      main("[log] The \"message\" parameter is required", "error");
       return;
     }
-    if (typeof message !== "string") {
-      log("[log] The \"message\" parameter must be string, it is " + typeof what + " instead", "error");
+    if (typeof message !== "string" && type !== "dir") {
+      main("[log] The \"message\" parameter must be string, it is " + typeof what + " instead", "error");
       return;
     }
     type = type || "log";
     opt = opt || {};
     if (!options.types[type]) {
-      log("[log] Type \"" + type + "\" not found, switching to \"" + options.types.default+"\"", "warn");
+      main("[log] Type \"" + type + "\" not found, switching to \"" + options.types.default+"\"", "warn");
       type = options.types.default;
     }
     if (!options.types[type].on) {
@@ -84,44 +93,49 @@
       style = opt.style || option.style || options.style,
       mode = opt.mode || option.mode || options.mode;
     if (!console[mode]) {
-      log("[log] Mode \"" + mode + "\" not available on console object, switching to \"log\"", "warn");
+      main("[log] Mode \"" + mode + "\" not available on console object, switching to \"log\"", "warn");
       mode = "log";
     }
-    console[mode]("%c" + banner + " " + message, "color: " + color + "; " + style);
+    if (mode === "dir") {
+      console.dir(message).bind(console);
+      return;
+    }
+    consolex[mode] = console[mode].bind(console);
+    consolex[mode]("%c" + banner + " " + message, "color: " + color + "; " + style);
   }
 
-  function getOptions() {
-    var readonly = Object.create(options); // Is this the best way to make properties inside options readonly?
-    return readonly;
-  }
+  // Utils
+  var consolex = {};
 
+
+  // Methods
   function enable(level) {
     if (!level) {
-      log("[log.enable] No level was specified", "error");
+      main("[log.enable] No level was specified", "error");
       return;
     }
     if (!options.types[level]) {
-      log("[log.enable] Level \"" + level + "\" does not exists", "error");
+      main("[log.enable] Level \"" + level + "\" does not exists", "error");
       return;
     }
     options.types[level].on = true;
-    log("[log.enable] Level \"" + level + "\" was enabled", "info");
+    main("[log.enable] Level \"" + level + "\" was enabled", "info");
   }
 
   function disable(level) {
     if (!level) {
-      log("[log.disable] No level was specified", "error");
+      main("[log.disable] No level was specified", "error");
       return;
     }
     if (!options.types[level]) {
-      log("[log.disable] Level \"" + level + "\" does not exists", "error");
+      main("[log.disable] Level \"" + level + "\" does not exists", "error");
       return;
     }
     options.types[level].on = false;
-    log("[log.disable] Level \"" + level + "\" was disabled", "info");
+    main("[log.disable] Level \"" + level + "\" was disabled", "info");
   }
 
-  Object.defineProperties(log, {
+  Object.defineProperties(main, {
     "type": {
       "value": "module"
     },
@@ -140,7 +154,7 @@
   });
 
   Object.defineProperty(md, "log", {
-    "value": log
+    "value": main
   });
   md.module.list = "log";
 
@@ -148,5 +162,5 @@
   enable("info");
   enable("debug");
 
-  log("[log] Module loaded", "info");
+  main("[log] Module loaded", "info");
 })();
