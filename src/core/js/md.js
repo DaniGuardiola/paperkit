@@ -60,11 +60,11 @@
     var exists = (moduleList.indexOf(name) > -1);
     if (!exists) {
       return false;
-    } else if (verbose) {
-      return md[name]._mdOptions_;
-    } else {
-      return true;
     }
+    if (verbose) {
+      return md[name]._mdOptions_;
+    }
+    return true;
   }
 
   function moduleLoad(moduleObj, allInQueue) {
@@ -99,23 +99,23 @@
       if (allInQueue) {
         moduleLoad(false, allInQueue);
       }
-    } else if (moduleQueueList[0] && moduleQueueList[0].function && {}.toString.call(moduleQueueList[0].function) === '[object Function]') {
-      // Module queue if not empty
-      var next = moduleQueueList[0];
-      moduleQueueList.splice(0, 1);
-      moduleLoad(next, allInQueue);
     } else {
-      dispatchModuleLoadEvent();
-      return;
+      var next = moduleQueueList[0];
+      if (next && typeof next.function === "function") {
+        // Module queue if not empty
+        moduleQueueList.splice(0, 1);
+        moduleLoad(next, allInQueue);
+      } else {
+        dispatchModuleLoadEvent();
+      }
     }
   }
 
   function moduleQueue(options, moduleFunction) {
-    var moduleObj = {
+    moduleQueueList.push({
       "options": options,
       "function": moduleFunction
-    };
-    moduleQueueList.push(moduleObj);
+    });
   }
 
   Object.defineProperties(moduleQueue, {
@@ -150,11 +150,7 @@
   var componentList = [];
 
   function component(input) {
-    if (componentList.indexOf(input) > -1) {
-      return true;
-    } else {
-      return false;
-    }
+    return componentList.indexOf(input) > -1;
   }
 
   Object.defineProperty(component, "list", {

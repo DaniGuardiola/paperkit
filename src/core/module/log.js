@@ -29,7 +29,7 @@ md.module.queue({
       },
       debug: {
         color: "#000",
-        mode: "log",
+        mode: "debug",
         on: false,
         banner: "PK[debug] "
       },
