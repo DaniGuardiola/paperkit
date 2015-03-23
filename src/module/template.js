@@ -1,86 +1,65 @@
+// Standalone version code start
+if (window.md === undefined) {
+  throw "PK [template] Paperkit was not found!";
+}
+// Standalone version code end
+
+
 /**
  * MODULE template
  */
-(function() {
+md.module.queue({
+  "name": "template",
+  "dependencies": ["log"]
+}, function() {
   "use strict";
 
-  // Sanity check
-  if (window.md === undefined) {
-    console.error("PK [log] Paperkit was not found!");
-    return;
-  }
 
   /**
    * Options (optional)
-   * @type {Object}
+   * @type {object}
    */
   var options = {
     option1: "default1",
     option2: true,
-    option2: false,
+    option3: false,
     more: {
       "whatever": true
     }
   };
 
   /**
-   * Options getter
-   * @return {object} Read only options object
-   */
-  function getOptions() {
-    var readonly = Object.create(options);
-    return readonly;
-  }
-
-  /**
    * Main function (md.template()) (optional)
    * Note that md.template can be a function or an object
    * var main = {}; is valid too
    */
-  function main(something) {
+  var main = function(something) {
     // Error handling
     if (!something) {
       md.log("[template] The \"something\" parameter is required", "error");
       return;
     }
     // Functionality
-    md.log("[template] I'm just a template!","info");
-  }
+    md.log("[template] I'm just a template!", "info");
+  };
 
   /**
    * Method example
    */
-  function example() {
-    md.log("[template.example] I'm an example method");
+  function method() {
+    md.log("[template.method] I'm an example method");
   }
 
   // 
   Object.defineProperties(main, {
-    "type": {
-      "value": "module"
-    },
-    "core": {
-      "value": true
-    },
     "options": {
-      "get": getOptions
+      "get": function() {
+        return Object.freeze(options);
+      }
     },
-    "enable": {
-      "value": enable
-    },
-    "disable": {
-      "value": disable
+    "method": {
+      "value": method
     }
   });
-
-  Object.defineProperty(md, "log", {
-    "value": log
-  });
-  md.module.list = "log";
-
-  // Debug! TEMPORAL!
-  enable("info");
-  enable("debug");
-
-  log("[log] Module loaded", "info");
-})();
+  return main;
+});

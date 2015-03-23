@@ -9,6 +9,3 @@
   md.log("After load:", "debug");
   md.log(md, "dir");
 }());
-window.addEventListener("md-load", function() {
-  md.log("MD-LOAD EVENT FIRED", "info");
-});

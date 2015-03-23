@@ -62,9 +62,8 @@
       return false;
     } else if (verbose) {
       return md[name]._mdOptions_;
-    } else {
-      return true;
     }
+    return true;
   }
 
   function moduleLoad(moduleObj, allInQueue) {
@@ -84,7 +83,10 @@
       moduleObj.options.dependencies = moduleObj.options.dependencies || [];
       // Defining md options on module
       Object.defineProperty(module, "_mdOptions_", {
-        "value": moduleObj.options
+        "get": function(){
+          var readOnly = Object.create(moduleObj.options);
+          return readOnly;
+        }
       });
       // Defining the module on md namespace
       Object.defineProperty(md, name, {
@@ -106,7 +108,6 @@
       moduleLoad(next, allInQueue);
     } else {
       dispatchModuleLoadEvent();
-      return;
     }
   }
 
@@ -190,7 +191,7 @@
   // Core functions
 
   function load() {
-    md.module.load(false, true);
+    setTimeout(md.module.load(false, true),0);
     // Init body
     if (document.body.classList.contains("md-init")) {
       // md.init(document.body);
