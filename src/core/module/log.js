@@ -1,9 +1,9 @@
-// START error check
+// Standalone version code start
 if (window.md === undefined) {
   console.error("PK [log] Paperkit was not found!");
-  throw "Can't continue";
+  throw "Stopped module load";
 }
-// END error check
+// Standalone version code end
 
 /**
  * MODULE log
@@ -53,15 +53,6 @@ md.module.queue({
       }
     }
   };
-
-  /**
-   * Options getter
-   * @return {Object} Options getter
-   */
-  function getOptions() {
-    var readonly = Object.create(options); // Is this the best way to make properties inside options readonly?
-    return readonly;
-  }
 
   /**
    * Main function
@@ -137,7 +128,9 @@ md.module.queue({
 
   Object.defineProperties(main, {
     "options": {
-      "get": getOptions
+      "get": function() {
+        return Object.freeze(options);
+      }
     },
     "enable": {
       "value": enable
