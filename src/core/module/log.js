@@ -1,16 +1,18 @@
+// START error check
+if (window.md === undefined) {
+  console.error("PK [log] Paperkit was not found!");
+  throw "Can't continue";
+}
+// END error check
+
 /**
  * MODULE log
  */
-(function() {
+md.module.queue({
+  "name": "log",
+  "core": true
+}, function() {
   "use strict";
-
-  // Sanity check
-  if (window.md === undefined) {
-    console.error("PK [log] Paperkit was not found!");
-    return;
-  }
-  // End
-
   /**
    * Options
    * @type {Object}
@@ -52,7 +54,10 @@
     }
   };
 
-  // Options getter
+  /**
+   * Options getter
+   * @return {Object} Options getter
+   */
   function getOptions() {
     var readonly = Object.create(options); // Is this the best way to make properties inside options readonly?
     return readonly;
@@ -64,8 +69,6 @@
    * @param  {string} type The type/level of log
    * @param  {object} opt  Options with top priority
    */
-
-
   function main(message, type, opt) {
     // Error handling
     if (!message) {
@@ -97,15 +100,12 @@
       mode = "log";
     }
     if (mode === "dir") {
-      console.dir(message).bind(console);
+      console.dir(message);
       return;
     }
-    consolex[mode] = console[mode].bind(console);
-    consolex[mode]("%c" + banner + " " + message, "color: " + color + "; " + style);
+    console[mode] = console[mode];
+    console[mode]("%c" + banner + " " + message, "color: " + color + "; " + style);
   }
-
-  // Utils
-  var consolex = {};
 
 
   // Methods
@@ -136,12 +136,6 @@
   }
 
   Object.defineProperties(main, {
-    "type": {
-      "value": "module"
-    },
-    "core": {
-      "value": true
-    },
     "options": {
       "get": getOptions
     },
@@ -153,14 +147,12 @@
     }
   });
 
-  Object.defineProperty(md, "log", {
-    "value": main
-  });
-  md.module.list = "log";
-
   // Debug! TEMPORAL!
   enable("info");
   enable("debug");
+  enable("dir");
 
   main("[log] Module loaded", "info");
-})();
+
+  return main;
+});

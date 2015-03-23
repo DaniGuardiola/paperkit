@@ -3,7 +3,7 @@
  */
 (function() {
   "use strict";
-  md.load(); // How to load when all modules and components are included? Initialization needs those
+  md.load();
 
   // DEBUG! TEMPORAL!
   md.log("After load:", "debug");
