@@ -3,9 +3,5 @@
  */
 (function() {
   "use strict";
-  md.load();
-
-  // DEBUG! TEMPORAL!
-  md.log("After load:", "debug");
-  md.log(md, "dir");
+  setTimeout(md.load(),0);
 }());

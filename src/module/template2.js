@@ -10,7 +10,7 @@ var PAPERKIT_MODULE_template = true;
  * MODULE template
  */
 md.module.queue({
-  "name": "template",
+  "name": "template2",
   "dependencies": ["log"]
 }, function() {
   "use strict";

@@ -84,7 +84,7 @@
       moduleObj.options.dependencies = moduleObj.options.dependencies || [];
       // Defining md options on module
       Object.defineProperty(module, "_mdOptions_", {
-        "get": function(){
+        "get": function() {
           var readOnly = Object.create(moduleObj.options);
           return readOnly;
         }
@@ -100,14 +100,14 @@
 
       // If allInQueue, load next one
       if (allInQueue) {
-        moduleLoad(false, allInQueue);
+        moduleLoad();
       }
     } else {
       var next = moduleQueueList[0];
       if (next && typeof next.function === "function") {
         // Module queue if not empty
         moduleQueueList.splice(0, 1);
-        moduleLoad(next, allInQueue);
+        moduleLoad(next, true);
       } else {
         dispatchModuleLoadEvent();
       }
@@ -165,37 +165,85 @@
     }
   });
 
-  // Utils
+  // Events and status
+  var loadStatus = {
+    core: false,
+    module: false,
+    component: true,
+    paperkit: false
+  }
+
   function dispatchCoreLoadEvent() {
+    md.log("[core] Loaded", "info");
+    loadStatus.core = true
     var loadEvent = new Event("md-core-load");
     window.dispatchEvent(loadEvent);
   }
 
   function dispatchModuleLoadEvent() {
+    md.log("[module] Loaded", "info");
+    loadStatus.module = true
     var loadEvent = new Event("md-module-load");
     window.dispatchEvent(loadEvent);
+    if (loadStatus.core && loadStatus.component) {
+      dispatchLoadEvent();
+    }
   }
 
   function dispatchComponentLoadEvent() {
+    md.log("[component] Loaded", "info");
+    loadStatus.component = true
     var loadEvent = new Event("md-component-load");
     window.dispatchEvent(loadEvent);
+    if (loadStatus.core && loadStatus.module) {
+      dispatchLoadEvent();
+    }
   }
 
   function dispatchLoadEvent() {
+    md.log("[all] Loaded", "info");
+    loadStatus.paperkit = true
     var loadEvent = new Event("md-load");
     window.dispatchEvent(loadEvent);
   }
 
-  // Core functions
+  var loadingScripts = [];
+  var loadingScriptsEnd = false;
 
+  function loadPaperkitScripts(callback) {
+    var scripts = document.querySelectorAll("md-include");
+    var url, script;
+    if (scripts.length < 1) {
+      console.info("PK [core] No external scripts were found");
+      return;
+    }
+    for (var i = 0; i < scripts.length; i++) {
+      url = scripts[i].getAttribute("src");
+      script = document.createElement("script");
+      script.src = url;
+      loadingScripts.push(script);
+      document.body.appendChild(script);
+      script.addEventListener("load", function() {
+        var i = loadingScripts.indexOf(script);
+        loadingScripts.splice(i, 1);
+        if (loadingScripts.length < 1 && loadingScriptsEnd) {
+          if (callback) {
+            callback();
+          }
+        }
+      });
+      loadingScriptsEnd = true;
+      document.body.removeChild(script);
+    }
+  }
+
+  // Core functions
   function load() {
-    setTimeout(md.module.load(false, true),0);
+    loadPaperkitScripts(md.module.load);
     // Init body
     if (document.body.classList.contains("md-init")) {
       // md.init(document.body);
     }
-    md.log("[core] Loaded", "info");
-    dispatchLoadEvent();
   }
 
   Object.defineProperties(md, {
@@ -213,8 +261,4 @@
   Object.defineProperty(window, "md", {
     "value": md
   });
-
-  // DEBUG! TEMPORAL!
-  console.log("PK[debug] Before load: ");
-  console.dir(md);
 }());

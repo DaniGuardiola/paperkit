@@ -145,7 +145,5 @@ md.module.queue({
   enable("debug");
   enable("dir");
 
-  main("[log] Module loaded", "info");
-
   return main;
 });
