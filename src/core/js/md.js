@@ -4,17 +4,19 @@
  */
 (function() {
   "use strict";
+  if (document.currentScript) {
+    document.currentScript.addEventListener("load", function() {
+      setTimeout(md.load, 0);
+    });
+  }
   if (window === undefined) {
+    // Just in case...
     console.error("PK [core] Window is undefined. What are you doing? This is the weirdest thing that ever happened to a web framework! D: I'm scared");
     return;
   }
 
   // Namespace
   var md = {};
-
-  // Module
-  var moduleList = [];
-  var moduleQueueList = [];
 
   /**
    * Module interface:
@@ -49,8 +51,11 @@
    * except there's no modules in queue
    */
 
+  var moduleList = [];
+  var moduleQueueList = [];
+
   /**
-   * Module checker
+   * Checks if module is loaded
    * @param  {String} name Module name to check
    * @return {Boolean|Object}       True if module is loaded,
    *                                     if verbose is true, returns
@@ -67,14 +72,18 @@
     return true;
   }
 
+  /**
+   * Loads a module if specified or loads queue if not
+   * @param  {object} moduleObj  The module object
+   * @param  {boolean} allInQueue If true next item in queue will be loaded too
+   */
   function moduleLoad(moduleObj, allInQueue) {
     allInQueue = allInQueue || false;
     if (moduleObj) { // If moduleObj exists
       // moduleObj checks
-      // TODO: finish
-      if (typeof moduleObj === null) {
-        md.log("[module] The moduleObj parameter is not a valid object", "error");
-        return;
+      if (typeof moduleObj !== "object" || typeof moduleObj.options !== "object" || typeof moduleObj.function !== "function") {
+        md.log("[module] Not valid module object", "error");
+        return false;
       }
 
       // Module load
@@ -209,7 +218,7 @@
   var loadingScripts = [];
   var loadingScriptsEnd = false;
 
-  function loadPaperkitScripts(callback) {
+  function loadScripts(callback) {
     var scripts = document.querySelectorAll("md-include");
     var url, script;
     if (scripts.length < 1) {
@@ -221,26 +230,51 @@
       script = document.createElement("script");
       script.src = url;
       loadingScripts.push(script);
-      document.body.appendChild(script);
-      script.addEventListener("load", function() {
-        var i = loadingScripts.indexOf(script);
-        loadingScripts.splice(i, 1);
-        if (loadingScripts.length < 1 && loadingScriptsEnd && callback) {
+      urlExists(url, function() {
+        document.body.appendChild(script);
+        script.addEventListener("load", function() {
+          var i = loadingScripts.indexOf(script);
+          loadingScripts.splice(i, 1);
+          if (loadingScripts.length < 1 && loadingScriptsEnd && callback) {
+            callback();
+          }
+        });
+        loadingScriptsEnd = true;
+        document.body.removeChild(script);
+      }, function() {
+        if (md.module("log")) {
+          md.log("[module] 404 error");
+        } else {
+          console.error("PK [module] 404 error");
+        }
+        if (callback) {
           callback();
         }
       });
-      loadingScriptsEnd = true;
-      document.body.removeChild(script);
     }
   }
 
   // Core functions
   function load() {
-    loadPaperkitScripts(md.module.load);
+    loadScripts(md.module.load);
     // Init body
     if (document.body.classList.contains("md-init")) {
       // md.init(document.body);
     }
+  }
+
+  // Utils
+  function urlExists(url, success, failure) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("HEAD", url, true);
+    xhr.addEventListener("load", function() {
+      if (xhr.status !== 404 && success) {
+        success();
+      } else {
+        failure();
+      }
+    });
+    xhr.send();
   }
 
   Object.defineProperties(md, {
