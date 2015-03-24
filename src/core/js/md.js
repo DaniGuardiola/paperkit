@@ -85,8 +85,7 @@
       // Defining md options on module
       Object.defineProperty(module, "_mdOptions_", {
         "get": function() {
-          var readOnly = Object.create(moduleObj.options);
-          return readOnly;
+          return Object.create(moduleObj.options);
         }
       });
       // Defining the module on md namespace
@@ -171,18 +170,18 @@
     module: false,
     component: true,
     paperkit: false
-  }
+  };
 
   function dispatchCoreLoadEvent() {
     md.log("[core] Loaded", "info");
-    loadStatus.core = true
+    loadStatus.core = true;
     var loadEvent = new Event("md-core-load");
     window.dispatchEvent(loadEvent);
   }
 
   function dispatchModuleLoadEvent() {
     md.log("[module] Loaded", "info");
-    loadStatus.module = true
+    loadStatus.module = true;
     var loadEvent = new Event("md-module-load");
     window.dispatchEvent(loadEvent);
     if (loadStatus.core && loadStatus.component) {
@@ -192,7 +191,7 @@
 
   function dispatchComponentLoadEvent() {
     md.log("[component] Loaded", "info");
-    loadStatus.component = true
+    loadStatus.component = true;
     var loadEvent = new Event("md-component-load");
     window.dispatchEvent(loadEvent);
     if (loadStatus.core && loadStatus.module) {
@@ -202,7 +201,7 @@
 
   function dispatchLoadEvent() {
     md.log("[all] Loaded", "info");
-    loadStatus.paperkit = true
+    loadStatus.paperkit = true;
     var loadEvent = new Event("md-load");
     window.dispatchEvent(loadEvent);
   }
@@ -226,10 +225,8 @@
       script.addEventListener("load", function() {
         var i = loadingScripts.indexOf(script);
         loadingScripts.splice(i, 1);
-        if (loadingScripts.length < 1 && loadingScriptsEnd) {
-          if (callback) {
-            callback();
-          }
+        if (loadingScripts.length < 1 && loadingScriptsEnd && callback) {
+          callback();
         }
       });
       loadingScriptsEnd = true;

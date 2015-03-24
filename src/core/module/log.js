@@ -61,6 +61,9 @@ md.module.queue({
    * @param  {object} opt  Options with top priority
    */
   function main(message, type, opt) {
+    type = type || "log";
+    opt = opt || {};
+
     // Error handling
     if (!message) {
       main("[log] The \"message\" parameter is required", "error");
@@ -70,8 +73,6 @@ md.module.queue({
       main("[log] The \"message\" parameter must be string, it is " + typeof what + " instead", "error");
       return;
     }
-    type = type || "log";
-    opt = opt || {};
     if (!options.types[type]) {
       main("[log] Type \"" + type + "\" not found, switching to \"" + options.types.default+"\"", "warn");
       type = options.types.default;
@@ -94,7 +95,6 @@ md.module.queue({
       console.dir(message);
       return;
     }
-    console[mode] = console[mode];
     console[mode]("%c" + banner + " " + message, "color: " + color + "; " + style);
   }
 
@@ -129,7 +129,7 @@ md.module.queue({
   Object.defineProperties(main, {
     "options": {
       "get": function() {
-        return Object.freeze(options);
+        return Object.create(options);
       }
     },
     "enable": {
