@@ -2,8 +2,9 @@
 // - Add error constructor
 // - Add getInfo() or similar, as a general method
 //   and as alias (getter) on modules and components
+// - Add dependece functionality to modules
 // - Find solution to hint message "possible strict violation"
-// - Refactor include
+// - Refactor including
 // - Document everything
 // - Add component functionality
 // - Review error checking
@@ -16,8 +17,8 @@
  * - Components
  * - Events - fired in window. List: md-core-module-load, md-core-component-load,
  *            md-core-load, md-module-load, md-component-load, md-load and md-ready
- * - Include - loading modules and components files with <md-include src="...script.js">
- * - Load - what will be executed at the start
+ * - Including - loading modules and components files with <md-include src="...script.js">
+ * - Loading - the initial setup of the framework
  */
 (function() {
   "use strict";
@@ -28,6 +29,7 @@
   }
   // Get this script
   var paperkitScript = document.currentScript || document.querySelector("script[src$=\"paperkit.js\"]") || document.querySelector("script[paperkit]") || false;
+  // Load core when the script loads
   if (paperkitScript) {
     paperkitScript.addEventListener("load", function() {
       setTimeout(md.load, 0);
@@ -52,18 +54,19 @@
   /**
    * [MODULES]
    * A module looks like this:
-   * md.module.queue({
+   * md.module.queue({ // Options as first function parameter
    *   "name": "moduleName", // will be registered as md.moduleName
    *   "core": true, // or not defined
    *   "dependencies": [], // or not defined
    *   "someOption": "someValue" // other values
-   * },function(){
+   * },function(){ // Function that returns the module as second parameter
    *   // Module definition:
    *   var main = {}; // or function(){}
    *   var method1 = function(){}; // a module method
    *   Object.defineProperties(main, whatever); // defines module properties and methods
    *                                            // this allows private methods and properties
    *                                            // just by not publishing them
+   *                                            // Check src/module/template.js for extended info
    *   return main; // returns the module
    * });
    */

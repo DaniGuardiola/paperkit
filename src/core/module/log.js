@@ -1,9 +1,3 @@
-// Standalone version code start
-if (window.md === undefined) {
-  console.error("PK [log] Paperkit was not found!");
-  throw "Stopped module load";
-}
-// Standalone version code end
 // TODO: add tags to be able to filter
 /**
  * MODULE log

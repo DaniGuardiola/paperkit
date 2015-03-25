@@ -1,4 +1,4 @@
-//standalone-start
+//standalone-start TODO: move to separate folder and include automatically with grunt
 if (window.md === undefined) {
   throw "PK [template] Paperkit was not found!";
 }
