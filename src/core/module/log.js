@@ -4,7 +4,7 @@ if (window.md === undefined) {
   throw "Stopped module load";
 }
 // Standalone version code end
-
+// TODO: add tags to be able to filter
 /**
  * MODULE log
  */
@@ -20,6 +20,7 @@ md.module.queue({
   var options = {
     banner: "PK",
     style: "font-family: Roboto, Arial; font-size: 13px; font-weight: 600;",
+    timestamp: false,
     types: {
       default: "log",
       log: {
@@ -60,9 +61,10 @@ md.module.queue({
    * @param  {string} type The type/level of log
    * @param  {object} opt  Options with top priority
    */
-  function main(message, type, opt) {
+  var main = function(message, type, opt) {
     type = type || "log";
     opt = opt || {};
+    var timestamp = options.timestamp ? " [" + (Date.now() - md._loadTimestamp_) + "ms]" : "";
 
     // Error handling
     if (!message) {
@@ -92,17 +94,22 @@ md.module.queue({
       mode = "log";
     }
     if (mode === "dir") {
-      console.dir(message);
+      console.dir(message + timestamp);
       return;
     }
-    console[mode]("%c" + banner + " " + message, "color: " + color + "; " + style);
-  }
+    console[mode]("%c" + banner + " " + message + timestamp, "color: " + color + "; " + style);
+  };
 
 
   // Methods
   function enable(level) {
     if (!level) {
       main("[log.enable] No level was specified", "error");
+      return;
+    }
+    if (level === "timestamp") {
+      options.timestamp = true;
+      main("[log.enable] Timestamp enabled", "info");
       return;
     }
     if (!options.types[level]) {
@@ -118,14 +125,21 @@ md.module.queue({
       main("[log.disable] No level was specified", "error");
       return;
     }
+    if (level === "timestamp") {
+      options.timestamp = false;
+      main("[log.disable] Timestamp disabled", "info");
+      return;
+    }
     if (!options.types[level]) {
       main("[log.disable] Level \"" + level + "\" does not exists", "error");
       return;
     }
+
     options.types[level].on = false;
     main("[log.disable] Level \"" + level + "\" was disabled", "info");
   }
 
+  // Definition
   Object.defineProperties(main, {
     "options": {
       "get": function() {
@@ -140,8 +154,9 @@ md.module.queue({
     }
   });
 
-  // Debug! TEMPORAL!
+  // Debug!
   enable("info");
+  //enable("timestamp");
   enable("debug");
   enable("dir");
 

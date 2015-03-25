@@ -1,0 +1,14 @@
+md-tag[md-attribute1~=value1],
+md-tag2[md-attribute1~=value1] {
+  property1: csslabel1;
+}
+md-parenttag > md-tag[md-attribute1~=value1]:not([hidden]) md-child:hover,
+md-parenttag > md-tag2[md-attribute1~=value1]:not([hidden]) md-child:hover {
+  property1: csslabel2;
+}
+@media only screen and (min-width: 992px) {
+  md-parenttag > md-tag[md-attribute1~=value1]:not([md-attribute1$=noresponsive]):not([noresponsive]):not([hidden]) md-child:hover,
+  md-parenttag > md-tag2[md-attribute1~=value1]:not([md-attribute1$=noresponsive]):not([noresponsive]):not([hidden]) md-child:hover {
+    property1: csslabel3;
+  }
+}

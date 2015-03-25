@@ -1,54 +1,71 @@
+// TODO:
+// - Add error constructor
+// - Add getInfo() or similar, as a general method
+//   and as alias (getter) on modules and components
+// - Find solution to hint message "possible strict violation"
+// - Refactor include
+// - Document everything
+// - Add component functionality
+// - Review error checking
+// - Maybe md.load doesn't have to be public
 /**
- * Core namespace initialization.
- * Sets window.md
+ * Core initialization.
+ * Sets up the "md" namespace and the core functionality of the framework
+ * Including:
+ * - Modules
+ * - Components
+ * - Events - fired in window. List: md-core-module-load, md-core-component-load,
+ *            md-core-load, md-module-load, md-component-load, md-load and md-ready
+ * - Include - loading modules and components files with <md-include src="...script.js">
+ * - Load - what will be executed at the start
  */
 (function() {
   "use strict";
-  if (document.currentScript) {
-    document.currentScript.addEventListener("load", function() {
+  // Just in case...
+  if (window === undefined) {
+    console.error("PK [core] Window is undefined. What are you doing? This is the weirdest thing that ever happened to a web framework! D: I'm scared");
+    return;
+  }
+  // Get this script
+  var paperkitScript = document.currentScript || document.querySelector("script[src$=\"paperkit.js\"]") || document.querySelector("script[paperkit]") || false;
+  if (paperkitScript) {
+    paperkitScript.addEventListener("load", function() {
       setTimeout(md.load, 0);
     });
-  }
-  if (window === undefined) {
-    // Just in case...
-    console.error("PK [core] Window is undefined. What are you doing? This is the weirdest thing that ever happened to a web framework! D: I'm scared");
+  } else {
+    console.error("PK [core] Please add \"paperkit\" attribute to the Paperkit script tag, or use \"paperkit.js\" as filename");
     return;
   }
 
   // Namespace
   var md = {};
 
+  // Core configuration
+  var coreModules = ["log"];
+  var coreModulesPending = coreModules.slice();
+  var coreComponents = [];
+  //var coreComponentsPending = coreComponents.slice();
+
+  // Get timestamp
+  var loadTimestamp = Date.now();
+
   /**
-   * Module interface:
-   * 
-   * - md.module(moduleName, verbose)
-   * Returns true if module is loaded and false if not
-   * Also allows for "verbose" parameter to return "meta" options
-   * if module is loaded (instead of true)
-   * Always returns false when module not loaded
-   * 
-   * - md.module.queue(options, moduleFunction)
-   * Adds a moduleObj to queue
-   * A module code would look like this:
+   * [MODULES]
+   * A module looks like this:
    * md.module.queue({
-   *   "name": "moduleName",
-   *   "core": true,
-   *   "dependencies": [],
-   *   "someOption": "someValue"
+   *   "name": "moduleName", // will be registered as md.moduleName
+   *   "core": true, // or not defined
+   *   "dependencies": [], // or not defined
+   *   "someOption": "someValue" // other values
    * },function(){
    *   // Module definition:
    *   var main = {}; // or function(){}
    *   var method1 = function(){}; // a module method
    *   Object.defineProperties(main, whatever); // defines module properties and methods
+   *                                            // this allows private methods and properties
+   *                                            // just by not publishing them
    *   return main; // returns the module
    * });
-   * 
-   * - md.module.load(moduleObj, allInQueue) // "moduleObj" is a module definition function
-   * Loads a module when passed as argument.
-   * If no param is provided, loads the next queue item,
-   * if no items in queue fires md-module-load.
-   * If allInQueue is true, it will call again md.module.load(false, true)
-   * except there's no modules in queue
    */
 
   var moduleList = [];
@@ -58,8 +75,8 @@
    * Checks if module is loaded
    * @param  {String} name Module name to check
    * @return {Boolean|Object}       True if module is loaded,
-   *                                     if verbose is true, returns
-   *                                     module "meta" options
+   *                                if verbose is true, returns
+   *                                module "meta" options
    */
   function module(name, verbose) {
     var exists = (moduleList.indexOf(name) > -1);
@@ -74,7 +91,9 @@
 
   /**
    * Loads a module if specified or loads queue if not
-   * @param  {object} moduleObj  The module object
+   * @param  {object} moduleObj  The module object, if not specified
+   *                             queue will load, if queue is empty
+   *                             md-module-load event will fire
    * @param  {boolean} allInQueue If true next item in queue will be loaded too
    */
   function moduleLoad(moduleObj, allInQueue) {
@@ -89,6 +108,7 @@
       // Module load
       var name = moduleObj.options.name; // The module name is on "name" var
       var module = moduleObj.function(); // The module returned is on "module" var
+      var core = moduleObj.options.core ? "core:" : "";
       // Filling defaults for optional options
       moduleObj.options.dependencies = moduleObj.options.dependencies || [];
       // Defining md options on module
@@ -103,7 +123,7 @@
       });
       moduleList.push(name); // Attach to module list
       if (md.module("log")) {
-        md.log("[" + name + "] Module loaded", "info");
+        md.log("[" + core + "module] LOAD " + name, "info");
       }
 
       // If allInQueue, load next one
@@ -123,19 +143,37 @@
   }
 
   function moduleQueue(options, moduleFunction) {
-    moduleQueueList.push({
+    var moduleObj = {
       "options": options,
       "function": moduleFunction
-    });
+    };
+    if (options.core) {
+      var i = coreModulesPending.indexOf(options.name);
+      if (i !== -1) {
+        module.load(moduleObj);
+        coreModulesPending.splice(i, 1);
+        if (coreModulesPending.length < 1 && !loadStatus.coreModules) {
+          dispatchCoreModuleLoadEvent();
+          if (coreComponents.length < 1) {
+            dispatchCoreLoadEvent();
+          }
+        }
+        return;
+      } else {
+        md.log("[module.queue:" + options.name + "] Marked as core module, but not allowed", "warn");
+      }
+    }
+    moduleQueueList.push(moduleObj);
   }
 
   Object.defineProperties(moduleQueue, {
-    "list": {
+    "state": {
       "get": function() {
-        return moduleQueueList;
-      },
-      "set": function() {
-        return;
+        var state = "empty";
+        if (moduleQueueList.length > 0) {
+          state = moduleQueueList.length + " pending";
+        }
+        return state;
       }
     }
   });
@@ -176,20 +214,29 @@
   // Events and status
   var loadStatus = {
     core: false,
+    coreModule: false,
+    coreComponent: false,
     module: false,
-    component: true,
+    component: true, // temporally true for testing, change to false
     paperkit: false
   };
 
   function dispatchCoreLoadEvent() {
-    md.log("[core] Loaded", "info");
+    md.log("[core] LOAD COMPLETE", "info");
     loadStatus.core = true;
     var loadEvent = new Event("md-core-load");
     window.dispatchEvent(loadEvent);
   }
 
+  function dispatchCoreModuleLoadEvent() {
+    md.log("[core:module] LOAD COMPLETE", "info");
+    loadStatus.coreModule = true;
+    var loadEvent = new Event("md-core-module-load");
+    window.dispatchEvent(loadEvent);
+  }
+
   function dispatchModuleLoadEvent() {
-    md.log("[module] Loaded", "info");
+    md.log("[module] LOAD COMPLETE", "info");
     loadStatus.module = true;
     var loadEvent = new Event("md-module-load");
     window.dispatchEvent(loadEvent);
@@ -198,8 +245,9 @@
     }
   }
 
+  /*
   function dispatchComponentLoadEvent() {
-    md.log("[component] Loaded", "info");
+    md.log("[component] LOAD COMPLETE", "info");
     loadStatus.component = true;
     var loadEvent = new Event("md-component-load");
     window.dispatchEvent(loadEvent);
@@ -207,22 +255,35 @@
       dispatchLoadEvent();
     }
   }
+  */
 
   function dispatchLoadEvent() {
-    md.log("[all] Loaded", "info");
+    md.log("[paperkit] LOAD COMPLETE", "info");
     loadStatus.paperkit = true;
     var loadEvent = new Event("md-load");
     window.dispatchEvent(loadEvent);
   }
 
+  // Script loading
   var loadingScripts = [];
   var loadingScriptsEnd = false;
+
+  function scriptOnload() {
+    var i = loadingScripts.indexOf(this.script);
+    loadingScripts.splice(i, 1);
+    if (loadingScripts.length < 1 && loadingScriptsEnd && this.callback) {
+      this.callback();
+    }
+  }
 
   function loadScripts(callback) {
     var scripts = document.querySelectorAll("md-include");
     var url, script;
     if (scripts.length < 1) {
-      console.info("PK [core] No external scripts were found");
+      md.log("[core] No <md-include> tags were found", "info");
+      if (callback) {
+        callback();
+      }
       return;
     }
     for (var i = 0; i < scripts.length; i++) {
@@ -230,51 +291,25 @@
       script = document.createElement("script");
       script.src = url;
       loadingScripts.push(script);
-      urlExists(url, function() {
-        document.body.appendChild(script);
-        script.addEventListener("load", function() {
-          var i = loadingScripts.indexOf(script);
-          loadingScripts.splice(i, 1);
-          if (loadingScripts.length < 1 && loadingScriptsEnd && callback) {
-            callback();
-          }
-        });
-        loadingScriptsEnd = true;
-        document.body.removeChild(script);
-      }, function() {
-        if (md.module("log")) {
-          md.log("[module] 404 error");
-        } else {
-          console.error("PK [module] 404 error");
-        }
-        if (callback) {
-          callback();
-        }
-      });
+      document.body.appendChild(script);
+      script.addEventListener("load", scriptOnload.bind({
+        "script": script,
+        "callback": callback
+      }));
+      document.body.removeChild(script);
     }
+    loadingScriptsEnd = true;
   }
 
   // Core functions
   function load() {
     loadScripts(md.module.load);
     // Init body
-    if (document.body.classList.contains("md-init")) {
-      // md.init(document.body);
+    if (!document.body.classList.contains("md-noinit")) {
+      window.addEventListener("md-component-load", function() {
+        md.init(document.body);
+      });
     }
-  }
-
-  // Utils
-  function urlExists(url, success, failure) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("HEAD", url, true);
-    xhr.addEventListener("load", function() {
-      if (xhr.status !== 404 && success) {
-        success();
-      } else {
-        failure();
-      }
-    });
-    xhr.send();
   }
 
   Object.defineProperties(md, {
@@ -286,10 +321,26 @@
     },
     "component": {
       "value": component
+    }, // Private
+    "_loadTimestamp_": {
+      "value": loadTimestamp
     }
   });
 
   Object.defineProperty(window, "md", {
     "value": md
   });
+
+  // Log fallback
+  md.log = function(message, mode) {
+    mode = mode || "log";
+    if (!message) {
+      md.log("PK [log] No message specified");
+      return false;
+    }
+    if (!console[mode]) {
+      mode = "log";
+    }
+    console[mode]("PK " + message);
+  };
 }());

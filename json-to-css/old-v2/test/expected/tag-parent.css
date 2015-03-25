@@ -1,0 +1,8 @@
+md-tag[md-attribute1~=value1],
+md-tag2[md-attribute1~=value1] {
+  property1: csslabel1;
+}
+md-parenttag > md-tag[md-attribute1~=value1],
+md-parenttag > md-tag2[md-attribute1~=value1] {
+  property1: csslabel2;
+}

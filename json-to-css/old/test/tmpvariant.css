@@ -1,0 +1,7 @@
+[md-attribute~=value1-variant1] {
+  property1: csslabel1;
+}
+[md-attribute~=value1],
+[md-attribute~=value1-variant2] {
+  property2: csslabel2;
+}

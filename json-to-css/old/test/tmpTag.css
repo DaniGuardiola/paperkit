@@ -1,0 +1,39 @@
+md-tag {
+  tagproperty1: taglabel1;
+  tagproperty2: taglabel2;
+}
+md-tag,
+md-tag[md-attribute~=value1] {
+  property1: csslabel1;
+  property2: csslabel2;
+}
+md-tag[md-attribute~=value2-variant1] {
+  variant1property1: variant1csslabel1;
+  variant1property2: variant1csslabel2;
+}
+md-tag,
+md-tag[md-attribute~=value2],
+md-tag[md-attribute~=value2-variant2] {
+  variant2property1: variant2csslabel1;
+  variant2property2: variant2csslabel2;
+}
+@media only screen and (max-width: 320px),
+only screen and (min-width: 320px) and (max-width: 768px),
+only screen and (min-width: 768px) and (max-width: 992px) {
+  md-tag:not([noresponsive]) {
+    tagresponsiveproperty1: tagresponsivecsslabel1;
+  }
+}
+@media only screen and (max-width: 320px),
+only screen and (min-width: 320px) and (max-width: 768px) {
+  md-tag:not([noresponsive]),
+  md-tag[md-attribute~=value1]:not([md-attribute$=noresponsive]):not([noresponsive]) {
+    respproperty1: respcsslabel1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  md-tag:not([noresponsive]),
+  md-tag[md-attribute~=value1]:not([md-attribute$=noresponsive]):not([noresponsive]) {
+    respproperty2: respcsslabel2;
+  }
+}

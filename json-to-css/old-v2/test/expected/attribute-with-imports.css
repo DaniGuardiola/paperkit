@@ -1,0 +1,13 @@
+[attribute1~=red-50] {
+  background-color: #ffebee;
+  color: rgba(0, 0, 0, 0.867188);
+}
+[attribute1~=red],
+[attribute1~=red-100] {
+  background-color: #ffcdd2;
+  color: rgba(0, 0, 0, 0.867188);
+}
+[attribute1~=black] {
+  background-color: #000000;
+  color: #ffffff;
+}

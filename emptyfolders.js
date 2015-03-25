@@ -50,6 +50,6 @@ function remove(folder, file, write, tree) {
 }
 
 [].forEach.call(folders, function(folder) {
-    remove(folder, file, write, true);
+    //remove(folder, file, write, true);
     run(folder, file, write, true);
 });

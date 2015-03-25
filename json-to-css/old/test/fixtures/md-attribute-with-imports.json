@@ -1,0 +1,11 @@
+{
+  "type": "attribute",
+  "name": "attribute1",
+  "imports": [
+    {      
+      "name": "md-colors",
+      "property1": "background-color",
+      "property2": "color"
+    }
+  ]
+}
