@@ -271,11 +271,11 @@
   var loadingScripts = [];
   var loadingScriptsEnd = false;
 
-  function scriptOnload() {
-    var i = loadingScripts.indexOf(this.script);
+  function scriptOnload(script, callback) {
+    var i = loadingScripts.indexOf(script);
     loadingScripts.splice(i, 1);
-    if (loadingScripts.length < 1 && loadingScriptsEnd && this.callback) {
-      this.callback();
+    if (loadingScripts.length < 1 && loadingScriptsEnd && callback) {
+      callback();
     }
   }
 
@@ -295,10 +295,9 @@
       script.src = url;
       loadingScripts.push(script);
       document.body.appendChild(script);
-      script.addEventListener("load", scriptOnload.bind({
-        "script": script,
-        "callback": callback
-      }));
+      script.addEventListener("load", function() {
+        scriptOnload(script, callback);
+      });
       document.body.removeChild(script);
     }
     loadingScriptsEnd = true;

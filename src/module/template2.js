@@ -1,3 +1,4 @@
+/* exported PAPERKIT_MODULE_template */
 // Standalone version code start
 if (window.md === undefined) {
   throw "PK [template] Paperkit was not found!";
