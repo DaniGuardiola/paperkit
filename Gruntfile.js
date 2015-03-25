@@ -8,17 +8,24 @@ module.exports = function(grunt) {
     jsdoc: {
       coreJS: {
         src: ["bin/paperkit-core-dev/paperkit.js"],
-        dest: "doc/core/"
+        dest: "doc/core"
+      },
+      module: {
+        src: ["bin/paperkit-blocks-dev/module/*.js"],
+        dest: "doc/blocks/module"
       }
     },
 
     // Cleaning
     clean: {
       core: {
-        src: ["bin/paperkit-core", "bin/paperkit-core-dev", "doc/core/"]
+        src: ["bin/paperkit-core", "bin/paperkit-core-dev", "doc/core"]
+      },
+      blocks: {
+        src: ["bin/paperkit-blocks", "bin/paperkit-blocks-dev", "doc/blocks"]
       },
       module: {
-        src: ["bin/paperkit-blocks/module", "bin/paperkit-blocks/module", "doc/module/"]
+        src: ["bin/paperkit-blocks/module", "bin/paperkit-blocks-dev/module", "doc/blocks/module"]
       }
     },
 
@@ -29,11 +36,8 @@ module.exports = function(grunt) {
         src: [
           "src/module/*.js"
         ],
-        dest: "bin/",
-        rename: function(dest, src) {
-          var newDest = dest + src.replace("source", "paperkit-files");
-          return newDest;
-        }
+        dest: "bin/paperkit-blocks-dev/module/",
+        flatten: true
       }
     },
 
@@ -41,7 +45,7 @@ module.exports = function(grunt) {
     concat: {
       coreJS: {
         src: [
-          "src/core/js/md.js",
+          "src/core/core.js",
           "src/core/module/*.js",
         ],
         dest: "bin/paperkit-core-dev/paperkit.js"
@@ -53,6 +57,12 @@ module.exports = function(grunt) {
       coreJS: {
         src: "bin/paperkit-core-dev/paperkit.js",
         dest: "bin/paperkit-core/paperkit.js"
+      },
+      module: {
+        expand: true,
+        src: "bin/paperkit-blocks-dev/module/*.js",
+        dest: "bin/paperkit-blocks/module/",
+        flatten: true
       }
     },
 
@@ -64,26 +74,35 @@ module.exports = function(grunt) {
 
   // Loading NPM tasks
   grunt.loadNpmTasks("grunt-contrib-clean");
+  grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-jsdoc");
-  grunt.loadNpmTasks("grunt-contrib-copy");
 
-  // Tasks
-  grunt.registerTask("core", [
+  // Output (bin/)
+  // "-dev" suffix means not uglified and minified
+  grunt.registerTask("core", [ // paperkit-core/
     "clean:core",
     "concat:coreJS",
     "uglify:coreJS",
-    "jsdoc:coreJS",
+    "jsdoc:coreJS"
   ]);
 
-
-  grunt.registerTask("module", [
+  grunt.registerTask("module", [ // paperkit-blocks/module/
     "clean:module",
-    "concat:coreJS",
-    "uglify:coreJS",
-    "jsdoc:coreJS",
+    "copy:module",
+    "uglify:module",
+    "jsdoc:module"
   ]);
 
-  grunt.registerTask("default", []);
+  // Shortcuts
+  grunt.registerTask("blocks", [ // paperkit-blocks/
+    "clean:blocks",
+    "module"
+  ]);
+
+  grunt.registerTask("default", [
+    "core",
+    "blocks"
+  ]);
 };
