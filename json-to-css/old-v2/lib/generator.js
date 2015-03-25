@@ -1,8 +1,8 @@
-var winston = require('winston');
-var sprintf = require('sprintf');
-var css = require('css');
+var winston = require("winston");
+var sprintf = require("sprintf");
+var css = require("css");
 
-// winston.level='debug';
+// winston.level="debug";
 
 module.exports = Generator;
 
@@ -11,9 +11,9 @@ function Generator(jsonData, jsonConfig, imports) {
   var jsonConfig = JSON.parse(jsonConfig);
 
   var generatedCSS = {
-    'type': 'stylesheet',
-    'stylesheet': {
-      'rules': []
+    "type": "stylesheet",
+    "stylesheet": {
+      "rules": []
     }
   };
 

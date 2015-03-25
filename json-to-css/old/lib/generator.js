@@ -1,10 +1,10 @@
-var winston = require('winston');
-var sprintf = require('sprintf');
-var css = require('css');
+/* global require, module */
+var winston = require("winston");
+var sprintf = require("sprintf");
+var css = require("css");
 
 // winston.level = 'debug';
 
-module.exports = Generator;
 
 function Generator(jsonData, jsonConfig, imports) {
   if (jsonData) {
@@ -19,7 +19,7 @@ function Generator(jsonData, jsonConfig, imports) {
     this.type = "rule";
     this.selectors = [];
     this.declarations = [];
-  };
+  }
 
   function Declaration() {
     this.type = "declaration";
@@ -38,11 +38,11 @@ function Generator(jsonData, jsonConfig, imports) {
   this.generate = function() {
     var generatedData = [];
 
-    if ('type' in jsonData) {
+    if ("type" in jsonData) {
       winston.debug(sprintf("JSON TYPE => %s", jsonData.type));
-      if (jsonData.type == 'tag') {
+      if (jsonData.type === "tag") {
         generatedData = generatedData.concat(generateTag(jsonData, null));
-      } else if (jsonData.type == 'attribute') {
+      } else if (jsonData.type === "attribute") {
         generatedData = generatedData.concat(generateAttribute(jsonData));
       }
     }
@@ -61,16 +61,17 @@ function Generator(jsonData, jsonConfig, imports) {
 
   var generateTag = function(tag, parentTag) {
     var generatedData = [];
+    var allNames;
 
     if (parentTag) {
       if (parentTag.alias) {
-        var allNames = parentTag.alias.slice(0);
+        allNames = parentTag.alias.slice(0);
         allNames.unshift(parentTag.name);
       } else {
-        var allNames = [parentTag.name];
+        allNames = [parentTag.name];
       }
     } else {
-      var allNames = [tag.name];
+      allNames = [tag.name];
     }
 
     winston.debug("GENERATING TAG FOR " + JSON.stringify(allNames));
@@ -79,20 +80,20 @@ function Generator(jsonData, jsonConfig, imports) {
       var name = (tag.before ? tag.before : "") + allNames[i] + (tag.after ? tag.after : "");
       winston.debug("TAG NAME " + name);
 
-      if ('css' in tag) {
+      if ("css" in tag) {
         generatedData.push(generateRule(tag.css, name, null, null, null, null, null, null, null, null, tag.alias));
       }
 
       /* Render first tag responsive, then attributes responsive */
-      if ('responsive' in tag) {
+      if ("responsive" in tag) {
         tag.responsive.forEach(function(responsive) {
           generateMedia(responsive, name, null, null, null, null, null, null, tag.alias);
         });
       }
 
-      if ('attributes' in tag) {
+      if ("attributes" in tag) {
         tag.attributes.forEach(function(attribute) {
-          var defaults = ('defaults' in tag) ? tag.defaults : null;
+          var defaults = ("defaults" in tag) ? tag.defaults : null;
           winston.debug("GOING TO CALL GENERATE ATTRIBUTE WITH DEFAULTS => " + JSON.stringify(defaults));
           generatedData = generatedData.concat(generateAttribute(attribute, name, defaults, tag.alias));
         });
@@ -101,8 +102,8 @@ function Generator(jsonData, jsonConfig, imports) {
       /* 
        * Still supported but deprecated
        */
-      if (('fixes' in tag) && !parentTag) {
-        winston.debug('FIXES FOUND!');
+      if (("fixes" in tag) && !parentTag) {
+        winston.debug("FIXES FOUND!");
 
         tag.fixes.forEach(function(fix) {
           winston.debug(sprintf("PROCESSING FIX %s", JSON.stringify(fix, null, 2)));
@@ -113,23 +114,23 @@ function Generator(jsonData, jsonConfig, imports) {
     }
 
     return generatedData;
-  }
+  };
 
   var generateAttribute = function(attribute, tagname, defaultAttributes, alias) {
     winston.debug("GENERATING ATTRIBUTE FOR TAGNAME " + tagname + " WITH ALIAS " + JSON.stringify(alias) + " AND DEFAULTS " + JSON.stringify(defaultAttributes));
     var generatedData = [];
 
-    if ('css' in attribute) {
+    if ("css" in attribute) {
       generatedData.push(generateRule(attribute.css, tagname, attribute.name, null, null, null, defaultAttributes, null, null, null, alias));
     }
 
-    if ('imports' in attribute) {
+    if ("imports" in attribute) {
       attribute.imports.forEach(function(valueImport) {
         var _import = findImport(valueImport.name);
 
-        if ('values' in _import) {
+        if ("values" in _import) {
           _import.values.forEach(function(value) {
-            if ('variants' in value) {
+            if ("variants" in value) {
               winston.debug(sprintf("PROCESSING IMPORT => %s", JSON.stringify(value, null, 2)));
               value.variants.forEach(function(variant) {
                 var css = [];
@@ -166,15 +167,15 @@ function Generator(jsonData, jsonConfig, imports) {
     }
 
 
-    if ('values' in attribute) {
+    if ("values" in attribute) {
       attribute.values.forEach(function(value) {
-        if ('css' in value) {
+        if ("css" in value) {
           generatedData.push(generateRule(value.css, tagname, attribute.name, value.name, null, null, defaultAttributes, null, null, null, alias));
         }
 
-        if ('variants' in value) {
+        if ("variants" in value) {
           value.variants.forEach(function(variant) {
-            if ('css' in variant) {
+            if ("css" in variant) {
               generatedData.push(generateRule(variant.css, tagname, attribute.name, value.name, variant.name, value.defaultVariant, defaultAttributes, null, null, null, alias));
             }
           });
@@ -183,13 +184,13 @@ function Generator(jsonData, jsonConfig, imports) {
         /*
          * REVISAR...
          */
-        if ('fixes' in value) {
+        if ("fixes" in value) {
           value.fixes.forEach(function(fix) {
-            if ('css' in fix) {
+            if ("css" in fix) {
               generatedData.push(generateRule(fix.css, tagname, attribute.name, value.name, null, null, defaultAttributes, null, fix.before, fix.after, alias));
             }
 
-            if ('responsive' in fix) {
+            if ("responsive" in fix) {
               fix.responsive.forEach(function(responsive) {
                 generateMedia(responsive, tagname, attribute.name, value.name, null, defaultAttributes, fix.before, fix.after, alias);
               });
@@ -197,15 +198,15 @@ function Generator(jsonData, jsonConfig, imports) {
           });
         }
 
-        if ('responsive' in value) {
+        if ("responsive" in value) {
           value.responsive.forEach(function(responsive) {
             generateMedia(responsive, tagname, attribute.name, value.name, null, defaultAttributes, null, null, alias);
           });
         }
 
-        if ('variants' in value) {
+        if ("variants" in value) {
           value.variants.forEach(function(variant) {
-            if ('responsive' in variant) {
+            if ("responsive" in variant) {
               variant.responsive.forEach(function(responsive) {
                 generateMedia(responsive, tagname, attribute.name, value.name, variant.name, defaultAttributes, null, null, alias);
               });
@@ -216,7 +217,7 @@ function Generator(jsonData, jsonConfig, imports) {
     }
 
     return generatedData;
-  }
+  };
 
   var findImport = function(importName) {
     winston.debug(sprintf("SEARCHING FOR IMPORT => %s in %s", importName, JSON.stringify(imports, null, 2)));
@@ -234,18 +235,18 @@ function Generator(jsonData, jsonConfig, imports) {
     });
 
     return returnImport;
-  }
+  };
 
   var generateFix = function(fix) {
 
-  }
+  };
 
   var generateCSS = function(attribute, value) {
     return {
-      'property': attribute,
-      'value': value
+      "property": attribute,
+      "value": value
     };
-  }
+  };
 
   var generateRule = function(css, tagname, attributename, valuename, variantname, defaultVariant, defaultAttributes, responsive, before, after, alias) {
     var rule = new Rule();
@@ -276,7 +277,7 @@ function Generator(jsonData, jsonConfig, imports) {
               }
             });
           }
-        })
+        });
       }
 
       // generate default variant selector    
@@ -291,7 +292,7 @@ function Generator(jsonData, jsonConfig, imports) {
 
     // Generate rule declarations
     css.forEach(function(cssValue) {
-      cssValue['type'] = "declaration";
+      cssValue.type = "declaration";
       rule.declarations.push(cssValue);
     });
 
@@ -318,18 +319,18 @@ function Generator(jsonData, jsonConfig, imports) {
     var mediaquery = [];
 
     target.forEach(function(target) {
-      if (jsonConfig && ('responsive' in jsonConfig)) {
+      if (jsonConfig && ("responsive" in jsonConfig)) {
         jsonConfig.responsive.forEach(function(responsive) {
           if (target == responsive.name) {
-            if ('media' in responsive) {
+            if ("media" in responsive) {
               mediaquery.push(responsive.media);
             }
 
-            if ('include' in responsive) {
+            if ("include" in responsive) {
               mediaquery = mediaquery.concat(getMediaQuery(responsive.include));
             }
           }
-        })
+        });
       }
     });
 
@@ -338,7 +339,7 @@ function Generator(jsonData, jsonConfig, imports) {
     }
 
     return mediaquery;
-  }
+  };
 
   var getMedia = function(mediaName) {
     winston.debug(sprintf("SEARCHING FOR MEDIA => %s", mediaName));
@@ -386,5 +387,7 @@ function Generator(jsonData, jsonConfig, imports) {
     var stringSelector = selector.join("");
 
     return stringSelector;
-  }
+  };
 }
+
+module.exports = Generator;
