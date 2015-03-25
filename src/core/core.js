@@ -32,11 +32,22 @@
   // Load core when the script loads
   if (paperkitScript) {
     paperkitScript.addEventListener("load", function() {
-      setTimeout(md.load, 0);
+      setTimeout(load, 0);
     });
   } else {
     console.error("PK [core] Please add \"paperkit\" attribute to the Paperkit script tag, or use \"paperkit.js\" as filename");
     return;
+  }
+
+  // Core functions
+  function load() {
+    includeAll();
+    // Init body
+    if (!document.body.classList.contains("md-noinit")) {
+      window.addEventListener("md-component-load", function() {
+        md.init(document.body);
+      });
+    }
   }
 
   // Namespace
@@ -50,6 +61,42 @@
 
   // Get timestamp
   var loadTimestamp = Date.now();
+
+  /**
+   * [INCLUDE]
+   * TODO: explanation
+   */
+  // Include namespace
+  var include = {};
+
+  /**
+   * Gets md-include tags from the DOM
+   * and passes them to includeScript()
+   * @param  {Function} callback What to do when done
+   */
+  function includeAll() {
+    var elements = document.querySelectorAll("md-include");
+    if (elements.length < 1) {
+      md.log("[core] No <md - include> tags were found", "info");
+      moduleLoad();
+      return;
+    }
+    for (var i = 0; i < elements.length; i++) {
+      includeScript(elements[i]);
+    }
+    loadingScriptsEnd = true;
+  }
+
+  function includeScript(element) {
+    var script = document.createElement("script");
+    script.src = element.getAttribute("src");
+    loadingScripts.push(script);
+    document.body.appendChild(script);
+    script.addEventListener("load", function() {
+      scriptOnload(script, moduleLoad);
+    });
+    document.body.removeChild(script);
+  }
 
   /**
    * [MODULES]
@@ -97,10 +144,10 @@
    * @param  {object} moduleObj  The module object, if not specified
    *                             queue will load, if queue is empty
    *                             md-module-load event will fire
-   * @param  {boolean} allInQueue If true next item in queue will be loaded too
+   * @param  {boolean} recurrent If true next item in queue will be loaded too
    */
-  function moduleLoad(moduleObj, allInQueue) {
-    allInQueue = allInQueue || false;
+  function moduleLoad(moduleObj, recurrent) {
+    recurrent = recurrent || false;
     if (moduleObj) { // If moduleObj exists
       // moduleObj checks
       if (typeof moduleObj !== "object" || typeof moduleObj.options !== "object" || typeof moduleObj.function !== "function") {
@@ -129,8 +176,8 @@
         md.log("[" + core + "module] LOAD " + name, "info");
       }
 
-      // If allInQueue, load next one
-      if (allInQueue) {
+      // If recurrent, load next one
+      if (recurrent) {
         moduleLoad();
       }
     } else {
@@ -145,6 +192,29 @@
     }
   }
 
+  function coreModuleLoadCheck() {
+    if (coreModulesPending.length < 1 && !loadStatus.coreModules) {
+      dispatchCoreModuleLoadEvent();
+    }
+  }
+
+  function moduleLoadCheck() {
+    if (moduleQueueList.length < 1 && !loadStatus.coreModules) {
+      dispatchCoreModuleLoadEvent();
+      if (coreComponents.length < 1) {
+        dispatchCoreLoadEvent();
+      }
+    }
+  }
+
+  function moduleInclude(options, moduleFunction) {
+    moduleQueue(options, moduleFunction);
+  }
+
+  Object.defineProperty(include, "module", {
+    "value": moduleInclude
+  });
+
   function moduleQueue(options, moduleFunction) {
     var moduleObj = {
       "options": options,
@@ -153,18 +223,18 @@
     if (options.core) {
       var i = coreModulesPending.indexOf(options.name);
       if (i !== -1) {
-        module.load(moduleObj);
+        moduleLoad(moduleObj);
         coreModulesPending.splice(i, 1);
-        if (coreModulesPending.length < 1 && !loadStatus.coreModules) {
-          dispatchCoreModuleLoadEvent();
-          if (coreComponents.length < 1) {
-            dispatchCoreLoadEvent();
-          }
-        }
+        coreModuleLoadCheck();
         return;
       } else {
+        options.core = false;
         md.log("[module.queue:" + options.name + "] Marked as core module, but not allowed", "warn");
       }
+    }
+    if (!options.dependencies || options.dependencies.length < 0) {
+      moduleLoad(moduleObj);
+      return;
     }
     moduleQueueList.push(moduleObj);
   }
@@ -189,9 +259,6 @@
       "set": function() {
         return;
       }
-    },
-    "load": {
-      "value": moduleLoad
     },
     "queue": {
       "value": moduleQueue
@@ -236,6 +303,9 @@
     loadStatus.coreModule = true;
     var loadEvent = new Event("md-core-module-load");
     window.dispatchEvent(loadEvent);
+    if (loadStatus.coreComponent) {
+      dispatchCoreLoadEvent();
+    }
   }
 
   function dispatchModuleLoadEvent() {
@@ -279,44 +349,9 @@
     }
   }
 
-  function loadScripts(callback) {
-    var scripts = document.querySelectorAll("md-include");
-    var url, script;
-    if (scripts.length < 1) {
-      md.log("[core] No <md-include> tags were found", "info");
-      if (callback) {
-        callback();
-      }
-      return;
-    }
-    for (var i = 0; i < scripts.length; i++) {
-      url = scripts[i].getAttribute("src");
-      script = document.createElement("script");
-      script.src = url;
-      loadingScripts.push(script);
-      document.body.appendChild(script);
-      script.addEventListener("load", function() {
-        scriptOnload(script, callback);
-      });
-      document.body.removeChild(script);
-    }
-    loadingScriptsEnd = true;
-  }
-
-  // Core functions
-  function load() {
-    loadScripts(md.module.load);
-    // Init body
-    if (!document.body.classList.contains("md-noinit")) {
-      window.addEventListener("md-component-load", function() {
-        md.init(document.body);
-      });
-    }
-  }
-
   Object.defineProperties(md, {
-    "load": {
-      "value": load
+    "include": {
+      "value": include
     },
     "module": {
       "value": module

@@ -18,6 +18,9 @@ module.exports = function(grunt) {
 
     // Cleaning
     clean: {
+      all: {
+        src: ["bin", "doc"]
+      },
       core: {
         src: ["bin/paperkit-core", "bin/paperkit-core-dev", "doc/core"]
       },
@@ -101,7 +104,9 @@ module.exports = function(grunt) {
     "module"
   ]);
 
+  // Default
   grunt.registerTask("default", [
+    "clean:all",
     "core",
     "blocks"
   ]);
