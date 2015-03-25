@@ -150,7 +150,7 @@ md.module.queue({
 
   // Debug!
   enable("info");
-  //enable("timestamp");
+  enable("timestamp");
   enable("debug");
   enable("dir");
 
