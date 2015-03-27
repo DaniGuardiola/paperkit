@@ -8,11 +8,21 @@ module.exports = function(grunt) {
     jsdoc: {
       coreJS: {
         src: ["bin/paperkit-core-dev/paperkit.js"],
-        dest: "doc/core"
+        dest: "doc/core",
+        options: {
+          "private": true,
+          "template": "node_modules/grunt-jsdoc/node_modules/ink-docstrap/template",
+          "configure": "node_modules/grunt-jsdoc/node_modules/ink-docstrap/template/jsdoc.conf.json"
+        }
       },
       module: {
         src: ["bin/paperkit-blocks-dev/module/*.js"],
-        dest: "doc/blocks/module"
+        dest: "doc/modules",
+        options: {
+          "private": false,
+          "template": "node_modules/grunt-jsdoc/node_modules/ink-docstrap/template",
+          "configure": "node_modules/grunt-jsdoc/node_modules/ink-docstrap/template/jsdoc.conf.json"
+        }
       }
     },
 
@@ -98,7 +108,7 @@ module.exports = function(grunt) {
     "jsdoc:module"
   ]);
 
-  // Shortcuts
+  // Shortcuts and utils
   grunt.registerTask("blocks", [ // paperkit-blocks/
     "clean:blocks",
     "module"

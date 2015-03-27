@@ -10,8 +10,9 @@ if (window.md === undefined) {
  * MODULE template
  * Does this and that blahblah
  */
-// md.module.queue(options, function)
-md.module.queue({ // Add to queue
+// md.include(options, definition)
+md.include({ // Add to queue
+  "type": "module",
   "name": "template",
   "core": true, // Only if part of the core
   "dependencies": { // Optional, you must set it if using non-core modules or components

@@ -2,25 +2,28 @@
 // - Add error constructor
 // - Add getInfo() or similar, as a general method
 //   and as alias (getter) on modules and components
-// - Add dependece functionality to modules
+// - Add dependence functionality to modules
 // - Find solution to hint message "possible strict violation"
 // - Refactor including
 // - Document everything
 // - Add component functionality
 // - Review error checking
 // - Maybe md.load doesn't have to be public
-/**
- * Core initialization.
- * Sets up the "md" namespace and the core functionality of the framework
- * Including:
- * - Modules
- * - Components
- * - Events - fired in window. List: md-core-module-load, md-core-component-load,
- *            md-core-load, md-module-load, md-component-load, md-load and md-ready
- * - Including - loading modules and components files with <md-include src="...script.js">
- * - Loading - the initial setup of the framework
- */
-(function() {
+
+
+// [CORE]
+// The Paperkit core resides on the
+// [md namespace]{@link md} and includes:
+// - Module engine
+// - Component engine
+// - Including - loading paperkit blocks
+// - Events - fired in window. List: md-core-module-load, md-core-component-load,
+//            md-core-load, md-module-load, md-component-load, md-load and md-ready
+// - Load tasks - the initial setup of the framework
+
+
+// Everything runs inside this immediate function
+( /** @lends md */ function() {
   "use strict";
   // Just in case...
   if (window === undefined) {
@@ -29,64 +32,257 @@
   }
   // Get this script
   var paperkitScript = document.currentScript || document.querySelector("script[src$=\"paperkit.js\"]") || document.querySelector("script[paperkit]") || false;
-  // Load core when the script loads
+  // Load core when this script loads
   if (paperkitScript) {
     paperkitScript.addEventListener("load", function() {
-      setTimeout(load, 0);
+      setTimeout(load, 0); // The setTimeout makes it async
     });
   } else {
     console.error("PK [core] Please add \"paperkit\" attribute to the Paperkit script tag, or use \"paperkit.js\" as filename");
     return;
   }
 
-  // Core functions
+  /**
+   * Paperkit main namespace, ships with the public core
+   * functions and holds the included modules and components.
+   * @description The core is the most important part
+   * of the framework. It defines the main logic and
+   * provides an interface for managing:
+   * 
+   * - Modules
+   * 
+   * - Components
+   * 
+   * - Inclusions - the load of paperkit blocks
+   * 
+   * - Events - fired in window. List: md-core-module-load, md-core-component-load,
+   * md-core-load, md-module-load, md-component-load, md-load and md-ready
+   *            
+   * - Framework loading - the initial setup
+   * @author [Dani Guardiola]{@link http://daniguardiola.me/}
+   * @license [Apache-2.0]{@link http://www.apache.org/licenses/LICENSE-2.0}
+   * @version 0.0.1
+   * @namespace md
+   * @global
+   */
+  var md = {};
+
+  // [CORE SETUP, STATE AND LOAD]
+
+  /**
+   * List of core modules.
+   * @alias md.module.core
+   * @type {Array}
+   * @readOnly
+   */
+  var coreModules = ["log"];
+
+  /**
+   * List of core modules pending load.
+   * @type {Array}
+   * @private
+   */
+  var coreModulesPending = coreModules.slice(); // Copy coreModules
+
+  /**
+   * List of core components.
+   * @alias md.component.core
+   * @type {Array}
+   * @readOnly
+   */
+  var coreComponents = [];
+
+  /**
+   * List of core components pending load.
+   * @type {Array}
+   * @private
+   */
+  var coreComponentsPending = coreComponents.slice();
+
+  /**
+   * Initial timestamp in ms.
+   * @type {Number}
+   * @name _loadTimestamp_
+   * @memberOf md
+   * @readOnly
+   * @constant
+   * @private
+   */
+  Object.defineProperty(md, "_loadTimestamp_", {
+    "value": Date.now()
+  });
+
+  /**
+   * Manages the framework load state.
+   * @type {Object}
+   * @private
+   */
+  var state = {
+    coreModule: false,
+    coreComponent: false,
+    core: false,
+    module: false,
+    component: true, // temporally true for testing, change to false
+    paperkit: false
+  };
+
+  /**
+   * Initial code execution when the core.
+   * file has been loaded into memory
+   * @private
+   */
   function load() {
-    includeAll();
-    // Init body
-    if (!document.body.classList.contains("md-noinit")) {
-      window.addEventListener("md-component-load", function() {
-        md.init(document.body);
-      });
+    includeAll(); // Processing blocks included with <md-include>
+  }
+
+
+  // [INCLUDE]
+  // Block inclusion system
+
+  /**
+   * Includes a paperkit block, routing it.
+   * to the appropiate loader
+   * @param {Object} options Block options
+   * @param {Function} block Function that returns the block
+   * @memberOf md
+   * @todo Finish example
+   * @example
+   * // Module
+   * md.include({ // Block options as first parameter
+   *   "type": "module", // required
+   *   "name": "moduleName", // will be available under md.moduleName
+   *   "core": true, // only on core modules
+   *   "dependencies": { // only if there are dependencies
+   *      "module": [],
+   *      "component": []
+   *   },
+   *   "someOption": "someValue" // other options
+   * }, function(){ // function that defines and returns the module as second parameter
+   *   var main = {}; // or function(){} // module definition
+   *   var method1 = function(){}; // a module method
+   *   Object.defineProperties(main, whatever); // registers module properties and methods
+   *   return main; // returns the module
+   * });
+   * 
+   * // Component
+   * md.include({ // Block options as first parameter
+   *   "type": "component", // required
+   *   "name": "moduleName", // will be available under md.moduleName
+   *   "core": true, // only on core modules
+   *   "dependencies": { // only if there are dependencies
+   *      "module": [],
+   *      "component": []
+   *   },
+   *   "someOption": "someValue" // other options
+   * }, function(){ // function that defines and returns the module as second parameter
+   *   var main = {}; // or function(){} // module definition
+   *   var method1 = function(){}; // a module method
+   *   Object.defineProperties(main, whatever); // registers module properties and methods
+   *   return main; // returns the module
+   * });
+   * 
+   * // Attribute
+   * md.include({ // Block options as first parameter
+   *   "type": "module", // required
+   *   "name": "moduleName", // will be available under md.moduleName
+   *   "core": true, // only on core modules
+   *   "dependencies": { // only if there are dependencies
+   *      "module": [],
+   *      "component": []
+   *   },
+   *   "someOption": "someValue" // other options
+   * }, function(){ // function that defines and returns the module as second parameter
+   *   var main = {}; // or function(){} // module definition
+   *   var method1 = function(){}; // a module method
+   *   Object.defineProperties(main, whatever); // registers module properties and methods
+   *   return main; // returns the module
+   * });
+   * @throws If options is not defined or empty
+   * @throws If block type is not specified inside options
+   */
+  function include(options, definition) {
+    definition = definition || false;
+    // Error checking
+    if (!options || typeof options !== "object" || options.length < 1) {
+      md.log("[include] Invalid or empty options object", "error");
+      return;
+    }
+    if (!options.type) {
+      md.log("[include] Block type not specified", "error");
+      return;
+    }
+
+    /**
+     * A paperkit block object can be an attribute, a component or a module.
+     * @typedef {Object} blockObject
+     * @property {Object} options - Contains the block options.
+     * @property {Function} definition - Returns the constructed block
+     *                                 (optional on attributes).
+     */
+
+    var blockObject = { // Creating the block object
+      "options": options,
+      "definition": definition
+    };
+    if (options.type === "module") { // Routing
+      //includeModule(blockObject);
+      md.log("I was gonna include a module");
+    } else if (options.type === "component") {
+      md.log("I was gonna include a component");
+      //includeComponent(blockObject);
+    } else if (options.type === "attribute") {
+      md.log("I was gonna include an attribute");
+      //includeAttribute(blockObject);
+    } else {
+      md.log("[include] Invalid block type \"" + options.type + "\"", "error");
     }
   }
 
-  // Namespace
-  var md = {};
-
-  // Core configuration
-  var coreModules = ["log"];
-  var coreModulesPending = coreModules.slice();
-  var coreComponents = [];
-  //var coreComponentsPending = coreComponents.slice();
-
-  // Get timestamp
-  var loadTimestamp = Date.now();
-
   /**
-   * [INCLUDE]
-   * TODO: explanation
-   */
-  // Include namespace
-  var include = {};
-
-  /**
-   * Gets md-include tags from the DOM
-   * and passes them to includeScript()
-   * @param  {Function} callback What to do when done
+   * Gets all md-include elements from the DOM.
+   * and passes them to includeTag()
+   * @private
    */
   function includeAll() {
     var elements = document.querySelectorAll("md-include");
     if (elements.length < 1) {
-      md.log("[core] No <md - include> tags were found", "info");
-      moduleLoad();
+      md.log("[core] No <md-include> tags were found", "info");
       return;
     }
     for (var i = 0; i < elements.length; i++) {
-      includeScript(elements[i]);
+      includeTag(elements[i]);
     }
-    loadingScriptsEnd = true;
   }
 
+  /**
+   * Routes a md-include element to the appropiate.
+   * method depending on its type (script or stylesheet)
+   * @param  {Node} element A md-include element
+   * @private
+   */
+  function includeTag(element) {
+    var src = element.getAttribute("src");
+    // Error checking
+    if (!element.hasAttribute("src") || src === "") {
+      md.log("[include] Src tag empty or not set in md-include tag", "error");
+      return;
+    }
+    if (src.indexOf(".js") !== -1) {
+      includeScript(element);
+    } else if (src.indexOf(".css") !== -1) {
+      include({
+        "type": "attribute",
+        "name": "todo: get name somehow",
+        "src": src
+      });
+    }
+  }
+
+  /**
+   * Includes a script file (paperkit block).
+   * @param  {Node} element A md-include element
+   * @private
+   */
   function includeScript(element) {
     var script = document.createElement("script");
     script.src = element.getAttribute("src");
@@ -98,35 +294,63 @@
     document.body.removeChild(script);
   }
 
-  /**
-   * [MODULES]
-   * A module looks like this:
-   * md.module.queue({ // Options as first function parameter
-   *   "name": "moduleName", // will be registered as md.moduleName
-   *   "core": true, // or not defined
-   *   "dependencies": [], // or not defined
-   *   "someOption": "someValue" // other values
-   * },function(){ // Function that returns the module as second parameter
-   *   // Module definition:
-   *   var main = {}; // or function(){}
-   *   var method1 = function(){}; // a module method
-   *   Object.defineProperties(main, whatever); // defines module properties and methods
-   *                                            // this allows private methods and properties
-   *                                            // just by not publishing them
-   *                                            // Check src/module/template.js for extended info
-   *   return main; // returns the module
-   * });
-   */
+  // [MODULES]
+  // A module looks like this:
+  // md.include({ // Block options as first parameter
+  //   "type": "module", // required
+  //   "name": "moduleName", // will be available under md.moduleName
+  //   "core": true, // only on core modules
+  //   "dependencies": { // only if there are dependencies
+  //      "module": [],
+  //      "component": []
+  //   },
+  //   "someOption": "someValue" // other options
+  // }, function(){ // function that defines and returns the module as second parameter
+  //   var main = {}; // or function(){} // module definition
+  //   var method1 = function(){}; // a module method
+  //   Object.defineProperties(main, whatever); // registers module properties and methods
+  //   return main; // returns the module
+  // });
 
+  /**
+   * List of available modules.
+   * @type {Array}
+   * @memberOf md.module
+   * @readOnly
+   * @alias list
+   */
   var moduleList = [];
+
+  /**
+   * List of modules in queue.
+   * @type {Array}
+   * @private
+   */
   var moduleQueueList = [];
 
   /**
-   * Checks if module is loaded
-   * @param  {String} name Module name to check
-   * @return {Boolean|Object}       True if module is loaded,
-   *                                if verbose is true, returns
-   *                                module "meta" options
+   * Module engine namespace. For the function, see [md.module]{@link md.module(2)}.
+   * @memberOf md
+   * @namespace module
+   * @see md.module(2)
+   * @todo Document as module
+   */
+
+  /**
+   * Checks if a module is available, and optionally
+   * returns its meta options. For the namespace, see {@link md.module}.
+   * @param  {String} name Module name
+   * @param {Boolean} verbose If true, returns the meta options instead of boolean
+   * @return {Boolean|Object} True or meta options objects if module
+   *                               is available, false if not available
+   * @see {@link md.module}
+   * @memberOf md
+   * @variation 2
+   * @example
+   * md.module("log"); // true
+   * md.module("fakeModule"); // false
+   * md.module("log", true); // {<module block options>}
+   * md.module("fakeModule", true); // false
    */
   function module(name, verbose) {
     var exists = (moduleList.indexOf(name) > -1);
@@ -139,12 +363,20 @@
     return true;
   }
 
+  // Defining module list getter
+  Object.defineProperty(module, "list", {
+    "get": function() {
+      return moduleList;
+    }
+  });
+
   /**
    * Loads a module if specified or loads queue if not
-   * @param  {object} moduleObj  The module object, if not specified
-   *                             queue will load, if queue is empty
-   *                             md-module-load event will fire
-   * @param  {boolean} recurrent If true next item in queue will be loaded too
+   * @param  {blockObject} moduleObj  A module object, if not specified
+   *                             the queue will load
+   * @param  {Boolean} recurrent If true next item in queue will be loaded too
+   * @private
+   * @todo Make an example
    */
   function moduleLoad(moduleObj, recurrent) {
     recurrent = recurrent || false;
@@ -192,14 +424,24 @@
     }
   }
 
+  /**
+   * Checks if there's no pending core modules to load,
+   * and dispatchs md-core-module-load event if true
+   * @private
+   */
   function coreModuleLoadCheck() {
-    if (coreModulesPending.length < 1 && !loadStatus.coreModules) {
+    if (coreModulesPending.length < 1 && !loadStatus.coreModule) {
       dispatchCoreModuleLoadEvent();
     }
   }
 
+  /**
+   * Checks if there's no pending modules to load,
+   * and dispatchs md-module-load event if true
+   * @private
+   */
   function moduleLoadCheck() {
-    if (moduleQueueList.length < 1 && !loadStatus.coreModules) {
+    if (moduleQueueList.length < 1 && !loadStatus.module) {
       dispatchCoreModuleLoadEvent();
       if (coreComponents.length < 1) {
         dispatchCoreLoadEvent();
@@ -207,19 +449,24 @@
     }
   }
 
+  /**
+   * Includes a module
+   * @param  {Object} options        Module options
+   * @param  {Function} moduleFunction Function that defines and returns the module
+   * @private
+   * @todo Rename to "includeModule" and write an example
+   */
   function moduleInclude(options, moduleFunction) {
     moduleQueue(options, moduleFunction);
   }
 
-  Object.defineProperty(include, "module", {
-    "value": moduleInclude
-  });
-
-  function moduleQueue(options, moduleFunction) {
-    var moduleObj = {
-      "options": options,
-      "function": moduleFunction
-    };
+  /**
+   * Adds a module to the queue
+   * @param  {Object} moduleObj A module definition object
+   * @private
+   * @todo Write an example
+   */
+  function moduleQueue(moduleObj) {
     if (options.core) {
       var i = coreModulesPending.indexOf(options.name);
       if (i !== -1) {
@@ -239,33 +486,22 @@
     moduleQueueList.push(moduleObj);
   }
 
-  Object.defineProperties(moduleQueue, {
-    "state": {
-      "get": function() {
-        var state = "empty";
-        if (moduleQueueList.length > 0) {
-          state = moduleQueueList.length + " pending";
-        }
-        return state;
-      }
+  /**
+   * State of the queue
+   * @return {String} The state of the queue ("empty" or "n pending")
+   * @private
+   */
+  function getQueueState() {
+    var state = "empty";
+    if (moduleQueueList.length > 0) {
+      state = moduleQueueList.length + " pending";
     }
-  });
+    return state;
+  }
 
-  Object.defineProperties(module, {
-    "list": {
-      "get": function() {
-        return moduleList;
-      },
-      "set": function() {
-        return;
-      }
-    },
-    "queue": {
-      "value": moduleQueue
-    }
-  });
 
-  // Component
+  // [COMPONENTS]
+
   var componentList = [];
 
   function component(input) {
@@ -281,15 +517,7 @@
     }
   });
 
-  // Events and status
-  var loadStatus = {
-    core: false,
-    coreModule: false,
-    coreComponent: false,
-    module: false,
-    component: true, // temporally true for testing, change to false
-    paperkit: false
-  };
+  // [EVENTS]
 
   function dispatchCoreLoadEvent() {
     md.log("[core] LOAD COMPLETE", "info");
@@ -337,6 +565,8 @@
     window.dispatchEvent(loadEvent);
   }
 
+  // Garbage
+
   // Script loading
   var loadingScripts = [];
   var loadingScriptsEnd = false;
@@ -349,6 +579,7 @@
     }
   }
 
+  // [PROPERTY DEFINITION]
   Object.defineProperties(md, {
     "include": {
       "value": include
@@ -358,17 +589,16 @@
     },
     "component": {
       "value": component
-    }, // Private
-    "_loadTimestamp_": {
-      "value": loadTimestamp
     }
   });
 
+  // Defines md on global object (window)
   Object.defineProperty(window, "md", {
     "value": md
   });
 
-  // Log fallback
+  // [FALLBACKS]
+  // Log
   md.log = function(message, mode) {
     mode = mode || "log";
     if (!message) {

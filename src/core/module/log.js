@@ -2,7 +2,8 @@
 /**
  * MODULE log
  */
-md.module.queue({
+md.include({
+  "type": "module",
   "name": "log",
   "core": true
 }, function() {
@@ -91,6 +92,11 @@ md.module.queue({
       console.dir(message + timestamp);
       return;
     }
+    if (mode === "error" && window.printStackTrace) {
+      console.log(window.printStackTrace());
+    }
+
+
     console[mode]("%c" + banner + " " + message + timestamp, "color: " + color + "; " + style);
   };
 
