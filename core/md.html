@@ -68,7 +68,22 @@
 
     
         
-            <div class="description"><p>Paperkit namespace, contains all core functions.</p></div>
+            <div class="description"><p>The core is the most important part
+of the framework. It defines the main logic and
+provides an interface for managing:</p>
+<ul>
+<li><p>Modules</p>
+</li>
+<li><p>Components</p>
+</li>
+<li><p>Inclusions - the load of paperkit blocks</p>
+</li>
+<li><p>Events - fired in window. List: md-core-module-load, md-core-component-load,
+md-core-load, md-module-load, md-component-load, md-load and md-ready</p>
+</li>
+<li><p>Framework loading - the initial setup</p>
+</li>
+</ul></div>
         
 
         
@@ -76,7 +91,12 @@
 	
 
 	
-
+	<dt class="tag-version">Version:</dt>
+	<dd class="tag-version">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
 	
 
 	
@@ -86,7 +106,23 @@
 	
 
 	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li><a href="http://daniguardiola.me/">Dani Guardiola</a></li>
+			</ul>
+	</dd>
+	
 
+	
+
+	
+	<dt class="tag-license">License:</dt>
+	<dd class="tag-license">
+		<ul class="dummy">
+			<li><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a></li>
+		</ul>
+	</dd>
 	
 
 	
@@ -124,6 +160,315 @@
         </dl>
     
 
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<dt class="name" id="_loadTimestamp_">
+    <h4><span class="type-signature">&lt;private, static, constant> </span>_loadTimestamp_<span class="type-signature"> :Number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Initial timestamp in ms.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Number</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt class="name" id="coreComponentsPending">
+    <h4><span class="type-signature">&lt;private, inner> </span>coreComponentsPending<span class="type-signature"> :Array</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>List of core components pending load.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt class="name" id="coreModulesPending">
+    <h4><span class="type-signature">&lt;private, inner> </span>coreModulesPending<span class="type-signature"> :Array</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>List of core modules pending load.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt class="name" id="moduleQueueList">
+    <h4><span class="type-signature">&lt;private, inner> </span>moduleQueueList<span class="type-signature"> :Array</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>List of modules in queue.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt class="name" id="state">
+    <h4><span class="type-signature">&lt;private, inner> </span>state<span class="type-signature"> :Object</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Manages the framework load state.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
     
 
     
@@ -252,6 +597,13 @@ to the appropiate loader</p>
 	
 
 	
+	<dt class="tag-todo">To Do:</dt>
+	<dd class="tag-todo">
+		<ul>
+			<li>Finish example</li>
+			</ul>
+	</dd>
+	
 </dl>
 
     
@@ -262,16 +614,93 @@ to the appropiate loader</p>
     
     
     
+    <h5>Throws:</h5>
+    <ul>
+            <li>
+
+    <div class="param-desc">
+    
+        If options is not defined or empty
+    
+    </div>
+
+</li>
+        
+            <li>
+
+    <div class="param-desc">
+    
+        If block type is not specified inside options
+    
+    </div>
+
+</li>
+        </ul>
     
     
     
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">&#x2F;&#x2F; Module
+md.include({ &#x2F;&#x2F; Block options as first parameter
+  &quot;type&quot;: &quot;module&quot;, &#x2F;&#x2F; required
+  &quot;name&quot;: &quot;moduleName&quot;, &#x2F;&#x2F; will be available under md.moduleName
+  &quot;core&quot;: true, &#x2F;&#x2F; only on core modules
+  &quot;dependencies&quot;: { &#x2F;&#x2F; only if there are dependencies
+     &quot;module&quot;: [],
+     &quot;component&quot;: []
+  },
+  &quot;someOption&quot;: &quot;someValue&quot; &#x2F;&#x2F; other options
+}, function(){ &#x2F;&#x2F; function that defines and returns the module as second parameter
+  var main = {}; &#x2F;&#x2F; or function(){} &#x2F;&#x2F; module definition
+  var method1 = function(){}; &#x2F;&#x2F; a module method
+  Object.defineProperties(main, whatever); &#x2F;&#x2F; registers module properties and methods
+  return main; &#x2F;&#x2F; returns the module
+});
+
+&#x2F;&#x2F; Component
+md.include({ &#x2F;&#x2F; Block options as first parameter
+  &quot;type&quot;: &quot;component&quot;, &#x2F;&#x2F; required
+  &quot;name&quot;: &quot;moduleName&quot;, &#x2F;&#x2F; will be available under md.moduleName
+  &quot;core&quot;: true, &#x2F;&#x2F; only on core modules
+  &quot;dependencies&quot;: { &#x2F;&#x2F; only if there are dependencies
+     &quot;module&quot;: [],
+     &quot;component&quot;: []
+  },
+  &quot;someOption&quot;: &quot;someValue&quot; &#x2F;&#x2F; other options
+}, function(){ &#x2F;&#x2F; function that defines and returns the module as second parameter
+  var main = {}; &#x2F;&#x2F; or function(){} &#x2F;&#x2F; module definition
+  var method1 = function(){}; &#x2F;&#x2F; a module method
+  Object.defineProperties(main, whatever); &#x2F;&#x2F; registers module properties and methods
+  return main; &#x2F;&#x2F; returns the module
+});
+
+&#x2F;&#x2F; Attribute
+md.include({ &#x2F;&#x2F; Block options as first parameter
+  &quot;type&quot;: &quot;module&quot;, &#x2F;&#x2F; required
+  &quot;name&quot;: &quot;moduleName&quot;, &#x2F;&#x2F; will be available under md.moduleName
+  &quot;core&quot;: true, &#x2F;&#x2F; only on core modules
+  &quot;dependencies&quot;: { &#x2F;&#x2F; only if there are dependencies
+     &quot;module&quot;: [],
+     &quot;component&quot;: []
+  },
+  &quot;someOption&quot;: &quot;someValue&quot; &#x2F;&#x2F; other options
+}, function(){ &#x2F;&#x2F; function that defines and returns the module as second parameter
+  var main = {}; &#x2F;&#x2F; or function(){} &#x2F;&#x2F; module definition
+  var method1 = function(){}; &#x2F;&#x2F; a module method
+  Object.defineProperties(main, whatever); &#x2F;&#x2F; registers module properties and methods
+  return main; &#x2F;&#x2F; returns the module
+});</pre>
+
+
     
 </dd>
 
         
             
 <dt>
-    <h4 class="name" id="module"><span class="type-signature">&lt;inner> </span>module<span class="signature">(name, verbose)</span><span class="type-signature"> &rarr; {Boolean|Object}</span></h4>
+    <h4 class="name" id="module"><span class="type-signature">&lt;static> </span>module<span class="signature">(name, verbose)</span><span class="type-signature"> &rarr; {Boolean|Object}</span></h4>
     
     
 </dt>
@@ -439,6 +868,1016 @@ returns its meta options. For the namespace, see <a href="md.module.html"><code>
         
     
     
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">md.module(&quot;log&quot;); &#x2F;&#x2F; true
+md.module(&quot;fakeModule&quot;); &#x2F;&#x2F; false
+md.module(&quot;log&quot;, true); &#x2F;&#x2F; {&lt;module block options&gt;}
+md.module(&quot;fakeModule&quot;, true); &#x2F;&#x2F; false</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="coreModuleLoadCheck"><span class="type-signature">&lt;private, inner> </span>coreModuleLoadCheck<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Checks if there's no pending core modules to load,
+and dispatchs md-core-module-load event if true</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getQueueState"><span class="type-signature">&lt;private, inner> </span>getQueueState<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>State of the queue</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The state of the queue (&quot;empty&quot; or &quot;n pending&quot;)</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">String</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="includeAll"><span class="type-signature">&lt;private, inner> </span>includeAll<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Gets all md-include elements from the DOM.
+and passes them to includeTag()</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="includeScript"><span class="type-signature">&lt;private, inner> </span>includeScript<span class="signature">(element)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Includes a script file (paperkit block).</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Node</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A md-include element</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="includeTag"><span class="type-signature">&lt;private, inner> </span>includeTag<span class="signature">(element)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Routes a md-include element to the appropiate.
+method depending on its type (script or stylesheet)</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Node</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A md-include element</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="load"><span class="type-signature">&lt;private, inner> </span>load<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Initial code execution when the core.
+file has been loaded into memory</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="moduleInclude"><span class="type-signature">&lt;private, inner> </span>moduleInclude<span class="signature">(options, moduleFunction)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Includes a module</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Module options</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>moduleFunction</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Function that defines and returns the module</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+	<dt class="tag-todo">To Do:</dt>
+	<dd class="tag-todo">
+		<ul>
+			<li>Rename to "includeModule" and write an example</li>
+			</ul>
+	</dd>
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="moduleLoad"><span class="type-signature">&lt;private, inner> </span>moduleLoad<span class="signature">(moduleObj, recurrent)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Loads a module if specified or loads queue if not</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>moduleObj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#blockObject">blockObject</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A module object, if not specified
+                            the queue will load</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>recurrent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>If true next item in queue will be loaded too</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+	<dt class="tag-todo">To Do:</dt>
+	<dd class="tag-todo">
+		<ul>
+			<li>Make an example</li>
+			</ul>
+	</dd>
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="moduleLoadCheck"><span class="type-signature">&lt;private, inner> </span>moduleLoadCheck<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Checks if there's no pending modules to load,
+and dispatchs md-module-load event if true</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="moduleQueue"><span class="type-signature">&lt;private, inner> </span>moduleQueue<span class="signature">(moduleObj)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Adds a module to the queue</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>moduleObj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A module definition object</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+	<dt class="tag-todo">To Do:</dt>
+	<dd class="tag-todo">
+		<ul>
+			<li>Write an example</li>
+			</ul>
+	</dd>
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
 </dd>
 
         </dl>
@@ -459,7 +1898,7 @@ returns its meta options. For the namespace, see <a href="md.module.html"><code>
 				<div class="clearfix"></div>
 				<footer>
 					
-					User documentation
+					Feedback: contact@daniguardiola.me
 					<br />
 					
 					
