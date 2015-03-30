@@ -1,3 +1,5 @@
 node_modules/
 bin/
 doc/
+*.sublime-project
+*.sublime-workspace

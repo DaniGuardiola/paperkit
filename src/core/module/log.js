@@ -89,11 +89,12 @@ md.include({
       mode = "log";
     }
     if (mode === "dir") {
-      console.dir(message + timestamp);
+      console.dir(message);
       return;
     }
-    if (mode === "error" && window.printStackTrace) {
-      console.log(window.printStackTrace());
+    if (options.types.debug.on && window.printStackTrace) {
+      var file = printStackTrace()[4].match(/(\w+)(\.\w+)+(?!.*(\w+)(\.\w+)+):([0-9]+):([0-9]+)/g);
+      message = message + "  |  " + file.join();
     }
 
 

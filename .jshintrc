@@ -20,5 +20,5 @@
   "unused": true,
   "strict": false,
   "maxparams": 5,
-  "predef": ["console", "md"]
+  "predef": ["console", "md", "printStackTrace"]
 }
