@@ -59,9 +59,11 @@
    * md-core-load, md-module-load, md-component-load, md-load and md-ready
    *            
    * - Framework loading - the initial setup
+   * 
    * @author [Dani Guardiola]{@link http://daniguardiola.me/}
    * @license [Apache-2.0]{@link http://www.apache.org/licenses/LICENSE-2.0}
    * @version 0.0.1
+   * 
    * @namespace md
    * @global
    */
@@ -71,6 +73,7 @@
 
   /**
    * List of core modules.
+   * 
    * @alias md.module.core
    * @type {Array}
    * @readOnly
@@ -79,6 +82,7 @@
 
   /**
    * List of core modules pending load.
+   * 
    * @type {Array}
    * @private
    */
@@ -86,21 +90,24 @@
 
   /**
    * List of core components.
+   * 
    * @alias md.component.core
    * @type {Array}
    * @readOnly
    */
-  var coreComponents = [];
+  //var coreComponents = [];
 
   /**
    * List of core components pending load.
+   * 
    * @type {Array}
    * @private
    */
-  var coreComponentsPending = coreComponents.slice();
+  // var coreComponentsPending = coreComponents.slice();
 
   /**
    * Initial timestamp in ms.
+   * 
    * @type {Number}
    * @name _loadTimestamp_
    * @memberOf md
@@ -114,12 +121,22 @@
 
   /**
    * Manages the framework load state.
+   * 
    * @type {Object}
    * @private
+   *
+   * @property {Boolean} coreModule Core modules loaded
+   * @property {Boolean} coreComponent Core components loaded
+   * @property {Boolean} scripts Scripts loaded
+   * @property {Boolean} core Core loaded
+   * @property {Boolean} module Modules loaded
+   * @property {Boolean} component Components loaded
+   * @property {Boolean} paperkit Paperkit loaded
    */
   var state = {
     coreModule: false,
     coreComponent: false,
+    scripts: false,
     core: false,
     module: false,
     component: true, // temporally true for testing, change to false
@@ -129,6 +146,7 @@
   /**
    * Initial code execution when the core.
    * file has been loaded into memory
+   * 
    * @private
    */
   function load() {
@@ -142,6 +160,7 @@
   /**
    * Includes a paperkit block, routing it.
    * to the appropiate loader
+   * 
    * @param {Object} options Block options
    * @param {Function} block Function that returns the block
    * @memberOf md
@@ -214,6 +233,7 @@
 
     /**
      * A paperkit block object can be an attribute, a component or a module.
+     * 
      * @typedef {Object} blockObject
      * @property {Object} options - Contains the block options.
      * @property {Function} definition - Returns the constructed block
@@ -225,7 +245,7 @@
       "definition": definition
     };
     if (options.type === "module") { // Routing
-      //includeModule(blockObject);
+      includeModule(blockObject);
       md.log("I was gonna include a module");
     } else if (options.type === "component") {
       md.log("I was gonna include a component");
@@ -241,6 +261,7 @@
   /**
    * Gets all md-include elements from the DOM.
    * and passes them to includeTag()
+   * 
    * @private
    */
   function includeAll() {
@@ -257,6 +278,7 @@
   /**
    * Routes a md-include element to the appropiate.
    * method depending on its type (script or stylesheet)
+   * 
    * @param  {Node} element A md-include element
    * @private
    */
@@ -279,19 +301,79 @@
   }
 
   /**
+   * Scripts in queue
+   * 
+   * @type {Array}
+   * @private
+   */
+  var scriptQueue = [];
+
+  /**
    * Includes a script file (paperkit block).
+   * 
    * @param  {Node} element A md-include element
    * @private
    */
   function includeScript(element) {
     var script = document.createElement("script");
     script.src = element.getAttribute("src");
-    loadingScripts.push(script);
+    scriptQueue.push(script);
     document.body.appendChild(script);
     script.addEventListener("load", function() {
-      scriptOnload(script, moduleLoad);
+      var i = scriptQueue.indexOf(script);
+      scriptQueue.splice(i, 1);
+      if (scriptQueue.length < 1) {
+        dispatchScriptLoadEvent();
+      }
     });
     document.body.removeChild(script);
+  }
+
+  /**
+   * Checks if all block dependecies are satisfied
+   * 
+   * @param  {blockObj} Block to check
+   * @return {false|Object} False is satisfied, object with info if not
+   * @private
+   * @todo Finish function
+   */
+  function checkDependencies(block) {
+    var notSatisfied = false;
+    var dependency = "";
+    var type, name;
+    var pending = {
+      modules: [],
+      components: [],
+      attributes: []
+    };
+    if (block.options.dependencies && block.options.dependencies.length > 0) {
+      // Check if dependencies are loaded
+      for (var i = 0; i < block.options.dependencies.length; i++) {
+        dependency = block.options.dependencies[i];
+        type = dependency.split(":")[0];
+        name = dependency.split(":")[1];
+        if (type === "module" && !module(name)) {
+          md.log("[include:" + block.options.name + "] Block dependencies could not be satisfied, queueing", "warn");
+          pending.modules.push(name);
+          notSatisfied = true;
+        } else if (type === "component" && !component(name)) {
+          md.log("[include:" + block.options.name + "] Block dependencies could not be satisfied, queueing", "warn");
+          pending.components.push(name);
+          notSatisfied = true;
+        }
+        /* else if (type === "attribute" && !attribute(name)) {
+                  md.log("[include:" + block.options.name + "] Block dependencies could not be satisfied, queueing", "warn");
+                  pending.attributes.push(name);
+                  notSatisfied = true;
+                }*/
+      }
+    }
+
+    if (notSatisfied) {
+      console.log(pending);
+      return pending;
+    }
+    return notSatisfied;
   }
 
   // [MODULES]
@@ -314,6 +396,7 @@
 
   /**
    * List of available modules.
+   * 
    * @type {Array}
    * @memberOf md.module
    * @readOnly
@@ -323,6 +406,7 @@
 
   /**
    * List of modules in queue.
+   * 
    * @type {Array}
    * @private
    */
@@ -330,6 +414,7 @@
 
   /**
    * Module engine namespace. For the function, see [md.module]{@link md.module(2)}.
+   * 
    * @memberOf md
    * @namespace module
    * @see md.module(2)
@@ -339,6 +424,7 @@
   /**
    * Checks if a module is available, and optionally
    * returns its meta options. For the namespace, see {@link md.module}.
+   * 
    * @param  {String} name Module name
    * @param {Boolean} verbose If true, returns the meta options instead of boolean
    * @return {Boolean|Object} True or meta options objects if module
@@ -371,25 +457,43 @@
   });
 
   /**
+   * Includes a module
+   * 
+   * @param  {Object} options        Module options
+   * @param  {Function} moduleFunction Function that defines and returns the module
+   * @private
+   * @todo Rename to "includeModule" and write an example
+   */
+  function includeModule(moduleObj) {
+    var dependecies = checkDependencies(moduleObj);
+    if (dependecies) {
+      moduleLoad(moduleObj);
+    } else {
+      moduleQueue(moduleObj);
+    }
+  }
+
+  /**
    * Loads a module if specified or loads queue if not
+   * 
    * @param  {blockObject} moduleObj  A module object, if not specified
    *                             the queue will load
    * @param  {Boolean} recurrent If true next item in queue will be loaded too
    * @private
-   * @todo Make an example
+   * @todo Refactor and make an example
    */
   function moduleLoad(moduleObj, recurrent) {
     recurrent = recurrent || false;
     if (moduleObj) { // If moduleObj exists
       // moduleObj checks
-      if (typeof moduleObj !== "object" || typeof moduleObj.options !== "object" || typeof moduleObj.function !== "function") {
+      if (typeof moduleObj !== "object" || typeof moduleObj.options !== "object" || typeof moduleObj.definition !== "function") {
         md.log("[module] Not valid module object", "error");
         return false;
       }
 
       // Module load
       var name = moduleObj.options.name; // The module name is on "name" var
-      var module = moduleObj.function(); // The module returned is on "module" var
+      var module = moduleObj.definition(); // The module returned is on "module" var
       var core = moduleObj.options.core ? "core:" : "";
       // Filling defaults for optional options
       moduleObj.options.dependencies = moduleObj.options.dependencies || [];
@@ -414,7 +518,7 @@
       }
     } else {
       var next = moduleQueueList[0];
-      if (next && typeof next.function === "function") {
+      if (next && typeof next.definition === "function") {
         // Module queue if not empty
         moduleQueueList.splice(0, 1);
         moduleLoad(next, true);
@@ -427,10 +531,11 @@
   /**
    * Checks if there's no pending core modules to load,
    * and dispatchs md-core-module-load event if true
+   * 
    * @private
    */
   function coreModuleLoadCheck() {
-    if (coreModulesPending.length < 1 && !loadStatus.coreModule) {
+    if (coreModulesPending.length < 1 && !state.coreModule) {
       dispatchCoreModuleLoadEvent();
     }
   }
@@ -438,10 +543,12 @@
   /**
    * Checks if there's no pending modules to load,
    * and dispatchs md-module-load event if true
+   * 
    * @private
    */
+  /*
   function moduleLoadCheck() {
-    if (moduleQueueList.length < 1 && !loadStatus.module) {
+    if (moduleQueueList.length < 1 && !state.module) {
       dispatchCoreModuleLoadEvent();
       if (coreComponents.length < 1) {
         dispatchCoreLoadEvent();
@@ -450,53 +557,30 @@
   }
 
   /**
-   * Includes a module
-   * @param  {Object} options        Module options
-   * @param  {Function} moduleFunction Function that defines and returns the module
-   * @private
-   * @todo Rename to "includeModule" and write an example
-   */
-  function moduleInclude(options, moduleFunction) {
-    moduleQueue(options, moduleFunction);
-  }
-
-  /**
    * Adds a module to the queue
+   * 
    * @param  {Object} moduleObj A module definition object
    * @private
    * @todo Write an example
    */
   function moduleQueue(moduleObj) {
-    if (options.core) {
-      var i = coreModulesPending.indexOf(options.name);
+    if (moduleObj.options.core) {
+      var i = coreModulesPending.indexOf(moduleObj.options.name);
       if (i !== -1) {
         moduleLoad(moduleObj);
         coreModulesPending.splice(i, 1);
         coreModuleLoadCheck();
         return;
       } else {
-        options.core = false;
-        md.log("[module.queue:" + options.name + "] Marked as core module, but not allowed", "warn");
+        moduleObj.options.core = false;
+        md.log("[module.queue:" + moduleObj.options.name + "] Marked as core module, but not allowed", "warn");
       }
     }
-    if (!options.dependencies || options.dependencies.length < 0) {
+    if (!moduleObj.options.dependencies || moduleObj.options.dependencies.length < 0) {
       moduleLoad(moduleObj);
       return;
     }
     moduleQueueList.push(moduleObj);
-  }
-
-  /**
-   * State of the queue
-   * @return {String} The state of the queue ("empty" or "n pending")
-   * @private
-   */
-  function getQueueState() {
-    var state = "empty";
-    if (moduleQueueList.length > 0) {
-      state = moduleQueueList.length + " pending";
-    }
-    return state;
   }
 
 
@@ -521,27 +605,27 @@
 
   function dispatchCoreLoadEvent() {
     md.log("[core] LOAD COMPLETE", "info");
-    loadStatus.core = true;
-    var loadEvent = new Event("md-core-load");
-    window.dispatchEvent(loadEvent);
+    state.core = true;
+    var event = new Event("md-core-load");
+    window.dispatchEvent(event);
   }
 
   function dispatchCoreModuleLoadEvent() {
     md.log("[core:module] LOAD COMPLETE", "info");
-    loadStatus.coreModule = true;
-    var loadEvent = new Event("md-core-module-load");
-    window.dispatchEvent(loadEvent);
-    if (loadStatus.coreComponent) {
+    state.coreModule = true;
+    var event = new Event("md-core-module-load");
+    window.dispatchEvent(event);
+    if (state.coreComponent) {
       dispatchCoreLoadEvent();
     }
   }
 
   function dispatchModuleLoadEvent() {
     md.log("[module] LOAD COMPLETE", "info");
-    loadStatus.module = true;
-    var loadEvent = new Event("md-module-load");
-    window.dispatchEvent(loadEvent);
-    if (loadStatus.core && loadStatus.component) {
+    state.module = true;
+    var event = new Event("md-module-load");
+    window.dispatchEvent(event);
+    if (state.core && state.component) {
       dispatchLoadEvent();
     }
   }
@@ -549,34 +633,27 @@
   /*
   function dispatchComponentLoadEvent() {
     md.log("[component] LOAD COMPLETE", "info");
-    loadStatus.component = true;
-    var loadEvent = new Event("md-component-load");
-    window.dispatchEvent(loadEvent);
-    if (loadStatus.core && loadStatus.module) {
+    state.component = true;
+    var event = new Event("md-component-load");
+    window.dispatchEvent(event);
+    if (state.core && state.module) {
       dispatchLoadEvent();
     }
   }
   */
 
-  function dispatchLoadEvent() {
-    md.log("[paperkit] LOAD COMPLETE", "info");
-    loadStatus.paperkit = true;
-    var loadEvent = new Event("md-load");
-    window.dispatchEvent(loadEvent);
+  function dispatchScriptLoadEvent() {
+    md.log("[include] SCRIPTS LOAD COMPLETE", "info");
+    state.scripts = true;
+    var event = new Event("md-script-load");
+    window.dispatchEvent(event);
   }
 
-  // Garbage
-
-  // Script loading
-  var loadingScripts = [];
-  var loadingScriptsEnd = false;
-
-  function scriptOnload(script, callback) {
-    var i = loadingScripts.indexOf(script);
-    loadingScripts.splice(i, 1);
-    if (loadingScripts.length < 1 && loadingScriptsEnd && callback) {
-      callback();
-    }
+  function dispatchLoadEvent() {
+    md.log("[paperkit] LOAD COMPLETE", "info");
+    state.paperkit = true;
+    var event = new Event("md-load");
+    window.dispatchEvent(event);
   }
 
   // [PROPERTY DEFINITION]
@@ -703,11 +780,12 @@ md.include({
       mode = "log";
     }
     if (mode === "dir") {
-      console.dir(message + timestamp);
+      console.dir(message);
       return;
     }
-    if (mode === "error" && window.printStackTrace) {
-      console.log(window.printStackTrace());
+    if (options.types.debug.on && window.printStackTrace) {
+      var file = printStackTrace()[4].match(/(\w+)(\.\w+)+(?!.*(\w+)(\.\w+)+):([0-9]+):([0-9]+)/g);
+      message = message + "  |  " + file.join();
     }
 
 

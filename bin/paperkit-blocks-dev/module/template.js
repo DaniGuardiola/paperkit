@@ -15,10 +15,9 @@ md.include({ // Add to queue
   "type": "module",
   "name": "template",
   "core": true, // Only if part of the core
-  "dependencies": { // Optional, you must set it if using non-core modules or components
-    "modules": [],
-    "components": []
-  }
+  "dependencies": [ // Optional, you must set it if using non-core modules or components
+    "module:fake"
+  ]
 }, function() { // Constructs the module and returns it
   "use strict";
 

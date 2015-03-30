@@ -226,67 +226,6 @@ md-core-load, md-module-load, md-component-load, md-load and md-ready</p>
 
         
             
-<dt class="name" id="coreComponentsPending">
-    <h4><span class="type-signature">&lt;private, inner> </span>coreComponentsPending<span class="type-signature"> :Array</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>List of core components pending load.</p>
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Array</span>
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
 <dt class="name" id="coreModulesPending">
     <h4><span class="type-signature">&lt;private, inner> </span>coreModulesPending<span class="type-signature"> :Array</span></h4>
 
@@ -409,6 +348,67 @@ md-core-load, md-module-load, md-component-load, md-load and md-ready</p>
 
         
             
+<dt class="name" id="scriptQueue">
+    <h4><span class="type-signature">&lt;private, inner> </span>scriptQueue<span class="type-signature"> :Array</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Scripts in queue</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
 <dt class="name" id="state">
     <h4><span class="type-signature">&lt;private, inner> </span>state<span class="type-signature"> :Object</span></h4>
 
@@ -435,6 +435,196 @@ md-core-load, md-module-load, md-component-load, md-load and md-ready</p>
 
     
 <dl class="details">
+	
+
+	<h5 class="subsection-title">Properties:</h5>
+
+	<dl>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>coreModule</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Core modules loaded</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>coreComponent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Core components loaded</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>scripts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Scripts loaded</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>core</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Core loaded</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>module</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Modules loaded</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>component</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Components loaded</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>paperkit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Paperkit loaded</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+
 	
 
 	
@@ -882,6 +1072,154 @@ md.module(&quot;fakeModule&quot;, true); &#x2F;&#x2F; false</pre>
         
             
 <dt>
+    <h4 class="name" id="checkDependencies"><span class="type-signature">&lt;private, inner> </span>checkDependencies<span class="signature">(Block)</span><span class="type-signature"> &rarr; {false|Object}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Checks if all block dependecies are satisfied</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>Block</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">blockObj</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>to check</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+	<dt class="tag-todo">To Do:</dt>
+	<dd class="tag-todo">
+		<ul>
+			<li>Finish function</li>
+			</ul>
+	</dd>
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>False is satisfied, object with info if not</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">false</span>
+|
+
+<span class="param-type">Object</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
     <h4 class="name" id="coreModuleLoadCheck"><span class="type-signature">&lt;private, inner> </span>coreModuleLoadCheck<span class="signature">()</span><span class="type-signature"></span></h4>
     
     
@@ -949,95 +1287,6 @@ and dispatchs md-core-module-load event if true</p>
         
             
 <dt>
-    <h4 class="name" id="getQueueState"><span class="type-signature">&lt;private, inner> </span>getQueueState<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>State of the queue</p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>The state of the queue (&quot;empty&quot; or &quot;n pending&quot;)</p>
-</div>
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-<span class="param-type">String</span>
-
-
-	</dd>
-</dl>
-
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
     <h4 class="name" id="includeAll"><span class="type-signature">&lt;private, inner> </span>includeAll<span class="signature">()</span><span class="type-signature"></span></h4>
     
     
@@ -1085,6 +1334,151 @@ and passes them to includeTag()</p>
 
 	
 
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="includeModule"><span class="type-signature">&lt;private, inner> </span>includeModule<span class="signature">(options, moduleFunction)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Includes a module</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Module options</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>moduleFunction</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Function that defines and returns the module</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+	<dt class="tag-todo">To Do:</dt>
+	<dd class="tag-todo">
+		<ul>
+			<li>Rename to "includeModule" and write an example</li>
+			</ul>
+	</dd>
 	
 </dl>
 
@@ -1403,151 +1797,6 @@ file has been loaded into memory</p>
         
             
 <dt>
-    <h4 class="name" id="moduleInclude"><span class="type-signature">&lt;private, inner> </span>moduleInclude<span class="signature">(options, moduleFunction)</span><span class="type-signature"></span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Includes a module</p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Module options</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>moduleFunction</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Function that defines and returns the module</p></td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-	<dt class="tag-todo">To Do:</dt>
-	<dd class="tag-todo">
-		<ul>
-			<li>Rename to "includeModule" and write an example</li>
-			</ul>
-	</dd>
-	
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-</dd>
-
-        
-            
-<dt>
     <h4 class="name" id="moduleLoad"><span class="type-signature">&lt;private, inner> </span>moduleLoad<span class="signature">(moduleObj, recurrent)</span><span class="type-signature"></span></h4>
     
     
@@ -1671,7 +1920,7 @@ file has been loaded into memory</p>
 	<dt class="tag-todo">To Do:</dt>
 	<dd class="tag-todo">
 		<ul>
-			<li>Make an example</li>
+			<li>Refactor and make an example</li>
 			</ul>
 	</dd>
 	
@@ -1694,7 +1943,7 @@ file has been loaded into memory</p>
         
             
 <dt>
-    <h4 class="name" id="moduleLoadCheck"><span class="type-signature">&lt;private, inner> </span>moduleLoadCheck<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="moduleQueue"><span class="type-signature">&lt;private, inner> </span>moduleQueue<span class="signature">()</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -1758,128 +2007,6 @@ and dispatchs md-module-load event if true</p>
     
 </dd>
 
-        
-            
-<dt>
-    <h4 class="name" id="moduleQueue"><span class="type-signature">&lt;private, inner> </span>moduleQueue<span class="signature">(moduleObj)</span><span class="type-signature"></span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Adds a module to the queue</p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>moduleObj</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>A module definition object</p></td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-	<dt class="tag-todo">To Do:</dt>
-	<dd class="tag-todo">
-		<ul>
-			<li>Write an example</li>
-			</ul>
-	</dd>
-	
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-</dd>
-
         </dl>
     
 
@@ -1909,7 +2036,7 @@ and dispatchs md-module-load event if true</p>
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Fri Mar 27th 2015 using the <a
+		on Mon Mar 30th 2015 using the <a
 			href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
