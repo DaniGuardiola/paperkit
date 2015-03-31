@@ -775,6 +775,8 @@ md.include({
 
   /**
    * Main function, published as md.log(message, type, opt)
+   *
+   * Logs a message
    * @param  {string} message The text to show on console
    * @param  {string} type The type/level of log
    * @param  {object} opt  Options with top priority
