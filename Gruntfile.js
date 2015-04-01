@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     // Generation of documentation
     jsdoc: {
       coreJS: {
-        src: ["bin/paperkit-core-dev/paperkit.js"],
+        src: ["src/core/**/*.js"],
         dest: "doc/core",
         options: {
           "private": true,
@@ -58,6 +58,7 @@ module.exports = function(grunt) {
     concat: {
       coreJS: {
         src: [
+          "node_modules/es6-promise/dist/es6-promise.min.js",
           "src/core/core.js",
           "src/core/module/*.js",
         ],

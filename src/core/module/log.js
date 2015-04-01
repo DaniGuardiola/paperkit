@@ -1,16 +1,48 @@
 // TODO: add tags to be able to filter
+"use strict";
+
 /**
- * MODULE log
+ * Module (core) - Taking over the console log!
+ *
+ * Function: [md.log(message, mode, opt)]{@link md.log~main}
+ * 
+ * Modes available:
+ *
+ * - log (default)
+ * - debug
+ * - info
+ * - error
+ * - warn
+ * - dir
+ *
+ * Mode filters:
+ * 
+ * - [md.log.enable]{@link md.log.enable}
+ * - [md.log.disable]{@link md.log.disable}
+ *
+ * Options (readonly): [md.log.options]{@link md.log.options}
+ *
+ * @example
+ * md.log("Hi, I'm a warning!", "warn");
+ * @namespace md.log
+ *
+ * 
+ * @author [Dani Guardiola]{@link http://daniguardiola.me/}
+ * @license [Apache-2.0]{@link http://www.apache.org/licenses/LICENSE-2.0}
+ * @version 0.0.1
  */
+
 md.include({
   "type": "module",
   "name": "log",
   "core": true
-}, function() {
-  "use strict";
+}, /** @lends md.log */ function() {
   /**
-   * Options
+   * Log options
+   * 
+   * @memberOf md.log
    * @type {Object}
+   * @readOnly
    */
   var options = {
     banner: "PK",
@@ -51,7 +83,9 @@ md.include({
   };
 
   /**
-   * Main function
+   * Main function, published as md.log(message, type, opt)
+   *
+   * Logs a message
    * @param  {string} message The text to show on console
    * @param  {string} type The type/level of log
    * @param  {object} opt  Options with top priority
@@ -102,7 +136,12 @@ md.include({
   };
 
 
-  // Methods
+  /**
+   * Enables a mode
+   * 
+   * @memberOf md.log
+   * @param  {String} level Mode
+   */
   function enable(level) {
     if (!level) {
       main("[log.enable] No level was specified", "error");
@@ -121,6 +160,11 @@ md.include({
     main("[log.enable] Level \"" + level + "\" was enabled", "info");
   }
 
+  /**
+   * Disables a mode
+   * @memberOf md.log
+   * @param  {String} level Mode
+   */
   function disable(level) {
     if (!level) {
       main("[log.disable] No level was specified", "error");
