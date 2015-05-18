@@ -78,7 +78,10 @@
    * @type {Array}
    * @readOnly
    */
-  var coreModules = ["log"];
+  var coreModules = [
+    "log",
+    "viewport"
+  ];
 
   /**
    * List of core modules pending load.
@@ -154,7 +157,7 @@
   }
 
 
-  // [INCLUDE]
+  // [INCLUSION]
   // Block inclusion system
 
   /**
@@ -246,7 +249,6 @@
     };
     if (options.type === "module") { // Routing
       includeModule(blockObject);
-      md.log("I was gonna include a module");
     } else if (options.type === "component") {
       md.log("I was gonna include a component");
       //includeComponent(blockObject);
@@ -257,6 +259,19 @@
       md.log("[include] Invalid block type \"" + options.type + "\"", "error");
     }
   }
+
+  /**
+   * Queue of blocks to include
+   * @type {Object}
+   * @private
+   * @todo Use to fire events sooner than "all script loaded",
+   * find a better way if any
+   */
+  var inclusionQueue = {
+    module: [],
+    component: [],
+    attribute: []
+  };
 
   /**
    * Gets all md-include elements from the DOM.
@@ -289,6 +304,17 @@
       md.log("[include] Src tag empty or not set in md-include tag", "error");
       return;
     }
+    if (element.hasAttribute("component")) {
+      inclusionQueue.component.push(element);
+    } else if (element.hasAttribute("module")) {
+      inclusionQueue.module.push(element);
+    } else if (element.hasAttribute("attribute")) {
+      inclusionQueue.attribute.push(element);
+    } else {
+      md.log("[include] Type not specified, add the attribute \"component\", \"module\" or \"attribute\" to the <md-include> tag", "error");
+      return;
+    }
+
     if (src.indexOf(".js") !== -1) {
       includeScript(element);
     } else if (src.indexOf(".css") !== -1) {
@@ -322,9 +348,7 @@
     script.addEventListener("load", function() {
       var i = scriptQueue.indexOf(script);
       scriptQueue.splice(i, 1);
-      if (scriptQueue.length < 1) {
-        dispatchScriptLoadEvent();
-      }
+      checkScriptLoad();
     });
     document.body.removeChild(script);
   }
@@ -353,11 +377,11 @@
         type = dependency.split(":")[0];
         name = dependency.split(":")[1];
         if (type === "module" && !module(name)) {
-          md.log("[include:" + block.options.name + "] Block dependencies could not be satisfied, queueing", "warn");
+          md.log("[include:" + block.options.name + "] Block dependencies are not satisfied yet, queueing", "warn");
           pending.modules.push(name);
           notSatisfied = true;
         } else if (type === "component" && !component(name)) {
-          md.log("[include:" + block.options.name + "] Block dependencies could not be satisfied, queueing", "warn");
+          md.log("[include:" + block.options.name + "] Block dependencies are not satisfied yet", "warn");
           pending.components.push(name);
           notSatisfied = true;
         }
@@ -377,6 +401,9 @@
   }
 
   // [MODULES]
+  // Available under the namespace as md.moduleName,
+  // containing methods mainly
+
   // A module looks like this:
   // md.include({ // Block options as first parameter
   //   "type": "module", // required
@@ -467,7 +494,7 @@
   function includeModule(moduleObj) {
     var dependecies = checkDependencies(moduleObj);
     if (dependecies) {
-      moduleLoad(moduleObj);
+      loadModule(moduleObj);
     } else {
       moduleQueue(moduleObj);
     }
@@ -478,82 +505,47 @@
    * 
    * @param  {blockObject} moduleObj  A module object, if not specified
    *                             the queue will load
-   * @param  {Boolean} recurrent If true next item in queue will be loaded too
    * @private
-   * @todo Refactor and make an example
+   * @todo Refactor
    */
-  function moduleLoad(moduleObj, recurrent) {
-    recurrent = recurrent || false;
-    if (moduleObj) { // If moduleObj exists
-      // moduleObj checks
-      if (typeof moduleObj !== "object" || typeof moduleObj.options !== "object" || typeof moduleObj.definition !== "function") {
-        md.log("[module] Not valid module object", "error");
-        return false;
-      }
+  function loadModule(moduleObj) {
+    // Error checking
+    if (!moduleObj) {
+      md.log("[module] Module object required", "error");
+    }
+    if (typeof moduleObj !== "object" || typeof moduleObj.options !== "object" || typeof moduleObj.definition !== "function") {
+      md.log("[module] Not valid module object", "error");
+      return false;
+    }
 
-      // Module load
-      var name = moduleObj.options.name; // The module name is on "name" var
-      var module = moduleObj.definition(); // The module returned is on "module" var
-      var core = moduleObj.options.core ? "core:" : "";
-      // Filling defaults for optional options
-      moduleObj.options.dependencies = moduleObj.options.dependencies || [];
-      // Defining md options on module
-      Object.defineProperty(module, "_mdOptions_", {
+    // Module load
+    var name = moduleObj.options.name; // The module name is on "name" var
+    var module = moduleObj.definition(); // The module returned is on "module" var
+    var core = moduleObj.options.core ? "core:" : "";
+    // Filling defaults for optional options
+    moduleObj.options.dependencies = moduleObj.options.dependencies || [];
+    // Defining md options private property on module
+    Object.defineProperty(module, "_mdOptions_", {
+      "get": function() {
+        return Object.create(moduleObj.options);
+      }
+    });
+    // Defining the module on md namespace
+    if (moduleObj.options.asGetter) {
+      Object.defineProperty(md, name, {
         "get": function() {
-          return Object.create(moduleObj.options);
+          return module();
         }
       });
-      // Defining the module on md namespace
+    } else {
       Object.defineProperty(md, name, {
         "value": module
       });
-      moduleList.push(name); // Attach to module list
-      if (md.module("log")) {
-        md.log("[" + core + "module] LOAD " + name, "info");
-      }
-
-      // If recurrent, load next one
-      if (recurrent) {
-        moduleLoad();
-      }
-    } else {
-      var next = moduleQueueList[0];
-      if (next && typeof next.definition === "function") {
-        // Module queue if not empty
-        moduleQueueList.splice(0, 1);
-        moduleLoad(next, true);
-      } else {
-        dispatchModuleLoadEvent();
-      }
     }
-  }
-
-  /**
-   * Checks if there's no pending core modules to load,
-   * and dispatchs md-core-module-load event if true
-   * 
-   * @private
-   */
-  function coreModuleLoadCheck() {
-    if (coreModulesPending.length < 1 && !state.coreModule) {
-      dispatchCoreModuleLoadEvent();
-    }
-  }
-
-  /**
-   * Checks if there's no pending modules to load,
-   * and dispatchs md-module-load event if true
-   * 
-   * @private
-   */
-  /*
-  function moduleLoadCheck() {
-    if (moduleQueueList.length < 1 && !state.module) {
-      dispatchCoreModuleLoadEvent();
-      if (coreComponents.length < 1) {
-        dispatchCoreLoadEvent();
-      }
-    }
+    moduleList.push(name); // Attach to module list
+    md.log("[" + core + "module] LOAD " + name, "info");
+    checkCoreModuleLoad();
+    checkModuleLoad();
   }
 
   /**
@@ -567,9 +559,8 @@
     if (moduleObj.options.core) {
       var i = coreModulesPending.indexOf(moduleObj.options.name);
       if (i !== -1) {
-        moduleLoad(moduleObj);
+        loadModule(moduleObj);
         coreModulesPending.splice(i, 1);
-        coreModuleLoadCheck();
         return;
       } else {
         moduleObj.options.core = false;
@@ -577,7 +568,7 @@
       }
     }
     if (!moduleObj.options.dependencies || moduleObj.options.dependencies.length < 0) {
-      moduleLoad(moduleObj);
+      loadModule(moduleObj);
       return;
     }
     moduleQueueList.push(moduleObj);
@@ -601,7 +592,7 @@
     }
   });
 
-  // [EVENTS]
+  // [EVENTS and STATE CHECKERS]
 
   function dispatchCoreLoadEvent() {
     md.log("[core] LOAD COMPLETE", "info");
@@ -620,6 +611,18 @@
     }
   }
 
+  /**
+   * Checks if there's no pending core modules to load,
+   * and dispatchs md-core-module-load event if true
+   * 
+   * @private
+   */
+  function checkCoreModuleLoad() {
+    if (coreModulesPending.length < 1 && !state.coreModule) {
+      dispatchCoreModuleLoadEvent();
+    }
+  }
+
   function dispatchModuleLoadEvent() {
     md.log("[module] LOAD COMPLETE", "info");
     state.module = true;
@@ -630,7 +633,18 @@
     }
   }
 
-  /*
+  /**
+   * Checks if there's no pending modules to load,
+   * and dispatchs md-module-load event if true
+   * 
+   * @private
+   */
+  function checkModuleLoad() {
+    if (moduleQueueList.length < 1 && inclusionQueue.module.length < 1 && !state.module) {
+      dispatchModuleLoadEvent();
+    }
+  }
+
   function dispatchComponentLoadEvent() {
     md.log("[component] LOAD COMPLETE", "info");
     state.component = true;
@@ -640,7 +654,6 @@
       dispatchLoadEvent();
     }
   }
-  */
 
   function dispatchScriptLoadEvent() {
     md.log("[include] SCRIPTS LOAD COMPLETE", "info");
@@ -648,6 +661,20 @@
     var event = new Event("md-script-load");
     window.dispatchEvent(event);
   }
+
+  /**
+   * Checks if there's no pending scripts to load,
+   * and dispatchs md-script-load event if true
+   * 
+   * @private
+   */
+  function checkScriptLoad() {
+    if (scriptQueue.length < 1) {
+      dispatchScriptLoadEvent();
+    }
+  }
+
+
 
   function dispatchLoadEvent() {
     md.log("[paperkit] LOAD COMPLETE", "info");
