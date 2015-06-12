@@ -1,0 +1,148 @@
+<!-- Defines element markup -->
+<template>
+  <content select="md-row"></content>
+  <style>
+  :host {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: flex-end;
+    align-content: flex-end;
+    width: 100%;
+    height: auto;
+    transition-property: height, box-shadow, background-color, color;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(.55, 0, .1, 1);
+    background-color: #9e9e9e;
+    md-shadow: seam;
+    fill: #fff;
+    color: #fff;
+  }
+  
+  content[select="md-row"]::content>md-row {
+    display: flex;
+    width: 100%;
+    height: auto;
+    transition-property: height, background-color;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(.55, 0, .1, 1);
+  }
+  
+  content[select="md-row"]::content>md-row[md-type~=standard] {
+    min-height: 56px;
+    max-height: 64px;
+  }
+  
+  content[select="md-row"]::content>md-row[md-type~=standard]>md-text:not([md-typo]) {
+    padding-top: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+    letter-spacing: -.012em;
+  }
+  
+  content[select="md-row"]::content>md-row[md-type~=small] {
+    height: 48px;
+  }
+  
+  content[select="md-row"]::content>md-row>* {
+    flex-shrink: 0;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    content[select="md-row"]::content>md-row[md-type~=standard]:not([md-type$=noresponsive]):not([noresponsive])>* {
+      margin-top: 4px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=standard]:not([md-type$=noresponsive]):not([noresponsive])>md-icon:first-child {
+      margin-left: 4px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=standard]:not([md-type$=noresponsive]):not([noresponsive])>md-icon-button:first-child {
+      margin-left: 4px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=standard]:not([md-type$=noresponsive]):not([noresponsive])>md-text:first-child {
+      margin-left: 16px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=standard]:not([md-type$=noresponsive]):not([noresponsive])>*:first-child+md-text {
+      margin-left: 20px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=standard]:not([md-type$=noresponsive]):not([noresponsive]) {
+      height: 56px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=small]:not([md-type$=noresponsive]):not([noresponsive])>md-icon:first-child {
+      margin-left: 4px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=small]:not([md-type$=noresponsive]):not([noresponsive])>md-icon-button:first-child {
+      margin-left: 4px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=small]:not([md-type$=noresponsive]):not([noresponsive])>md-icon:first-child+md-tabbar {
+      margin-left: 20px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=small]:not([md-type$=noresponsive]):not([noresponsive])>md-text:not([md-typo]) {
+      padding-top: 12px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 992px),
+  only screen and (min-width: 992px) {
+    content[select="md-row"]::content>md-row[md-type~=standard]:not([md-type$=noresponsive]):not([noresponsive])>* {
+      margin-top: 8px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=standard]:not([md-type$=noresponsive]):not([noresponsive])>md-icon:first-child {
+      margin-left: 8px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=standard]:not([md-type$=noresponsive]):not([noresponsive])>md-icon-button:first-child {
+      margin-left: 8px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=standard]:not([md-type$=noresponsive]):not([noresponsive])>md-text:first-child {
+      margin-left: 20px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=standard]:not([md-type$=noresponsive]):not([noresponsive])>*:first-child+md-text {
+      margin-left: 24px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=standard]:not([md-type$=noresponsive]):not([noresponsive]) {
+      height: 64px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=small]:not([md-type$=noresponsive]):not([noresponsive])>md-icon:first-child {
+      margin-left: 8px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=small]:not([md-type$=noresponsive]):not([noresponsive])>md-icon-button:first-child {
+      margin-left: 8px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=small]:not([md-type$=noresponsive]):not([noresponsive])>md-icon:first-child+md-tabbar {
+      margin-left: 24px;
+    }
+    content[select="md-row"]::content>md-row[md-type~=small]:not([md-type$=noresponsive]):not([noresponsive])>md-text:not([md-typo]) {
+      padding-top: 14px;
+    }
+  }
+  </style>
+</template>
+
+
+<script>
+(function(window, document, undefined) {
+  // Refers to the "importee", which is md/toolbar.html
+  var thisDoc = (document._currentScript || document.currentScript).ownerDocument;
+
+  // Gets content from <template>
+  var template = thisDoc.querySelector('template').innerHTML;
+
+  // Creates an object based in the HTML Element prototype
+  var MyElementProto = Object.create(HTMLElement.prototype);
+
+  // Fires when an instance of the element is created
+  MyElementProto.createdCallback = function() {
+    // Creates the shadow root
+    var root = this.createShadowRoot();
+    root.innerHTML = template;
+  };
+
+  // Fires when an attribute was added, removed, or updated
+  MyElementProto.attributeChangedCallback = function(attr, oldVal, newVal) {}
+
+  // Registers <md-toolbar> in the main document
+  window.MyElement = document.registerElement('md-toolbar', {
+    prototype: MyElementProto
+  });
+})(window, document);
+</script>
