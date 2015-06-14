@@ -1,0 +1,243 @@
+<!--
+	Copyright David Maria Arribas ©2015.
+	Author: David María Arribas <dmariaa@datatrends.es> 
+ -->
+<template>	
+	<span id="placeholder"></span>	
+	<input />
+	<div id="line"></div>
+	<span id="error"></span>
+	<style>
+		:host {
+			position: relative;
+			display: block;
+		}
+		
+		:host([md-mode~=placeholder]) {
+			height: 48px;
+		}
+		
+		:host([md-mode~=placeholder][md-error]) {
+			height: 64px;
+		}
+		
+		:host([md-mode~=placeholder][md-error])>input {
+			top: 16px;
+		}
+		
+		:host([md-mode~=placeholder][md-error])>#placeholder {
+			top: 16px;
+		}
+		
+		:host([md-mode~=placeholder])>input {
+			top: 16px;
+		}
+		
+		:host([md-mode~=placeholder])>#placeholder {
+			top: 16px;
+		}
+		
+		:host([md-mode~=hint]) {
+			height: 72px;
+		}
+		
+		:host([md-mode~=hint][md-error]) {
+			height: 80px;
+		}
+		
+		:host([md-mode~=hint][md-error])>#placeholder.hint {
+			top: 0px;
+		}
+		
+		:host([md-mode~=hint][md-error])>input {
+			top: 28px;
+		}
+		
+		:host([md-mode~=hint])>input {
+			top: 28px;
+		}
+		
+		:host([md-mode~=hint])>#line {
+			bottom: 20px;
+		}
+		
+		:host, 
+		:host([md-mode~=animated]) {
+			height: 72px;
+		}
+		
+		:host([md-error]), 
+		:host([md-mode~=animated][md-error]) {
+			height: 80px;
+		}
+		
+		:host([md-error])>#placeholder.hint, 
+		:host([md-mode~=animated][md-error])>#placeholder.hint
+			{
+			top: 8px;
+		}
+		
+		:host([md-error])>#placeholder, 
+		:host([md-mode~=animated][md-error])>#placeholder
+			{
+			top: 26px;
+		}
+		
+		:host([md-error])>input, 
+		:host([md-mode~=animated][md-error])>input {
+			top: 26px;
+		}
+		
+		:host>#placeholder, 
+		:host([md-mode~=animated])>#placeholder {
+			top: 26px;
+		}
+		
+		:host>input, 
+		:host([md-mode~=animated])>input {
+			top: 26px;
+		}
+		
+		:host>#placeholder {
+			position: absolute;
+			height: 22px;
+			outline: none;
+			font-size: 16px;
+			border-width: 0;
+			-webkit-transition: top 0.25s ease, font-size 0.25s ease;
+			-moz-transition: top 0.25s ease, font-size 0.25s ease;
+			-o-transition: top 0.25s ease, font-size 0.25s ease;
+			transition: top 0.25s ease, font-size 0.25s ease;
+			color: rgba(0, 0, 0, 0.26);
+			white-space: nowrap;
+			line-height: 22px;
+		}
+		
+		:host>input {
+			position: relative;
+			height: 22px;
+			outline: none;
+			font-size: 16px;
+			border-width: 0;
+			overflow: auto;
+			background-color: transparent;
+			width: 100%;
+		}
+		
+		:host([md-error])>#line {
+			bottom: 24px;
+		}
+		
+		:host>#line {
+			position: absolute;
+			content: "";
+			bottom: 16px;
+			width: 100%;
+			height: 1px;
+			background-color: rgba(0, 0, 0, 0.12);
+		}
+		
+		:host>#error {
+			position: absolute;
+			bottom: 4px;
+			font-size: 12px;
+			line-height: 12px;
+			color: red;
+		}
+		
+		:host>#placeholder.hint {
+			position: absolute;
+			content: "";
+			top: 10px;
+			font-size: 12px;
+			height: 16px;
+		}
+	</style>
+</template>
+<script>
+(function(window, document, undefined) {		
+	// Revisar esto...
+  var thatDoc = document;
+  var thisDoc =  (thatDoc._currentScript || thatDoc.currentScript).ownerDocument;
+	
+	// Template content
+	var template = thisDoc.querySelector('template').content;
+	
+	// Prototype
+	var ElementProto = Object.create(HTMLElement.prototype);
+		
+	// Fires when an instance of the element is created
+	ElementProto.createdCallback = function() {
+		var input = template.querySelector('input');
+		input.setAttribute("type", "text")
+		
+	  // Creates the shadow root
+    var shadowRoot = this.createShadowRoot();
+    var clone = thatDoc.importNode(template, true);	    
+    shadowRoot.appendChild(clone);	 
+    
+    this.einput = shadowRoot.querySelector('input');
+    this.eplaceholder = shadowRoot.querySelector('#placeholder');
+    this.eline = shadowRoot.querySelector('#line');
+    this.eerror = shadowRoot.querySelector('#error');
+    
+    this.einput.addEventListener('focus', this.setFocus.bind(this));
+    this.einput.addEventListener('blur', this.removeFocus.bind(this));
+    
+    if(this.hasAttribute('placeholder')) {
+      this.eplaceholder.innerText = this.getAttribute('placeholder');
+    }
+	};
+	
+	// Fires when an attribute was added, removed, or updated
+	ElementProto.attributeChangedCallback = function(attr, oldVal, newVal) {
+		if (attr === 'md-error') {
+	    this.eerror.innerText = newVal;
+		} else if(attr === 'placeholder' ) {
+		  this.eplaceholder.innerText = newVal;
+		}
+	};
+	
+	Object.defineProperty(ElementProto, "value", {
+		get: function() { return this.einput.value; },
+		set: function(value) { this.setFocus(); this.einput.value = value; this.removeFocus(); }
+	});
+
+	Object.defineProperty(ElementProto, "name", {
+		get: function() { return this.einput.name; },
+		set: function(value) { this.einput.name = value; }
+	});
+	
+	ElementProto.setFocus = function(e) {
+     var mode = this.getAttribute("md-mode") ? this.getAttribute("md-mode") : "animated";
+
+     if (mode === "placeholder") {
+       if (this.einput.value === "") {
+         this.eplaceholder.style.visibility = "visible";
+       } else {
+         this.eplaceholder.style.visibility = "hidden";
+       }
+     } else if (mode === "animated") {
+       this.setHintMode('hint');
+     }
+  };
+	
+	ElementProto.removeFocus = function(e) {
+     if (this.einput.value === "") {
+       this.setHintMode('placeholder');
+     }
+  };
+
+	ElementProto.setHintMode = function(mode) {
+    if (mode === "placeholder") {
+      this.eplaceholder.classList.remove("hint");
+    } else if (mode === "hint") {
+      this.eplaceholder.classList.add("hint");
+    }
+  };
+	
+	window.MyElement = thatDoc.registerElement('md-input', {
+		prototype: ElementProto
+	});
+})(window, document);
+</script>
