@@ -1,0 +1,170 @@
+<!--
+	Copyright David Maria Arribas ©2015.
+	Author: David María Arribas <dmariaa@datatrends.es> 
+ -->
+<template>
+  <div id="wrapper" class="unresolved">
+    <!-- On flow -->
+    <div class="onflow pending" id="loaded"></div>
+    <div class="onflow pending" id="buffer"></div>
+    <!-- Out flow -->
+    <div class="outflow progress" id="progress-one"></div>
+    <div class="outflow progress" id="progress-two"></div>
+  </div>
+  <style>
+  :host {
+    position: relative;
+    display: block;
+    height: 6px;
+  }
+  /* General styles */
+  
+  #wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transition: height 0.25s;
+  }
+  
+  #wrapper.unresolved {
+    height: 0;
+  }
+  
+  #buffer {
+    flex: 1;
+    background: red;
+    /* TEMPORAL */
+  }
+  
+  .progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    background-color: #2196F3;
+  }
+  
+  .pending {
+    background-color: #BBDEFB;
+    width: 0;
+  }
+  
+  #wrapper>* {
+    height: 100%;
+    transition: width 0.25s;
+  }
+  /* Determinate */
+  
+  :host #loaded {
+    width: 100%;
+  }
+  </style>
+</template>
+<script>
+(function(window, document, undefined) {
+  // Revisar esto...
+  var thatDoc = document;
+  var thisDoc = (thatDoc._currentScript || thatDoc.currentScript).ownerDocument;
+
+  // Template content
+  var template = thisDoc.querySelector("template").content;
+
+  // Prototype
+  var ElementProto = Object.create(HTMLElement.prototype);
+
+  ElementProto.initAttribute = function(attr) {
+    if (attr.constructor === Array) {
+      attr.forEach(this.initAttribute.bind(this));
+    } else if (this.hasAttribute(attr)){
+      this.attributeChangedCallback(attr, false, this.getAttribute(attr));
+    }
+  };
+
+  // Fires when an instance of the element is created
+  ElementProto.createdCallback = function() {
+    // Creates the shadow root
+    var shadowRoot = this.createShadowRoot();
+    var clone = thatDoc.importNode(template, true);
+    shadowRoot.appendChild(clone);
+
+    this.eprogressone = shadowRoot.querySelector("#progress-one");
+    this.eprogresstwo = shadowRoot.querySelector("#progress-two");
+    this.eloaded = shadowRoot.querySelector("#loaded");
+    this.ebuffer = shadowRoot.querySelector("#buffer");
+
+    // Proccess attributes
+    this.initAttribute(["progress", "loaded"]);
+    shadowRoot.querySelector("#wrapper").classList.remove("unresolved");
+  };
+
+  // Fires when an attribute was added, removed, or updated
+  ElementProto.attributeChangedCallback = function(attr, oldVal, newVal) {
+    if (attr === "progress") {
+      try {
+        this.progress = +newVal;
+      } catch (err) {
+        this.setAttribute(attr, (oldVal || 0));
+        throw err;
+      }
+    } else if (attr === "loaded") {
+      try {
+        this.loaded = +newVal;
+      } catch (err) {
+        this.setAttribute(attr, (oldVal || 100));
+        throw err;
+      }
+    }
+  };
+
+  ElementProto.validPercentage = function(percentage) {
+    var valid = true;
+    if (typeof percentage !== "number" || percentage < 0 || percentage > 100 || isNaN(percentage)) {
+      valid = false;
+    }
+
+    return valid;
+  };
+
+  ElementProto.setProgress = function(percentage) {
+    if (!this.validPercentage(percentage)) {
+      throw "The percentage must be a number between 0 and 100";
+    }
+
+    this.eprogressone.style.width = percentage + "%";
+  };
+
+  Object.defineProperty(ElementProto, "progress", {
+    get: function() {
+      return +this.getAttribute("progress") || 0;
+    },
+    set: function(value) {
+      this.setProgress(value);
+      this.setAttribute("progress", value);
+      return value;
+    }
+  });
+
+  ElementProto.setLoaded = function(percentage) {
+    if (!this.validPercentage(percentage)) {
+      throw "The percentage must be a number between 0 and 100";
+    }
+
+    this.eloaded.style.width = percentage + "%";
+  };
+
+  Object.defineProperty(ElementProto, "loaded", {
+    get: function() {
+      return +this.getAttribute("loaded") || 100;
+    },
+    set: function(value) {
+      this.setLoaded(value);
+      this.setAttribute("loaded", value);
+      return value;
+    }
+  });
+
+  window.MyElement = thatDoc.registerElement("md-progress", {
+    prototype: ElementProto
+  });
+})(window, document);
+</script>
