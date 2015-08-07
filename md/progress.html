@@ -20,6 +20,7 @@
   /* General styles */
   
   #wrapper {
+    overflow: hidden;
     height: 100%;
     width: 100%;
     display: flex;
@@ -46,7 +47,6 @@
   
   .pending {
     background-color: #BBDEFB;
-    width: 0;
   }
   
   #wrapper>* {
@@ -75,7 +75,7 @@
   ElementProto.initAttribute = function(attr) {
     if (attr.constructor === Array) {
       attr.forEach(this.initAttribute.bind(this));
-    } else if (this.hasAttribute(attr)){
+    } else if (this.hasAttribute(attr)) {
       this.attributeChangedCallback(attr, false, this.getAttribute(attr));
     }
   };
@@ -87,35 +87,50 @@
     var clone = thatDoc.importNode(template, true);
     shadowRoot.appendChild(clone);
 
+    this.ewrapper = shadowRoot.querySelector("#wrapper");
     this.eprogressone = shadowRoot.querySelector("#progress-one");
     this.eprogresstwo = shadowRoot.querySelector("#progress-two");
     this.eloaded = shadowRoot.querySelector("#loaded");
     this.ebuffer = shadowRoot.querySelector("#buffer");
 
-    // Proccess attributes
-    this.initAttribute(["progress", "loaded"]);
+    // Proccess attributes (TODO: remove try catch)
+    try {
+      this.initAttribute(["progress", "loaded"]);
+    } catch (err) {
+      console.error(err);
+    }
     shadowRoot.querySelector("#wrapper").classList.remove("unresolved");
   };
 
   // Fires when an attribute was added, removed, or updated
   ElementProto.attributeChangedCallback = function(attr, oldVal, newVal) {
-    if (attr === "progress") {
+    if (attr === "progress" && newVal !== null) {
       try {
         this.progress = +newVal;
       } catch (err) {
         this.setAttribute(attr, (oldVal || 0));
         throw err;
       }
-    } else if (attr === "loaded") {
+    } else if (attr === "loaded" && newVal !== null) {
       try {
         this.loaded = +newVal;
       } catch (err) {
         this.setAttribute(attr, (oldVal || 100));
         throw err;
       }
+    } else if (attr === "type") {
+      if (oldVal === "buffer") {
+        this.loaded = 100;
+        this.removeAttribute("loaded");
+      }
+      if (oldVal === "buffer" || oldVal === "determinate" || oldVal === null) {
+        this.progress = 0;
+        this.removeAttribute("progress");
+      }
     }
   };
 
+  // Helpers
   ElementProto.validPercentage = function(percentage) {
     var valid = true;
     if (typeof percentage !== "number" || percentage < 0 || percentage > 100 || isNaN(percentage)) {
@@ -125,9 +140,28 @@
     return valid;
   };
 
+  ElementProto.getType = function() {
+    var attr = this.getAttribute("type");
+    if (attr === "indeterminate" || attr === "buffer" || attr === "query") {
+      return attr;
+    }
+
+    return "determinate";
+  };
+
+  ElementProto.isType = function(type) {
+    return type === this.getType();
+  };
+
   ElementProto.setProgress = function(percentage) {
+    if (!(this.isType("determinate") || this.isType("buffer")) && percentage !== 0) {
+      throw "The type must be \"determinate\" or \"buffer\" in order to set the \"progress\" attribute";
+    }
     if (!this.validPercentage(percentage)) {
       throw "The percentage must be a number between 0 and 100";
+    }
+    if (percentage === 0 && this.ewrapper.classList.contains("unresolved")) {
+      return;
     }
 
     this.eprogressone.style.width = percentage + "%";
@@ -145,8 +179,16 @@
   });
 
   ElementProto.setLoaded = function(percentage) {
+    if (!this.isType("buffer") && percentage !== 100) {
+      throw "The type must be \"buffer\" in order to set the \"loaded\" attribute";
+    }
     if (!this.validPercentage(percentage)) {
       throw "The percentage must be a number between 0 and 100";
+    }
+
+    if (percentage === 100 && this.ewrapper.classList.contains("unresolved")) {
+    	
+      return;
     }
 
     this.eloaded.style.width = percentage + "%";
